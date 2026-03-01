@@ -1,4 +1,4 @@
-DATASET_PATH = '/home/shuvr/storage/Dataset/'
+DATASET_PATH = '/home/shuvrajeet/Documents/Dataset/'
 INPUT_SIZE = [224, 224, 3]
 BATCH_SIZE = 64
 EPOCHS = 10
