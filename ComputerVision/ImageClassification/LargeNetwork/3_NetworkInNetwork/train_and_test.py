@@ -116,7 +116,10 @@ def main():
         else:
             ax.imshow(img[..., 0], cmap="gray", vmin=0, vmax=255)
 
-        ax.set_title(f"true={true_labels[i]}\npred={pred_labels[i]}", fontsize=9)
+        correct = (true_labels[i] == pred_labels[i])
+        color = "green" if correct else "red"
+        ax.set_title(f"true={true_labels[i]} pred={pred_labels[i]}",
+                     fontsize=9, color=color)
         ax.axis("off")
 
     plt.tight_layout()
