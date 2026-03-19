@@ -2,26 +2,22 @@ import silence_tensorflow.auto
 import tensorflow as tf
 import numpy as np
 import argparse
-
 from config import *
 from dataset import *
 from model import *
 
-# tf.debugging.enable_check_numerics()
-
 
 def main():
     model_fn = inception1_model
-    parser = argparse.ArgumentParser(description='Select GPU[0-3]:')
-    parser.add_argument('--gpu', type=int, default=0,
-                        help='GPU number')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--gpu', type=int, default=0)
     parser.add_argument('--type', type=str, default='cifar10',
-                        help='Dataset type', choices=['cifar10', 'fashion_mnist',
-                                                      'mnist',  'cifar100', 'skin_cancer', 'cassava_leaf_disease', 'chest_xray', 'crop_disease'])
+                        choices=['cifar10', 'fashion_mnist', 'mnist', 'cifar100', 'skin_cancer', 'cassava_leaf_disease', 'chest_xray', 'crop_disease'])
     args = parser.parse_args()
+
     physical_devices = tf.config.experimental.list_physical_devices('GPU')
-    for device in physical_devices:
-        tf.config.experimental.set_memory_growth(device, True)
+    for d in physical_devices:
+        tf.config.experimental.set_memory_growth(d, True)
     if int(args.gpu) != -1:
         tf.config.experimental.set_visible_devices(
             physical_devices[args.gpu], 'GPU')
@@ -29,67 +25,66 @@ def main():
     dataset = Dataset()
     callbacks = [
         tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=7),
-        # tf.keras.callbacks.ModelCheckpoint(
-        #     filepath=f'{model_fn.__name__}_' + args.type + '.weights.h5', save_weights_only=True, monitor='val_loss', save_best_only=True),
         tf.keras.callbacks.TensorBoard(
-            log_dir=f'./logs_{args.type}_{model_fn.__name__}', histogram_freq=1, write_graph=True),
+            log_dir=f'./logs_{args.type}_{model_fn.__name__}', histogram_freq=1),
         tf.keras.callbacks.ReduceLROnPlateau(
-            monitor='val_loss', factor=0.1, patience=4, verbose=1, mode='auto', min_delta=0.0001, cooldown=0, min_lr=0)
+            monitor='val_loss', factor=0.1, patience=4)
     ]
 
     train_ds, validation_ds, test_ds, num_classes, channels = dataset.load_data(
         args.type)
     strategy = tf.distribute.MirroredStrategy()
-    print(
-        f'Training on dataset {args.type} with {strategy.num_replicas_in_sync} devices')
+    print(f'{args.type} | devices={strategy.num_replicas_in_sync}')
 
     with strategy.scope():
         model = model_fn(input_shape=(
             INPUT_SIZE[0], INPUT_SIZE[1], channels), num_classes=num_classes)
         model.compile(
-            optimizer=tf.keras.optimizers.Adam(
-                learning_rate=LEARNING_RATE),
-            loss=['categorical_crossentropy',
-                  'categorical_crossentropy', 'categorical_crossentropy'],
-            metrics=['accuracy', 'accuracy', 'accuracy']
+            optimizer=tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE),
+            loss=['categorical_crossentropy']*3,
+            metrics=['accuracy']*3
         )
-    model.summary(expand_nested=True)
-    tf.keras.utils.plot_model(
-        model, to_file=model_fn.__name__+'.png', show_shapes=True, show_layer_names=True)
 
-    # training (capture history)
-    history = model.fit(
-        train_ds,
-        validation_data=validation_ds,
-        epochs=EPOCHS,
-        callbacks=callbacks
-    )
-
-    # evaluation
+    history = model.fit(train_ds, validation_data=validation_ds,
+                        epochs=EPOCHS, callbacks=callbacks)
     model.evaluate(test_ds)
 
-    # === prepare log dir and save history ===
     import os
     import json
-    import numpy as np
     import matplotlib.pyplot as plt
     from glob import glob
 
     log_dir = f'logs_{args.type}_{model_fn.__name__}'
     os.makedirs(log_dir, exist_ok=True)
 
-    hist_save = {
-        "accuracy": history.history.get("accuracy", []),
-        "val_accuracy": history.history.get("val_accuracy", []),
-        "loss": history.history.get("loss", []),
-        "val_loss": history.history.get("val_loss", [])
-    }
-    with open(os.path.join(log_dir, "history.json"), "w") as fh:
-        json.dump(hist_save, fh)
+    h = history.history
 
-    # === Prediction visualization (5x5 grid) ===
+    # === aggregate metrics ===
+    def avg_metric(keys):
+        vals = [h[k] for k in keys if k in h]
+        return np.mean(np.array(vals), axis=0).tolist() if vals else []
+
+    acc_keys = [k for k in h if 'accuracy' in k and not k.startswith('val')]
+    val_acc_keys = [k for k in h if 'val_' in k and 'accuracy' in k]
+    loss_keys = [k for k in h if 'loss' in k and not k.startswith(
+        'val') and k != 'loss']
+    val_loss_keys = [
+        k for k in h if 'val_' in k and 'loss' in k and k != 'val_loss']
+
+    hist_save = {
+        "accuracy": avg_metric(acc_keys),
+        "val_accuracy": avg_metric(val_acc_keys),
+        "loss": avg_metric(loss_keys),
+        "val_loss": avg_metric(val_loss_keys)
+    }
+
+    with open(os.path.join(log_dir, "history.json"), "w") as f:
+        json.dump(hist_save, f)
+
+    # === prediction ===
     x_batch, y_batch = next(iter(test_ds))
     preds = model.predict(x_batch)
+
     true_labels = tf.argmax(y_batch[0], axis=1).numpy()
     pred_labels = tf.argmax(preds[0], axis=1).numpy()
 
@@ -99,37 +94,24 @@ def main():
             ax.axis("off")
             continue
         img = x_batch[i].numpy()
+        img = (img-img.min())/(img.max()+1e-8)*255
+        img = img.astype("uint8")
 
-        # normalize image to [0,255]
-        img = img.astype("float32")
-        img_min = img.min()
-        img = img - img_min
-        img_max = img.max()
-        if img_max > 0:
-            img = img / img_max
-        img = (img * 255.0).clip(0, 255).astype("uint8")
-
-        # handle channels
-        if img.ndim == 3 and img.shape[-1] == 1:
-            ax.imshow(img.squeeze(-1), cmap="gray", vmin=0, vmax=255)
-        elif img.ndim == 3 and img.shape[-1] == 3:
-            ax.imshow(img)
-        elif img.ndim == 2:
-            ax.imshow(img, cmap="gray", vmin=0, vmax=255)
+        if img.shape[-1] == 1:
+            ax.imshow(img.squeeze(), cmap="gray")
         else:
-            ax.imshow(img[..., 0], cmap="gray", vmin=0, vmax=255)
+            ax.imshow(img)
 
-        correct = (true_labels[i] == pred_labels[i])
-        color = "green" if correct else "red"
-        ax.set_title(f"true={true_labels[i]} pred={pred_labels[i]}",
-                     fontsize=9, color=color)
+        correct = true_labels[i] == pred_labels[i]
+        ax.set_title(f"T={true_labels[i]} P={pred_labels[i]}",
+                     color="green" if correct else "red", fontsize=8)
         ax.axis("off")
 
     plt.tight_layout()
     plt.savefig(os.path.join(log_dir, "predictions.png"))
     plt.close()
 
-    # === Aggregate plot: accuracy vs epochs across all saved logs ===
+    # === aggregate plot ===
     all_log_dirs = sorted(glob(f'logs_*_{model_fn.__name__}'))
     plt.figure(figsize=(10, 6))
     found_any = False
@@ -156,8 +138,7 @@ def main():
         plt.legend(loc="lower right")
         plt.grid(True, linestyle='--', alpha=0.4)
         plt.tight_layout()
-        plt.savefig(os.path.join(
-            ".", f"all_datasets_accuracy_{model_fn.__name__}.png"))
+        plt.savefig(os.path.join(".", f"all_datasets_accuracy_{model_fn.__name__}.png"))
         plt.close()
     else:
         # no histories found -> do nothing (or optionally warn)
