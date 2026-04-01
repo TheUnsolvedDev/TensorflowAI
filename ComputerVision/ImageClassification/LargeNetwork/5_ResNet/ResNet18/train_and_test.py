@@ -9,7 +9,6 @@ from model import *
 
 # tf.debugging.enable_check_numerics()
 
-
 def main():
     model_fn = resnet18_model
     parser = argparse.ArgumentParser(description='Select GPU[0-3]:')
@@ -17,7 +16,7 @@ def main():
                         help='GPU number')
     parser.add_argument('--type', type=str, default='cifar10',
                         help='Dataset type', choices=['cifar10', 'fashion_mnist',
-                                                      'mnist',  'cifar100', 'skin_cancer', 'cassava_leaf_disease', 'chest_xray', 'crop_disease'])
+                           'mnist',  'cifar100', 'skin_cancer', 'cassava_leaf_disease', 'chest_xray', 'crop_disease'])
     args = parser.parse_args()
     physical_devices = tf.config.experimental.list_physical_devices('GPU')
     for device in physical_devices:
@@ -40,8 +39,7 @@ def main():
     train_ds, validation_ds, test_ds, num_classes, channels = dataset.load_data(
         args.type)
     strategy = tf.distribute.MirroredStrategy()
-    print(
-        f'Training on dataset {args.type} with {strategy.num_replicas_in_sync} devices')
+    print(f'Training on dataset {args.type} with {strategy.num_replicas_in_sync} devices')
 
     with strategy.scope():
         model = model_fn(input_shape=(
@@ -49,14 +47,13 @@ def main():
         model.compile(
             optimizer=tf.keras.optimizers.Adam(
                 learning_rate=LEARNING_RATE),
-            loss=['categorical_crossentropy',
-                  'categorical_crossentropy', 'categorical_crossentropy'],
-            metrics=['accuracy', 'accuracy', 'accuracy']
+            loss='categorical_crossentropy',
+            metrics=['accuracy']
         )
     model.summary(expand_nested=True)
     tf.keras.utils.plot_model(
-        model, to_file=model_fn.__name__+'.png', show_shapes=True, show_layer_names=True)
-
+        model, to_file=model_fn.__name__+'.png',show_shapes=True, show_layer_names=True)
+    
     # training (capture history)
     history = model.fit(
         train_ds,
@@ -156,8 +153,7 @@ def main():
         plt.legend(loc="lower right")
         plt.grid(True, linestyle='--', alpha=0.4)
         plt.tight_layout()
-        plt.savefig(os.path.join(
-            ".", f"all_datasets_accuracy_{model_fn.__name__}.png"))
+        plt.savefig(os.path.join(".", f"all_datasets_accuracy_{model_fn.__name__}.png"))
         plt.close()
     else:
         # no histories found -> do nothing (or optionally warn)

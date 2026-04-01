@@ -60,6 +60,8 @@ def resnet18_model(input_shape = (INPUT_SIZE[0],INPUT_SIZE[1],3),num_classes=10)
     x = tf.keras.layers.GlobalAveragePooling2D()(x)
     
     initializer = tf.keras.initializers.RandomUniform(-1.0/tf.sqrt(512.0), 1.0/tf.sqrt(512.0))
+    x = tf.keras.layers.Dense(1024, kernel_initializer=initializer,activation='relu')(x)
+    x = tf.keras.layers.Dense(1024, kernel_initializer=initializer,activation='relu')(x)
     outputs = tf.keras.layers.Dense(num_classes, kernel_initializer=initializer,name='fc')(x)
     return tf.keras.Model(inputs = inputs,outputs = outputs)
 
