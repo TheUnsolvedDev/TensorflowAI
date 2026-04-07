@@ -1,3 +1,5 @@
 *.pyc
 *.v2
 *.Identifier
+*.h5
+*.weights
