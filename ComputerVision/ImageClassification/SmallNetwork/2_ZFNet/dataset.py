@@ -400,6 +400,7 @@ if __name__ == "__main__":
         train_ds, validation_ds, test_ds, num_classes, channels = dataset.load_data(
             type)
         for image, label in validation_ds:
+            print(tf.reduce_max(image))
             print(image.shape, label.shape)
 
     # dataset = SkinCancerDataset()

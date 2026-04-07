@@ -15,7 +15,7 @@ class GAN(tf.keras.Model):
         self.input_shape = input_shape
         self.latent_dim = latent_dim
         self.batch_size = batch_size
-        self.cross_entropy = tf.keras.losses.BinaryCrossentropy()
+        self.cross_entropy = tf.keras.losses.BinaryCrossentropy(from_logits=True)
         self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
 
         with self.strategy.scope():
@@ -72,19 +72,16 @@ class GAN(tf.keras.Model):
             64, (5, 5), strides=(2, 2), padding='same')(inputs)
         x = tf.keras.layers.LeakyReLU()(x)
         x = tf.keras.layers.Dropout(0.3)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
 
         x = tf.keras.layers.Conv2D(
             128, (5, 5), strides=(2, 2), padding='same')(x)
         x = tf.keras.layers.LeakyReLU()(x)
         x = tf.keras.layers.Dropout(0.3)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
 
         x = tf.keras.layers.Conv2D(
             128, (5, 5), strides=(2, 2), padding='same')(x)
         x = tf.keras.layers.LeakyReLU()(x)
         x = tf.keras.layers.Dropout(0.3)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
         
         x = tf.keras.layers.Conv2D(
             128, (5, 5), strides=(2, 2), padding='same')(x)
@@ -93,7 +90,7 @@ class GAN(tf.keras.Model):
 
         x = tf.keras.layers.Flatten()(x)
         x = tf.keras.layers.Dense(32, activation='relu')(x)
-        x = tf.keras.layers.Dense(1,'sigmoid')(x)
+        x = tf.keras.layers.Dense(1)(x)
 
         outputs = x
         return tf.keras.Model(inputs, outputs, name="discriminator")
@@ -111,12 +108,14 @@ class GAN(tf.keras.Model):
             gen_loss = self.cross_entropy(
                 tf.ones_like(fake_output), fake_output)
             disc_loss = (self.cross_entropy(tf.ones_like(real_output), real_output) +
-                         self.cross_entropy(tf.zeros_like(fake_output), fake_output)) * 0.5
+                         self.cross_entropy(tf.zeros_like(fake_output), fake_output)) 
 
         gradients_of_generator = gen_tape.gradient(
             gen_loss, self.generator.trainable_variables)
         gradients_of_discriminator = disc_tape.gradient(
             disc_loss, self.discriminator.trainable_variables)
+        self.gen_gradients = gradients_of_generator
+        self.disc_gradients = gradients_of_discriminator
 
         self.generator_optimizer.apply_gradients(
             zip(gradients_of_generator, self.generator.trainable_variables))
@@ -172,6 +171,13 @@ class GAN(tf.keras.Model):
 
             for step, image_batch in enumerate(dataset):
                 gen_loss, disc_loss = self.distributed_train_step(image_batch)
+                logs = {
+                    "gen_loss": gen_loss,
+                    "disc_loss": disc_loss
+                }
+
+                for callback in callbacks:
+                    callback.on_train_batch_end(step, logs)
                 print(
                     f'\rEpoch [{step}/{epoch+1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}',end='')
                 sys.stdout.flush()
