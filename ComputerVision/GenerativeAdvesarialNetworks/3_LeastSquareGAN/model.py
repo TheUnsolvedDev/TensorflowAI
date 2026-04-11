@@ -39,7 +39,7 @@ class GAN(tf.keras.Model):
         # Start from a small feature map size depending on input resolution
         init_height = self.input_shape[0] // 4
         init_width = self.input_shape[1] // 4
-        init_channels = 256
+        init_channels = 32
 
         x = tf.keras.layers.Dense(
             init_height * init_width * init_channels, use_bias=False)(inputs)
@@ -78,8 +78,19 @@ class GAN(tf.keras.Model):
         x = tf.keras.layers.LeakyReLU()(x)
         x = tf.keras.layers.Dropout(0.3)(x)
 
+        x = tf.keras.layers.Conv2D(
+            128, (5, 5), strides=(2, 2), padding='same')(x)
+        x = tf.keras.layers.LeakyReLU()(x)
+        x = tf.keras.layers.Dropout(0.3)(x)
+        
+        x = tf.keras.layers.Conv2D(
+            128, (5, 5), strides=(2, 2), padding='same')(x)
+        x = tf.keras.layers.LeakyReLU()(x)
+        x = tf.keras.layers.Dropout(0.3)(x)
+
         x = tf.keras.layers.Flatten()(x)
-        x = tf.keras.layers.Dense(1,'sigmoid')(x)
+        x = tf.keras.layers.Dense(32, activation='relu')(x)
+        x = tf.keras.layers.Dense(1)(x)
 
         outputs = x
         return tf.keras.Model(inputs, outputs, name="discriminator")
@@ -93,21 +104,18 @@ class GAN(tf.keras.Model):
 
             real_output = self.discriminator(images, training=True)
             fake_output = self.discriminator(generated_images, training=True)
-            real_labels = tf.ones_like(real_output)
-            fake_labels = tf.zeros_like(fake_output)
 
-            # Discriminator loss
-            disc_loss_real = self.mse(real_labels, real_output)
-            disc_loss_fake = self.mse(fake_labels, fake_output)
-            disc_loss = (disc_loss_real + disc_loss_fake) * 0.5
+            gen_loss = self.mse(
+                tf.ones_like(fake_output), fake_output)
+            disc_loss = (self.mse(tf.ones_like(real_output), real_output) +
+                         self.mse(tf.zeros_like(fake_output), fake_output)) 
 
-            # Generator loss
-            gen_labels = tf.ones_like(fake_output)
-            gen_loss = self.mse(gen_labels, fake_output)
         gradients_of_generator = gen_tape.gradient(
             gen_loss, self.generator.trainable_variables)
         gradients_of_discriminator = disc_tape.gradient(
             disc_loss, self.discriminator.trainable_variables)
+        self.gen_gradients = gradients_of_generator
+        self.disc_gradients = gradients_of_discriminator
 
         self.generator_optimizer.apply_gradients(
             zip(gradients_of_generator, self.generator.trainable_variables))
@@ -163,6 +171,13 @@ class GAN(tf.keras.Model):
 
             for step, image_batch in enumerate(dataset):
                 gen_loss, disc_loss = self.distributed_train_step(image_batch)
+                logs = {
+                    "gen_loss": gen_loss,
+                    "disc_loss": disc_loss
+                }
+
+                for callback in callbacks:
+                    callback.on_train_batch_end(step, logs)
                 print(
                     f'\rEpoch [{step}/{epoch+1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}',end='')
                 sys.stdout.flush()
@@ -181,4 +196,4 @@ if __name__ == '__main__':
     strategy = tf.distribute.MirroredStrategy(
         cross_device_ops=tf.distribute.NcclAllReduce())
     gan = GAN(strategy=strategy, input_shape=(
-        IMAGE_SIZE[0], IMAGE_SIZE[1], 1), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
+        IMAGE_SIZE[0]*4, IMAGE_SIZE[1]*4, 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
