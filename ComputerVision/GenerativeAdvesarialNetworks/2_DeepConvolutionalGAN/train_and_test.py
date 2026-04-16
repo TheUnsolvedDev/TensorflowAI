@@ -11,9 +11,6 @@ from dataset import *
 from config import *
 
 
-# =========================
-# GPU SETUP
-# =========================
 def setup_gpu(gpu_id):
     gpus = tf.config.list_physical_devices('GPU')
     [tf.config.experimental.set_memory_growth(g, True) for g in gpus]
@@ -26,10 +23,6 @@ def setup_gpu(gpu_id):
     else:
         print("Invalid GPU ID, using CPU")
 
-
-# =========================
-# LOGGER
-# =========================
 class GANLogger(tf.keras.callbacks.Callback):
     def __init__(self, log_dir):
         super().__init__()
@@ -43,10 +36,6 @@ class GANLogger(tf.keras.callbacks.Callback):
         with open(os.path.join(self.log_dir, "history.json"), "w") as f:
             json.dump(self.history, f)
 
-
-# =========================
-# WEIGHT SAVE / LOAD
-# =========================
 def get_weight_paths(log_dir):
     gen_path = os.path.join(log_dir, "generator.weights.h5")
     disc_path = os.path.join(log_dir, "discriminator.weights.h5")
@@ -79,10 +68,6 @@ class WeightSaveCallback(tf.keras.callbacks.Callback):
 
         print(f"Saved weights at epoch {epoch+1}")
 
-
-# =========================
-# SAMPLE IMAGES
-# =========================
 class SampleImageCallback(tf.keras.callbacks.Callback):
     def __init__(self, model, log_dir, latent_dim):
         super().__init__()
@@ -110,10 +95,6 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         plt.savefig(os.path.join(self.img_dir, f"epoch_{epoch+1}.png"))
         plt.close()
 
-
-# =========================
-# EMA
-# =========================
 class GeneratorEMA(tf.keras.callbacks.Callback):
     def __init__(self, model, decay=0.999):
         super().__init__()
@@ -126,10 +107,6 @@ class GeneratorEMA(tf.keras.callbacks.Callback):
         for ema_w, w in zip(self.ema_weights, self.model_ref.generator.weights):
             ema_w.assign(self.decay * ema_w + (1.0 - self.decay) * w)
 
-
-# =========================
-# LR SCHEDULER
-# =========================
 class GANLRScheduler(tf.keras.callbacks.Callback):
     def __init__(self, gen_opt, disc_opt, factor=0.5, patience=15):
         super().__init__()
@@ -160,10 +137,6 @@ class GANLRScheduler(tf.keras.callbacks.Callback):
                 f"LR reduced -> G: {new_lr_g.numpy()}, D: {new_lr_d.numpy()}")
             self.wait = 0
 
-
-# =========================
-# GRADIENT MONITOR
-# =========================
 class GradientMonitor(tf.keras.callbacks.Callback):
     def __init__(self, model):
         super().__init__()
@@ -177,10 +150,6 @@ class GradientMonitor(tf.keras.callbacks.Callback):
             print("NaN gradients detected. Stopping.")
             self.model.stop_training = True
 
-
-# =========================
-# COLLAPSE DETECTOR
-# =========================
 class CollapseDetector(tf.keras.callbacks.Callback):
     def __init__(self):
         super().__init__()
@@ -200,9 +169,6 @@ class CollapseDetector(tf.keras.callbacks.Callback):
             self.model.stop_training = True
 
 
-# =========================
-# FINAL GRID
-# =========================
 def save_final_generated_grid(model, log_dir, latent_dim):
     noise = tf.random.normal([16, latent_dim])
 
@@ -223,9 +189,6 @@ def save_final_generated_grid(model, log_dir, latent_dim):
     plt.close()
 
 
-# =========================
-# MAIN
-# =========================
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--gpu', type=int, default=-1)
@@ -270,11 +233,11 @@ def main():
         GANLogger(log_dir),
         WeightSaveCallback(model, log_dir),
         SampleImageCallback(model, log_dir, latent_dim),
-        GeneratorEMA(model),
+        # GeneratorEMA(model),
         GANLRScheduler(model.generator_optimizer,
                        model.discriminator_optimizer),
         # GradientMonitor(model),
-        CollapseDetector()
+        # CollapseDetector()
     ]
 
     model.fit(

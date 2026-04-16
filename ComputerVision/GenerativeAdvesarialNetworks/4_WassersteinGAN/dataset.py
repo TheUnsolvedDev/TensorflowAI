@@ -8,9 +8,6 @@ from config import *
 AUTOTUNE = tf.data.AUTOTUNE
 
 
-# =========================
-# CelebA Dataset
-# =========================
 class CelebADataset:
     def __init__(self, train_size=0.8):
         self.train_size = train_size
@@ -35,9 +32,6 @@ class CelebADataset:
         return train_data, test_data
 
 
-# =========================
-# Anime Faces Dataset
-# =========================
 class AnimeFacesDataset:
     def __init__(self, train_size=0.8):
         self.train_size = train_size
@@ -60,10 +54,6 @@ class AnimeFacesDataset:
 
         return train_data, test_data
 
-
-# =========================
-# Unified Dataset Loader
-# =========================
 class Dataset:
     def __init__(self):
         self.mnist = tf.keras.datasets.mnist.load_data()
@@ -83,9 +73,6 @@ class Dataset:
         self.batch_size = BATCH_SIZE
         self.img_shape = IMAGE_SIZE
 
-    # =========================
-    # Image Processing
-    # =========================
     def process_images(self, image, decode=False, type='cifar10'):
         if decode:
             image = tf.io.read_file(image)
@@ -101,9 +88,6 @@ class Dataset:
 
         return image
 
-    # =========================
-    # TF Dataset Builder
-    # =========================
     def build_dataset(self, data, decode=False, type='cifar10', shuffle=True):
         ds = tf.data.Dataset.from_tensor_slices(data)
 
@@ -120,9 +104,6 @@ class Dataset:
 
         return ds
 
-    # =========================
-    # Load Data
-    # =========================
     def load_data(self, type='mnist'):
 
         if type == 'mnist':
@@ -181,9 +162,6 @@ class Dataset:
         return train_ds, test_ds, self.channels
 
 
-# =========================
-# Test
-# =========================
 if __name__ == "__main__":
     dataset = Dataset()
 
