@@ -5,3 +5,5 @@
 *.weights
 *.h5
 *.h5
+**/logs/**
+**/GAN/**

@@ -37,8 +37,8 @@ class GAN(tf.keras.Model):
 
     def build_generator(self):
         inputs = tf.keras.layers.Input(shape=(self.latent_dim[0],))
-        init_height = self.input_shape[0] // 4
-        init_width = self.input_shape[1] // 4
+        init_height = self.input_shape[0] // 8
+        init_width = self.input_shape[1] // 8
         init_channels = 64
 
         x = tf.keras.layers.Dense(
@@ -48,6 +48,11 @@ class GAN(tf.keras.Model):
         x = tf.keras.layers.Reshape(
             (init_height, init_width, init_channels))(x)
 
+        x = tf.keras.layers.Conv2DTranspose(
+            128, (5, 5), strides=(2, 2), padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU()(x)
+        
         x = tf.keras.layers.Conv2DTranspose(
             128, (5, 5), strides=(2, 2), padding='same', use_bias=False)(x)
         x = tf.keras.layers.BatchNormalization()(x)
@@ -80,11 +85,6 @@ class GAN(tf.keras.Model):
             128, (5, 5), strides=(2, 2), padding='same')(x)
         x = tf.keras.layers.LeakyReLU()(x)
         x = tf.keras.layers.Dropout(0.3)(x)
-        
-        x = tf.keras.layers.Conv2D(
-            128, (5, 5), strides=(2, 2), padding='same')(x)
-        x = tf.keras.layers.LeakyReLU()(x)
-        x = tf.keras.layers.Dropout(0.3)(x)
 
         x = tf.keras.layers.Flatten()(x)
         x = tf.keras.layers.Dense(32)(x)
@@ -95,7 +95,7 @@ class GAN(tf.keras.Model):
 
     @tf.function
     def train_generator_step(self, noise):
-        # noise = tf.random.normal([self.global_batch_size, self.latent_dim[0]])
+        noise = tf.random.normal([self.global_batch_size, self.latent_dim[0]])
         with tf.GradientTape() as gen_tape:
             generated_images = self.generator(noise, training=True)
             fake_output = self.discriminator(generated_images, training=True)
@@ -114,6 +114,8 @@ class GAN(tf.keras.Model):
         noise = tf.random.normal([batch_size, self.latent_dim[0]])
         with tf.GradientTape() as disc_tape:
             generated_images = self.generator(noise, training=True)
+            real_images += tf.random.normal(tf.shape(real_images), stddev=0.05)
+            generated_images += tf.random.normal(tf.shape(generated_images), stddev=0.05)
             real_output = self.discriminator(real_images, training=True)
             fake_output = self.discriminator(generated_images, training=True)
             disc_loss = (self.cross_entropy(tf.ones_like(real_output), real_output) +
@@ -178,8 +180,11 @@ class GAN(tf.keras.Model):
 
             for step, image_batch in enumerate(dataset):
                 noise = np.random.normal(0, 1, (self.batch_size, self.latent_dim[0]))
-                disc_loss = self.dist_discriminator_step(image_batch)
-                gen_loss = self.dist_generator_step(noise)
+                for _ in range(N_DISC_STEP):
+                    disc_loss = self.dist_discriminator_step(image_batch)
+
+                for _ in range(N_GEN_STEP):
+                    gen_loss = self.dist_generator_step(noise)
                 print(
                     f'\rEpoch [{step}/{epoch+1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}',end='')
                 sys.stdout.flush()
