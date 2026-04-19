@@ -5,12 +5,17 @@ import os
 import json
 import numpy as np
 import matplotlib.pyplot as plt
+import signal
+import sys
 
 from model import *
 from dataset import *
 from config import *
 
 
+# =========================
+# GPU SETUP
+# =========================
 def setup_gpu(gpu_id):
     gpus = tf.config.list_physical_devices('GPU')
     [tf.config.experimental.set_memory_growth(g, True) for g in gpus]
@@ -22,6 +27,84 @@ def setup_gpu(gpu_id):
         print(f"Using GPU {gpu_id}")
     else:
         print("Invalid GPU ID, using CPU")
+
+
+# =========================
+# PATH HELPERS
+# =========================
+def get_weight_paths(log_dir):
+    gen_path = os.path.join(log_dir, "generator.weights.h5")
+    disc_path = os.path.join(log_dir, "discriminator.weights.h5")
+    return gen_path, disc_path
+
+
+def get_state_path(log_dir):
+    return os.path.join(log_dir, "training_state.json")
+
+
+# =========================
+# STATE SAVE / LOAD
+# =========================
+def save_training_state(log_dir, epoch):
+    state = {"epoch": epoch}
+    with open(get_state_path(log_dir), "w") as f:
+        json.dump(state, f)
+
+
+def load_training_state(log_dir):
+    path = get_state_path(log_dir)
+    if os.path.exists(path):
+        with open(path, "r") as f:
+            state = json.load(f)
+        return state.get("epoch", 0)
+    return 0
+
+
+# =========================
+# LOAD WEIGHTS
+# =========================
+def load_weights_if_needed(model, log_dir, resume):
+    gen_path, disc_path = get_weight_paths(log_dir)
+
+    if resume:
+        if os.path.exists(gen_path) and os.path.exists(disc_path):
+            model.generator.load_weights(gen_path)
+            model.discriminator.load_weights(disc_path)
+            print("Loaded existing weights")
+        else:
+            print("No saved weights found, starting fresh")
+
+
+# =========================
+# CTRL + C HANDLER
+# =========================
+def setup_interrupt_handler(model, log_dir):
+    def handler(sig, frame):
+        print("\nInterrupt received. Saving state...")
+
+        gen_path, disc_path = get_weight_paths(log_dir)
+        model.generator.save_weights(gen_path)
+        model.discriminator.save_weights(disc_path)
+
+        current_epoch = getattr(model, "_current_epoch", 0)
+        save_training_state(log_dir, current_epoch)
+
+        print(f"Saved at epoch {current_epoch}. Exiting.")
+        sys.exit(0)
+
+    signal.signal(signal.SIGINT, handler)
+
+
+# =========================
+# CALLBACKS
+# =========================
+class EpochTracker(tf.keras.callbacks.Callback):
+    def __init__(self, model):
+        self.model_ref = model
+
+    def on_epoch_begin(self, epoch, logs=None):
+        self.model_ref._current_epoch = epoch
+
 
 class GANLogger(tf.keras.callbacks.Callback):
     def __init__(self, log_dir):
@@ -36,23 +119,6 @@ class GANLogger(tf.keras.callbacks.Callback):
         with open(os.path.join(self.log_dir, "history.json"), "w") as f:
             json.dump(self.history, f)
 
-def get_weight_paths(log_dir):
-    gen_path = os.path.join(log_dir, "generator.weights.h5")
-    disc_path = os.path.join(log_dir, "discriminator.weights.h5")
-    return gen_path, disc_path
-
-
-def load_weights_if_needed(model, log_dir, resume):
-    gen_path, disc_path = get_weight_paths(log_dir)
-
-    if resume:
-        if os.path.exists(gen_path) and os.path.exists(disc_path):
-            model.generator.load_weights(gen_path)
-            model.discriminator.load_weights(disc_path)
-            print("Loaded existing weights")
-        else:
-            print("No saved weights found, starting fresh")
-
 
 class WeightSaveCallback(tf.keras.callbacks.Callback):
     def __init__(self, model, log_dir):
@@ -66,7 +132,10 @@ class WeightSaveCallback(tf.keras.callbacks.Callback):
         self.model_ref.generator.save_weights(gen_path)
         self.model_ref.discriminator.save_weights(disc_path)
 
-        print(f"Saved weights at epoch {epoch+1}")
+        save_training_state(self.log_dir, epoch + 1)
+
+        print(f"Saved weights and state at epoch {epoch+1}")
+
 
 class SampleImageCallback(tf.keras.callbacks.Callback):
     def __init__(self, model, log_dir, latent_dim):
@@ -95,17 +164,6 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         plt.savefig(os.path.join(self.img_dir, f"epoch_{epoch+1}.png"))
         plt.close()
 
-class GeneratorEMA(tf.keras.callbacks.Callback):
-    def __init__(self, model, decay=0.999):
-        super().__init__()
-        self.model_ref = model
-        self.decay = decay
-        self.ema_weights = [tf.Variable(w, trainable=False)
-                            for w in model.generator.weights]
-
-    def on_train_batch_end(self, batch, logs=None):
-        for ema_w, w in zip(self.ema_weights, self.model_ref.generator.weights):
-            ema_w.assign(self.decay * ema_w + (1.0 - self.decay) * w)
 
 class GANLRScheduler(tf.keras.callbacks.Callback):
     def __init__(self, gen_opt, disc_opt, factor=0.5, patience=15):
@@ -137,38 +195,10 @@ class GANLRScheduler(tf.keras.callbacks.Callback):
                 f"LR reduced -> G: {new_lr_g.numpy()}, D: {new_lr_d.numpy()}")
             self.wait = 0
 
-class GradientMonitor(tf.keras.callbacks.Callback):
-    def __init__(self, model):
-        super().__init__()
-        self.model_ref = model
 
-    def on_train_batch_end(self, batch, logs=None):
-        g_norm = tf.linalg.global_norm(self.model_ref.gen_gradients)
-        d_norm = tf.linalg.global_norm(self.model_ref.disc_gradients)
-
-        if tf.math.is_nan(g_norm) or tf.math.is_nan(d_norm):
-            print("NaN gradients detected. Stopping.")
-            self.model.stop_training = True
-
-class CollapseDetector(tf.keras.callbacks.Callback):
-    def __init__(self):
-        super().__init__()
-        self.counter = 0
-
-    def on_epoch_end(self, epoch, logs=None):
-        g_loss = logs["gen_loss"]
-        d_loss = logs["disc_loss"]
-
-        if g_loss > 5.0 and d_loss < 0.1:
-            self.counter += 1
-        else:
-            self.counter = 0
-
-        if self.counter >= 3:
-            print("Mode collapse detected. Stopping.")
-            self.model.stop_training = True
-
-
+# =========================
+# FINAL IMAGE
+# =========================
 def save_final_generated_grid(model, log_dir, latent_dim):
     noise = tf.random.normal([16, latent_dim])
 
@@ -189,6 +219,9 @@ def save_final_generated_grid(model, log_dir, latent_dim):
     plt.close()
 
 
+# =========================
+# MAIN
+# =========================
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--gpu', type=int, default=-1)
@@ -210,6 +243,9 @@ def main():
     log_dir = f"logs/{a.type}/GAN"
     os.makedirs(log_dir, exist_ok=True)
 
+    # =========================
+    # MODEL INIT
+    # =========================
     if a.type in ['celeba', 'anime_faces']:
         model = GAN(
             strategy=strategy,
@@ -227,22 +263,42 @@ def main():
         )
         latent_dim = LATENT_DIM
 
-    load_weights_if_needed(model, log_dir, a.resume)
+    # =========================
+    # LOAD STATE
+    # =========================
+    start_epoch = 0
 
+    if a.resume:
+        load_weights_if_needed(model, log_dir, True)
+        start_epoch = load_training_state(log_dir)
+        print(f"Resuming from epoch {start_epoch}")
+
+    # =========================
+    # INTERRUPT HANDLER
+    # =========================
+    setup_interrupt_handler(model, log_dir)
+
+    # =========================
+    # CALLBACKS
+    # =========================
     callbacks = [
+        EpochTracker(model),
         GANLogger(log_dir),
         WeightSaveCallback(model, log_dir),
         SampleImageCallback(model, log_dir, latent_dim),
-        # GeneratorEMA(model),
-        GANLRScheduler(model.generator_optimizer,
-                       model.discriminator_optimizer),
-        # GradientMonitor(model),
-        # CollapseDetector()
+        GANLRScheduler(
+            model.generator_optimizer,
+            model.discriminator_optimizer
+        ),
     ]
 
+    # =========================
+    # TRAIN
+    # =========================
     model.fit(
         train_ds,
         epochs=EPOCHS,
+        initial_epoch=start_epoch,
         path=f"{a.type}/GAN",
         callbacks=callbacks
     )

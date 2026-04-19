@@ -35,43 +35,50 @@ class NN_GAN(tf.keras.Model):
         self.discriminator.summary()
 
     def build_generator(self):
-        init_channels = 64
-        inputs = tf.keras.layers.Input(shape=(self.latent_dim[0],))
-        x = tf.keras.layers.Dense(init_channels * 2, use_bias=False)(inputs)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.LeakyReLU()(x)
+        import numpy as np
 
-        x = tf.keras.layers.Dense(init_channels * 4, use_bias=False)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.LeakyReLU()(x)
+        H, W, C = self.input_shape
+        z = self.latent_dim[0]
+        D = H * W * C
+        n = max(2, int(np.log2(H)) - 2)
+        base = min(1024, max(64, D // 128))
 
-        x = tf.keras.layers.Dense(init_channels * 8, use_bias=False)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.LeakyReLU()(x)
+        inp = tf.keras.layers.Input((z,))
+        x = inp
 
-        output_dim = self.input_shape[0] * self.input_shape[1] * self.input_shape[2]
-        x = tf.keras.layers.Dense(output_dim, activation='tanh')(x)
-        x = tf.keras.layers.Reshape(self.input_shape)(x)
+        for i in range(n):
+            units = base * (2 ** min(i, 3))
+            x = tf.keras.layers.Dense(units, use_bias=False)(x)
+            x = tf.keras.layers.BatchNormalization()(x)
+            x = tf.keras.layers.LeakyReLU()(x)
 
-        return tf.keras.Model(inputs, x, name="generator")
+        x = tf.keras.layers.Dense(D, activation='tanh')(x)
+        out = tf.keras.layers.Reshape((H, W, C))(x)
+
+        return tf.keras.Model(inp, out, name="generator")
 
 
     def build_discriminator(self):
-        init_channels = 16
-        inputs = tf.keras.layers.Input(shape=self.input_shape)
-        x = tf.keras.layers.Flatten()(inputs)
+        import numpy as np
 
-        x = tf.keras.layers.Dense(init_channels * 4)(x)
-        x = tf.keras.layers.LeakyReLU()(x)
-        x = tf.keras.layers.Dropout(0.3)(x)
+        H, W, C = self.input_shape
+        D = H * W * C
 
-        x = tf.keras.layers.Dense(init_channels * 4)(x)
-        x = tf.keras.layers.LeakyReLU()(x)
-        x = tf.keras.layers.Dropout(0.3)(x)
+        n = max(2, int(np.log2(H)) - 2)
+        base = min(512, max(32, D // 256))
 
-        x = tf.keras.layers.Dense(1)(x)  # Single output neuron
-        return tf.keras.Model(inputs, x, name="discriminator")
-    
+        inp = tf.keras.layers.Input((H, W, C))
+        x = tf.keras.layers.Flatten()(inp)
+
+        for i in range(n):
+            units = base * (2 ** min(i, 3))
+            x = tf.keras.layers.Dense(units)(x)
+            x = tf.keras.layers.LeakyReLU()(x)
+            x = tf.keras.layers.Dropout(0.3)(x)
+
+        out = tf.keras.layers.Dense(1)(x)
+
+        return tf.keras.Model(inp, out, name="discriminator")
     
     @tf.function
     def train_generator_step(self, noise):
@@ -192,3 +199,7 @@ if __name__ == '__main__':
         cross_device_ops=tf.distribute.NcclAllReduce())
     gan = NN_GAN(strategy=strategy, input_shape=(
         IMAGE_SIZE[0]*4, IMAGE_SIZE[1]*4, 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
+    gan = NN_GAN(strategy=strategy, input_shape=(
+        IMAGE_SIZE[0], IMAGE_SIZE[1], 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
+    gan = NN_GAN(strategy=strategy, input_shape=(
+        28, 28, 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)

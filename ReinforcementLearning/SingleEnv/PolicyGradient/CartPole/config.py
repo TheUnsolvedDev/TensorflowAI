@@ -1,0 +1,14 @@
+import numpy as np
+
+ENV_NAME = "CartPole-v1"
+
+OBS_SHAPE = (4,)
+ACTION_SHAPE = 2
+
+MAX_STEPS = 200
+
+LEARNING_RATE = 3e-4
+GAMMA = 0.99
+
+EPOCHS = 10000
+
