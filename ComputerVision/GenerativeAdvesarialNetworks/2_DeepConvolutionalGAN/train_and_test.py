@@ -28,10 +28,6 @@ def setup_gpu(gpu_id):
     else:
         print("Invalid GPU ID, using CPU")
 
-
-# =========================
-# PATH HELPERS
-# =========================
 def get_weight_paths(log_dir):
     gen_path = os.path.join(log_dir, "generator.weights.h5")
     disc_path = os.path.join(log_dir, "discriminator.weights.h5")
@@ -42,9 +38,6 @@ def get_state_path(log_dir):
     return os.path.join(log_dir, "training_state.json")
 
 
-# =========================
-# STATE SAVE / LOAD
-# =========================
 def save_training_state(log_dir, epoch):
     state = {"epoch": epoch}
     with open(get_state_path(log_dir), "w") as f:
@@ -59,10 +52,6 @@ def load_training_state(log_dir):
         return state.get("epoch", 0)
     return 0
 
-
-# =========================
-# LOAD WEIGHTS
-# =========================
 def load_weights_if_needed(model, log_dir, resume):
     gen_path, disc_path = get_weight_paths(log_dir)
 
@@ -74,10 +63,6 @@ def load_weights_if_needed(model, log_dir, resume):
         else:
             print("No saved weights found, starting fresh")
 
-
-# =========================
-# CTRL + C HANDLER
-# =========================
 def setup_interrupt_handler(model, log_dir):
     def handler(sig, frame):
         print("\nInterrupt received. Saving state...")
@@ -94,10 +79,6 @@ def setup_interrupt_handler(model, log_dir):
 
     signal.signal(signal.SIGINT, handler)
 
-
-# =========================
-# CALLBACKS
-# =========================
 class EpochTracker(tf.keras.callbacks.Callback):
     def __init__(self, model):
         self.model_ref = model
@@ -194,11 +175,44 @@ class GANLRScheduler(tf.keras.callbacks.Callback):
             print(
                 f"LR reduced -> G: {new_lr_g.numpy()}, D: {new_lr_d.numpy()}")
             self.wait = 0
+            
+import tensorflow as tf
 
+class ModeCollapseCallback(tf.keras.callbacks.Callback):
+    def __init__(self, latent_dim, num_samples=32, threshold=0.05):
+        super().__init__()
+        self.latent_dim = latent_dim
+        self.num_samples = num_samples
+        self.threshold = threshold
 
-# =========================
-# FINAL IMAGE
-# =========================
+        self.fixed_noise = tf.random.normal([num_samples, latent_dim])
+
+    @tf.function
+    def compute_diversity_graph(self, generator, noise):
+        samples = generator(noise, training=False)
+        x = tf.reshape(samples, [tf.shape(samples)[0], -1])
+        diffs = tf.expand_dims(x, 1) - tf.expand_dims(x, 0)
+        dists = tf.linalg.norm(diffs, axis=-1)
+        mask = 1.0 - tf.eye(tf.shape(x)[0])
+        mean_dist = tf.reduce_sum(dists * mask) / tf.reduce_sum(mask)
+        return mean_dist
+
+    def on_epoch_end(self, epoch, logs=None):
+        diversity = self.compute_diversity_graph(
+            self.model.generator,
+            self.fixed_noise
+        )
+
+        diversity_val = float(diversity.numpy())
+
+        print(f"\n[ModeCollapse] Diversity: {diversity_val:.6f}")
+
+        if diversity_val < self.threshold:
+            print("[WARNING] Mode collapse likely detected")
+
+        if logs is not None:
+            logs["diversity"] = diversity_val
+
 def save_final_generated_grid(model, log_dir, latent_dim):
     noise = tf.random.normal([16, latent_dim])
 
@@ -219,9 +233,6 @@ def save_final_generated_grid(model, log_dir, latent_dim):
     plt.close()
 
 
-# =========================
-# MAIN
-# =========================
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--gpu', type=int, default=-1)
@@ -243,17 +254,14 @@ def main():
     log_dir = f"logs/{a.type}/GAN"
     os.makedirs(log_dir, exist_ok=True)
 
-    # =========================
-    # MODEL INIT
-    # =========================
     if a.type in ['celeba', 'anime_faces']:
         model = GAN(
             strategy=strategy,
-            input_shape=(IMAGE_SIZE[0]*4, IMAGE_SIZE[1]*4, ch),
-            latent_dim=(LATENT_DIM*4,),
-            batch_size=BATCH_SIZE//4
+            input_shape=(IMAGE_SIZE[0]*2, IMAGE_SIZE[1]*2, ch),
+            latent_dim=(LATENT_DIM*2,),
+            batch_size=BATCH_SIZE//2
         )
-        latent_dim = LATENT_DIM * 4
+        latent_dim = LATENT_DIM * 2
     else:
         model = GAN(
             strategy=strategy,
@@ -263,9 +271,6 @@ def main():
         )
         latent_dim = LATENT_DIM
 
-    # =========================
-    # LOAD STATE
-    # =========================
     start_epoch = 0
 
     if a.resume:
@@ -273,28 +278,18 @@ def main():
         start_epoch = load_training_state(log_dir)
         print(f"Resuming from epoch {start_epoch}")
 
-    # =========================
-    # INTERRUPT HANDLER
-    # =========================
     setup_interrupt_handler(model, log_dir)
-
-    # =========================
-    # CALLBACKS
-    # =========================
     callbacks = [
         EpochTracker(model),
         GANLogger(log_dir),
         WeightSaveCallback(model, log_dir),
         SampleImageCallback(model, log_dir, latent_dim),
+        ModeCollapseCallback(latent_dim),
         GANLRScheduler(
             model.generator_optimizer,
             model.discriminator_optimizer
         ),
     ]
-
-    # =========================
-    # TRAIN
-    # =========================
     model.fit(
         train_ds,
         epochs=EPOCHS,

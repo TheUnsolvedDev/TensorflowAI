@@ -26,8 +26,7 @@ class GAN(tf.keras.Model):
             self.discriminator = self.build_discriminator()
 
             self.generator_optimizer = tf.keras.optimizers.Adam(
-                GENERATOR_LEARNING_RATE, beta_1=0.0, beta_2=0.9
-            )
+                GENERATOR_LEARNING_RATE)
             self.discriminator_optimizer = tf.keras.optimizers.Adam(
                 DISCRIMINATOR_LEARNING_RATE)
 
@@ -37,61 +36,62 @@ class GAN(tf.keras.Model):
         self.generator.summary()
         self.discriminator.summary()
 
-    def build_generator(self):
-        import numpy as np
+    def build_generator(self, latent_dim=100, channels=3):
+        _, _, channels = self.input_shape
+        z = tf.keras.layers.Input(shape=(self.latent_dim[0],))
 
-        H, W, C = self.input_shape
-        z_dim = self.latent_dim[0]
-
-        filters_high = [512, 256, 128, 64, 32, 16]
-        filters_low = [64, 64, 32, 16, 8, 8]
-        filters = filters_high if H > 32 else filters_low
-
-        inp = tf.keras.layers.Input((z_dim,))
-        x = tf.keras.layers.Dense(512, use_bias=False)(inp)
+        x = tf.keras.layers.Dense(4 * 4 * 256, use_bias=False)(z)
         x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.LeakyReLU()(x)
-        x = tf.keras.layers.Reshape((4, 4, 32))(x)
+        x = tf.keras.layers.ReLU()(x)
+        x = tf.keras.layers.Reshape((4, 4, 256))(x)
 
-        curr = 4
-        i = 0
-        while curr < max(H, W):
+        x = tf.keras.layers.Conv2DTranspose(
+            256, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.ReLU()(x)
+
+        x = tf.keras.layers.Conv2DTranspose(
+            128, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.ReLU()(x)
+
+        if self.input_shape[0] >= 64:
             x = tf.keras.layers.Conv2DTranspose(
-                filters[min(i, len(filters)-1)], 5, 2, 'same', use_bias=False
-            )(x)
+                64, 4, strides=2, padding='same', use_bias=False)(x)
             x = tf.keras.layers.BatchNormalization()(x)
-            x = tf.keras.layers.LeakyReLU()(x)
+            x = tf.keras.layers.ReLU()(x)
 
-            curr *= 2
-            i += 1
-        x = tf.keras.layers.Resizing(H, W)(x)
-        out = tf.keras.layers.Conv2D(C, 3, padding='same', activation='tanh')(x)
-        return tf.keras.Model(inp, out, name="generator")
+        out = tf.keras.layers.Conv2DTranspose(
+            channels, 4, strides=2, padding='same',
+            use_bias=False, activation='tanh')(x)
+
+        return tf.keras.Model(z, out, name="generator")
 
     def build_discriminator(self):
-        import numpy as np
+        inp = tf.keras.layers.Input(shape=self.input_shape)
 
-        H, W, C = self.input_shape
-        n = int(np.log2(H)) - 2
-        filters_high = [32, 64, 64, 128, 256, 256]
-        filters_low = np.array([16, 32, 64, 128, 256, 512])
-        # filters = filters if H > 32 else filters*2
-        filters = filters_high if H > 32 else filters_low
+        x = tf.keras.layers.Conv2D(
+            64, 4, strides=2, padding='same')(inp)
+        x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
 
-        inp = tf.keras.layers.Input((H, W, C))
-        x = inp
+        x = tf.keras.layers.Conv2D(
+            128, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
 
-        for i in range(n):
-            x = tf.keras.layers.Conv2D(
-                filters[min(i, len(filters)-1)], 5, 2, 'same'
-            )(x)
-            x = tf.keras.layers.LeakyReLU()(x)
-            x = tf.keras.layers.Dropout(0.3)(x)
+        x = tf.keras.layers.Conv2D(
+            256, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
 
-        x = tf.keras.layers.Flatten()(x)
-        x = tf.keras.layers.Dense(32)(x)
-        x = tf.keras.layers.LeakyReLU()(x)
-        out = tf.keras.layers.Dense(1)(x)
+        x = tf.keras.layers.Conv2D(
+            256, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.ReLU(0.2)(x)
+
+        x = tf.keras.layers.GlobalAveragePooling2D()(x)
+        out = tf.keras.layers.Dense(1)(x)  # logits
 
         return tf.keras.Model(inp, out, name="discriminator")
 
@@ -121,7 +121,7 @@ class GAN(tf.keras.Model):
                 tf.shape(generated_images), stddev=0.05)
             real_output = self.discriminator(real_images, training=True)
             fake_output = self.discriminator(generated_images, training=True)
-            disc_loss = (self.loss_fn(tf.ones_like(real_output), real_output) +
+            disc_loss = (self.loss_fn(tf.ones_like(real_output) * 0.9, real_output) +
                          self.loss_fn(tf.zeros_like(fake_output), fake_output))
 
         gradients_of_discriminator = disc_tape.gradient(
@@ -214,8 +214,10 @@ if __name__ == '__main__':
     strategy = tf.distribute.MirroredStrategy(
         cross_device_ops=tf.distribute.NcclAllReduce())
     gan = GAN(strategy=strategy, input_shape=(
-        IMAGE_SIZE[0]*4, IMAGE_SIZE[1]*4, 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
+        IMAGE_SIZE[0]*2, IMAGE_SIZE[1]*2, 3), latent_dim=(LATENT_DIM*4,), batch_size=BATCH_SIZE)
     gan = GAN(strategy=strategy, input_shape=(
         IMAGE_SIZE[0], IMAGE_SIZE[1], 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
-    gan = GAN(strategy=strategy, input_shape=(
-        28, 28, 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
+    # gan = GAN(strategy=strategy, input_shape=(
+    #     IMAGE_SIZE[0], IMAGE_SIZE[1], 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
+    # gan = GAN(strategy=strategy, input_shape=(
+    #     28, 28, 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)

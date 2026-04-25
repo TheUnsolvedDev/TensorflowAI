@@ -1,5 +1,5 @@
-DATASET_PATH = '../../../../dataset_clf/'
+DATASET_PATH = '/mnt/storage/da24d402/Documents/Dataset/'
 INPUT_SIZE = [224, 224, 3]
 BATCH_SIZE = 64
-EPOCHS = 2
-LEARNING_RATE = 0.001
+EPOCHS = 10
+LEARNING_RATE = 1e-4

@@ -81,7 +81,7 @@ class Dataset:
         if type in ['cifar10', 'cifar100', 'mnist', 'fashion_mnist']:
             image = tf.image.resize(image, self.img_shape)
         else:
-            image = tf.image.resize(image, (IMAGE_SIZE[0]*4, IMAGE_SIZE[1]*4))
+            image = tf.image.resize(image, (IMAGE_SIZE[0]*2, IMAGE_SIZE[1]*2))
 
         image = tf.cast(image, tf.float32)
         image = (image - 127.5) / 127.5

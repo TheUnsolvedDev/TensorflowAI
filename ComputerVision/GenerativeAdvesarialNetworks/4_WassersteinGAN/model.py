@@ -1,9 +1,12 @@
-from numpy import var
 import tensorflow as tf
 import matplotlib.pyplot as plt
-import os, sys
+import os
+import sys
+import tqdm
+import numpy as np
 from config import *
 
+# Create images folder
 os.makedirs("images", exist_ok=True)
 
 
@@ -14,91 +17,90 @@ class WGAN(tf.keras.Model):
         self.input_shape = input_shape
         self.latent_dim = latent_dim
         self.batch_size = batch_size
-        self.n_critic = 5
+        # self.loss_fn = tf.keras.losses.MeanSquaredError()
+        self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
 
         with self.strategy.scope():
             self.generator = self.build_generator()
             self.discriminator = self.build_discriminator()
 
-            self.generator_optimizer = tf.keras.optimizers.Adam(
-                GENERATOR_LEARNING_RATE, beta_1=0.0, beta_2=0.9
-            )
-            self.discriminator_optimizer = tf.keras.optimizers.Adam(
-                DISCRIMINATOR_LEARNING_RATE, beta_1=0.0, beta_2=0.9
-            )
+            self.generator_optimizer = tf.keras.optimizers.RMSprop(
+                GENERATOR_LEARNING_RATE)
+            self.discriminator_optimizer = tf.keras.optimizers.RMSprop(
+                DISCRIMINATOR_LEARNING_RATE)
+
         self.generator.build(input_shape=(None, latent_dim[0]))
         self.discriminator.build(input_shape=(None, *input_shape))
 
         self.generator.summary()
         self.discriminator.summary()
     
-    def build_generator(self):
-        inputs = tf.keras.layers.Input(shape=(self.latent_dim[0],))
+    def build_generator(self, latent_dim=100, channels=3):
+        _, _, channels = self.input_shape
+        z = tf.keras.layers.Input(shape=(self.latent_dim[0],))
 
-        # Start from a small feature map size depending on input resolution
-        init_height = self.input_shape[0] // 4
-        init_width = self.input_shape[1] // 4
-        init_channels = 32
-
-        x = tf.keras.layers.Dense(
-            init_height * init_width * init_channels, use_bias=False)(inputs)
+        x = tf.keras.layers.Dense(4 * 4 * 256, use_bias=False)(z)
         x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.LeakyReLU()(x)
-        x = tf.keras.layers.Reshape(
-            (init_height, init_width, init_channels))(x)
+        x = tf.keras.layers.ReLU()(x)
+        x = tf.keras.layers.Reshape((4, 4, 256))(x)
 
         x = tf.keras.layers.Conv2DTranspose(
-            128, (5, 5), strides=(2, 2), padding='same', use_bias=False)(x)
+            256, 4, strides=2, padding='same', use_bias=False)(x)
         x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.LeakyReLU()(x)
+        x = tf.keras.layers.ReLU()(x)
 
         x = tf.keras.layers.Conv2DTranspose(
-            64, (5, 5), strides=(2, 2), padding='same', use_bias=False)(x)
+            128, 4, strides=2, padding='same', use_bias=False)(x)
         x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.LeakyReLU()(x)
+        x = tf.keras.layers.ReLU()(x)
 
-        # Final layer outputs the desired channels (1 or 3) and final size
-        x = tf.keras.layers.Conv2DTranspose(self.input_shape[2], (5, 5), strides=(
-            1, 1), padding='same', use_bias=False, activation='tanh')(x)
+        if self.input_shape[0] >= 64:
+            x = tf.keras.layers.Conv2DTranspose(
+                64, 4, strides=2, padding='same', use_bias=False)(x)
+            x = tf.keras.layers.BatchNormalization()(x)
+            x = tf.keras.layers.ReLU()(x)
 
-        outputs = x
-        return tf.keras.Model(inputs, outputs, name="generator")
+        out = tf.keras.layers.Conv2DTranspose(
+            channels, 4, strides=2, padding='same',
+            use_bias=False, activation='tanh')(x)
+
+        return tf.keras.Model(z, out, name="generator")
 
     def build_discriminator(self):
-        inputs = tf.keras.layers.Input(shape=self.input_shape)
+        inp = tf.keras.layers.Input(shape=self.input_shape)
 
         x = tf.keras.layers.Conv2D(
-            64, (5, 5), strides=(2, 2), padding='same')(inputs)
-        x = tf.keras.layers.LeakyReLU()(x)
+            64, 4, strides=2, padding='same')(inp)
+        # x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Conv2D(
-            128, (5, 5), strides=(2, 2), padding='same')(x)
-        x = tf.keras.layers.LeakyReLU()(x)
+            128, 4, strides=2, padding='same', use_bias=False)(x)
+        # x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Conv2D(
-            128, (5, 5), strides=(2, 2), padding='same')(x)
-        x = tf.keras.layers.LeakyReLU()(x)
-        
+            256, 4, strides=2, padding='same', use_bias=False)(x)
+        # x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
+
         x = tf.keras.layers.Conv2D(
-            128, (5, 5), strides=(2, 2), padding='same')(x)
-        x = tf.keras.layers.LeakyReLU()(x)
+            256, 4, strides=2, padding='same', use_bias=False)(x)
+        # x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Flatten()(x)
-        x = tf.keras.layers.Dense(32, activation='relu')(x)
-        x = tf.keras.layers.Dense(1)(x)
+        out = tf.keras.layers.Dense(1)(x)  # logits
 
-        outputs = x
-        return tf.keras.Model(inputs, outputs, name="discriminator")
+        return tf.keras.Model(inp, out, name="discriminator")
     
     
     @tf.function
-    def train_generator_step(self):
+    def train_generator_step(self, noise):
         noise = tf.random.normal([self.batch_size, self.latent_dim[0]])
-
         with tf.GradientTape() as tape:
             fake_images = self.generator(noise, training=True)
             fake_out = self.discriminator(fake_images, training=True)
-
             loss = -tf.reduce_mean(fake_out)
         grads = tape.gradient(loss, self.generator.trainable_variables)
         self.generator_optimizer.apply_gradients(zip(grads, self.generator.trainable_variables))
@@ -107,9 +109,11 @@ class WGAN(tf.keras.Model):
     @tf.function
     def train_discriminator_step(self, real_images):
         noise = tf.random.normal([self.batch_size, self.latent_dim[0]])
+        real_images+= tf.random.normal(tf.shape(real_images), stddev=0.05)
 
         with tf.GradientTape() as tape:
             fake_images = self.generator(noise, training=True)
+            fake_images += tf.random.normal(tf.shape(fake_images), stddev=0.05)
             real_out = self.discriminator(real_images, training=True)
             fake_out = self.discriminator(fake_images, training=True)
 
@@ -120,59 +124,22 @@ class WGAN(tf.keras.Model):
             var.assign(tf.clip_by_value(var, -0.01, 0.01))
         return loss
     
-
-    # ---------------- Distributed Wrappers ----------------
     @tf.function
-    def dist_discriminator_step(self, images):
-        per_replica = self.strategy.run(self.train_discriminator_step, args=(images,))
-        return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica, axis=None)
+    def dist_generator_step(self, noise):
+        per_replica_gen_loss = self.strategy.run(
+            self.train_generator_step, args=(noise,))
+        gen_loss = self.strategy.reduce(
+            tf.distribute.ReduceOp.MEAN, per_replica_gen_loss, axis=None)
+        return gen_loss
 
     @tf.function
-    def dist_generator_step(self):
-        per_replica = self.strategy.run(self.train_generator_step)
-        return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica, axis=None)
+    def dist_discriminator_step(self, dataset_inputs):
+        per_replica_disc_loss = self.strategy.run(
+            self.train_discriminator_step, args=(dataset_inputs,))
+        disc_loss = self.strategy.reduce(
+            tf.distribute.ReduceOp.MEAN, per_replica_disc_loss, axis=None)
+        return disc_loss
     
-    def fit(self, dataset, epochs, path='folder', callbacks=None):
-        if callbacks is None:
-            callbacks = []
-        for callback in callbacks:
-            callback.set_model(self)
-            callback.on_train_begin()
-
-        for epoch in range(epochs):
-            for callback in callbacks:
-                callback.on_epoch_begin(epoch)
-
-            for step, image_batch in enumerate(dataset):
-                for _ in range(self.n_critic):
-                    disc_loss = self.dist_discriminator_step(image_batch)
-
-                    # Train generator once
-                gen_loss = self.dist_generator_step()
-                print(
-                    f'\rEpoch [{step}/{epoch+1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}',end='')
-                sys.stdout.flush()
-                logs = {
-                    "gen_loss": gen_loss,
-                    "disc_loss": disc_loss
-                }
-
-                for callback in callbacks:
-                    callback.on_train_batch_end(step, logs)
-                
-            print()
-            self.generate_and_save_images(epoch+1, path=path)
-
-            logs = {"gen_loss": gen_loss.numpy(), "disc_loss": disc_loss.numpy()}
-            for callback in callbacks:
-                callback.on_epoch_end(epoch, logs)
-
-        for callback in callbacks:
-            callback.on_train_end()
-
-
-
-    # ---------------- Visualization ----------------
     def generate_and_save_images(self, epoch, num_examples=16, path='folder'):
         path = f'images/{path}'
         os.makedirs(path, exist_ok=True)
@@ -196,3 +163,41 @@ class WGAN(tf.keras.Model):
         plt.subplots_adjust(wspace=0.1, hspace=0.1)
         plt.savefig(f"{path}/image_at_epoch_{epoch:03d}.png")
         plt.close()
+
+    def fit(self, dataset, epochs, initial_epoch=0, path='folder', callbacks=None):
+        if callbacks is None:
+            callbacks = []
+        for callback in callbacks:
+            callback.set_model(self)
+            callback.on_train_begin()
+
+        for epoch in range(initial_epoch, epochs):
+            for callback in callbacks:
+                callback.on_epoch_begin(epoch)
+
+            for step, image_batch in enumerate(dataset):
+                noise = np.random.normal(
+                    0, 1, (self.batch_size, self.latent_dim[0]))
+                for _ in range(N_DISC_STEP):
+                    disc_loss = self.dist_discriminator_step(image_batch)
+
+                for _ in range(N_GEN_STEP):
+                    gen_loss = self.dist_generator_step(noise)
+                print(
+                    f'\rEpoch [{step}/{epoch+1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}', end='')
+                sys.stdout.flush()
+                logs = {
+                    "gen_loss": gen_loss,
+                    "disc_loss": disc_loss
+                }
+                for callback in callbacks:
+                    callback.on_train_batch_end(step, logs)
+
+            print()
+            self.generate_and_save_images(epoch+1, path=path)
+            logs = {"gen_loss": gen_loss.numpy(), "disc_loss": disc_loss.numpy()}
+            for callback in callbacks:
+                callback.on_epoch_end(epoch, logs)
+
+        for callback in callbacks:
+            callback.on_train_end()

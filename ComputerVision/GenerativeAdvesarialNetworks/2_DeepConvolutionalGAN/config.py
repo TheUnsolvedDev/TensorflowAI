@@ -1,9 +1,9 @@
-DATASET_PATH = '/home/shuvrajeet/Documents/Dataset/'
+DATASET_PATH = '/mnt/storage/da24d402/Documents/Dataset/'
 IMAGE_SIZE = (32,32)
-BATCH_SIZE = 128
+BATCH_SIZE = 256
 EPOCHS = 200
-LATENT_DIM = 128
+LATENT_DIM = 64
 GENERATOR_LEARNING_RATE = 1e-4
 DISCRIMINATOR_LEARNING_RATE = 1e-4
-N_GEN_STEP = 1
-N_DISC_STEP = 3
+N_GEN_STEP = 1 # 2 for celeba
+N_DISC_STEP = 1 # 1 for celeba
