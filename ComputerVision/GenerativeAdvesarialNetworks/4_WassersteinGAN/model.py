@@ -19,7 +19,7 @@ class WGAN(tf.keras.Model):
         self.batch_size = batch_size
         # self.loss_fn = tf.keras.losses.MeanSquaredError()
         self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
-
+        self.factor = 2 if self.input_shape[0] >= 64 else 1
         with self.strategy.scope():
             self.generator = self.build_generator()
             self.discriminator = self.build_discriminator()
@@ -39,24 +39,24 @@ class WGAN(tf.keras.Model):
         _, _, channels = self.input_shape
         z = tf.keras.layers.Input(shape=(self.latent_dim[0],))
 
-        x = tf.keras.layers.Dense(4 * 4 * 256, use_bias=False)(z)
+        x = tf.keras.layers.Dense(4 * 4 * 256 * self.factor, use_bias=False)(z)
         x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.ReLU()(x)
-        x = tf.keras.layers.Reshape((4, 4, 256))(x)
+        x = tf.keras.layers.Reshape((4, 4, 256 * self.factor))(x)
 
         x = tf.keras.layers.Conv2DTranspose(
-            256, 4, strides=2, padding='same', use_bias=False)(x)
+            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
         x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.ReLU()(x)
 
         x = tf.keras.layers.Conv2DTranspose(
-            128, 4, strides=2, padding='same', use_bias=False)(x)
+            128 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
         x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.ReLU()(x)
 
         if self.input_shape[0] >= 64:
             x = tf.keras.layers.Conv2DTranspose(
-                64, 4, strides=2, padding='same', use_bias=False)(x)
+                64 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
             x = tf.keras.layers.BatchNormalization()(x)
             x = tf.keras.layers.ReLU()(x)
 
@@ -70,23 +70,22 @@ class WGAN(tf.keras.Model):
         inp = tf.keras.layers.Input(shape=self.input_shape)
 
         x = tf.keras.layers.Conv2D(
-            64, 4, strides=2, padding='same')(inp)
-        # x = tf.keras.layers.BatchNormalization()(x)
+            64 * self.factor, 4, strides=2, padding='same')(inp)
         x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Conv2D(
-            128, 4, strides=2, padding='same', use_bias=False)(x)
-        # x = tf.keras.layers.BatchNormalization()(x)
+            128 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Conv2D(
-            256, 4, strides=2, padding='same', use_bias=False)(x)
-        # x = tf.keras.layers.BatchNormalization()(x)
+            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Conv2D(
-            256, 4, strides=2, padding='same', use_bias=False)(x)
-        # x = tf.keras.layers.BatchNormalization()(x)
+            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Flatten()(x)

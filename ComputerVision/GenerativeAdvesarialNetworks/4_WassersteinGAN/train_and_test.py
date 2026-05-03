@@ -254,13 +254,13 @@ def main():
     os.makedirs(log_dir, exist_ok=True)
 
     if a.type in ['celeba', 'anime_faces']:
+        latent_dim = LATENT_DIM * 4
         model = WGAN(
             strategy=strategy,
             input_shape=(IMAGE_SIZE[0]*2, IMAGE_SIZE[1]*2, ch),
-            latent_dim=(LATENT_DIM*2,),
-            batch_size=BATCH_SIZE//2
+            latent_dim=(latent_dim,),
+            batch_size=BATCH_SIZE
         )
-        latent_dim = LATENT_DIM * 2
     else:
         model = WGAN(
             strategy=strategy,

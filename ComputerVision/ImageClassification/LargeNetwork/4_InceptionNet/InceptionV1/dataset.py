@@ -219,7 +219,7 @@ class Dataset:
                 pass
         # image = tf.image.per_image_standardization(image)
         image = tf.image.resize(image, self.img_shape)
-        return image, (label, label, label)
+        return image, label
 
     def load_data(self, type='mnist'):
         if type == 'mnist':
@@ -236,11 +236,11 @@ class Dataset:
                 :int(len(train_labels)*0.8)], train_images[int(len(train_labels)*0.8):], train_labels[:int(len(train_labels)*0.8)], train_labels[int(len(train_labels)*0.8):]
 
             train_ds = tf.data.Dataset.from_tensor_slices(
-                (train_images, train_labels)).shuffle(10000).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (train_images, train_labels)).shuffle(10000).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
             validation_ds = tf.data.Dataset.from_tensor_slices(
-                (validation_images, validation_labels)).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (validation_images, validation_labels)).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
             test_ds = tf.data.Dataset.from_tensor_slices(
-                (test_images, test_labels)).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (test_images, test_labels)).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
 
             return train_ds, validation_ds, test_ds, self.num_classes, self.channels
 
@@ -258,11 +258,11 @@ class Dataset:
                 :int(len(train_labels)*0.8)], train_images[int(len(train_labels)*0.8):], train_labels[:int(len(train_labels)*0.8)], train_labels[int(len(train_labels)*0.8):]
 
             train_ds = tf.data.Dataset.from_tensor_slices(
-                (train_images, train_labels)).shuffle(10000).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (train_images, train_labels)).shuffle(10000).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
             validation_ds = tf.data.Dataset.from_tensor_slices(
-                (validation_images, validation_labels)).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (validation_images, validation_labels)).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
             test_ds = tf.data.Dataset.from_tensor_slices(
-                (test_images, test_labels)).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (test_images, test_labels)).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
 
             return train_ds, validation_ds, test_ds, self.num_classes, self.channels
 
@@ -281,11 +281,11 @@ class Dataset:
                 :int(len(train_labels)*0.8)], train_images[int(len(train_labels)*0.8):], train_labels[:int(len(train_labels)*0.8)], train_labels[int(len(train_labels)*0.8):]
 
             train_ds = tf.data.Dataset.from_tensor_slices(
-                (train_images, train_labels)).shuffle(10000).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (train_images, train_labels)).shuffle(10000).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
             validation_ds = tf.data.Dataset.from_tensor_slices(
-                (validation_images, validation_labels)).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (validation_images, validation_labels)).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
             test_ds = tf.data.Dataset.from_tensor_slices(
-                (test_images, test_labels)).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (test_images, test_labels)).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
 
             return train_ds, validation_ds, test_ds, self.num_classes, self.channels
 
@@ -303,11 +303,11 @@ class Dataset:
                 :int(len(train_labels)*0.8)], train_images[int(len(train_labels)*0.8):], train_labels[:int(len(train_labels)*0.8)], train_labels[int(len(train_labels)*0.8):]
 
             train_ds = tf.data.Dataset.from_tensor_slices(
-                (train_images, train_labels)).shuffle(10000).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (train_images, train_labels)).shuffle(10000).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
             validation_ds = tf.data.Dataset.from_tensor_slices(
-                (validation_images, validation_labels)).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (validation_images, validation_labels)).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
             test_ds = tf.data.Dataset.from_tensor_slices(
-                (test_images, test_labels)).batch(self.batch_size).map(self.process_images).prefetch(tf.data.AUTOTUNE)
+                (test_images, test_labels)).batch(self.batch_size).map(self.process_images, num_parallel_calls=tf.data.AUTOTUNE).cache().prefetch(tf.data.AUTOTUNE)
 
             return train_ds, validation_ds, test_ds, self.num_classes, self.channels
 
@@ -324,11 +324,11 @@ class Dataset:
                 :int(len(train_labels)*0.8)], train_images[int(len(train_labels)*0.8):], train_labels[:int(len(train_labels)*0.8)], train_labels[int(len(train_labels)*0.8):]
 
             train_ds = tf.data.Dataset.from_tensor_slices(
-                (train_images, train_labels)).shuffle(10000).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (train_images, train_labels)).shuffle(10000).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             validation_ds = tf.data.Dataset.from_tensor_slices(
-                (validation_images, validation_labels)).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (validation_images, validation_labels)).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             test_ds = tf.data.Dataset.from_tensor_slices(
-                (test_images, test_labels)).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (test_images, test_labels)).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
 
             return train_ds, validation_ds, test_ds, self.num_classes, self.channels
 
@@ -345,11 +345,11 @@ class Dataset:
                 :int(len(train_labels)*0.8)], train_images[int(len(train_labels)*0.8):], train_labels[:int(len(train_labels)*0.8)], train_labels[int(len(train_labels)*0.8):]
 
             train_ds = tf.data.Dataset.from_tensor_slices(
-                (train_images, train_labels)).shuffle(10000).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (train_images, train_labels)).shuffle(10000).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             validation_ds = tf.data.Dataset.from_tensor_slices(
-                (validation_images, validation_labels)).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (validation_images, validation_labels)).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             test_ds = tf.data.Dataset.from_tensor_slices(
-                (test_images, test_labels)).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (test_images, test_labels)).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             return train_ds, validation_ds, test_ds, self.num_classes, self.channels
 
         elif type == 'chest_xray':
@@ -365,11 +365,11 @@ class Dataset:
                 :int(len(train_labels)*0.8)], train_images[int(len(train_labels)*0.8):], train_labels[:int(len(train_labels)*0.8)], train_labels[int(len(train_labels)*0.8):]
 
             train_ds = tf.data.Dataset.from_tensor_slices(
-                (train_images, train_labels)).shuffle(10000).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (train_images, train_labels)).shuffle(10000).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             validation_ds = tf.data.Dataset.from_tensor_slices(
-                (validation_images, validation_labels)).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (validation_images, validation_labels)).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             test_ds = tf.data.Dataset.from_tensor_slices(
-                (test_images, test_labels)).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (test_images, test_labels)).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             return train_ds, validation_ds, test_ds, self.num_classes, self.channels
 
         elif type == 'crop_disease':
@@ -386,11 +386,11 @@ class Dataset:
                 :int(len(train_labels)*0.8)], train_images[int(len(train_labels)*0.8):], train_labels[:int(len(train_labels)*0.8)], train_labels[int(len(train_labels)*0.8):]
 
             train_ds = tf.data.Dataset.from_tensor_slices(
-                (train_images, train_labels)).shuffle(10000).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (train_images, train_labels)).shuffle(10000).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             validation_ds = tf.data.Dataset.from_tensor_slices(
-                (validation_images, validation_labels)).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (validation_images, validation_labels)).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             test_ds = tf.data.Dataset.from_tensor_slices(
-                (test_images, test_labels)).map(lambda x, y: self.process_images(x, y, decode=True)).batch(self.batch_size).prefetch(tf.data.AUTOTUNE)
+                (test_images, test_labels)).map(lambda x, y: self.process_images(x, y, decode=True), num_parallel_calls=tf.data.AUTOTUNE).batch(self.batch_size).cache().prefetch(tf.data.AUTOTUNE)
             return train_ds, validation_ds, test_ds, self.num_classes, self.channels
 
 

@@ -8,6 +8,7 @@ from dataset import *
 from model import *
 
 # tf.debugging.enable_check_numerics()
+tf.keras.mixed_precision.set_global_policy('mixed_float16')
 
 def main():
     model_fn = alexnet_model
@@ -42,11 +43,12 @@ def main():
     print(f'Training on dataset {args.type} with {strategy.num_replicas_in_sync} devices')
 
     with strategy.scope():
+        optimizer = tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE)
+        optimizer = tf.keras.mixed_precision.LossScaleOptimizer(optimizer)
         model = model_fn(input_shape=(
             INPUT_SIZE[0], INPUT_SIZE[1], channels), num_classes=num_classes)
         model.compile(
-            optimizer=tf.keras.optimizers.Adam(
-                learning_rate=LEARNING_RATE),
+            optimizer=optimizer,
             loss='categorical_crossentropy',
             metrics=['accuracy']
         )

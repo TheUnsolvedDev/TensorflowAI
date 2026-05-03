@@ -4,80 +4,80 @@ import numpy as np
 
 from config import *
 
-class LocalResponseNormalization(tf.keras.layers.Layer):
-    def __init__(self, alpha=0.0001, beta=0.75, depth_radius=5, **kwargs):
-        super(LocalResponseNormalization, self).__init__(**kwargs)
-        self.alpha = alpha
-        self.beta = beta
-        self.depth_radius = depth_radius
 
-    def build(self, input_shape):
-        self.channels = input_shape[-1]  # Get the number of channels
-        self.kernel = self.add_weight(
-            shape=(1, 1, self.channels, 1),
-            initializer=tf.keras.initializers.Ones(),
-            trainable=False
-        )
+def conv_block(net_in, K, dropout_rate, weight_decay):
+    net = tf.keras.layers.BatchNormalization()(net_in)
+    net = tf.keras.layers.Activation('relu')(net)
+    net = tf.keras.layers.Conv2D(4*K, (1, 1), use_bias=False, padding='same',
+                                 kernel_initializer='he_normal',
+                                 kernel_regularizer=tf.keras.regularizers.l2(weight_decay))(net)
+    net = tf.keras.layers.Dropout(dropout_rate)(net)
 
-    def call(self, x):
-        squared = tf.square(x)
-        window_sum = tf.nn.depthwise_conv2d(
-            squared,
-            self.kernel,
-            strides=[1, 1, 1, 1],
-            padding="SAME"
-        )
-        norm = tf.pow(1 + self.alpha * window_sum, -self.beta)
-        return x * norm
+    net = tf.keras.layers.BatchNormalization()(net)
+    net = tf.keras.layers.Activation('relu')(net)
+    net = tf.keras.layers.Conv2D(K, (3, 3), use_bias=False, padding='same',
+                                 kernel_initializer='he_normal',
+                                 kernel_regularizer=tf.keras.regularizers.l2(weight_decay))(net)
+    net = tf.keras.layers.Dropout(dropout_rate)(net)
 
-    def compute_output_shape(self, input_shape):
-        return input_shape
+    net = tf.keras.layers.Concatenate()([net_in, net])
+    return net
 
 
-def vgg11_A_LRN_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], num_classes=10):
+def dense_block(net_in, num_blocks, K, dropout_rate, weight_decay):
+    net = net_in
+    for _ in range(num_blocks):
+        net = conv_block(net, K, dropout_rate, weight_decay)
+    return net
+
+
+def transition_block(net_in, theta, dropout_rate, weight_decay):
+    net = tf.keras.layers.BatchNormalization()(net_in)
+    net = tf.keras.layers.Activation('relu')(net)
+    net = tf.keras.layers.Conv2D(int(net_in.shape[-1]*theta), (1, 1), use_bias=False, padding='same',
+                                 kernel_initializer='he_normal',
+                                 kernel_regularizer=tf.keras.regularizers.l2(weight_decay))(net)
+    net = tf.keras.layers.Dropout(dropout_rate)(net)
+    net = tf.keras.layers.AveragePooling2D((2, 2), strides=(2, 2))(net)
+    return net
+
+
+def densenet_model_121(input_shape=(INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]), num_classes=10, K=32, theta=0.5, num_blocks=[6, 12, 24, 16], dropout_rate=0.4, weight_decay=1e-4):
+
+    if theta <= 0.0 or theta > 1.0:
+        raise Exception('Compression factor must be > 0 and <= 1.0')
+    if dropout_rate <= 0.0 or dropout_rate > 1.0:
+        raise Exception('Drop rate must be > 0 and <= 1.0')
+
     inputs = tf.keras.layers.Input(shape=input_shape)
-    x = tf.keras.layers.Lambda(lambda x: x/255)(inputs)
-    x = tf.keras.layers.Conv2D(filters=64, kernel_size=(3, 3),
-                               padding="same", activation="relu")(x)
-    x = LocalResponseNormalization()(x)
-    x = tf.keras.layers.MaxPool2D(pool_size=(2, 2), strides=(2, 2))(x)
-    
-    x = tf.keras.layers.Conv2D(filters=128, kernel_size=(3, 3),
-                               padding="same", activation="relu")(x)
-    x = LocalResponseNormalization()(x)
-    x = tf.keras.layers.MaxPool2D(pool_size=(2, 2), strides=(2, 2))(x)
-    
-    x = tf.keras.layers.Conv2D(filters=256, kernel_size=(3, 3),
-                               padding="same", activation="relu")(x)
-    x = tf.keras.layers.Conv2D(filters=256, kernel_size=(3, 3),
-                              padding="same", activation="relu")(x)
-    x = tf.keras.layers.MaxPool2D(pool_size=(2, 2), strides=(2, 2))(x)
-    
-    x = tf.keras.layers.Conv2D(filters=512, kernel_size=(3, 3),
-                               padding="same", activation="relu")(x)
-    x = tf.keras.layers.Conv2D(filters=512, kernel_size=(3, 3),
-                               padding="same", activation="relu")(x)
-    x = tf.keras.layers.MaxPool2D(pool_size=(2, 2), strides=(2, 2))(x)
-    
-    x = tf.keras.layers.Conv2D(filters=512, kernel_size=(3, 3),
-                               padding="same", activation="relu")(x)
-    x = tf.keras.layers.Conv2D(filters=512, kernel_size=(3, 3),
-                               padding="same", activation="relu")(x)
-    x = tf.keras.layers.MaxPool2D(pool_size=(2, 2), strides=(2, 2))(x)
-    
-    x = tf.keras.layers.Flatten()(x)
-    x = tf.keras.layers.Dense(4096, activation="relu")(x)
-    x = tf.keras.layers.Dropout(0.5)(x)
-    x = tf.keras.layers.Dense(4096, activation="relu")(x)
-    x = tf.keras.layers.Dropout(0.5)(x)
-    outputs = tf.keras.layers.Dense(num_classes, activation="softmax")(x)
+    net = tf.keras.layers.Lambda(lambda x: x / 255)(inputs)
 
-    return tf.keras.Model(inputs=inputs, outputs=outputs)
+    net = tf.keras.layers.Conv2D(
+        2 * K, (7, 7), (2, 2),
+        use_bias=False,
+        padding='same',
+        kernel_initializer='he_normal',
+        kernel_regularizer=tf.keras.regularizers.l2(weight_decay)
+    )(net)
+
+    net = tf.keras.layers.MaxPooling2D((3, 3), strides=(2, 2), padding='same')(net)
+
+    for i in range(len(num_blocks) - 1):
+        net = dense_block(net, num_blocks[i], K, dropout_rate, weight_decay)
+        net = transition_block(net, theta, dropout_rate, weight_decay)
+
+    net = dense_block(net, num_blocks[-1], K, dropout_rate, weight_decay)
+
+    net = tf.keras.layers.BatchNormalization()(net)
+    net = tf.keras.layers.Activation('relu')(net)
+
+    net = tf.keras.layers.GlobalAveragePooling2D()(net)
+    outputs = tf.keras.layers.Dense(num_classes, activation='softmax')(net)
+
+    model = tf.keras.models.Model(inputs, outputs)
+    return model
+
 
 if __name__ == "__main__":
-    models = [
-        vgg11_A_LRN_model,]
-    
-    for model_fn in models:
-        model = model_fn()
-        model.summary()
+    model = densenet_model_121()
+    model.summary(expand_nested=True)

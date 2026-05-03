@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define your choices array
-choices=("mnist" "cifar10" "cifar100" "fashion_mnist")
+choices=("celeba" "anime_faces" "mnist" "cifar10" "cifar100" "fashion_mnist")
 
 for choice in "${choices[@]}"; do
     echo "Running dataset: $choice"

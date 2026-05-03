@@ -19,6 +19,7 @@ class WGAN(tf.keras.Model):
         self.batch_size = batch_size
         self.lambda_gp = LAMBDA_GP
         # self.loss_fn = tf.keras.losses.MeanSquaredError()
+        self.factor = 2 if self.input_shape[0] >= 64 else 1
         self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
 
         with self.strategy.scope():
@@ -26,9 +27,9 @@ class WGAN(tf.keras.Model):
             self.discriminator = self.build_discriminator()
 
             self.generator_optimizer = tf.keras.optimizers.Adam(
-                GENERATOR_LEARNING_RATE)
+                GENERATOR_LEARNING_RATE, beta_1=0.5, beta_2=0.999)
             self.discriminator_optimizer = tf.keras.optimizers.Adam(
-                DISCRIMINATOR_LEARNING_RATE)
+                DISCRIMINATOR_LEARNING_RATE, beta_1=0.5, beta_2=0.999)
 
         self.generator.build(input_shape=(None, latent_dim[0]))
         self.discriminator.build(input_shape=(None, *input_shape))
@@ -40,24 +41,24 @@ class WGAN(tf.keras.Model):
         _, _, channels = self.input_shape
         z = tf.keras.layers.Input(shape=(self.latent_dim[0],))
 
-        x = tf.keras.layers.Dense(4 * 4 * 256, use_bias=False)(z)
+        x = tf.keras.layers.Dense(4 * 4 * 256 * self.factor, use_bias=False)(z)
         x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.ReLU()(x)
-        x = tf.keras.layers.Reshape((4, 4, 256))(x)
+        x = tf.keras.layers.Reshape((4, 4, 256 * self.factor))(x)
 
         x = tf.keras.layers.Conv2DTranspose(
-            256, 4, strides=2, padding='same', use_bias=False)(x)
+            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
         x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.ReLU()(x)
 
         x = tf.keras.layers.Conv2DTranspose(
-            128, 4, strides=2, padding='same', use_bias=False)(x)
+            128 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
         x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.ReLU()(x)
 
         if self.input_shape[0] >= 64:
             x = tf.keras.layers.Conv2DTranspose(
-                64, 4, strides=2, padding='same', use_bias=False)(x)
+                64 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
             x = tf.keras.layers.BatchNormalization()(x)
             x = tf.keras.layers.ReLU()(x)
 
@@ -71,45 +72,28 @@ class WGAN(tf.keras.Model):
         inp = tf.keras.layers.Input(shape=self.input_shape)
 
         x = tf.keras.layers.Conv2D(
-            64, 4, strides=2, padding='same')(inp)
-        # x = tf.keras.layers.BatchNormalization()(x)
+            64 * self.factor, 4, strides=2, padding='same')(inp)
         x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Conv2D(
-            128, 4, strides=2, padding='same', use_bias=False)(x)
-        # x = tf.keras.layers.BatchNormalization()(x)
+            128 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Conv2D(
-            256, 4, strides=2, padding='same', use_bias=False)(x)
-        # x = tf.keras.layers.BatchNormalization()(x)
+            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Conv2D(
-            256, 4, strides=2, padding='same', use_bias=False)(x)
-        # x = tf.keras.layers.BatchNormalization()(x)
+            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.LeakyReLU(0.2)(x)
 
         x = tf.keras.layers.Flatten()(x)
         out = tf.keras.layers.Dense(1)(x)  # logits
 
         return tf.keras.Model(inp, out, name="discriminator")
-    
-    # @tf.function
-    # def gradient_penalty(self, real_images, fake_images):
-    #     batch_size = tf.shape(real_images)[0]
-    #     alpha = tf.random.uniform(
-    #         [batch_size, 1, 1, 1], 0.0, 1.0
-    #     )
-    #     interpolated = real_images + alpha * (fake_images - real_images)
-    #     with tf.GradientTape() as tape:
-    #         tape.watch(interpolated)
-    #         pred = self.discriminator(interpolated, training=True)
-    #     grads = tape.gradient(pred, interpolated)
-    #     grads = tf.reshape(grads, [batch_size, -1])
-    #     norm = tf.norm(grads, axis=1)
-    #     gp = tf.reduce_mean((norm - 1.0) ** 2)
-    #     return gp
     
     
     @tf.function

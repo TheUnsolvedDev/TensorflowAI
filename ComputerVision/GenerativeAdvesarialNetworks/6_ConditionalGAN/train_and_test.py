@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 import signal
 import sys
 
-from model import CondGAN
-from dataset import Dataset
+from model import *
+from dataset import *
 from config import *
 
 
@@ -123,40 +123,41 @@ class WeightSaveCallback(tf.keras.callbacks.Callback):
 
 
 class SampleImageCallback(tf.keras.callbacks.Callback):
-    def __init__(self, model, log_dir, latent_dim, num_classes):
+    def __init__(self, model, log_dir, latent_dim, num_classes, label_mode="onehot", multilabel_dim=None):
         self.model_ref = model
-        self.latent_dim = latent_dim
-        self.num_classes = num_classes
-
         self.noise = tf.random.normal([16, latent_dim])
-        self.labels = tf.constant(
-            np.arange(16) % num_classes, dtype=tf.int32
-        )
-        self.labels = tf.reshape(self.labels, [-1, 1])
+        self.label_mode = label_mode
+
+        base = np.arange(16) % num_classes
+
+        if label_mode == "multilabel":
+            if multilabel_dim is None: raise ValueError("multilabel_dim required")
+            labels = (np.random.rand(16, multilabel_dim) > 0.5).astype(np.float32)
+        else:
+            labels = np.eye(num_classes)[base].astype(np.float32)
+
+        self.labels = tf.convert_to_tensor(labels)
 
         self.img_dir = os.path.join(log_dir, "samples")
         os.makedirs(self.img_dir, exist_ok=True)
 
     def on_epoch_end(self, epoch, logs=None):
-        gen = self.model_ref.generator(
-            [self.noise, self.labels], training=False
-        )
-        gen = (gen + 1.0) / 2.0
-        gen = gen.numpy()
+        gen = self.model_ref.generator((self.noise, self.labels), training=False)
+        gen = ((gen + 1.0) / 2.0).numpy()
 
         fig, ax = plt.subplots(4, 4, figsize=(6, 6))
-        k = 0
+        for i in range(16):
+            r, c = i // 4, i % 4
+            ax[r, c].imshow(gen[i])
+            ax[r, c].axis("off")
 
-        for i in range(4):
-            for j in range(4):
-                ax[i, j].imshow(gen[k])
-                ax[i, j].axis("off")
-                k += 1
+            if self.label_mode != "multilabel":
+                label = int(np.argmax(self.labels[i].numpy()))
+                ax[r, c].set_title(str(label), fontsize=8)
 
         plt.tight_layout()
         plt.savefig(os.path.join(self.img_dir, f"epoch_{epoch+1}.png"))
         plt.close()
-
 
 class GANLRScheduler(tf.keras.callbacks.Callback):
     def __init__(self, gen_opt, disc_opt, factor=0.5, patience=15):
@@ -186,27 +187,78 @@ class GANLRScheduler(tf.keras.callbacks.Callback):
             print(f"LR reduced: G={new_lr_g.numpy()} D={new_lr_d.numpy()}")
             self.wait = 0
 
+class ModeCollapseCallback(tf.keras.callbacks.Callback):
+    def __init__(self, latent_dim, num_classes, num_samples=32, threshold=0.05, label_mode="onehot", multilabel_dim=None):
+        super().__init__()
+        self.latent_dim = latent_dim
+        self.num_samples = num_samples
+        self.threshold = threshold
+        self.label_mode = label_mode
+        self.num_classes = num_classes
+        self.multilabel_dim = multilabel_dim
 
-# =========================
-# FINAL GRID
-# =========================
-def save_final_grid(model, log_dir, latent_dim, num_classes):
+        self.fixed_noise = tf.random.normal([num_samples, latent_dim])
+
+        base = np.arange(num_samples) % num_classes
+
+        if label_mode == "multilabel":
+            if multilabel_dim is None: raise ValueError("multilabel_dim required")
+            labels = (np.random.rand(num_samples, multilabel_dim) > 0.5).astype(np.float32)
+        else:
+            labels = np.eye(num_classes)[base].astype(np.float32)
+
+        self.fixed_labels = tf.convert_to_tensor(labels)
+
+    @tf.function
+    def compute_diversity_graph(self, generator, noise, labels):
+        samples = generator((noise, labels), training=False)
+        x = tf.reshape(samples, [tf.shape(samples)[0], -1])
+        diffs = tf.expand_dims(x, 1) - tf.expand_dims(x, 0)
+        dists = tf.linalg.norm(diffs, axis=-1)
+        mask = 1.0 - tf.eye(tf.shape(x)[0])
+        return tf.reduce_sum(dists * mask) / tf.reduce_sum(mask)
+
+    def on_epoch_end(self, epoch, logs=None):
+        diversity = self.compute_diversity_graph(
+            self.model.generator,
+            self.fixed_noise,
+            self.fixed_labels
+        )
+
+        diversity_val = float(diversity.numpy())
+
+        print(f"\n[ModeCollapse] Diversity: {diversity_val:.6f}")
+
+        if diversity_val < self.threshold:
+            print("[WARNING] Mode collapse likely detected")
+
+        if logs is not None:
+            logs["diversity"] = diversity_val
+
+def save_final_grid(model, log_dir, latent_dim, num_classes, label_mode="onehot", multilabel_dim=None):
     noise = tf.random.normal([16, latent_dim])
-    labels = tf.constant(np.arange(16) % num_classes, dtype=tf.int32)
-    labels = tf.reshape(labels, [-1, 1])
+    base = np.arange(16) % num_classes
 
-    gen = model.generator([noise, labels], training=False)
-    gen = (gen + 1.0) / 2.0
-    gen = gen.numpy()
+    if label_mode == "multilabel":
+        if multilabel_dim is None: raise ValueError("multilabel_dim required")
+        labels = (np.random.rand(16, multilabel_dim) > 0.5).astype(np.float32)
+    else:
+        labels = np.eye(num_classes)[base].astype(np.float32)
+
+    labels = tf.convert_to_tensor(labels)
+
+    gen = model.generator((noise, labels), training=False)
+    gen = ((gen + 1.0) / 2.0).numpy()
 
     fig, ax = plt.subplots(4, 4, figsize=(6, 6))
-    k = 0
+    for i in range(16):
+        r, c = i // 4, i % 4
+        ax[r, c].imshow(gen[i])
+        ax[r, c].axis("off")
 
-    for i in range(4):
-        for j in range(4):
-            ax[i, j].imshow(gen[k])
-            ax[i, j].axis("off")
-            k += 1
+        if label_mode != "multilabel":
+            label = int(np.argmax(labels[i].numpy()))
+            ax[r, c].set_title(f"class {label}", fontsize=8)
 
     plt.tight_layout()
     plt.savefig(os.path.join(log_dir, "final_grid.png"))
@@ -226,9 +278,10 @@ def main():
     setup_gpu(args.gpu)
 
     dataset = Dataset()
-    train_ds, _, ch = dataset.load_data(args.type)
+    train_ds, ch = dataset.load_data(args.type)
 
-    strategy = tf.distribute.MirroredStrategy(cross_device_ops=tf.distribute.NcclAllReduce())
+    strategy = tf.distribute.MirroredStrategy(
+        cross_device_ops=tf.distribute.NcclAllReduce())
     train_ds = strategy.experimental_distribute_dataset(train_ds)
 
     log_dir = f"logs/{args.type}/CondGAN"
@@ -243,16 +296,16 @@ def main():
     }.get(args.type, 10)
 
     if args.type in ['celeba', 'anime_faces']:
-        model = CondGAN(
+        latent_dim = LATENT_DIM * 4
+        model = Cond_GAN(
             strategy=strategy,
             input_shape=(IMAGE_SIZE[0]*2, IMAGE_SIZE[1]*2, ch),
-            latent_dim=(LATENT_DIM*2,),
-            batch_size=BATCH_SIZE//2,
+            latent_dim=(latent_dim,),
+            batch_size=BATCH_SIZE,
             num_classes=num_classes
         )
-        latent_dim = LATENT_DIM * 2
     else:
-        model = CondGAN(
+        model = Cond_GAN(
             strategy=strategy,
             input_shape=(IMAGE_SIZE[0], IMAGE_SIZE[1], ch),
             latent_dim=(LATENT_DIM,),
@@ -261,7 +314,6 @@ def main():
         )
         latent_dim = LATENT_DIM
 
-
     start_epoch = 0
     if args.resume:
         load_weights_if_needed(model, log_dir, True)
@@ -269,16 +321,25 @@ def main():
         print(f"Resuming from epoch {start_epoch}")
 
     setup_interrupt_handler(model, log_dir)
+    label_mode = "multilabel" if args.type == 'celeba' else "onehot"
+    multilabel_dim = 40 if args.type == 'celeba' else None
 
     callbacks = [
         EpochTracker(model),
         GANLogger(log_dir),
         WeightSaveCallback(model, log_dir),
-        SampleImageCallback(model, log_dir, latent_dim, num_classes),
+        SampleImageCallback(model, log_dir, latent_dim,
+                            num_classes, label_mode, multilabel_dim),
         GANLRScheduler(
             model.generator_optimizer,
             model.discriminator_optimizer
         ),
+        ModeCollapseCallback(
+            latent_dim,
+            num_classes,
+            label_mode=label_mode,
+            multilabel_dim=multilabel_dim
+        )
     ]
 
     model.fit(
@@ -289,7 +350,7 @@ def main():
         callbacks=callbacks
     )
 
-    save_final_grid(model, log_dir, LATENT_DIM, num_classes)
+    save_final_grid(model, log_dir, latent_dim, num_classes, label_mode, multilabel_dim)
 
 
 if __name__ == "__main__":

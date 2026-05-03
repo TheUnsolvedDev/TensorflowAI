@@ -59,7 +59,7 @@ def alexnet_model(input_shape=[227, 227, 3], num_classes=10):
     x = tf.keras.layers.Dense(4096, activation='relu')(x)
     x = tf.keras.layers.Dropout(0.5)(x)
 
-    x = tf.keras.layers.Dense(num_classes, activation='softmax')(x)
+    x = tf.keras.layers.Dense(num_classes, activation='softmax', dtype='float32')(x)
 
     model = tf.keras.Model(inputs=inputs, outputs=x)
     return model

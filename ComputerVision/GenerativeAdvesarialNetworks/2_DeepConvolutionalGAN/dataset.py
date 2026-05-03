@@ -99,7 +99,7 @@ class Dataset:
             num_parallel_calls=AUTOTUNE
         )
 
-        ds = ds.batch(self.batch_size)
+        ds = ds.batch(self.batch_size).cache()
         ds = ds.prefetch(AUTOTUNE)
 
         return ds
@@ -109,57 +109,47 @@ class Dataset:
         if type == 'mnist':
             self.channels = 1
             (train_images, _), (test_images, _) = self.mnist
-
-            train_images = train_images.reshape(-1, 28, 28, 1)
-            test_images = test_images.reshape(-1, 28, 28, 1)
-
-            train_ds = self.build_dataset(train_images, decode=False, type=type)
-            test_ds = self.build_dataset(test_images, decode=False, type=type, shuffle=False)
+            images = np.concatenate([train_images, test_images])
+            images = images.reshape(-1, 28, 28, 1)
+            ds = self.build_dataset(images, decode=False, type=type)
 
         elif type == 'cifar10':
             self.channels = 3
             (train_images, _), (test_images, _) = self.cifar10
-
-            train_ds = self.build_dataset(train_images, decode=False, type=type)
-            test_ds = self.build_dataset(test_images, decode=False, type=type, shuffle=False)
-
+            images = np.concatenate([train_images, test_images])
+            ds = self.build_dataset(images, decode=False, type=type)
+            
         elif type == 'fashion_mnist':
             self.channels = 1
             (train_images, _), (test_images, _) = self.fashion_mnist
-
-            train_images = train_images.reshape(-1, 28, 28, 1)
-            test_images = test_images.reshape(-1, 28, 28, 1)
-
-            train_ds = self.build_dataset(train_images, decode=False, type=type)
-            test_ds = self.build_dataset(test_images, decode=False, type=type, shuffle=False)
+            images = np.concatenate([train_images, test_images])
+            images = images.reshape(-1, 28, 28, 1)
+            ds = self.build_dataset(images, decode=False, type=type)
 
         elif type == 'cifar100':
             self.channels = 3
             (train_images, _), (test_images, _) = self.cifar100
-
-            train_ds = self.build_dataset(train_images, decode=False, type=type)
-            test_ds = self.build_dataset(test_images, decode=False, type=type, shuffle=False)
+            images = np.concatenate([train_images, test_images])
+            ds = self.build_dataset(images, decode=False, type=type)
 
         elif type == 'celeba':
             self.channels = 3
             dataset = CelebADataset()
             train_data, test_data = dataset.prepare_dataset()
-
-            train_ds = self.build_dataset(train_data, decode=True, type=type)
-            test_ds = self.build_dataset(test_data, decode=True, type=type, shuffle=False)
+            images = np.concatenate([train_data, test_data])
+            ds = self.build_dataset(images, decode=True, type=type)
 
         elif type == 'anime_faces':
             self.channels = 3
             dataset = AnimeFacesDataset()
             train_data, test_data = dataset.prepare_dataset()
-
-            train_ds = self.build_dataset(train_data, decode=True, type=type)
-            test_ds = self.build_dataset(test_data, decode=True, type=type, shuffle=False)
+            images = np.concatenate([train_data, test_data])
+            ds = self.build_dataset(images, decode=True, type=type)
 
         else:
             raise ValueError(f"Unknown dataset type: {type}")
 
-        return train_ds, test_ds, self.channels
+        return ds, self.channels
 
 
 if __name__ == "__main__":
@@ -168,8 +158,8 @@ if __name__ == "__main__":
     for type in dataset.data_types:
         print(f"\nTesting: {type}")
 
-        train_ds, test_ds, channels = dataset.load_data(type)
+        ds, channels = dataset.load_data(type)
 
-        for image in train_ds.take(1):
+        for image in ds.take(1):
             print("Shape:", image.shape)
             break

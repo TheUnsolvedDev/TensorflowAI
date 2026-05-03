@@ -5,9 +5,6 @@ import tqdm
 import numpy as np
 from config import *
 
-# Create images folder
-os.makedirs("images", exist_ok=True)
-
 
 class NN_GAN(tf.keras.Model):
     def __init__(self, strategy, input_shape, latent_dim, batch_size):
@@ -130,31 +127,6 @@ class NN_GAN(tf.keras.Model):
             tf.distribute.ReduceOp.MEAN, per_replica_disc_loss, axis=None)
         return disc_loss
 
-
-    def generate_and_save_images(self, epoch, num_examples=16, path='folder'):
-        path = f'images/{path}'
-        os.makedirs(path, exist_ok=True)
-        noise = tf.random.normal([num_examples, self.latent_dim[0]])
-        generated_images = self.generator(noise, training=False)
-        generated_images = (generated_images + 1) / 2.0  # Rescale [0,1]
-
-        fig, axs = plt.subplots(4, 4, figsize=(4, 4))
-        idx = 0
-        for i in range(4):
-            for j in range(4):
-                img = generated_images[idx]
-                if self.input_shape[2] == 1:
-                    img = img[:, :, 0]
-                    axs[i, j].imshow(img, cmap='gray')
-                else:
-                    axs[i, j].imshow(img)
-                axs[i, j].axis('off')
-                idx += 1
-
-        plt.subplots_adjust(wspace=0.1, hspace=0.1)
-        plt.savefig(f"{path}/image_at_epoch_{epoch:03d}.png")
-        plt.close()
-
     def fit(self, dataset, epochs, initial_epoch=0, path='folder', callbacks=None):
         if callbacks is None:
             callbacks = []
@@ -182,10 +154,7 @@ class NN_GAN(tf.keras.Model):
                 }
                 for callback in callbacks:
                     callback.on_train_batch_end(step, logs)
-                
             print()
-            self.generate_and_save_images(epoch+1, path=path)
-
             logs = {"gen_loss": gen_loss.numpy(), "disc_loss": disc_loss.numpy()}
             for callback in callbacks:
                 callback.on_epoch_end(epoch, logs)
