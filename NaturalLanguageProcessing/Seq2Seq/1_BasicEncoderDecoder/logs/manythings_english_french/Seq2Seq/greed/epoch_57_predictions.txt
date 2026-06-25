@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+we have to talk.
+
+TARGET:
+il faut que nous [end]
+
+PREDICTION:
+il faut que nous
+
+============================================================================================================================================
+SOURCE:
+i loved that dog.
+
+TARGET:
+j'ai ce chien. [end]
+
+PREDICTION:
+j'ai comme ça.
+
+============================================================================================================================================
+SOURCE:
+you know better than that.
+
+TARGET:
+tu es plus que ça. [end]
+
+PREDICTION:
+tu en sais mieux que ça.
+
+============================================================================================================================================
+SOURCE:
+i don't think anyone really knows the real me.
+
+TARGET:
+je ne pense pas que quiconque me vraiment. [end]
+
+PREDICTION:
+je ne pense pas vraiment que qui ressemble mon ami.
+
+============================================================================================================================================
+SOURCE:
+i like your hair that way.
+
+TARGET:
+j'aime vos ainsi. [end]
+
+PREDICTION:
+j'aime tes ainsi.
+
+============================================================================================================================================
+SOURCE:
+what kind of do you want?
+
+TARGET:
+quel genre veux-tu ? [end]
+
+PREDICTION:
+quel genre de voulez-vous ?
+
+============================================================================================================================================
+SOURCE:
+she didn't have a brother.
+
+TARGET:
+elle n'avait pas de frère. [end]
+
+PREDICTION:
+elle n'avait pas un frère.
+
+============================================================================================================================================
+SOURCE:
+he doesn't have a hat on.
+
+TARGET:
+il ne porte pas de chapeau. [end]
+
+PREDICTION:
+il n'est pas
+
+============================================================================================================================================
+SOURCE:
+tom was rich.
+
+TARGET:
+tom était riche. [end]
+
+PREDICTION:
+tom était riche.
+
+============================================================================================================================================
+SOURCE:
+do you want me to paint your
+
+TARGET:
+veux-tu que je te les des mains ? [end]
+
+PREDICTION:
+voulez-vous que je vous les ?

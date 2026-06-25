@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in other places such as alaska a borough does not designate a single township but a whole region alaska s largest borough the north slope borough is comparable in area to the entire united kingdom.
+
+TARGET:
+in other places such as alaska a borough does not mean a single township but a whole region. [end]
+
+PREDICTION:
+in some states there listed another census cover states in the west
+
+============================================================================================================================================
+SOURCE:
+the spl then agreed a deal with espn and sky sports worth million per season to the
+
+TARGET:
+in july sky sports and espn agreed a million five year deal with the [end]
+
+PREDICTION:
+the next to three race in the stadium and the constructors exchange kevin
+
+============================================================================================================================================
+SOURCE:
+charles vii lrb february july rrb called the victorious lrb rrb or the well served lrb rrb was king of france from to his death charles medieval lands france kings though he was initially opposed by henry vi of england whose regent ruled much of france from paris.
+
+TARGET:
+charles vii of france lrb february july rrb was king of france from to his death. [end]
+
+PREDICTION:
+charles vii lrb june july rrb was the king of france and charles vi of france.
+
+============================================================================================================================================
+SOURCE:
+was also identified with the egyptian god of writing education and through the greco roman period.
+
+TARGET:
+as a god was also by [end]
+
+PREDICTION:
+was the god of the and the buddha and the
+
+============================================================================================================================================
+SOURCE:
+these works are indeed called after the term for
+
+TARGET:
+poems like these are called after the term for [end]
+
+PREDICTION:
+these experiments are in the or
+
+============================================================================================================================================
+SOURCE:
+the open championship or simply the open lrb often referred to as the british open outside the uk rrb is the oldest of the four major championships in professional
+
+TARGET:
+the open championship often known as the british open outside the united kingdom and ireland is the oldest of the four major championships in men s [end]
+
+PREDICTION:
+the original senior competitions held at the end of the world open
+
+============================================================================================================================================
+SOURCE:
+the following example from the times how the of a can a quoted statement has been around for years and has stores suggesting a large fan base.
+
+TARGET:
+has been around for years and has stores suggesting a large fan base. [end]
+
+PREDICTION:
+the has a large number of nearly people in the united states.
+
+============================================================================================================================================
+SOURCE:
+the rat is a domesticated brown rat lrb rrb which is the most common type of pet
+
+TARGET:
+the rat or pet rat is a type of the brown rat lrb rrb that is bred to be a [end]
+
+PREDICTION:
+the rat lrb rrb is a species of that is the most widespread tetrapods of animals because they have been found in the south coast of the
+
+============================================================================================================================================
+SOURCE:
+composing your request to be in practice a high proportion of requests are
+
+TARGET:
+composing your request to be in practice almost all requests are [end]
+
+PREDICTION:
+pdf is
+
+============================================================================================================================================
+SOURCE:
+the name comes from the ancient greek lrb rrb meaning beginning origin.
+
+TARGET:
+the question of whether or not plate activity existed in the is an active area of modern research. [end]
+
+PREDICTION:
+the word was originally developed in the field of

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it is part of the wwe smackdown raw series lrb the first under the smackdown raw name rrb and is based on the professional wrestling world wrestling entertainment lrb
+
+TARGET:
+it is part of the wwe smackdown raw video game series. [end]
+
+PREDICTION:
+the wii is known as wrestling lrb ecw rrb by the world series
+
+============================================================================================================================================
+SOURCE:
+en is a commune in the aube department in north central france.
+
+TARGET:
+en is a commune of the aube d partement in the north central part of france. [end]
+
+PREDICTION:
+en is a commune of the aube d partement in the north central part of france.
+
+============================================================================================================================================
+SOURCE:
+starred as a football player for the university of illinois and the chicago
+
+TARGET:
+in college played for the university of illinois and in the national football league the chicago [end]
+
+PREDICTION:
+became a and mother the oldest player harrison and as a chicago
+
+============================================================================================================================================
+SOURCE:
+in a in an american woman married the
+
+TARGET:
+the tower was built by for the th year of the french at first the tower was to be made in spain but the people
+
+PREDICTION:
+in a year old woman
+
+============================================================================================================================================
+SOURCE:
+wanted to take against for standing up to the king for s
+
+TARGET:
+but he wanted to take against and also wanted to him for the king s rights in [end]
+
+PREDICTION:
+took place for against king for
+
+============================================================================================================================================
+SOURCE:
+it was released on march through records.
+
+TARGET:
+it was released by records on february. [end]
+
+PREDICTION:
+it released your on video game console.
+
+============================================================================================================================================
+SOURCE:
+if in bacteria were caused by a in bacteria i.e. if were not due to genetic then each should contain roughly the same number
+
+TARGET:
+if were not due to gene then each should contain roughly the same number of [end]
+
+PREDICTION:
+in when the dna were in
+
+============================================================================================================================================
+SOURCE:
+in the new zealand government proposed some national park and areas from protection of the crown act which in those
+
+TARGET:
+in the new zealand government proposed some national park and areas from of the crown act which means that is not allowed in those areas.
+
+PREDICTION:
+in the national new national government found out in the of was found in was built by the
+
+============================================================================================================================================
+SOURCE:
+the royal air force lrb rrb is the united kingdom s air force the oldest independent air force in the world.
+
+TARGET:
+the royal air force lrb is a short version rrb is the air force of the united kingdom. [end]
+
+PREDICTION:
+the air force is one of the two air force in the united states army.
+
+============================================================================================================================================
+SOURCE:
+faith ford lrb born september rrb is an american television and film actress best known for her role as on
+
+TARGET:
+faith ford lrb born september in rrb is an american television and movie actress. she is best known for her role as on brown and
+
+PREDICTION:
+faith september is an american r and actress.

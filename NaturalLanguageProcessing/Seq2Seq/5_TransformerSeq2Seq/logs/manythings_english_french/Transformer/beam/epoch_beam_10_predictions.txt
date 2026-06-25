@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i can't give it to you.
+
+TARGET:
+je ne peux pas te la donner. [end]
+
+PREDICTION:
+je n'arrive pas. cela pour vous. en votre propos. vous !
+
+============================================================================================================================================
+SOURCE:
+i'm afraid that you'll get lost.
+
+TARGET:
+je crains que tu te [end]
+
+PREDICTION:
+je pensais que nous y en allez mort.
+
+============================================================================================================================================
+SOURCE:
+i'd like to join you.
+
+TARGET:
+j'aimerais te [end]
+
+PREDICTION:
+je voudrais te présenter avec toi. de votre propos. !
+
+============================================================================================================================================
+SOURCE:
+i presented my ticket at the door.
+
+TARGET:
+j'ai présenté mon billet à la porte. [end]
+
+PREDICTION:
+je de me faire sur sa porte. c'est une voiture. »
+
+============================================================================================================================================
+SOURCE:
+the when i touched it.
+
+TARGET:
+le de terre s'est quand je l'ai touché. [end]
+
+PREDICTION:
+la théorie quand j'en suis ans.
+
+============================================================================================================================================
+SOURCE:
+i'm going to make some coffee. would you like too?
+
+TARGET:
+je vais faire du café. tu en veux aussi ? [end]
+
+PREDICTION:
+je vais vous faire de ce café sans alors ça ?
+
+============================================================================================================================================
+SOURCE:
+the doctor checked the patient's
+
+TARGET:
+le médecin a pris le pouls du patient. [end]
+
+PREDICTION:
+la question a perdu le projet
+
+============================================================================================================================================
+SOURCE:
+thank you in advance for your cooperation.
+
+TARGET:
+merci beaucoup pour votre coopération. [end]
+
+PREDICTION:
+je te donne en colère pour votre adresse. » « ton sac.
+
+============================================================================================================================================
+SOURCE:
+i became his friend.
+
+TARGET:
+je suis devenu son ami. [end]
+
+PREDICTION:
+j'y suis allé chez son frère.
+
+============================================================================================================================================
+SOURCE:
+i like to sleep on my stomach.
+
+TARGET:
+j'aime dormir sur le ventre. [end]
+
+PREDICTION:
+j'aime jouer sur

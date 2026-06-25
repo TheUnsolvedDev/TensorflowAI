@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're very
+
+TARGET:
+vous êtes fort [end]
+
+PREDICTION:
+tu es fort très !
+
+============================================================================================================================================
+SOURCE:
+that's
+
+TARGET:
+c’est [end]
+
+PREDICTION:
+c’est n'importe quoi.
+
+============================================================================================================================================
+SOURCE:
+it's actually not that big a problem.
+
+TARGET:
+ce n'est pas vraiment un gros problème. [end]
+
+PREDICTION:
+il n'en est pas si aussi un choix sans danger.
+
+============================================================================================================================================
+SOURCE:
+i'm sure they're wrong.
+
+TARGET:
+je suis sûr qu'ils ont tort. [end]
+
+PREDICTION:
+c'est tout ce qu'elles sont
+
+============================================================================================================================================
+SOURCE:
+he doesn't like fish.
+
+TARGET:
+il n'aime pas le poisson. [end]
+
+PREDICTION:
+il pas du chat.
+
+============================================================================================================================================
+SOURCE:
+have you fed the dog yet?
+
+TARGET:
+avez-vous déjà donné à manger au chien ? [end]
+
+PREDICTION:
+avons-nous déjà fait manger mon président ?
+
+============================================================================================================================================
+SOURCE:
+they like apples.
+
+TARGET:
+elles aiment les pommes. [end]
+
+PREDICTION:
+ils
+
+============================================================================================================================================
+SOURCE:
+i'm very busy today.
+
+TARGET:
+je suis très occupé aujourd'hui. [end]
+
+PREDICTION:
+suis très occupé, d'habitude. tout de petit. photo.
+
+============================================================================================================================================
+SOURCE:
+i couldn't control myself.
+
+TARGET:
+je ne pouvais m'en [end]
+
+PREDICTION:
+je ne être en responsable. moi.
+
+============================================================================================================================================
+SOURCE:
+i don't know what i'd do without it.
+
+TARGET:
+je ne sais pas ce que je ferais [end]
+
+PREDICTION:
+je à faire sans lui. et ça. bien ma taille.

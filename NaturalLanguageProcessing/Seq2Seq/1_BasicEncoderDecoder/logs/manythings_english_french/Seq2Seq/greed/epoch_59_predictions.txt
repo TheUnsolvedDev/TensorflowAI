@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+why are you so on doing that?
+
+TARGET:
+pourquoi as-tu tellement envie de faire ça ? [end]
+
+PREDICTION:
+pourquoi as-tu tellement à faire ça ?
+
+============================================================================================================================================
+SOURCE:
+do you like
+
+TARGET:
+aimez-vous les ? [end]
+
+PREDICTION:
+aimes-tu ?
+
+============================================================================================================================================
+SOURCE:
+he's writing a long letter.
+
+TARGET:
+il écrit une longue lettre. [end]
+
+PREDICTION:
+il y a d'écrire une lettre d'une
+
+============================================================================================================================================
+SOURCE:
+are you still playing the
+
+TARGET:
+encore du ? [end]
+
+PREDICTION:
+toujours du ?
+
+============================================================================================================================================
+SOURCE:
+perhaps you should get a dog.
+
+TARGET:
+tu devrais peut-être un chien. [end]
+
+PREDICTION:
+tu devrais peut-être avoir un chien.
+
+============================================================================================================================================
+SOURCE:
+i'm not really angry.
+
+TARGET:
+je ne suis pas vraiment en colère. [end]
+
+PREDICTION:
+je ne suis pas très
+
+============================================================================================================================================
+SOURCE:
+don't talk to your mother like that.
+
+TARGET:
+ne parlez pas ainsi à votre mère ! [end]
+
+PREDICTION:
+ne parle pas ainsi à ta mère !
+
+============================================================================================================================================
+SOURCE:
+get up, everybody.
+
+TARGET:
+tout le monde ! [end]
+
+PREDICTION:
+! tout le monde fait tout ça.
+
+============================================================================================================================================
+SOURCE:
+this letter is
+
+TARGET:
+cette lettre porte une mauvaise adresse. [end]
+
+PREDICTION:
+cette lettre est
+
+============================================================================================================================================
+SOURCE:
+nice
+
+TARGET:
+coup ! [end]
+
+PREDICTION:
+tout !

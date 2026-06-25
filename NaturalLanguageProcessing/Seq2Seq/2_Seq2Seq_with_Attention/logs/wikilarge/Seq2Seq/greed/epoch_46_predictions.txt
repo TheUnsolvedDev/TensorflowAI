@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in other words is the structure of the that the objects in the
+
+TARGET:
+using the it is possible to create a of the [end]
+
+PREDICTION:
+is the structure of the that the objects in the
+
+============================================================================================================================================
+SOURCE:
+richard court lrb born september rrb was a western australian politician representing the seat of in the western australian assembly for the liberal party of australia from
+
+TARGET:
+richard court lrb born september rrb was the th premier of western australia from february to february. [end]
+
+PREDICTION:
+richard court lrb born september died september rrb was a former australian politician who served as the main character of the constituency but he was a member
+
+============================================================================================================================================
+SOURCE:
+fort pierre itself was named after pierre jr. an american of french canadian
+
+TARGET:
+pierre lrb pronounced rrb is the county seat of county. [end]
+
+PREDICTION:
+was named after pierre the american military the fort pierre in.
+
+============================================================================================================================================
+SOURCE:
+health with a life of ten to twelve years or so need to be taken care of like every other
+
+TARGET:
+it has a life of ten to twelve years. [end]
+
+PREDICTION:
+that a life of age was of ten to every other
+
+============================================================================================================================================
+SOURCE:
+upon its release in march debuted at number one on the billboard album
+
+TARGET:
+than love became the band s first album to chart on the billboard at number on the chart in. [end]
+
+PREDICTION:
+released the album in march started on on on and released on the billboard album
+
+============================================================================================================================================
+SOURCE:
+as of according to weekly it had sold fourth most copies of any children s book
+
+TARGET:
+says that it had sold fourth most copies of any children s book ever as of. [end]
+
+PREDICTION:
+had sold fourth fourth
+
+============================================================================================================================================
+SOURCE:
+it of national lrb rrb with a total length of km lrb. of total length in india rrb.
+
+TARGET:
+it s total length is km lrb rrb. there are national lrb rrb. in total they are of km lrb. of total length in india rrb. [end]
+
+PREDICTION:
+it belongs to national lrb rrb. these are the total length of km lrb. of total length in india rrb.
+
+============================================================================================================================================
+SOURCE:
+the master chief and travel to a room called the which them to the control
+
+TARGET:
+the master chief through many to the control he into the [end]
+
+PREDICTION:
+the the horse travel travel to a room called the which them to the control
+
+============================================================================================================================================
+SOURCE:
+this stage is a food of many fish and many are to them.
+
+TARGET:
+the stage is a food of many fish and many are on them. [end]
+
+PREDICTION:
+this stage is a food of many fish and many are to them.
+
+============================================================================================================================================
+SOURCE:
+is a city in and the seat of county in the west central part of the u.s. state of
+
+TARGET:
+is a city and county seat of county [end]
+
+PREDICTION:
+is a city in county alabama united states.

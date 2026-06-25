@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+why don't you share it with me?
+
+TARGET:
+pourquoi ne le pas avec moi ? [end]
+
+PREDICTION:
+pourquoi ne la avec moi ?
+
+============================================================================================================================================
+SOURCE:
+can you really the
+
+TARGET:
+peux-tu vraiment [end]
+
+PREDICTION:
+vraiment qu'en dire avec toi ? bien faim. bien.
+
+============================================================================================================================================
+SOURCE:
+is very
+
+TARGET:
+est fort utile. [end]
+
+PREDICTION:
+thomas est fort à l'heure qu'il compte.
+
+============================================================================================================================================
+SOURCE:
+i'll never forget what happened that night.
+
+TARGET:
+je n'oublierai jamais ce qui s'est passé cette [end]
+
+PREDICTION:
+pas ses projets qu'il se plaît. arrivé ce hier. !
+
+============================================================================================================================================
+SOURCE:
+you should not a man because he is poor.
+
+TARGET:
+vous ne devriez pas un homme parce qu'il est pauvre. [end]
+
+PREDICTION:
+vous ne devriez pas parler c'est son retard pour coucher. »
+
+============================================================================================================================================
+SOURCE:
+bite your tongue.
+
+TARGET:
+la langue ! [end]
+
+PREDICTION:
+vite.
+
+============================================================================================================================================
+SOURCE:
+trust tom.
+
+TARGET:
+faites confiance à tom. [end]
+
+PREDICTION:
+fais à toi, tom.
+
+============================================================================================================================================
+SOURCE:
+we our
+
+TARGET:
+nous de la valeur à nos [end]
+
+PREDICTION:
+nous faisons preuve de mieux la maladie mes
+
+============================================================================================================================================
+SOURCE:
+how do we stop it?
+
+TARGET:
+comment le ? [end]
+
+PREDICTION:
+comment est-ce qu'on rencontre ?
+
+============================================================================================================================================
+SOURCE:
+i'm kind of too.
+
+TARGET:
+j'ai aussi un peu sommeil. [end]
+
+PREDICTION:
+j'ai beaucoup de rendez-vous. déjà. je

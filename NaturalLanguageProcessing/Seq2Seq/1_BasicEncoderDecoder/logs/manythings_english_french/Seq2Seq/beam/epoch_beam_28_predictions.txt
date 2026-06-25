@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+let me show you something really awesome.
+
+TARGET:
+laissez-moi vous montrer quelque chose de vraiment super. [end]
+
+PREDICTION:
+laissez-moi vous voulez faire un truc vraiment confortable. pas. le sûr encore.
+
+============================================================================================================================================
+SOURCE:
+i promised not to tell.
+
+TARGET:
+je promis de ne rien dire. [end]
+
+PREDICTION:
+j’ai promis.
+
+============================================================================================================================================
+SOURCE:
+i aimed my gun at the target.
+
+TARGET:
+je mon vers la cible. [end]
+
+PREDICTION:
+j’ai porté la contre son père !
+
+============================================================================================================================================
+SOURCE:
+that's very dangerous.
+
+TARGET:
+c'est très dangereux. [end]
+
+PREDICTION:
+c'est du gars ! nos voisins.
+
+============================================================================================================================================
+SOURCE:
+tom sent a text message to a girl he liked in his class.
+
+TARGET:
+tom a envoyé un à une fille de sa classe qu'il aimait bien. [end]
+
+PREDICTION:
+tom a reçu une note de marie. c'était un il théâtre laissée sur son chemin. en route au nez.
+
+============================================================================================================================================
+SOURCE:
+i don't see the connection.
+
+TARGET:
+je ne vois pas le [end]
+
+PREDICTION:
+j'ignore le vit. ! bord. tous. matinée. que je vous faites un passage de deux jeux d'argent. oui. prochain. ceci a tellement dettes. nombre
+
+============================================================================================================================================
+SOURCE:
+you must be very special.
+
+TARGET:
+tu dois être vraiment spéciale. [end]
+
+PREDICTION:
+on est de vrais solaire !
+
+============================================================================================================================================
+SOURCE:
+do you need a to cry on?
+
+TARGET:
+as-tu besoin d'une sur laquelle pleurer ? [end]
+
+PREDICTION:
+as-tu un besoin urgent et ? minutes.
+
+============================================================================================================================================
+SOURCE:
+he's an
+
+TARGET:
+il est [end]
+
+PREDICTION:
+il fait une honte. »
+
+============================================================================================================================================
+SOURCE:
+it never happened.
+
+TARGET:
+ça n'est jamais arrivé. [end]
+
+PREDICTION:
+ça ne fut jamais

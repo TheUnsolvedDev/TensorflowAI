@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i wouldn't be so sure about that.
+
+TARGET:
+je n'en serais pas si sûr. [end]
+
+PREDICTION:
+je ne serais pas si sûr de cela.
+
+============================================================================================================================================
+SOURCE:
+mary is tom's younger sister.
+
+TARGET:
+marie est la plus jeune sœur de tom. [end]
+
+PREDICTION:
+mary est la sœur de tom de la sœur.
+
+============================================================================================================================================
+SOURCE:
+i have a cough.
+
+TARGET:
+j’ai une [end]
+
+PREDICTION:
+j'ai une
+
+============================================================================================================================================
+SOURCE:
+i did it on monday.
+
+TARGET:
+j'ai fait ça lundi. [end]
+
+PREDICTION:
+je l'ai fait lundi.
+
+============================================================================================================================================
+SOURCE:
+is there anything else you want to tell me?
+
+TARGET:
+y a-t-il quoi que ce soit d'autre que vous veuillez me dire ? [end]
+
+PREDICTION:
+y a-t-il quelque chose d'autre que tu veuilles me dire ?
+
+============================================================================================================================================
+SOURCE:
+at last, we got to the lake.
+
+TARGET:
+enfin, nous sommes arrivés au lac. [end]
+
+PREDICTION:
+enfin, nous sommes au lac.
+
+============================================================================================================================================
+SOURCE:
+can i have another drink now?
+
+TARGET:
+puis-je avoir un autre verre maintenant ? [end]
+
+PREDICTION:
+puis-je avoir un autre verre maintenant ?
+
+============================================================================================================================================
+SOURCE:
+please remember to mail this letter on your way to school tomorrow morning.
+
+TARGET:
+s'il vous plaît, n'oubliez pas de poster cette lettre sur votre chemin vers l'école demain matin. [end]
+
+PREDICTION:
+veuillez vous rappeler cette lettre sur votre chemin de l'école demain matin.
+
+============================================================================================================================================
+SOURCE:
+i have to
+
+TARGET:
+je dois me dépêcher ! [end]
+
+PREDICTION:
+il faut que je
+
+============================================================================================================================================
+SOURCE:
+i know tom doesn't speak french.
+
+TARGET:
+je sais que tom ne parle pas français. [end]
+
+PREDICTION:
+je sais que tom ne parle pas français.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+tom didn't trust anyone and no one trusted him.
+
+TARGET:
+tom ne faisait confiance à personne et personne ne faisait confiance à tom. [end]
+
+PREDICTION:
+tom n'avait pas fait confiance et personne n'est qu'un passé.
+
+============================================================================================================================================
+SOURCE:
+i was stupid enough to believe tom.
+
+TARGET:
+j'étais idiote pour croire tom. [end]
+
+PREDICTION:
+j'avais vraiment entendu suffisamment pour tom.
+
+============================================================================================================================================
+SOURCE:
+these are grapes.
+
+TARGET:
+ce sont des raisins sans [end]
+
+PREDICTION:
+ces feuilles des excuses. »
+
+============================================================================================================================================
+SOURCE:
+the girl is lonely.
+
+TARGET:
+la fille se sent seule. [end]
+
+PREDICTION:
+la femme à noël.
+
+============================================================================================================================================
+SOURCE:
+who told you?
+
+TARGET:
+qui vous l'a dit ? [end]
+
+PREDICTION:
+qui as-tu fait de toi avec moi ?
+
+============================================================================================================================================
+SOURCE:
+she should be there at noon.
+
+TARGET:
+elle devrait être là à midi. [end]
+
+PREDICTION:
+demain.
+
+============================================================================================================================================
+SOURCE:
+it's no problem.
+
+TARGET:
+cela ne fait pas de difficulté. [end]
+
+PREDICTION:
+il n'y fait aucun problème.
+
+============================================================================================================================================
+SOURCE:
+the planted a rose tree in the middle of the garden.
+
+TARGET:
+le un au milieu du jardin. [end]
+
+PREDICTION:
+les a fait un accident du milieu de l'autre jour. dans le mur.
+
+============================================================================================================================================
+SOURCE:
+we all like you.
+
+TARGET:
+nous toutes. [end]
+
+PREDICTION:
+on vous aime tout ça.
+
+============================================================================================================================================
+SOURCE:
+tom ignored mary all morning.
+
+TARGET:
+tom a ignoré mary toute la matinée. [end]
+
+PREDICTION:
+tom se mit que mary à toute la réunion.

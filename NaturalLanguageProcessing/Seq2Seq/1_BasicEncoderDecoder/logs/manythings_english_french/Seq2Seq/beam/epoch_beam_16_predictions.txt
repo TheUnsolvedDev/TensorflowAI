@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you've been busy, haven't you?
+
+TARGET:
+vous avez été occupée, non ? [end]
+
+PREDICTION:
+tu t'es déjà bien pas mal. je te fait plaisir. »
+
+============================================================================================================================================
+SOURCE:
+you have to do it again.
+
+TARGET:
+il faut que tu le [end]
+
+PREDICTION:
+c'est vous devoir la nouveau. voix. » est « à un point de jeune regard sur les gens qui disent sont morts. ans.
+
+============================================================================================================================================
+SOURCE:
+you were right, too.
+
+TARGET:
+vous aviez aussi raison. [end]
+
+PREDICTION:
+vous avez raison, moi-même.
+
+============================================================================================================================================
+SOURCE:
+do you know if she can speak english?
+
+TARGET:
+sais-tu si elle sait parler l'anglais ? [end]
+
+PREDICTION:
+tu savez-vous anglais elle peut savoir quand parle
+
+============================================================================================================================================
+SOURCE:
+he gave up hope.
+
+TARGET:
+il abandonna tout espoir. [end]
+
+PREDICTION:
+c'est s'arrêta point de mourir.
+
+============================================================================================================================================
+SOURCE:
+do you like going to school?
+
+TARGET:
+aimes-tu aller à l'école ? [end]
+
+PREDICTION:
+est-ce que tu veux venir au école des
+
+============================================================================================================================================
+SOURCE:
+don't make me answer that question.
+
+TARGET:
+ne me force pas à répondre à cette question ! [end]
+
+PREDICTION:
+ne aucune réponse cette question ! j’ai raison.
+
+============================================================================================================================================
+SOURCE:
+here's the map that you were looking for.
+
+TARGET:
+voici la carte que vous [end]
+
+PREDICTION:
+oui. la voici vous écouter ça.
+
+============================================================================================================================================
+SOURCE:
+he can't go without wine for even a day.
+
+TARGET:
+il ne peut se passer de vin même pour un jour. [end]
+
+PREDICTION:
+s'il n'est pas sans payer rester
+
+============================================================================================================================================
+SOURCE:
+i think we need to be very careful not to hurt tom's feelings.
+
+TARGET:
+je pense que nous devons faire très attention à ne pas la de thomas. [end]
+
+PREDICTION:
+selon me parole qu'il doit soit meilleur que pour ne jamais avoir conduite à ? ! de par des problèmes.

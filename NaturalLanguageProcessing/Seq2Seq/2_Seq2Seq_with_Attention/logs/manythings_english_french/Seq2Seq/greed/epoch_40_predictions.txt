@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+no one believed that.
+
+TARGET:
+personne ne le [end]
+
+PREDICTION:
+personne ne l'a cru.
+
+============================================================================================================================================
+SOURCE:
+now, what were we talking about?
+
+TARGET:
+alors, de quoi en train de parler ? [end]
+
+PREDICTION:
+quand nous en train de parler ?
+
+============================================================================================================================================
+SOURCE:
+there's a guy asking for you.
+
+TARGET:
+il y a un type en bas qui vous demande. [end]
+
+PREDICTION:
+il y a un type en bas qui te demande.
+
+============================================================================================================================================
+SOURCE:
+we hurried to make up for the lost time.
+
+TARGET:
+nous nous sommes de le temps perdu. [end]
+
+PREDICTION:
+on s'est pour le temps perdu.
+
+============================================================================================================================================
+SOURCE:
+i want to know who gave that to you.
+
+TARGET:
+je veux savoir qui vous a donné cela. [end]
+
+PREDICTION:
+je veux savoir qui t'a donné ça.
+
+============================================================================================================================================
+SOURCE:
+there's no
+
+TARGET:
+il n'y a pas [end]
+
+PREDICTION:
+il n'y a pas de
+
+============================================================================================================================================
+SOURCE:
+i'm really impressed with the way tom plays the
+
+TARGET:
+je suis vraiment par la façon dont tom joue du [end]
+
+PREDICTION:
+je suis vraiment par la façon dont tom joue du
+
+============================================================================================================================================
+SOURCE:
+they're
+
+TARGET:
+ce sont des [end]
+
+PREDICTION:
+ce sont des
+
+============================================================================================================================================
+SOURCE:
+that's my story and i'm to it.
+
+TARGET:
+c'est mon passé et je m'y [end]
+
+PREDICTION:
+c'est ma et je m'y
+
+============================================================================================================================================
+SOURCE:
+it'll be dark soon.
+
+TARGET:
+il va bientôt faire nuit. [end]
+
+PREDICTION:
+il fera bientôt sombre.

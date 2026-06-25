@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+please sing.
+
+TARGET:
+s'il te plaît, chante ! [end]
+
+PREDICTION:
+merci de je vous prie noël.
+
+============================================================================================================================================
+SOURCE:
+look under the seat.
+
+TARGET:
+regarde sous le [end]
+
+PREDICTION:
+regardez devant est sur la banque. là-bas.
+
+============================================================================================================================================
+SOURCE:
+why don't i know about it?
+
+TARGET:
+pourquoi je ne suis pas au courant ? [end]
+
+PREDICTION:
+et pourquoi n'en ?
+
+============================================================================================================================================
+SOURCE:
+what did they hit you with?
+
+TARGET:
+avec quoi vous ont-ils ? [end]
+
+PREDICTION:
+avec vous a-t-on lavé ?
+
+============================================================================================================================================
+SOURCE:
+the moon is very beautiful this evening.
+
+TARGET:
+la lune est très belle ce soir. [end]
+
+PREDICTION:
+la chaise n'est pas cette soirée. et un an.
+
+============================================================================================================================================
+SOURCE:
+don't worry. my are
+
+TARGET:
+ne t'en fais pas, je suis comme une [end]
+
+PREDICTION:
+« mes en sont je ! de quoi sont-ils maintenant ?
+
+============================================================================================================================================
+SOURCE:
+will you keep your
+
+TARGET:
+ta ? [end]
+
+PREDICTION:
+voudriez-vous marcher hors atteint ?
+
+============================================================================================================================================
+SOURCE:
+this is definitely not what i wanted.
+
+TARGET:
+ce n'est certainement pas ce que je [end]
+
+PREDICTION:
+c'est juste vraiment mon n'est-ce s'il te voulais. ça. voulez-vous ne jeter dehors ?
+
+============================================================================================================================================
+SOURCE:
+we all stood up at once.
+
+TARGET:
+nous nous sommes tous d'un seul homme. [end]
+
+PREDICTION:
+elles se furent toutes contre nous.
+
+============================================================================================================================================
+SOURCE:
+i'm not strong.
+
+TARGET:
+je ne suis pas fort. [end]
+
+PREDICTION:
+je ne suis pas à ridicule. elle déçu.

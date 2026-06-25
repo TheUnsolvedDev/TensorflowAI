@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'll give you a lift if you like.
+
+TARGET:
+je vous si vous voulez. [end]
+
+PREDICTION:
+si un temps ?
+
+============================================================================================================================================
+SOURCE:
+that's none of your business.
+
+TARGET:
+cela ne vous regarde pas. [end]
+
+PREDICTION:
+ce n'est absolument pas tes bien. ça. voulez-vous bien être amoureux ? les faits d'un bras me sont dit. j'étais jeune.
+
+============================================================================================================================================
+SOURCE:
+tom didn't know that he had a secret
+
+TARGET:
+tom ne savait pas qu'il avait un secret. [end]
+
+PREDICTION:
+tom ne savait qu'il avait pas de l'esprit bien.
+
+============================================================================================================================================
+SOURCE:
+do you sometimes get
+
+TARGET:
+avez-vous parfois des ? [end]
+
+PREDICTION:
+est-ce que te vous parfois au plus petit écrire
+
+============================================================================================================================================
+SOURCE:
+i'm
+
+TARGET:
+je suis de travail. [end]
+
+PREDICTION:
+de la nourriture. j'ai à avoir plein sous un arbre dès qu'ils se suis dérangé. c'est après le plaisir.
+
+============================================================================================================================================
+SOURCE:
+which side are you on?
+
+TARGET:
+de quel côté es-tu ? [end]
+
+PREDICTION:
+de quel êtes-vous ?
+
+============================================================================================================================================
+SOURCE:
+there's milk in the
+
+TARGET:
+il y a du lait dans le [end]
+
+PREDICTION:
+on dans la bouteille de vin. c'est pour leur jour. désolé.
+
+============================================================================================================================================
+SOURCE:
+who would you like to speak with?
+
+TARGET:
+avec qui vous ? [end]
+
+PREDICTION:
+avec quiconque aimerais-tu aller ? tôt. aucun tous ces est devenu une plus très endroit.
+
+============================================================================================================================================
+SOURCE:
+my friends dropped by to see me the other day.
+
+TARGET:
+mes amis sont me voir un moment. [end]
+
+PREDICTION:
+mon ami est très laissé porter avec un lit au blanc. » « y c'est ennuyeux.
+
+============================================================================================================================================
+SOURCE:
+nobody is too old to learn.
+
+TARGET:
+on est jamais trop vieux pour apprendre. [end]
+
+PREDICTION:
+personne est si vieille qu'il ne vous

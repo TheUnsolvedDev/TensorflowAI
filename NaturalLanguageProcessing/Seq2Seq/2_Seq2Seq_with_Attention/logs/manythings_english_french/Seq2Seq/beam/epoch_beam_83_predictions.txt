@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+how can you be so
+
+TARGET:
+comment peux-tu en être tellement sûr ? [end]
+
+PREDICTION:
+comment sais-tu être aussi ? bien qu'avant.
+
+============================================================================================================================================
+SOURCE:
+those children are making too much noise.
+
+TARGET:
+ces enfants font trop de bruit. [end]
+
+PREDICTION:
+ces lunettes reste trop du poisson.
+
+============================================================================================================================================
+SOURCE:
+i like english better than music.
+
+TARGET:
+plus l'anglais que la musique. [end]
+
+PREDICTION:
+moi, les femmes la musique. type.
+
+============================================================================================================================================
+SOURCE:
+that's very
+
+TARGET:
+c'est très [end]
+
+PREDICTION:
+c'est
+
+============================================================================================================================================
+SOURCE:
+she wrote to me to come at once.
+
+TARGET:
+elle de venir sur-le-champ. [end]
+
+PREDICTION:
+j'ai pour ceci venue là. fois. dessus vous ans. pendant gauche avec merci
+
+============================================================================================================================================
+SOURCE:
+a friend of mine is studying abroad.
+
+TARGET:
+un ami à moi étudie à l'étranger. [end]
+
+PREDICTION:
+un de moi nous allons chercher à travailler l'étranger. bien une. comme
+
+============================================================================================================================================
+SOURCE:
+he gets around a lot.
+
+TARGET:
+elle sort beaucoup. [end]
+
+PREDICTION:
+ils voyage. sous le feu.
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+la aux une [end]
+
+PREDICTION:
+avec les de votre mère vous traite des vêtements. tout du semaine. à choses. dans « je le souhaite que » elle.
+
+============================================================================================================================================
+SOURCE:
+i'll go by plane.
+
+TARGET:
+j'irai en [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+i think we should all be worried a little bit about the way tom has been acting
+
+TARGET:
+je pense que l'on devrait tous être un peu inquiet de la manière dont tom s'est [end]
+
+PREDICTION:
+je pense qu'il nous devrait toutes m'y prendre qui quelques informations lorsque j'ai fait

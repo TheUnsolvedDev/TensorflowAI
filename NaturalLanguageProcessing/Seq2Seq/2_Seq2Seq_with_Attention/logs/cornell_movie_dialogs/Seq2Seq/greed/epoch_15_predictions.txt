@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+yes.
+
+TARGET:
+we have recent intelligence that a soviet nuclear has at [end]
+
+PREDICTION:
+i don't know what you're talking about.
+
+============================================================================================================================================
+SOURCE:
+you were pretty didn't you run for some office?
+
+TARGET:
+yeah i did. shouldn't you be studying or something. [end]
+
+PREDICTION:
+i was just thinking about the
+
+============================================================================================================================================
+SOURCE:
+boats. you go out in them. you come back in them. i hate them.
+
+TARGET:
+don't go anywhere. [end]
+
+PREDICTION:
+i don't know what you're talking about.
+
+============================================================================================================================================
+SOURCE:
+damn. they're early.
+
+TARGET:
+who? [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+i still can't square the psycho of whoever did with those two cops.
+
+TARGET:
+i don't think those cops did i think whoever was wearing for killed her. [end]
+
+PREDICTION:
+i didn't know that.
+
+============================================================================================================================================
+SOURCE:
+i reckon it tastes pretty good to me.
+
+TARGET:
+i like the way you talk. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+i thought i was dead. lucky for me you showed up, eh ?
+
+TARGET:
+it wasn't luck. the mission to rescue you... [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+real name's edward
+
+TARGET:
+[end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+me give you a boy button.
+
+TARGET:
+swell. thanks very much. good luck, senator. keep your left up. [end]
+
+PREDICTION:
+i don't think so.
+
+============================================================================================================================================
+SOURCE:
+yes.
+
+TARGET:
+--and that he changed his will? [end]
+
+PREDICTION:
+i don't know what you're talking about.

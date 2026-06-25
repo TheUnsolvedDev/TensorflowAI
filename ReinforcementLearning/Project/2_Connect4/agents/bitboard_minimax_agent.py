@@ -3,6 +3,8 @@ import numpy as np
 
 class BitboardMinimaxAgent:
     def __init__(self, depth=6):
+        self.type = f"BitboardMinimax"
+        self.observation_mode = "absolute"
         self.depth = depth
         self.cols = 7
         self.rows = 6

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a commune in the sarthe department in the pays de la loire region in northwestern france.
+
+TARGET:
+it is found in the region pays de la loire in the sarthe department in the west of france. [end]
+
+PREDICTION:
+it is found in the region pays de la loire in the sarthe department in the west of france.
+
+============================================================================================================================================
+SOURCE:
+sometimes can be serious leading to other more life forms of such as when associated with serious including and more severe internal
+
+TARGET:
+sometimes can be serious and lead to other more life forms of or can be associated with serious as and internal [end]
+
+PREDICTION:
+sometimes is forms of such as when they are serious including such as serious including such as serious including such as serious
+
+============================================================================================================================================
+SOURCE:
+lrb september march rrb born virginia was an american country music singer who pop music success during the era of the sound in the early
+
+TARGET:
+lrb born virginia september march rrb was a american country music singer. [end]
+
+PREDICTION:
+lrb september march rrb was an american country music singer.
+
+============================================================================================================================================
+SOURCE:
+would be written the flowers which were seen as a for life itself and beautiful yet and
+
+TARGET:
+poems were written the flowers which were seen as a for life itself beautiful but for a very short time. [end]
+
+PREDICTION:
+would be written in the the flowers were and beautiful and beautiful and beautiful and beautiful and
+
+============================================================================================================================================
+SOURCE:
+the however was a designed to the of powerful boston city
+
+TARGET:
+the however was an act held mostly to make powerful boston city [end]
+
+PREDICTION:
+the however was a designed to the of the
+
+============================================================================================================================================
+SOURCE:
+is a brazilian soccer team from the city of founded on january.
+
+TARGET:
+is a brazilian football team from the city brazil. the team was founded on january. [end]
+
+PREDICTION:
+is a brazilian football team from
+
+============================================================================================================================================
+SOURCE:
+the maya area is generally divided into three defined the southern maya the central and the northern
+
+TARGET:
+the area is normally divided into three parts the southern maya the southern lrb or central rrb maya and the northern maya [end]
+
+PREDICTION:
+the maya area is generally divided into three the southern maya the central and the northern maya
+
+============================================================================================================================================
+SOURCE:
+the or south island is a bird indigenous to new zealand and belonging to the rail family.
+
+TARGET:
+the lrb rrb is a bird to new zealand and to the rail family. [end]
+
+PREDICTION:
+the is a bird to new zealand.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the d partement of calvados in the basse normandie region of france.
+
+TARGET:
+it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+a bank from on which it pays
+
+TARGET:
+a bank gets money from and pays [end]
+
+PREDICTION:
+a bank takes from on which the series.

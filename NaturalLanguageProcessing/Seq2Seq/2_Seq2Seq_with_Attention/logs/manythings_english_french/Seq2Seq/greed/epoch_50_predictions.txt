@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+have you ever thought about becoming a teacher?
+
+TARGET:
+n'avez-vous jamais pensé à devenir enseignant ? [end]
+
+PREDICTION:
+as-tu déjà pensé à devenir enseignant ?
+
+============================================================================================================================================
+SOURCE:
+speaking, men are taller than women.
+
+TARGET:
+les hommes sont plus grands que les femmes. [end]
+
+PREDICTION:
+les sont plus grands que les femmes.
+
+============================================================================================================================================
+SOURCE:
+could you find out how to get there?
+
+TARGET:
+pourriez-vous trouver comment se rendre là-bas ? [end]
+
+PREDICTION:
+pourriez-vous trouver comment ouvrir là ?
+
+============================================================================================================================================
+SOURCE:
+can i see the
+
+TARGET:
+est-ce que je peux voir le message ? [end]
+
+PREDICTION:
+puis-je voir le ?
+
+============================================================================================================================================
+SOURCE:
+tom was one of my best friends in high school.
+
+TARGET:
+tom était parmi mes meilleurs amis au lycée. [end]
+
+PREDICTION:
+tom était un de mes meilleurs amis dans ce travail.
+
+============================================================================================================================================
+SOURCE:
+add a of
+
+TARGET:
+une toute petite de [end]
+
+PREDICTION:
+une de
+
+============================================================================================================================================
+SOURCE:
+i'll your head
+
+TARGET:
+je vous la tête ! [end]
+
+PREDICTION:
+je la tête !
+
+============================================================================================================================================
+SOURCE:
+you better hurry.
+
+TARGET:
+tu ferais mieux de te ! [end]
+
+PREDICTION:
+vous feriez mieux de vous !
+
+============================================================================================================================================
+SOURCE:
+she won't be pleased.
+
+TARGET:
+ça ne va pas lui [end]
+
+PREDICTION:
+elle ne sera pas content.
+
+============================================================================================================================================
+SOURCE:
+everyone who knows him him.
+
+TARGET:
+chaque personne qui le connaît le [end]
+
+PREDICTION:
+tous les qui le lui

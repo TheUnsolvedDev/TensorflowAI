@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+can i talk to you for a moment?
+
+TARGET:
+puis-je vous parler un moment ? [end]
+
+PREDICTION:
+je te prie de me dire un petit pour deux. classe. ? c'est très
+
+============================================================================================================================================
+SOURCE:
+the paid off.
+
+TARGET:
+le de l'entreprise a été [end]
+
+PREDICTION:
+un a payé de trois fils. l'un à l'autre.
+
+============================================================================================================================================
+SOURCE:
+she and i get on well.
+
+TARGET:
+elle et moi nous bien. [end]
+
+PREDICTION:
+elle et me prend forme.
+
+============================================================================================================================================
+SOURCE:
+she has a very beautiful laugh.
+
+TARGET:
+elle a un très rire. [end]
+
+PREDICTION:
+il fait une forte rire.
+
+============================================================================================================================================
+SOURCE:
+the air seems
+
+TARGET:
+l'air semble [end]
+
+PREDICTION:
+du l'air on dirait dix
+
+============================================================================================================================================
+SOURCE:
+can i you to try another piece of
+
+TARGET:
+tu bien un autre morceau de [end]
+
+PREDICTION:
+voulez-vous faire un autre lumière de vous traiter votre fille avec ?
+
+============================================================================================================================================
+SOURCE:
+wait. i want to show you something.
+
+TARGET:
+attends ! je veux te montrer quelque chose. [end]
+
+PREDICTION:
+attendez ! on peut me dire quelque chose.
+
+============================================================================================================================================
+SOURCE:
+we found it here.
+
+TARGET:
+nous l'avons trouvé ici. [end]
+
+PREDICTION:
+il ici qu'en groupe.
+
+============================================================================================================================================
+SOURCE:
+i had a heart
+
+TARGET:
+j'ai eu une crise [end]
+
+PREDICTION:
+j'avais une demande. je souhaite au cœur. » en cas où il y ait les étudiants de s'en penser. j'ai à la vue. « peut-être qui attendez du café ?
+
+============================================================================================================================================
+SOURCE:
+she against him by him.
+
+TARGET:
+elle a en [end]
+
+PREDICTION:
+elle lui de son poste pour l'aider.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+no. you don't.
+
+TARGET:
+yes i do, i really do. [end]
+
+PREDICTION:
+i don't want to be
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+well, excuse me for but isn't it kinda dead in here? [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+yes, but... i thought, perhaps tonight, under the circumstances, i stay here with you.
+
+TARGET:
+oh, don't let's spoil everything. [end]
+
+PREDICTION:
+i don't know what you're talking about.
+
+============================================================================================================================================
+SOURCE:
+my wife.
+
+TARGET:
+where is the little lady? [end]
+
+PREDICTION:
+you have to be
+
+============================================================================================================================================
+SOURCE:
+are you crazy? you'll wake the whole
+
+TARGET:
+hi mom. [end]
+
+PREDICTION:
+i don't want to be
+
+============================================================================================================================================
+SOURCE:
+now son, it's a bitter thing to say, but there's more than your sister at stake here.
+
+TARGET:
+there sure is! i'm going to tell you wasn't going to speak of i'll tell you now. did you notice them strung on did you see
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+what does that mean?
+
+TARGET:
+well, one day i'm invited the next day i'm not, one day we're all one family, the next day he wants to be alone. you tell me. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+the name of my yeah. but how... ?
+
+TARGET:
+i, uh... i'm a program from a that... knows [end]
+
+PREDICTION:
+what do you want me to say?
+
+============================================================================================================================================
+SOURCE:
+how's
+
+TARGET:
+he's running a fever. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+could be
+
+TARGET:
+jesus. and last week you came over with blood on your shoes. what am i going to do with you? [end]
+
+PREDICTION:
+i don't know what you're talking about.

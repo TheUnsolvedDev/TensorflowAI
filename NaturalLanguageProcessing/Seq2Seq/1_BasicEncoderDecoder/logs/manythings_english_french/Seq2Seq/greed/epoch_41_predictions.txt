@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+they're having a at the church tonight.
+
+TARGET:
+ils font une rencontre à l'église ce soir. [end]
+
+PREDICTION:
+ils au chez le fait, ce à côté de nous.
+
+============================================================================================================================================
+SOURCE:
+the on the left is yours.
+
+TARGET:
+la de gauche est la tienne. [end]
+
+PREDICTION:
+la à l'hôtel est sur la vôtre.
+
+============================================================================================================================================
+SOURCE:
+they
+
+TARGET:
+elles se sont [end]
+
+PREDICTION:
+elles ont
+
+============================================================================================================================================
+SOURCE:
+there's no success without
+
+TARGET:
+il n'y a pas de sans [end]
+
+PREDICTION:
+il n'y a pas sans sans
+
+============================================================================================================================================
+SOURCE:
+the snow prevented the train from running.
+
+TARGET:
+la neige le train de [end]
+
+PREDICTION:
+la neige le train de
+
+============================================================================================================================================
+SOURCE:
+that's when i decided to quit talking.
+
+TARGET:
+c'est alors que j'ai décidé d'arrêter de discuter. [end]
+
+PREDICTION:
+c'est alors que j'ai fini de se donner d'arrêter de choses.
+
+============================================================================================================================================
+SOURCE:
+let's do this first.
+
+TARGET:
+faisons ceci [end]
+
+PREDICTION:
+faisons ça
+
+============================================================================================================================================
+SOURCE:
+it's against the law.
+
+TARGET:
+c'est à la loi. [end]
+
+PREDICTION:
+c'est à la loi.
+
+============================================================================================================================================
+SOURCE:
+i hope you're prepared for that.
+
+TARGET:
+j'espère que tu es préparé à cela. [end]
+
+PREDICTION:
+j'espère que vous êtes
+
+============================================================================================================================================
+SOURCE:
+how many do you know how to
+
+TARGET:
+de combien sais-tu jouer ? [end]
+
+PREDICTION:
+combien de ?

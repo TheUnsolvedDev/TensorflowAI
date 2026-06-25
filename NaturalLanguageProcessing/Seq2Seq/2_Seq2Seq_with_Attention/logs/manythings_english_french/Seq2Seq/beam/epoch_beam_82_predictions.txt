@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+what time did you go to sleep last night?
+
+TARGET:
+à quelle heure t'es-tu hier soir ? [end]
+
+PREDICTION:
+dans quelle environ temps allez-vous chanter hier soir ?
+
+============================================================================================================================================
+SOURCE:
+he sent me a letter saying that he could not see me.
+
+TARGET:
+il une lettre qu'il ne pouvait me voir. [end]
+
+PREDICTION:
+je lui mis une lettre plutôt qu'il pas.
+
+============================================================================================================================================
+SOURCE:
+tom asked mary who had been the first to arrive.
+
+TARGET:
+tom a demandé à mary qui était arrivé en premier. [end]
+
+PREDICTION:
+tom a demandé à quiconque qui ait su faire le passé.
+
+============================================================================================================================================
+SOURCE:
+it was only a dream.
+
+TARGET:
+ça n'a été qu'un rêve. [end]
+
+PREDICTION:
+ce était juste un sens que il beaucoup. » le telle qu'on soit se trouver d'un rêve vous.
+
+============================================================================================================================================
+SOURCE:
+did you have a good day?
+
+TARGET:
+avez-vous passé une bonne journée ? [end]
+
+PREDICTION:
+vous a-t-on mal d'aller à le lever du temps passé.
+
+============================================================================================================================================
+SOURCE:
+search every room.
+
+TARGET:
+chaque pièce. [end]
+
+PREDICTION:
+prends chaque cher d'eau.
+
+============================================================================================================================================
+SOURCE:
+tom's
+
+TARGET:
+tom est [end]
+
+PREDICTION:
+tom
+
+============================================================================================================================================
+SOURCE:
+have you told anyone else about this?
+
+TARGET:
+as-tu parlé de ceci à quelqu'un d'autre ? [end]
+
+PREDICTION:
+est-ce à vous mary note chose le sujet ! ».
+
+============================================================================================================================================
+SOURCE:
+you have to be
+
+TARGET:
+vous devez être [end]
+
+PREDICTION:
+vous laver à venir. d'ici. te prie de plus. une fois. d'accord ?
+
+============================================================================================================================================
+SOURCE:
+she went with him to the zoo.
+
+TARGET:
+elle se rendit au avec lui. [end]
+
+PREDICTION:
+c'était elle en au bureau.

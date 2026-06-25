@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+year lrb rrb was a common year starting on monday lrb link will display the full calendar rrb of the gregorian calendar and a common year starting on thursday of the day slower julian calendar.
+
+TARGET:
+year was a common year that started on a monday when using the gregorian calendar. [end]
+
+PREDICTION:
+year was a common year that started on a monday when using the gregorian calendar.
+
+============================================================================================================================================
+SOURCE:
+the woman team for instance is in the first bundesliga lrb i.e. national league rrb the man team in the second.
+
+TARGET:
+the women s team is in the first bundesliga lrb national league rrb the men s team in the second. [end]
+
+PREDICTION:
+the woman is a football team which plays in the united states.
+
+============================================================================================================================================
+SOURCE:
+it was the second found by him lrb being his previous find rrb and the third discovery lrb was the first rrb.
+
+TARGET:
+it was the second found by him lrb being his first rrb and the third to be found lrb was the first rrb. [end]
+
+PREDICTION:
+it was the second in greek mythology who was very short and became his previous
+
+============================================================================================================================================
+SOURCE:
+until was a of tehran province.
+
+TARGET:
+was a of tehran province. [end]
+
+PREDICTION:
+died of lrb august rrb in.
+
+============================================================================================================================================
+SOURCE:
+tolkien used to write english most of tolkien s samples are actually in english.
+
+TARGET:
+but tolkien used the tengwar mostly for writing english. [end]
+
+PREDICTION:
+the lord often used to write english as english is actually in english.
+
+============================================================================================================================================
+SOURCE:
+atlantic giant is the common name for a variety bred publicly to produce large fruit.
+
+TARGET:
+atlantic giant is the name of a very large type of [end]
+
+PREDICTION:
+half giant tongue lrb the other main reason for example is de de la rrb is the common name for bred and explains help use it from other products.
+
+============================================================================================================================================
+SOURCE:
+the band named themselves after a wind pipe sculpture a sound garden located on national oceanic and atmospheric administration property next to park
+
+TARGET:
+the band named themselves after a wind pipe sculpture the sound garden located in park [end]
+
+PREDICTION:
+the band named them after a wind was used to work with a wind
+
+============================================================================================================================================
+SOURCE:
+it has since been numerous times and translated into many languages becoming one of the most popular and influential works in th century literature.
+
+TARGET:
+it is one of the most popular stories in th century literature and has been an important book for the fantasy [end]
+
+PREDICTION:
+it has been and translated into many languages. it became one of the most popular and influential works in th century literature.
+
+============================================================================================================================================
+SOURCE:
+in this parable the owner is generally regarded as representing god and the lrb rrb jesus.
+
+TARGET:
+the tree was meant to bear the good fruit of the holy spirit and the lrb rrb is jesus. [end]
+
+PREDICTION:
+the parable is generally said to god and the lrb rrb jesus.
+
+============================================================================================================================================
+SOURCE:
+barbara pierce bush lrb born june rrb is the wife of the st president of the united states george h. w. bush and
+
+TARGET:
+her birthplace is new york near new york city. [end]
+
+PREDICTION:
+barbara pierce bush was born in or nancy while she was at university.

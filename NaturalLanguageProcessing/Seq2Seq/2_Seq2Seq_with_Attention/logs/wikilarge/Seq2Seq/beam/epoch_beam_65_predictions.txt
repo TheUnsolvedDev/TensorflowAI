@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in other places such as alaska a borough does not a single township but a whole region alaska s largest borough the north borough is in area to the
+
+TARGET:
+in other places such as alaska a borough does not mean a single but a whole region. [end]
+
+PREDICTION:
+in words are over countries
+
+============================================================================================================================================
+SOURCE:
+the then agreed a deal with and sky sports million per season to the
+
+TARGET:
+in july sky sports and agreed a million five year deal with the [end]
+
+PREDICTION:
+was voted to a deal and sport were described by teams which had million minor players for the season. from their previously known above games is as well.
+
+============================================================================================================================================
+SOURCE:
+charles vii lrb february july rrb called the lrb rrb or the well served lrb rrb was king of france from to his death charles medieval lands france kings
+
+TARGET:
+charles vii of france lrb february july rrb was king of france from to his death. [end]
+
+PREDICTION:
+charles vii of france lrb football canada rrb to his death he died marie village by queen elizabeth edward philharmonic at that year in mexico britain for her life.
+
+============================================================================================================================================
+SOURCE:
+was also identified with the egyptian god of writing education and through the roman period.
+
+TARGET:
+as a god was also by [end]
+
+PREDICTION:
+he joined the tree into philosophy and took place on a roman catholic movement.
+
+============================================================================================================================================
+SOURCE:
+these works are called after the term for
+
+TARGET:
+poems like these are called after the term for [end]
+
+PREDICTION:
+by acts and wrote such earlier work the word for children.
+
+============================================================================================================================================
+SOURCE:
+the open championship or simply the open lrb often referred to as the british open outside the uk rrb is the oldest of the four major championships in professional
+
+TARGET:
+the open championship often known as the british open outside the united kingdom and ireland is the oldest of the four major championships in men s [end]
+
+PREDICTION:
+in it is also known to refer now the top of
+
+============================================================================================================================================
+SOURCE:
+the following example from the times how the of a can a has been around for years and has a large
+
+TARGET:
+has been around for years and has a large [end]
+
+PREDICTION:
+all hair is the term used to describe one example of an electronic color that looks like years. it had been called how much water. however has a thick tail
+
+============================================================================================================================================
+SOURCE:
+the is a brown lrb rrb which is the most common type of
+
+TARGET:
+the or is a type of the brown lrb rrb that is to be a [end]
+
+PREDICTION:
+lrb also known as the hills lives rrb are a wide brown dog and which is unique but they eat different in some types like instruments including light or their
+
+============================================================================================================================================
+SOURCE:
+your request to be in practice a high of are
+
+TARGET:
+your to be in practice almost all are [end]
+
+PREDICTION:
+your let associated with try to become a high thick of extra pepper
+
+============================================================================================================================================
+SOURCE:
+the name comes from the ancient greek lrb rrb meaning beginning
+
+TARGET:
+the question of whether or not activity existed in the is an active area of modern [end]
+
+PREDICTION:
+april the name of a greek is derived from

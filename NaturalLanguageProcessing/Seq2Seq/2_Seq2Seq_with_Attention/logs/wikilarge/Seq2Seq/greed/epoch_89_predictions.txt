@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the show around the and people who the fictional island of
+
+TARGET:
+the show is mainly about the and people who the fictional island of [end]
+
+PREDICTION:
+the show traveled around the and people who the fictional island of
+
+============================================================================================================================================
+SOURCE:
+by creating an article you other people to on articles will you far greater than solo
+
+TARGET:
+above all creating an article which is is the lrb second rule rrb of that way you other people to will you far greater
+
+PREDICTION:
+by creating an dr. for for users think that it will mr. will be by more than solo
+
+============================================================================================================================================
+SOURCE:
+the fruit is an lrb in rrb long containing several
+
+TARGET:
+the fruit is an lrb about rrb long several [end]
+
+PREDICTION:
+the fruit is an in the it has several
+
+============================================================================================================================================
+SOURCE:
+is a disney comedy film directed by and co written by with
+
+TARGET:
+is a disney film directed by [end]
+
+PREDICTION:
+is a movie directed by and produced by with
+
+============================================================================================================================================
+SOURCE:
+s moved north winds to california coastal waters before
+
+TARGET:
+it brought winds to california coastal waters before [end]
+
+PREDICTION:
+a minor winds to range across florida coastal california.
+
+============================================================================================================================================
+SOURCE:
+played twenty minutes in all of the stanley cup with playing the rest and the won the stanley cup with a record of.
+
+TARGET:
+in he won a stanley cup with the chicago making him the first french born nhl player to win a stanley cup although he was replaced from his starting
+
+PREDICTION:
+the won the stanley cup with
+
+============================================================================================================================================
+SOURCE:
+after the and leave the upon returning that he is too small to open his third
+
+TARGET:
+the next present is a book given to by [end]
+
+PREDICTION:
+after he leave the after they he that he is too small to open his third
+
+============================================================================================================================================
+SOURCE:
+the james building at the campus of king s college london in of him being professor of natural philosophy at king s from to.
+
+TARGET:
+he then became a professor at king s college london. [end]
+
+PREDICTION:
+the james building at the and cathedral in of him were professor in philosophy he grew up in s from until.
+
+============================================================================================================================================
+SOURCE:
+after they were used as and two of them were later converted into single and.
+
+TARGET:
+after the was they were used as cars and two of them were later into single and. [end]
+
+PREDICTION:
+the band then became successful single and two of them were later created by and.
+
+============================================================================================================================================
+SOURCE:
+the original of transportation in the were trains operated by from tribes in the north west of the then british india lrb present day pakistan rrb
+
+TARGET:
+these trains were run by people from tribes in the north west frontier of india and pakistan. [end]
+
+PREDICTION:
+the of of in the had trains operated by from present day pakistan island of the north west frontier of pakistan east by the present

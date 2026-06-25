@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+she's about the same age as me.
+
+TARGET:
+elle a à peu près le même âge que moi. [end]
+
+PREDICTION:
+elle a à peu près le même âge que moi.
+
+============================================================================================================================================
+SOURCE:
+my coat is in the car.
+
+TARGET:
+mon manteau est dans la voiture. [end]
+
+PREDICTION:
+mon manteau est dans la voiture.
+
+============================================================================================================================================
+SOURCE:
+i'm sorry that you didn't sleep well.
+
+TARGET:
+je suis désolée que tu pas bien [end]
+
+PREDICTION:
+je suis désolé que vous n'ayez pas bien
+
+============================================================================================================================================
+SOURCE:
+i'm on my way.
+
+TARGET:
+je suis en chemin. [end]
+
+PREDICTION:
+je suis en route.
+
+============================================================================================================================================
+SOURCE:
+he might have been sleeping at that time.
+
+TARGET:
+il se pourrait qu'il à ce [end]
+
+PREDICTION:
+il aurait pu que c'était
+
+============================================================================================================================================
+SOURCE:
+i have the feeling there's something you haven't told me yet.
+
+TARGET:
+j'ai le sentiment qu'il y a quelque chose que tu ne m'as pas encore dit. [end]
+
+PREDICTION:
+j'ai le sentiment qu'il y a quelque chose que vous ne m'avez pas encore dit.
+
+============================================================================================================================================
+SOURCE:
+when did you buy this
+
+TARGET:
+quand avez-vous acheté cet ordinateur ? [end]
+
+PREDICTION:
+quand as-tu acheté ce ?
+
+============================================================================================================================================
+SOURCE:
+our children still go to school.
+
+TARGET:
+nos enfants vont encore à l'école. [end]
+
+PREDICTION:
+nos enfants vont encore à l'école.
+
+============================================================================================================================================
+SOURCE:
+i think you deserve more than this.
+
+TARGET:
+je pense que vous davantage que ça. [end]
+
+PREDICTION:
+je pense que tu plus que ça.
+
+============================================================================================================================================
+SOURCE:
+someone is waiting for me.
+
+TARGET:
+quelqu'un [end]
+
+PREDICTION:
+quelqu'un

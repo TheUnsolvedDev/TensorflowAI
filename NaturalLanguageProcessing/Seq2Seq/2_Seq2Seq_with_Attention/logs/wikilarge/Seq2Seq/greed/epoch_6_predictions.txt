@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+lrb french pronounced rrb or lrb dutch pronounced rrb is one of the nineteen municipalities located in the brussels capital region of belgium.
+
+TARGET:
+in french or in dutch is a municipality located in the belgian brussels capital region. [end]
+
+PREDICTION:
+is a municipality located in the belgian province of luxembourg.
+
+============================================================================================================================================
+SOURCE:
+this list of sex positions describes the sex positions which people may adopt for the purpose of sexual intercourse and other sexual
+
+TARGET:
+this list of sex positions is a list of different ways to have sexual intercourse and other sexual [end]
+
+PREDICTION:
+this list of sex positions describes the sex positions which people may adopt the and other sexual
+
+============================================================================================================================================
+SOURCE:
+what i ve done is a song by american rock band linkin park. it was released as the first single from their third album minutes to
+
+TARGET:
+what i ve done is a song by the american rock band linkin park and the first single from their third studio album minutes to [end]
+
+PREDICTION:
+what i ve done is a song by american rock band linkin park. it was released as the first single from their third album minutes to
+
+============================================================================================================================================
+SOURCE:
+lrb rrb is a walloon municipality located in the belgian province of hainaut.
+
+TARGET:
+is a municipality located in the belgian province of hainaut. [end]
+
+PREDICTION:
+is a municipality located in the belgian province of hainaut.
+
+============================================================================================================================================
+SOURCE:
+however in a speech graham discussed his relationship with the late north korean dictator kim il sung him as a different kind of communist and one of the great fighters for freedom in his country against the
+
+TARGET:
+however in a speech he talked about his relationship with the late north korean dictator kim il he said that he was a different kind of communist and one of the great fighters for freedom in his country against the japanese. [end]
+
+PREDICTION:
+in a speech graham discussed his relationship with the late north korean
+
+============================================================================================================================================
+SOURCE:
+is a commune in the aube department in north central france.
+
+TARGET:
+is a commune of the aube d partement in the north central part of france. [end]
+
+PREDICTION:
+is a commune of the aube d partement in the north central part of france.
+
+============================================================================================================================================
+SOURCE:
+an essay is a short piece of writing which is often written from an author s personal point of view.
+
+TARGET:
+an essay is a written text. it is usually about the personal point of view of the author who wrote it. [end]
+
+PREDICTION:
+an essay is a short piece of writing which is written from an author s personal point of view.
+
+============================================================================================================================================
+SOURCE:
+in she won a song contest organized by the radio station with her song lrb my mother rrb.
+
+TARGET:
+in she released a rock album called k z. [end]
+
+PREDICTION:
+in she won the song lrb my mother rrb lrb my mother rrb and lrb my mother rrb.
+
+============================================================================================================================================
+SOURCE:
+the s has the words ch t ch h ch across it meaning president chi
+
+TARGET:
+president h ch minh did not want a at all. [end]
+
+PREDICTION:
+the s has the words ch t ch h ch h ch h ch h ch h ch
+
+============================================================================================================================================
+SOURCE:
+it is a member of australia s group of eight group the and association of pacific rim universities networks and is colloquially known as a sandstone university.
+
+TARGET:
+the first chancellor barry lrb later sir rrb held the position until his death in. [end]
+
+PREDICTION:
+it is a member of australia s group of eight group the and association of pacific

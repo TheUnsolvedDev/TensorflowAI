@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+a smart and intelligent year old girl whose voice is provided by sophia
+
+TARGET:
+a smart and year old girl whose voice is provided by sofia fox. [end]
+
+PREDICTION:
+twins is the daughter to marry sophia lrb a helen of her father rrb as an actress who was best for his work on it. he wrote about one woman with the voice in many years and she has been given by him
+
+============================================================================================================================================
+SOURCE:
+is a city in county in the upper peninsula of the u.s. state of michigan.
+
+TARGET:
+is a city located in county michigan usa. [end]
+
+PREDICTION:
+in a new city of michigan. there were people s the town had no o..
+
+============================================================================================================================================
+SOURCE:
+the first tropical cyclone tropical storm alberto developed on june while the last storm hurricane gordon dissipated on november.
+
+TARGET:
+however in this season no tropical cyclone formed after november the end of the season because the last storm hurricane died on november just nine days before the th. [end]
+
+PREDICTION:
+the first subtropical cyclone strengthened as hurricane gordon in november.
+
+============================================================================================================================================
+SOURCE:
+the modern accepted start of the mersey is at the confluence of the and in central stockport greater manchester.
+
+TARGET:
+they can be viewed on the salmon steps at between the months of september and november. [end]
+
+PREDICTION:
+this and is a part that was named after the coll de france
+
+============================================================================================================================================
+SOURCE:
+it is important to note that are not limited to political parties they can and frequently do form within any group that has some sort of political aim or purpose.
+
+TARGET:
+but political are not limited to political parties they can form within any group that has some sort of political aim or purpose. [end]
+
+PREDICTION:
+it is important to note the theory for example that or political parties they can be used in any groups of people and are not a good way of law having different views. these sort of subjects lrb rrb have many things that follow other activities such today as purpose.
+
+============================================================================================================================================
+SOURCE:
+the union s name is formed from the beginning of each country s name it was possibly created for the benelux customs union de l institut international de lrb o o rrb vol.
+
+TARGET:
+this parliamentary assembly is composed of members of the dutch parliament members of the belgian national and regional and members of the parliament. [end]
+
+PREDICTION:
+it is the second highest ranking in territory of each nation s name for statistics and
+
+============================================================================================================================================
+SOURCE:
+was born theodore at thomas jefferson hospital in philadelphia pennsylvania.
+
+TARGET:
+teddy lrb real name theodore teddy rrb lrb born march died january rrb was an american r b and soul singer songwriter. was from the down when he was severely injured in an car accident in philadelphia in. [end]
+
+PREDICTION:
+he became in a new year and was born richard carmel hospital.
+
+============================================================================================================================================
+SOURCE:
+it was s discovery that was announced first.
+
+TARGET:
+it was discovery that was announced first. [end]
+
+PREDICTION:
+in was the first period to describe a new building for example of this reason. it had been called th first.
+
+============================================================================================================================================
+SOURCE:
+they are members of the central division in the national league of major league baseball.
+
+TARGET:
+they are part of the central division in the national league. [end]
+
+PREDICTION:
+the national league. lrb often known as rrb is one and a major leagues baseball players to win two league teams.
+
+============================================================================================================================================
+SOURCE:
+has been a member of the supreme council of cultural revolution since.
+
+TARGET:
+he is also a member of the council and the high council of cultural revolution. [end]
+
+PREDICTION:
+the city s official language is

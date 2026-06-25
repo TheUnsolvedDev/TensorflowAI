@@ -3,6 +3,7 @@ import numpy as np
 
 class MinimaxAgent:
     def __init__(self, depth=4):
+        self.type = f"Minimax"
         self.depth = depth
         self.rows = 6
         self.cols = 7

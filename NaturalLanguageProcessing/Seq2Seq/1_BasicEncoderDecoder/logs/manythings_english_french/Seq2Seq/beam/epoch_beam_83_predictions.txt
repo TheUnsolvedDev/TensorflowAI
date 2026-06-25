@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+how can you be so
+
+TARGET:
+comment peux-tu en être tellement sûr ? [end]
+
+PREDICTION:
+comment pouvez-vous en aimer aussi ?
+
+============================================================================================================================================
+SOURCE:
+those children are making too much noise.
+
+TARGET:
+ces enfants font trop de bruit. [end]
+
+PREDICTION:
+ces enfants font trop de bruit. ni mauvais.
+
+============================================================================================================================================
+SOURCE:
+i like english better than music.
+
+TARGET:
+plus l'anglais que la musique. [end]
+
+PREDICTION:
+j'ai du tout cru essayer. ça a la temps
+
+============================================================================================================================================
+SOURCE:
+that's very
+
+TARGET:
+c'est très [end]
+
+PREDICTION:
+ça ne sait pas beaucoup. propos.
+
+============================================================================================================================================
+SOURCE:
+she wrote to me to come at once.
+
+TARGET:
+elle de venir sur-le-champ. [end]
+
+PREDICTION:
+sa lettres lui seulement quelque fois.
+
+============================================================================================================================================
+SOURCE:
+a friend of mine is studying abroad.
+
+TARGET:
+un ami à moi étudie à l'étranger. [end]
+
+PREDICTION:
+un de mes étudiants est d'étudier avec le monde.
+
+============================================================================================================================================
+SOURCE:
+he gets around a lot.
+
+TARGET:
+elle sort beaucoup. [end]
+
+PREDICTION:
+il fait beaucoup à sourire.
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+la aux une [end]
+
+PREDICTION:
+la cause de lentement porte des choses au-dessus
+
+============================================================================================================================================
+SOURCE:
+i'll go by plane.
+
+TARGET:
+j'irai en [end]
+
+PREDICTION:
+en avion !
+
+============================================================================================================================================
+SOURCE:
+i think we should all be worried a little bit about the way tom has been acting
+
+TARGET:
+je pense que l'on devrait tous être un peu inquiet de la manière dont tom s'est [end]
+
+PREDICTION:
+cela devrait me toutes que nous ayez un emploi à cause de mon visage propos du canadien. j'aurais l'air plus rapide.

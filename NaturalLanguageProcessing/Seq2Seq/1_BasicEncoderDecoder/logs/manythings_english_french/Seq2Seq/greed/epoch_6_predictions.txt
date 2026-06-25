@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+tom was sitting beside mary.
+
+TARGET:
+tom était assis à côté de maria. [end]
+
+PREDICTION:
+tom était assis à côté de mary.
+
+============================================================================================================================================
+SOURCE:
+he kicked him while he was down.
+
+TARGET:
+il le frappa tandis qu'il était à terre. [end]
+
+PREDICTION:
+il lui a pendant qu'il
+
+============================================================================================================================================
+SOURCE:
+i knew it wouldn't last.
+
+TARGET:
+je savais que ça ne pas. [end]
+
+PREDICTION:
+je savais que ça ne pas.
+
+============================================================================================================================================
+SOURCE:
+let's make a phone call.
+
+TARGET:
+passons un appel. [end]
+
+PREDICTION:
+un coup de téléphone.
+
+============================================================================================================================================
+SOURCE:
+i'm not taking my eyes off you.
+
+TARGET:
+je ne te lâche pas des yeux. [end]
+
+PREDICTION:
+je ne suis pas de vous suivre.
+
+============================================================================================================================================
+SOURCE:
+i knew that already.
+
+TARGET:
+je le savais déjà. [end]
+
+PREDICTION:
+je l'ai déjà vu.
+
+============================================================================================================================================
+SOURCE:
+my uncle comes back from america next monday.
+
+TARGET:
+mon oncle revient d'amérique lundi prochain. [end]
+
+PREDICTION:
+mon oncle vient de partir de lundi prochain.
+
+============================================================================================================================================
+SOURCE:
+he is making cookies.
+
+TARGET:
+il des biscuits. [end]
+
+PREDICTION:
+c'est des biscuits
+
+============================================================================================================================================
+SOURCE:
+you have a wonderful voice.
+
+TARGET:
+tu as une voix magnifique. [end]
+
+PREDICTION:
+vous avez une voix magnifique.
+
+============================================================================================================================================
+SOURCE:
+what're you doing in this park?
+
+TARGET:
+que fais-tu dans ce parc ? [end]
+
+PREDICTION:
+que fais-tu dans ce parc ?

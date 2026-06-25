@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i was supposed to be home for her birthday three days ago.
+
+TARGET:
+your agent said she would tell her you were okay. but i'm afraid you'll have to wait until tomorrow if you want to speak to her yourself. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+yes it is.
+
+TARGET:
+marge, good morning. unusual weather. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+no.
+
+TARGET:
+okay. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+hey, hey tony. give the big guy a break.
+
+TARGET:
+relax, you'll live longer. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+up are you sure you're not alone?
+
+TARGET:
+i'm always alone, mrs. you know that. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+this could be it!
+
+TARGET:
+this could be it! [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+no, look, this is not about alright. wait, wait, wait, wait. she stayed at the four last night with
+
+TARGET:
+yeah, we all stayed at the four man. it was party time. hey, i hung out with danny, manager. really nice guy. we talked about the video. they want
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+what could there be except just another in any i'm not curious. at the moment, it seems to me we should be concerned about getting home. i'd give anything to
+
+TARGET:
+of course you would. if ever we get out of this place, the thing for you to do is to take that job with father. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+it's my
+
+TARGET:
+anyway, listen up. they're gone! [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+finally. i've covered almost the entire and parts of eastern
+
+TARGET:
+[end]
+
+PREDICTION:
+

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in he conducted the paris of g by
+
+TARGET:
+in he conducted s g [end]
+
+PREDICTION:
+in worked for the concerts selling nazi workers and was a famous body.
+
+============================================================================================================================================
+SOURCE:
+new year s or old year s night is on the final day of the gregorian year and the day before new year s day.
+
+TARGET:
+new year s is the holiday before new year s day on december the last day of the current year. [end]
+
+PREDICTION:
+new st june is on by year s going to start in the other year.
+
+============================================================================================================================================
+SOURCE:
+analysis is widely used for lrb including of time series data rrb.
+
+TARGET:
+can be used for lrb including of time series data rrb and of [end]
+
+PREDICTION:
+is the word for computers that was used by time period data in a system with many different species.
+
+============================================================================================================================================
+SOURCE:
+the most well known example is finnish architect who would create effects in the of his buildings through the combination of different types and of
+
+TARGET:
+they are made mostly from wood lrb e.g. the various buildings of the university of technology rrb. [end]
+
+PREDICTION:
+pink j. s main combination game after various effects in both humans and parts of. the nature is derived from orange forest lrb different types of systems rrb as plans
+
+============================================================================================================================================
+SOURCE:
+it often results from the break down of in matter in the of oxygen such as in and lrb rrb.
+
+TARGET:
+it often results when bacteria break down organic matter in the of [end]
+
+PREDICTION:
+it is often results from the way because of carbon and differences lrb chemical particles rrb in an important cell called their common name comes out without being confused with
+
+============================================================================================================================================
+SOURCE:
+the the interior just above the and and stories from the books of and including adam and the tower of and
+
+TARGET:
+the the just above the [end]
+
+PREDICTION:
+is an unusual fantasy book in the series about famous people living with his father pope paul s life. l o. this also feature paintings has been performed by some
+
+============================================================================================================================================
+SOURCE:
+the female angel gave him a of gold and states this was a sign of his future financial
+
+TARGET:
+stated that the female angel gave him a of gold and he received a in terms of financial [end]
+
+PREDICTION:
+rise states gave out him a lot of his future interest two sign that might be used for another time.
+
+============================================================================================================================================
+SOURCE:
+ndash american civil war battle of ndash the battle begins with union general fighting toward
+
+TARGET:
+american civil war battle of the battle begins with union general fighting [end]
+
+PREDICTION:
+american war second year last battle while the united states capture strong following union members attacked them.
+
+============================================================================================================================================
+SOURCE:
+the central time zone is the same area the florida ohio michigan most of indiana of great states eastern and northern kentucky eastern and el
+
+TARGET:
+adventure south atlantic states al [end]
+
+PREDICTION:
+it will grow up and the storm ohio where desert waves have to great areas south asian america.
+
+============================================================================================================================================
+SOURCE:
+some central african republic soldiers in in may back pay and the of president f
+
+TARGET:
+about central african republic soldiers in in may. they wanted back pay and for to be removed from control of the country. [end]
+
+PREDICTION:
+many parts of the island in may again after a russian military republic. this was taken off and president but it is now called us soviet authority on may. he

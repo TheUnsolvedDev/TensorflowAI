@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in the federal government of the united states of america there is one secretary of state the most senior political responsible for foreign policy lrb that is equivalent to a foreign
+
+TARGET:
+in the united states federal government the secretary of state is the head of the united states department of state and is responsible for foreign in most other countries this
+
+PREDICTION:
+is a former state in political and the republic of south korea s government.
+
+============================================================================================================================================
+SOURCE:
+a flight of cut out of the rock gives access to the which is with paintings based on of the book of the
+
+TARGET:
+a flight of cut out of the rock makes it possible to go to the this is with paintings based on of the book of the
+
+PREDICTION:
+a cut version with an image at which features the same form as minutes before being added to it.
+
+============================================================================================================================================
+SOURCE:
+it is located south west of sydney on the highway and above sea level.
+
+TARGET:
+was named by james after henry a british politician. [end]
+
+PREDICTION:
+southern is the south west railway on to west. after it was under command of v street lrb mph km north east rrb.
+
+============================================================================================================================================
+SOURCE:
+to wear the jersey where required a of to swiss
+
+TARGET:
+a champion who does not wear the jersey can be to swiss [end]
+
+PREDICTION:
+wear a jersey from the swiss drink to make possible with cells. this means that they move across internal oil and can also be used as part of berlin.
+
+============================================================================================================================================
+SOURCE:
+on august died in la at the age of from heart
+
+TARGET:
+died at the age of on august from heart [end]
+
+PREDICTION:
+in august a year at the age of he died on november near heart between alexander and florence
+
+============================================================================================================================================
+SOURCE:
+lrb born august in rrb is a german football coach and former football player.
+
+TARGET:
+lrb born august rrb is a former german football player. [end]
+
+PREDICTION:
+alan was born august in am lrb also october rrb. is now part from germany a former german football league which takes championship to win its center
+
+============================================================================================================================================
+SOURCE:
+in front of him and places her honor in his
+
+TARGET:
+in front of him and for his [end]
+
+PREDICTION:
+in a castle for getting her.
+
+============================================================================================================================================
+SOURCE:
+it was later sold to and then in the us merged with records in to create the music group.
+
+TARGET:
+they sold it to in they came together with records to become music group. [end]
+
+PREDICTION:
+it took part in the early th lrb including ireland and scotland recording studios rrb as they included
+
+============================================================================================================================================
+SOURCE:
+et is a commune in the aisne department in picardy in northern france.
+
+TARGET:
+et is a commune. it is found in the region picardie in the aisne department in the north of france. [end]
+
+PREDICTION:
+in a commune. it is found by the region of th century de france and refers to this kind of.
+
+============================================================================================================================================
+SOURCE:
+it was also the first year of the rd and of the st century as there was no year in the gregorian calendar.
+
+TARGET:
+it was also the st year of the rd and the st century. [end]
+
+PREDICTION:
+lrb year and al rrb also the st century saint of is one years in a list for his th history of china day march. british english was first born

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+they're green.
+
+TARGET:
+elles sont [end]
+
+PREDICTION:
+ils sont au lac.
+
+============================================================================================================================================
+SOURCE:
+those are my
+
+TARGET:
+ce sont mes [end]
+
+PREDICTION:
+ce ne va pas mon cœur. ans. ! »
+
+============================================================================================================================================
+SOURCE:
+what's your goal?
+
+TARGET:
+quel est votre objectif ? [end]
+
+PREDICTION:
+quelle est la force à toi de votre avis ? » en ton passeport ! ».
+
+============================================================================================================================================
+SOURCE:
+don't you know how beautiful you are?
+
+TARGET:
+ne savez-vous pas comme vous êtes belle ? [end]
+
+PREDICTION:
+ne sais comment vous faites de beau ? êtes-vous bien.
+
+============================================================================================================================================
+SOURCE:
+do you really want me to be
+
+TARGET:
+tu veux vraiment que je sois ? [end]
+
+PREDICTION:
+veux-tu vraiment que ?
+
+============================================================================================================================================
+SOURCE:
+you can only use it once.
+
+TARGET:
+tu ne peux qu'une fois. [end]
+
+PREDICTION:
+vous ne peux simplement pas
+
+============================================================================================================================================
+SOURCE:
+i heard a car
+
+TARGET:
+j'ai entendu une voiture [end]
+
+PREDICTION:
+j'entendis un petit ordinateur en voiture.
+
+============================================================================================================================================
+SOURCE:
+tom doesn't go swimming very often.
+
+TARGET:
+tom ne va pas nager très souvent. [end]
+
+PREDICTION:
+tom n'a pas été beaucoup trop fatigué. ans.
+
+============================================================================================================================================
+SOURCE:
+i hope that helps.
+
+TARGET:
+j'espère que cela aide. [end]
+
+PREDICTION:
+j'espère qu'il aide ça. photo. ans. »
+
+============================================================================================================================================
+SOURCE:
+i paid to have this done.
+
+TARGET:
+j'ai payé pour que ce soit fait. [end]
+
+PREDICTION:
+je veux avoir une affaire.

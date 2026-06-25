@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+four years after her death the king married a young by whom he had twelve children a connection which was to be to
+
+TARGET:
+four years after her death the king married a beautiful young [end]
+
+PREDICTION:
+four years after her death the king was married to a young by whom he had twelve children a which he had lived in children children
+
+============================================================================================================================================
+SOURCE:
+lrb finnish for the news rrb is one of finland s two prominent size and the second largest newspaper in the country.
+
+TARGET:
+is the second largest newspaper in [end]
+
+PREDICTION:
+is one of finland s two western areas of finland s two natural
+
+============================================================================================================================================
+SOURCE:
+the of has become an important part of such and as and lrb see for more information rrb and lrb to a lesser
+
+TARGET:
+are worn at such as and [end]
+
+PREDICTION:
+the of is an important part of such and
+
+============================================================================================================================================
+SOURCE:
+have two in the upper as well as in the lower which grow and must be kept down by this is the origin of the name
+
+TARGET:
+they have four that keep growing and must be kept worn down by lrb by them on something hard rrb this is the origin of the
+
+PREDICTION:
+the origin of the have all in the upper as well as in the lower which grow and must be kept down by this range
+
+============================================================================================================================================
+SOURCE:
+her were henry vii of england and his queen elizabeth of york.
+
+TARGET:
+her were king henry vii of england and elizabeth of york. [end]
+
+PREDICTION:
+marriage in she released her sons of henry vii of york and charles of york.
+
+============================================================================================================================================
+SOURCE:
+the eastern side was built by the victoria station and railway lrb a of the london and south coast railway the london and railway the great western
+
+TARGET:
+the eastern side was built by the london and railway in to to carry trains into victoria station. this was the first railway bridge across the in central
+
+PREDICTION:
+the river railway station and railway the north coast and railway the great half and railway the great and railway the great
+
+============================================================================================================================================
+SOURCE:
+has been a for a number of movie notably the score of the film s list by john williams which subsequently won an academy award for best
+
+TARGET:
+has been a for a number of movie including the score of the film s list by john [end]
+
+PREDICTION:
+john was the musical by john williams and was the for the score of the private calendar.
+
+============================================================================================================================================
+SOURCE:
+the catholic church is an particular church with the full with the
+
+TARGET:
+the catholic church is a church in full with the pope in rome instead of the pope of the orthodox church of [end]
+
+PREDICTION:
+the catholic church is a very important part of the church of oxford in
+
+============================================================================================================================================
+SOURCE:
+all causes proper and can be spoken as potential or as actual particular or
+
+TARGET:
+both types of causes can be spoken as potential or as actual particular or [end]
+
+PREDICTION:
+all causes and can be spoken as well.
+
+============================================================================================================================================
+SOURCE:
+a common japanese refers to a for things rather than
+
+TARGET:
+a common japanese is related to the of and refers to a for things rather than [end]
+
+PREDICTION:
+a common japanese paper or common japanese is to things rather than

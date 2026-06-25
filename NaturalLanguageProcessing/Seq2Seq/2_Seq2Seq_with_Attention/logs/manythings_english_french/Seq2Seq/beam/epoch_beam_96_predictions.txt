@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'm in way over my head.
+
+TARGET:
+j'en crois pas mes yeux. [end]
+
+PREDICTION:
+je perds les de tête qui dit. par ? tous
+
+============================================================================================================================================
+SOURCE:
+they all to his proposal.
+
+TARGET:
+elles ont toutes fait à sa proposition. [end]
+
+PREDICTION:
+ils tous attention de sa proposition. d'ici. tout. qu’il pose que ceci soit au sens pour toute découvrir là-dedans. ? tomber. en faveur à rendre seul.
+
+============================================================================================================================================
+SOURCE:
+tom can do anything he wants.
+
+TARGET:
+tom peut faire tout ce qu'il veut. [end]
+
+PREDICTION:
+à vie que il se sert j'ai fois quoi jamais.
+
+============================================================================================================================================
+SOURCE:
+i feel very about that.
+
+TARGET:
+j'y une très grande [end]
+
+PREDICTION:
+ça m'en fait beaucoup très plaisir. dont il me faut. à pourquoi.
+
+============================================================================================================================================
+SOURCE:
+the box is almost empty.
+
+TARGET:
+la boîte est presque vide. [end]
+
+PREDICTION:
+la demande était vide. chaque année.
+
+============================================================================================================================================
+SOURCE:
+let's work together on this.
+
+TARGET:
+travaillons ensemble là-dessus. [end]
+
+PREDICTION:
+travaillons en privé aujourd'hui. fois. selon m'aider. ne fait plus travail sur le coup de main. !
+
+============================================================================================================================================
+SOURCE:
+the bus leaves every fifteen minutes.
+
+TARGET:
+le bus part toutes les quinze minutes. [end]
+
+PREDICTION:
+les feuilles a connu mes jours se une.
+
+============================================================================================================================================
+SOURCE:
+that's a real
+
+TARGET:
+c'est vraiment la [end]
+
+PREDICTION:
+c'est tellement dans son cas.
+
+============================================================================================================================================
+SOURCE:
+i'd be happy to sing for you.
+
+TARGET:
+je serais heureux de chanter pour vous. [end]
+
+PREDICTION:
+je serais heureux de jouer toi. tu es
+
+============================================================================================================================================
+SOURCE:
+we aren't like them.
+
+TARGET:
+nous ne sommes pas comme elles. [end]
+
+PREDICTION:
+nous n'es pas. aux sommes des autres personnes.

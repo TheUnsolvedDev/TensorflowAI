@@ -1,0 +1,17 @@
+{
+  "os":  "Linux-6.12.77-1-MANJARO-x86_64-with-glibc2.43",
+  "python":  "CPython 3.12.12",
+  "startedAt":  "2026-05-12T20:22:06.895878Z",
+  "program":  "/home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/MountainCar/train.py",
+  "codePath":  "ReinforcementLearning/Vectorized/DoubleDQN/MountainCar/train.py",
+  "codePathLocal":  "train.py",
+  "git":  {
+    "remote":  "https://github.com/TheUnsolvedDev/TensorflowAI.git",
+    "commit":  "65630d62e3426d431bf4b36cae3c753235d158c6"
+  },
+  "email":  "shuvrajeet17@gmail.com",
+  "root":  "/home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/MountainCar",
+  "host":  "desktop",
+  "executable":  "/home/shuvrajeet/miniconda3/envs/research/bin/python3",
+  "writerId":  "s2eo44mk52uwb2b4shw98d6kim1ft3hl"
+}

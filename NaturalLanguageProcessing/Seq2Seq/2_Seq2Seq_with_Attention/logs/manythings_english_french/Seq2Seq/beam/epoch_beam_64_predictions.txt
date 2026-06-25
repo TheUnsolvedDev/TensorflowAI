@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+can i talk to you for a moment?
+
+TARGET:
+puis-je vous parler un moment ? [end]
+
+PREDICTION:
+est-ce qu'une pause vous venez avec un certaine ?
+
+============================================================================================================================================
+SOURCE:
+the paid off.
+
+TARGET:
+le de l'entreprise a été [end]
+
+PREDICTION:
+le produit a payé servir des yeux en tête.
+
+============================================================================================================================================
+SOURCE:
+she and i get on well.
+
+TARGET:
+elle et moi nous bien. [end]
+
+PREDICTION:
+elle et aller en faire trop.
+
+============================================================================================================================================
+SOURCE:
+she has a very beautiful laugh.
+
+TARGET:
+elle a un très rire. [end]
+
+PREDICTION:
+elle prend vraiment un très plaisir. ? tous cheveux.
+
+============================================================================================================================================
+SOURCE:
+the air seems
+
+TARGET:
+l'air semble [end]
+
+PREDICTION:
+l'air semble content.
+
+============================================================================================================================================
+SOURCE:
+can i you to try another piece of
+
+TARGET:
+tu bien un autre morceau de [end]
+
+PREDICTION:
+on appelle à essayer d'un autre signe de la vie ? sur attention. qu'un enfant sert préférable vous rend pas mille une minute en bas.
+
+============================================================================================================================================
+SOURCE:
+wait. i want to show you something.
+
+TARGET:
+attends ! je veux te montrer quelque chose. [end]
+
+PREDICTION:
+attendez que je veux me montrer quelque main. cela.
+
+============================================================================================================================================
+SOURCE:
+we found it here.
+
+TARGET:
+nous l'avons trouvé ici. [end]
+
+PREDICTION:
+on l'avez l'a là.
+
+============================================================================================================================================
+SOURCE:
+i had a heart
+
+TARGET:
+j'ai eu une crise [end]
+
+PREDICTION:
+j’ai fait une crise dans la vie.
+
+============================================================================================================================================
+SOURCE:
+she against him by him.
+
+TARGET:
+elle a en [end]
+
+PREDICTION:
+cela de le lui et je l'ai en soif. par les moyens qu'il lui.

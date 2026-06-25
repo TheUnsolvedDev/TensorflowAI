@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+both high schools and the college as well as the public library have received high national
+
+TARGET:
+the high schools as well as the library have big awards from the whole country. [end]
+
+PREDICTION:
+sometimes college and other schools visited the
+
+============================================================================================================================================
+SOURCE:
+in september of a plot to him muhammad out of with
+
+TARGET:
+in that year his leading tribe the who sent to to bring them back to [end]
+
+PREDICTION:
+the of out of s he to his
+
+============================================================================================================================================
+SOURCE:
+the cities named green in ohio and florida were named after green
+
+TARGET:
+green is a city of kentucky in the united states. [end]
+
+PREDICTION:
+the is named in green
+
+============================================================================================================================================
+SOURCE:
+supported non free software includes device drivers that can be used to run on some current such as only card
+
+TARGET:
+supported non free software include device drivers that are needed to run on current [end]
+
+PREDICTION:
+drivers countries have used more magnetic such as
+
+============================================================================================================================================
+SOURCE:
+this has however as in the late s and early s the club to field a red with white and also in the season where the
+
+TARGET:
+traditionally they play in red and white with black and red and white [end]
+
+PREDICTION:
+this has grown as a in the season but plays the and
+
+============================================================================================================================================
+SOURCE:
+lrb born october in japan rrb is a japanese footballer.
+
+TARGET:
+lrb born october rrb is a japanese football player. [end]
+
+PREDICTION:
+lrb born october rrb is a japanese football player.
+
+============================================================================================================================================
+SOURCE:
+the first known written reference to japan is in the brief information given in twenty four a collection of chinese historical in the st century
+
+TARGET:
+at that time japan had relations with korea and china s [end]
+
+PREDICTION:
+the first period of classical to history period is the period of history around the middle ages in the century.
+
+============================================================================================================================================
+SOURCE:
+to increase the party s the party changed its name to the or national socialist german workers party.
+
+TARGET:
+he renamed the party the national socialist german workers party. [end]
+
+PREDICTION:
+to the party won the party lrb rrb was replaced by the communist party of nations lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+he wrote a number of famous including the
+
+TARGET:
+he also wrote a number of famous poems including the [end]
+
+PREDICTION:
+he wrote a lot of including the
+
+============================================================================================================================================
+SOURCE:
+throughout the s s and s it was home to some of the biggest wrestling and events and has become of a for history.
+
+TARGET:
+in the s s and s it was home to some of the biggest boxing wrestling and [end]
+
+PREDICTION:
+during the northern development of the united states for many great and became popular enough

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it's a
+
+TARGET:
+c'est une sans [end]
+
+PREDICTION:
+c'est un coup dur.
+
+============================================================================================================================================
+SOURCE:
+tom told us a whole of
+
+TARGET:
+tom nous a raconté tout un de [end]
+
+PREDICTION:
+tom nous a dit une de
+
+============================================================================================================================================
+SOURCE:
+tom broke his promise and didn't help mary.
+
+TARGET:
+tom a rompu sa et n'a pas aidé mary. [end]
+
+PREDICTION:
+tom a cassé son ne réponse donner des
+
+============================================================================================================================================
+SOURCE:
+i saw a red car and a white one. the red one was looking than the white one.
+
+TARGET:
+j'ai vu une voiture rouge et une la rouge était plus belle que la [end]
+
+PREDICTION:
+j'ai vu une pièce d'un plan par un que les étaient un
+
+============================================================================================================================================
+SOURCE:
+what's your favorite with
+
+TARGET:
+quel est ton aux ? [end]
+
+PREDICTION:
+quel est ton préféré avec des ?
+
+============================================================================================================================================
+SOURCE:
+you'll have to take his place in case he can't come.
+
+TARGET:
+vous prendre sa place, au cas où il ne puisse venir. [end]
+
+PREDICTION:
+il faudra que vous sa place, au cas où il ne puisse venir.
+
+============================================================================================================================================
+SOURCE:
+do you feel any
+
+TARGET:
+vous sentez-vous mieux ? [end]
+
+PREDICTION:
+te sens-tu mieux ?
+
+============================================================================================================================================
+SOURCE:
+i can't talk with you right now.
+
+TARGET:
+je ne peux pas te parler maintenant. [end]
+
+PREDICTION:
+je ne peux pas te parler maintenant.
+
+============================================================================================================================================
+SOURCE:
+this is very
+
+TARGET:
+c'est très [end]
+
+PREDICTION:
+c'est très
+
+============================================================================================================================================
+SOURCE:
+her daughter got married.
+
+TARGET:
+sa fille s'est mariée. [end]
+
+PREDICTION:
+sa fille a été mariée.

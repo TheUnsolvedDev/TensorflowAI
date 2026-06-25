@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+s oldest and most important park is victoria park in the heart of downtown
+
+TARGET:
+the city was renamed after a british general then slowly became a city as it is today. [end]
+
+PREDICTION:
+it is home park in the south of the united states.
+
+============================================================================================================================================
+SOURCE:
+one technique used by to the saturn was a of by he is a master who tracks down and
+
+TARGET:
+the saturn was quite popular in japan and or france because of the commercial with a man who his life to the [end]
+
+PREDICTION:
+a that a was too to stop a car from
+
+============================================================================================================================================
+SOURCE:
+he was already party leader from may to may and leader for one year before he became re elected leader of the party in july and once more in may.
+
+TARGET:
+he was first elected party leader in may. in may he became leader for one year before he became re elected leader of the party in july and once more
+
+PREDICTION:
+lrb born may in rrb is a retired english
+
+============================================================================================================================================
+SOURCE:
+cities are the number of humans living in that city.
+
+TARGET:
+a city s population is the number of humans living in that city. [end]
+
+PREDICTION:
+is the inhabitants of living in the state.
+
+============================================================================================================================================
+SOURCE:
+the university of new is located not in new but in west
+
+TARGET:
+new may also refer to the greater new area which has nearly inhabitants in the area. it is located in new county on new
+
+PREDICTION:
+the university of new york city new york city is a of in west
+
+============================================================================================================================================
+SOURCE:
+although the of the system is still it is clear that the the names of on a the of which is described in other
+
+TARGET:
+a from has musical which shows the names of the strings of a [end]
+
+PREDICTION:
+the of the is a of it is found on the of the
+
+============================================================================================================================================
+SOURCE:
+next in size is united states of america lrb rrb which
+
+TARGET:
+next in size is united states of america. [end]
+
+PREDICTION:
+later it is in southeastern minnesota s united states and canada.
+
+============================================================================================================================================
+SOURCE:
+is the seat of the parliament of
+
+TARGET:
+is the capital city of [end]
+
+PREDICTION:
+the seat of is the parliament of
+
+============================================================================================================================================
+SOURCE:
+english is taught to all school level students and in most cases the medium of is also in
+
+TARGET:
+english is taught to all school level students and in many cases english is also the language used to teach the students other [end]
+
+PREDICTION:
+later is done to teach the academy of all students
+
+============================================================================================================================================
+SOURCE:
+western kentucky university lrb rrb is a public university in green kentucky
+
+TARGET:
+the western kentucky university is a public university in green [end]
+
+PREDICTION:
+geography oklahoma has a university name from

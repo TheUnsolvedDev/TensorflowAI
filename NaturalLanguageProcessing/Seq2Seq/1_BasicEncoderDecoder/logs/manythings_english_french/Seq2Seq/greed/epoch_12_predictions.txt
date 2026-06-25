@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you can't eat here.
+
+TARGET:
+vous ne pouvez pas manger ici. [end]
+
+PREDICTION:
+tu ne peux pas manger ici.
+
+============================================================================================================================================
+SOURCE:
+i'd like you to wear this.
+
+TARGET:
+j'aimerais que vous ceci. [end]
+
+PREDICTION:
+j'aimerais que tu
+
+============================================================================================================================================
+SOURCE:
+we're still here.
+
+TARGET:
+nous sommes encore ici. [end]
+
+PREDICTION:
+nous sommes encore ici.
+
+============================================================================================================================================
+SOURCE:
+i feel like taking a walk.
+
+TARGET:
+j'ai envie de me promener. [end]
+
+PREDICTION:
+j'ai envie de me promener.
+
+============================================================================================================================================
+SOURCE:
+tom needs a friend.
+
+TARGET:
+tom a besoin d'un ami. [end]
+
+PREDICTION:
+tom a besoin d'un ami.
+
+============================================================================================================================================
+SOURCE:
+tom could've done much better.
+
+TARGET:
+tom aurait pu faire beaucoup mieux. [end]
+
+PREDICTION:
+tom aurait pu bien faire.
+
+============================================================================================================================================
+SOURCE:
+do you know what this symbol means?
+
+TARGET:
+savez-vous ce que signifie ce symbole ? [end]
+
+PREDICTION:
+savez-vous ce que ce symbole signifie ?
+
+============================================================================================================================================
+SOURCE:
+i think i'm ready to leave.
+
+TARGET:
+je pense que je suis prête à partir. [end]
+
+PREDICTION:
+je pense que je suis prêt à partir.
+
+============================================================================================================================================
+SOURCE:
+you must be very busy these days.
+
+TARGET:
+tu dois être très occupée ces [end]
+
+PREDICTION:
+vous devez être très occupé ces temps-ci !
+
+============================================================================================================================================
+SOURCE:
+i know that you've spent the last three years in prison.
+
+TARGET:
+je sais que vous avez passé les trois dernières années en prison. [end]
+
+PREDICTION:
+je sais que tu as passé les trois dernières chansons en prison.

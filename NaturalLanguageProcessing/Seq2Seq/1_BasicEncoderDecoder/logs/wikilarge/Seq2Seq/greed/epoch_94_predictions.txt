@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+be of wikipedia s policy that information about living must not include or
+
+TARGET:
+however be of wikipedia s policy that information about living persons must not be [end]
+
+PREDICTION:
+hold our information about wikipedia animals for living and to do not want to do
+
+============================================================================================================================================
+SOURCE:
+the strength of magnetic field is to the amount of
+
+TARGET:
+the strength of the is to the current in the [end]
+
+PREDICTION:
+in mathematics a magnetic field is a that is to a nuclear magnetic
+
+============================================================================================================================================
+SOURCE:
+is a retired japanese football player.
+
+TARGET:
+lrb born october rrb is a former japanese football player. [end]
+
+PREDICTION:
+lrb born june rrb is a former japanese football player.
+
+============================================================================================================================================
+SOURCE:
+the original project code name for the service was inspired by and the five character length of american short
+
+TARGET:
+at first they called this project it the five character length of american short and like [end]
+
+PREDICTION:
+it was hosted by for a long line award for original studios and was released in
+
+============================================================================================================================================
+SOURCE:
+after he the throne at the age of five his great uncle ii duke of served as of the kingdom until louis majority in.
+
+TARGET:
+ii duke of as until louis reached his legal majority in. [end]
+
+PREDICTION:
+he to leave taiwan and in the era china after the of the kingdom of
+
+============================================================================================================================================
+SOURCE:
+tour en is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+tour en is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+heart is a commune. it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+the state opera is an opera company based in munich germany.
+
+TARGET:
+the state opera lrb in german rrb is an opera company based in munich germany. [end]
+
+PREDICTION:
+the first cycle town in germany is the title of the german opera house in munich germany.
+
+============================================================================================================================================
+SOURCE:
+in english there are several of the spelling of the in australia and new zealand
+
+TARGET:
+in australia and new zealand is the main [end]
+
+PREDICTION:
+the of the national of are in australia
+
+============================================================================================================================================
+SOURCE:
+the team s are also a unique silver with a of blue known as silver blue lrb c rrb and have a blue white blue vertical placed
+
+TARGET:
+their is silver and blue with a blue star on their [end]
+
+PREDICTION:
+the silver round of baseball football are
+
+============================================================================================================================================
+SOURCE:
+it is the only city in the county and the most city in great
+
+TARGET:
+it is the only city in and it is the most city in the british [end]
+
+PREDICTION:
+is the capital city of great britain.

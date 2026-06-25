@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+monroe wrote in my story that she did not want to meet him a
+
+TARGET:
+monroe wrote in my story that she did not want to meet him because she thought he might be a [end]
+
+PREDICTION:
+monroe s story she did not want her to marry
+
+============================================================================================================================================
+SOURCE:
+the best win prizes and after the parade the of the queen takes place on a temporary stand erected in front of st nicholas church under the statue of william
+
+TARGET:
+there is a statue of wallace on the town church. [end]
+
+PREDICTION:
+the madame de du is a youth publishing team in the uk.
+
+============================================================================================================================================
+SOURCE:
+little else is known regarding their feeding but considering their environment they are likely to be
+
+TARGET:
+little else is known regarding their feeding [end]
+
+PREDICTION:
+damage is believed to be organisms food yet.
+
+============================================================================================================================================
+SOURCE:
+alongside the internal security service lrb mi rrb the government communications headquarters lrb rrb and the defense intelligence staff lrb rrb it operates under the formal direction of the joint intelligence committee lrb rrb.
+
+TARGET:
+it works with the security service lrb mi rrb government communications headquarters lrb rrb and the defense intelligence staff lrb rrb. [end]
+
+PREDICTION:
+the national security command armed forces lrb rrb and
+
+============================================================================================================================================
+SOURCE:
+the green screen international wildlife film festival is held annually in germany.
+
+TARGET:
+green screen is an international wildlife film festival. [end]
+
+PREDICTION:
+at the university of is a stock exchange in frankfurt germany.
+
+============================================================================================================================================
+SOURCE:
+peru and chile signed the treaty of n by which the province is ceded to the latter bringing an end to peru s involvement in the war of the pacific.
+
+TARGET:
+peru s involvement in the war of the pacific. [end]
+
+PREDICTION:
+the spanish to lrb spanish for province rrb is a part of the province of
+
+============================================================================================================================================
+SOURCE:
+however different recipes even in the bolognese tradition make use of pork or pork white chicken rabbit or goose liver may be added along with the beef or for special occasions and today many use both butter and olive oil for cooking the of small amounts of and
+
+TARGET:
+for special occasions chicken or goose liver along with today both butter and olive oil are used for cooking the of small amounts of and [end]
+
+PREDICTION:
+today the term is used in french cuisine and flavor to arranged in a lot of fruit such as the and
+
+============================================================================================================================================
+SOURCE:
+eddie may lrb born august rrb is a scottish association football former player and manager.
+
+TARGET:
+eddie may lrb born august rrb is a former scottish footballer and is now the head coach of [end]
+
+PREDICTION:
+gordon ha input activity.
+
+============================================================================================================================================
+SOURCE:
+in music sharp lrb from french rrb or lrb from greek rrb means higher in pitch and the sharp symbol a note by a half
+
+TARGET:
+in music sharp or means higher in pitch. [end]
+
+PREDICTION:
+in music d sharp is usually written in the or
+
+============================================================================================================================================
+SOURCE:
+e ti is a commune in dolj county romania with a population of people. it has the following constituent villages e ti
+
+TARGET:
+e ti is a commune found in dolj county romania. [end]
+
+PREDICTION:
+cents ti suceava is a commune found in dolj county romania.

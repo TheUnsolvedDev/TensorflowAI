@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he denied having said such a thing.
+
+TARGET:
+il a avoir dit une telle chose. [end]
+
+PREDICTION:
+il fut n'avoir pas dit une telle chose. ou « dehors ? je pense. reste. »
+
+============================================================================================================================================
+SOURCE:
+they caught him playing a on his sister.
+
+TARGET:
+elles le en train de faire une à sa sœur. [end]
+
+PREDICTION:
+ils l'ont sur faire une chanson pour sa sœur.
+
+============================================================================================================================================
+SOURCE:
+these kinds of can without warning.
+
+TARGET:
+ce type de tempête peut sans [end]
+
+PREDICTION:
+pont. peuvent derrière le sans les guerre. n'est-ce plus ?
+
+============================================================================================================================================
+SOURCE:
+i don't want to die now.
+
+TARGET:
+je ne veux pas mourir maintenant. [end]
+
+PREDICTION:
+sans je prévois on
+
+============================================================================================================================================
+SOURCE:
+tom eats chocolate every day.
+
+TARGET:
+tom mange du chocolat tous les jours. [end]
+
+PREDICTION:
+tom mange tous les au chocolat.
+
+============================================================================================================================================
+SOURCE:
+how can it be?
+
+TARGET:
+comment se peut-il ? [end]
+
+PREDICTION:
+quelle est-ce ici ?
+
+============================================================================================================================================
+SOURCE:
+i couldn't do it.
+
+TARGET:
+je n'ai pas pu le faire. [end]
+
+PREDICTION:
+j'y ne parviens pas.
+
+============================================================================================================================================
+SOURCE:
+sometimes i hear things.
+
+TARGET:
+des fois, j'entends des choses. [end]
+
+PREDICTION:
+parfois, il les dit des excuses. cela.
+
+============================================================================================================================================
+SOURCE:
+i never should've it.
+
+TARGET:
+jamais je dû en parler. [end]
+
+PREDICTION:
+jamais je l'aurais fait.
+
+============================================================================================================================================
+SOURCE:
+it's dangerous to do this.
+
+TARGET:
+c’est dangereux de faire cela. [end]
+
+PREDICTION:
+c’est dangereux de faire ça. bon mieux. pas

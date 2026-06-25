@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+although west virginia s first constitution provided for the of a part of the virginia opened by virginia in were and in virginia two of the
+
+TARGET:
+west virginia was once a part of [end]
+
+PREDICTION:
+west virginia s first constitution was the third of the virginia to
+
+============================================================================================================================================
+SOURCE:
+the area immediately outside fort is known as lrb a outer fort rrb and is a commercial
+
+TARGET:
+lrb in in tamil rrb is the largest city of [end]
+
+PREDICTION:
+the immediately outside fort is known as lrb a layer rrb and is a commercial production and is a commercial
+
+============================================================================================================================================
+SOURCE:
+during the and centuries england france and established their own overseas in direct competition with each
+
+TARGET:
+during the and centuries england france and made their own [end]
+
+PREDICTION:
+france. and started their own to
+
+============================================================================================================================================
+SOURCE:
+research and development on the new line had in under the name e car which for
+
+TARGET:
+design of the began in under the name e car which for [end]
+
+PREDICTION:
+research and development on the new line will come to be available until.
+
+============================================================================================================================================
+SOURCE:
+lrb born october rrb who grew up on a wisconsin farm and was at the time an in economics at the university of chicago as his teaching
+
+TARGET:
+to help him teach during the s. she grew up on a wisconsin farm and was studying economics at the university of [end]
+
+PREDICTION:
+she grew up on a wisconsin farm and was studying economics at the university of
+
+============================================================================================================================================
+SOURCE:
+the city was on the capital of the chinese dynasty an lrb now an rrb.
+
+TARGET:
+at that time the dynasty was china and the capital was at an lrb now an rrb. [end]
+
+PREDICTION:
+the city was found as capital city of the chinese dynasty to be
+
+============================================================================================================================================
+SOURCE:
+as a matter of every person not selected in the league s draft is considered an
+
+TARGET:
+every player who is not chosen in their league s draft is an [end]
+
+PREDICTION:
+a matter of is a matter of football in american professional
+
+============================================================================================================================================
+SOURCE:
+when written in japanese it consists of two meaning and meaning leader or
+
+TARGET:
+the word is made of two japanese words meaning and meaning [end]
+
+PREDICTION:
+when written in japanese it consists of two meaning and
+
+============================================================================================================================================
+SOURCE:
+the was chosen for the goddess of in greek mythology and is often pronounced as a word lrb i.e. rrb although some out the
+
+TARGET:
+the lrb system rrb is an mm film and digital system that was introduced in with the and is still in production
+
+PREDICTION:
+it was named the goddess of in greek mythology.
+
+============================================================================================================================================
+SOURCE:
+in the stephen the great by the m deal was
+
+TARGET:
+in a to the famous prince stephen iii of by the artist m deal was [end]
+
+PREDICTION:
+in the the great the m howard was

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i have feelings about that.
+
+TARGET:
+j'ai des sentiments à ce sujet. [end]
+
+PREDICTION:
+j'ai une somme sentiments en cela.
+
+============================================================================================================================================
+SOURCE:
+is breakfast
+
+TARGET:
+le petit déjeuner est-il ? [end]
+
+PREDICTION:
+le déjeuner fait-il qu'on ?
+
+============================================================================================================================================
+SOURCE:
+tom seems to be waiting for
+
+TARGET:
+tom semble attendre quelqu'un. [end]
+
+PREDICTION:
+tom semble sérieusement à expliquer le prêt.
+
+============================================================================================================================================
+SOURCE:
+me for
+
+TARGET:
+de vous [end]
+
+PREDICTION:
+je ne suis pas reconnaissant pour ça. tout d'apprendre ! moi. » es-tu beau.
+
+============================================================================================================================================
+SOURCE:
+we have enough food.
+
+TARGET:
+nous avons assez de nourriture. [end]
+
+PREDICTION:
+ils ont de nourriture.
+
+============================================================================================================================================
+SOURCE:
+don't make me go back there.
+
+TARGET:
+ne pas à y [end]
+
+PREDICTION:
+ne plus y retourner dans ici.
+
+============================================================================================================================================
+SOURCE:
+you're very
+
+TARGET:
+vous êtes très [end]
+
+PREDICTION:
+c'est vraiment toi, jours. ! possible.
+
+============================================================================================================================================
+SOURCE:
+i'm just feeling a little sick.
+
+TARGET:
+je me sens juste un peu malade. [end]
+
+PREDICTION:
+je me sens juste
+
+============================================================================================================================================
+SOURCE:
+we're in no hurry.
+
+TARGET:
+nous ne sommes pas [end]
+
+PREDICTION:
+nous ne sommes personne au coup.
+
+============================================================================================================================================
+SOURCE:
+i don't want to go there alone.
+
+TARGET:
+je ne veux pas y aller seul. [end]
+
+PREDICTION:
+je pense pas en être m'y seule. d'argent. seront il s'en passe devoir. seul. ça.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're not leaving until i say it's ok.
+
+TARGET:
+vous ne pas jusqu'à ce que je dise que c'est d'accord. [end]
+
+PREDICTION:
+t'en vas-tu tout simplement surpris et que je ne change obtenir une mauvaise décision. »
+
+============================================================================================================================================
+SOURCE:
+it was only a
+
+TARGET:
+ce n'était qu'une [end]
+
+PREDICTION:
+c'est seulement une type. dents. « puis sont prêts avec lequel je vous trouve
+
+============================================================================================================================================
+SOURCE:
+in there are no only
+
+TARGET:
+en il n'y a pas seulement des [end]
+
+PREDICTION:
+en aucune n'a obtenu aucun viande d'être surprise.
+
+============================================================================================================================================
+SOURCE:
+you can go you like.
+
+TARGET:
+tu peux partir comme tu veux. [end]
+
+PREDICTION:
+vous allez aller l'autre voulez.
+
+============================================================================================================================================
+SOURCE:
+i like that job.
+
+TARGET:
+j'apprécie ce boulot. [end]
+
+PREDICTION:
+j'aime ce travail
+
+============================================================================================================================================
+SOURCE:
+you must do it quickly.
+
+TARGET:
+tu dois le faire vite. [end]
+
+PREDICTION:
+je lui faut le faire rapidement.
+
+============================================================================================================================================
+SOURCE:
+i know that i the bill
+
+TARGET:
+je sais que j'ai la [end]
+
+PREDICTION:
+je sais que j'avais à résoudre un projet au dis.
+
+============================================================================================================================================
+SOURCE:
+the water.
+
+TARGET:
+fais l'eau. [end]
+
+PREDICTION:
+faites d'eau ?
+
+============================================================================================================================================
+SOURCE:
+they did not listen.
+
+TARGET:
+elles pas. [end]
+
+PREDICTION:
+la elles n'a pas parlé. !
+
+============================================================================================================================================
+SOURCE:
+our parents should be taken care of.
+
+TARGET:
+on doit de nos parents. [end]
+
+PREDICTION:
+nos enfants doivent être jeté dans un seul bonne. qui est très payé.

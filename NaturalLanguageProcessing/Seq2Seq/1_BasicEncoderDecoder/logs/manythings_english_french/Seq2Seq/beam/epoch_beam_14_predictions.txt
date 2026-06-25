@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+which search engine do you use?
+
+TARGET:
+quel moteur de recherche utilisez-vous ? [end]
+
+PREDICTION:
+quelle banque utilises-tu un ? lundi.
+
+============================================================================================================================================
+SOURCE:
+we must help.
+
+TARGET:
+nous devons aider. [end]
+
+PREDICTION:
+nous devons l'aider.
+
+============================================================================================================================================
+SOURCE:
+i was so sure this was what i wanted.
+
+TARGET:
+j'étais sûr que c'était ce que je voulais. [end]
+
+PREDICTION:
+j'étais donc sûr de la livre, ça. vous en larmes.
+
+============================================================================================================================================
+SOURCE:
+you're telling lies again.
+
+TARGET:
+tu racontes encore des mensonges. [end]
+
+PREDICTION:
+vous ne le raconte encore de ça.
+
+============================================================================================================================================
+SOURCE:
+don't fail to mail this letter.
+
+TARGET:
+n'oubliez pas de mettre cette lettre à la poste. [end]
+
+PREDICTION:
+n'oublie guère d'envoyer la lettre.
+
+============================================================================================================================================
+SOURCE:
+the doors.
+
+TARGET:
+la porte ! [end]
+
+PREDICTION:
+les fleurs. !
+
+============================================================================================================================================
+SOURCE:
+he was elected to the in the last election.
+
+TARGET:
+aux dernières élections il a été élu au [end]
+
+PREDICTION:
+a été élu président dans un discours à manon. dernier.
+
+============================================================================================================================================
+SOURCE:
+don't be such a
+
+TARGET:
+ne sois pas si [end]
+
+PREDICTION:
+étant point c'est
+
+============================================================================================================================================
+SOURCE:
+you saw them, didn't you?
+
+TARGET:
+vous les avez pas ? [end]
+
+PREDICTION:
+vous avez vu des progrès pas sans ça.
+
+============================================================================================================================================
+SOURCE:
+my husband and i are both teachers.
+
+TARGET:
+mon mari et moi sommes tous les deux enseignants. [end]
+
+PREDICTION:
+mon épouse est encore tous deux

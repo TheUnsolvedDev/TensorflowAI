@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+how good it
+
+TARGET:
+how good it felt - [end]
+
+PREDICTION:
+what is it?
+
+============================================================================================================================================
+SOURCE:
+what do you do
+
+TARGET:
+hey, man, i can't do that here, that's what they put me away for. [end]
+
+PREDICTION:
+i'm not sure.
+
+============================================================================================================================================
+SOURCE:
+-- it's not the source of the information that's important here --
+
+TARGET:
+-- i paid this fucking guy -- i paid him four thousand dollars -- my last four thousand dollars to marry me, okay? -- i told this to the case officer
+
+PREDICTION:
+then -- if you can't get to i don't think you'd want a party. will burn the nature out. it's easier than it would go for me. and i'm not
+
+============================================================================================================================================
+SOURCE:
+maybe they never got here. he could have taken her anywhere.
+
+TARGET:
+c'mon. let's go. [end]
+
+PREDICTION:
+she has to go.
+
+============================================================================================================================================
+SOURCE:
+i couldn't just let them make you bring down my degree of i'm a double back flip off the high not a
+
+TARGET:
+my god... [end]
+
+PREDICTION:
+if i were the only one. i'd have to go with a wee bit. but you can take genesis from us somehow.
+
+============================================================================================================================================
+SOURCE:
+not
+
+TARGET:
+be happy. he's good at this. [end]
+
+PREDICTION:
+you got a good picture on my for your information, bill? get bill of progress.
+
+============================================================================================================================================
+SOURCE:
+our equipment has arrived.
+
+TARGET:
+hmmm. [end]
+
+PREDICTION:
+the cities eggs can get. good too.
+
+============================================================================================================================================
+SOURCE:
+you're either having a or you just said
+
+TARGET:
+good, i wasn't sure you were up to it. [end]
+
+PREDICTION:
+i know exactly the same thing. my mother died a little while ago. she said it was just that girl in her house -- and she's with me at one
+
+============================================================================================================================================
+SOURCE:
+i feel -- ma -- not right at all.
+
+TARGET:
+i'd think you was having the baby, to hear you. [end]
+
+PREDICTION:
+you're the hero. i'm crazy with you? you are for me, lord knows who i am. and what a great man -
+
+============================================================================================================================================
+SOURCE:
+wrong.
+
+TARGET:
+why didn't you go before we left? [end]
+
+PREDICTION:
+well, if i had something for i'd say to go home and then maybe they would have been in a hurry. see you... or both. on staff was actually that'll

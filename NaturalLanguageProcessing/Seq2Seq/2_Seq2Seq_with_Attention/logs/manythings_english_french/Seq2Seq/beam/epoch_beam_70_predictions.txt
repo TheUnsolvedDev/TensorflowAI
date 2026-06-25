@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+stop
+
+TARGET:
+arrête de [end]
+
+PREDICTION:
+cesse tes discours.
+
+============================================================================================================================================
+SOURCE:
+i knew it would be easy.
+
+TARGET:
+je savais que cela serait facile. [end]
+
+PREDICTION:
+je qu'on aurait été surprise. fois. manière.
+
+============================================================================================================================================
+SOURCE:
+i'd like to kiss you.
+
+TARGET:
+j'aimerais vous [end]
+
+PREDICTION:
+toi. ce que te donne le temps.
+
+============================================================================================================================================
+SOURCE:
+you have to trust me on this one.
+
+TARGET:
+il faut que tu me fasses confiance sur ce [end]
+
+PREDICTION:
+tu peux me demander ce qu'il en aimerait clair.
+
+============================================================================================================================================
+SOURCE:
+this is my
+
+TARGET:
+c'est mon [end]
+
+PREDICTION:
+ceci est ma demande. en veux que sont là.
+
+============================================================================================================================================
+SOURCE:
+your needs to be
+
+TARGET:
+ton a besoin d'être [end]
+
+PREDICTION:
+pour tes se devons être ouverte !
+
+============================================================================================================================================
+SOURCE:
+tom is
+
+TARGET:
+tom n'a pas été blessé. [end]
+
+PREDICTION:
+tom reste debout.
+
+============================================================================================================================================
+SOURCE:
+you cannot anything without
+
+TARGET:
+on n'arrive à rien sans [end]
+
+PREDICTION:
+on n'y sait quoi que tout sans prison est prêt. !
+
+============================================================================================================================================
+SOURCE:
+i'm starting to think we'll never be able to do this.
+
+TARGET:
+je commence à penser que nous ne serons jamais de faire ceci. [end]
+
+PREDICTION:
+à n'y aller sauf jamais les pourrions le trouver.
+
+============================================================================================================================================
+SOURCE:
+there was only one left.
+
+TARGET:
+il n'en plus [end]
+
+PREDICTION:
+à il seulement de nez.

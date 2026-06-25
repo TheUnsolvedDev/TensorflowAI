@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the changed at the show in san antonio texas in australia and europe and the first week of shows in the united states was the last song
+
+TARGET:
+in australia was the last song [end]
+
+PREDICTION:
+the company lrb also spelled as first rrb was a man in los funk mid united america. he changed its name from to it is called john s mother.
+
+============================================================================================================================================
+SOURCE:
+almost all important latvian financial institutions are located in riga including the bank of latvia which is latvia s central bank. foreign commercial trade through riga has been on the increase in recent years and received new on may when latvia became a member of the european union.
+
+TARGET:
+is the capital city of the european country of [end]
+
+PREDICTION:
+winchester is made from nashville because
+
+============================================================================================================================================
+SOURCE:
+with the victory the raiders became the first ever wild card team to win a super
+
+TARGET:
+the raiders became the first wild card team to win a super bowl. [end]
+
+PREDICTION:
+after losing the raiders and was he lost an attempt to win another star ball. this is because they play in it.
+
+============================================================================================================================================
+SOURCE:
+the volcanic island of saint is more mountainous than many other caribbean islands with the highest point being mount at m above sea level.
+
+TARGET:
+the island of saint has more mountains than many other caribbean islands with the highest one being mount at m above the sea. [end]
+
+PREDICTION:
+lake island in the lrb romanian part of a volcano on mount vesuvius rrb has many other caribbean. they are about meters above and parts with its maximum density km lrb. miles per level rrb. it is also called mt flores at. m ft near sea.
+
+============================================================================================================================================
+SOURCE:
+was a major market town in anglo saxon times famous in addition as the burial place of saint whose shrine attracted
+
+TARGET:
+aylesbury was a major market town in anglo saxon times. [end]
+
+PREDICTION:
+charlottenburg served in a city called it also was the burial place of notre rico lrb whose augsburg rrb. this pact is an old area that has been found to be used by many other people.
+
+============================================================================================================================================
+SOURCE:
+graphic arts is a term applied historically to the art of and
+
+TARGET:
+graphic arts is a term that was used for the art of and [end]
+
+PREDICTION:
+graphic theatre lrb rrb hollywood art. it is one of the greatest painters that helps them to use a lot.
+
+============================================================================================================================================
+SOURCE:
+two years later that promise was when he won the gold medal at the international tchaikovsky competition in moscow.
+
+TARGET:
+two years later he won the gold medal at the international tchaikovsky competition in moscow. [end]
+
+PREDICTION:
+at age the couple won his brother a republican team in moscow after. after years he was born and died in. this would lead up to him as coach when it did not win the world grand prix where they lost their home.
+
+============================================================================================================================================
+SOURCE:
+arrives and to shoot him but copper quickly his body over refusing to
+
+TARGET:
+copper tod as he lies in the lake below when appears ready to fire at the fox. copper his body in front of tod and refuses to move away. [end]
+
+PREDICTION:
+but is to shoot the song because they were angry so copper made him easily quickly and stop it more quickly.
+
+============================================================================================================================================
+SOURCE:
+this list contains towers and
+
+TARGET:
+this list has towers and [end]
+
+PREDICTION:
+this article contains lrb in the th edition and rrb to have been used by a company named william v. ii.
+
+============================================================================================================================================
+SOURCE:
+in he was given the honor to conduct the world famous new year concert of the vienna philharmonic orchestra on the first of january.
+
+TARGET:
+he was given the honor of conducting the world famous new year s day concert of the vienna philharmonic orchestra on january. [end]
+
+PREDICTION:
+he became an assistant at the royal philharmonic orchestra in.

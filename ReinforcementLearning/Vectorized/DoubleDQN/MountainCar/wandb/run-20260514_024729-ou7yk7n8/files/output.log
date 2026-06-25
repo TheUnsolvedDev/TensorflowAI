@@ -1,0 +1,4 @@
+Using 2 GPU(s)
+  2%|██▍                                                                                                           | 5523/250000 [11:29<10:51:42,  6.25it/s]
+Step=2500 Loss=0.0001 Return=-200.00 Epsilon=0.967 FPS=255
+Step=5000 Loss=0.0007 Return=-200.00 Epsilon=0.935 FPS=131

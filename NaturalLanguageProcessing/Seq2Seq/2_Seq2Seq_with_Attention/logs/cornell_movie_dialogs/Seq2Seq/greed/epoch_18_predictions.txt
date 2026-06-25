@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+maybe you should see a psychiatrist.
+
+TARGET:
+why? [end]
+
+PREDICTION:
+why not?
+
+============================================================================================================================================
+SOURCE:
+rex won't be any different. it'll come.
+
+TARGET:
+you're kidding yourself. an adult cares about one thing -- filling its own it acts the way people wish they could, that's why everyone's fascinated by it. if people
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+what are you thinking?
+
+TARGET:
+of all the people who have been and have while the trees went on living. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+i'm so ashamed dad.
+
+TARGET:
+don't say that, it's not good for you. you're... [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+i'd rather sit. are you ready?
+
+TARGET:
+just a moment. [end]
+
+PREDICTION:
+yes.
+
+============================================================================================================================================
+SOURCE:
+we've got a situation here! just do as you're
+
+TARGET:
+alright, relax. 20 minutes. soon as we've passed rings we'll make the course [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+that's an
+
+TARGET:
+she grabbed herself a perfect running mate. king the pill of the what she needs is a guy that'd take a at her every it's coming to
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+i'm talking to you red and i'm telling you no. get back to your position.
+
+TARGET:
+bob, i gotta bad feeling about this, i... i'm telling you i got a bad feeling, man, i don't think i'm gonna make it... y'know what i mean? [end]
+
+PREDICTION:
+i don't have to be
+
+============================================================================================================================================
+SOURCE:
+i'd get down if i were you. they may be up there now.
+
+TARGET:
+no money, eh? [end]
+
+PREDICTION:
+i don't want to be
+
+============================================================================================================================================
+SOURCE:
+you'd have been proud of her.
+
+TARGET:
+i'm sure. [end]
+
+PREDICTION:
+i don't know what you're talking about.

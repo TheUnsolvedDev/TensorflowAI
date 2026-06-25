@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+sur is a commune in the aube department in north central france.
+
+TARGET:
+sur is a commune of the aube d partement in the north central part of france. [end]
+
+PREDICTION:
+sur is a commune of the aube d partement in the north central part of france.
+
+============================================================================================================================================
+SOURCE:
+simon gave up a highly successful career as a trauma surgeon to rescue her from the alliance and as a result of this rescue they are both wanted
+
+TARGET:
+simon gave up a very good career as a surgeon to save her from the alliance. because of this rescue they are both wanted [end]
+
+PREDICTION:
+simon also said that she was a visiting woman and he had a
+
+============================================================================================================================================
+SOURCE:
+sur is a commune in the aube department in north central france.
+
+TARGET:
+sur is a commune of the aube d partement in the north central part of france. [end]
+
+PREDICTION:
+sur is a commune of the aube d partement in the north central part of france.
+
+============================================================================================================================================
+SOURCE:
+jared lrb born august rrb is an ice hockey player currently with the charlotte of the
+
+TARGET:
+jared lrb born august in thunder bay ontario rrb is an ice hockey player currently with the charlotte of the american hockey league. [end]
+
+PREDICTION:
+jared lrb born august rrb is an american ice hockey goaltender who plays for the donna reed arctic
+
+============================================================================================================================================
+SOURCE:
+publication history uncle ben first appeared in amazing fantasy lrb august rrb and was killed in the very same
+
+TARGET:
+he was first made in amazing fantasy lrb august rrb when he was killed by a that spider man could have stopped. [end]
+
+PREDICTION:
+he started the first most important vampire with his book fantastic four in after his death in august.
+
+============================================================================================================================================
+SOURCE:
+he also had short spells in the american hockey league with the hershey bears and the albany river
+
+TARGET:
+in moved to the united kingdom signing with the belfast giants and signed on august for toledo [end]
+
+PREDICTION:
+he is a member of the american specialized agent who performs on the body of the body.
+
+============================================================================================================================================
+SOURCE:
+lrb or rrb also called the learning perspective lrb where any physical action is a behavior rrb is a philosophy of psychology based on the that all things that organisms do including acting thinking and feeling can and should be regarded as
+
+TARGET:
+or is the theory that all things organisms do should be seen as behavior. [end]
+
+PREDICTION:
+lrb or rrb is a form of psychology human law.
+
+============================================================================================================================================
+SOURCE:
+it is the direct predecessor organization to today s national hockey league lrb nhl rrb.
+
+TARGET:
+it is directly related to today s national hockey league. [end]
+
+PREDICTION:
+these leagues that need to be divided into four different countries owned by universal american alternative country and is a member of the united states calvin departments lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+la e tre is a commune in the aisne department in picardie in northern france.
+
+TARGET:
+it is found in the region picardie in the aisne department in the north of france. [end]
+
+PREDICTION:
+it is found in the region picardie in the aisne department in the north of france.
+
+============================================================================================================================================
+SOURCE:
+stevens lrb born july rrb is an american singer songwriter and musician born in detroit michigan.
+
+TARGET:
+stevens lrb rrb lrb born july rrb is an american singer songwriter and musician from michigan. stevens was born in detroit michigan and grew up in [end]
+
+PREDICTION:
+stevens was born in detroit michigan and grew up in the american state of

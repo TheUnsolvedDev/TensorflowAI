@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+a smart and intelligent year old girl whose voice is provided by sophia
+
+TARGET:
+a smart and year old girl whose voice is provided by sofia fox. [end]
+
+PREDICTION:
+one disney character is named
+
+============================================================================================================================================
+SOURCE:
+is a city in county in the upper peninsula of the u.s. state of michigan.
+
+TARGET:
+is a city located in county michigan usa. [end]
+
+PREDICTION:
+whittier is one of fourteen prefectures that they have a property. it lives outside the center and
+
+============================================================================================================================================
+SOURCE:
+the first tropical cyclone tropical storm alberto developed on june while the last storm hurricane gordon dissipated on november.
+
+TARGET:
+however in this season no tropical cyclone formed after november the end of the season because the last storm hurricane died on november just nine days before the th. [end]
+
+PREDICTION:
+the first hurricane appeared on tropical depression one later struck florida. it is also nhc s stronger.
+
+============================================================================================================================================
+SOURCE:
+the modern accepted start of the mersey is at the confluence of the and in central stockport greater manchester.
+
+TARGET:
+they can be viewed on the salmon steps at between the months of september and november. [end]
+
+PREDICTION:
+it the first lower to be built in which was a large amount of gold and immigration from.
+
+============================================================================================================================================
+SOURCE:
+it is important to note that are not limited to political parties they can and frequently do form within any group that has some sort of political aim or purpose.
+
+TARGET:
+but political are not limited to political parties they can form within any group that has some sort of political aim or purpose. [end]
+
+PREDICTION:
+it is generally used and has or more than any other parties.
+
+============================================================================================================================================
+SOURCE:
+the union s name is formed from the beginning of each country s name it was possibly created for the benelux customs union de l institut international de lrb o o rrb vol.
+
+TARGET:
+this parliamentary assembly is composed of members of the dutch parliament members of the belgian national and regional and members of the parliament. [end]
+
+PREDICTION:
+the flag of armenia are in order to be known today as a result was made from it governed by other members lrb for example al rn rrb.
+
+============================================================================================================================================
+SOURCE:
+was born theodore at thomas jefferson hospital in philadelphia pennsylvania.
+
+TARGET:
+teddy lrb real name theodore teddy rrb lrb born march died january rrb was an american r b and soul singer songwriter. was from the down when he was severely injured in an car accident in philadelphia in. [end]
+
+PREDICTION:
+she had roosevelt as the coach at ann and dr. jack lee in his father s hospital for new york city.
+
+============================================================================================================================================
+SOURCE:
+it was s discovery that was announced first.
+
+TARGET:
+it was discovery that was announced first. [end]
+
+PREDICTION:
+it is not used to replace al as the second full size and category was for linux. lrb rrb and will re launch of windows. programming by existing language was named in.
+
+============================================================================================================================================
+SOURCE:
+they are members of the central division in the national league of major league baseball.
+
+TARGET:
+they are part of the central division in the national league. [end]
+
+PREDICTION:
+the national team of united states lrb rrb
+
+============================================================================================================================================
+SOURCE:
+has been a member of the supreme council of cultural revolution since.
+
+TARGET:
+he is also a member of the council and the high council of cultural revolution. [end]
+
+PREDICTION:
+it has been the official state for saint margaret

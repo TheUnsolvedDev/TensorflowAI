@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+beethoven s ninth and a new home after only a dozen public performances and barely four years old the philharmonic organized a concert to raise funds to build a new music hall.
+
+TARGET:
+beethoven s ninth and a new home the orchestra were a great success but they needed a new concert hall. [end]
+
+PREDICTION:
+his first performance and beethoven has four years.
+
+============================================================================================================================================
+SOURCE:
+overview it was contested by teams and al sports club won the championship.
+
+TARGET:
+overview it was contested by teams and al won the championship. [end]
+
+PREDICTION:
+overview this he was contested by competition and dubai but they won medals for the games.
+
+============================================================================================================================================
+SOURCE:
+lrb rio june lia march rrb was a brazilian fashion television presenter and politician.
+
+TARGET:
+lrb june march rrb was a brazilian fashion designer television host and politician. [end]
+
+PREDICTION:
+hiroshi kobayashi o. lrb rio s rcb rrb was a japanese reality television presenter in and has been on itv produced from san jose plantation for most high school. the garden is owned about one station to another.
+
+============================================================================================================================================
+SOURCE:
+jos s best known as z s lrb born in s o paulo march rrb is a former football lrb soccer rrb player who played as a striker.
+
+TARGET:
+z s lrb born march rrb is a former brazilian football player. [end]
+
+PREDICTION:
+z. first called taste who lrb also known in s. rrb
+
+============================================================================================================================================
+SOURCE:
+located in california the animation studio was founded in.
+
+TARGET:
+founded in the company was located in california. [end]
+
+PREDICTION:
+it has been the walt red color newspaper which is a sequel to s s. they also made an version from warner bros. lrb rrb for its produced in.
+
+============================================================================================================================================
+SOURCE:
+lily new york times february in he became a secretary to the who gave him the name bal
+
+TARGET:
+guru gave him the name bal [end]
+
+PREDICTION:
+michelle became a national anthem and member including the second division.
+
+============================================================================================================================================
+SOURCE:
+a is a set form of ceremony or pattern of
+
+TARGET:
+a is a special set of done by a group of people as a form of worship. [end]
+
+PREDICTION:
+a is the term of sleeping or answer is. this used for treatment from love. to past aid lrb rrb
+
+============================================================================================================================================
+SOURCE:
+lafayette ronald lrb march january rrb was an american science fiction author who developed a self help system called which was first published in.
+
+TARGET:
+lafayette ronald lrb march january rrb was an american fiction writer and creator of [end]
+
+PREDICTION:
+sir lrb march rrb was an british science fiction book. the story published called his books were canceled by a self help it already in full form to time.
+
+============================================================================================================================================
+SOURCE:
+the lrb rrb is a species of breeding found in southeastern south korea.
+
+TARGET:
+the salamander is a kind of salamander found in southeastern south korea. [end]
+
+PREDICTION:
+it is the most common of all over asia and other famous scientists are called fly from southern africa particularly such meat at all. some also lives during south korea.
+
+============================================================================================================================================
+SOURCE:
+the era of the lrb medieval on the rrb ends lrb began rrb.
+
+TARGET:
+the era of the medieval on the ends lrb began rrb. [end]
+
+PREDICTION:
+is the period in mid th centuries of and was made to have a more complete volume resolution.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+how'd you do that?
+
+TARGET:
+must've been a [end]
+
+PREDICTION:
+oh, i'm sorry. it didn't work, i had to be so sure but not in my own way, you know what i'd mean.
+
+============================================================================================================================================
+SOURCE:
+i ain't ever gonna fight joe louis, that's what's the matter.
+
+TARGET:
+what're you talking about? he's a you're a [end]
+
+PREDICTION:
+i'm not saying it's you don't know about it. i just didn't even have it in half.
+
+============================================================================================================================================
+SOURCE:
+how many to a
+
+TARGET:
+four in this sir. [end]
+
+PREDICTION:
+three years. and the numbers don't look like an elephant man. crack down on my own good! i'm supposed to keep you in a jam ...
+
+============================================================================================================================================
+SOURCE:
+what's the money for?
+
+TARGET:
+a new pair of is it enough? [end]
+
+PREDICTION:
+i just got it up at the front door and turn on a window from my house in san francisco. her people have no solution by partner. there's private detective
+
+============================================================================================================================================
+SOURCE:
+when?
+
+TARGET:
+two weeks, three at the most, for sake. [end]
+
+PREDICTION:
+don't know.
+
+============================================================================================================================================
+SOURCE:
+the were right... is the center of the we stand in the middle of between outer and inner space. and there's no limit to either.
+
+TARGET:
+you mean inner space is [end]
+
+PREDICTION:
+sergeant? - are team really knees go... you interested. hard, work it means we need to go for the airport.
+
+============================================================================================================================================
+SOURCE:
+it is mr. carter, with of my
+
+TARGET:
+but mr. kane, i meant - [end]
+
+PREDICTION:
+you can tell johnson.
+
+============================================================================================================================================
+SOURCE:
+mm. i wouldn't bother you with it, but -- this is kid -- it seems to concern you
+
+TARGET:
+how's that, sid? [end]
+
+PREDICTION:
+you
+
+============================================================================================================================================
+SOURCE:
+hey! someone's still in here.
+
+TARGET:
+wait, don't open it ... that's one of the for the ice [end]
+
+PREDICTION:
+and they put them on film. we just got it figured there to be more careful.
+
+============================================================================================================================================
+SOURCE:
+all right -- so it's buried with you!
+
+TARGET:
+what if one hasn't a soul any more? what of that? [end]
+
+PREDICTION:
+what for? he didn't like that

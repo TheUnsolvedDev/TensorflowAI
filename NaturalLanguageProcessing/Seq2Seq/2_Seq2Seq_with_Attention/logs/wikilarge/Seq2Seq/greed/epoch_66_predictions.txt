@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+lrb or in english o rrb is the of the u.s. states lrb august rrb and is the only u.s. state made up entirely of islands.
+
+TARGET:
+became a state on august. it is the only state made only of islands. [end]
+
+PREDICTION:
+the georgia or of the u.s. states and is the only u.s. state that is in the of the islands.
+
+============================================================================================================================================
+SOURCE:
+are by one party lrb grant rrb often a government department corporation foundation or to a often lrb but not always rrb a
+
+TARGET:
+this is often a government department a corporation a foundation or to a it is often a or [end]
+
+PREDICTION:
+a can also have a government department for a government department for example a often a government department for example a is a
+
+============================================================================================================================================
+SOURCE:
+modern also known as lrb german danish angel latin rrb is a small peninsula lrb within the larger peninsula rrb in southern in the northern
+
+TARGET:
+modern lrb danish angel latin which also means in direct translation from latin england rrb is a peninsula in germany. [end]
+
+PREDICTION:
+modern also called danish are also known as the islands within the
+
+============================================================================================================================================
+SOURCE:
+lrb born march in santa rrb is a former japanese football defender lrb right back rrb.
+
+TARGET:
+lrb born march rrb is a former japanese football player. [end]
+
+PREDICTION:
+lrb born march rrb is a former japanese football player.
+
+============================================================================================================================================
+SOURCE:
+period lrb rrb to emperor traditional
+
+TARGET:
+period lrb rrb to emperor brown [end]
+
+PREDICTION:
+period lrb rrb to emperor traditional
+
+============================================================================================================================================
+SOURCE:
+a is a or in the distribution of main belt with semi major lrb or their period rrb as seen in
+
+TARGET:
+are or in the asteroid belt with semi major lrb or their period rrb as seen in [end]
+
+PREDICTION:
+a is a or in the asteroid of main belt with semi major lrb or their period rrb as seen in
+
+============================================================================================================================================
+SOURCE:
+originally built for up to one million inhabitants the city has recently grown way past this
+
+TARGET:
+originally built for up to one million people the city now has many more than one million people. [end]
+
+PREDICTION:
+it was originally built for up to one million inhabitants of this century.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the gironde department in aquitaine in south western france.
+
+TARGET:
+is a commune. it is found in the region aquitaine in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+is a commune. it is found in the region aquitaine in the gironde department in the southwest of france.
+
+============================================================================================================================================
+SOURCE:
+lrb born october rrb is a former british conservative party politician and has been a novelist since.
+
+TARGET:
+lrb born october in england rrb is a former british politician. [end]
+
+PREDICTION:
+lrb born october rrb is a british politician who is a british prime
+
+============================================================================================================================================
+SOURCE:
+the element was not until when william thomas the element by performing on a process previously employed by sir to and
+
+TARGET:
+and sir later used on oxide to the [end]
+
+PREDICTION:
+the element was put to the by sir thomas who was the first to and

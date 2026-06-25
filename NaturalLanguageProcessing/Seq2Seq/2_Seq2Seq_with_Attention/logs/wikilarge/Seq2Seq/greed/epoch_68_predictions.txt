@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+at just years old she placed th in the u.s. open straight championship and placed th and rd in the following two u.s.
+
+TARGET:
+she was nine years old when she placed th in the u.s. open straight pool championship. she placed th and rd in the next two u.s. [end]
+
+PREDICTION:
+at only years old she placed th in the u.s. straight championship placed there and placed th in the following two u.s.
+
+============================================================================================================================================
+SOURCE:
+three devices known as and support this platform as does an application called for
+
+TARGET:
+two devices known as and support this [end]
+
+PREDICTION:
+are made up this version of the
+
+============================================================================================================================================
+SOURCE:
+the of song and instead to the ancient
+
+TARGET:
+the ways of song and looked at the older works instead. [end]
+
+PREDICTION:
+the of song and on the site of a
+
+============================================================================================================================================
+SOURCE:
+a lrb rrb consists of an internal that a man made
+
+TARGET:
+a lrb rrb consists of a that an lrb non living rrb [end]
+
+PREDICTION:
+a lrb rrb is a kind of that a man made
+
+============================================================================================================================================
+SOURCE:
+the joint appointed by the
+
+TARGET:
+the had appointed by the [end]
+
+PREDICTION:
+the house of the
+
+============================================================================================================================================
+SOURCE:
+maria known in history as lrb english the mother of rrb lrb rrb was a swedish natural doctor the most famous female and perhaps the most famous swedish
+
+TARGET:
+lrb rrb was a famous female doctor in sweden. [end]
+
+PREDICTION:
+maria probably lives in history as a swedish doctor and
+
+============================================================================================================================================
+SOURCE:
+are a finnish power metal band from the town of originally in.
+
+TARGET:
+is a finnish power metal band founded in in [end]
+
+PREDICTION:
+is a finnish power metal band founded in in
+
+============================================================================================================================================
+SOURCE:
+retired edward who was on board the said that the were well and well.
+
+TARGET:
+former uk who was on board the ship said that the were well and well. [end]
+
+PREDICTION:
+edward lrb rrb said that the were well and well.
+
+============================================================================================================================================
+SOURCE:
+was born in at s largest city and its capital
+
+TARGET:
+john lrb rrb lrb rrb was the last governor of and then became its first president in. [end]
+
+PREDICTION:
+lrb born in georgia rrb is a city of iowa in the united states.
+
+============================================================================================================================================
+SOURCE:
+in the hands of an god is a written by american on july in
+
+TARGET:
+in the hands of an god is famous that was by in. [end]
+
+PREDICTION:
+in an god is a written by on july in

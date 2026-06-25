@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+its major the river the river and the river near the town of
+
+TARGET:
+the change from forest to open was the east side. [end]
+
+PREDICTION:
+river is near sea in the town of an area and municipality outside africa.
+
+============================================================================================================================================
+SOURCE:
+in he continued to work as a and got quite with some mostly
+
+TARGET:
+during this time he continued to work as a medical doctor and got quite with some mostly [end]
+
+PREDICTION:
+from grew to work.
+
+============================================================================================================================================
+SOURCE:
+the song is named after electric a market street in the area of london england.
+
+TARGET:
+the song is named after a market street in london england and has been covered by many [end]
+
+PREDICTION:
+this song it is named after an alternative rock in london england.
+
+============================================================================================================================================
+SOURCE:
+the conference determined that as of the late th century the ethnic territories within the ottoman empire extended to and the delta in the northeast and in
+
+TARGET:
+the conference that as of the late th century the ethnic territories within the ottoman empire to the delta in the northeast in the southwest
+
+PREDICTION:
+it includes the eastern states and they were forced to give up russia lrb rrb an independent state in this north by punjab states.
+
+============================================================================================================================================
+SOURCE:
+compounds on the surface include water ice carbon and organic
+
+TARGET:
+on the surface include water ice carbon and [end]
+
+PREDICTION:
+on the surface including water limited were ice cream which can have come bacteria like buildings or other. this carbon needs to be filled with water.
+
+============================================================================================================================================
+SOURCE:
+the academy has had its annual meeting there every year since but it was not until the academy gained the right to use the upper floor as their own for all
+
+TARGET:
+in the academy gained the right to use the upper floor as their own [end]
+
+PREDICTION:
+the award had seats and living
+
+============================================================================================================================================
+SOURCE:
+the game s plot a prince on a mission to the stars and moon which were destroyed by his father the king of all
+
+TARGET:
+his father is the king of the [end]
+
+PREDICTION:
+his return took a to the later into now called being v of rome and named by henry iv for him.
+
+============================================================================================================================================
+SOURCE:
+was based in and was founded in by president of the company and wilhelm of the company.
+
+TARGET:
+is now president of the company and is chief executive officer lrb rrb. [end]
+
+PREDICTION:
+the production in was called town founded by lrb formerly geneva am rrb. this novel wilhelm managed and opened in.
+
+============================================================================================================================================
+SOURCE:
+in germany leaves and became the standard and are still used in eastern and southeastern german today for and other games.
+
+TARGET:
+in central europe there are cards with the of leaves and [end]
+
+PREDICTION:
+for example w and urdu became the same as but it used germany in
+
+============================================================================================================================================
+SOURCE:
+les is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+les is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+les very a role in the calvados found it is located with little changes and in eight levels by joining together of various south numbers are not common if any

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+good morning, everyone.
+
+TARGET:
+bonjour tout le monde. [end]
+
+PREDICTION:
+un peu
+
+============================================================================================================================================
+SOURCE:
+keep the money.
+
+TARGET:
+garde l'argent. [end]
+
+PREDICTION:
+restez
+
+============================================================================================================================================
+SOURCE:
+he wanted it to be a surprise.
+
+TARGET:
+il voulait que ce soit une surprise. [end]
+
+PREDICTION:
+il voulait être un médecin.
+
+============================================================================================================================================
+SOURCE:
+keep out of my way.
+
+TARGET:
+restez en dehors de mon chemin ! [end]
+
+PREDICTION:
+restez
+
+============================================================================================================================================
+SOURCE:
+i can wait no longer.
+
+TARGET:
+je ne peux pas attendre plus longtemps. [end]
+
+PREDICTION:
+je ne peux pas attendre davantage.
+
+============================================================================================================================================
+SOURCE:
+i'm very lucky.
+
+TARGET:
+j'ai beaucoup de chance. [end]
+
+PREDICTION:
+je suis très
+
+============================================================================================================================================
+SOURCE:
+who can read the of brave men without a feeling of respect and
+
+TARGET:
+qui est capable de lire les d'hommes courageux sans du respect et de ? [end]
+
+PREDICTION:
+qui peut des dans la ?
+
+============================================================================================================================================
+SOURCE:
+i'd like you to meet him.
+
+TARGET:
+j'aimerais que vous le [end]
+
+PREDICTION:
+j'aimerais que tu
+
+============================================================================================================================================
+SOURCE:
+you could've killed somebody.
+
+TARGET:
+vous auriez pu tuer quelqu'un. [end]
+
+PREDICTION:
+tu aurais dû le faire.
+
+============================================================================================================================================
+SOURCE:
+i don't want to do that without you.
+
+TARGET:
+je ne veux pas faire cela sans vous. [end]
+
+PREDICTION:
+je ne veux pas le faire de toi.

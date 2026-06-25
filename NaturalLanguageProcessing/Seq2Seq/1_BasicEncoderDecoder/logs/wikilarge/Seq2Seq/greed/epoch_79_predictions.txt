@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+returned to north america and for the next few years became associated with the river project in mexico.
+
+TARGET:
+returned to north america and in the river project in mexico. [end]
+
+PREDICTION:
+it returned to the north and to the world championship in
+
+============================================================================================================================================
+SOURCE:
+and his wife fashion journalist married at the in on june.
+
+TARGET:
+was to and they got married on june. [end]
+
+PREDICTION:
+and were arrested in paris to study with his wife on september on day
+
+============================================================================================================================================
+SOURCE:
+although found mostly in men s any type of can be
+
+TARGET:
+although are found in mostly in any type of can be [end]
+
+PREDICTION:
+however the is found in normal men
+
+============================================================================================================================================
+SOURCE:
+on april movie network aired a television film based on s book starring as grant show as george
+
+TARGET:
+the movie which aired april under the title stars as show as george and as [end]
+
+PREDICTION:
+search aired in january round series. television series
+
+============================================================================================================================================
+SOURCE:
+on june the town became the seat of the roman catholic of g but remains a protestant
+
+TARGET:
+on june the town was became a roman catholic [end]
+
+PREDICTION:
+on june the roman palace was called the roman
+
+============================================================================================================================================
+SOURCE:
+while are relatively in canada they do or from time to time.
+
+TARGET:
+while atlantic hurricanes are normally in canada they do or from time to time. [end]
+
+PREDICTION:
+are a short season of hard
+
+============================================================================================================================================
+SOURCE:
+michael brown lrb born october rrb is an english football player who plays as a defender for manchester
+
+TARGET:
+brown lrb born october rrb is an english football player. he plays for manchester united and england national team. [end]
+
+PREDICTION:
+michael j. lrb born october rrb is a football player.
+
+============================================================================================================================================
+SOURCE:
+she originated the role of hart on the opera all my children winning the award for younger actress in a drama series.
+
+TARGET:
+she got the main role in the tv series buffy the [end]
+
+PREDICTION:
+she playing the character of in
+
+============================================================================================================================================
+SOURCE:
+electronic take two forms negative and positive
+
+TARGET:
+american mathematician made more well known in in his book is the study of and their role in and [end]
+
+PREDICTION:
+laws including some and always including the
+
+============================================================================================================================================
+SOURCE:
+most of these can be used for either or
+
+TARGET:
+most of the above can be used for [end]
+
+PREDICTION:
+the system of is used to

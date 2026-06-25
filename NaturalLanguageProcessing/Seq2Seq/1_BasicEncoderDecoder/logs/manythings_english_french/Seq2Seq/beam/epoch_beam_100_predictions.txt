@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+this box is made of paper.
+
+TARGET:
+cette boîte est en papier. [end]
+
+PREDICTION:
+la boîte de bois était à couper ce papier.
+
+============================================================================================================================================
+SOURCE:
+i'd like to come along.
+
+TARGET:
+j'aimerais venir. [end]
+
+PREDICTION:
+j'aimerais quand je t'en retraite. ! peu
+
+============================================================================================================================================
+SOURCE:
+tom was in the right place at the right time.
+
+TARGET:
+tom était au bon endroit au bon moment. [end]
+
+PREDICTION:
+faire tom se bon à au suite.
+
+============================================================================================================================================
+SOURCE:
+act like a man.
+
+TARGET:
+en homme ! [end]
+
+PREDICTION:
+comme un homme.
+
+============================================================================================================================================
+SOURCE:
+how did that whole thing happen?
+
+TARGET:
+comment tout ce truc est-il arrivé ? [end]
+
+PREDICTION:
+comment s'est tout cela a fait ?
+
+============================================================================================================================================
+SOURCE:
+they have already
+
+TARGET:
+elles ont déjà commencé. [end]
+
+PREDICTION:
+encore elles auparavant. »
+
+============================================================================================================================================
+SOURCE:
+they'll have to wait.
+
+TARGET:
+elles attendre. [end]
+
+PREDICTION:
+il fait attendre. matinée. l'un de nous apprendre à être morts. ! c'est très peu partie.
+
+============================================================================================================================================
+SOURCE:
+i know what your name is.
+
+TARGET:
+je sais quel est ton nom. [end]
+
+PREDICTION:
+quel est votre nom. de
+
+============================================================================================================================================
+SOURCE:
+that's hard to
+
+TARGET:
+c'est difficile à croire. [end]
+
+PREDICTION:
+la véritable sont des en cours. »
+
+============================================================================================================================================
+SOURCE:
+nobody lives in this house.
+
+TARGET:
+personne ne vit dans cette maison. [end]
+
+PREDICTION:
+personne vit dans ce ville.

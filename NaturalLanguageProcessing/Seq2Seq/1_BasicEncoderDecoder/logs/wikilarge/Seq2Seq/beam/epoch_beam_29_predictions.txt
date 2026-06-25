@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the sandwich consists of an egg processed cheese either bacon or as the and is placed on either a or to it up.
+
+TARGET:
+this is made of an egg processed cheese either bacon or and either a or it has sold well. [end]
+
+PREDICTION:
+peanut will either come from their own and on a sauce which does have made of sugar or eggs in its juice whereas it burns with the seeds.
+
+============================================================================================================================================
+SOURCE:
+since then the frontier moved further west and the mississippi river was as the easternmost possible boundary of the west.
+
+TARGET:
+the mississippi river is often as the easternmost possible boundary of the west. [end]
+
+PREDICTION:
+it was later renamed the missouri to nebraska house near and on its north side of newfoundland in canada.
+
+============================================================================================================================================
+SOURCE:
+the mountain range forms a barrier between the greater los angeles area and the
+
+TARGET:
+the mountains separate the basin of los angeles in the south from the desert in the north. [end]
+
+PREDICTION:
+the mountain are forms on a range in mountains and rivers as cascade range. frs green stone an american lrb d. rrb january july is one kind of tree at inside places that it should be called this slope because there was already discovered location. they were seen from these houses were treated well.
+
+============================================================================================================================================
+SOURCE:
+the first was oxford scholar a. c. bradley s essay generally regarded as the starting point for the serious academic approach to jane
+
+TARGET:
+the first was oxford scholar andrew cecil bradley s this essay was generally lrb largely rrb regarded lrb seen rrb as the starting point for the serious academic approach to jane [end]
+
+PREDICTION:
+ledger lrb or old man general alfred walter reich january may rrb was an important work and scholar during this life. ago it should never cared that his father who had the country to become one country.
+
+============================================================================================================================================
+SOURCE:
+the edge of ocean currents can lead to the development of bands due to heat differential at this
+
+TARGET:
+the edge of ocean currents can cause bands due to heat differences where they meet. [end]
+
+PREDICTION:
+several active ocean are cold deep down and slopes at first by jack rainbands along the northeastern edge part that of its current north east germany is known as vietnam lrb long rrb.
+
+============================================================================================================================================
+SOURCE:
+not a lot of people were able to find
+
+TARGET:
+not many people were able to find jobs. [end]
+
+PREDICTION:
+not slaves. of and parts were bad t convinced rice rainfall until the people moved towards chicago. in his sense capital. all. however it has been used for its primary expert from her meanings giving them a more information about it. these will be considered one problem if there is only another book.
+
+============================================================================================================================================
+SOURCE:
+events by place europe lrb the great rrb becomes king of
+
+TARGET:
+events the great becomes king of [end]
+
+PREDICTION:
+day the line takes home by king jean philippe bridge in singapore. there is named after jack s mountain mount saint george and queen who travels at la tour ships as of december
+
+============================================================================================================================================
+SOURCE:
+in he received his bachelor s degree from oxford and shortly thereafter was employed as organist at st. paul s in london.
+
+TARGET:
+in he got a degree from oxford and soon afterwards he became an organist at st. paul s cathedral in london. [end]
+
+PREDICTION:
+on march he got a composer in villiers rhine england.
+
+============================================================================================================================================
+SOURCE:
+acid is a phosphorus and a powerful reducing agent with molecular formula h inorganic refer to the free acid by this name lrb also as rrb or the acceptable name of acid.
+
+TARGET:
+acid also known as acid is a chemical compound. [end]
+
+PREDICTION:
+it should treat as beast and better known is an fried this agent. splitting beetle juice in the initial kurt cole has been shown on their hot milk at a casino which shows how to boost products above its ground.
+
+============================================================================================================================================
+SOURCE:
+the territory s capital is the town of port
+
+TARGET:
+the capital of this territory is the town of port [end]
+
+PREDICTION:
+port there is one town of the famous australian football and best oil in by area. this city has resulted from place near zwickau that part outside byron unlike south east german to its original shores known river lrb see rrb. it will be called sudden mansfield novel about murphy build on whose texas. he lived for them early. richard episode v

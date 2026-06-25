@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+power over or poe technology describes a system to pass electrical power along with data on
+
+TARGET:
+these also receive power and data through the same power over does n t require changing the existing [end]
+
+PREDICTION:
+power over or poe is the to pass electrical power
+
+============================================================================================================================================
+SOURCE:
+nikolai lrb january rrb was a prominent russian and soviet botanist and best known for having identified the centres of origin of cultivated plants.
+
+TARGET:
+nikolai lrb november january rrb was a russian botanist and [end]
+
+PREDICTION:
+lrb january rrb was a russian and
+
+============================================================================================================================================
+SOURCE:
+since november the prime minister has been john key of the national party.
+
+TARGET:
+according to these conventions the prime minister is leader of cabinet lrb itself a body existing by convention rrb and takes a co role. [end]
+
+PREDICTION:
+since november the prime minister has been john of the national party.
+
+============================================================================================================================================
+SOURCE:
+the control of substances hazardous to health regulations is a united kingdom instrument that states general requirements on to protect employees and other persons from the of substances used at work by risk assessment control of exposure health and incident there are also duties on employees to take care of their own exposure to hazardous substances and on
+
+TARGET:
+the control of substances to health regulations lrb rrb deal with the safe use of substances. [end]
+
+PREDICTION:
+the control of substances used to to drinking and is a united kingdom instrument that states general requirements are to protect the
+
+============================================================================================================================================
+SOURCE:
+he is married to dorothy a priest in the church of england and they have three children.
+
+TARGET:
+he is married to dorothy a priest in the church of england. they have three children. [end]
+
+PREDICTION:
+he is married to dorothy a priest in the church of england.
+
+============================================================================================================================================
+SOURCE:
+or the giant or the rhinoceros was the largest known marsupial that ever
+
+TARGET:
+was the largest marsupial that ever lived. [end]
+
+PREDICTION:
+the giant lrb the giant or the giant is the largest of the
+
+============================================================================================================================================
+SOURCE:
+on may the turks launched an assault against the line capturing a section of the trench at s post one end of which was by
+
+TARGET:
+the turks were able to capture a small section of a trench at post. [end]
+
+PREDICTION:
+on may the turks began a section against the line.
+
+============================================================================================================================================
+SOURCE:
+the right side can be written as a single fraction with common a.
+
+TARGET:
+the right side can be a single with a common a. [end]
+
+PREDICTION:
+the right side is a with common
+
+============================================================================================================================================
+SOURCE:
+it has been in the roman catholic diocese of since the catholic hierarchy was restored in.
+
+TARGET:
+it has been in the roman catholic diocese of and newcastle since the catholic bishops returned in. [end]
+
+PREDICTION:
+it was in the roman catholic diocese of they were in the roman catholic diocese of
+
+============================================================================================================================================
+SOURCE:
+the life of aeschylus claims that he won the first prize at the city thirteen times.
+
+TARGET:
+all of the surviving plays won first prize at the city one book the life of aeschylus said that he won the first prize at the city times. [end]
+
+PREDICTION:
+the life of aeschylus claims that he won the first prize at the city thirteen times.

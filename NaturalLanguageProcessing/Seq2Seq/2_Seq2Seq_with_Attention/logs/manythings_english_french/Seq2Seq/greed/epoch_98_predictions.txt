@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+how many hot dogs have you sold today?
+
+TARGET:
+combien de as-tu [end]
+
+PREDICTION:
+combien de chiens as-tu des ?
+
+============================================================================================================================================
+SOURCE:
+up the room every now and then.
+
+TARGET:
+les la pièce par [end]
+
+PREDICTION:
+les de la pièce en de temps en temps.
+
+============================================================================================================================================
+SOURCE:
+i don't want to face that alone.
+
+TARGET:
+je ne veux pas faire face à ça seul. [end]
+
+PREDICTION:
+je ne veux pas cela tout seule.
+
+============================================================================================================================================
+SOURCE:
+i already have the wedding
+
+TARGET:
+j'ai déjà les [end]
+
+PREDICTION:
+j'ai déjà une de la
+
+============================================================================================================================================
+SOURCE:
+when i there was no one there.
+
+TARGET:
+quand personne n'était là. [end]
+
+PREDICTION:
+quand je suis personne n'était là.
+
+============================================================================================================================================
+SOURCE:
+i was the only one at the meeting who didn't think that was a good idea.
+
+TARGET:
+j'étais le seul à la réunion qui ne pensait pas que c'était une bonne idée. [end]
+
+PREDICTION:
+j'étais le seul à la réunion à ne pas penser que c'était une bonne idée.
+
+============================================================================================================================================
+SOURCE:
+she has some beautiful
+
+TARGET:
+elle a quelques [end]
+
+PREDICTION:
+elle a de
+
+============================================================================================================================================
+SOURCE:
+please eat something.
+
+TARGET:
+mangez quelque chose, je vous en prie. [end]
+
+PREDICTION:
+s'il vous plaît, mangez quelque chose.
+
+============================================================================================================================================
+SOURCE:
+this shirt costs ten dollars.
+
+TARGET:
+cette chemise coûte dix dollars. [end]
+
+PREDICTION:
+cet année dix dollars.
+
+============================================================================================================================================
+SOURCE:
+i will get him to come and help me.
+
+TARGET:
+je le ferai afin qu'il [end]
+
+PREDICTION:
+je lui de venir là.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+if you want to know, just ask.
+
+TARGET:
+si tu veux il suffit de demander. [end]
+
+PREDICTION:
+s'il vous plaît à autre part.
+
+============================================================================================================================================
+SOURCE:
+i have a for you.
+
+TARGET:
+j'ai une proposition pour toi. [end]
+
+PREDICTION:
+il dure en pour vous.
+
+============================================================================================================================================
+SOURCE:
+i want to be an
+
+TARGET:
+je veux être [end]
+
+PREDICTION:
+j'aimerais être fait le plus. voilà son devoir y a une tasse de nouveau travail.
+
+============================================================================================================================================
+SOURCE:
+please turn off the
+
+TARGET:
+veuillez éteindre les lumières ! [end]
+
+PREDICTION:
+merci
+
+============================================================================================================================================
+SOURCE:
+we made it.
+
+TARGET:
+nous l'avons [end]
+
+PREDICTION:
+nous avons y là-dessus. »
+
+============================================================================================================================================
+SOURCE:
+who taught you how to do that?
+
+TARGET:
+qui vous a enseigné comment faire cela ? [end]
+
+PREDICTION:
+cela qui te dit apprendre à faire ça. sors bien ? tous mes problèmes sont non plus en tom. les pieds de mal.
+
+============================================================================================================================================
+SOURCE:
+don't call anybody.
+
+TARGET:
+personne ! [end]
+
+PREDICTION:
+tom. !
+
+============================================================================================================================================
+SOURCE:
+that good.
+
+TARGET:
+ça bien. [end]
+
+PREDICTION:
+c'est bon.
+
+============================================================================================================================================
+SOURCE:
+the church is just across the street.
+
+TARGET:
+l'église est juste de l'autre côté de la rue. [end]
+
+PREDICTION:
+papa est sur de la tête encore en route.
+
+============================================================================================================================================
+SOURCE:
+it looks like you just saw a
+
+TARGET:
+on dirait que tu viens de voir un [end]
+
+PREDICTION:
+on dirait que t'a simplement vu ?

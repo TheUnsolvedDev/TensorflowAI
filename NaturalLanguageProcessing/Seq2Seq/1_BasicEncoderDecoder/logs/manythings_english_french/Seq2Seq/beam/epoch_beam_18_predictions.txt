@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'm going to propose to her.
+
+TARGET:
+je vais la demander en mariage. [end]
+
+PREDICTION:
+dollars avec lui à la liste question.
+
+============================================================================================================================================
+SOURCE:
+i have an twin.
+
+TARGET:
+j'ai un vrai [end]
+
+PREDICTION:
+je fis un à pierre.
+
+============================================================================================================================================
+SOURCE:
+you look very charming today.
+
+TARGET:
+vous avez l'air charmant aujourd'hui. [end]
+
+PREDICTION:
+on va vraiment disposer d'une très grande aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+i'm sorry, but i really have to go.
+
+TARGET:
+je suis désolé mais je dois vraiment y aller. [end]
+
+PREDICTION:
+alors mais moi sommes encore parvenu à te perdre. sur point ça reviens être. »
+
+============================================================================================================================================
+SOURCE:
+i think tom's idea is a good one.
+
+TARGET:
+je pense que l'idée de tom est bonne. [end]
+
+PREDICTION:
+selon moi l'idée de la crème c'est un bien tom.
+
+============================================================================================================================================
+SOURCE:
+human life is
+
+TARGET:
+la vie est [end]
+
+PREDICTION:
+la humains s'est sentir étrange. vie. vague intention aimé ! chaque fois simple entendu s'il est beau. » avec tout. d'un de quatre marins sont partis à tous. heures. j'ai
+
+============================================================================================================================================
+SOURCE:
+it's too dangerous.
+
+TARGET:
+c'est trop dangereux. [end]
+
+PREDICTION:
+ce fait trop dur. !
+
+============================================================================================================================================
+SOURCE:
+tom wrote a short story.
+
+TARGET:
+tom a écrit une courte histoire. [end]
+
+PREDICTION:
+tom a écrit une lettre grosse. dollars.
+
+============================================================================================================================================
+SOURCE:
+is that a cat or a dog?
+
+TARGET:
+est-ce un chat ou un chien ? [end]
+
+PREDICTION:
+un c'est une chien ou en chien, à le chat. n'est-ce pas ? feu de vitesse d'une chose ! même.
+
+============================================================================================================================================
+SOURCE:
+we're interested in the customs of different
+
+TARGET:
+nous sommes intéressés par des de différentes [end]
+
+PREDICTION:
+le nous sommes différents ensemble d'un sens en difficulté.

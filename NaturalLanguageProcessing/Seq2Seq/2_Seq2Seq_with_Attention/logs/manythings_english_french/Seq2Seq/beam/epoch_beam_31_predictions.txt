@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+please knock before
+
+TARGET:
+veuillez frapper avant d'entrer. [end]
+
+PREDICTION:
+frappe avant 6 heures !
+
+============================================================================================================================================
+SOURCE:
+the cost of living in tokyo is very high.
+
+TARGET:
+le coût de la vie à tokyo est très élevé. [end]
+
+PREDICTION:
+la coût d'aujourd'hui par vivre est complet.
+
+============================================================================================================================================
+SOURCE:
+i need to talk with you.
+
+TARGET:
+j'ai besoin de vous parler. [end]
+
+PREDICTION:
+je suis en train d'y
+
+============================================================================================================================================
+SOURCE:
+take any train on track
+
+TARGET:
+prends n'importe quel train sur la voie [end]
+
+PREDICTION:
+prenez le droit de la des fous ? plus.
+
+============================================================================================================================================
+SOURCE:
+what's your
+
+TARGET:
+quelle est ta moyenne ? [end]
+
+PREDICTION:
+quel qui est ton excuse maman à ongles. » pas vous ?
+
+============================================================================================================================================
+SOURCE:
+what's the
+
+TARGET:
+quel est ce ? [end]
+
+PREDICTION:
+quel est la réalité ? ça. au simple vous a de pas une. » les pieds.
+
+============================================================================================================================================
+SOURCE:
+i understood nothing.
+
+TARGET:
+je n'ai rien compris. [end]
+
+PREDICTION:
+je ne plus. peu. innocent. le soit terminé. c'était tout. par l'on ai réfléchi sérieusement. « j'ai encore. »
+
+============================================================================================================================================
+SOURCE:
+what time did you go to bed yesterday?
+
+TARGET:
+à quelle heure vous êtes-vous hier ? [end]
+
+PREDICTION:
+tu t'es couché hier à nourriture ? mon temps.
+
+============================================================================================================================================
+SOURCE:
+you did that on didn't you?
+
+TARGET:
+tu fait n’est ce pas ? [end]
+
+PREDICTION:
+tu vraiment n'est-ce pas en ?
+
+============================================================================================================================================
+SOURCE:
+don't stand too close.
+
+TARGET:
+ne vous tenez pas trop près ! [end]
+
+PREDICTION:
+ne vous en va pas dans très bien ! ça. leur est table. tu es si improbable. à rien du pied. jamais. cela. continue trop. bien.

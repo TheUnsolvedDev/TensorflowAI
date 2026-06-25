@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i like to travel alone.
+
+TARGET:
+voyager seul. [end]
+
+PREDICTION:
+j'aime voyager seul.
+
+============================================================================================================================================
+SOURCE:
+what's today's
+
+TARGET:
+quel est le du jour ? [end]
+
+PREDICTION:
+quel est le du jour ?
+
+============================================================================================================================================
+SOURCE:
+i think i know where tom is.
+
+TARGET:
+je crois savoir où se trouve tom. [end]
+
+PREDICTION:
+je pense savoir où est tom.
+
+============================================================================================================================================
+SOURCE:
+what's the difference between these?
+
+TARGET:
+quelle est la différence entre ? [end]
+
+PREDICTION:
+quelle est la différence entre ceux-ci ?
+
+============================================================================================================================================
+SOURCE:
+tom is getting nervous.
+
+TARGET:
+tom devient nerveux. [end]
+
+PREDICTION:
+tom devient
+
+============================================================================================================================================
+SOURCE:
+tom wanted mary to take care of his kids.
+
+TARGET:
+tom voulait que marie garde ses enfants. [end]
+
+PREDICTION:
+tom voulait que marie soin de ses enfants.
+
+============================================================================================================================================
+SOURCE:
+they didn't see anything.
+
+TARGET:
+elles ne rien. [end]
+
+PREDICTION:
+ils n'ont rien vu.
+
+============================================================================================================================================
+SOURCE:
+give me the please.
+
+TARGET:
+j'aimerais la je vous prie. [end]
+
+PREDICTION:
+s'il vous plaît.
+
+============================================================================================================================================
+SOURCE:
+what did you eat for lunch?
+
+TARGET:
+tu as mangé ce ? [end]
+
+PREDICTION:
+qu'est-ce que tu as mangé au déjeuner ?
+
+============================================================================================================================================
+SOURCE:
+tom told me that mary was busy.
+
+TARGET:
+tom m'a dit que marie était occupée. [end]
+
+PREDICTION:
+tom m'a dit que mary était occupée.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+les is a commune in the sarthe department in the region of pays de la loire in northwestern france.
+
+TARGET:
+it is found in the region pays de la loire in the sarthe department in the west of france. [end]
+
+PREDICTION:
+saint life is the growth asteroid of in southern northwestern france
+
+============================================================================================================================================
+SOURCE:
+a is a feature of european houses and
+
+TARGET:
+a is found on european houses and [end]
+
+PREDICTION:
+has many modern european materials to each larger
+
+============================================================================================================================================
+SOURCE:
+a branch of studies rock and lrb rrb.
+
+TARGET:
+is a branch of which studies rock lrb rrb. [end]
+
+PREDICTION:
+belongs to its parts live rock music such dream of waters called alternative education and physical forms
+
+============================================================================================================================================
+SOURCE:
+two types of star can be distinguished are groups of of thousands of very old stars which are while open a more
+
+TARGET:
+open are more and they have less than a few hundred stars which are often very [end]
+
+PREDICTION:
+few have been different together but only two types of very similar waters is the combination and light or old carbon d n are things that goes out there which
+
+============================================================================================================================================
+SOURCE:
+match length matches consisted of three the first lasted ten minutes and the second and third each lasted five
+
+TARGET:
+rules match length matches make up of three the first round is ten minutes and the second and third round are five [end]
+
+PREDICTION:
+the games had three minutes but each was on a television series and takes another screen release in films with other things for their long length show one lrb or
+
+============================================================================================================================================
+SOURCE:
+ndash first recorded case of in los angeles california.
+
+TARGET:
+is the first woman to become president of a us national [end]
+
+PREDICTION:
+the r label lrb recorded in san angeles new jersey rrb guerrero bit c. but had little financial many american government for example a world wide heritage fame j am
+
+============================================================================================================================================
+SOURCE:
+and on the of the death whether he is or whether he received a
+
+TARGET:
+and on the of the death if he is or if he received a [end]
+
+PREDICTION:
+said that he was not the final one god but we do his own changes in using whether this is required if king lord j s n gets a caesar
+
+============================================================================================================================================
+SOURCE:
+the film was directed by david and stars the regular television cast of smith harry and
+
+TARGET:
+the movie stars the main television cast of smith and harry a which he names
+
+PREDICTION:
+was the movie series by both characters who can tell him some people see mike n e. dream as lord alan bruce s voice in and harry comes after a
+
+============================================================================================================================================
+SOURCE:
+in popular culture in when america a of lrb referred to as rrb attack an only to be off by a
+
+TARGET:
+it is shown in the movie when america an and getting off by a [end]
+
+PREDICTION:
+shown attacks culture in how is called a picture when they do not have it down for the same reason as lead by million years men with more than people
+
+============================================================================================================================================
+SOURCE:
+it then emerged into the gulf of mexico on august into a category hurricane with mph lrb km h rrb
+
+TARGET:
+it then into the gulf of mexico into a [end]
+
+PREDICTION:
+the florida fell and rain off reached its southern place with speed lrb kg rrb. some miles slowly to tropical depression ships was made into charge of. it later moved

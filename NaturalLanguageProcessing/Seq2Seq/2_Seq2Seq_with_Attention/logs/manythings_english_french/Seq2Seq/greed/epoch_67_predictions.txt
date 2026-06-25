@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're a very lucky guy.
+
+TARGET:
+tu es un gars très chanceux. [end]
+
+PREDICTION:
+vous êtes un gars vraiment chance.
+
+============================================================================================================================================
+SOURCE:
+i want you to go see a doctor.
+
+TARGET:
+je veux que tu ailles chez le médecin. [end]
+
+PREDICTION:
+je veux que tu ailles voir un médecin.
+
+============================================================================================================================================
+SOURCE:
+where are we meeting tomorrow?
+
+TARGET:
+où nous demain ? [end]
+
+PREDICTION:
+on se voit demain ?
+
+============================================================================================================================================
+SOURCE:
+that's not bad.
+
+TARGET:
+ce n'est pas mauvais. [end]
+
+PREDICTION:
+ce n'est pas mauvais.
+
+============================================================================================================================================
+SOURCE:
+i thought that you'd never ask.
+
+TARGET:
+je pensais que tu ne le jamais. [end]
+
+PREDICTION:
+je pensais que vous ne le jamais.
+
+============================================================================================================================================
+SOURCE:
+i'm sorry, i didn't hear you.
+
+TARGET:
+je suis désolé, je ne t'ai pas [end]
+
+PREDICTION:
+je suis désolée, je ne vous ai pas
+
+============================================================================================================================================
+SOURCE:
+how about going to the
+
+TARGET:
+si nous allions au cinéma ? [end]
+
+PREDICTION:
+ça te dirait d'aller à la plage ?
+
+============================================================================================================================================
+SOURCE:
+what is it for?
+
+TARGET:
+c'est pour quoi faire ? [end]
+
+PREDICTION:
+comment ?
+
+============================================================================================================================================
+SOURCE:
+people have the right to themselves.
+
+TARGET:
+les gens ont le droit de se [end]
+
+PREDICTION:
+les gens ont la bonne
+
+============================================================================================================================================
+SOURCE:
+it's hard to tell you and your brother
+
+TARGET:
+il est difficile de te distinguer de ton frère. [end]
+
+PREDICTION:
+il est difficile de vous distinguer de votre frère.

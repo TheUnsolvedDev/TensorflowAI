@@ -122,13 +122,18 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
     def __init__(self, model, log_dir, latent_dim):
         super().__init__()
         self.model_ref = model
-        self.fixed_noise = tf.random.normal([16, latent_dim])
+        self.latent_dim = latent_dim
+
+        self.fixed_noise = np.random.normal(0, 1, (8, latent_dim))
 
         self.img_dir = os.path.join(log_dir, "samples")
         os.makedirs(self.img_dir, exist_ok=True)
 
     def on_epoch_end(self, epoch, logs=None):
-        gen = self.model_ref.generator(self.fixed_noise, training=False)
+        random_noise = np.random.normal(0, 1, (8, self.latent_dim))
+        noise = np.concatenate([self.fixed_noise, random_noise], axis=0)
+
+        gen = self.model_ref.generator(noise, training=False)
         gen = (gen + 1.0) / 2.0
         gen = gen.numpy()
 
@@ -176,6 +181,7 @@ class GANLRScheduler(tf.keras.callbacks.Callback):
                 f"LR reduced -> G: {new_lr_g.numpy()}, D: {new_lr_d.numpy()}")
             self.wait = 0
             
+import tensorflow as tf
 
 class ModeCollapseCallback(tf.keras.callbacks.Callback):
     def __init__(self, latent_dim, num_samples=32, threshold=0.05):
@@ -242,7 +248,7 @@ def main():
     setup_gpu(a.gpu)
 
     d = Dataset()
-    train_ds, _, ch = d.load_data(a.type)
+    train_ds, ch = d.load_data(a.type)
 
     strategy = tf.distribute.MirroredStrategy(
         cross_device_ops=tf.distribute.NcclAllReduce()

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i prefer to read.
+
+TARGET:
+je préfère lire. [end]
+
+PREDICTION:
+je préfère lire.
+
+============================================================================================================================================
+SOURCE:
+i just wanted to play
+
+TARGET:
+je voulais juste jouer au baseball. [end]
+
+PREDICTION:
+je voulais juste jouer au football.
+
+============================================================================================================================================
+SOURCE:
+they might be taller than you.
+
+TARGET:
+ils peut-être être plus grands que vous. [end]
+
+PREDICTION:
+ils peut-être être plus grands que toi.
+
+============================================================================================================================================
+SOURCE:
+i don't want to hurt anybody.
+
+TARGET:
+je ne veux personne. [end]
+
+PREDICTION:
+je ne veux personne.
+
+============================================================================================================================================
+SOURCE:
+i don't yet know what to do.
+
+TARGET:
+je ne sais pas encore quoi faire. [end]
+
+PREDICTION:
+je ne sais pas encore quoi faire.
+
+============================================================================================================================================
+SOURCE:
+don't worry. i'll do it.
+
+TARGET:
+ne vous pas. je m'en [end]
+
+PREDICTION:
+ne t'inquiète pas. je le
+
+============================================================================================================================================
+SOURCE:
+i know what i've got to do.
+
+TARGET:
+je sais ce qu'il faut que je fasse. [end]
+
+PREDICTION:
+je sais ce que j'ai à faire.
+
+============================================================================================================================================
+SOURCE:
+the world is
+
+TARGET:
+le monde est en train de changer. [end]
+
+PREDICTION:
+le monde
+
+============================================================================================================================================
+SOURCE:
+today was a tough day.
+
+TARGET:
+aujourd'hui était une dure journée. [end]
+
+PREDICTION:
+aujourd'hui fut une journée difficile.
+
+============================================================================================================================================
+SOURCE:
+i wanted to ask tom why.
+
+TARGET:
+je voulais demander à tom pourquoi. [end]
+
+PREDICTION:
+je voulais demander à tom pourquoi.

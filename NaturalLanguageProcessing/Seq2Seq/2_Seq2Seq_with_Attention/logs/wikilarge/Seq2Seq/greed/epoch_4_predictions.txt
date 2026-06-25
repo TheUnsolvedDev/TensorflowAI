@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the stand was originally constructed in as a simple concrete seating area.
+
+TARGET:
+the stand was built in as a concrete seating area. [end]
+
+PREDICTION:
+the stand was originally built in as a simple concrete seating area.
+
+============================================================================================================================================
+SOURCE:
+the ss richard montgomery was an american liberty ship built during world war ii one of the used to carry cargo during the war.
+
+TARGET:
+the ss richard montgomery was an american ship built during world war ii. [end]
+
+PREDICTION:
+the ss richard montgomery was an american
+
+============================================================================================================================================
+SOURCE:
+the city of auburn lies in western lee county and is bordered by the city of to the northeast and by chambers county to the north.
+
+TARGET:
+the city of auburn is located in western lee county. it borders the city of to the northeast and by chambers county to the north. [end]
+
+PREDICTION:
+the city of auburn is in the city of the
+
+============================================================================================================================================
+SOURCE:
+leader before he was elected president of france was president of the french conservative party elected with percent of the vote.
+
+TARGET:
+he was the leader of the and was elected president of the french republic on may. [end]
+
+PREDICTION:
+he was elected president of france
+
+============================================================================================================================================
+SOURCE:
+located close to the border with germany it is the capital of the department.
+
+TARGET:
+strasbourg is the seat council of europe of the european court of human rights and of the european parliament. [end]
+
+PREDICTION:
+it is located in the north west frontier province and is the capital of the department.
+
+============================================================================================================================================
+SOURCE:
+it is not known whether there are others between them.
+
+TARGET:
+it is currently not known whether there are others between them. [end]
+
+PREDICTION:
+it is not known whether there are others are others
+
+============================================================================================================================================
+SOURCE:
+in super mario rpg mario bowser princess and fight as allies in the first console role playing game lrb rpg rrb in the mario series. it contains similarities to many other square role playing games such as trigger and the final fantasy series with a story and action based gameplay based on the super mario bros. series.
+
+TARGET:
+the gameplay of super mario rpg is like other square role playing games of trigger and the final fantasy series. [end]
+
+PREDICTION:
+the game is a series of video games in the super mario bros. game console.
+
+============================================================================================================================================
+SOURCE:
+the of and al on including the ibn al lambert and were the first on geometry.
+
+TARGET:
+the of on were the first on geometry. [end]
+
+PREDICTION:
+the of and al on including the ibn al
+
+============================================================================================================================================
+SOURCE:
+let x to make something that its maker can not
+
+TARGET:
+if he can make such a mountain there is something which he can not do he can not lift the mountain [end]
+
+PREDICTION:
+they are usually not
+
+============================================================================================================================================
+SOURCE:
+it grew out of the john reed club as an alternative to new masses the publication of the american communist party but became anti communist after joseph stalin secured his place at the head of the soviet union.
+
+TARGET:
+leslie come back to the ag in honey [end]
+
+PREDICTION:
+the first president of the united states was a

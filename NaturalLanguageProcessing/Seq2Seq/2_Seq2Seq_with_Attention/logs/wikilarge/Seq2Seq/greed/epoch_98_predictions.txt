@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+did not any areas in the central pacific or western pacific as a hurricane or a
+
+TARGET:
+did not any areas in the central pacific or western pacific as a hurricane or a but the storm passed over as a
+
+PREDICTION:
+did not any areas in the central category it was in the central category air as a
+
+============================================================================================================================================
+SOURCE:
+members les lrb november september rrb who joined disney in.
+
+TARGET:
+the nine old men were les lrb november september rrb who joined disney in. [end]
+
+PREDICTION:
+she was the of the
+
+============================================================================================================================================
+SOURCE:
+james earl jr. lrb born october rrb is a retired american politician who was the th president of the united states from to and the of the nobel peace
+
+TARGET:
+james earl carter jr. lrb born october rrb was the th president of the united states from to. [end]
+
+PREDICTION:
+james earl jr. lrb born october rrb was the th president of the united states.
+
+============================================================================================================================================
+SOURCE:
+here the is drawn from the of from fish by a probably a
+
+TARGET:
+here the fish must be separated from the fish after they with a [end]
+
+PREDICTION:
+the is in the of from fish by fish by a en
+
+============================================================================================================================================
+SOURCE:
+following his joined the bureau of economics as a research assistant to the of professor islam and
+
+TARGET:
+after his ma studies became part of the of economics as a research assistant for professor islam and [end]
+
+PREDICTION:
+after his joined the of professor and
+
+============================================================================================================================================
+SOURCE:
+also he was credited for increasing power of assembly and he also broke up power of for
+
+TARGET:
+he also increased the power of the assembly and he broke up power of the [end]
+
+PREDICTION:
+he was for charge and he also he had power of for
+
+============================================================================================================================================
+SOURCE:
+the name was by the during winter war to the chairman of the council of people s of the soviet union lrb i.e.
+
+TARGET:
+the name is derived from a soviet politician. he was the people s for foreign affairs or the foreign minister of the soviet union. [end]
+
+PREDICTION:
+the constitution was by the during winter war to the chairman of the of the soviet union and the main council of the soviet union.
+
+============================================================================================================================================
+SOURCE:
+a is very and when one would look in it his or her would appear
+
+TARGET:
+a crystal can be broken easily and when one would look in it it appears [end]
+
+PREDICTION:
+a is very and when one of her is very they in it
+
+============================================================================================================================================
+SOURCE:
+his father told him that he would support his racing career as long as he worked hard at school.
+
+TARGET:
+his father said he would support his racing as long as he worked hard at school. [end]
+
+PREDICTION:
+his father was called running for him he would support hard at he s job as he would support hard at time.
+
+============================================================================================================================================
+SOURCE:
+under the of pope ii of the chapel between and.
+
+TARGET:
+in pope ii asked to the [end]
+
+PREDICTION:
+this was a lot of in the chapel king symphony ii.

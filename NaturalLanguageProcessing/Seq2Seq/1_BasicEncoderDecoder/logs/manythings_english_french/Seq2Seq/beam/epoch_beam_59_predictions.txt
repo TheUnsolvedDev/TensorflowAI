@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+don't close your eyes.
+
+TARGET:
+ne ferme pas les yeux ! [end]
+
+PREDICTION:
+ne ferme les pas non yeux.
+
+============================================================================================================================================
+SOURCE:
+he tried it with a friend.
+
+TARGET:
+il l'a essayé avec un ami. [end]
+
+PREDICTION:
+le sans ami.
+
+============================================================================================================================================
+SOURCE:
+i did my best to protect tom.
+
+TARGET:
+j'ai fait de mon mieux pour protéger tom. [end]
+
+PREDICTION:
+j'ai de mieux pour moi à tom.
+
+============================================================================================================================================
+SOURCE:
+four people were in the car when the accident happened.
+
+TARGET:
+quatre personnes se à bord de la voiture lorsque l'accident est [end]
+
+PREDICTION:
+quatre japonais personnes ont vraiment la langue fatigué.
+
+============================================================================================================================================
+SOURCE:
+i like music.
+
+TARGET:
+j'aime la musique [end]
+
+PREDICTION:
+la j'adore
+
+============================================================================================================================================
+SOURCE:
+have you tried the
+
+TARGET:
+as-tu essayé le ? [end]
+
+PREDICTION:
+est-ce t'es-tu vendu la neige à ! s'il vous plaît bizarre ne plein ?
+
+============================================================================================================================================
+SOURCE:
+tom isn't very old.
+
+TARGET:
+tom n'est pas très vieux. [end]
+
+PREDICTION:
+tom n'a pas trop timide. pas.
+
+============================================================================================================================================
+SOURCE:
+school begins at
+
+TARGET:
+l'école commence à huit heures et [end]
+
+PREDICTION:
+écrire commence au et neuf heures tout le temps.
+
+============================================================================================================================================
+SOURCE:
+there's nothing unusual about this.
+
+TARGET:
+il n'y a rien à cela. [end]
+
+PREDICTION:
+demain, avons rien en secret.
+
+============================================================================================================================================
+SOURCE:
+what was the first you learned to
+
+TARGET:
+quel était le premier auquel vous avez appris à jouer ? [end]
+
+PREDICTION:
+quel fut le sport en première que vous ait appris à jouer ? ! j'essaie beaucoup compris. avec

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it was built on the site of the old and incorporated the main workshop of the former crane
+
+TARGET:
+it was built on the old it also uses the main workshop of the old crane [end]
+
+PREDICTION:
+was founded in. it became the most famous workshop in india and made a very important part on their head.
+
+============================================================================================================================================
+SOURCE:
+saint denis lrb or unofficially saint denis de la r union for disambiguation rrb is the pr lrb administrative capital rrb of the french overseas region and department of r union in the indian ocean.
+
+TARGET:
+saint denis is the administrative capital lrb pr rrb of the french controlled island of r union in the indian ocean. [end]
+
+PREDICTION:
+saint denis is the capital of a part in california. this area was named after it s first time to make up its original name for the french overseas region and department.
+
+============================================================================================================================================
+SOURCE:
+after the ten moses leads the exodus of the out of egypt and across the red sea after which they base themselves at mount sinai where moses receives the ten
+
+TARGET:
+after the ten were on egypt moses led the hebrew people out of egypt across the red sea where they based themselves at and the borders of it was at this time that moses received the ten [end]
+
+PREDICTION:
+the next years his wife of this was a part on that point lrb ft rrb but she is not considered by one muslim and other members were called him from mount carmel where moses takes control in it.
+
+============================================================================================================================================
+SOURCE:
+de valera was court convicted and sentenced to death but the sentence was immediately to penal for life.
+
+TARGET:
+after the fighting de valera was court convicted and sentenced to death but the sentence was changed to for life [end]
+
+PREDICTION:
+in the man to be settled they tried but this sentence.
+
+============================================================================================================================================
+SOURCE:
+the lady of the lake is the name of several related characters who play parts in
+
+TARGET:
+the lady of the lake is a character of [end]
+
+PREDICTION:
+the second governor of a city lrb o rrb
+
+============================================================================================================================================
+SOURCE:
+the th century eruption of the black death had a effect on europe s population changing the social structure.
+
+TARGET:
+the black death had a effect on europe s population. it changed europe s social structure. [end]
+
+PREDICTION:
+the th part watt that is not very common to be found on lrb a rrb of this time.
+
+============================================================================================================================================
+SOURCE:
+numerous suburbs of oslo notably b is one of the most densely populated areas in the country.
+
+TARGET:
+because it includes many suburbs of oslo notably b has a large number of people living in a small area. [end]
+
+PREDICTION:
+the most important place on are a big part of its population lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+consists of a web browser lrb rrb which is a descendant of the family an e mail and news client program lrb mail which shares code with mozilla rrb an html editor lrb composer rrb and an client lrb rrb.
+
+TARGET:
+it is very useful and includes an e mail client a calendar a html editor an client and a web it is made by the council formerly by mozilla foundation. [end]
+
+PREDICTION:
+consists of a web algorithm which can also be called the visual client lrb rrb and an e reed device for example is based on computers.
+
+============================================================================================================================================
+SOURCE:
+sweet potato pie is a traditional side dish in the southern united states.
+
+TARGET:
+sweet potato pie is a type of it is common in the southern united states. [end]
+
+PREDICTION:
+sweet potato pie or fried is a type of dish for many types and molecules that are found in the south part of africa. they have been called breakfast fishing lrb rrb to be used as an oil color. it was made up by reacting artificial para product
+
+============================================================================================================================================
+SOURCE:
+the storm was not classified as a subtropical storm until april after a by the national hurricane center.
+
+TARGET:
+the storm was not named by the national hurricane center because it was not found until after the season ended. [end]
+
+PREDICTION:
+the tropical storm was an atlantic hurricane that broke off on june. a by its capital is held.

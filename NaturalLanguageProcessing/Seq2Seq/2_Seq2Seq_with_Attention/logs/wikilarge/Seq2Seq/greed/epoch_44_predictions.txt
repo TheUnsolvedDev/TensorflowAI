@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the album version features vocals by david
+
+TARGET:
+the album version has vocals by david [end]
+
+PREDICTION:
+the album is vocals by david
+
+============================================================================================================================================
+SOURCE:
+now signed to the label she had several popular while recording with such artists as the louis and the delta rhythm
+
+TARGET:
+she recording with other musicians like the louis jordan and the delta [end]
+
+PREDICTION:
+she had several including the label titled musicians with the louis and the delta
+
+============================================================================================================================================
+SOURCE:
+the modern or olympic is an athletic event where the object is to a heavy metal ball attached to a and
+
+TARGET:
+is an the goal of it is to a heavy metal ball attached to a and [end]
+
+PREDICTION:
+the modern or olympic is an event where the object is to a heavy metal ball normally a and
+
+============================================================================================================================================
+SOURCE:
+in the first the japanese the railway between and in the second they the us air forces in province and reached the city of
+
+TARGET:
+in the second part they destroyed the us air forces in province and reached the city of [end]
+
+PREDICTION:
+the japanese in the second the japanese the the in
+
+============================================================================================================================================
+SOURCE:
+in the th and th centuries these were replaced by but these were intended to too much on state
+
+TARGET:
+in the century these were replaced by [end]
+
+PREDICTION:
+in the th and th centuries these were replaced by but these were to too much on state
+
+============================================================================================================================================
+SOURCE:
+station is an underground station located in prefecture japan operated by the railway s line. it is. from the of the
+
+TARGET:
+railway company line limited [end]
+
+PREDICTION:
+station is a station located in
+
+============================================================================================================================================
+SOURCE:
+the man who is not currently a can only a woman who is not currently a or a woman from the people of the
+
+TARGET:
+the muslim can only a muslim the muslim woman who is not currently a can only a muslim man who is not currently a [end]
+
+PREDICTION:
+the man who is not currently a can only a woman can only a vote of a woman who is a woman from the people of the
+
+============================================================================================================================================
+SOURCE:
+throughout the first years of church history christians as a common part of life and nearly always used wine lrb that is rrb in their
+
+TARGET:
+in the first years of church history christians often as a part of their life and almost always used wine lrb rrb in the
+
+PREDICTION:
+history christians history christians as a common part of life but the are used as a
+
+============================================================================================================================================
+SOURCE:
+whereas on the train and reaching would allow them to board the o line trains towards park.
+
+TARGET:
+on the train and reaching would allow you to change trains for the o line towards [end]
+
+PREDICTION:
+on the train and reaching park line trains towards park line trains towards park line trains close to the
+
+============================================================================================================================================
+SOURCE:
+some such as s laws of motion are still generally called laws even though they are now known to be cases of
+
+TARGET:
+some such as s laws of motion are still generally called laws even though they are now known not to be of such universal as was once
+
+PREDICTION:
+some such as laws of motion are still generally called laws even though they are now known not to be cases of

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i don't understand what the teacher is saying.
+
+TARGET:
+je ne comprends pas ce que est en train de dire. [end]
+
+PREDICTION:
+je ne comprends pas ce que est en train de dire.
+
+============================================================================================================================================
+SOURCE:
+you had better not keep company with him.
+
+TARGET:
+vous feriez mieux de ne pas le [end]
+
+PREDICTION:
+tu ferais mieux de ne pas le
+
+============================================================================================================================================
+SOURCE:
+i no longer wish to be a part of this project.
+
+TARGET:
+je ne veux plus être partie à ce projet. [end]
+
+PREDICTION:
+je ne vois plus qu'un devient de ce projet.
+
+============================================================================================================================================
+SOURCE:
+he had a second helping of soup.
+
+TARGET:
+on lui donna une seconde fois de la [end]
+
+PREDICTION:
+il s'est de la
+
+============================================================================================================================================
+SOURCE:
+i'll go if you will.
+
+TARGET:
+j'irai si vous y [end]
+
+PREDICTION:
+j'irai si tu y
+
+============================================================================================================================================
+SOURCE:
+i really am glad you're here.
+
+TARGET:
+je suis vraiment content que vous soyez ici. [end]
+
+PREDICTION:
+je me réjouis vraiment que tu sois là.
+
+============================================================================================================================================
+SOURCE:
+you're part of my life.
+
+TARGET:
+tu fais partie de ma vie. [end]
+
+PREDICTION:
+tu fais partie de ma vie.
+
+============================================================================================================================================
+SOURCE:
+tom wanted me to learn french.
+
+TARGET:
+tom voulait que le français. [end]
+
+PREDICTION:
+tom voulait que je le français.
+
+============================================================================================================================================
+SOURCE:
+which one would you take?
+
+TARGET:
+lequel ? [end]
+
+PREDICTION:
+lequel ?
+
+============================================================================================================================================
+SOURCE:
+i read in the newspaper recently that the really need rain.
+
+TARGET:
+j'ai lu dans le journal que les d'eau. [end]
+
+PREDICTION:
+j'ai lu le journal que cela a déjà besoin de trois minutes.

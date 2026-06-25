@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+due to in the s the number of municipalities in has been reduced to
+
+TARGET:
+since the s there are twelve municipalities in [end]
+
+PREDICTION:
+in the s the number of municipalities in has been reduced to
+
+============================================================================================================================================
+SOURCE:
+by s danny continues to work as a boxer and eventually gets by his opponent during a fight who has placed some dust onto his
+
+TARGET:
+danny gets in a fight with a boxer who put dust on his [end]
+
+PREDICTION:
+s danny continues to work as a boxer and eventually leaves by
+
+============================================================================================================================================
+SOURCE:
+similarly in england and wales in of occurred at or under weeks between to weeks and. at or over weeks.
+
+TARGET:
+according to data collected in the united states. of abortions were done in the first twelve weeks of pregnancy. between week and week of the pregnancy. similarly in england and wales in of occurred at or under weeks between and weeks and. at or over weeks. [end]
+
+PREDICTION:
+also in england and wales in may it was at or over weeks and at or over weeks.
+
+============================================================================================================================================
+SOURCE:
+lrb rrb is a county lrb jude rrb of romania in the historic region of with the county seat at
+
+TARGET:
+in it had a population of and a population density of km. [end]
+
+PREDICTION:
+is a county lrb jude rrb of romania in the historic region of
+
+============================================================================================================================================
+SOURCE:
+rock falls is a city in county illinois united states.
+
+TARGET:
+rock falls is a city of illinois in the united states. [end]
+
+PREDICTION:
+rock falls is a city of illinois in the united states.
+
+============================================================================================================================================
+SOURCE:
+is located two miles west of the town of
+
+TARGET:
+is two miles west of the town of [end]
+
+PREDICTION:
+is a town and municipality in the district of in the canton of aargau in switzerland.
+
+============================================================================================================================================
+SOURCE:
+en bessin is a commune in the calvados department in the basse normandie region in northern france.
+
+TARGET:
+it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+it is a disease extreme and is into three risk categories low intermediate and high
+
+TARGET:
+there are three risk categories low intermediate and high [end]
+
+PREDICTION:
+it is into three hours categories low stone and high
+
+============================================================================================================================================
+SOURCE:
+saint vincent de paul is a commune in the gironde department in aquitaine in south western france.
+
+TARGET:
+saint vincent de paul gironde is a commune. it is found in the region aquitaine in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+saint vincent de paul is a commune. it is found in the region aquitaine in the gironde department in the southwest of france.
+
+============================================================================================================================================
+SOURCE:
+the common desktop environment lrb rrb is a desktop environment for unix based on the
+
+TARGET:
+the common desktop environment lrb rrb is a desktop environment for it is based on the [end]
+
+PREDICTION:
+the common desktop environment lrb rrb is a desktop environment for

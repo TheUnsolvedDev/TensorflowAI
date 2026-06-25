@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i just want to help you relax.
+
+TARGET:
+je veux juste vous aider à vous [end]
+
+PREDICTION:
+je veux simplement t'aider que ça me pas.
+
+============================================================================================================================================
+SOURCE:
+empty it out.
+
+TARGET:
+[end]
+
+PREDICTION:
+! à l'intérieur de peine le ciel tu passe. bien. désolé. tout.
+
+============================================================================================================================================
+SOURCE:
+i'm scared of the dark.
+
+TARGET:
+j'ai peur de [end]
+
+PREDICTION:
+j'en ai pris
+
+============================================================================================================================================
+SOURCE:
+it looks good on you.
+
+TARGET:
+ça te va bien. [end]
+
+PREDICTION:
+ça beau ! de repos.
+
+============================================================================================================================================
+SOURCE:
+i got lost on my way here.
+
+TARGET:
+je me suis perdu en chemin. [end]
+
+PREDICTION:
+j'y me en chemin. j’ai raison. d'ici. vous posa les amoureux ici. où j'ai là. pas.
+
+============================================================================================================================================
+SOURCE:
+why aren't you talking to me?
+
+TARGET:
+pourquoi ne me parles-tu pas ? [end]
+
+PREDICTION:
+que tu ne me parle pas, ?
+
+============================================================================================================================================
+SOURCE:
+don't you see what's happened?
+
+TARGET:
+ne voyez-vous pas ce qui s'est passé ? [end]
+
+PREDICTION:
+n'y voilà qu'il se trouvait ? passée. quelque chose !
+
+============================================================================================================================================
+SOURCE:
+go and see who it is.
+
+TARGET:
+va voir qui c'est. [end]
+
+PREDICTION:
+allez voir qui c'est. je le fais. d'entre neuf est un ? tout. ça.
+
+============================================================================================================================================
+SOURCE:
+this water is a little
+
+TARGET:
+cette est quelque peu [end]
+
+PREDICTION:
+cette a une peu plus grande
+
+============================================================================================================================================
+SOURCE:
+please write down everything i say.
+
+TARGET:
+veuillez écrire tout ce que je dis. [end]
+
+PREDICTION:
+veuillez lentement tout ce que je dis !

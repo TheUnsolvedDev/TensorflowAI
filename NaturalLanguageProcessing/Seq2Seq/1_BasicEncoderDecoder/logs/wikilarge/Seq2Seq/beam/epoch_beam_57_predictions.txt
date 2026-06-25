@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the new york are an american football team based in east new jersey representing the new york city metropolitan area.
+
+TARGET:
+the new york are an american football team. [end]
+
+PREDICTION:
+some new historical show are based in brooklyn alaska s lake
+
+============================================================================================================================================
+SOURCE:
+lrb rrb lrb june october rrb was a swedish who starred for the royal swedish
+
+TARGET:
+lrb rrb lrb rrb was a swedish [end]
+
+PREDICTION:
+she was the for her mother as well known swedish french and die in.
+
+============================================================================================================================================
+SOURCE:
+however is by far the most popular sport the india team won the and the world world twenty and shared the trophy with
+
+TARGET:
+the india team won the and world cup and the world they shared the champions trophy with [end]
+
+PREDICTION:
+presented world games include the spanish american civil war making along with it by baseball players of million fighting together each other and its founding size
+
+============================================================================================================================================
+SOURCE:
+the national library of china or in is the largest library in asia and one of the largest in the world with a collection of over million
+
+TARGET:
+the national library of china is one of the world s largest found in china. [end]
+
+PREDICTION:
+in green county lrb literally translated park rrb is one of the world s largest ancient countries. gothic national historic center korean which sold china and was released in.
+
+============================================================================================================================================
+SOURCE:
+in november the of the to continue the league with toronto owner decided to the and form a new league the nhl without
+
+TARGET:
+the november annual meeting of the was over by frank who was the the voted to stop [end]
+
+PREDICTION:
+it goes to toronto party which included the red friends supply at that when they had merged with previously new north devices major in recent years making them a line
+
+============================================================================================================================================
+SOURCE:
+a lrb also known as a cd rrb is an used to store digital
+
+TARGET:
+a or cd is a flat round used to store digital [end]
+
+PREDICTION:
+a electronic device has to be released lrb cd and in rrb for using an easy single months to add on october. the other release can have another contract from
+
+============================================================================================================================================
+SOURCE:
+on european and north america technology the set its eyes on based on japanese
+
+TARGET:
+the decided to build based on japanese [end]
+
+PREDICTION:
+chose not like the color anime original design instead was released as on december at many of its world war ii.
+
+============================================================================================================================================
+SOURCE:
+physical is not accepted as a cause for cancer cancer or
+
+TARGET:
+some of the most common include cancer cancer cancer and cancer begins in the [end]
+
+PREDICTION:
+to take a personal life or cancer is the person that cause income from their body.
+
+============================================================================================================================================
+SOURCE:
+media went into in and the tv company became
+
+TARGET:
+went in and the tv company became [end]
+
+PREDICTION:
+there began during becoming the famous british production company.
+
+============================================================================================================================================
+SOURCE:
+have been distributed for free by local and copies of the operating system have been from the website as of may.
+
+TARGET:
+as of may had been free by local and copies of the operating system had been from the web [end]
+
+PREDICTION:
+the have been made free and use since over or from a service.

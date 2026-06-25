@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the tv is broken.
+
+TARGET:
+la télé est cassée. [end]
+
+PREDICTION:
+l'entreprise est
+
+============================================================================================================================================
+SOURCE:
+boston is one of the that i really want to
+
+TARGET:
+boston fait partie des où j'ai vraiment envie [end]
+
+PREDICTION:
+tom peut l'une des comme un point à autre idée. » monnaie que je trouve une femme de plus.
+
+============================================================================================================================================
+SOURCE:
+tom doesn't think it's a good idea.
+
+TARGET:
+tom ne pense pas que ce soit une bonne idée. [end]
+
+PREDICTION:
+personne n'arrive ça parce que vous êtes un très chanceux.
+
+============================================================================================================================================
+SOURCE:
+tom is following mary.
+
+TARGET:
+tom marie. [end]
+
+PREDICTION:
+thomas te manque là.
+
+============================================================================================================================================
+SOURCE:
+tom's speech lasted for three hours.
+
+TARGET:
+le discours de thomas a trois heures. [end]
+
+PREDICTION:
+le film doute trois heures.
+
+============================================================================================================================================
+SOURCE:
+are you all
+
+TARGET:
+êtes-vous ? [end]
+
+PREDICTION:
+avez-vous tous !
+
+============================================================================================================================================
+SOURCE:
+nobody can help you.
+
+TARGET:
+personne ne peut vous aider. [end]
+
+PREDICTION:
+tout ne sache rien nous aide.
+
+============================================================================================================================================
+SOURCE:
+it's time for a break.
+
+TARGET:
+il est temps de faire une pause. [end]
+
+PREDICTION:
+c'est une allée donc bonne.
+
+============================================================================================================================================
+SOURCE:
+it's very isn't it?
+
+TARGET:
+c'est très non ? [end]
+
+PREDICTION:
+il est très n'est-ce simplement pas pas.
+
+============================================================================================================================================
+SOURCE:
+those old were all done away with.
+
+TARGET:
+ces furent toutes au [end]
+
+PREDICTION:
+après de nombreuses films sont tous. fois.

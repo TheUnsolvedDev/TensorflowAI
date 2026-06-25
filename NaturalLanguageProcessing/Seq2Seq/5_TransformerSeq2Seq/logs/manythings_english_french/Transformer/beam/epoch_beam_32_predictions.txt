@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i have a test next week.
+
+TARGET:
+j'ai une la semaine prochaine. [end]
+
+PREDICTION:
+c'est ma semaine par la
+
+============================================================================================================================================
+SOURCE:
+i'm in the mood for something sweet.
+
+TARGET:
+je prendrais bien quelque chose de là. [end]
+
+PREDICTION:
+j'ai la sentiment pour quoi quelque chose ! »
+
+============================================================================================================================================
+SOURCE:
+let's let the workers go home early today.
+
+TARGET:
+aujourd'hui, laissons les ouvriers finir plus tôt. [end]
+
+PREDICTION:
+laissons ses travailleurs se rentrer tôt aujourd'hui. journée.
+
+============================================================================================================================================
+SOURCE:
+they say that you never get over your first love.
+
+TARGET:
+on dit qu'on ne se jamais de son premier amour. [end]
+
+PREDICTION:
+on dit de ne plus t'avoir jamais sur ta première amour.
+
+============================================================================================================================================
+SOURCE:
+let me go!
+
+TARGET:
+laisse-moi y aller ! [end]
+
+PREDICTION:
+laissez-moi m'en sortir.
+
+============================================================================================================================================
+SOURCE:
+tom wants to be rich.
+
+TARGET:
+tom veut être riche. [end]
+
+PREDICTION:
+tom voulait avoir riche.
+
+============================================================================================================================================
+SOURCE:
+it's you who'll make the decision.
+
+TARGET:
+c'est à toi de prendre la décision. [end]
+
+PREDICTION:
+tu ne rien à la bonne décision.
+
+============================================================================================================================================
+SOURCE:
+i wonder if tom is really serious.
+
+TARGET:
+je me demande si tom est vraiment sérieux. [end]
+
+PREDICTION:
+je suis demandé que c'est si tom a de sérieux. ans.
+
+============================================================================================================================================
+SOURCE:
+i was caught in a shower on my way home from school.
+
+TARGET:
+j'ai été pris sous une en de l'école à la maison. [end]
+
+PREDICTION:
+j'avais fait porter de douche chez moi à la maison du vélo.
+
+============================================================================================================================================
+SOURCE:
+the surgeon the wrong leg.
+
+TARGET:
+le la mauvaise jambe. [end]
+
+PREDICTION:
+le mal les affaires la jambe.

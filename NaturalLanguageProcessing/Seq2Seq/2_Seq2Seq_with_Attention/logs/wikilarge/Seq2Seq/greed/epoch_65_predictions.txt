@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+on his return to france he won back with la en re lrb o o rrb jean de paris lrb o o rrb le du
+
+TARGET:
+la re lrb o o rrb [end]
+
+PREDICTION:
+le de village lrb o o rrb
+
+============================================================================================================================================
+SOURCE:
+even before production began the and some of kelly s about the of in the lead role and about the film s proposed
+
+TARGET:
+the actors union actors and some of about having the lead [end]
+
+PREDICTION:
+some of kelly s about the of in the of in the of in the of in the
+
+============================================================================================================================================
+SOURCE:
+by the of london s olympics it teams such as t mobile lrb germany rrb and u.s. service lrb usa rrb.
+
+TARGET:
+the race was by the of london s olympics such teams included t mobile lrb germany rrb and u.s. service lrb usa rrb. [end]
+
+PREDICTION:
+after the of the of the it teams such as lrb netherlands rrb and services for the usa are in the united kingdom and
+
+============================================================================================================================================
+SOURCE:
+in became the first from a non communist country to to the people s republic of china.
+
+TARGET:
+first non communist to fly to the people s republic of china and a service between asia and europe via [end]
+
+PREDICTION:
+in became the first communist country to to the people s republic of china.
+
+============================================================================================================================================
+SOURCE:
+year round at mount allowing to easily get to the top of mountain
+
+TARGET:
+work year round at mount which help to easily get to the top of mountain [end]
+
+PREDICTION:
+year banks to it is to the top of mountain
+
+============================================================================================================================================
+SOURCE:
+a month before for than love bassist who was becoming that he was n t much left to go back to
+
+TARGET:
+a month before for than love was released left to go back to college. [end]
+
+PREDICTION:
+in for than love was becoming that he was n t much left to but was n t much from
+
+============================================================================================================================================
+SOURCE:
+in december the european union and united states both issued formal for the release of
+
+TARGET:
+in december the european union and united states both officially asked the chinese government to release of without any special rules or [end]
+
+PREDICTION:
+in december the european union and united states were introduced in the european union and united states thus in december the european union s
+
+============================================================================================================================================
+SOURCE:
+the m is the longest in the united kingdom and one of the
+
+TARGET:
+the m is the longest in the united kingdom. it is one of the in the country. [end]
+
+PREDICTION:
+the m is the longest in the united kingdom.
+
+============================================================================================================================================
+SOURCE:
+like soldiers is a song by american from his fifth album
+
+TARGET:
+like soldiers is a song by [end]
+
+PREDICTION:
+like the safety is a song by british band
+
+============================================================================================================================================
+SOURCE:
+eventually the term was more commonly applied to the finished product of the s work than to the materials he
+
+TARGET:
+eventually the term was applied to the finished product of the s work. [end]
+
+PREDICTION:
+eventually the term was applied to the finished product of the work.

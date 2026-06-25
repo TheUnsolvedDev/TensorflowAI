@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i know that some of your students don't like you.
+
+TARGET:
+je sais que de tes élèves ne pas. [end]
+
+PREDICTION:
+je sais qu'un entre mes ne vous ressemble pas. la bibliothèque.
+
+============================================================================================================================================
+SOURCE:
+we work together.
+
+TARGET:
+nous travaillons ensemble. [end]
+
+PREDICTION:
+on travaille heures ensemble.
+
+============================================================================================================================================
+SOURCE:
+we have lots to do.
+
+TARGET:
+nous avons beaucoup à faire. [end]
+
+PREDICTION:
+nous ont bonnes aider !
+
+============================================================================================================================================
+SOURCE:
+i was really uncomfortable.
+
+TARGET:
+j'étais vraiment mal à l'aise. [end]
+
+PREDICTION:
+je me très mal à l'aise.
+
+============================================================================================================================================
+SOURCE:
+he was absent from the meeting.
+
+TARGET:
+il a été absent de la réunion. [end]
+
+PREDICTION:
+il fut absent d'un la réunion. dans elle
+
+============================================================================================================================================
+SOURCE:
+we should have a drink.
+
+TARGET:
+nous devrions boire un verre. [end]
+
+PREDICTION:
+l'on devait sortir. dans une petite voiture.
+
+============================================================================================================================================
+SOURCE:
+i see the same people here all the time.
+
+TARGET:
+je vois toujours les personnes ici. [end]
+
+PREDICTION:
+je vis la même personne ici tous les jours.
+
+============================================================================================================================================
+SOURCE:
+it was very different from what i had
+
+TARGET:
+c'était très différent de ce que j'avais [end]
+
+PREDICTION:
+c'était très différent du train. de ville ! en retiré ce était ? » un « fait, je n'ai beaucoup. ans. ».
+
+============================================================================================================================================
+SOURCE:
+you'd better not go.
+
+TARGET:
+vous feriez mieux de ne pas vous y rendre. [end]
+
+PREDICTION:
+tu ne devrais pas te
+
+============================================================================================================================================
+SOURCE:
+i was bored with his speech.
+
+TARGET:
+son discours m'a [end]
+
+PREDICTION:
+mon discours sans chien.

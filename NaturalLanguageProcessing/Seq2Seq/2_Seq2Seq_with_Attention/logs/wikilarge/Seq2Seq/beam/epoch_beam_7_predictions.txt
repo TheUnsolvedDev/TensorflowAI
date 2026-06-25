@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+curtis joseph tied his record for the most career losses in the nhl with.
+
+TARGET:
+owns the record for the most career losses in the nhl with. [end]
+
+PREDICTION:
+phillips is the last and most important win in nhl with.
+
+============================================================================================================================================
+SOURCE:
+saint martin de is a commune in the gironde department in aquitaine in southwestern france.
+
+TARGET:
+it is found in the region aquitaine in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+it lies from province in.
+
+============================================================================================================================================
+SOURCE:
+one month later she claimed three gold medals at her first appearance at the world championships.
+
+TARGET:
+one year later she became one of the stars of the german team with three gold medals in the world championships in italy. in she won three other gold medals in the world cup in sweden and reached also the first place of the world cup in that year. [end]
+
+PREDICTION:
+one of the last surviving in this season she says three silver medal.
+
+============================================================================================================================================
+SOURCE:
+she began piano studies at an early age with a a former student of but when it became clear she had the talent of a professional pianist she was also given lessons by such masters as and johann
+
+TARGET:
+soon she was having piano lessons with famous teachers such as and johann [end]
+
+PREDICTION:
+her first career had to be performed at an early age.
+
+============================================================================================================================================
+SOURCE:
+lrb from the greek meaning one alone and meaning nature rrb or is the position that christ has only one nature his humanity being absorbed by his deity as opposed to the position which holds that christ maintains two one divine and one
+
+TARGET:
+says that the human and divine of christ were combined into one new single lrb rrb nature his human nature was dissolved like a drop of honey in the sea. [end]
+
+PREDICTION:
+means one bag lrb from ancient latin and a two illness rrb
+
+============================================================================================================================================
+SOURCE:
+although not the first economic report on climate change it is significant as the largest and most widely known and discussed report of its
+
+TARGET:
+it is the largest and most widely known and discussed report of its kind. [end]
+
+PREDICTION:
+the original economic plan was in
+
+============================================================================================================================================
+SOURCE:
+the vampire that killed four years ago killed by erin right before the big battle.
+
+TARGET:
+the vampire that killed four years ago. he was killed by erin right before the big battle. [end]
+
+PREDICTION:
+he told that it death of three years. the big battle. his five days in a row.
+
+============================================================================================================================================
+SOURCE:
+despite the light from hurricane grace the nor easter caused extensive coastal damage high seas and powerful
+
+TARGET:
+even though the damage from hurricane grace was mostly small the nor easter it helped to form caused very bad damage along the coast. this storm created extremely high seas as well as powerful wind. [end]
+
+PREDICTION:
+despite this many other countries such as
+
+============================================================================================================================================
+SOURCE:
+the words were set to music by albert von lrb and von finally saw their first major league baseball games and years later respectively rrb.
+
+TARGET:
+the words were written by jack in and the music was made by albert von though neither of them had ever been to a baseball game before. [end]
+
+PREDICTION:
+in were made from boston and by j. h. von jena lrb roh rrb.
+
+============================================================================================================================================
+SOURCE:
+it was composed sometime in the middle of the th century during the qing dynasty.
+
+TARGET:
+the novel was written in the middle of the th century during the qing dynasty. [end]
+
+PREDICTION:
+the house is in and was written sometime at a time during his time. this led by himself.

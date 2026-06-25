@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he ran into the
+
+TARGET:
+il courut dans la classe. [end]
+
+PREDICTION:
+il sur les
+
+============================================================================================================================================
+SOURCE:
+it's
+
+TARGET:
+c'est très triste. [end]
+
+PREDICTION:
+c'est
+
+============================================================================================================================================
+SOURCE:
+please take a seat.
+
+TARGET:
+s'il vous plaît. [end]
+
+PREDICTION:
+prenez place, je vous prie !
+
+============================================================================================================================================
+SOURCE:
+at last we can afford a house.
+
+TARGET:
+on peut enfin une maison. [end]
+
+PREDICTION:
+on peut se permettre nous nous garer une maison.
+
+============================================================================================================================================
+SOURCE:
+watch out! there's a in the road.
+
+TARGET:
+attention ! il y a un de sur la route. [end]
+
+PREDICTION:
+attention ! qu'il y en a pousser dans la !
+
+============================================================================================================================================
+SOURCE:
+it was clean.
+
+TARGET:
+c'était [end]
+
+PREDICTION:
+ce fut propre.
+
+============================================================================================================================================
+SOURCE:
+i can't wait.
+
+TARGET:
+j’ai [end]
+
+PREDICTION:
+je suis
+
+============================================================================================================================================
+SOURCE:
+this is a very
+
+TARGET:
+c'est un très [end]
+
+PREDICTION:
+c'est une très de temps.
+
+============================================================================================================================================
+SOURCE:
+wait here. i'll be back soon.
+
+TARGET:
+attendez ici. je bientôt. [end]
+
+PREDICTION:
+attends ici. je bientôt.
+
+============================================================================================================================================
+SOURCE:
+she suggested that i write to him at once.
+
+TARGET:
+elle a que je lui immédiatement. [end]
+
+PREDICTION:
+elle que je lui immédiatement.

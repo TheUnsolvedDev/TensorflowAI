@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+does he have to run so
+
+TARGET:
+courir si vite ? [end]
+
+PREDICTION:
+a-t-il à courir à marcher si ça ?
+
+============================================================================================================================================
+SOURCE:
+keep tom safe.
+
+TARGET:
+tom. [end]
+
+PREDICTION:
+garde tom en sécurité.
+
+============================================================================================================================================
+SOURCE:
+the study is
+
+TARGET:
+est [end]
+
+PREDICTION:
+est
+
+============================================================================================================================================
+SOURCE:
+no matter i'm not going to give up.
+
+TARGET:
+quoi qu'il je pas. [end]
+
+PREDICTION:
+quoi qu'il je ne vais pas
+
+============================================================================================================================================
+SOURCE:
+have you ever been run
+
+TARGET:
+avez-vous jamais été ? [end]
+
+PREDICTION:
+avez-vous jamais été ?
+
+============================================================================================================================================
+SOURCE:
+i don't belong to any club.
+
+TARGET:
+je ne fais partie [end]
+
+PREDICTION:
+je ne fais partie
+
+============================================================================================================================================
+SOURCE:
+is your father
+
+TARGET:
+est-ce que ton père est riche ? [end]
+
+PREDICTION:
+ton père est-il ?
+
+============================================================================================================================================
+SOURCE:
+i'd like to have an answer.
+
+TARGET:
+je voudrais avoir une réponse. [end]
+
+PREDICTION:
+j'aimerais avoir une réponse.
+
+============================================================================================================================================
+SOURCE:
+we're going to have a test today.
+
+TARGET:
+nous aurons un examen aujourd'hui. [end]
+
+PREDICTION:
+il va avoir un contrôle aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+he made up the whole story.
+
+TARGET:
+il a confectionné toute l'histoire. [end]
+
+PREDICTION:
+il a toute cette histoire.

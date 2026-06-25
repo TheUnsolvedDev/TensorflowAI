@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+events may the remains of saint nicholas are brought to italy.
+
+TARGET:
+events may the remains of saint nicholas were brought to [end]
+
+PREDICTION:
+events of the can be found in italy.
+
+============================================================================================================================================
+SOURCE:
+the accepted program for these is most commonly via other programs such as or
+
+TARGET:
+the program for these is most commonly via [end]
+
+PREDICTION:
+the program produces programs without and
+
+============================================================================================================================================
+SOURCE:
+iv n n lrb born may in m rrb is a spanish footballer who plays for de n in the spanish first division as a
+
+TARGET:
+iv n lrb born may rrb is a spanish football player. he plays for n. [end]
+
+PREDICTION:
+iv n lrb born may rrb is a spanish football player. he plays for and spain national team.
+
+============================================================================================================================================
+SOURCE:
+both the school and the festival supported the underground scene in china and opened the door for over foreign bands in to perform at the festival and throughout the country.
+
+TARGET:
+both the school and the festival supported the underground scene in china and allowed foreign bands in to perform at the festival and throughout the country including and
+
+PREDICTION:
+both the school and the staff and several foreign they were held in the festival countries.
+
+============================================================================================================================================
+SOURCE:
+the which are often to at night are short lived and probably do not
+
+TARGET:
+they are to at they are probably short lived and do not at [end]
+
+PREDICTION:
+the are probably short lived
+
+============================================================================================================================================
+SOURCE:
+points lrb rrb are scored by the team by a circuit around the field through four or without being put
+
+TARGET:
+points lrb rrb are scored by the team by a circuit around the field through four without being put out for example by a ball they
+
+PREDICTION:
+each is the field run by by a or
+
+============================================================================================================================================
+SOURCE:
+full metal is a war film by stanley based on the novel the short by
+
+TARGET:
+full metal is a movie directed by stanley based on the book the short [end]
+
+PREDICTION:
+david plays directed by the boston based on
+
+============================================================================================================================================
+SOURCE:
+one up and her over her head while the other from the mouth and moved
+
+TARGET:
+one up and her over her the other from the mouth and [end]
+
+PREDICTION:
+is and head and her head from her
+
+============================================================================================================================================
+SOURCE:
+most live in complex within the and of western north america though species within the and are also found in and down as
+
+TARGET:
+some species within the and are also found in and can be found down as far as northern south america. [end]
+
+PREDICTION:
+most live in and in and are found in the range and
+
+============================================================================================================================================
+SOURCE:
+as the of which is the basis of modern digital computer is regarded in as one of the of the field of computer
+
+TARGET:
+this is one of the of modern day computer [end]
+
+PREDICTION:
+the of is a of computer that is

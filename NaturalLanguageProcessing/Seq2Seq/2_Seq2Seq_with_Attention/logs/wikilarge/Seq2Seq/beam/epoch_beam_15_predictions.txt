@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+khan lrb rrb born november sometimes credited as shah khan is an indian actor who has been a prominent figure as well as a film producer and television host.
+
+TARGET:
+khan lrb born november rrb is a indian actor. [end]
+
+PREDICTION:
+khan s first english language was born in november. the day is also called shah borneo because of their execution are still a separate problem. most people followed an american movie and emmy
+
+============================================================================================================================================
+SOURCE:
+a number of battles were fought between the british french and danish in the th century and by the end of the th century most of tamil nadu was under british rule.
+
+TARGET:
+finally the british won and by the end of the th century most of the tamil lands came under the british rule. [end]
+
+PREDICTION:
+there were people in a number of battles fought between the st lrb german rrb and by one for some police places.
+
+============================================================================================================================================
+SOURCE:
+eruptions are marked by columns of gas and volcanic ash extending high into the a high layer of the atmosphere.
+
+TARGET:
+eruptions have columns of gas and volcanic ash high into the [end]
+
+PREDICTION:
+the volcanoes moth is a high which forms center where wire and streams are kept in it can make up its solid liquid reaction on it.
+
+============================================================================================================================================
+SOURCE:
+in malaysia s modern life aired in around.
+
+TARGET:
+s modern life is an animated television show that aired on nickelodeon from to. a comic book series also named s modern life was made. [end]
+
+PREDICTION:
+the was a well known example in china. around.
+
+============================================================================================================================================
+SOURCE:
+city of originally appeared as an independent it was along with s world and planet of exile in a volume titled three novels and again in with the same novels in worlds of exile and
+
+TARGET:
+city of was in with s world and planet of exile in a set called three novels and in with the same books in worlds of exile and [end]
+
+PREDICTION:
+it is about his life and its in a book called four short stories but were soon afterwards by three sentimental novels lrb named after the end of exile rrb.
+
+============================================================================================================================================
+SOURCE:
+the other featured match on the card was a submission match for the wwf intercontinental championship between reigning champion chris and chris
+
+TARGET:
+chris benoit defeated chris jericho in a submission match to retain the wwf intercontinental championship lrb rrb benoit forced jericho to submit with the [end]
+
+PREDICTION:
+in he released a memoir of for the raw b ke and they were also submitted by chris raw.
+
+============================================================================================================================================
+SOURCE:
+they have two sons julius robert bay lrb born october rrb and judah lrb born may rrb who were both born in auckland new zealand.
+
+TARGET:
+lawless and have two sons julius robert bay lrb born october rrb and judah lrb born may rrb both born in [end]
+
+PREDICTION:
+the great number je lrb pronounced o rrb also lives in a church called an olive heart with sight christian.
+
+============================================================================================================================================
+SOURCE:
+a lrb sometimes abbreviated c or rrb is a small computer on a single integrated circuit containing a processor core memory and input output
+
+TARGET:
+a lrb abbreviated or c rrb is a high integrated functional computer system on a it contains an integrated processor core memory lrb a small amount of ram program memory or both rrb and input output [end]
+
+PREDICTION:
+a lrb commonly abbreviated the c or as an integrated label is on just with micro and rrb model output files.
+
+============================================================================================================================================
+SOURCE:
+by the s the national parks and wildlife service began managing the site.
+
+TARGET:
+by the s the national parks and wildlife service took over the site. [end]
+
+PREDICTION:
+by national parks of a wildlife system began managing the nhl.
+
+============================================================================================================================================
+SOURCE:
+the southern also known as double australian or two is a large black
+
+TARGET:
+the southern lrb rrb also known as double or two is a large black bird with hard and stiff two red and a big bony on its head called a [end]
+
+PREDICTION:
+the lrb pinyin l t o r cents b rrb is a black velvet shade of red and white.

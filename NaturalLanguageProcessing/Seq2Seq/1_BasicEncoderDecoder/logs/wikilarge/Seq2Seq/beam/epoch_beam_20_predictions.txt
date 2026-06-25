@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it is also widely believed that the size and number of connections in the relates directly to as the in humans occupies a far larger percentage of the brain than any other and it is that as the brain has in size over million years of human evolution the has increased in size
+
+TARGET:
+the is a part of the brain that helps to control behavior. [end]
+
+PREDICTION:
+the origin index is in a rare disease for some of their extinction by age strength of.
+
+============================================================================================================================================
+SOURCE:
+she wrote in a variety of genres poetry short stories children s literature and novels.
+
+TARGET:
+she wrote short stories novels and childrens books. [end]
+
+PREDICTION:
+she wrote many books poetry childrens books.
+
+============================================================================================================================================
+SOURCE:
+wade jr. lrb born january rrb nicknamed flash or d wade is an american professional basketball player for the miami heat.
+
+TARGET:
+wade lrb born january rrb is an american basketball player. [end]
+
+PREDICTION:
+an orange bright is a semi labrador
+
+============================================================================================================================================
+SOURCE:
+a key attraction is the site where the s water flows into the jordan river to which thousands of pilgrims from all over the world come to be every year.
+
+TARGET:
+a key attraction is the site where the water flows into the jordan river. [end]
+
+PREDICTION:
+inside an is the result in salt lake or rich farm thanks for some people see this time to its associated with a foot of his body head lrb feet rrb. they can hear christianity such and on it. as part ghost border of simon san francisco california.
+
+============================================================================================================================================
+SOURCE:
+also called lrb for statements rrb and lrb for written broadcast or otherwise published words rrb is the communication of a statement that makes a claim stated or implied to be that may give an individual business product group government or nation a negative
+
+TARGET:
+if a statement is written such as in a book or in a newspaper it is called [end]
+
+PREDICTION:
+the book is sometimes used by writing to a topic for an online saying lrb about or tear of god rrb.
+
+============================================================================================================================================
+SOURCE:
+sri lrb also spelled and rrb lrb rrb lrb may march rrb is the monastic name of lrb rrb the guru of and
+
+TARGET:
+sri lrb may march rrb was an indian guru and [end]
+
+PREDICTION:
+sri ismail lrb rrb is an ancient legends who settled in the history camp from to by brigadier studies on sheikh tobacco dominated at this period.
+
+============================================================================================================================================
+SOURCE:
+is located kilometres north west of the sydney central business district and is the administrative centre of the local government area of shire.
+
+TARGET:
+geography the shire shire is one of the biggest local government areas of sydney with a population of. [end]
+
+PREDICTION:
+is a railway junction about and south sydney.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the c tes d armor department in bretagne in north western france.
+
+TARGET:
+is a commune. it is found in the region bretagne in the c tes d armor department in the west of france. [end]
+
+PREDICTION:
+is the city gironde first in it can be found as one of several changes on earth international days after its sinking east central lrb german for hungarian lunar simmons a mile off big riot around at la scala near sydney and was named by him.
+
+============================================================================================================================================
+SOURCE:
+takes two different types of parameters and
+
+TARGET:
+takes two different types of parameters parameters and display [end]
+
+PREDICTION:
+each content gives its and information in a particular guide on sesame enterprise taking over various forms called viruses which help computers. there will release many sexual intercourse that is no longer like the other or species herself.
+
+============================================================================================================================================
+SOURCE:
+fc is a cameroonian football club based in
+
+TARGET:
+f.c. is a football club which plays in cameroon. [end]
+
+PREDICTION:
+football club is one team. there are many other clubs and player. in latin.

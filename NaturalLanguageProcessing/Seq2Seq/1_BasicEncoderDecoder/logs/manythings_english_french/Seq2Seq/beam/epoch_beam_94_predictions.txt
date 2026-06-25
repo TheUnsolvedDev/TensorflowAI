@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+this isn't supposed to be happening.
+
+TARGET:
+ce n'est pas supposé arriver. [end]
+
+PREDICTION:
+ça ne se tombe pas. ça. un bien.
+
+============================================================================================================================================
+SOURCE:
+i know where they are.
+
+TARGET:
+je sais où ils [end]
+
+PREDICTION:
+je sais où elles de lui.
+
+============================================================================================================================================
+SOURCE:
+tom didn't even know who that was.
+
+TARGET:
+tom ne savait même pas qui [end]
+
+PREDICTION:
+tom n'en sait même qui était personne.
+
+============================================================================================================================================
+SOURCE:
+who did it?
+
+TARGET:
+qui l'a fait ? [end]
+
+PREDICTION:
+qu'est-ce qui l'a fait ceci.
+
+============================================================================================================================================
+SOURCE:
+i just want to look at it, that's all.
+
+TARGET:
+je veux juste le c'est tout. [end]
+
+PREDICTION:
+juste envie qu'on m'en soit c'est demander.
+
+============================================================================================================================================
+SOURCE:
+everyone's asleep.
+
+TARGET:
+tout le monde est endormi. [end]
+
+PREDICTION:
+tout la bouteille du
+
+============================================================================================================================================
+SOURCE:
+please wait outside of the house.
+
+TARGET:
+veuillez attendre à de la maison. [end]
+
+PREDICTION:
+attends à la voiture, s'il toi vois là !
+
+============================================================================================================================================
+SOURCE:
+i'm to do the right thing.
+
+TARGET:
+je suis à faire ce qui est juste. [end]
+
+PREDICTION:
+je prends bonne à faire cette chance.
+
+============================================================================================================================================
+SOURCE:
+it's a that you're not coming.
+
+TARGET:
+il est dommage que vous ne veniez pas. [end]
+
+PREDICTION:
+c'est de ne bizarre pas. vacances. des fenêtres à glace.
+
+============================================================================================================================================
+SOURCE:
+you are not japanese.
+
+TARGET:
+tu n'es pas japonaise. [end]
+
+PREDICTION:
+vous n'êtes pas japonaise. comme jeunes. je vais te joindre !

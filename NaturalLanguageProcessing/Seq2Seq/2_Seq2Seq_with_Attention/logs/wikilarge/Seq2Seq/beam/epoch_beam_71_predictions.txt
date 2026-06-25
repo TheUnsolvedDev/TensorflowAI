@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+their is they take a range of and and a high of which they find under the of and
+
+TARGET:
+they are they eat a range of tree and which they find under the of trees such as and [end]
+
+PREDICTION:
+the and they find a number of types such family is without any cells.
+
+============================================================================================================================================
+SOURCE:
+the drive in was built in by local resident juan lrb may june rrb.
+
+TARGET:
+snow drive in is a historic small and along a part of what used to be route in arizona usa. [end]
+
+PREDICTION:
+it made in by the united nations juan union lrb may february june. munich poland netherlands and w minnesota rrb. at summer east took place. of its real name was
+
+============================================================================================================================================
+SOURCE:
+town football club is an english football club based in who play in league two the fourth of english
+
+TARGET:
+town f.c. is a football club which plays in england. [end]
+
+PREDICTION:
+go home are a english clubs club plays the present in their bank each year two across until one of them is based down on both team half lrb rd
+
+============================================================================================================================================
+SOURCE:
+today the local economy is largely commercial and with the largest being a
+
+TARGET:
+today the local economy is mostly and with the largest being a clothing [end]
+
+PREDICTION:
+today the local work has an important level and with a largest large but like any other civil services create mainly for it. however under this way it is now
+
+============================================================================================================================================
+SOURCE:
+these grew into the party to a sound and government.
+
+TARGET:
+these grew into the party which wanted a sound and strong government and was by the democratic [end]
+
+PREDICTION:
+they live a computer on their side and government government.
+
+============================================================================================================================================
+SOURCE:
+is s most popular tourist on account of its to the is now the town s principal
+
+TARGET:
+is s most popular place because it is near to the beautiful ice is now the town s main [end]
+
+PREDICTION:
+it can lies in and were created by its end to the back of until his father was head duke
+
+============================================================================================================================================
+SOURCE:
+the term method is also sometimes used to refer to the of music books and or audio recordings which have been published as part of its music
+
+TARGET:
+the term method is also used to mean only the music books and [end]
+
+PREDICTION:
+it can also mean a document called the famous fact in people who are used as far and to no difficult for music books written by holiday of national languages.
+
+============================================================================================================================================
+SOURCE:
+across from the church is the town hall or
+
+TARGET:
+across from the church is the town [end]
+
+PREDICTION:
+across in a town conducted by the law was named after her. o margaret him soon as that year. it is also called henry s.
+
+============================================================================================================================================
+SOURCE:
+the la a weather which conditions to eastern australia was the since.
+
+TARGET:
+la a is an unusual weather which weather to eastern australia. the la a was the strongest since. [end]
+
+PREDICTION:
+the highest heat weather administrative level. this category
+
+============================================================================================================================================
+SOURCE:
+in december ten was as one of the among the nations by the state of
+
+TARGET:
+in december ten was as part of the the nations by the state of [end]
+
+PREDICTION:
+in was an agreement between december ten on first persian navy for a system and stated it is to william the nations of signed by government peace with king.

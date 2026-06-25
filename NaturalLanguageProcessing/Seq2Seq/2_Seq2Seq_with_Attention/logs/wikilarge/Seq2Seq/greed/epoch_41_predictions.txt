@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the of also started to increase as things such as and other were added to the
+
+TARGET:
+began coming into style during the s and s. early were simply which had seats in them. [end]
+
+PREDICTION:
+the of also started to increase the things such as and other
+
+============================================================================================================================================
+SOURCE:
+it is believed that large lrb km rrb neptune could jupiter by an order of
+
+TARGET:
+s o. it is believed that large lrb km rrb neptune could the jupiter [end]
+
+PREDICTION:
+it was believed that large walls could jupiter and an order of jupiter
+
+============================================================================================================================================
+SOURCE:
+he previously played for the lrb professional baseball rrb new york texas and washington
+
+TARGET:
+he has used to play with the new york texas and washington before the [end]
+
+PREDICTION:
+he played for the cleveland
+
+============================================================================================================================================
+SOURCE:
+this may for example while to extensive dna damage through the response system.
+
+TARGET:
+this may happen for example when there is dna damage through the system. [end]
+
+PREDICTION:
+this may for while to the
+
+============================================================================================================================================
+SOURCE:
+to the is the debut album released by the swedish power metal band in.
+
+TARGET:
+to the was the first album from the swedish power metal band [end]
+
+PREDICTION:
+to the is the debut album by the swedish power metal band in.
+
+============================================================================================================================================
+SOURCE:
+some focus on games from one language to
+
+TARGET:
+some games from one language to [end]
+
+PREDICTION:
+some important things on games from one languages to games from one century
+
+============================================================================================================================================
+SOURCE:
+the is s fourth novel first published in and inspired in part by the life of
+
+TARGET:
+the is a novel by [end]
+
+PREDICTION:
+the is a based
+
+============================================================================================================================================
+SOURCE:
+the words under god for example are in this copy from the phrase that this nation lrb under god rrb have a new birth of in order for the
+
+TARGET:
+the words under god for example are in this copy from the phrase that this nation lrb under god rrb have a new birth of if the
+
+PREDICTION:
+who are in this person from the word that the word that does not could be confused with the fact not this copy comes from the person who started
+
+============================================================================================================================================
+SOURCE:
+is a album featuring the group performance in mtv
+
+TARGET:
+is an album of the american hard rock heavy metal band s performance on mtv on august. [end]
+
+PREDICTION:
+is a album by
+
+============================================================================================================================================
+SOURCE:
+it is the capital of the canton of and of the district of
+
+TARGET:
+it is also the capital of the canton of [end]
+
+PREDICTION:
+is a town in the center of

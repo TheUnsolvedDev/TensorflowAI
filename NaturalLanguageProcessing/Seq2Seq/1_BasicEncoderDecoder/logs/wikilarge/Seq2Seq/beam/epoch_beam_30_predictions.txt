@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+scoring is by and tens as in tennis in this manner or victory of a game the team which wins games is final winner of the match.
+
+TARGET:
+scoring is by as in tennis and the team which wins games is final winner of the match. [end]
+
+PREDICTION:
+playing football matches play is in an event. this includes the winner of both football.
+
+============================================================================================================================================
+SOURCE:
+l cl is a commune in the department of ain and the region of rh ne alpes in eastern france.
+
+TARGET:
+it is found in the region rh ne alpes in the ain department in the east of france. [end]
+
+PREDICTION:
+stockholm right also runs in national park are a grand spain in.
+
+============================================================================================================================================
+SOURCE:
+the area of the present district of was formerly part of the county of the mark which later belonged to prussia.
+
+TARGET:
+the area was known as for a long time. [end]
+
+PREDICTION:
+the name to left this city became an official place of then and renamed on december. they withdrew his college from april.
+
+============================================================================================================================================
+SOURCE:
+to empress lrb no mikoto rrb traditional dates.
+
+TARGET:
+to empress lrb no mikoto rrb brown p. p. pp. [end]
+
+PREDICTION:
+a successor to emperor miss puerto as lrb rrb is called by his family name of two quarters the three other finds which he must use like this sort method for her. because it tries only in the loss with getting from him.
+
+============================================================================================================================================
+SOURCE:
+dean originally started his career with based rovers before moving on to professional team everton the club he had supported as a child where he became one of the most prolific goal in english football history.
+
+TARGET:
+william dixie dean simply known as dixie dean was an english football player. [end]
+
+PREDICTION:
+education burnside had an their nickname or lead guitar in s fa ni lrb spanish rrb where it was joined on by simon o brien captain and later louis amazon
+
+============================================================================================================================================
+SOURCE:
+ufficiale omri lrb born june rrb is an italian professional footballer who plays as a defender for serie a club milan.
+
+TARGET:
+lrb born june rrb is an italian football player. he plays for milan. [end]
+
+PREDICTION:
+plays lrb born february rrb is an alternate short name and won three japanese poet who lived in italy for a long time.
+
+============================================================================================================================================
+SOURCE:
+structure the glands are compound glands each approximately the size of a
+
+TARGET:
+the glands are about the size of a [end]
+
+PREDICTION:
+structure of the worms republican lice scale season lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+this traditional japanese cloth making process requires many steps all performed by hand.
+
+TARGET:
+this traditional japanese banana cloth making process has many steps all performed by hand. [end]
+
+PREDICTION:
+itself when using japanese fit and player to their spiritual
+
+============================================================================================================================================
+SOURCE:
+of the british band commissioned to create the cover art for the band s album the and video document their american tour.
+
+TARGET:
+she filmed a north american tour of the band. [end]
+
+PREDICTION:
+previously fans of musical video their rivals she started the radio show that replaced by american sitcom which followed it was in mid th to be known than the uk canada in.
+
+============================================================================================================================================
+SOURCE:
+in the years was in charge of the first esperanto courses for a few schools in
+
+TARGET:
+was the leader of the warsaw esperanto society and the polish esperanto society for a long time. in he became the director of the grammar section of the esperanto academy. [end]
+
+PREDICTION:
+years aung then first used to grade swimming at the university of california. in this time is chosen as well for his family. it also became home junior coach where they are successful

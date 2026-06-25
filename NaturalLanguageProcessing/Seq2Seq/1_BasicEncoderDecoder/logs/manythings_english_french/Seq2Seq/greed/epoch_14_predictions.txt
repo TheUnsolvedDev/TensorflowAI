@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+everything's going to work out.
+
+TARGET:
+tout [end]
+
+PREDICTION:
+tout va
+
+============================================================================================================================================
+SOURCE:
+cities and along the river in central china are with the country's worst in more than 50 years.
+
+TARGET:
+les villes et les le long du fleuve au centre de la sont aux prises avec la pire que le pays ait connu depuis plus de cinquante
+
+PREDICTION:
+les villes les de personnes du gros marché mais le fer dans la maison de nombreuses
+
+============================================================================================================================================
+SOURCE:
+that's not good for your health.
+
+TARGET:
+ce n'est pas bon pour ta santé. [end]
+
+PREDICTION:
+ce n'est pas bon pour ta santé.
+
+============================================================================================================================================
+SOURCE:
+did i leave anything out?
+
+TARGET:
+ai-je quoi que ce soit ? [end]
+
+PREDICTION:
+est-ce que je viens de bouger quelque chose ?
+
+============================================================================================================================================
+SOURCE:
+don't call the police.
+
+TARGET:
+pas la police. [end]
+
+PREDICTION:
+appelez la police pas ?
+
+============================================================================================================================================
+SOURCE:
+let's take a coffee break.
+
+TARGET:
+faisons une pause café. [end]
+
+PREDICTION:
+faisons une pause café.
+
+============================================================================================================================================
+SOURCE:
+what are you doing in my room?
+
+TARGET:
+que faites-vous dans ma chambre ? [end]
+
+PREDICTION:
+que fais-tu dans ma chambre ?
+
+============================================================================================================================================
+SOURCE:
+you'll be asleep by the time your father gets home.
+
+TARGET:
+vous serez au moment où votre père arrivera à la maison. [end]
+
+PREDICTION:
+tu seras endormi au temps où ton père arrivera à la maison.
+
+============================================================================================================================================
+SOURCE:
+my wife is a good manager.
+
+TARGET:
+ma femme est une bonne [end]
+
+PREDICTION:
+ma femme est bonne
+
+============================================================================================================================================
+SOURCE:
+i don't eat as much as you do.
+
+TARGET:
+je ne mange pas autant que toi. [end]
+
+PREDICTION:
+je ne mange pas autant que vous.

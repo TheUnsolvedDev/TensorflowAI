@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+what's your name?
+
+TARGET:
+[end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+then you think it might have worked out?
+
+TARGET:
+why not? but that's not how things wound up. i'm with lenny, your friend. and there it ends. [end]
+
+PREDICTION:
+he was
+
+============================================================================================================================================
+SOURCE:
+no problem, if you've seen one what's up?
+
+TARGET:
+it's our friend the boy detective. he's around again. [end]
+
+PREDICTION:
+nothing, just
+
+============================================================================================================================================
+SOURCE:
+yes! yes! er, on the yes, majesty.
+
+TARGET:
+but this is [end]
+
+PREDICTION:
+i know, i know.
+
+============================================================================================================================================
+SOURCE:
+don't kid yourself. that son of a bitch is dangerous. he's watching us like a
+
+TARGET:
+he told me he was turning in [end]
+
+PREDICTION:
+don't say that.
+
+============================================================================================================================================
+SOURCE:
+married?
+
+TARGET:
+engaged. plan on doing it this summer. you still married? [end]
+
+PREDICTION:
+yeah.
+
+============================================================================================================================================
+SOURCE:
+i was just him! bobby, i had to tell him that to get his guard down. just like you told jake you was going to kill me!
+
+TARGET:
+you lied to me all all lies. your mother, your father, what story are you on now? how come the town didn't know you was his daughter? [end]
+
+PREDICTION:
+yeah, i know, i know.
+
+============================================================================================================================================
+SOURCE:
+something funny that happened to you while you were doing a job.
+
+TARGET:
+i gotta all this shit? [end]
+
+PREDICTION:
+i know what i mean.
+
+============================================================================================================================================
+SOURCE:
+i can check on that for you, maybe we can take a tour --
+
+TARGET:
+ok. [end]
+
+PREDICTION:
+fine.
+
+============================================================================================================================================
+SOURCE:
+sorry to interrupt you, mr but i have a message for you.
+
+TARGET:
+what is it? [end]
+
+PREDICTION:
+i think i will.

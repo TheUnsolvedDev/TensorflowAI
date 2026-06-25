@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i love the way you dance.
+
+TARGET:
+j'aime la façon dont tu [end]
+
+PREDICTION:
+l'amour que tu de danser.
+
+============================================================================================================================================
+SOURCE:
+i was unable to prevent this.
+
+TARGET:
+je fus incapable ceci. [end]
+
+PREDICTION:
+incapable de ne supposé pas prendre. ensemble. ! au plaisir.
+
+============================================================================================================================================
+SOURCE:
+i need something to eat.
+
+TARGET:
+j'ai besoin de manger quelque chose. [end]
+
+PREDICTION:
+il m'en faut une rien envie avec manger. on m'a arrêté. d'ici. mes de manger dans un heures. à fois.
+
+============================================================================================================================================
+SOURCE:
+are you up for it?
+
+TARGET:
+y es-tu prêt ? [end]
+
+PREDICTION:
+y êtes-vous prêtes ?
+
+============================================================================================================================================
+SOURCE:
+i caught a cold.
+
+TARGET:
+j'ai un rhume. [end]
+
+PREDICTION:
+j'ai attrapé l'avenir.
+
+============================================================================================================================================
+SOURCE:
+the price doesn't
+
+TARGET:
+le prix ne comprend pas la [end]
+
+PREDICTION:
+le cours a pas de froid
+
+============================================================================================================================================
+SOURCE:
+i'm sorry, but we're out of
+
+TARGET:
+je suis désolé, mais nous sommes en de [end]
+
+PREDICTION:
+je suis désolé, tom ne reste plus. entre nous
+
+============================================================================================================================================
+SOURCE:
+i figured i might find you here.
+
+TARGET:
+j'ai songé qu'il se pourrait que je te trouve ici. [end]
+
+PREDICTION:
+j'ai songé qu'il pouvait vous trouver là.
+
+============================================================================================================================================
+SOURCE:
+the died at a hospital in boston.
+
+TARGET:
+la est morte à l'hôpital de boston. [end]
+
+PREDICTION:
+le est entré à l'hôpital dans boston.
+
+============================================================================================================================================
+SOURCE:
+leave it to me.
+
+TARGET:
+laisse-moi m'en [end]
+
+PREDICTION:
+viens !

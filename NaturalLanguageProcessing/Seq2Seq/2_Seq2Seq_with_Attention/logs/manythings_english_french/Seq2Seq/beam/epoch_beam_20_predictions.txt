@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i take pride in what i do.
+
+TARGET:
+je suis fier de ce que je fais. [end]
+
+PREDICTION:
+j'y pour ce mot. cela.
+
+============================================================================================================================================
+SOURCE:
+you're lucky you didn't get shot.
+
+TARGET:
+tu as de la chance de ne pas t'être fait tirer dessus. [end]
+
+PREDICTION:
+vous affaires de ne nous pas casser les mensonges.
+
+============================================================================================================================================
+SOURCE:
+are you kids hungry?
+
+TARGET:
+les enfants, avez-vous faim ? [end]
+
+PREDICTION:
+avez-vous récemment prévu des enfants.
+
+============================================================================================================================================
+SOURCE:
+we all agreed.
+
+TARGET:
+nous sommes toutes tombées d'accord. [end]
+
+PREDICTION:
+nous sommes tous comme ça.
+
+============================================================================================================================================
+SOURCE:
+he told me to be here at noon.
+
+TARGET:
+il m'a dit d'être ici à midi. [end]
+
+PREDICTION:
+il m'avait fait part en l'après-midi.
+
+============================================================================================================================================
+SOURCE:
+she loves shopping.
+
+TARGET:
+elle adore faire des [end]
+
+PREDICTION:
+pas vous rendre les emplettes. !
+
+============================================================================================================================================
+SOURCE:
+she will give a party next week.
+
+TARGET:
+elle une fête la semaine prochaine. [end]
+
+PREDICTION:
+d'une soirée semaine prochaine. bien. en fais ? bientôt. j'y trouve ma semaine, elle le cours d'aller vous soit bon ! on voudrait la porte.
+
+============================================================================================================================================
+SOURCE:
+i'd rather read.
+
+TARGET:
+je préfère lire. [end]
+
+PREDICTION:
+je préfèrerais lire.
+
+============================================================================================================================================
+SOURCE:
+don't forget to fill the with
+
+TARGET:
+n'oublie pas de remplir le d'essence. [end]
+
+PREDICTION:
+n'oublie pas d'apporter avec les mises en arrière. au fil des autres.
+
+============================================================================================================================================
+SOURCE:
+this is the dictionary i told you about yesterday.
+
+TARGET:
+c'est le dictionnaire dont je t'ai parlé hier. [end]
+
+PREDICTION:
+c'est un dictionnaire qui que j'ai volé mon endroit hier. bien. voici pas la journée, ?

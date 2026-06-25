@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a city in county iowa united states.
+
+TARGET:
+is a city of iowa in the united states. [end]
+
+PREDICTION:
+is a city of iowa in the united states.
+
+============================================================================================================================================
+SOURCE:
+the host city to its country s olympic committee if more than one city from the same country a to its the national committee typically holds an
+
+TARGET:
+the process starts when a city to host the games to its country s olympic group. if more than one city from the same country gives a to
+
+PREDICTION:
+the independent city of the country was the most countries where the
+
+============================================================================================================================================
+SOURCE:
+initially to such a major project in was finally to the commission and began work on his saint fran d
+
+TARGET:
+at first he did not want to start such a large work but in he was to the commission and began work on his saint fran d
+
+PREDICTION:
+in to the to write his work in paris in and
+
+============================================================================================================================================
+SOURCE:
+hurricane karl traveled generally northeast and to a tropical storm as it passed the
+
+TARGET:
+it later became tropical storm karl and then hurricane [end]
+
+PREDICTION:
+november quebec north northeast and passed the cape
+
+============================================================================================================================================
+SOURCE:
+pictures is a christian film production company based in
+
+TARGET:
+pictures is a movie making company based in georgia. [end]
+
+PREDICTION:
+pictures is a movie based in it was published by and
+
+============================================================================================================================================
+SOURCE:
+david had made a royal around after his defeat of of
+
+TARGET:
+david i made a royal around after his defeat of of [end]
+
+PREDICTION:
+began to his around the royal
+
+============================================================================================================================================
+SOURCE:
+bbc radio live sports is an additional digital radio service provided by the bbc via digital radio and the digital satellite digital and digital cable television services in
+
+TARGET:
+bbc radio live sports extra is a digital radio station from the [end]
+
+PREDICTION:
+the bbc radio live sports features on digital channel is
+
+============================================================================================================================================
+SOURCE:
+the of these territories powers to them by the commonwealth and the commonwealth parliament the power to and to transfer powers to or from the
+
+TARGET:
+the of these territories have powers given to them by the the commonwealth parliament the power to and to give or take [end]
+
+PREDICTION:
+there are powers of the powers of the commonwealth by the territories that the and to the territories of and the
+
+============================================================================================================================================
+SOURCE:
+the station is on the victoria line and the london gospel to line in zone and is the least used station on the victoria line million
+
+TARGET:
+the station is on the victoria line and the london gospel to line in [end]
+
+PREDICTION:
+the station is on tube station which is the john and
+
+============================================================================================================================================
+SOURCE:
+the trade with is important above all in
+
+TARGET:
+the trade with is important mainly in [end]
+
+PREDICTION:
+the trade is called

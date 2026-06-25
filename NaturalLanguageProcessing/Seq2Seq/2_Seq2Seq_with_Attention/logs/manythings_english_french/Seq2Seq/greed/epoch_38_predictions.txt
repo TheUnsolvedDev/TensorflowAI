@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+take
+
+TARGET:
+prenez les [end]
+
+PREDICTION:
+prends des
+
+============================================================================================================================================
+SOURCE:
+it's nice today.
+
+TARGET:
+il fait bon aujourd'hui. [end]
+
+PREDICTION:
+il fait beau aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+to drive a you need a license.
+
+TARGET:
+vous avez besoin d'un permis pour conduire une voiture. [end]
+
+PREDICTION:
+pour conduire une voiture, on a besoin d'un
+
+============================================================================================================================================
+SOURCE:
+i've three
+
+TARGET:
+j'ai pris trois [end]
+
+PREDICTION:
+j'ai pris trois cents
+
+============================================================================================================================================
+SOURCE:
+i'm sorry, but my mother is out at the moment.
+
+TARGET:
+désolé, ma mère n'est pas là pour le moment. [end]
+
+PREDICTION:
+je suis désolé mais ma mère est au moment.
+
+============================================================================================================================================
+SOURCE:
+i'm really not interested in history.
+
+TARGET:
+je ne suis vraiment pas intéressée par l'histoire. [end]
+
+PREDICTION:
+je ne suis vraiment pas intéressé par l'histoire.
+
+============================================================================================================================================
+SOURCE:
+i wonder how much time we've so far.
+
+TARGET:
+je me demande combien de temps nous avons jusqu'à présent. [end]
+
+PREDICTION:
+je me demande combien de temps nous sommes jusqu'à présent.
+
+============================================================================================================================================
+SOURCE:
+what time is your
+
+TARGET:
+à quelle heure les ? [end]
+
+PREDICTION:
+à quelle heure est ton rendez-vous ?
+
+============================================================================================================================================
+SOURCE:
+how much did they pay you?
+
+TARGET:
+combien vous ont-elles ? [end]
+
+PREDICTION:
+combien ?
+
+============================================================================================================================================
+SOURCE:
+the results were
+
+TARGET:
+les résultats étaient [end]
+
+PREDICTION:
+les résultats ont été

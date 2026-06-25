@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+prices dropped suddenly.
+
+TARGET:
+les prix ont baissé [end]
+
+PREDICTION:
+les prix se sont plus jolie.
+
+============================================================================================================================================
+SOURCE:
+i'll bring it to you tomorrow.
+
+TARGET:
+je vous demain. [end]
+
+PREDICTION:
+je t'appellerai demain. de plus. !
+
+============================================================================================================================================
+SOURCE:
+tom said he loved me, too.
+
+TARGET:
+tom a dit qu'il aussi. [end]
+
+PREDICTION:
+tom dit aussi que aussi. plus.
+
+============================================================================================================================================
+SOURCE:
+our dog seldom
+
+TARGET:
+notre chien mord rarement. [end]
+
+PREDICTION:
+notre chien s'est rarement levé. par les jours.
+
+============================================================================================================================================
+SOURCE:
+i didn't see you come in.
+
+TARGET:
+je ne vous ai pas vus entrer. [end]
+
+PREDICTION:
+pas je n'y ai vus entrer. !
+
+============================================================================================================================================
+SOURCE:
+it's none of your concern.
+
+TARGET:
+ce n'est pas votre affaire. [end]
+
+PREDICTION:
+il n'y aucun problème.
+
+============================================================================================================================================
+SOURCE:
+he lost face.
+
+TARGET:
+il a perdu la face. [end]
+
+PREDICTION:
+on a éclaté en face. ans.
+
+============================================================================================================================================
+SOURCE:
+new york is a big city.
+
+TARGET:
+new york est une grande ville. [end]
+
+PREDICTION:
+la nouvelle robe se trouve une grande ville de
+
+============================================================================================================================================
+SOURCE:
+there is no hope of success.
+
+TARGET:
+il n'y a aucune chance de réussite. [end]
+
+PREDICTION:
+il ne fait aucune de succès. à la situation. ! bien.
+
+============================================================================================================================================
+SOURCE:
+he's everybody's friend.
+
+TARGET:
+il est l'ami de tout le monde. [end]
+
+PREDICTION:
+ça est

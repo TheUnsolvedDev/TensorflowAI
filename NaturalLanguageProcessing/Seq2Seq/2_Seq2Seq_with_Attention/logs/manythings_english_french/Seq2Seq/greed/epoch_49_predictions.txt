@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+between you and me, i don't like our new team
+
+TARGET:
+de toi à moi, je n'apprécie pas notre [end]
+
+PREDICTION:
+entre toi et moi ne plus à notre nouvel
+
+============================================================================================================================================
+SOURCE:
+i knew tom wasn't telling the truth.
+
+TARGET:
+je savais que tom ne disait pas la vérité. [end]
+
+PREDICTION:
+je savais que tom ne disait pas la vérité.
+
+============================================================================================================================================
+SOURCE:
+this several hundred people.
+
+TARGET:
+ce peut plusieurs de personnes. [end]
+
+PREDICTION:
+cette a plusieurs personnes
+
+============================================================================================================================================
+SOURCE:
+do you always people that way?
+
+TARGET:
+est-ce que tu toujours les gens de cette façon ? [end]
+
+PREDICTION:
+toujours des de cette ?
+
+============================================================================================================================================
+SOURCE:
+i didn't say it made sense.
+
+TARGET:
+je n'ai pas dit que c'était [end]
+
+PREDICTION:
+je n'ai pas dit cela
+
+============================================================================================================================================
+SOURCE:
+such trouble from
+
+TARGET:
+ces problèmes sont le résultat de [end]
+
+PREDICTION:
+ces problèmes d'une
+
+============================================================================================================================================
+SOURCE:
+tom and mary were the first to arrive.
+
+TARGET:
+tom et marie furent les à arriver. [end]
+
+PREDICTION:
+tom et marie ont été pleine à avant.
+
+============================================================================================================================================
+SOURCE:
+i didn't know that tom didn't know how to do that.
+
+TARGET:
+je ne savais pas que tom ne savait pas le faire. [end]
+
+PREDICTION:
+je ne savais pas que tom ne savait pas faire ça.
+
+============================================================================================================================================
+SOURCE:
+tom was taken by surprise.
+
+TARGET:
+tom a été pris au [end]
+
+PREDICTION:
+tom a été pris par surprise.
+
+============================================================================================================================================
+SOURCE:
+they her to be the
+
+TARGET:
+ils l'ont pour être [end]
+
+PREDICTION:
+ils la être le

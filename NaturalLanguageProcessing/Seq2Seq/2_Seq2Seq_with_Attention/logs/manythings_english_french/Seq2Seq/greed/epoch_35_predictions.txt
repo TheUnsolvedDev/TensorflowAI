@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i plan to send my kids to private school.
+
+TARGET:
+j'envisage d'envoyer mes enfants dans une école privée. [end]
+
+PREDICTION:
+je prévois de mettre mes enfants au pendant mes
+
+============================================================================================================================================
+SOURCE:
+please teach me french.
+
+TARGET:
+le français, s'il vous plaît. [end]
+
+PREDICTION:
+le français, s'il te plaît.
+
+============================================================================================================================================
+SOURCE:
+i didn't know what to say.
+
+TARGET:
+je ne savais pas quoi dire. [end]
+
+PREDICTION:
+je ne savais quoi dire.
+
+============================================================================================================================================
+SOURCE:
+the letter was written by tom.
+
+TARGET:
+la lettre fut écrite par tom. [end]
+
+PREDICTION:
+la lettre a été écrite par tom.
+
+============================================================================================================================================
+SOURCE:
+tom is too young to go to school.
+
+TARGET:
+tom est trop jeune pour aller à l'école. [end]
+
+PREDICTION:
+tom est trop jeune pour aller à l'école.
+
+============================================================================================================================================
+SOURCE:
+which beach do you like to go to?
+
+TARGET:
+à quelle plage aimes-tu aller ? [end]
+
+PREDICTION:
+quelle plage aimez-vous aller ?
+
+============================================================================================================================================
+SOURCE:
+come over here and sit down.
+
+TARGET:
+viens ici et [end]
+
+PREDICTION:
+viens ici et
+
+============================================================================================================================================
+SOURCE:
+what do you like to do in your free time?
+
+TARGET:
+qu'aimes-tu faire de ton temps libre ? [end]
+
+PREDICTION:
+qu'aimes-tu faire de ton temps libre ?
+
+============================================================================================================================================
+SOURCE:
+how long have you been in jail?
+
+TARGET:
+combien de temps as-tu été en prison ? [end]
+
+PREDICTION:
+combien de temps avez-vous été en prison ?
+
+============================================================================================================================================
+SOURCE:
+that's not important for you to know.
+
+TARGET:
+il n'importe pas que tu le saches. [end]
+
+PREDICTION:
+ce n'est pas important pour vous de le savoir.

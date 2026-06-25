@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a municipality in the lrb constituency rrb of in the canton of st. in switzerland.
+
+TARGET:
+is a village and municipality near st. gallen in the canton of st. gallen in switzerland. [end]
+
+PREDICTION:
+it lies near of st. petersburg in switzerland as a village called the mosque. he was located between two kilometers lrb mi rrb.
+
+============================================================================================================================================
+SOURCE:
+it was written by all band members prior to their debut album silent
+
+TARGET:
+it was written by all band members for their album silent [end]
+
+PREDICTION:
+it was written for by members and is a song from new band s debut ep called silent woods.
+
+============================================================================================================================================
+SOURCE:
+lrb latin from greek motion or rrb is a of and in the upper stomach with an to
+
+TARGET:
+is a general feeling of and in the stomach often with the to [end]
+
+PREDICTION:
+lrb plural o rrb or meta means it is called the lower floor in a mass and an airplane that was made up to him.
+
+============================================================================================================================================
+SOURCE:
+in eddie left for spain to fly in the yankee squadron for the spanish in the spanish civil war with frederic lord bertrand and gordon
+
+TARGET:
+in eddie left for spain to be a pilot in the spanish american war which was against the law. [end]
+
+PREDICTION:
+he took the name of spain after became a city and later renamed it on august.
+
+============================================================================================================================================
+SOURCE:
+lrb born march rrb usually known as jimmy floyd is a dutch former football striker who played for various clubs in the netherlands portugal england and spain as well as the dutch national team.
+
+TARGET:
+jimmy floyd lrb born march rrb is a former dutch football player. he has played for netherlands national team. [end]
+
+PREDICTION:
+he also plays in netherlands germany s major lrb nba rrb. they have played for various football leagues national team. the population is about to people who live on their land.
+
+============================================================================================================================================
+SOURCE:
+the hong kong government had previously commissioned a study in the s to find solutions to the growing traffic problem caused by the expansion of the territory s economy.
+
+TARGET:
+building mtr hong kong s growing economy caused a lot of traffic problems. [end]
+
+PREDICTION:
+there is also the for a variety of meetings called statistics from all countries s safety.
+
+============================================================================================================================================
+SOURCE:
+while the state of israel offered citizenship often declined lebanese jews were frequent targets of islamic militant groups since.
+
+TARGET:
+lebanese jews became targets to islamic militant groups since. [end]
+
+PREDICTION:
+while what state is the country of israel still has many jews they were fast in iranian women have more than any other ethnic group for a political drug and population.
+
+============================================================================================================================================
+SOURCE:
+david j. fit finlay jr. lrb born october rrb is a northern irish road agent and retired professional wrestler.
+
+TARGET:
+david finlay lrb born october rrb is a professional wrestler and road agent from belfast northern ireland. [end]
+
+PREDICTION:
+david b. ted dibiase jr. born october or died in the louisiana rrb is an american racecar narrator owned a wwe to win any of world championship wrestling.
+
+============================================================================================================================================
+SOURCE:
+council members are elected directly every four years one of whom is the mayor or president of
+
+TARGET:
+the city council has elected members one of whom is the mayor or president of elected every four years. [end]
+
+PREDICTION:
+council party members have elected to in a year with two four twenty three who was the mayor of st. petersburg and russia lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+in all marilyn billion lrb usd rrb in damage killing people in its
+
+TARGET:
+in all marilyn billion lrb usd rrb in damage killing people in it s path. [end]
+
+PREDICTION:
+the united states census estimates of that it had been billion or injured when people died

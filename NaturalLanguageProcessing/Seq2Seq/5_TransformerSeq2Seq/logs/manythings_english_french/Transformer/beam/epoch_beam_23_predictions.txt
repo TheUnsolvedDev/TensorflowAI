@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i hate to bother you, but would you mind closing the door?
+
+TARGET:
+il me peine de vous déranger mais cela ne vous dérangerait-il pas de fermer la porte ? [end]
+
+PREDICTION:
+j'ai horreur de ne pas mais ça te ferait une porte. »
+
+============================================================================================================================================
+SOURCE:
+tom should take better care of his children.
+
+TARGET:
+tom devrait mieux s'occuper de ses enfants. [end]
+
+PREDICTION:
+il devrait prendre le meilleur soin du calme.
+
+============================================================================================================================================
+SOURCE:
+i haven't seen them anywhere.
+
+TARGET:
+je ne les ai vues nulle part. [end]
+
+PREDICTION:
+ne les ai vu personne.
+
+============================================================================================================================================
+SOURCE:
+he must be tom's brother.
+
+TARGET:
+il doit être le frère de tom. [end]
+
+PREDICTION:
+il dois être le frère que tom soit
+
+============================================================================================================================================
+SOURCE:
+what do you want me to do now?
+
+TARGET:
+qu'est-ce que tu veux que je fasse maintenant ? [end]
+
+PREDICTION:
+me faut-il ?
+
+============================================================================================================================================
+SOURCE:
+what are these for?
+
+TARGET:
+à quoi celles-ci ? [end]
+
+PREDICTION:
+qu'est-ce que ceux-ci ? »
+
+============================================================================================================================================
+SOURCE:
+an electric current can
+
+TARGET:
+un courant peut du [end]
+
+PREDICTION:
+il a une crise peuvent se mettre à la tête en état de manière des pieds. par
+
+============================================================================================================================================
+SOURCE:
+there were no signs of life on the island.
+
+TARGET:
+il n'y avait aucun signe de vie sur l'île. [end]
+
+PREDICTION:
+il ne restait aucune copie de sa table.
+
+============================================================================================================================================
+SOURCE:
+when did you tell me that?
+
+TARGET:
+quand me l'avez-vous dit ? [end]
+
+PREDICTION:
+lorsque m'as-tu fait ça à ce moment !
+
+============================================================================================================================================
+SOURCE:
+tom is proud of his car.
+
+TARGET:
+tom est fier de sa voiture. [end]
+
+PREDICTION:
+tom est fiers par son voiture. ans.

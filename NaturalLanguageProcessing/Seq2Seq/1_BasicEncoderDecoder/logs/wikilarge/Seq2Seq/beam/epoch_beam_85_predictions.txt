@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+gironde also known as this commune. it is the region found in. he makes de la very often named in by kentucky and mon mosques alpes which started on november.
+
+============================================================================================================================================
+SOURCE:
+david lrb born december rrb is an american major league baseball for the
+
+TARGET:
+david is an major league baseball he plays for the seattle and is the team s [end]
+
+PREDICTION:
+jerry made known as normal ss lrb born october rrb best is the voice in south america for seattle in. it has an international attacks against american people.
+
+============================================================================================================================================
+SOURCE:
+september ndash battle of the empire of the of the of in.
+
+TARGET:
+august while a against the song dynasty city known as town in the province of china the khan in the nearby [end]
+
+PREDICTION:
+events khan of the battle and first called john v s great army to take his place.
+
+============================================================================================================================================
+SOURCE:
+formed in is an australian rock band from melbourne australia.
+
+TARGET:
+is a hard rock band from melbourne australia. [end]
+
+PREDICTION:
+the main helped from rock band.
+
+============================================================================================================================================
+SOURCE:
+in october it was the road in
+
+TARGET:
+in october it was re listed as road in [end]
+
+PREDICTION:
+on february ways the former road and was found in it is second used to meet one.
+
+============================================================================================================================================
+SOURCE:
+in fact the company of the most famous of was formed in.
+
+TARGET:
+in fact the company that became the most famous of was formed in. [end]
+
+PREDICTION:
+founder of the british museum lrb rrb. this group now includes a suburb known at san francisco winter and s historical life in.
+
+============================================================================================================================================
+SOURCE:
+and fight but at the his and allows to him.
+
+TARGET:
+and fight but then his to the side and is by [end]
+
+PREDICTION:
+fight forces meets with to the end and he placed turn on that zeus is being destroyed because she tries not let his evil percy does it.
+
+============================================================================================================================================
+SOURCE:
+is a japanese footballer currently playing for
+
+TARGET:
+lrb born march rrb is a japanese football player. he plays for [end]
+
+PREDICTION:
+lrb japanese female born in santa s rrb is a popular for soccer mobile basketball company currently test the telephone manchester in.
+
+============================================================================================================================================
+SOURCE:
+for a person to be to the hockey hall of fame as a they may be active or and must be nominated by an elected person selection
+
+TARGET:
+for a person to be added to the hockey hall of fame as a player they must have been retired for a of three years and must be nominated by
+
+PREDICTION:
+may simply be used in the person s college and kim she can become one of them original one.
+
+============================================================================================================================================
+SOURCE:
+it made landfall at puerto during the time it was a tropical
+
+TARGET:
+it became a tropical storm very shortly before landfall in puerto [end]
+
+PREDICTION:
+day that core became tropical winds of about miles south across half a major caused baby to become an independent caribbean ocean.

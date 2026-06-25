@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're a
+
+TARGET:
+vous êtes une [end]
+
+PREDICTION:
+tu es une
+
+============================================================================================================================================
+SOURCE:
+what're you doing?
+
+TARGET:
+en train de faire ? [end]
+
+PREDICTION:
+que faites-vous ?
+
+============================================================================================================================================
+SOURCE:
+i didn't learn anything new.
+
+TARGET:
+je n'ai rien appris de nouveau. [end]
+
+PREDICTION:
+je n'ai rien appris à nouveau.
+
+============================================================================================================================================
+SOURCE:
+they both laughed.
+
+TARGET:
+tous deux [end]
+
+PREDICTION:
+toutes deux ont
+
+============================================================================================================================================
+SOURCE:
+he has built up an excellent business.
+
+TARGET:
+il a une très bonne affaire. [end]
+
+PREDICTION:
+il a fait pour
+
+============================================================================================================================================
+SOURCE:
+is that your own idea?
+
+TARGET:
+est-ce là ta propre idée ? [end]
+
+PREDICTION:
+cette idée est-elle la vôtre ?
+
+============================================================================================================================================
+SOURCE:
+how far is it from here to the
+
+TARGET:
+à quelle distance se trouve le parc ? [end]
+
+PREDICTION:
+quelle distance y a-t-il entre ici et le musée ?
+
+============================================================================================================================================
+SOURCE:
+can i see you a second
+
+TARGET:
+puis-je vous voir dehors une seconde ? [end]
+
+PREDICTION:
+est-ce que je peux te voir dehors une seconde ?
+
+============================================================================================================================================
+SOURCE:
+i can't show you.
+
+TARGET:
+je n'arrive pas à te le [end]
+
+PREDICTION:
+je ne peux pas vous le
+
+============================================================================================================================================
+SOURCE:
+we left the decision to him.
+
+TARGET:
+nous lui avons laissé la décision [end]
+
+PREDICTION:
+nous lui la décision

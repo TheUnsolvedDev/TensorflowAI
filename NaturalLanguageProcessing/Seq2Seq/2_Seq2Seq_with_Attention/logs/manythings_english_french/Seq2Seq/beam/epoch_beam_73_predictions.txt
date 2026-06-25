@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i don't think being poor is anything to be ashamed of.
+
+TARGET:
+je ne crois pas qu'on avoir honte d'être pauvre. [end]
+
+PREDICTION:
+je ne crois pas assez quoi avoir besoin de aide. sauf quelque point.
+
+============================================================================================================================================
+SOURCE:
+english is studied in too.
+
+TARGET:
+l'anglais est aussi étudié en [end]
+
+PREDICTION:
+l'autre période étudier en année. dans le but
+
+============================================================================================================================================
+SOURCE:
+i've been painting the
+
+TARGET:
+je le [end]
+
+PREDICTION:
+j'ai reçu sur lequel le mariage les pieds.
+
+============================================================================================================================================
+SOURCE:
+i have no experience.
+
+TARGET:
+je suis [end]
+
+PREDICTION:
+je suis sans blague.
+
+============================================================================================================================================
+SOURCE:
+i'll add the
+
+TARGET:
+la touche [end]
+
+PREDICTION:
+j'irai sur le du plus petit noël.
+
+============================================================================================================================================
+SOURCE:
+it's a question of
+
+TARGET:
+chacun ses [end]
+
+PREDICTION:
+une question.
+
+============================================================================================================================================
+SOURCE:
+i need some sugar. do you have
+
+TARGET:
+j'ai besoin de sucre. en as-tu un peu ? [end]
+
+PREDICTION:
+il me faut du travail de plus en ! vous avez des
+
+============================================================================================================================================
+SOURCE:
+are you afraid of that?
+
+TARGET:
+en avez-vous peur ? [end]
+
+PREDICTION:
+vous avez convaincu ? gagné.
+
+============================================================================================================================================
+SOURCE:
+mary went on a around the world.
+
+TARGET:
+marie en voyage autour du monde. [end]
+
+PREDICTION:
+mary est allée en les fleurs de le monde. nous plaît. à bien mal. se font
+
+============================================================================================================================================
+SOURCE:
+my knife is
+
+TARGET:
+mon couteau est [end]
+
+PREDICTION:
+mon cadeaux

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you are the only one who can help me.
+
+TARGET:
+vous êtes le seul qui puisse m'aider. [end]
+
+PREDICTION:
+tu es le seul qui puisse m'aider.
+
+============================================================================================================================================
+SOURCE:
+tom said it was on his desk.
+
+TARGET:
+tom a dit que c'était sur son bureau. [end]
+
+PREDICTION:
+tom a dit que c'était sur son bureau.
+
+============================================================================================================================================
+SOURCE:
+have long and short
+
+TARGET:
+les ont de longues et une petite [end]
+
+PREDICTION:
+les ont longtemps
+
+============================================================================================================================================
+SOURCE:
+i'm sorry i couldn't write to you sooner.
+
+TARGET:
+je suis désolé de n'avoir pas pu plus tôt. [end]
+
+PREDICTION:
+je suis je n'ai pas pu plus tôt.
+
+============================================================================================================================================
+SOURCE:
+we saw at the zoo.
+
+TARGET:
+nous avons vu des au [end]
+
+PREDICTION:
+on a vu des au
+
+============================================================================================================================================
+SOURCE:
+that seems
+
+TARGET:
+cela semble étrange. [end]
+
+PREDICTION:
+cela semble
+
+============================================================================================================================================
+SOURCE:
+both boys were
+
+TARGET:
+les deux garçons ont été [end]
+
+PREDICTION:
+les deux garçons furent
+
+============================================================================================================================================
+SOURCE:
+do you have any
+
+TARGET:
+t'as du lait ? [end]
+
+PREDICTION:
+avez-vous des ?
+
+============================================================================================================================================
+SOURCE:
+tastes in music from person to person.
+
+TARGET:
+les selon les personnes. [end]
+
+PREDICTION:
+les bonnes en la musique à parole.
+
+============================================================================================================================================
+SOURCE:
+you seem to have the wrong number.
+
+TARGET:
+vous semblez le mauvais numéro. [end]
+
+PREDICTION:
+tu sembles disposer du mauvais numéro.

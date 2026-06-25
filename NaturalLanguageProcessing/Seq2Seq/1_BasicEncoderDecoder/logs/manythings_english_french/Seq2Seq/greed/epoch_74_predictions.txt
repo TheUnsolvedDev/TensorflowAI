@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it's kind of boring.
+
+TARGET:
+c'est plutôt ennuyeux. [end]
+
+PREDICTION:
+c'est plutôt ennuyeux.
+
+============================================================================================================================================
+SOURCE:
+the boy his name.
+
+TARGET:
+le garçon son nom. [end]
+
+PREDICTION:
+le garçon le son nom.
+
+============================================================================================================================================
+SOURCE:
+i don't understand what the problem is.
+
+TARGET:
+je ne comprends pas ce qu'est le problème. [end]
+
+PREDICTION:
+je ne comprends pas quel est le problème.
+
+============================================================================================================================================
+SOURCE:
+make sure the door is locked.
+
+TARGET:
+que la porte soit [end]
+
+PREDICTION:
+que la porte soit
+
+============================================================================================================================================
+SOURCE:
+these are mine.
+
+TARGET:
+ces de couleur sont à moi. [end]
+
+PREDICTION:
+ces sont à moi.
+
+============================================================================================================================================
+SOURCE:
+tom into the swimming pool.
+
+TARGET:
+tom a dans la piscine. [end]
+
+PREDICTION:
+tom dans la piscine.
+
+============================================================================================================================================
+SOURCE:
+it isn't easy to learn a foreign language.
+
+TARGET:
+il n'est pas facile d'apprendre une langue [end]
+
+PREDICTION:
+il n'est pas facile d'apprendre une langue
+
+============================================================================================================================================
+SOURCE:
+there is an urgent need for the local government to help the
+
+TARGET:
+il faut que le gouvernement aide les sans [end]
+
+PREDICTION:
+il y a un besoin le pour au
+
+============================================================================================================================================
+SOURCE:
+i don't want you to go home.
+
+TARGET:
+je ne veux pas que tu ailles chez toi. [end]
+
+PREDICTION:
+je ne veux pas que vous alliez chez vous.
+
+============================================================================================================================================
+SOURCE:
+i can't believe you weren't as impressed as i was.
+
+TARGET:
+je n'arrive toujours pas à croire que tu n'as pas été aussi que je l'ai été. [end]
+
+PREDICTION:
+je n'arrive pas à vous être aussi que toi,

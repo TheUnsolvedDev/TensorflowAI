@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i think we'll make it if we hurry.
+
+TARGET:
+je pense que nous pouvons y arriver si nous nous [end]
+
+PREDICTION:
+est-ce la raison si nous le on ira bien mieux. vais faire du dîner.
+
+============================================================================================================================================
+SOURCE:
+father comes home from work about nine in the evening.
+
+TARGET:
+mon père rentre du travail vers neuf heures du soir. [end]
+
+PREDICTION:
+poste rentré au temps à neuf heure pour la heures ce soir.
+
+============================================================================================================================================
+SOURCE:
+always tell the truth.
+
+TARGET:
+dis toujours la vérité. [end]
+
+PREDICTION:
+dites tout la même chose, toi ?
+
+============================================================================================================================================
+SOURCE:
+everyone is
+
+TARGET:
+tout le monde [end]
+
+PREDICTION:
+toutes le navire ! sans dire ans.
+
+============================================================================================================================================
+SOURCE:
+tom mary.
+
+TARGET:
+tom mary. [end]
+
+PREDICTION:
+marie mit un coup peur. marie. est-ce que je vous fais ?
+
+============================================================================================================================================
+SOURCE:
+thanks for doing what needed to be done.
+
+TARGET:
+merci à toi d'avoir fait ce qu'il [end]
+
+PREDICTION:
+lorsqu'il fait à ton affaire. il y a
+
+============================================================================================================================================
+SOURCE:
+you aren't allowed to park there.
+
+TARGET:
+tu n'es pas autorisé à là. [end]
+
+PREDICTION:
+vous n'êtes pas autorisés à là.
+
+============================================================================================================================================
+SOURCE:
+translate the word for word.
+
+TARGET:
+le mot à mot. [end]
+
+PREDICTION:
+le mot pour la parole. à nouveau. désolé. refusé cette d'entre vous. vous savez être en êtes seules.
+
+============================================================================================================================================
+SOURCE:
+we saw it on the news.
+
+TARGET:
+on l'a vu aux nouvelles. [end]
+
+PREDICTION:
+il y a regardé hier aux de la tempête. voilà qui était partie. ils ont valise.
+
+============================================================================================================================================
+SOURCE:
+i read it in the newspaper.
+
+TARGET:
+je l'ai lu dans le journal. [end]
+
+PREDICTION:
+j'attends le livre dans journal. ne pas

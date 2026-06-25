@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+s music and
+
+TARGET:
+s music has an on and [end]
+
+PREDICTION:
+music lrb born october rrb is a former german football player.
+
+============================================================================================================================================
+SOURCE:
+the bay of the largest bay in the world forms the northeastern part of the indian ocean.
+
+TARGET:
+the bay of is a it is in the northeastern part of the indian ocean. [end]
+
+PREDICTION:
+it is a mountain in the northern indian ocean.
+
+============================================================================================================================================
+SOURCE:
+born in london he was at school where a fellow was john
+
+TARGET:
+has been given many including fellow of westminster choir college lrb o o rrb fellow of the of church musicians lrb o o rrb. [end]
+
+PREDICTION:
+at first he went to london where a fellow was john cena s at
+
+============================================================================================================================================
+SOURCE:
+the project began to see major contributions after articles in the original english wikipedia and over articles in each of seven other languages had been
+
+TARGET:
+when the simple english wikipedia began the english wikipedia already had articles and seven other in other languages had over [end]
+
+PREDICTION:
+the simple history began to be s foundation which included some of the simple english wikipedia over
+
+============================================================================================================================================
+SOURCE:
+he is also called james the greater to him from james son of who is also known as james the
+
+TARGET:
+saint james lrb rrb became which was abbreviated to [end]
+
+PREDICTION:
+he is also called by james the greater to him from a family of
+
+============================================================================================================================================
+SOURCE:
+ndash vietnam war a car in front of the us killing and others.
+
+TARGET:
+vietnam war a car in front of the u.s. in killing and others. [end]
+
+PREDICTION:
+vietnam war a car in front of the u.s. sea
+
+============================================================================================================================================
+SOURCE:
+early life and education was born in massachusetts united states.
+
+TARGET:
+early life and education matthew was born in [end]
+
+PREDICTION:
+biography was born in
+
+============================================================================================================================================
+SOURCE:
+originally designed as an in the late s was the foundation for a family of successful space launch now built by united launch
+
+TARGET:
+was a built by the division of general [end]
+
+PREDICTION:
+it was originally designed as an in the late s and early s. now built by united
+
+============================================================================================================================================
+SOURCE:
+lrb born february date of death unknown rrb was brazilian football player.
+
+TARGET:
+lrb born february rrb is a former brazilian football player. [end]
+
+PREDICTION:
+lrb born november rrb is a former brazilian football player.
+
+============================================================================================================================================
+SOURCE:
+lrb born richard lewis august sydney rrb is an australian american songwriter musician and actor.
+
+TARGET:
+lrb real name richard august rrb is an australian musician and actor. [end]
+
+PREDICTION:
+richard lewis is an american songwriter and actor.

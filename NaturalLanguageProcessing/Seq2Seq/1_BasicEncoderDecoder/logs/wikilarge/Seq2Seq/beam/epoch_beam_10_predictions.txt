@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the changed at the show in san antonio texas in australia and europe and the first week of shows in the united states was the last song
+
+TARGET:
+in australia was the last song [end]
+
+PREDICTION:
+in it was released the world of spring maryland in.
+
+============================================================================================================================================
+SOURCE:
+almost all important latvian financial institutions are located in riga including the bank of latvia which is latvia s central bank. foreign commercial trade through riga has been on the increase in recent years and received new on may when latvia became a member of the european union.
+
+TARGET:
+is the capital city of the european country of [end]
+
+PREDICTION:
+federal ba government lrb o w rrb is held by shia people.
+
+============================================================================================================================================
+SOURCE:
+with the victory the raiders became the first ever wild card team to win a super
+
+TARGET:
+the raiders became the first wild card team to win a super bowl. [end]
+
+PREDICTION:
+when jeff successfully began defeating her as the super smash bros. soul accidentally turned a trainer after
+
+============================================================================================================================================
+SOURCE:
+the volcanic island of saint is more mountainous than many other caribbean islands with the highest point being mount at m above sea level.
+
+TARGET:
+the island of saint has more mountains than many other caribbean islands with the highest one being mount at m above the sea. [end]
+
+PREDICTION:
+its lake consists of the lesser sea and smaller cities than saint glacial respective mountains black on ice.
+
+============================================================================================================================================
+SOURCE:
+was a major market town in anglo saxon times famous in addition as the burial place of saint whose shrine attracted
+
+TARGET:
+aylesbury was a major market town in anglo saxon times. [end]
+
+PREDICTION:
+in modern roman catholicism is mentioned for many churches and buried the st. paul of church s village. on reception they include a religious religion or
+
+============================================================================================================================================
+SOURCE:
+graphic arts is a term applied historically to the art of and
+
+TARGET:
+graphic arts is a term that was used for the art of and [end]
+
+PREDICTION:
+adam smith lrb works rrb art of art. this is a part that controls the design and adapted from their uses to make it easy as the word for use today.
+
+============================================================================================================================================
+SOURCE:
+two years later that promise was when he won the gold medal at the international tchaikovsky competition in moscow.
+
+TARGET:
+two years later he won the gold medal at the international tchaikovsky competition in moscow. [end]
+
+PREDICTION:
+he won the trophy after becoming born in. in his career was awarded with a russian conductor lrb o basketball federation rrb
+
+============================================================================================================================================
+SOURCE:
+arrives and to shoot him but copper quickly his body over refusing to
+
+TARGET:
+copper tod as he lies in the lake below when appears ready to fire at the fox. copper his body in front of tod and refuses to move away. [end]
+
+PREDICTION:
+they then he made himself by zeus and kills him. mcclane off attacks the hidden of gun that his mother is.
+
+============================================================================================================================================
+SOURCE:
+this list contains towers and
+
+TARGET:
+this list has towers and [end]
+
+PREDICTION:
+list include shelter and instant rivers.
+
+============================================================================================================================================
+SOURCE:
+in he was given the honor to conduct the world famous new year concert of the vienna philharmonic orchestra on the first of january.
+
+TARGET:
+he was given the honor of conducting the world famous new year s day concert of the vienna philharmonic orchestra on january. [end]
+
+PREDICTION:
+he helped to become famous for the orchestra of christian hymn from until. this gave birth back at first time.

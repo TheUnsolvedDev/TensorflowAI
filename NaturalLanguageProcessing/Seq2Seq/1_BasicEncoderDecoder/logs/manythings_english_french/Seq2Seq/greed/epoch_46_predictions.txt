@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+could you explain how the
+
+TARGET:
+pourriez-vous nous expliquer comment fonctionne le ? [end]
+
+PREDICTION:
+pourrais-tu expliquer ce moyen les ?
+
+============================================================================================================================================
+SOURCE:
+why are you still here?
+
+TARGET:
+pourquoi es-tu encore là ? [end]
+
+PREDICTION:
+pourquoi êtes-vous encore ici ?
+
+============================================================================================================================================
+SOURCE:
+i know that but i can't remember the
+
+TARGET:
+je connais cet mais je n'arrive pas à me rappeler des [end]
+
+PREDICTION:
+je connais le mais je n'arrive pas à me souvenir de la
+
+============================================================================================================================================
+SOURCE:
+which party do you belong to?
+
+TARGET:
+à quel parti es-tu ? [end]
+
+PREDICTION:
+à quel parti es-tu ?
+
+============================================================================================================================================
+SOURCE:
+you're alone, aren't you?
+
+TARGET:
+vous êtes n'est-ce pas ? [end]
+
+PREDICTION:
+tu es n'est-ce pas ?
+
+============================================================================================================================================
+SOURCE:
+which book do you need?
+
+TARGET:
+de quel livre as-tu besoin ? [end]
+
+PREDICTION:
+de quel livre as-tu besoin ?
+
+============================================================================================================================================
+SOURCE:
+everybody is looking at me.
+
+TARGET:
+tout le monde me [end]
+
+PREDICTION:
+tout le monde me
+
+============================================================================================================================================
+SOURCE:
+there are many available in the computer
+
+TARGET:
+il y a de nombreux dans le [end]
+
+PREDICTION:
+il y a de nombreuses sur
+
+============================================================================================================================================
+SOURCE:
+i'm dead set against the plan.
+
+TARGET:
+je suis totalement contre le plan. [end]
+
+PREDICTION:
+je suis au plan.
+
+============================================================================================================================================
+SOURCE:
+i hired a
+
+TARGET:
+j'ai une [end]
+
+PREDICTION:
+j'ai un

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+fc de is a french football team playing in the city of
+
+TARGET:
+f.c. de is a football club which plays in france. [end]
+
+PREDICTION:
+f.c. is a french football club.
+
+============================================================================================================================================
+SOURCE:
+first form in his form dragon ball z volume is a relatively short with a large shaped with two
+
+TARGET:
+first form in his first form is a relatively short with a large shaped with two [end]
+
+PREDICTION:
+is a spanish that is first in the form by it is a short of form dragon ball
+
+============================================================================================================================================
+SOURCE:
+the dna between head and body provide evidence that humans started about years ago give or take years.
+
+TARGET:
+the dna differences between head and body provide evidence that humans started at approximately [end]
+
+PREDICTION:
+the dna differences between head and body provide evidence that humans started about years ago.
+
+============================================================================================================================================
+SOURCE:
+d lrb rrb french physicist and nobel prize winner ne s husband
+
+TARGET:
+pierre lrb rrb husband french physicist and nobel prize winner [end]
+
+PREDICTION:
+ne lrb rrb rrb jean d lrb rrb rrb marie and nobel prize winner she is
+
+============================================================================================================================================
+SOURCE:
+the of has existed since the of creating buildings structures and using stone from the earth.
+
+TARGET:
+is the of making things out of [end]
+
+PREDICTION:
+the of have existed since the of
+
+============================================================================================================================================
+SOURCE:
+it many of s of those affected only three
+
+TARGET:
+the a large number of s only three that the disease [end]
+
+PREDICTION:
+in some places only that were
+
+============================================================================================================================================
+SOURCE:
+it contained two songs not previously available on general release and also a brand new of the track lrb get off your rrb high horse lady from seventh studio album
+
+TARGET:
+it two songs not previously available on general release and also a of lrb get off your rrb high horse lady from their album out your [end]
+
+PREDICTION:
+it also starred on general release and also a brand new horse of and also a brand new of seventh from seventh to take
+
+============================================================================================================================================
+SOURCE:
+located in a region called central or central the federal district is divided in administrative
+
+TARGET:
+before this the brazilian federal district used to be the municipality of rio de [end]
+
+PREDICTION:
+it is in the region called
+
+============================================================================================================================================
+SOURCE:
+the were subsequently passed on to a series of all of whom were unable for one reason or another to make a go of it.
+
+TARGET:
+the were later passed on to a series of who were all [end]
+
+PREDICTION:
+the caused it passed on to a series of all of whom were for one day all of whom were for one day all of whom were
+
+============================================================================================================================================
+SOURCE:
+the used include boundary layer wind and
+
+TARGET:
+the tools may also include layer wind and [end]
+
+PREDICTION:
+in

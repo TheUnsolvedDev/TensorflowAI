@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in seven will move its based operations to a purpose built high definition television production at the australian technology park in
+
+TARGET:
+seven network are to move their production to a built site at the australian technology park in [end]
+
+PREDICTION:
+in the current home move it in the australian technology park in
+
+============================================================================================================================================
+SOURCE:
+and the director academy worked on the language and its family.
+
+TARGET:
+and worked on the language and its family. [end]
+
+PREDICTION:
+lrb born october in rrb is an american writer and
+
+============================================================================================================================================
+SOURCE:
+vii the small greek force from both sides was cut down to a man except for the who
+
+TARGET:
+the small greek force was attacked from both [end]
+
+PREDICTION:
+the greek word lrb rrb the greek greek word from both sides was cut down to a side except for the who from both sides was
+
+============================================================================================================================================
+SOURCE:
+ne is a commune of the vaucluse d partement in southern france.
+
+TARGET:
+it is located in the region provence alpes c te d azur in the vaucluse department in the south of france. [end]
+
+PREDICTION:
+it is located in the region provence alpes c te d azur in the vaucluse department in the south of france.
+
+============================================================================================================================================
+SOURCE:
+some of the top at certain times were arab christians and many arab christians were writers government and people of
+
+TARGET:
+some of the best poem writers at certain times were arab christians and many arab christians were writers government and people who knew a lot about [end]
+
+PREDICTION:
+some of the top at certain times were asian christians and many other christians were colonies of and people of
+
+============================================================================================================================================
+SOURCE:
+while most of his remains were transferred to paris his heart and remained in
+
+TARGET:
+while most of his remains are in paris his heart and are still in [end]
+
+PREDICTION:
+most of his remains were to paris and remained in
+
+============================================================================================================================================
+SOURCE:
+in the population voted in of from in order to form a separate overseas lrb rrb of france.
+
+TARGET:
+in the population voted in of becoming independent from they wanted to form a separate lrb rrb of france. [end]
+
+PREDICTION:
+in the population was the of france.
+
+============================================================================================================================================
+SOURCE:
+sky news australia and sky news new zealand are different that sky news uk programming and share some of its style but also have local programming and
+
+TARGET:
+sky news is a news station in the united kingdom. [end]
+
+PREDICTION:
+sky news new zealand countries new zealand are all games and
+
+============================================================================================================================================
+SOURCE:
+music from the elder is a concept album released by the american hard rock band
+
+TARGET:
+music from the is a concept album by the american hard rock heavy metal band [end]
+
+PREDICTION:
+music from the records.
+
+============================================================================================================================================
+SOURCE:
+a sister in law lrb sisters in law rrb is the sister of one s the wife of one s brother or sometimes the wife of one s s
+
+TARGET:
+someone s sister in law is the wife of his or her someone s sister in law is also his or her s [end]
+
+PREDICTION:
+a sister in law lrb sisters in law rrb is the sister in the wife of his

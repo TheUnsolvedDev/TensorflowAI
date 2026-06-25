@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i think we'll make it if we hurry.
+
+TARGET:
+je pense que nous pouvons y arriver si nous nous [end]
+
+PREDICTION:
+je pense que vous le nous pourrions si partir.
+
+============================================================================================================================================
+SOURCE:
+father comes home from work about nine in the evening.
+
+TARGET:
+mon père rentre du travail vers neuf heures du soir. [end]
+
+PREDICTION:
+papa arrive du retour dans un remettre la soirée sur le soir. à moi. h passer ça hors d'y !
+
+============================================================================================================================================
+SOURCE:
+always tell the truth.
+
+TARGET:
+dis toujours la vérité. [end]
+
+PREDICTION:
+reste toujours raté ce qui est ?
+
+============================================================================================================================================
+SOURCE:
+everyone is
+
+TARGET:
+tout le monde [end]
+
+PREDICTION:
+chacun le reste à ses ! tout.
+
+============================================================================================================================================
+SOURCE:
+tom mary.
+
+TARGET:
+tom mary. [end]
+
+PREDICTION:
+tom mit un de marie.
+
+============================================================================================================================================
+SOURCE:
+thanks for doing what needed to be done.
+
+TARGET:
+merci à toi d'avoir fait ce qu'il [end]
+
+PREDICTION:
+c'est pour ce que faire d'autre à faire.
+
+============================================================================================================================================
+SOURCE:
+you aren't allowed to park there.
+
+TARGET:
+tu n'es pas autorisé à là. [end]
+
+PREDICTION:
+vous n'êtes autorisés au chacun à se rendre. et ça. bien, là. t'a permis !
+
+============================================================================================================================================
+SOURCE:
+translate the word for word.
+
+TARGET:
+le mot à mot. [end]
+
+PREDICTION:
+alors, leur le mérite
+
+============================================================================================================================================
+SOURCE:
+we saw it on the news.
+
+TARGET:
+on l'a vu aux nouvelles. [end]
+
+PREDICTION:
+nous l'avons dans la peur. !
+
+============================================================================================================================================
+SOURCE:
+i read it in the newspaper.
+
+TARGET:
+je l'ai lu dans le journal. [end]
+
+PREDICTION:
+je la l'ai vu le noir. dans mon concert.

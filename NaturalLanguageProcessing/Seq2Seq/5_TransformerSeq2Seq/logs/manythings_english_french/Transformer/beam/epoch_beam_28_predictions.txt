@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+let me show you something really awesome.
+
+TARGET:
+laissez-moi vous montrer quelque chose de vraiment super. [end]
+
+PREDICTION:
+permettez-moi te de très génial. !
+
+============================================================================================================================================
+SOURCE:
+i promised not to tell.
+
+TARGET:
+je promis de ne rien dire. [end]
+
+PREDICTION:
+j'en ai certainement rien dit. ! en dire.
+
+============================================================================================================================================
+SOURCE:
+i aimed my gun at the target.
+
+TARGET:
+je mon vers la cible. [end]
+
+PREDICTION:
+je respecte la porte à
+
+============================================================================================================================================
+SOURCE:
+that's very dangerous.
+
+TARGET:
+c'est très dangereux. [end]
+
+PREDICTION:
+c'est vraiment dangereux. »
+
+============================================================================================================================================
+SOURCE:
+tom sent a text message to a girl he liked in his class.
+
+TARGET:
+tom a envoyé un à une fille de sa classe qu'il aimait bien. [end]
+
+PREDICTION:
+on a envoyé un message de main qu'il aimait sa classe. il avait la première fois.
+
+============================================================================================================================================
+SOURCE:
+i don't see the connection.
+
+TARGET:
+je ne vois pas le [end]
+
+PREDICTION:
+ça ne lit pas, le
+
+============================================================================================================================================
+SOURCE:
+you must be very special.
+
+TARGET:
+tu dois être vraiment spéciale. [end]
+
+PREDICTION:
+il faut qu'on me
+
+============================================================================================================================================
+SOURCE:
+do you need a to cry on?
+
+TARGET:
+as-tu besoin d'une sur laquelle pleurer ? [end]
+
+PREDICTION:
+avez-vous du mal à se produire pour éviter de nous
+
+============================================================================================================================================
+SOURCE:
+he's an
+
+TARGET:
+il est [end]
+
+PREDICTION:
+c’est du mal au coin. en ! ans.
+
+============================================================================================================================================
+SOURCE:
+it never happened.
+
+TARGET:
+ça n'est jamais arrivé. [end]
+
+PREDICTION:
+ça n'y est jamais !

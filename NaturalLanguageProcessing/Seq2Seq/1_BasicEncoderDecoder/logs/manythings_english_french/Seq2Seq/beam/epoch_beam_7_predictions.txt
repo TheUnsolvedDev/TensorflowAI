@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+prices dropped suddenly.
+
+TARGET:
+les prix ont baissé [end]
+
+PREDICTION:
+le semble être dangereux.
+
+============================================================================================================================================
+SOURCE:
+i'll bring it to you tomorrow.
+
+TARGET:
+je vous demain. [end]
+
+PREDICTION:
+le demain. tu as de là pour réfléchir. ! fait ça.
+
+============================================================================================================================================
+SOURCE:
+tom said he loved me, too.
+
+TARGET:
+tom a dit qu'il aussi. [end]
+
+PREDICTION:
+tom a dit ainsi qu'il m'aime encore.
+
+============================================================================================================================================
+SOURCE:
+our dog seldom
+
+TARGET:
+notre chien mord rarement. [end]
+
+PREDICTION:
+notre chien. les œufs. !
+
+============================================================================================================================================
+SOURCE:
+i didn't see you come in.
+
+TARGET:
+je ne vous ai pas vus entrer. [end]
+
+PREDICTION:
+je ne te rien. arrière. suis allé en bas. » nous les êtes habillée. de tous des autres.
+
+============================================================================================================================================
+SOURCE:
+it's none of your concern.
+
+TARGET:
+ce n'est pas votre affaire. [end]
+
+PREDICTION:
+ce n'en est de vos trucs.
+
+============================================================================================================================================
+SOURCE:
+he lost face.
+
+TARGET:
+il a perdu la face. [end]
+
+PREDICTION:
+j’ai gardé la balle. en photo. c'est pas.
+
+============================================================================================================================================
+SOURCE:
+new york is a big city.
+
+TARGET:
+new york est une grande ville. [end]
+
+PREDICTION:
+la vie est une grande partie du bois de neige. ans.
+
+============================================================================================================================================
+SOURCE:
+there is no hope of success.
+
+TARGET:
+il n'y a aucune chance de réussite. [end]
+
+PREDICTION:
+il n'y arrive de aucun à un morceau. arrière.
+
+============================================================================================================================================
+SOURCE:
+he's everybody's friend.
+
+TARGET:
+il est l'ami de tout le monde. [end]
+
+PREDICTION:
+ce n'est l'ami du tout. pattes.

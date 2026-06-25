@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+wrote in my story that she did not to meet him a
+
+TARGET:
+wrote in my story that she did not want to meet him because she thought he might be a [end]
+
+PREDICTION:
+wrote in my story a
+
+============================================================================================================================================
+SOURCE:
+the best win and after the the of the queen takes place on a stand in front of st nicholas church under the of william
+
+TARGET:
+there is a of on the town church. [end]
+
+PREDICTION:
+the of the queen takes place in front of an and after st nicholas
+
+============================================================================================================================================
+SOURCE:
+little is known their but their environment they are likely to be
+
+TARGET:
+little is known their [end]
+
+PREDICTION:
+the environment are their environment they are probably
+
+============================================================================================================================================
+SOURCE:
+alongside the internal security service lrb mi rrb the government headquarters lrb rrb and the defense intelligence staff lrb rrb it operates under the formal direction of the joint
+
+TARGET:
+it works with the security service lrb mi rrb government headquarters lrb rrb and the defense intelligence staff lrb rrb. [end]
+
+PREDICTION:
+a security service lrb mi rrb or security council lrb mi rrb the government the government it a constitution the government intelligence transport that it
+
+============================================================================================================================================
+SOURCE:
+the green screen international film festival is held annually in germany.
+
+TARGET:
+green screen is an international film [end]
+
+PREDICTION:
+since april cathedral is held in
+
+============================================================================================================================================
+SOURCE:
+and signed the treaty of n by which the province is to the latter an end to s in the war of the
+
+TARGET:
+s in the war of the [end]
+
+PREDICTION:
+and signed the treaty of n by which the province is.
+
+============================================================================================================================================
+SOURCE:
+however different even in the tradition make use of or white or may be added along with the or for
+
+TARGET:
+for special or along with today both and oil are used for the of small of and [end]
+
+PREDICTION:
+notes or to be added along with the or for or
+
+============================================================================================================================================
+SOURCE:
+may lrb born august rrb is a scottish association football former player and manager.
+
+TARGET:
+may lrb born august rrb is a former scottish and is now the head coach of [end]
+
+PREDICTION:
+may lrb born august rrb is a former football player.
+
+============================================================================================================================================
+SOURCE:
+in music sharp lrb from french rrb or lrb from greek rrb means higher in and the sharp symbol a note by a half
+
+TARGET:
+in music sharp or means higher in [end]
+
+PREDICTION:
+in music sharp lrb from greek rrb means the orchestra by the
+
+============================================================================================================================================
+SOURCE:
+e is a commune in county romania with a population of people. it has the following villages e
+
+TARGET:
+e is a commune found in dolj county romania. [end]
+
+PREDICTION:
+e is a commune found in dolj county romania.

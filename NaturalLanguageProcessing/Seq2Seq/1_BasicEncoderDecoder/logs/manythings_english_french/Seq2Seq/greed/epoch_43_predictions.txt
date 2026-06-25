@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you shouldn't have gone fishing today.
+
+TARGET:
+tu n'aurais pas dû aller à la aujourd'hui. [end]
+
+PREDICTION:
+tu n'aurais pas dû aller pêcher aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+these are
+
+TARGET:
+ces sont [end]
+
+PREDICTION:
+ces sont
+
+============================================================================================================================================
+SOURCE:
+i'm sorry i lost my
+
+TARGET:
+désolé, j'ai perdu mon [end]
+
+PREDICTION:
+je suis désolé d'avoir perdu ma
+
+============================================================================================================================================
+SOURCE:
+leave me.
+
+TARGET:
+laissez-moi ! [end]
+
+PREDICTION:
+!
+
+============================================================================================================================================
+SOURCE:
+thank god you're alive.
+
+TARGET:
+dieu tu es en vie. [end]
+
+PREDICTION:
+dieu te est
+
+============================================================================================================================================
+SOURCE:
+she
+
+TARGET:
+elle [end]
+
+PREDICTION:
+elle fume
+
+============================================================================================================================================
+SOURCE:
+tom's last name is easy to
+
+TARGET:
+le nom de famille de tom est facile à [end]
+
+PREDICTION:
+le nom de tom est facile à jouer de
+
+============================================================================================================================================
+SOURCE:
+even a teacher can make mistakes.
+
+TARGET:
+même un professeur peut faire des erreurs. [end]
+
+PREDICTION:
+même un peut faire des erreurs.
+
+============================================================================================================================================
+SOURCE:
+i'm from a large family.
+
+TARGET:
+je viens d'une famille [end]
+
+PREDICTION:
+je suis de famille
+
+============================================================================================================================================
+SOURCE:
+you didn't get very far.
+
+TARGET:
+tu n'es pas allé très loin. [end]
+
+PREDICTION:
+vous n'êtes pas allé très loin.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+hey,
+
+TARGET:
+oh my god! you... oh my god! what are you doin' here? [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+and what are levels of hostile
+
+TARGET:
+imagine the that would result from having at each other. there must be gentlemen in command to lead and, when their men. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+try in the door and mama i'm home.
+
+TARGET:
+-- [end]
+
+PREDICTION:
+i don't know what you're talking about.
+
+============================================================================================================================================
+SOURCE:
+it was released in probably on june
+
+TARGET:
+and it appeared after that [end]
+
+PREDICTION:
+that's what i think about him.
+
+============================================================================================================================================
+SOURCE:
+and you get into any car you want and just drive off?
+
+TARGET:
+not car. i like to keep a i'm always looking for the new experience, like this one. i liked it. [end]
+
+PREDICTION:
+i don't want to be alone.
+
+============================================================================================================================================
+SOURCE:
+it was a great pleasure to meet you, mr. merrick.
+
+TARGET:
+i am very pleased to meet you. [end]
+
+PREDICTION:
+i don't want to be alone.
+
+============================================================================================================================================
+SOURCE:
+barnes used to work for him when he was still a cop in the field, remember?
+
+TARGET:
+don't remind me. [end]
+
+PREDICTION:
+what?
+
+============================================================================================================================================
+SOURCE:
+yes i know. i started to say... i started to say joe that --
+
+TARGET:
+do i put you off? [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+captain, i've found the borg it's on the far side of the at the surface.
+
+TARGET:
+course, full weapons [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+you still got seconds to level this beast out! [end]
+
+PREDICTION:
+

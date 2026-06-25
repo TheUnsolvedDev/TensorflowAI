@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i don't think that'll work.
+
+TARGET:
+je ne pense pas que ça va [end]
+
+PREDICTION:
+je n'y pas.
+
+============================================================================================================================================
+SOURCE:
+"no, i'm
+
+TARGET:
+« tu ! » « non, je ne pas. » [end]
+
+PREDICTION:
+« vous êtes en train de non, suis-je ! »
+
+============================================================================================================================================
+SOURCE:
+one of the passengers was injured.
+
+TARGET:
+l'un des passagers a été blessé. [end]
+
+PREDICTION:
+des furent les chiens un bons filles. prochain. c'est vous.
+
+============================================================================================================================================
+SOURCE:
+do you want to
+
+TARGET:
+veux-tu jouer ? [end]
+
+PREDICTION:
+est-ce qu'on te dérange ? service.
+
+============================================================================================================================================
+SOURCE:
+what's it sound like?
+
+TARGET:
+quel son cela fait-il ? [end]
+
+PREDICTION:
+quel bruit ça a l'amour ? » pas fin d'entendre !
+
+============================================================================================================================================
+SOURCE:
+she felt like dancing.
+
+TARGET:
+elle eut envie de danser. [end]
+
+PREDICTION:
+elle voulait tom. nouvelles. d'une chanson ! peu changé.
+
+============================================================================================================================================
+SOURCE:
+he kept talking.
+
+TARGET:
+il à parler. [end]
+
+PREDICTION:
+c'est de lui donner les !
+
+============================================================================================================================================
+SOURCE:
+now is your chance.
+
+TARGET:
+voilà ta chance. [end]
+
+PREDICTION:
+il est en sécurité pour y c'est de ta faute.
+
+============================================================================================================================================
+SOURCE:
+you don't want to point that gun at me.
+
+TARGET:
+tu n'as pas envie de cette arme dans ma [end]
+
+PREDICTION:
+vous n'avez donc pas envie ça vers cette maison.
+
+============================================================================================================================================
+SOURCE:
+i am afraid that it will rain.
+
+TARGET:
+j'ai peur qu'il [end]
+
+PREDICTION:
+je pluie sans revoir. de la fenêtre.

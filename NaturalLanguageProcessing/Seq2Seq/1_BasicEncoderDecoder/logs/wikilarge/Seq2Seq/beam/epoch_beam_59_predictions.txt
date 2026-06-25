@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+les is a commune in the sarthe department in the region of pays de la loire in northwestern france.
+
+TARGET:
+it is found in the region pays de la loire in the sarthe department in the west of france. [end]
+
+PREDICTION:
+is found located across the region of a world in eastern france and italy linked to west africa. they have included their first division turkish carter which was created by
+
+============================================================================================================================================
+SOURCE:
+a is a feature of european houses and
+
+TARGET:
+a is found on european houses and [end]
+
+PREDICTION:
+it is a of many european and buildings but they are still there.
+
+============================================================================================================================================
+SOURCE:
+a branch of studies rock and lrb rrb.
+
+TARGET:
+is a branch of which studies rock lrb rrb. [end]
+
+PREDICTION:
+technology all studies the rock or study of about pre months lrb people as and a kind tradition satellite modern style rrb
+
+============================================================================================================================================
+SOURCE:
+two types of star can be distinguished are groups of of thousands of very old stars which are while open a more
+
+TARGET:
+open are more and they have less than a few hundred stars which are often very [end]
+
+PREDICTION:
+sometimes groups are smaller thousands and have given a very few present on their full level of the old nation to see more species including an age of. making different
+
+============================================================================================================================================
+SOURCE:
+match length matches consisted of three the first lasted ten minutes and the second and third each lasted five
+
+TARGET:
+rules match length matches make up of three the first round is ten minutes and the second and third round are five [end]
+
+PREDICTION:
+michelle up to between ten and three weeks double event was a total of nine four years. she first champion in the final battle with victory for his second time.
+
+============================================================================================================================================
+SOURCE:
+ndash first recorded case of in los angeles california.
+
+TARGET:
+is the first woman to become president of a us national [end]
+
+PREDICTION:
+first part of the film festival called canada in.
+
+============================================================================================================================================
+SOURCE:
+and on the of the death whether he is or whether he received a
+
+TARGET:
+and on the of the death if he is or if he received a [end]
+
+PREDICTION:
+and the king who said that percy is god s strong secret from where he was called either morning until after being made on it as you may be able
+
+============================================================================================================================================
+SOURCE:
+the film was directed by david and stars the regular television cast of smith harry and
+
+TARGET:
+the movie stars the main television cast of smith and harry a which he names
+
+PREDICTION:
+she directed by oscar rich and best known shows for the theater david george tim to have formed since.
+
+============================================================================================================================================
+SOURCE:
+in popular culture in when america a of lrb referred to as rrb attack an only to be off by a
+
+TARGET:
+it is shown in the movie when america an and getting off by a [end]
+
+PREDICTION:
+this after in the release lrb worldwide indian rrb as a separate animal from an example of american jim falls and control on that name. it s name comes to
+
+============================================================================================================================================
+SOURCE:
+it then emerged into the gulf of mexico on august into a category hurricane with mph lrb km h rrb
+
+TARGET:
+it then into the gulf of mexico into a [end]
+
+PREDICTION:
+after the treaty about miles into west of a tropical gulf it became an early hurricane when reaching out from two major winds and without its warm center.

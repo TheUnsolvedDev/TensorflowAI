@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+which search engine do you
+
+TARGET:
+quel moteur de recherche ? [end]
+
+PREDICTION:
+tu de quoi comme quoi bon ?
+
+============================================================================================================================================
+SOURCE:
+we must help.
+
+TARGET:
+nous devons aider. [end]
+
+PREDICTION:
+il nous faut aider.
+
+============================================================================================================================================
+SOURCE:
+i was so sure this was what i wanted.
+
+TARGET:
+j'étais sûr que c'était ce que je voulais. [end]
+
+PREDICTION:
+j'étais sûre que c'était ce que je voulais.
+
+============================================================================================================================================
+SOURCE:
+you're telling again.
+
+TARGET:
+tu encore des [end]
+
+PREDICTION:
+vous ne savez plus comment
+
+============================================================================================================================================
+SOURCE:
+don't to mail this letter.
+
+TARGET:
+n'oubliez pas de mettre cette lettre à la poste. [end]
+
+PREDICTION:
+n'oublie pas cette lettre.
+
+============================================================================================================================================
+SOURCE:
+the
+
+TARGET:
+la porte ! [end]
+
+PREDICTION:
+les
+
+============================================================================================================================================
+SOURCE:
+he was to the in the last
+
+TARGET:
+aux dernières il a été au [end]
+
+PREDICTION:
+il a été à la au dernier
+
+============================================================================================================================================
+SOURCE:
+don't be such a
+
+TARGET:
+ne sois pas si [end]
+
+PREDICTION:
+ne sois pas si
+
+============================================================================================================================================
+SOURCE:
+you saw didn't you?
+
+TARGET:
+vous les avez pas ? [end]
+
+PREDICTION:
+tu les as pas ?
+
+============================================================================================================================================
+SOURCE:
+my husband and i are both teachers.
+
+TARGET:
+mon mari et moi sommes tous les deux [end]
+
+PREDICTION:
+mon mari et moi sommes tous deux à ce des

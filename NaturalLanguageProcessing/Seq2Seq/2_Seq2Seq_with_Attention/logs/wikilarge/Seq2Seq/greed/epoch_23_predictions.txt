@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+there will also be a new train station built that will link to the broader public transport network with options to connect to the and rail stations.
+
+TARGET:
+these will link to the public transport network with roads to the motherwell and rail stations. [end]
+
+PREDICTION:
+there will also be a new train station and use of the train station.
+
+============================================================================================================================================
+SOURCE:
+his family moved to paris to escape the franco prussian war.
+
+TARGET:
+his family moved to paris to get away from the franco prussian war. [end]
+
+PREDICTION:
+his family moved to paris so he was shot at the conservatory in paris.
+
+============================================================================================================================================
+SOURCE:
+david lrb born december rrb is a professional basketball player.
+
+TARGET:
+david lrb born december in london england rrb is a american basketball player for the golden state warriors of the nba where he plays as a shooting guard and small [end]
+
+PREDICTION:
+lrb born december rrb is an american basketball player.
+
+============================================================================================================================================
+SOURCE:
+following his feud with rey mysterio guerrero was named number one contender to the world heavyweight championship and given a title match with
+
+TARGET:
+following his guerrero was named number one contender to the world heavyweight championship and given a title match with [end]
+
+PREDICTION:
+guerrero was named number one contender to the world heavyweight championship and given a title match with
+
+============================================================================================================================================
+SOURCE:
+at meters lrb ft rrb it is the tallest self supporting steel structure in the world and the tallest artificial structure in japan.
+
+TARGET:
+it is m lrb ft rrb tall making it the world s highest self supporting steel tower and the tallest structure in tokyo. [end]
+
+PREDICTION:
+it is the tallest building in the world from to.
+
+============================================================================================================================================
+SOURCE:
+fossils from new south wales and new zealand are estimated to be million years old corresponding to the
+
+TARGET:
+fossils from new south wales and new zealand are believed to be million years old. [end]
+
+PREDICTION:
+fossils from new south wales are estimated to be million years old corresponding to the
+
+============================================================================================================================================
+SOURCE:
+it is owned and operated by the california institute of technology.
+
+TARGET:
+it is owned and run by the california institute of technology lrb rrb. [end]
+
+PREDICTION:
+it is owned by the california institute of technology lrb television company rrb which is owned by the california institute of technology.
+
+============================================================================================================================================
+SOURCE:
+in the end strength as ruth marie was voted out.
+
+TARGET:
+in the end they thought strength was more important than loyalty as ruth marie was voted out. [end]
+
+PREDICTION:
+in the end strength as ruth marie was voted out.
+
+============================================================================================================================================
+SOURCE:
+in the latest and currently last time car and f ran on the same track formula one was to seconds faster than car.
+
+TARGET:
+was the last year champ car and f ran on the same track. [end]
+
+PREDICTION:
+in the latest and the last time car was car and it took part of the same track formula one was to seconds faster than car.
+
+============================================================================================================================================
+SOURCE:
+the georg b chner prize is the most important literary prize of germany.
+
+TARGET:
+the georg b chner prize lrb german georg b chner rrb is the most important literary prize of germany. [end]
+
+PREDICTION:
+the georg b chner was born in berlin as the most important literary prize of germany.

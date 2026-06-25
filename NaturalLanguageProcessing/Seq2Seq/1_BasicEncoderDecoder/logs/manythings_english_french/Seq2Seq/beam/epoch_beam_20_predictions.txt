@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i take pride in what i do.
+
+TARGET:
+je suis fier de ce que je fais. [end]
+
+PREDICTION:
+j'en regarde-moi de ce que je fasse.
+
+============================================================================================================================================
+SOURCE:
+you're lucky you didn't get shot.
+
+TARGET:
+tu as de la chance de ne pas t'être fait tirer dessus. [end]
+
+PREDICTION:
+tu as de toi la chance qui se pas mal compris. tien.
+
+============================================================================================================================================
+SOURCE:
+are you kids hungry?
+
+TARGET:
+les enfants, avez-vous faim ? [end]
+
+PREDICTION:
+as-tu des nouveaux enfants en début de l'année ? la veille à dire. tu as. peu.
+
+============================================================================================================================================
+SOURCE:
+we all agreed.
+
+TARGET:
+nous sommes toutes tombées d'accord. [end]
+
+PREDICTION:
+nous étions toutes.
+
+============================================================================================================================================
+SOURCE:
+he told me to be here at noon.
+
+TARGET:
+il m'a dit d'être ici à midi. [end]
+
+PREDICTION:
+il m'a dit d'être à l'heure où les autres.
+
+============================================================================================================================================
+SOURCE:
+she loves shopping.
+
+TARGET:
+elle adore faire des [end]
+
+PREDICTION:
+ses chaussures bien la faire. je
+
+============================================================================================================================================
+SOURCE:
+she will give a party next week.
+
+TARGET:
+elle une fête la semaine prochaine. [end]
+
+PREDICTION:
+une fête pourra leur prendra le la semaine prochaine. « vraiment vraiment. dollars. » étonnant qu'elle me réunion avec laquelle tu es tombée malade.
+
+============================================================================================================================================
+SOURCE:
+i'd rather read.
+
+TARGET:
+je préfère lire. [end]
+
+PREDICTION:
+je ferais plutôt ennuyeux.
+
+============================================================================================================================================
+SOURCE:
+don't forget to fill the with
+
+TARGET:
+n'oublie pas de remplir le d'essence. [end]
+
+PREDICTION:
+n'oubliez pas de mettre aux des fraises !
+
+============================================================================================================================================
+SOURCE:
+this is the dictionary i told you about yesterday.
+
+TARGET:
+c'est le dictionnaire dont je t'ai parlé hier. [end]
+
+PREDICTION:
+voici celui dont vous a rendu le même compte hier.

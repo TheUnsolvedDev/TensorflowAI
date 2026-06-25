@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+did you really think i'd dance with you?
+
+TARGET:
+pensais-tu réellement que j'allais danser avec toi ? [end]
+
+PREDICTION:
+tu pense vraiment, j'aimerais attendre avec toi ! ?
+
+============================================================================================================================================
+SOURCE:
+don't let go of the rope.
+
+TARGET:
+ne lâche pas la corde. [end]
+
+PREDICTION:
+ne laissez pas la corde à faire. j'y vais. » un coup d'œil autrement.
+
+============================================================================================================================================
+SOURCE:
+my father was satisfied with the result.
+
+TARGET:
+mon père était satisfait du résultat. [end]
+
+PREDICTION:
+mon père était contente du résultat. aux yeux. désolé. l'air.
+
+============================================================================================================================================
+SOURCE:
+i forgot your present.
+
+TARGET:
+j'ai oublié ton cadeau. [end]
+
+PREDICTION:
+j'ai oublié tes poches. à votre cadeau. désolé.
+
+============================================================================================================================================
+SOURCE:
+i'm worried about my weight.
+
+TARGET:
+mon poids me soucie. [end]
+
+PREDICTION:
+je suis inquiet de mon poids.
+
+============================================================================================================================================
+SOURCE:
+i usually have dinner at seven.
+
+TARGET:
+je prends habituellement mon dîner à 7 heures. [end]
+
+PREDICTION:
+je prépare habituellement pour bientôt 7 heures. ans.
+
+============================================================================================================================================
+SOURCE:
+let's do it this way.
+
+TARGET:
+faisons-le de cette façon. [end]
+
+PREDICTION:
+faisons-le si de ça.
+
+============================================================================================================================================
+SOURCE:
+can i come in?
+
+TARGET:
+puis-je entrer ? [end]
+
+PREDICTION:
+puis-je entrer ?
+
+============================================================================================================================================
+SOURCE:
+i like your outfit.
+
+TARGET:
+j'aime votre tenue. [end]
+
+PREDICTION:
+j'aime votre costume.
+
+============================================================================================================================================
+SOURCE:
+he's very intelligent.
+
+TARGET:
+il est très intelligent. [end]
+
+PREDICTION:
+est profondément intelligent. à même ?

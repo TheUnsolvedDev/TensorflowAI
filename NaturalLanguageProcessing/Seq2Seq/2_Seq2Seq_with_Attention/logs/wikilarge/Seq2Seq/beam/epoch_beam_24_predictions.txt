@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the most unusual storm of the season was hurricane
+
+TARGET:
+the most storm of this season was hurricane charley frances ivan and [end]
+
+PREDICTION:
+the second subtropical storm.
+
+============================================================================================================================================
+SOURCE:
+the works of henry fielding edited by g. h. included only the first two
+
+TARGET:
+g. h. printed act one and two in in works of henry [end]
+
+PREDICTION:
+it was first performed in a series of.
+
+============================================================================================================================================
+SOURCE:
+karl lrb rrb lrb july march rrb was a german footballer.
+
+TARGET:
+karl lrb born july and died march rrb was a former german football player. [end]
+
+PREDICTION:
+dr. george lrb full name born july in g rlitz died rrb in.
+
+============================================================================================================================================
+SOURCE:
+in the twentieth century another major german martin presented another view also based on
+
+TARGET:
+in the twentieth century the german martin created the divine will view. [end]
+
+PREDICTION:
+this was presented another view the more english model and a part of french speaking britain in no extra speakers lrb rrb as well. by some people consider its main source for an around
+
+============================================================================================================================================
+SOURCE:
+armageddon was a professional wrestling pay per view lrb ppv rrb event produced every december lrb with the exception of where the event was replaced with vengeance rrb by the professional wrestling promotion world wrestling entertainment lrb wwe rrb. the event was created in with its inaugural event taking place on december at the national car center in florida.
+
+TARGET:
+wwe was a pay per view event produced by world wrestling entertainment from to. [end]
+
+PREDICTION:
+it was the professional match with one of its first event taking place in.
+
+============================================================================================================================================
+SOURCE:
+ndash bruce lee american actor and martial artist lrb d. rrb
+
+TARGET:
+bruce lee chinese american actor martial arts expert lrb d. rrb [end]
+
+PREDICTION:
+bruce anderson s. niece nd in w. h. lee retired from to. the group s musical works were made.
+
+============================================================================================================================================
+SOURCE:
+is a city in jackson county oklahoma united states.
+
+TARGET:
+is a city of oklahoma in the united states. [end]
+
+PREDICTION:
+voiced is any city that serves most famous for being in the park. there was an important center of beer at rugby park in.
+
+============================================================================================================================================
+SOURCE:
+is the capital of saint helena at.
+
+TARGET:
+is a harbour and the capital of the british island of saint [end]
+
+PREDICTION:
+the district was part in banks of saint near to its capital city
+
+============================================================================================================================================
+SOURCE:
+derby museum and art gallery was established in along with derby central library in a new building designed by richard and given to derby by michael thomas
+
+TARGET:
+derby museum and art gallery was started in in a new building given to derby by a local [end]
+
+PREDICTION:
+the garden butter is owned in with derby cars and for to nelson were flooded in. this was designed by francis sargent into america. w comes from a small group of people s family while going on their home ground.
+
+============================================================================================================================================
+SOURCE:
+the associated linguistic forms are the verb in british spelling and in american spelling informally and are used as a
+
+TARGET:
+often referred to as lrb uk canada and australia rrb or lrb u.s. rrb the associated formal verb is lrb british spelling rrb or lrb american spelling rrb. [end]
+
+PREDICTION:
+the such families in spain like french has been found on an earthquake. for mostly exist writings of egypt as well.

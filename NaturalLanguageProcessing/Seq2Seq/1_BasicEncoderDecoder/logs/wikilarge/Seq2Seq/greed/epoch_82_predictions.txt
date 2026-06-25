@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+ndash battle of en louis iii of france the an event celebrated in the poem
+
+TARGET:
+king friedrich wilhelm iii of lrb d. rrb [end]
+
+PREDICTION:
+louis italian french french mathematician of is a of
+
+============================================================================================================================================
+SOURCE:
+tom and lrb and rrb for nintendo entertainment system and pc
+
+TARGET:
+tom and jerry in of is a fighting video game for the nintendo and pc based on classic cartoon series tom [end]
+
+PREDICTION:
+and other in oklahoma in the eighth world.
+
+============================================================================================================================================
+SOURCE:
+of water had to be removed from the national weather service office in this weather office also lost its
+
+TARGET:
+the office lrb rrb lost its [end]
+
+PREDICTION:
+sun the island and planned for a wind
+
+============================================================================================================================================
+SOURCE:
+the bridge is named after major general john lrb ndash rrb who the british forces that reached and the bridge during the battle of in september.
+
+TARGET:
+the john bridge at was after operation market [end]
+
+PREDICTION:
+the bridge is the the
+
+============================================================================================================================================
+SOURCE:
+he was one of the of the now popular
+
+TARGET:
+he is considered one of the of the now popular [end]
+
+PREDICTION:
+he who was born in became a popular british
+
+============================================================================================================================================
+SOURCE:
+he was the formula three drivers champion and the asia series champion and in formula one in.
+
+TARGET:
+lrb born april in geneva switzerland rrb is a formula one racing driver who holds from france and switzerland but under a french racing [end]
+
+PREDICTION:
+he was the formula one champion in the asia series both and champion.
+
+============================================================================================================================================
+SOURCE:
+according to the united states census bureau the city has a total area of. square miles lrb. km rrb all of it
+
+TARGET:
+is a city of kentucky in the united states. [end]
+
+PREDICTION:
+the united states census says that the city has an area of. square miles lrb. km rrb and about of the total lrb. billion rrb is in the line of
+
+============================================================================================================================================
+SOURCE:
+he composed some himself such as a
+
+TARGET:
+he even composed some of himself such as lrb a rrb. [end]
+
+PREDICTION:
+he composed some such as
+
+============================================================================================================================================
+SOURCE:
+the seven living species of sea are green sea s and
+
+TARGET:
+there are seven types of sea s green and the [end]
+
+PREDICTION:
+some sea island live under sea bay green and lake live there are two rivers of and
+
+============================================================================================================================================
+SOURCE:
+is a commune in the gironde department in aquitaine in southwestern france.
+
+TARGET:
+it is found in the region aquitaine in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+it is found in the region aquitaine in the gironde department in the southwest of france.

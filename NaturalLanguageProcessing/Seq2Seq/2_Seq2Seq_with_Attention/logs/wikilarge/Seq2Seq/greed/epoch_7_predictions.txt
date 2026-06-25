@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+she is ireland s second female president and the world s first woman to succeed another woman as an elected head of state.
+
+TARGET:
+she is also ireland s second woman president and the first in the world to succeed another woman. [end]
+
+PREDICTION:
+she is ireland s second female president and the world s first woman to succeed another woman as an elected head of state.
+
+============================================================================================================================================
+SOURCE:
+while the area of natural stands with large old trees is rapidly decreasing substantial areas of exist and it is increasingly grown in the long straight fast growing being much more commercially valuable than the old growth
+
+TARGET:
+while the area of natural stands with large old trees is rapidly large areas of new trees exist. [end]
+
+PREDICTION:
+while the area of natural stands with large old trees is rapidly and
+
+============================================================================================================================================
+SOURCE:
+it is used in the united states and in varying degrees around the world by researchers psychiatric drug regulation agencies health insurance companies companies and policy
+
+TARGET:
+it is used in the united states and around the world by doctors researchers health insurance companies companies which make medicine and others. [end]
+
+PREDICTION:
+it is used in the united states and in varying degrees around the world by researchers
+
+============================================================================================================================================
+SOURCE:
+before he had painted several pieces for the castle church at in competition with d rer hans and others the duke and his brother john were portrayed in various and a number of his best and copper plates were published.
+
+TARGET:
+before he had painted a few pieces for the castle church at [end]
+
+PREDICTION:
+before he had painted several pieces for the castle church at in competition with d rer hans and others the duke and his brother john were portrayed in various and
+
+============================================================================================================================================
+SOURCE:
+the present market place of was laid out at the beginning of the th century when the city had about inhabitants.
+
+TARGET:
+the current market place of was made at the start of the th century when the city had about people living there. [end]
+
+PREDICTION:
+the name of was laid out at the beginning of the th century when the city had about people living in it.
+
+============================================================================================================================================
+SOURCE:
+highland park is an city in the township of lake county illinois united states.
+
+TARGET:
+highland park is a city of illinois in the united states. [end]
+
+PREDICTION:
+highland park is a city of illinois in the united states.
+
+============================================================================================================================================
+SOURCE:
+as george is about to be hit by lorraine s father s car marty him out of the way and takes the as a result a teenage lorraine becomes with marty instead of
+
+TARGET:
+lrb marty s teenage mother becomes interested in marty instead of marty s father george rrb. [end]
+
+PREDICTION:
+he is a former
+
+============================================================================================================================================
+SOURCE:
+however nintendo designer pointed out to that the character looked more like a turtle than an
+
+TARGET:
+first appearance in the game was super mario bros. as a final [end]
+
+PREDICTION:
+however nintendo designer pointed out to that the character looked more like a turtle than an
+
+============================================================================================================================================
+SOURCE:
+malaysia is a multi religious society and islam is the official religion.
+
+TARGET:
+although islam is their official religion the citizens have the freedom to other religion malaysia is a multi religious society and islam is the country s official religion. [end]
+
+PREDICTION:
+malaysia is the official religion of the
+
+============================================================================================================================================
+SOURCE:
+canterbury cathedral in canterbury kent is one of the oldest and most famous christian structures in england and forms part of a world heritage site.
+
+TARGET:
+the cathedral is in canterbury kent and is a world heritage site. [end]
+
+PREDICTION:
+canterbury cathedral is one of the oldest and most famous christian structures in england.

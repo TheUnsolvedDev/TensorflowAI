@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+americans admire lincoln for his honesty.
+
+TARGET:
+les lincoln pour son honnêteté. [end]
+
+PREDICTION:
+a l'expérience du meurtrier pour son argent en plein honnêteté.
+
+============================================================================================================================================
+SOURCE:
+i seldom drink coffee.
+
+TARGET:
+je bois rarement du café. [end]
+
+PREDICTION:
+seulement le café, va rarement un café. aux mecs sont des frais. par bien.
+
+============================================================================================================================================
+SOURCE:
+he is
+
+TARGET:
+il est méchant. [end]
+
+PREDICTION:
+il sait de
+
+============================================================================================================================================
+SOURCE:
+tom spends a lot of time playing football.
+
+TARGET:
+tom passe beaucoup de temps à jouer au football. [end]
+
+PREDICTION:
+le passe de beaucoup quand tom jouent à temps en train d'appeler ? du football.
+
+============================================================================================================================================
+SOURCE:
+how do you tell them
+
+TARGET:
+comment les ? [end]
+
+PREDICTION:
+tout le ferais-tu à un point de taille ? aux voilà jamais. par vous. en es-tu sérieux êtes-vous bienvenus.
+
+============================================================================================================================================
+SOURCE:
+i feel bad that i haven't paid you yet.
+
+TARGET:
+je me sens mal de ne pas encore t'avoir payé. [end]
+
+PREDICTION:
+tu me ressens de mal, je ne t'aime rien.
+
+============================================================================================================================================
+SOURCE:
+where did you get the eggs?
+
+TARGET:
+où as-tu trouvé les œufs ? [end]
+
+PREDICTION:
+où as-tu été les œufs ? de choses que ça porte.
+
+============================================================================================================================================
+SOURCE:
+this is a misunderstanding.
+
+TARGET:
+c’est un malentendu. [end]
+
+PREDICTION:
+celle-ci est un malentendu.
+
+============================================================================================================================================
+SOURCE:
+choose books carefully.
+
+TARGET:
+choisissez les livres avec soin. [end]
+
+PREDICTION:
+choisissez avec attention.
+
+============================================================================================================================================
+SOURCE:
+tom knows where the others are, i think.
+
+TARGET:
+tom sait où sont les je pense. [end]
+
+PREDICTION:
+tom sait là cette ou lesquels je pense les autres. !

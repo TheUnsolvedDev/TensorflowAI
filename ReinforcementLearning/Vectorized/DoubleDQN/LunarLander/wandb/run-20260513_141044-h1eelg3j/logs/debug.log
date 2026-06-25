@@ -1,0 +1,196 @@
+2026-05-13 14:10:44,778 INFO    Thread-2 (_run_job):711755 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-05-13 14:10:44,778 INFO    Thread-2 (_run_job):711755 [wandb_setup.py:_flush():81] Configure stats pid to 711755
+2026-05-13 14:10:44,778 INFO    Thread-2 (_run_job):711755 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-05-13 14:10:44,778 INFO    Thread-2 (_run_job):711755 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/LunarLander/wandb/run-20260513_141044-h1eelg3j/logs/debug.log
+2026-05-13 14:10:44,778 INFO    Thread-2 (_run_job):711755 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/LunarLander/wandb/run-20260513_141044-h1eelg3j/logs/debug-internal.log
+2026-05-13 14:10:44,778 INFO    Thread-2 (_run_job):711755 [wandb_init.py:init():850] calling init triggers
+2026-05-13 14:10:44,778 INFO    Thread-2 (_run_job):711755 [wandb_init.py:init():855] wandb.init called with sweep_config: {'batch_size': 256, 'buffer_size': 300000, 'epsilon_decay_steps': 800000, 'epsilon_end': 0.02, 'gamma': 0.995, 'lr': 7.309875400841077e-05, 'target_update_freq': 1000}
+config: {'_wandb': {}}
+2026-05-13 14:10:44,778 INFO    Thread-2 (_run_job):711755 [wandb_init.py:init():898] starting backend
+2026-05-13 14:10:45,026 INFO    Thread-2 (_run_job):711755 [wandb_init.py:init():913] sending inform_init request
+2026-05-13 14:10:45,595 INFO    Thread-2 (_run_job):711755 [wandb_init.py:init():918] backend started and connected
+2026-05-13 14:10:45,595 INFO    Thread-2 (_run_job):711755 [wandb_run.py:_config_callback():1415] config_cb None None {'batch_size': 256, 'buffer_size': 300000, 'epsilon_decay_steps': 800000, 'epsilon_end': 0.02, 'gamma': 0.995, 'lr': 7.309875400841077e-05, 'target_update_freq': 1000}
+2026-05-13 14:10:45,596 INFO    Thread-2 (_run_job):711755 [wandb_init.py:init():988] updated telemetry
+2026-05-13 14:10:45,600 INFO    Thread-2 (_run_job):711755 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-05-13 14:10:46,015 INFO    Thread-2 (_run_job):711755 [wandb_init.py:init():1056] starting run threads in backend
+2026-05-13 14:10:46,093 INFO    Thread-2 (_run_job):711755 [wandb_run.py:_console_start():2554] atexit reg
+2026-05-13 14:10:46,093 INFO    Thread-2 (_run_job):711755 [wandb_run.py:_redirect():2403] redirect: wrap_raw
+2026-05-13 14:10:46,093 INFO    Thread-2 (_run_job):711755 [wandb_run.py:_redirect():2472] Wrapping output streams.
+2026-05-13 14:10:46,093 INFO    Thread-2 (_run_job):711755 [wandb_run.py:_redirect():2495] Redirects installed.
+2026-05-13 14:10:46,095 INFO    Thread-2 (_run_job):711755 [wandb_init.py:init():1094] run started, returning control to user process
+2026-05-13 20:42:37,246 ERROR   Thread-1 (_heartbeat):711755 [internal_api.py:execute():383] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 379, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 71, in execute
+    request.raise_for_status()
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2026-05-13 20:43:58,220 ERROR   Thread-1 (_heartbeat):711755 [internal_api.py:execute():383] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 379, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 71, in execute
+    request.raise_for_status()
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2026-05-13 20:45:39,928 ERROR   Thread-1 (_heartbeat):711755 [internal_api.py:execute():383] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 379, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 71, in execute
+    request.raise_for_status()
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2026-05-13 20:47:53,490 ERROR   Thread-1 (_heartbeat):711755 [internal_api.py:execute():383] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 379, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 71, in execute
+    request.raise_for_status()
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.wandb.ai/graphql
+2026-05-13 20:49:57,689 ERROR   Thread-1 (_heartbeat):711755 [internal_api.py:execute():383] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 379, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 71, in execute
+    request.raise_for_status()
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2026-05-13 20:50:57,064 ERROR   Thread-1 (_heartbeat):711755 [internal_api.py:execute():383] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 379, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 71, in execute
+    request.raise_for_status()
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2026-05-13 20:51:59,346 INFO    Thread-1 (_heartbeat):711755 [retry.py:__call__():167] [no run ID] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/urllib3/connection.py", line 565, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=60)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/retry.py", line 160, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 379, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 70, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/adapters.py", line 690, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=60)

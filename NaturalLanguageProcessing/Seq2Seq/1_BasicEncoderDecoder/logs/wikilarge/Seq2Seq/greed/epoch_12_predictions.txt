@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+century dictionary rrb was a genus of giant predatory birds that lived in containing the single species
+
+TARGET:
+was a genus of giant predatory birds which lived in [end]
+
+PREDICTION:
+is a genus of giant predatory birds and
+
+============================================================================================================================================
+SOURCE:
+of lrb roots archive april march paris rrb was queen consort of france.
+
+TARGET:
+of lrb april march rrb was a queen of france. [end]
+
+PREDICTION:
+of lrb march rrb was a french queen in england.
+
+============================================================================================================================================
+SOURCE:
+in cell biology an lrb rrb is a specialized within a cell that has a specific function and is usually separately enclosed within its own
+
+TARGET:
+in cell biology an is a structure of a cell having specialized functions. [end]
+
+PREDICTION:
+in cell biology a is a cell that is to a physical and
+
+============================================================================================================================================
+SOURCE:
+he is currently signed to world wrestling entertainment where he on the raw brand as sheffield but is currently inactive due to an injury.
+
+TARGET:
+ryan reeves lrb born november in las vegas nevada rrb better known by his ring name sheffield is a professional wrestler currently signed to world wrestling entertainment lrb wwe rrb and to the raw brand where he is currently part of the professional wrestling stable the [end]
+
+PREDICTION:
+he is currently signed to the raw brand where he is the host of the world wrestling entertainment lrb wwe rrb.
+
+============================================================================================================================================
+SOURCE:
+s mar a lrb born january in a rrb is a former spanish footballer in the midfielder position.
+
+TARGET:
+s mar a lrb born january rrb is a former spanish football player. [end]
+
+PREDICTION:
+s mar a lrb born january rrb is a former spanish football player.
+
+============================================================================================================================================
+SOURCE:
+leaves are arranged and may m long and c wide.
+
+TARGET:
+leaves are arranged as a spiral and may grow. m long and c wide. [end]
+
+PREDICTION:
+leaves are and are usually lrb inches rrb long and cm lrb inches rrb long and cm lrb in rrb and lrb inches rrb.
+
+============================================================================================================================================
+SOURCE:
+released the first collected volume of the series on may and as of may thirteen volumes have been released.
+
+TARGET:
+as of may media has released the first five volumes in the united states. [end]
+
+PREDICTION:
+the first album was released on the last one was released on january.
+
+============================================================================================================================================
+SOURCE:
+apple records was founded in as a sub division of the beatles apple corps project which was established as a small group of companies lrb apple retail apple publishing apple films and so on rrb.
+
+TARGET:
+apple records was a record label started by the beatles which was active from until. it was a division of the beatles s company apple corps. [end]
+
+PREDICTION:
+apple bought a company in the world with a studio album called
+
+============================================================================================================================================
+SOURCE:
+plants before they started flowering were grown for the fibers of their
+
+TARGET:
+plants were grown for the fibers of their [end]
+
+PREDICTION:
+plants made the seeds the tree grown better.
+
+============================================================================================================================================
+SOURCE:
+the following summer the band had their first time playing on open air festivals in finland and other countries.
+
+TARGET:
+that summer played their first open air festivals in finland. [end]
+
+PREDICTION:
+the following year the festival took place on the coast in the tour the band s home and pop groups tour.

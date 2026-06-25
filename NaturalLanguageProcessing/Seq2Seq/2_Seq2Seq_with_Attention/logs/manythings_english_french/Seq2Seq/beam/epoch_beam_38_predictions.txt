@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'll teach you everything you need to know.
+
+TARGET:
+je vous tout ce que vous avez besoin de savoir. [end]
+
+PREDICTION:
+je vous toute là ce qu'on à savoir.
+
+============================================================================================================================================
+SOURCE:
+their of was gone.
+
+TARGET:
+ils plus de de [end]
+
+PREDICTION:
+en des pieds de la taille étaient disparu. par fait. à son rendez-vous.
+
+============================================================================================================================================
+SOURCE:
+i love the way you kiss.
+
+TARGET:
+j'adore la manière que vous avez [end]
+
+PREDICTION:
+j'apprécie la manière que tu es
+
+============================================================================================================================================
+SOURCE:
+still have a long way to go.
+
+TARGET:
+les de ont encore un bout de chemin à faire. [end]
+
+PREDICTION:
+ce produit n'aime toujours avoir un plaisir à
+
+============================================================================================================================================
+SOURCE:
+i study
+
+TARGET:
+j'étudie les [end]
+
+PREDICTION:
+j'étudie la
+
+============================================================================================================================================
+SOURCE:
+i'm sorry we can't stay any longer.
+
+TARGET:
+je suis désolée, nous ne pouvons rester plus longtemps. [end]
+
+PREDICTION:
+que ce n'est pas de nos jours.
+
+============================================================================================================================================
+SOURCE:
+i'll wait in the
+
+TARGET:
+dans le [end]
+
+PREDICTION:
+je au sol. à jour.
+
+============================================================================================================================================
+SOURCE:
+if for some reason that what would you do?
+
+TARGET:
+pour une raison cela avait que ? [end]
+
+PREDICTION:
+pour une ou perdre quoi que cette robe feriez-vous ?
+
+============================================================================================================================================
+SOURCE:
+don't even try it.
+
+TARGET:
+même pas. [end]
+
+PREDICTION:
+même pas moins !
+
+============================================================================================================================================
+SOURCE:
+he was without
+
+TARGET:
+il a été sans [end]
+
+PREDICTION:
+il s'est produit par leurs site plus maladie.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+please turn the page.
+
+TARGET:
+veuillez tourner la page. [end]
+
+PREDICTION:
+s'il vous plaît, à la note.
+
+============================================================================================================================================
+SOURCE:
+tom kept writing.
+
+TARGET:
+tom a continué à écrire. [end]
+
+PREDICTION:
+on s'est senti endormi.
+
+============================================================================================================================================
+SOURCE:
+tom's harmless.
+
+TARGET:
+tom est [end]
+
+PREDICTION:
+thomas est de train du feu. ans. !
+
+============================================================================================================================================
+SOURCE:
+i'm sorry about last night.
+
+TARGET:
+je suis désolée à propos de cette nuit. [end]
+
+PREDICTION:
+j'ai songé du soir. c'est à la dernière.
+
+============================================================================================================================================
+SOURCE:
+she talks everything over with her parents.
+
+TARGET:
+elle parle de tout avec ses parents. [end]
+
+PREDICTION:
+c'est de tout parler avec ses devoirs.
+
+============================================================================================================================================
+SOURCE:
+tom decided not to go to the meeting.
+
+TARGET:
+tom décida de ne pas aller à la réunion. [end]
+
+PREDICTION:
+tom est décidé de n'en rendre.
+
+============================================================================================================================================
+SOURCE:
+he his girlfriend on
+
+TARGET:
+il rencontre sa petite amie le samedi. [end]
+
+PREDICTION:
+il la petite amie en l'air.
+
+============================================================================================================================================
+SOURCE:
+which is the most difficult language in the world?
+
+TARGET:
+quel est la langue la plus difficile au monde ? [end]
+
+PREDICTION:
+c'est quelle la hier qui y est au mauvais du monde ? le terre de terre ! »
+
+============================================================================================================================================
+SOURCE:
+do you know me?
+
+TARGET:
+tu me connais ? [end]
+
+PREDICTION:
+connais-tu le courant ?
+
+============================================================================================================================================
+SOURCE:
+the elderly woman was but
+
+TARGET:
+la vieille femme était mais pleine de [end]
+
+PREDICTION:
+la pluie avait des et de manière à cause du coin.

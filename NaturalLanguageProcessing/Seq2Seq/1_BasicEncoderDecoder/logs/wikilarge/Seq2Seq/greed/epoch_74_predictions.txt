@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+wrote in my story that she did not to meet him a
+
+TARGET:
+wrote in my story that she did not want to meet him because she thought he might be a [end]
+
+PREDICTION:
+acting in her book she did not him to
+
+============================================================================================================================================
+SOURCE:
+the best win and after the the of the queen takes place on a stand in front of st nicholas church under the of william
+
+TARGET:
+there is a of on the town church. [end]
+
+PREDICTION:
+at the opera house the of bavaria with anthony s version of the
+
+============================================================================================================================================
+SOURCE:
+little is known their but their environment they are likely to be
+
+TARGET:
+little is known their [end]
+
+PREDICTION:
+little is but their name is they also themselves
+
+============================================================================================================================================
+SOURCE:
+alongside the internal security service lrb mi rrb the government headquarters lrb rrb and the defense intelligence staff lrb rrb it operates under the formal direction of the joint
+
+TARGET:
+it works with the security service lrb mi rrb government headquarters lrb rrb and the defense intelligence staff lrb rrb. [end]
+
+PREDICTION:
+the defense the forces are the department of the security service and the
+
+============================================================================================================================================
+SOURCE:
+the green screen international film festival is held annually in germany.
+
+TARGET:
+green screen is an international film [end]
+
+PREDICTION:
+since it takes place in
+
+============================================================================================================================================
+SOURCE:
+and signed the treaty of n by which the province is to the latter an end to s in the war of the
+
+TARGET:
+s in the war of the [end]
+
+PREDICTION:
+and n lrb israel rrb signed to the of the peace of war.
+
+============================================================================================================================================
+SOURCE:
+however different even in the tradition make use of or white or may be added along with the or for
+
+TARGET:
+for special or along with today both and oil are used for the of small of and [end]
+
+PREDICTION:
+in the united kingdom are of
+
+============================================================================================================================================
+SOURCE:
+may lrb born august rrb is a scottish association football former player and manager.
+
+TARGET:
+may lrb born august rrb is a former scottish and is now the head coach of [end]
+
+PREDICTION:
+f.c. is an english football team from to and played in the new
+
+============================================================================================================================================
+SOURCE:
+in music sharp lrb from french rrb or lrb from greek rrb means higher in and the sharp symbol a note by a half
+
+TARGET:
+in music sharp or means higher in [end]
+
+PREDICTION:
+the green means sharp lrb in medieval i rrb seventh lrb form rrb a form lrb double rrb half lrb i rrb the second half of the th
+
+============================================================================================================================================
+SOURCE:
+e is a commune in county romania with a population of people. it has the following villages e
+
+TARGET:
+e is a commune found in dolj county romania. [end]
+
+PREDICTION:
+g is a commune found in dolj county

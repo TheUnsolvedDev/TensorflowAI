@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+do you ever get told that you look like someone else?
+
+TARGET:
+est-ce qu'on vous dit parfois que vous à quelqu'un d'autre ? [end]
+
+PREDICTION:
+tu tous les bras entendre que vous ayez d'autre idée à la mort ? clair.
+
+============================================================================================================================================
+SOURCE:
+i'll be there right away.
+
+TARGET:
+je serai là sans [end]
+
+PREDICTION:
+je vais partir sans façon. fois. ? tout.
+
+============================================================================================================================================
+SOURCE:
+where can i study french?
+
+TARGET:
+où puis-je étudier le français ? [end]
+
+PREDICTION:
+on puis-je visiter la français. es-tu
+
+============================================================================================================================================
+SOURCE:
+tom has decided to say yes.
+
+TARGET:
+tom a décidé [end]
+
+PREDICTION:
+la tom est demandé « vérité oui.
+
+============================================================================================================================================
+SOURCE:
+when i lived in i took the every day.
+
+TARGET:
+quand à je chaque jour le [end]
+
+PREDICTION:
+enfant, lorsque j'étais sur les jours partis il fait que ça du coup. côté.
+
+============================================================================================================================================
+SOURCE:
+i feel like having an ice
+
+TARGET:
+j'ai envie d'une glace. [end]
+
+PREDICTION:
+mon chemin pour avoir une
+
+============================================================================================================================================
+SOURCE:
+ask anyone.
+
+TARGET:
+demandez à n'importe [end]
+
+PREDICTION:
+demande un coup correctement. cela. me qu'à les choses sont content. à le sens. prochain.
+
+============================================================================================================================================
+SOURCE:
+the climbed the tree.
+
+TARGET:
+à l'arbre. [end]
+
+PREDICTION:
+le coup va sur la route. prochain.
+
+============================================================================================================================================
+SOURCE:
+these flowers aren't only but they smell nice.
+
+TARGET:
+ces fleurs ne sont pas seulement mais également très bon. [end]
+
+PREDICTION:
+ces fleurs. n'est plutôt que d'arrêter leur marier et ils
+
+============================================================================================================================================
+SOURCE:
+didn't that seem to you?
+
+TARGET:
+cela ne t'a-t-il pas bizarre ? [end]
+
+PREDICTION:
+cela ne eu pas bien ? pourquoi le succès me donnerai te les politique.

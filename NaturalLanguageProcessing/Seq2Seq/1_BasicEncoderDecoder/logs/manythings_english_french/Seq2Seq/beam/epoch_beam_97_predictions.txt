@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i found the picture you were looking for.
+
+TARGET:
+j'ai trouvé la photo que tu [end]
+
+PREDICTION:
+j’ai appris à vous le poste ?
+
+============================================================================================================================================
+SOURCE:
+it may rain this afternoon.
+
+TARGET:
+il se peut qu'il cet après-midi. [end]
+
+PREDICTION:
+c’est s'il a eu lieu cette après-midi.
+
+============================================================================================================================================
+SOURCE:
+you should never cut on
+
+TARGET:
+on ne devrait jamais en de sécurité. [end]
+
+PREDICTION:
+on animaux ne serais dangereux à le cancer. et des
+
+============================================================================================================================================
+SOURCE:
+i've got to get back home by midnight.
+
+TARGET:
+il me faut être rentré chez moi pour minuit. [end]
+
+PREDICTION:
+j'ai juste à réfléchir d'ici demain soir.
+
+============================================================================================================================================
+SOURCE:
+"tom is getting the lucky
+
+TARGET:
+« tom va se marier. » « qui est ? » [end]
+
+PREDICTION:
+à nage les gens du patient. il y a si beaucoup que tu es aies attendez de l'école.
+
+============================================================================================================================================
+SOURCE:
+rain is not a natural
+
+TARGET:
+la pluie n'est pas un [end]
+
+PREDICTION:
+le problème n’est dehors a l'air un jure dieu ne aurait plus. différent.
+
+============================================================================================================================================
+SOURCE:
+i can't believe that she is older than my mother.
+
+TARGET:
+je ne peux pas croire qu'elle soit plus que ma mère. [end]
+
+PREDICTION:
+je pas qu'il ne appartient à nouveau.
+
+============================================================================================================================================
+SOURCE:
+they spent the afternoon around the pool.
+
+TARGET:
+elles ont passé l'après-midi autour de la piscine. [end]
+
+PREDICTION:
+il y a raté l'été photo après l'université. et suis avocat. vous
+
+============================================================================================================================================
+SOURCE:
+i'm glad you're here with me.
+
+TARGET:
+je me réjouis que vous soyez ici avec moi. [end]
+
+PREDICTION:
+je me réjouis d'être là votre travail.
+
+============================================================================================================================================
+SOURCE:
+if i were you, i would paint it blue.
+
+TARGET:
+si j'étais toi, je le en [end]
+
+PREDICTION:
+si j'allais vous, que la il met en même temps.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i was asked to do that.
+
+TARGET:
+on m'a demandé de faire ça. [end]
+
+PREDICTION:
+on m'a demandé de le faire.
+
+============================================================================================================================================
+SOURCE:
+i'm no longer a
+
+TARGET:
+je ne suis plus un bleu. [end]
+
+PREDICTION:
+je ne suis plus un débutant.
+
+============================================================================================================================================
+SOURCE:
+i admire you for your courage.
+
+TARGET:
+je vous pour votre courage. [end]
+
+PREDICTION:
+je pour ton courage.
+
+============================================================================================================================================
+SOURCE:
+have you ever eaten at that restaurant?
+
+TARGET:
+as-tu jamais mangé à ce restaurant ? [end]
+
+PREDICTION:
+avez-vous jamais mangé dans ce ?
+
+============================================================================================================================================
+SOURCE:
+i don't have any cash.
+
+TARGET:
+je n'ai pas de liquide. [end]
+
+PREDICTION:
+je n'ai pas de liquide.
+
+============================================================================================================================================
+SOURCE:
+tom and mary are asleep.
+
+TARGET:
+tom et mary sont [end]
+
+PREDICTION:
+tom et mary sont endormis.
+
+============================================================================================================================================
+SOURCE:
+i think i'm coming down with the flu.
+
+TARGET:
+je crois que je une grippe. [end]
+
+PREDICTION:
+je pense que je passe la grippe.
+
+============================================================================================================================================
+SOURCE:
+i have six to
+
+TARGET:
+j'ai six à [end]
+
+PREDICTION:
+j'ai quelques pour
+
+============================================================================================================================================
+SOURCE:
+tom is making me do this.
+
+TARGET:
+tom me fait faire ceci. [end]
+
+PREDICTION:
+tom en me fait faire ça.
+
+============================================================================================================================================
+SOURCE:
+they lie all the time.
+
+TARGET:
+elles tout le temps. [end]
+
+PREDICTION:
+ils tout le temps.

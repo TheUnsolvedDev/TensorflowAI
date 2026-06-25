@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'm too drunk to do that.
+
+TARGET:
+j'ai trop bu pour faire ça. [end]
+
+PREDICTION:
+je vais avoir trop confiance le fasse.
+
+============================================================================================================================================
+SOURCE:
+tom has no interest in
+
+TARGET:
+tom ne pas à la [end]
+
+PREDICTION:
+la thomas joue dans suffisamment lentement de l'air.
+
+============================================================================================================================================
+SOURCE:
+i waited a while.
+
+TARGET:
+j'ai attendu un moment. [end]
+
+PREDICTION:
+attendu long. un de douche.
+
+============================================================================================================================================
+SOURCE:
+my apartment isn't far from here.
+
+TARGET:
+mon appartement n'est pas loin d'ici. [end]
+
+PREDICTION:
+mes lunettes de soleil ne beaucoup pas d'ici. sang. cela !
+
+============================================================================================================================================
+SOURCE:
+do you live here?
+
+TARGET:
+tu vis ici ? [end]
+
+PREDICTION:
+vous vivons ici de choses ?
+
+============================================================================================================================================
+SOURCE:
+i've been to twice.
+
+TARGET:
+je me suis rendu deux fois à [end]
+
+PREDICTION:
+j'y crois.
+
+============================================================================================================================================
+SOURCE:
+i'll take that one.
+
+TARGET:
+je vais prendre [end]
+
+PREDICTION:
+j'y vais aussi prendre
+
+============================================================================================================================================
+SOURCE:
+are you making fun of me?
+
+TARGET:
+est-ce que vous vous de moi ? [end]
+
+PREDICTION:
+êtes-vous en train soin de me parler, ? et un je suis jeune.
+
+============================================================================================================================================
+SOURCE:
+she couldn't convince him to accept a personal
+
+TARGET:
+elle ne put le convaincre un [end]
+
+PREDICTION:
+elle n'avait pas. le convaincre de expliquer cela !
+
+============================================================================================================================================
+SOURCE:
+the how to use the machine.
+
+TARGET:
+le a fait la de de la [end]
+
+PREDICTION:
+de l'autre manière cette peinture se lever.

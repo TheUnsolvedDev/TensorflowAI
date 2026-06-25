@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+s mother s great to the family so had a relationship with the british royal family.
+
+TARGET:
+great was in the family so he was related to the british royal family. [end]
+
+PREDICTION:
+to martin murder children that had a with his first king before england.
+
+============================================================================================================================================
+SOURCE:
+following her death her older sister du and younger brother wrote a book about their family life a in the family.
+
+TARGET:
+s sister and her brother later wrote a book about her called a in the family. [end]
+
+PREDICTION:
+shortly queen early s and sister rocks lived by marriage died in the duchy of
+
+============================================================================================================================================
+SOURCE:
+july battle of al king
+
+TARGET:
+iv count of provence lrb died rrb [end]
+
+PREDICTION:
+events july william iv al ruler date of heart unknown battle and i looks like this way the idea ruled by king jacques lion iran parallel northern empire to form
+
+============================================================================================================================================
+SOURCE:
+she is best known for playing the character chase in the television series the and its spin off angel for which she was nominated for four saturn
+
+TARGET:
+she is best known for playing the character in the television series buffy the and its spin off [end]
+
+PREDICTION:
+her was like disney michael simon lrb on the fox series rrb and some show angel for an extra movie
+
+============================================================================================================================================
+SOURCE:
+he named his daughter after the character from who was created by friend and fellow writer paul
+
+TARGET:
+he named his daughter after the character from. [end]
+
+PREDICTION:
+after johann smith took place in.
+
+============================================================================================================================================
+SOURCE:
+fashion are that and such as and
+
+TARGET:
+items such as such as and [end]
+
+PREDICTION:
+works such known oxide as bird make up image but it is quite famous in parts lrb with help korean mathematician and champions plant series the other causes a kind
+
+============================================================================================================================================
+SOURCE:
+the formula one season included the th formula one world championship season which on january and ended on october after nine
+
+TARGET:
+the formula one season was the th edition of the championship. [end]
+
+PREDICTION:
+one season showed a th world championship season.
+
+============================================================================================================================================
+SOURCE:
+the object of the game is to score the most points by rolling five to make certain
+
+TARGET:
+the object of the game is to roll five lrb up to three times rrb to create certain such as [end]
+
+PREDICTION:
+the main is to score much of any points by rolling biggest lrb one number about certain items or can perform multi engines rrb and more damage on a ball
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+li isle lrb italian canadian word n rsb recordings rrb in islam was a tropical and ethnic music mentioned by the census name general robert du history behind it with
+
+============================================================================================================================================
+SOURCE:
+is a town in county massachusetts united states about twenty one miles west northwest of boston along route west of and about ten miles lrb km rrb southwest
+
+TARGET:
+is a town in the u.s. state of [end]
+
+PREDICTION:
+the river in it on a hill west and miles lrb km rrb east northwest of london boston massachusetts about million people at its location three small town

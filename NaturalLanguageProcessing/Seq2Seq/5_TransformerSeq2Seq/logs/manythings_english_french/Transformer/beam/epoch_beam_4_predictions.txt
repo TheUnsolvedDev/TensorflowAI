@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+bad weather kept us from going out.
+
+TARGET:
+le mauvais temps nous a de sortir. [end]
+
+PREDICTION:
+où se a toujours nous aller. de tes lit.
+
+============================================================================================================================================
+SOURCE:
+we know what you're up to.
+
+TARGET:
+on sait ce que tu [end]
+
+PREDICTION:
+nous sais quoi que à le livre.
+
+============================================================================================================================================
+SOURCE:
+the man robbed her bag.
+
+TARGET:
+l'homme lui a volé son sac. [end]
+
+PREDICTION:
+la voiture a perdu sa maison.
+
+============================================================================================================================================
+SOURCE:
+maybe tom asked mary to lie.
+
+TARGET:
+peut-être que tom a demandé à mary de mentir. [end]
+
+PREDICTION:
+ce qu'on a entendu qu'il était à mary. de ça. !
+
+============================================================================================================================================
+SOURCE:
+my dog follows me whenever i leave the room.
+
+TARGET:
+mon chien me chaque fois que je quitte la pièce. [end]
+
+PREDICTION:
+mon chat me j'ai donné dans un jour.
+
+============================================================================================================================================
+SOURCE:
+i used a computer in order to save time.
+
+TARGET:
+je me suis servi d'un ordinateur pour gagner du temps. [end]
+
+PREDICTION:
+j'étais quelques à la bonne idée. » je vous plaît.
+
+============================================================================================================================================
+SOURCE:
+tom is the person i told you about.
+
+TARGET:
+tom est la personne dont je vous ai [end]
+
+PREDICTION:
+tom est de croire qui te plait.
+
+============================================================================================================================================
+SOURCE:
+don't leave your dog inside all day.
+
+TARGET:
+ne laisse pas ton chien à l'intérieur toute la journée. [end]
+
+PREDICTION:
+n'oublie pas ta maison la nuit.
+
+============================================================================================================================================
+SOURCE:
+this is an exception to the rule.
+
+TARGET:
+c'est une à la règle. [end]
+
+PREDICTION:
+cette vie est au bus. !
+
+============================================================================================================================================
+SOURCE:
+sit down and shut up.
+
+TARGET:
+asseyez-vous et ! [end]
+
+PREDICTION:
+prenez des à son amis.

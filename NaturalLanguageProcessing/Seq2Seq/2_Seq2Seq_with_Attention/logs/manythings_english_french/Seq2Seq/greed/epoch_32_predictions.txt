@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+stop up on me.
+
+TARGET:
+arrêtez de vous contre moi. [end]
+
+PREDICTION:
+arrête de
+
+============================================================================================================================================
+SOURCE:
+she is more pretty than beautiful.
+
+TARGET:
+elle est davantage mignonne que belle. [end]
+
+PREDICTION:
+elle est plus jolie que belle.
+
+============================================================================================================================================
+SOURCE:
+did you go anywhere during the summer vacation?
+
+TARGET:
+êtes-vous allées quelque part pendant les vacances d'été ? [end]
+
+PREDICTION:
+êtes-vous allé quelque part pendant les vacances d'été ?
+
+============================================================================================================================================
+SOURCE:
+you are taller than me.
+
+TARGET:
+vous êtes plus grands que moi. [end]
+
+PREDICTION:
+tu es plus grande que moi.
+
+============================================================================================================================================
+SOURCE:
+drink some water.
+
+TARGET:
+buvez de l'eau ! [end]
+
+PREDICTION:
+bois de l'eau !
+
+============================================================================================================================================
+SOURCE:
+they seem surprised.
+
+TARGET:
+elles semblent surprises. [end]
+
+PREDICTION:
+ils ont l'air surpris.
+
+============================================================================================================================================
+SOURCE:
+what caused the accident?
+
+TARGET:
+quelle était la cause de [end]
+
+PREDICTION:
+quelle a pris l'accident ?
+
+============================================================================================================================================
+SOURCE:
+are you going by bus or car?
+
+TARGET:
+y vas-tu en bus ou en voiture ? [end]
+
+PREDICTION:
+y allez-vous en car ou en voiture ?
+
+============================================================================================================================================
+SOURCE:
+did you break it?
+
+TARGET:
+est-ce que tu l'as cassé ? [end]
+
+PREDICTION:
+est-ce que tu l'as cassé ?
+
+============================================================================================================================================
+SOURCE:
+i'm excited and ready to go.
+
+TARGET:
+je suis excité et prêt à partir. [end]
+
+PREDICTION:
+je suis excité que je parte.

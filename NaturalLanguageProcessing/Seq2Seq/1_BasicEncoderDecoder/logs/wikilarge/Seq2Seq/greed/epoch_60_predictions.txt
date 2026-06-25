@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+first this back in the s.
+
+TARGET:
+first this back in the s. [end]
+
+PREDICTION:
+during the first war the
+
+============================================================================================================================================
+SOURCE:
+the distribution of includes a large number of free and on the windows platform this greatly the need for
+
+TARGET:
+uses a large number of free and [end]
+
+PREDICTION:
+key number of and controls the and
+
+============================================================================================================================================
+SOURCE:
+usually the storm makes landfall in the mexican states of california or and the remaining the state.
+
+TARGET:
+usually the storm makes landfall in the mexican states of california or with the remaining normally having effects on the state. [end]
+
+PREDICTION:
+soldier a in the center of the state of and is for example the
+
+============================================================================================================================================
+SOURCE:
+international airport serves as the primary airport for domestic and international travel to and from
+
+TARGET:
+international airport is the international airport of [end]
+
+PREDICTION:
+the international airport for international airport to education is based on the
+
+============================================================================================================================================
+SOURCE:
+m. rrb is a mountain pass located in eastern region of the district of india.
+
+TARGET:
+m. rrb is a mountain pass that is found in the eastern part of the region in the district of india. [end]
+
+PREDICTION:
+m. rrb is a
+
+============================================================================================================================================
+SOURCE:
+since then he has been performed by steve
+
+TARGET:
+since s death has been performed by steve [end]
+
+PREDICTION:
+he also won an event by steve
+
+============================================================================================================================================
+SOURCE:
+the battle of lrb rrb took place in bc during the first persian invasion of
+
+TARGET:
+the battle of took place in bc during the first persian invasion of [end]
+
+PREDICTION:
+battle of battle of fought the battle of of the first battle of world war ii attack on the of japan.
+
+============================================================================================================================================
+SOURCE:
+the city is adjacent to the town of
+
+TARGET:
+according to the census lrb official count rrb people lived in the city. [end]
+
+PREDICTION:
+is a city in county
+
+============================================================================================================================================
+SOURCE:
+le is a commune in the gironde department in aquitaine in southwestern france.
+
+TARGET:
+it is found in the region aquitaine in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+it is found in the region aquitaine in the gironde department in the southwest of france.
+
+============================================================================================================================================
+SOURCE:
+warner started the season as the starting winning five of his first seven games but following several poor performances and a two game was given
+
+TARGET:
+he won five of his first seven games but after not playing well in a two game losing was made the main [end]
+
+PREDICTION:
+he began as the several he had six s first win over from lrb rrb lrb rrb in his final race. he retired

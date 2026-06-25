@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+prefecture rrb was one lrb from taught something anime and it is rather than the region at a given area based in round de la france o just like this
+
+============================================================================================================================================
+SOURCE:
+david lrb born december rrb is an american major league baseball for the
+
+TARGET:
+david is an major league baseball he plays for the seattle and is the team s [end]
+
+PREDICTION:
+david lrb also known as ian home de san professional baseball league team simply is american major league.
+
+============================================================================================================================================
+SOURCE:
+september ndash battle of the empire of the of the of in.
+
+TARGET:
+august while a against the song dynasty city known as town in the province of china the khan in the nearby [end]
+
+PREDICTION:
+in august on september.
+
+============================================================================================================================================
+SOURCE:
+formed in is an australian rock band from melbourne australia.
+
+TARGET:
+is a hard rock band from melbourne australia. [end]
+
+PREDICTION:
+formed in which one of his older band did have to replace the cream filled with other members on their online work.
+
+============================================================================================================================================
+SOURCE:
+in october it was the road in
+
+TARGET:
+in october it was re listed as road in [end]
+
+PREDICTION:
+in january of it was being shown the closed weather on january.
+
+============================================================================================================================================
+SOURCE:
+in fact the company of the most famous of was formed in.
+
+TARGET:
+in fact the company that became the most famous of was formed in. [end]
+
+PREDICTION:
+the company discovered in. their capital part is named e. start school at first in when charles v of india who had been signed until and she was a person
+
+============================================================================================================================================
+SOURCE:
+and fight but at the his and allows to him.
+
+TARGET:
+and fight but then his to the side and is by [end]
+
+PREDICTION:
+kevin n s taken and allows him through the focus tells people called orton but at points distance from to each year.
+
+============================================================================================================================================
+SOURCE:
+is a japanese footballer currently playing for
+
+TARGET:
+lrb born march rrb is a japanese football player. he plays for [end]
+
+PREDICTION:
+lrb born june may rrb or was the japanese portuguese and is mixed for african peoples on.
+
+============================================================================================================================================
+SOURCE:
+for a person to be to the hockey hall of fame as a they may be active or and must be nominated by an elected person selection
+
+TARGET:
+for a person to be added to the hockey hall of fame as a player they must have been retired for a of three years and must be nominated by
+
+PREDICTION:
+in the famous hockey junior he must be asked for ranked its right to only either mayor of various or an established young people if figure can hold more than
+
+============================================================================================================================================
+SOURCE:
+it made landfall at puerto during the time it was a tropical
+
+TARGET:
+it became a tropical storm very shortly before landfall in puerto [end]
+
+PREDICTION:
+made landfall in a tropical house on august.

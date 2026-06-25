@@ -1,0 +1,57 @@
+2026-05-13 20:04:06,165 INFO    Thread-23 (_run_job):710635 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-05-13 20:04:06,165 INFO    Thread-23 (_run_job):710635 [wandb_setup.py:_flush():81] Configure stats pid to 710635
+2026-05-13 20:04:06,165 INFO    Thread-23 (_run_job):710635 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-05-13 20:04:06,165 INFO    Thread-23 (_run_job):710635 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/CartPole/wandb/run-20260513_200406-ggbur1ep/logs/debug.log
+2026-05-13 20:04:06,165 INFO    Thread-23 (_run_job):710635 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/CartPole/wandb/run-20260513_200406-ggbur1ep/logs/debug-internal.log
+2026-05-13 20:04:06,165 INFO    Thread-23 (_run_job):710635 [wandb_init.py:init():850] calling init triggers
+2026-05-13 20:04:06,165 INFO    Thread-23 (_run_job):710635 [wandb_init.py:init():855] wandb.init called with sweep_config: {'batch_size': 128, 'buffer_size': 100000, 'epsilon_decay_steps': 800000, 'epsilon_end': 0.05, 'gamma': 0.98, 'lr': 5.300070549635008e-05, 'target_update_freq': 2500}
+config: {'_wandb': {}}
+2026-05-13 20:04:06,165 INFO    Thread-23 (_run_job):710635 [wandb_init.py:init():898] starting backend
+2026-05-13 20:04:06,367 INFO    Thread-23 (_run_job):710635 [wandb_init.py:init():913] sending inform_init request
+2026-05-13 20:04:06,911 INFO    Thread-23 (_run_job):710635 [wandb_init.py:init():918] backend started and connected
+2026-05-13 20:04:06,912 INFO    Thread-23 (_run_job):710635 [wandb_run.py:_config_callback():1415] config_cb None None {'batch_size': 128, 'buffer_size': 100000, 'epsilon_decay_steps': 800000, 'epsilon_end': 0.05, 'gamma': 0.98, 'lr': 5.300070549635008e-05, 'target_update_freq': 2500}
+2026-05-13 20:04:06,913 INFO    Thread-23 (_run_job):710635 [wandb_init.py:init():988] updated telemetry
+2026-05-13 20:04:06,917 INFO    Thread-23 (_run_job):710635 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-05-13 20:04:07,385 INFO    Thread-23 (_run_job):710635 [wandb_init.py:init():1056] starting run threads in backend
+2026-05-13 20:04:07,472 INFO    Thread-23 (_run_job):710635 [wandb_run.py:_console_start():2554] atexit reg
+2026-05-13 20:04:07,472 INFO    Thread-23 (_run_job):710635 [wandb_run.py:_redirect():2403] redirect: wrap_raw
+2026-05-13 20:04:07,472 INFO    Thread-23 (_run_job):710635 [wandb_run.py:_redirect():2472] Wrapping output streams.
+2026-05-13 20:04:07,473 INFO    Thread-23 (_run_job):710635 [wandb_run.py:_redirect():2495] Redirects installed.
+2026-05-13 20:04:07,474 INFO    Thread-23 (_run_job):710635 [wandb_init.py:init():1094] run started, returning control to user process
+2026-05-13 20:44:00,049 ERROR   Thread-1 (_heartbeat):710635 [internal_api.py:execute():383] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 379, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 71, in execute
+    request.raise_for_status()
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2026-05-13 20:46:20,498 ERROR   Thread-1 (_heartbeat):710635 [internal_api.py:execute():383] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 379, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 71, in execute
+    request.raise_for_status()
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2026-05-13 23:01:18,036 INFO    Thread-23 (_run_job):710635 [wandb_run.py:_finish():2321] finishing run shuvrajeet/TensorflowAI/ggbur1ep
+2026-05-13 23:01:18,036 INFO    Thread-23 (_run_job):710635 [wandb_run.py:_atexit_cleanup():2520] got exitcode: 0
+2026-05-13 23:01:18,036 INFO    Thread-23 (_run_job):710635 [wandb_run.py:_restore():2502] restore
+2026-05-13 23:01:18,036 INFO    Thread-23 (_run_job):710635 [wandb_run.py:_restore():2508] restore done
+2026-05-13 23:01:22,944 INFO    Thread-23 (_run_job):710635 [wandb_run.py:_footer_sync_info():3889] logging synced files

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i like to eat apples.
+
+TARGET:
+j'aime manger des pommes. [end]
+
+PREDICTION:
+j'aime manger des pommes.
+
+============================================================================================================================================
+SOURCE:
+keep the door closed.
+
+TARGET:
+laissez la porte ! [end]
+
+PREDICTION:
+garde la porte
+
+============================================================================================================================================
+SOURCE:
+you need to stay awake.
+
+TARGET:
+tu dois rester [end]
+
+PREDICTION:
+tu dois rester
+
+============================================================================================================================================
+SOURCE:
+tom took a shower before breakfast.
+
+TARGET:
+tom a pris une douche avant le petit-déjeuner. [end]
+
+PREDICTION:
+tom prit une douche avant de prendre le petit déjeuner.
+
+============================================================================================================================================
+SOURCE:
+your life depends on it.
+
+TARGET:
+ta vie en [end]
+
+PREDICTION:
+votre vie de côté d'elle.
+
+============================================================================================================================================
+SOURCE:
+you must be relieved.
+
+TARGET:
+vous devez être profondément [end]
+
+PREDICTION:
+tu dois être
+
+============================================================================================================================================
+SOURCE:
+what's tom doing for christmas?
+
+TARGET:
+que fait tom pour noël ? [end]
+
+PREDICTION:
+que fait tom pour noël ?
+
+============================================================================================================================================
+SOURCE:
+tom left immediately.
+
+TARGET:
+tom est parti immédiatement. [end]
+
+PREDICTION:
+tom est parti tout de suite.
+
+============================================================================================================================================
+SOURCE:
+how long will it take you to paint my house?
+
+TARGET:
+combien de temps vous pour peindre ma maison ? [end]
+
+PREDICTION:
+combien de temps ça te prend pour peindre ma maison ?
+
+============================================================================================================================================
+SOURCE:
+people are stupid.
+
+TARGET:
+les gens sont [end]
+
+PREDICTION:
+les gens sont

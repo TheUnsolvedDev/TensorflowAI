@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+something happened.
+
+TARGET:
+quelque chose est [end]
+
+PREDICTION:
+quelque part s'est produit. aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+my cat is from the heat.
+
+TARGET:
+mon chat souffre de la chaleur. [end]
+
+PREDICTION:
+le mon chat a-t-il peur hors de la gare.
+
+============================================================================================================================================
+SOURCE:
+i'll never let anything happen to you.
+
+TARGET:
+je ne laisserai jamais rien [end]
+
+PREDICTION:
+je n'ai pas jamais quoi être heureuse.
+
+============================================================================================================================================
+SOURCE:
+this book is a good for
+
+TARGET:
+ce livre est un bon pour les [end]
+
+PREDICTION:
+ce livre c'est un agréable qu'il par semaine. certain de noël. ces heures.
+
+============================================================================================================================================
+SOURCE:
+i don't know if that's possible.
+
+TARGET:
+je ne sais pas si c'est possible. [end]
+
+PREDICTION:
+j'ignore si ce n'est possible.
+
+============================================================================================================================================
+SOURCE:
+i'd rather do that tomorrow.
+
+TARGET:
+je préférerais faire ça demain. [end]
+
+PREDICTION:
+j'aimerais mieux que le thé. ici. heure. vais
+
+============================================================================================================================================
+SOURCE:
+how do you spell your last name?
+
+TARGET:
+comment votre nom de famille ? [end]
+
+PREDICTION:
+comment pouvez-vous votre nom ? rendez-vous.
+
+============================================================================================================================================
+SOURCE:
+you're
+
+TARGET:
+vous êtes [end]
+
+PREDICTION:
+c'est merveilleux qu'on !
+
+============================================================================================================================================
+SOURCE:
+why don't we all
+
+TARGET:
+pourquoi ne pas tous ? [end]
+
+PREDICTION:
+pourquoi est-ce qu'on ne courant pas tous ?
+
+============================================================================================================================================
+SOURCE:
+don't you think you can handle that?
+
+TARGET:
+tu ne penses pas pouvoir le gérer ? [end]
+
+PREDICTION:
+te fiche pas de comment vous dans y situation ? » « ça ne le fait rien.

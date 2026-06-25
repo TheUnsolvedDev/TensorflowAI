@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in the greek orthodox church the terms lrb literally cathedral shrine rrb is sometimes used for the church at which an archbishop or metropolitan the term metropolis lrb literally mother city rrb is used more commonly than diocese to an area of governance within the church.
+
+TARGET:
+in the greek orthodox church the terms lrb literally cathedral shrine rrb and lrb literally mother city rrb are both used to describe the same [end]
+
+PREDICTION:
+the lrb literally mother city shrine rrb is a in the greek orthodox church.
+
+============================================================================================================================================
+SOURCE:
+there are many other billiards games predominantly or games combining elements of those already listed such as the champion s game an game between straight rail and as well as games which are of billiards and pocket billiards such as english billiards played on a table and its descendant games american four ball billiards and
+
+TARGET:
+for example the champion s game was a short lived game that developed during a period between the invention of straight rail and the invention of other games are combinations of these games and other games played on tables with pockets lrb pool or games rrb such as english billiards played on a table and its related games american
+
+PREDICTION:
+there are many other billiards games lrb many other billiards games rrb which are of billiards and as well as games which are of billiards and as well as games which are of billiards and as well as games which are of billiards and as well as games which
+
+============================================================================================================================================
+SOURCE:
+de is a commune in the vend e department in the pays de la loire region in western france.
+
+TARGET:
+it is found in the region pays de la loire in the vend e department in the west of france. [end]
+
+PREDICTION:
+it is found in the region pays de la loire in the vend e department in the west of france.
+
+============================================================================================================================================
+SOURCE:
+as of december the album has gone gold in canada.
+
+TARGET:
+as of december the album went gold in canada. [end]
+
+PREDICTION:
+in december the album has gone gold in north california.
+
+============================================================================================================================================
+SOURCE:
+winning the oil innovation for jobs and security is a book by b. e. kyle odd even jonathan g. and nathan j. glasgow published by the rocky mountain institute.
+
+TARGET:
+winning the oil is a book by b. published by the rocky mountain institute. [end]
+
+PREDICTION:
+won the chamber music festival and security mountain institute.
+
+============================================================================================================================================
+SOURCE:
+lrb rrb lrb march december rrb was an austrian athlete who competed mainly in the and later in her life an austrian politician.
+
+TARGET:
+lrb march december rrb was an austrian athlete and politician. [end]
+
+PREDICTION:
+was an athlete from and later in her life an austrian ruling bird.
+
+============================================================================================================================================
+SOURCE:
+michelle lrb born september rrb is a moderate socialist politician who was president of chile from march to march the first woman president in the country s history.
+
+TARGET:
+michelle lrb michelle rrb became the first woman president of chile. she served from march to march. [end]
+
+PREDICTION:
+michelle lrb michelle rrb was a powerful socialist politician.
+
+============================================================================================================================================
+SOURCE:
+the name was coined as a since its name serves both as pet smart and
+
+TARGET:
+the name pet smart was made as a [end]
+
+PREDICTION:
+the name was named after the name james
+
+============================================================================================================================================
+SOURCE:
+movement early versions of the rolled on by the operator s feet.
+
+TARGET:
+movement early versions of the daleks were rolled around on or moved by wheels connected to hand by bicycle [end]
+
+PREDICTION:
+movement of the movement of the allows to by the operator s entering the feet.
+
+============================================================================================================================================
+SOURCE:
+in total the band has been in over us states including hawaii.
+
+TARGET:
+in total the band has been in over us states even hawaii. [end]
+
+PREDICTION:
+in total the band has been in over us states including hawaii.

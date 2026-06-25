@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+australian and often have four square boxes printed in orange at the bottom right for the numbers.
+
+TARGET:
+on and there are often four square boxes printed in orange ink at the bottom right for the numbers. [end]
+
+PREDICTION:
+the player come out on and is always in front lrb over top of three squares may see a square box with five stripes at every b rrb and its head from it.
+
+============================================================================================================================================
+SOURCE:
+india were crowned champions after the west indies by runs in the final.
+
+TARGET:
+india an quoted at to win by before the competition began were crowned champions after the west indies by runs in the final. [end]
+
+PREDICTION:
+the american league ended officially champions chang signed by brian paul rangers being released into four new york city in.
+
+============================================================================================================================================
+SOURCE:
+david villa s nchez lrb born december rrb nicknamed el lrb the kid in rrb is a spanish footballer who currently plays as a striker for fc barcelona and the spanish national football team.
+
+TARGET:
+he plays for fc barcelona and spain national team. [end]
+
+PREDICTION:
+david alexandre stand. lrb also called an jesus footballer. just no one third name.
+
+============================================================================================================================================
+SOURCE:
+it is the main component of tissue and is the most abundant protein in mammals making up about to of the whole body protein content.
+
+TARGET:
+it is the main component of tissue and is the most abundant protein in mammals. it makes up about to of the whole body protein content. [end]
+
+PREDICTION:
+this makes taxonomy is of the that live organism and soil because it needs another squid in warm inner difference from one lrb which can not produce fat clarinet than they are found rrb most often like natural drinks so a heart preferred to be an important source of corn glass or sodium black was made by cooking equipment.
+
+============================================================================================================================================
+SOURCE:
+a prize is a prize usually given in recognition of a performance or last place
+
+TARGET:
+a prize is a prize of low value or a joke prize. it is sometimes given for a terrible performance or last place [end]
+
+PREDICTION:
+a practices called is usually given the title of one lrb sometimes shortened to no. rrb
+
+============================================================================================================================================
+SOURCE:
+the reef is located in the coral sea off the coast of queensland in northeast australia.
+
+TARGET:
+it is located close to the coast of queensland australia. [end]
+
+PREDICTION:
+this shark makes it very big cape cod speech. these countries include on date back and forth from three to when the two equipped with red wheel feathers for blue a total of its highest in their head. most live track air until january february lrb now part rrb.
+
+============================================================================================================================================
+SOURCE:
+lrb synonymous with rrb is a clade of mammals the living members of which are rodents and primates lrb including humans rrb.
+
+TARGET:
+lrb with rrb are within it includes the rodents and the [end]
+
+PREDICTION:
+the roots at is a large clade including organisms with new habitats which closely around mount everest plants like lilly and marine woods.
+
+============================================================================================================================================
+SOURCE:
+luis javier garc a lrb born june in barcelona catalonia rrb is a spanish footballer who currently plays racing de santander in the spanish first division mainly as a left winger.
+
+TARGET:
+luis javier garc a lrb born june rrb is a spanish football player. [end]
+
+PREDICTION:
+carlo lrb june january in barcelona spain rrb is a spanish engineer.
+
+============================================================================================================================================
+SOURCE:
+chase was awarded the best villain award at the mtv movie awards for her performance beating out mike myers colin willem and daniel day
+
+TARGET:
+chase was awarded the best villain award at the mtv movie awards. [end]
+
+PREDICTION:
+for gary jon was very unpopular in the ring because she did n concerts with her nickname of ashley locations during and cycle s season nine top men where they had become one on most successful albums including a reality television show.
+
+============================================================================================================================================
+SOURCE:
+bo lrb december june rrb was the stage name for bates an american rock and roll vocalist guitarist songwriter and
+
+TARGET:
+in u.s. representative john paid tribute to bo in the united states house of representatives when he described him as one of the true pioneers of rock and roll who has influenced generations. [end]
+
+PREDICTION:
+bo hotel also known as travis p. lrb rrb

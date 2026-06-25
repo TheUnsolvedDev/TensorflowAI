@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+are always crowded just before christmas.
+
+TARGET:
+les grands sont toujours juste avant noël. [end]
+
+PREDICTION:
+les sont toujours les juste pour noël.
+
+============================================================================================================================================
+SOURCE:
+is it all there?
+
+TARGET:
+tout est-il là ? [end]
+
+PREDICTION:
+tout ceci est-il là ?
+
+============================================================================================================================================
+SOURCE:
+do you have a lot to do?
+
+TARGET:
+est-ce que tu as beaucoup à faire ? [end]
+
+PREDICTION:
+avez-vous beaucoup à faire ?
+
+============================================================================================================================================
+SOURCE:
+that's a book.
+
+TARGET:
+c'est un livre. [end]
+
+PREDICTION:
+c'est un livre.
+
+============================================================================================================================================
+SOURCE:
+it's about time.
+
+TARGET:
+il est grand temps ! [end]
+
+PREDICTION:
+il est bien temps !
+
+============================================================================================================================================
+SOURCE:
+if you work you'll pass your exam.
+
+TARGET:
+si tu tu ton [end]
+
+PREDICTION:
+si vous le vous à votre
+
+============================================================================================================================================
+SOURCE:
+let me do my job.
+
+TARGET:
+laissez-moi faire mon travail ! [end]
+
+PREDICTION:
+laisse-moi faire mon boulot !
+
+============================================================================================================================================
+SOURCE:
+the beat his
+
+TARGET:
+le jouait sur sa [end]
+
+PREDICTION:
+les ont son
+
+============================================================================================================================================
+SOURCE:
+tom belongs here.
+
+TARGET:
+la place de tom est ici. [end]
+
+PREDICTION:
+tom est à sa place.
+
+============================================================================================================================================
+SOURCE:
+tom couldn't find it.
+
+TARGET:
+tom ne pouvait pas le trouver. [end]
+
+PREDICTION:
+tom n'a pas pu le trouver.

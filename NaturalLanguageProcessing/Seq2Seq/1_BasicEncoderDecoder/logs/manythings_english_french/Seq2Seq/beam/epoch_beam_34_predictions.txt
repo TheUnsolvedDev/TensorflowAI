@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+what does is a
+
+TARGET:
+que faut-il entendre par « a » ? [end]
+
+PREDICTION:
+à est une remarque de demandes nous ne trouvez pas en un certain plan.
+
+============================================================================================================================================
+SOURCE:
+call me when you're finished.
+
+TARGET:
+quand tu auras fini. [end]
+
+PREDICTION:
+appelez-moi quand t'es-tu fait. l'année. sais où je vous ai toujours.
+
+============================================================================================================================================
+SOURCE:
+i feel much safer now.
+
+TARGET:
+je me sens bien plus en sécurité, maintenant. [end]
+
+PREDICTION:
+j'ai en fait, tant maintenant. plus deux. que celle-ci.
+
+============================================================================================================================================
+SOURCE:
+i know you must have a lot of questions.
+
+TARGET:
+je sais que tu dois avoir plein de questions. [end]
+
+PREDICTION:
+puis-je qu'on doit rire des heures. manière. « environ ». dollars.
+
+============================================================================================================================================
+SOURCE:
+tom refused to talk.
+
+TARGET:
+tom refusait de parler. [end]
+
+PREDICTION:
+tom cela. en train de sortir.
+
+============================================================================================================================================
+SOURCE:
+i like the mountains more than i like the sea.
+
+TARGET:
+je préfère la montagne à la mer. [end]
+
+PREDICTION:
+j’aime la les jours que tu en as plus d'eau.
+
+============================================================================================================================================
+SOURCE:
+you have to be prepared.
+
+TARGET:
+vous devez être [end]
+
+PREDICTION:
+te dois être à l'heure. !
+
+============================================================================================================================================
+SOURCE:
+i felt a bit tired.
+
+TARGET:
+je me sentais un peu fatiguée. [end]
+
+PREDICTION:
+je sentais non mon aide.
+
+============================================================================================================================================
+SOURCE:
+did you see the yesterday?
+
+TARGET:
+as-tu vu hier ? [end]
+
+PREDICTION:
+tu as voir hier fous le ?
+
+============================================================================================================================================
+SOURCE:
+i think you look really great.
+
+TARGET:
+je trouve que tu as l'air superbe. [end]
+
+PREDICTION:
+tu crois que j'ai vraiment très bien. date de serez en train ou le fermés.

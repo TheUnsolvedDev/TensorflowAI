@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i have a test next week.
+
+TARGET:
+j'ai une la semaine prochaine. [end]
+
+PREDICTION:
+jouer hier la semaine prochain. les miens.
+
+============================================================================================================================================
+SOURCE:
+i'm in the mood for something sweet.
+
+TARGET:
+je prendrais bien quelque chose de là. [end]
+
+PREDICTION:
+elle est venue pendant une série un boulot.
+
+============================================================================================================================================
+SOURCE:
+let's let the workers go home early today.
+
+TARGET:
+aujourd'hui, laissons les ouvriers finir plus tôt. [end]
+
+PREDICTION:
+sommes en travailleurs la tension tôt y aller voir le matin.
+
+============================================================================================================================================
+SOURCE:
+they say that you never get over your first love.
+
+TARGET:
+on dit qu'on ne se jamais de son premier amour. [end]
+
+PREDICTION:
+elles ne disent que vous de votre prénom jamais.
+
+============================================================================================================================================
+SOURCE:
+let me go!
+
+TARGET:
+laisse-moi y aller ! [end]
+
+PREDICTION:
+laissez-moi partir.
+
+============================================================================================================================================
+SOURCE:
+tom wants to be rich.
+
+TARGET:
+tom veut être riche. [end]
+
+PREDICTION:
+il veut que tom se trouvait grave. le chose.
+
+============================================================================================================================================
+SOURCE:
+it's you who'll make the decision.
+
+TARGET:
+c'est à toi de prendre la décision. [end]
+
+PREDICTION:
+votre décision à prendre ma proposition. un monde. pas la malade. » « tu dois passer le décision. bientôt. par responsabilité.
+
+============================================================================================================================================
+SOURCE:
+i wonder if tom is really serious.
+
+TARGET:
+je me demande si tom est vraiment sérieux. [end]
+
+PREDICTION:
+je se souviens que c'en n'est vraiment tom juste.
+
+============================================================================================================================================
+SOURCE:
+i was caught in a shower on my way home from school.
+
+TARGET:
+j'ai été pris sous une en de l'école à la maison. [end]
+
+PREDICTION:
+j'avais un fusil à dans la première amie de l'école.
+
+============================================================================================================================================
+SOURCE:
+the surgeon the wrong leg.
+
+TARGET:
+le la mauvaise jambe. [end]
+
+PREDICTION:
+la maladie le demanda du mal.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+everyone's in
+
+TARGET:
+tout le monde est en [end]
+
+PREDICTION:
+tout le monde en
+
+============================================================================================================================================
+SOURCE:
+what do you suggest
+
+TARGET:
+que à la place ? [end]
+
+PREDICTION:
+pourquoi vous force la
+
+============================================================================================================================================
+SOURCE:
+i'm not so lucky.
+
+TARGET:
+je ne suis pas si [end]
+
+PREDICTION:
+je n'êtes plus si chanceux.
+
+============================================================================================================================================
+SOURCE:
+we're concerned for your
+
+TARGET:
+nous nous de ta sécurité. [end]
+
+PREDICTION:
+nous avons du à tes vacances.
+
+============================================================================================================================================
+SOURCE:
+i can't just not do anything.
+
+TARGET:
+je ne peux pas me de ne rien faire. [end]
+
+PREDICTION:
+pour sans me faire aucun mal.
+
+============================================================================================================================================
+SOURCE:
+i'll have you
+
+TARGET:
+je te ferai [end]
+
+PREDICTION:
+je vous ! d'accord s'il te est pas servi comme il faut.
+
+============================================================================================================================================
+SOURCE:
+this is sweet.
+
+TARGET:
+c'est [end]
+
+PREDICTION:
+c'est honnête. dans les bois. n'est-ce vous !
+
+============================================================================================================================================
+SOURCE:
+age doesn't matter.
+
+TARGET:
+l'âge n'importe pas. [end]
+
+PREDICTION:
+traverser la pluie a point.
+
+============================================================================================================================================
+SOURCE:
+you should get a
+
+TARGET:
+tu devrais te faire couper les cheveux. [end]
+
+PREDICTION:
+tu dois prendre un h 30. de nuit. vraiment.
+
+============================================================================================================================================
+SOURCE:
+they're disappointed in their son.
+
+TARGET:
+ils sont par leur fils. [end]
+
+PREDICTION:
+ce sont elles qui ont devant le fils. d'eau.

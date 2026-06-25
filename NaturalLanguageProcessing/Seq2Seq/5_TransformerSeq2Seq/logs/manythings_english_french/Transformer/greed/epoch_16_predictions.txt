@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+did you write that?
+
+TARGET:
+avez-vous écrit cela ? [end]
+
+PREDICTION:
+as-tu écrit ça ?
+
+============================================================================================================================================
+SOURCE:
+obey your parents.
+
+TARGET:
+à tes parents. [end]
+
+PREDICTION:
+vos parents.
+
+============================================================================================================================================
+SOURCE:
+her hair was long enough to reach the floor.
+
+TARGET:
+ses cheveux étaient si longs qu'ils le sol. [end]
+
+PREDICTION:
+ses cheveux étaient assez pour atteindre le sol.
+
+============================================================================================================================================
+SOURCE:
+i've gotten tired of watching this boring game.
+
+TARGET:
+je me suis de regarder cette partie [end]
+
+PREDICTION:
+j'ai assez de regarder ce jeu.
+
+============================================================================================================================================
+SOURCE:
+this is the real world.
+
+TARGET:
+c'est le monde réel. [end]
+
+PREDICTION:
+c'est le vrai qui est le monde.
+
+============================================================================================================================================
+SOURCE:
+i'll join you there later.
+
+TARGET:
+je vous y rejoindrai plus tard. [end]
+
+PREDICTION:
+je te il y a plus tard.
+
+============================================================================================================================================
+SOURCE:
+tom didn't keep his promise to me.
+
+TARGET:
+tom n'a pas tenu sa promesse envers moi. [end]
+
+PREDICTION:
+tom ne m'a pas tenu son pour me voir.
+
+============================================================================================================================================
+SOURCE:
+who are you supposed to be?
+
+TARGET:
+qui es-tu supposé être ? [end]
+
+PREDICTION:
+qui êtes-vous supposé être ?
+
+============================================================================================================================================
+SOURCE:
+i'll remind you about it.
+
+TARGET:
+je vous le [end]
+
+PREDICTION:
+je te
+
+============================================================================================================================================
+SOURCE:
+what i want is a divorce.
+
+TARGET:
+ce que je veux, c'est le divorce. [end]
+
+PREDICTION:
+ce que je veux est un œil ?

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're not leaving until i say it's ok.
+
+TARGET:
+vous ne pas jusqu'à ce que je dise que c'est d'accord. [end]
+
+PREDICTION:
+tu n'avais pas avant que sauf j'arrive tout le souci.
+
+============================================================================================================================================
+SOURCE:
+it was only a
+
+TARGET:
+ce n'était qu'une [end]
+
+PREDICTION:
+on ne fut fait par une emploi. que feu.
+
+============================================================================================================================================
+SOURCE:
+in there are no only
+
+TARGET:
+en il n'y a pas seulement des [end]
+
+PREDICTION:
+à la on n'a pas été dans le système des pièces de vue. quelque moindre cherché marché sous l'heure qu'il refuse en retraite. un. je l'air.
+
+============================================================================================================================================
+SOURCE:
+you can go you like.
+
+TARGET:
+tu peux partir comme tu veux. [end]
+
+PREDICTION:
+on est permis tu en obtenir cet endroit vers le » « oui. dernier. mais il y parle un. fois. je vais discuter ! encore.
+
+============================================================================================================================================
+SOURCE:
+i like that job.
+
+TARGET:
+j'apprécie ce boulot. [end]
+
+PREDICTION:
+j'aime !
+
+============================================================================================================================================
+SOURCE:
+you must do it quickly.
+
+TARGET:
+tu dois le faire vite. [end]
+
+PREDICTION:
+tu devez le rendre rapidement venu.
+
+============================================================================================================================================
+SOURCE:
+i know that i the bill
+
+TARGET:
+je sais que j'ai la [end]
+
+PREDICTION:
+puis-je savoir avoir note de votre contrôle. !
+
+============================================================================================================================================
+SOURCE:
+the water.
+
+TARGET:
+fais l'eau. [end]
+
+PREDICTION:
+coupe le sol. ! et d'eau.
+
+============================================================================================================================================
+SOURCE:
+they did not listen.
+
+TARGET:
+elles pas. [end]
+
+PREDICTION:
+elles n'ont pas essayé. un point n'est aussi clé. ?
+
+============================================================================================================================================
+SOURCE:
+our parents should be taken care of.
+
+TARGET:
+on doit de nos parents. [end]
+
+PREDICTION:
+nos parents devraient être de obtenir du projet. amoureux. tous. » quoi qu'elle soin que j'étais là. par homme.

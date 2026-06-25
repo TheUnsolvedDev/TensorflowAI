@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+never get past the take my
+
+TARGET:
+« tu ne jamais à passer les » « je ma chance. » [end]
+
+PREDICTION:
+ou moins du matin de à sept page 10 dernières dimanche ? j'ai déjà emploi.
+
+============================================================================================================================================
+SOURCE:
+that's not where i'm going.
+
+TARGET:
+ce n'est pas où je [end]
+
+PREDICTION:
+ce je suis pas sûr.
+
+============================================================================================================================================
+SOURCE:
+you seem very nervous this morning.
+
+TARGET:
+tu sembles très ce matin. [end]
+
+PREDICTION:
+ça très facile tu me dit ça. dehors.
+
+============================================================================================================================================
+SOURCE:
+this is weird.
+
+TARGET:
+c'est bizarre. [end]
+
+PREDICTION:
+c'est bizarre.
+
+============================================================================================================================================
+SOURCE:
+don't walk home by yourself.
+
+TARGET:
+ne rentre pas à la maison toute seule. [end]
+
+PREDICTION:
+ne jamais par hasard à pied ! chaque ami.
+
+============================================================================================================================================
+SOURCE:
+a tree is known by its fruit.
+
+TARGET:
+on un arbre à son [end]
+
+PREDICTION:
+on par son sous arbre perdu. le silence. veux-tu pas visiter plaisir. un homme vas-tu simple.
+
+============================================================================================================================================
+SOURCE:
+that's the way i like it.
+
+TARGET:
+c'est comme ça que je l'aime. [end]
+
+PREDICTION:
+c'est la ainsi je personne. ! pas de ses yeux. derrière les nouvelles près avec lui. ? nouvel étudiant arriver.
+
+============================================================================================================================================
+SOURCE:
+i don't know anything about this.
+
+TARGET:
+je n'en sais rien. [end]
+
+PREDICTION:
+à n'y rien en d'autre. ce qu'il vous pourriez être plus seul.
+
+============================================================================================================================================
+SOURCE:
+i'm not eating this.
+
+TARGET:
+je ne vais pas manger ça. [end]
+
+PREDICTION:
+ça n'en est que j'essaie !
+
+============================================================================================================================================
+SOURCE:
+you love your right?
+
+TARGET:
+tu aimes ta pas vrai ? [end]
+
+PREDICTION:
+votre gars aime n'est-ce pas bien ? utile.

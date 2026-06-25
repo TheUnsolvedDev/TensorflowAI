@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+there are an estimated to throughout sub africa lrb rrb and lrb rrb the largest
+
+TARGET:
+there are about to in sub africa. lrb rrb and lrb rrb have the most [end]
+
+PREDICTION:
+some scientists have thousands of foreign education in the world. is still very popular for area.
+
+============================================================================================================================================
+SOURCE:
+for example of s and of his are in this key though he to have the related key c sharp
+
+TARGET:
+of s and of his are in this key though he to have liked the related key c sharp minor [end]
+
+PREDICTION:
+if they do this he was in a where the other are placed from these key him use
+
+============================================================================================================================================
+SOURCE:
+the eventually settled in north where stanley became a professor at college while continued to novels and short stories while for their children
+
+TARGET:
+when the eventually settled in continued to novels and short stories while for their children sarah and [end]
+
+PREDICTION:
+the romans continued settled during house and brand inside while simon accepted still time rrb. it also grew to complete disney chart with lots story but sometimes they directed concerts
+
+============================================================================================================================================
+SOURCE:
+had many friends including and above all the artist
+
+TARGET:
+but he also had many friends including and especially the painter [end]
+
+PREDICTION:
+there have been many friends with a like singles and above in all the artist lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+definition is an operation on two values typically the values of two that produces a value of true if and only if both are or both
+
+TARGET:
+it true if either both are true or both are [end]
+
+PREDICTION:
+chemical and natural force will be defined so in only the value is added or both sexual cells lrb but are able to change yellow if there should do more
+
+============================================================================================================================================
+SOURCE:
+lrb rrb is a film directed by from a by and the first of the series.
+
+TARGET:
+is a movie from the united states by that was released in. [end]
+
+PREDICTION:
+it by buffy the composer lrb rrb bishop of knight to and played in japan as a comedian and gives out story about her first film based on an long
+
+============================================================================================================================================
+SOURCE:
+however following of local government areas by the new south wales government it is now part of the council and the eastern office of the council is located in the
+
+TARGET:
+however following changes to local government areas by the new south wales government it is now part of the the eastern office of the council is in the town.
+
+PREDICTION:
+however following the new south branch federal was now part of europe.
+
+============================================================================================================================================
+SOURCE:
+at on august india became an independent
+
+TARGET:
+on of th august india became an independent country and still is today. [end]
+
+PREDICTION:
+at first started as a member with india republic ireland independent and they led the band to support against other countries including gold services giant for great britain. this was
+
+============================================================================================================================================
+SOURCE:
+for written in a system based on an even number such as and by is easily by at the last
+
+TARGET:
+for written in a system based on an even number such as and it can be easily if it is a multiple of by looking
+
+PREDICTION:
+an lrb or more such example rrb was the piece made of glass which by reasons for animals in human forces it can be found on a even chance rock
+
+============================================================================================================================================
+SOURCE:
+was mainly used during the period to.
+
+TARGET:
+was mainly used during to [end]
+
+PREDICTION:
+the is a japanese figure that has been given out for use by world literature or other parts called art which was also common and former most important writers in

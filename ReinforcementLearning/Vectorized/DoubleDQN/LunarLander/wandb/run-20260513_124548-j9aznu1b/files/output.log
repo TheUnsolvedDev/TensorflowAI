@@ -1,0 +1,4 @@
+Using 2 GPU(s)
+/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+  0%|                                                                                                                | 165/200000 [00:06<1:44:44, 31.80it/s][34m[1mwandb[0m: Ctrl + C detected. Stopping sweep.

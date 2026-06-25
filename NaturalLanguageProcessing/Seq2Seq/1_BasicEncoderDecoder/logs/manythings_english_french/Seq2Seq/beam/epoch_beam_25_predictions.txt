@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+americans admire lincoln for his honesty.
+
+TARGET:
+les lincoln pour son honnêteté. [end]
+
+PREDICTION:
+efforts qui en cause son ski pour ses piano. dollars.
+
+============================================================================================================================================
+SOURCE:
+i seldom drink coffee.
+
+TARGET:
+je bois rarement du café. [end]
+
+PREDICTION:
+je rarement le café.
+
+============================================================================================================================================
+SOURCE:
+he is
+
+TARGET:
+il est méchant. [end]
+
+PREDICTION:
+il est huit par
+
+============================================================================================================================================
+SOURCE:
+tom spends a lot of time playing football.
+
+TARGET:
+tom passe beaucoup de temps à jouer au football. [end]
+
+PREDICTION:
+but tom a encore beaucoup de son temps. la semaine. j’ai étudiant.
+
+============================================================================================================================================
+SOURCE:
+how do you tell them
+
+TARGET:
+comment les ? [end]
+
+PREDICTION:
+d'où le lis-tu ?
+
+============================================================================================================================================
+SOURCE:
+i feel bad that i haven't paid you yet.
+
+TARGET:
+je me sens mal de ne pas encore t'avoir payé. [end]
+
+PREDICTION:
+ça fait moi dont ta ne court bleu aujourd'hui. je n'ai même eu aucun souvenir ! à peine.
+
+============================================================================================================================================
+SOURCE:
+where did you get the eggs?
+
+TARGET:
+où as-tu trouvé les œufs ? [end]
+
+PREDICTION:
+où avez-vous fait mes œufs ?
+
+============================================================================================================================================
+SOURCE:
+this is a misunderstanding.
+
+TARGET:
+c’est un malentendu. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+choose books carefully.
+
+TARGET:
+choisissez les livres avec soin. [end]
+
+PREDICTION:
+attentivement vos conseils. je
+
+============================================================================================================================================
+SOURCE:
+tom knows where the others are, i think.
+
+TARGET:
+tom sait où sont les je pense. [end]
+
+PREDICTION:
+tom sait où d'autres la parler. ?

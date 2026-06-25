@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+where is he?
+
+TARGET:
+what are you gonna do? [end]
+
+PREDICTION:
+he's in the
+
+============================================================================================================================================
+SOURCE:
+could we just talk alone for a second? i --
+
+TARGET:
+good idea. could you all leave us alone for a few minutes? [end]
+
+PREDICTION:
+--
+
+============================================================================================================================================
+SOURCE:
+when do we back?
+
+TARGET:
+you gotta give me a day. i need a day. he's sick, get it out get him on the tell him how sick he is. we got to get
+
+PREDICTION:
+soon.
+
+============================================================================================================================================
+SOURCE:
+no.
+
+TARGET:
+sure it is. you want to bug us till we have to lock you up. why? [end]
+
+PREDICTION:
+i don't know what you mean.
+
+============================================================================================================================================
+SOURCE:
+have you ever tried
+
+TARGET:
+no. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+on which boat?
+
+TARGET:
+well, er... let's drop it. i don't think you would care for that one. [end]
+
+PREDICTION:
+forty-five
+
+============================================================================================================================================
+SOURCE:
+all right, why?
+
+TARGET:
+your name's spreading like out are the favorite to get on the national ticket. [end]
+
+PREDICTION:
+i don't know...
+
+============================================================================================================================================
+SOURCE:
+hi, guys. we brought back a friend.
+
+TARGET:
+it's [end]
+
+PREDICTION:
+seen
+
+============================================================================================================================================
+SOURCE:
+you're you're a you're a
+
+TARGET:
+well, maybe i am. but you're fired. [end]
+
+PREDICTION:
+i don't like it.
+
+============================================================================================================================================
+SOURCE:
+make a choice, bruce. her or me.
+
+TARGET:
+[end]
+
+PREDICTION:
+i know what i mean.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+find the money.
+
+TARGET:
+i got a us a million dollars, put their product in the film. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+you need trees for an avenue.
+
+TARGET:
+there was talk of some when we first came. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+i'm sorry? your face looks awfully i just can't quite place it...
+
+TARGET:
+mom, this is the guy that drove us home that afternoon we were stuck on the highway. the guy you at for no good [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+knock it off! [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+thank you. why don't you go back to the video store?
+
+TARGET:
+it's the same thing with [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+good shit.
+
+TARGET:
+sure is good shit. it's i had it in my chamber for a while. i was smoking this other -- [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+yeah.
+
+TARGET:
+please. sit down. we'll drink some scotch. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+you seem very sure about that.
+
+TARGET:
+i'm absolutely positive. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+i'm sorry, i don't think so.
+
+TARGET:
+i'm waiting on some money coming through. it's just that at the moment, you know, i'm short. they're going to chuck me out. on the street in that's bad. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+i can't. they trust me, they accept me. i've got their confidence.
+
+TARGET:
+no, i mean maybe we should back off a bit, you and me. [end]
+
+PREDICTION:
+i don't know.

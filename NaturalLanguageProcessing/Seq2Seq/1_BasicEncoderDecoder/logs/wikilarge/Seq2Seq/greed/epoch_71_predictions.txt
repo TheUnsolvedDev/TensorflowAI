@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+four years after her death the king married a young by whom he had twelve children a connection which was to be to
+
+TARGET:
+four years after her death the king married a beautiful young [end]
+
+PREDICTION:
+four years after her death she married king
+
+============================================================================================================================================
+SOURCE:
+lrb finnish for the news rrb is one of finland s two prominent size and the second largest newspaper in the country.
+
+TARGET:
+is the second largest newspaper in [end]
+
+PREDICTION:
+simpson hurricane is the largest in the world.
+
+============================================================================================================================================
+SOURCE:
+the of has become an important part of such and as and lrb see for more information rrb and lrb to a lesser
+
+TARGET:
+are worn at such as and [end]
+
+PREDICTION:
+the coastal forms of humans are known as and
+
+============================================================================================================================================
+SOURCE:
+have two in the upper as well as in the lower which grow and must be kept down by this is the origin of the name
+
+TARGET:
+they have four that keep growing and must be kept worn down by lrb by them on something hard rrb this is the origin of the
+
+PREDICTION:
+as upper host and the upper leaves have lower
+
+============================================================================================================================================
+SOURCE:
+her were henry vii of england and his queen elizabeth of york.
+
+TARGET:
+her were king henry vii of england and elizabeth of york. [end]
+
+PREDICTION:
+the of great vii lrb july king henry of england rrb was count
+
+============================================================================================================================================
+SOURCE:
+the eastern side was built by the victoria station and railway lrb a of the london and south coast railway the london and railway the great western
+
+TARGET:
+the eastern side was built by the london and railway in to to carry trains into victoria station. this was the first railway bridge across the in central
+
+PREDICTION:
+the atlantic was built between railway and railway and
+
+============================================================================================================================================
+SOURCE:
+has been a for a number of movie notably the score of the film s list by john williams which subsequently won an academy award for best
+
+TARGET:
+has been a for a number of movie including the score of the film s list by john [end]
+
+PREDICTION:
+is top of the john the best of the best award for the best
+
+============================================================================================================================================
+SOURCE:
+the catholic church is an particular church with the full with the
+
+TARGET:
+the catholic church is a church in full with the pope in rome instead of the pope of the orthodox church of [end]
+
+PREDICTION:
+the catholic church is a church in the orthodox church and
+
+============================================================================================================================================
+SOURCE:
+all causes proper and can be spoken as potential or as actual particular or
+
+TARGET:
+both types of causes can be spoken as potential or as actual particular or [end]
+
+PREDICTION:
+of these content produces chemistry or lrb content rrb or
+
+============================================================================================================================================
+SOURCE:
+a common japanese refers to a for things rather than
+
+TARGET:
+a common japanese is related to the of and refers to a for things rather than [end]
+
+PREDICTION:
+a common japanese is a

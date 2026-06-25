@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i want you back.
+
+TARGET:
+je veux que vous soyez revenu. [end]
+
+PREDICTION:
+je veux que tu sois
+
+============================================================================================================================================
+SOURCE:
+it's a very simple
+
+TARGET:
+c'est un très simple. [end]
+
+PREDICTION:
+c'est un très simple.
+
+============================================================================================================================================
+SOURCE:
+i didn't think anybody was coming.
+
+TARGET:
+je ne pensais pas que quiconque [end]
+
+PREDICTION:
+je ne pensais pas que quiconque
+
+============================================================================================================================================
+SOURCE:
+tom says he's going to grow more vegetables this year.
+
+TARGET:
+tom dit qu'il va faire pousser plus de légumes cette année. [end]
+
+PREDICTION:
+tom dit qu'il va pousser plus de légumes cette année.
+
+============================================================================================================================================
+SOURCE:
+tom isn't working today.
+
+TARGET:
+tom ne travaille pas aujourd'hui. [end]
+
+PREDICTION:
+tom ne travaille pas aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+this seems
+
+TARGET:
+ceci semble [end]
+
+PREDICTION:
+ça semble dingue.
+
+============================================================================================================================================
+SOURCE:
+you should have done it with us.
+
+TARGET:
+vous auriez dû le faire avec nous. [end]
+
+PREDICTION:
+tu aurais dû le faire avec nous.
+
+============================================================================================================================================
+SOURCE:
+he is now on the way to recovery.
+
+TARGET:
+il est maintenant en voie de [end]
+
+PREDICTION:
+il est maintenant en chemin
+
+============================================================================================================================================
+SOURCE:
+god bless america.
+
+TARGET:
+que dieu les états-unis d'amérique ! [end]
+
+PREDICTION:
+d'amérique.
+
+============================================================================================================================================
+SOURCE:
+you're the one that went crazy.
+
+TARGET:
+c'est vous qui vous vous êtes [end]
+
+PREDICTION:
+c'est toi qui t'es

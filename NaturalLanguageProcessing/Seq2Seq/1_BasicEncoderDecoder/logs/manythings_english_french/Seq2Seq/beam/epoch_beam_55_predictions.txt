@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+everyone's in
+
+TARGET:
+tout le monde est en [end]
+
+PREDICTION:
+tous les trente en sens. classe.
+
+============================================================================================================================================
+SOURCE:
+what do you suggest
+
+TARGET:
+que à la place ? [end]
+
+PREDICTION:
+que une liste apprécié 14 ? s'est-il plus tard les matins.
+
+============================================================================================================================================
+SOURCE:
+i'm not so lucky.
+
+TARGET:
+je ne suis pas si [end]
+
+PREDICTION:
+je n'en êtes pas si dur.
+
+============================================================================================================================================
+SOURCE:
+we're concerned for your
+
+TARGET:
+nous nous de ta sécurité. [end]
+
+PREDICTION:
+nous, sommes pas par tes affaires.
+
+============================================================================================================================================
+SOURCE:
+i can't just not do anything.
+
+TARGET:
+je ne peux pas me de ne rien faire. [end]
+
+PREDICTION:
+je ne peux simplement aucun
+
+============================================================================================================================================
+SOURCE:
+i'll have you
+
+TARGET:
+je te ferai [end]
+
+PREDICTION:
+plus. c'est nécessaire. d'aller te rendre à mal se montre par le mois. ! devenu un présent.
+
+============================================================================================================================================
+SOURCE:
+this is sweet.
+
+TARGET:
+c'est [end]
+
+PREDICTION:
+c'est gentil.
+
+============================================================================================================================================
+SOURCE:
+age doesn't matter.
+
+TARGET:
+l'âge n'importe pas. [end]
+
+PREDICTION:
+cause pas. ça. veux-tu ?
+
+============================================================================================================================================
+SOURCE:
+you should get a
+
+TARGET:
+tu devrais te faire couper les cheveux. [end]
+
+PREDICTION:
+tu devrais te faire voler des vêtements pas. il s'agit de regarder. » sûre. personne.
+
+============================================================================================================================================
+SOURCE:
+they're disappointed in their son.
+
+TARGET:
+ils sont par leur fils. [end]
+
+PREDICTION:
+personne vous serons en pleine de déjeuner.

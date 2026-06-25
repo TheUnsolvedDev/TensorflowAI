@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+what are you it smells good.
+
+TARGET:
+qu'est-ce que tu fais à manger ? ça sent bon. [end]
+
+PREDICTION:
+que en train de perdre la sent ?
+
+============================================================================================================================================
+SOURCE:
+tom mary.
+
+TARGET:
+tom marie. [end]
+
+PREDICTION:
+tom a marie.
+
+============================================================================================================================================
+SOURCE:
+this book could be to you.
+
+TARGET:
+ce livre pourrait utile. [end]
+
+PREDICTION:
+ce livre pourrait vous être utile.
+
+============================================================================================================================================
+SOURCE:
+stop that right now.
+
+TARGET:
+arrête ça immédiatement. [end]
+
+PREDICTION:
+arrête cela maintenant.
+
+============================================================================================================================================
+SOURCE:
+i'm glad to help you.
+
+TARGET:
+je suis content de t'aider. [end]
+
+PREDICTION:
+je suis ravie de vous aider.
+
+============================================================================================================================================
+SOURCE:
+i
+
+TARGET:
+j'ai [end]
+
+PREDICTION:
+je me suis
+
+============================================================================================================================================
+SOURCE:
+i just got home from work.
+
+TARGET:
+je rentre à peine du travail. [end]
+
+PREDICTION:
+je reviens juste du boulot.
+
+============================================================================================================================================
+SOURCE:
+the door blew open.
+
+TARGET:
+la porte d'un [end]
+
+PREDICTION:
+la porte ouverte.
+
+============================================================================================================================================
+SOURCE:
+i was surprised when tom told me he loved me.
+
+TARGET:
+ça m'a surpris quand tom m'a dit qu'il était en avec moi. [end]
+
+PREDICTION:
+j'ai été surpris quand tom m'a dit qu'il
+
+============================================================================================================================================
+SOURCE:
+tom can't do even simple
+
+TARGET:
+tom ne peut même pas faire des [end]
+
+PREDICTION:
+tom ne peut faire précisément le

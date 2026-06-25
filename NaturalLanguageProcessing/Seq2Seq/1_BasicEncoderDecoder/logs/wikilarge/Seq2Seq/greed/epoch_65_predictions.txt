@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+on his return to france he won back with la en re lrb o o rrb jean de paris lrb o o rrb le du
+
+TARGET:
+la re lrb o o rrb [end]
+
+PREDICTION:
+le young sweden lrb b. d. rrb
+
+============================================================================================================================================
+SOURCE:
+even before production began the and some of kelly s about the of in the lead role and about the film s proposed
+
+TARGET:
+the actors union actors and some of about having the lead [end]
+
+PREDICTION:
+the actors union actors and kelly of the
+
+============================================================================================================================================
+SOURCE:
+by the of london s olympics it teams such as t mobile lrb germany rrb and u.s. service lrb usa rrb.
+
+TARGET:
+the race was by the of london s olympics such teams included t mobile lrb germany rrb and u.s. service lrb usa rrb. [end]
+
+PREDICTION:
+is a part of world series which produces money between munich and. these engines and power
+
+============================================================================================================================================
+SOURCE:
+in became the first from a non communist country to to the people s republic of china.
+
+TARGET:
+first non communist to fly to the people s republic of china and a service between asia and europe via [end]
+
+PREDICTION:
+in she became a of the communist party of republic of china.
+
+============================================================================================================================================
+SOURCE:
+year round at mount allowing to easily get to the top of mountain
+
+TARGET:
+work year round at mount which help to easily get to the top of mountain [end]
+
+PREDICTION:
+m. from mount at mount to
+
+============================================================================================================================================
+SOURCE:
+a month before for than love bassist who was becoming that he was n t much left to go back to
+
+TARGET:
+a month before for than love was released left to go back to college. [end]
+
+PREDICTION:
+events nicholas second married album and in a
+
+============================================================================================================================================
+SOURCE:
+in december the european union and united states both issued formal for the release of
+
+TARGET:
+in december the european union and united states both officially asked the chinese government to release of without any special rules or [end]
+
+PREDICTION:
+in december the of the united states national flag was defined as and issued by the united states
+
+============================================================================================================================================
+SOURCE:
+the m is the longest in the united kingdom and one of the
+
+TARGET:
+the m is the longest in the united kingdom. it is one of the in the country. [end]
+
+PREDICTION:
+the is the first in the united kingdom.
+
+============================================================================================================================================
+SOURCE:
+like soldiers is a song by american from his fifth album
+
+TARGET:
+like soldiers is a song by [end]
+
+PREDICTION:
+res gang is an american soldiers to fight off the
+
+============================================================================================================================================
+SOURCE:
+eventually the term was more commonly applied to the finished product of the s work than to the materials he
+
+TARGET:
+eventually the term was applied to the finished product of the s work. [end]
+
+PREDICTION:
+the main construction was the product of technology used.

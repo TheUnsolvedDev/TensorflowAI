@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in the greek orthodox church the terms lrb literally cathedral rrb is sometimes used for the church at which an or metropolitan the term lrb literally
+
+TARGET:
+in the greek orthodox church the terms lrb literally cathedral rrb and lrb literally mother city rrb are both used to describe the same [end]
+
+PREDICTION:
+in the greek orthodox church the lrb rrb lrb rrb lrb rrb or lrb rrb is a very large number of
+
+============================================================================================================================================
+SOURCE:
+there are many other games or games elements of those already listed such as the champion s game an game between straight rail and
+
+TARGET:
+for example the champion s game was a short lived game that developed during a period between the of straight rail and the of other games are
+
+PREDICTION:
+baseball games lrb points rrb is a game designed by
+
+============================================================================================================================================
+SOURCE:
+de is a commune in the vend e department in the pays de la loire region in western france.
+
+TARGET:
+it is found in the region pays de la loire in the vend e department in the west of france. [end]
+
+PREDICTION:
+it is found in the region pays de la loire in the vend e department in the west of france.
+
+============================================================================================================================================
+SOURCE:
+as of december the album has gold in canada.
+
+TARGET:
+as of december the album went gold in canada. [end]
+
+PREDICTION:
+as of december the in california.
+
+============================================================================================================================================
+SOURCE:
+winning the oil for and security is a book by b. e. even and j. glasgow published by
+
+TARGET:
+winning the oil is a book by b. published by the rocky mountain [end]
+
+PREDICTION:
+the for software are and martial arts lrb or april rrb.
+
+============================================================================================================================================
+SOURCE:
+lrb rrb lrb march december rrb was an austrian who competed mainly in the and later in her life an austrian
+
+TARGET:
+lrb march december rrb was an austrian and politician. [end]
+
+PREDICTION:
+lrb rrb lrb born march rrb was an austrian
+
+============================================================================================================================================
+SOURCE:
+lrb born september rrb is a socialist politician who was president of from march to march the first woman president in the country s history.
+
+TARGET:
+michelle lrb michelle rrb became the first woman president of she served from march to march. [end]
+
+PREDICTION:
+michelle lrb rrb lrb born march rrb was the president of the united states president of the united states.
+
+============================================================================================================================================
+SOURCE:
+the name was as a since its name serves both as and
+
+TARGET:
+the name was made as a [end]
+
+PREDICTION:
+the name is to be a and
+
+============================================================================================================================================
+SOURCE:
+movement early versions of the on by the s
+
+TARGET:
+movement early versions of the were around on or moved by connected to hand by [end]
+
+PREDICTION:
+early versions of the of s was made by
+
+============================================================================================================================================
+SOURCE:
+in total the band has been in over us states including
+
+TARGET:
+in total the band has been in over us states even [end]
+
+PREDICTION:
+the band has come from all over korea.

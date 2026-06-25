@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+an old man sat next to me on the bus.
+
+TARGET:
+un vieil homme s'est assis à côté de moi dans le bus. [end]
+
+PREDICTION:
+une vieux vieil article vers moi dans ce bus. journée.
+
+============================================================================================================================================
+SOURCE:
+the town is beautiful.
+
+TARGET:
+la est belle. [end]
+
+PREDICTION:
+est beau. par la ville !
+
+============================================================================================================================================
+SOURCE:
+i need more power.
+
+TARGET:
+j'ai besoin de plus [end]
+
+PREDICTION:
+j'ai besoin de plus pour la chance.
+
+============================================================================================================================================
+SOURCE:
+i know the last thing you want to do is help me.
+
+TARGET:
+je sais que la dernière chose que vous vouliez faire est de m'aider. [end]
+
+PREDICTION:
+j'ai connaître cette différence ce que tu veux me est m'aider. c'est
+
+============================================================================================================================================
+SOURCE:
+this desk is too heavy to lift.
+
+TARGET:
+ce bureau est trop lourd pour que puisse le [end]
+
+PREDICTION:
+cet chat a vraiment une
+
+============================================================================================================================================
+SOURCE:
+i know what it feels like to be all alone.
+
+TARGET:
+je sais ce que ça fait d'être tout seul. [end]
+
+PREDICTION:
+je sais comment cela est envie d'y être seul.
+
+============================================================================================================================================
+SOURCE:
+i made a snack for us.
+
+TARGET:
+je nous ai préparé un [end]
+
+PREDICTION:
+vous ai fait un coup pour lui. ans.
+
+============================================================================================================================================
+SOURCE:
+he was a great musician.
+
+TARGET:
+c'était un grand musicien. [end]
+
+PREDICTION:
+on un grand feu.
+
+============================================================================================================================================
+SOURCE:
+tom didn't go very far.
+
+TARGET:
+tom pas bien loin. [end]
+
+PREDICTION:
+tom n'a jamais été à l'école.
+
+============================================================================================================================================
+SOURCE:
+i'm not finished talking to you yet.
+
+TARGET:
+je n'ai pas encore fini de vous parler. [end]
+
+PREDICTION:
+vous n'avez plus fini d'en discuter avec nous. ! »

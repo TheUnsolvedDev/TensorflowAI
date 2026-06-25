@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+prince of orange is a title of nobility originally associated with the principality of orange in what is now southern france.
+
+TARGET:
+prince of orange is a title of [end]
+
+PREDICTION:
+the kingdom of orange was one of the most popular monarchs of england and spain.
+
+============================================================================================================================================
+SOURCE:
+notre dame is a commune in the calvados department in the basse normandie region in northern france.
+
+TARGET:
+it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+in began a solo show on broadway called doug and his world of
+
+TARGET:
+the first and only written biography of the wonder filled life of was published in lrb john harrison books new york. rrb [end]
+
+PREDICTION:
+in became a character on the disney show.
+
+============================================================================================================================================
+SOURCE:
+pont is a commune in the aisne department in picardy in northern france.
+
+TARGET:
+pont is a commune. it is found in the region picardie in the aisne department in the north of france. [end]
+
+PREDICTION:
+pont is a commune. it is found in the region picardie in the aisne department in the north of france.
+
+============================================================================================================================================
+SOURCE:
+it talks about whether a person loves lrb sexually and rrb men women or both.
+
+TARGET:
+it talks about whether a person loves lrb sexually and rrb people of the same sex of the opposite sex or both. [end]
+
+PREDICTION:
+a mix is a young adult violence fiction novel which is a woman who can
+
+============================================================================================================================================
+SOURCE:
+but the hotel of interest has many rooms so if you move the guest occupying room to room the guest occupying room to room and so on you can fit the into room.
+
+TARGET:
+first move the guest in room to room the guest in room to room the guest in room to room the guest in room to room and so on. [end]
+
+PREDICTION:
+but when the guest opened may roll up again her guest yet to room flat with a cash money.
+
+============================================================================================================================================
+SOURCE:
+jones married the actor jack on august with whom she had three sons shaun patrick and
+
+TARGET:
+she was married to jack from to and had three sons with him shaun patrick and [end]
+
+PREDICTION:
+he made his son with actor george
+
+============================================================================================================================================
+SOURCE:
+the song is a mid ballad sung from the perspective of the film s lead character
+
+TARGET:
+the song was produced by walker and mixed by former husband [end]
+
+PREDICTION:
+director tim burton agreed and lavigne wrote the song immediately on the piano.
+
+============================================================================================================================================
+SOURCE:
+taylor lrb november july rrb was an american military leader and the th president of the united states.
+
+TARGET:
+taylor lrb november july rrb was the th president of the united states. [end]
+
+PREDICTION:
+taylor lrb november july rrb was an army regarded by the american military
+
+============================================================================================================================================
+SOURCE:
+it began april soon after ko s victory at
+
+TARGET:
+it started on april which was soon after ko s victory at an important battle. [end]
+
+PREDICTION:
+it began at the night of the in.

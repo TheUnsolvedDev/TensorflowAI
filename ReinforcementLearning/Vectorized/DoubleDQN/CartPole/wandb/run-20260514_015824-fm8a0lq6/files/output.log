@@ -1,0 +1,15 @@
+Using 2 GPU(s)
+ 35%|█████████████████████████████████████▊                                                                      | 34959/100000 [1:00:29<1:45:58, 10.23it/s]
+Step=2500 Loss=0.0221 Return=21.28 Epsilon=0.951 FPS=201
+Step=5000 Loss=0.0341 Return=22.11 Epsilon=0.902 FPS=170
+Step=7500 Loss=0.0570 Return=25.38 Epsilon=0.853 FPS=161
+Step=10000 Loss=0.0788 Return=21.10 Epsilon=0.804 FPS=157
+Step=12500 Loss=0.1221 Return=22.78 Epsilon=0.755 FPS=155
+Step=15000 Loss=0.2957 Return=27.73 Epsilon=0.706 FPS=153
+Step=17500 Loss=0.1163 Return=27.53 Epsilon=0.657 FPS=153
+Step=20000 Loss=0.1801 Return=31.91 Epsilon=0.608 FPS=152
+Step=22500 Loss=0.2130 Return=41.20 Epsilon=0.559 FPS=151
+Step=25000 Loss=0.2366 Return=41.78 Epsilon=0.510 FPS=152
+Step=27500 Loss=0.1319 Return=58.76 Epsilon=0.461 FPS=154
+Step=30000 Loss=0.0920 Return=64.60 Epsilon=0.412 FPS=153
+Step=32500 Loss=0.3928 Return=79.98 Epsilon=0.363 FPS=153

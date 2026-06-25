@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+an old man sat next to me on the bus.
+
+TARGET:
+un vieil homme s'est assis à côté de moi dans le bus. [end]
+
+PREDICTION:
+un vieil américain me assis quand il s'est endormi sur la
+
+============================================================================================================================================
+SOURCE:
+the town is beautiful.
+
+TARGET:
+la est belle. [end]
+
+PREDICTION:
+est jolie. !
+
+============================================================================================================================================
+SOURCE:
+i need more power.
+
+TARGET:
+j'ai besoin de plus [end]
+
+PREDICTION:
+il me faut encore un autre chemin.
+
+============================================================================================================================================
+SOURCE:
+i know the last thing you want to do is help me.
+
+TARGET:
+je sais que la dernière chose que vous vouliez faire est de m'aider. [end]
+
+PREDICTION:
+on part la chose que je sais de faire qui me fera vous
+
+============================================================================================================================================
+SOURCE:
+this desk is too heavy to lift.
+
+TARGET:
+ce bureau est trop lourd pour que puisse le [end]
+
+PREDICTION:
+ce bus est trop tôt.
+
+============================================================================================================================================
+SOURCE:
+i know what it feels like to be all alone.
+
+TARGET:
+je sais ce que ça fait d'être tout seul. [end]
+
+PREDICTION:
+ce qu'il pense est le que je toute la seule.
+
+============================================================================================================================================
+SOURCE:
+i made a snack for us.
+
+TARGET:
+je nous ai préparé un [end]
+
+PREDICTION:
+on l'a préparé une à nous. est-ce
+
+============================================================================================================================================
+SOURCE:
+he was a great musician.
+
+TARGET:
+c'était un grand musicien. [end]
+
+PREDICTION:
+il avait
+
+============================================================================================================================================
+SOURCE:
+tom didn't go very far.
+
+TARGET:
+tom pas bien loin. [end]
+
+PREDICTION:
+personne ne devint vraiment petite.
+
+============================================================================================================================================
+SOURCE:
+i'm not finished talking to you yet.
+
+TARGET:
+je n'ai pas encore fini de vous parler. [end]
+
+PREDICTION:
+j'en ai encore pas vous le parler. tous. je peux ton départ ?

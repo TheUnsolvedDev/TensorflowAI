@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+with a population of people c cents is the fourth most important city in the county after the capital
+
+TARGET:
+c cents has a population of people and is the fourth most important city in the county after the county capital [end]
+
+PREDICTION:
+city has been an area called la post capital cities lrb which means a population in rrb by invading people.
+
+============================================================================================================================================
+SOURCE:
+the russian river with its mouth at the north end of goat rock beach is county s largest both in flow rate and
+
+TARGET:
+the russian river which has its mouth at the north end of goat rock beach is county s biggest and river. [end]
+
+PREDICTION:
+territory is a seaside town in northumberland for the san gorge as capital. it lrb portuguese rrb.
+
+============================================================================================================================================
+SOURCE:
+they have adapted to living in proximity to humans and can be found on in the of and other urban areas.
+
+TARGET:
+they can live close to people and are seen feeding on in the suburbs of and other towns. [end]
+
+PREDICTION:
+she containing to found all grown over much and is like humans. there are two other bonds with real help lrb bacteria rrb. this will have a lot of living organisms. every thing tries well known by lsb faithful will.
+
+============================================================================================================================================
+SOURCE:
+his major works include the novels of the thief s journal and our lady of the flowers and the plays the the the and the
+
+TARGET:
+his novels the miracle of the rose lrb o o rrb and the journal lrb o o rrb describe his experiences in youth prison and as a [end]
+
+PREDICTION:
+wrote his book for o novels and about twelve of the poems where a gene jesus ascension to daniel on her natural selection. he inspired authors such as james i s deer because it has written in all names matthew which are spoken with some other american folk saint andrew george w. evans in.
+
+============================================================================================================================================
+SOURCE:
+seeking to the juice lilly asked her to design a shift dress made of bright colorful printed
+
+TARGET:
+seeking to hide the juice she designed a shift dress made of bright colorful printed [end]
+
+PREDICTION:
+they met with a named download version of lego new day game lrb d. rrb. he was called the question after his earlier versions some think saying that there would have no badge were discontinued before based on it. in literature and making them it was done for salvation as its master ! from except where
+
+============================================================================================================================================
+SOURCE:
+is a free network attached storage server supporting lrb rrb protocols local user and software raid lrb rrb with a web based configuration
+
+TARGET:
+is a free network attached storage server. it supports lrb samba rrb protocols local user authentication and software raid lrb rrb. [end]
+
+PREDICTION:
+stream free software line fried special is an der f d group lrb e.g. in z mail scientist rrb
+
+============================================================================================================================================
+SOURCE:
+hurricane gustav of was the first subtropical storm to receive a name but became tropical shortly after subtropical storm nicole from the atlantic hurricane season was the first subtropical storm that did not become tropical since the policy change.
+
+TARGET:
+a subtropical cyclone lrb also known as a subtropical storm rrb is a weather storm. [end]
+
+PREDICTION:
+subtropical storm crawford in proxy but was named for it again when the wwf e passed another integral and absorbed into a free list. this man became known as follows other land which will rise to air plans at launch event
+
+============================================================================================================================================
+SOURCE:
+in due time she gave birth to her son lars in copenhagen and left him in the care of a foster family.
+
+TARGET:
+there she gave birth to her son lars in copenhagen and left him with another family to care for him. [end]
+
+PREDICTION:
+in alba so brave great matters of this treatment.
+
+============================================================================================================================================
+SOURCE:
+neptune is similar in composition to uranus and both have compositions which differ from those of the larger gas giants jupiter and saturn.
+
+TARGET:
+uranus and neptune are not exactly the same type of gas giants like to jupiter and saturn but are rather ice giants meaning they have a larger solid core and are also made of [end]
+
+PREDICTION:
+uranus are mostly covered with the big moon but not yet fe it also confirmed their alpha commander next to mph.
+
+============================================================================================================================================
+SOURCE:
+was discovered by mary on july at the bed i site of gorge in tanzania lrb specimen oh rrb.
+
+TARGET:
+was discovered by mary in july at the site of gorge in tanzania. [end]
+
+PREDICTION:
+m was an oral model she served in with conditions such for a further on the sick including phase day october.

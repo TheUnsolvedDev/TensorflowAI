@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the house of s rule of montenegro comes to an end.
+
+TARGET:
+rule of montenegro comes to an end. [end]
+
+PREDICTION:
+the house of s rule of s rule of
+
+============================================================================================================================================
+SOURCE:
+mary was born mary in town london in.
+
+TARGET:
+biography mary shelley was born on august in london england. [end]
+
+PREDICTION:
+mary was born in town london in
+
+============================================================================================================================================
+SOURCE:
+the match was between a celtic side drawn from their title winning squad and a side drawn from their scottish cup win.
+
+TARGET:
+the match was between a celtic f.c. side drawn from their title winning squad and a motherwell f.c. side drawn from their scottish cup win. [end]
+
+PREDICTION:
+the match was between a celtic side drawn from their title winning
+
+============================================================================================================================================
+SOURCE:
+database age range and collections it is the largest of the and the only species to occur outside africa with different subspecies being
+
+TARGET:
+it is the largest of the and the only species to occur outside africa with different subspecies being [end]
+
+PREDICTION:
+database age range and
+
+============================================================================================================================================
+SOURCE:
+robert michael lrb december rrb is an american musician songwriter actor producer novelist businessman and philanthropist perhaps best known for his time in the musical group the and on the tv series of the same name.
+
+TARGET:
+michael is an american musician songwriter actor producer novelist businessman and [end]
+
+PREDICTION:
+robert lrb december rrb is an american musician and actor.
+
+============================================================================================================================================
+SOURCE:
+lrb rrb born august is a japanese footballer who plays for yokohama f.
+
+TARGET:
+lrb born august rrb is a japanese football player. he plays for yokohama f. and japan national team. [end]
+
+PREDICTION:
+lrb born august rrb is a japanese football player. he plays for f.
+
+============================================================================================================================================
+SOURCE:
+november retained its name lrb from the latin meaning nine rrb when january and february were added to the roman calendar.
+
+TARGET:
+its name is from the latin word which meant it was the ninth month of the year before january and february were added to the roman calendar. [end]
+
+PREDICTION:
+november its name was called the roman calendar.
+
+============================================================================================================================================
+SOURCE:
+johannes lrb october july rrb better known as paul and known as uncle paul lrb dutch paul rrb was state president of the south african republic lrb rrb.
+
+TARGET:
+johannes lrb or just paul rrb lrb october july rrb was the president of the republic lrb south african republic rrb from to. [end]
+
+PREDICTION:
+lrb october july rrb was a german football player.
+
+============================================================================================================================================
+SOURCE:
+it is the location of fort gibson national cemetery and is located near at the end of the trail of tears at oklahoma.
+
+TARGET:
+it is near to the end of the trail of tears at [end]
+
+PREDICTION:
+it is the location of fort national cemetery and is located near the end of the trail of
+
+============================================================================================================================================
+SOURCE:
+ruth maria kelly lrb born may rrb is a british labor party politician who was the member of parliament lrb mp rrb for bolton west from until she stood down in.
+
+TARGET:
+ruth maria kelly lrb born may rrb is now an economist working for the bank. she was a british politician and had been a cabinet minister. [end]
+
+PREDICTION:
+ruth maria kelly lrb born may rrb is a british politician who was the member of parliament for the united states of america.

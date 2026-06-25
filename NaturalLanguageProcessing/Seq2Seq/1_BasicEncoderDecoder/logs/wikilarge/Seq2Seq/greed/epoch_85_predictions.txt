@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+there are currently fifa members each one with its unique country
+
+TARGET:
+there are currently fifa members each one with a different country [end]
+
+PREDICTION:
+there are only in the netherlands since the conservative party officially the party.
+
+============================================================================================================================================
+SOURCE:
+it is mainland australia s largest and the world s longest lrb the biggest is the rrb and it is considered an
+
+TARGET:
+it is mainland australia s largest and the world s longest [end]
+
+PREDICTION:
+its highest point is the largest country behind north
+
+============================================================================================================================================
+SOURCE:
+are of that by physical design to different to the
+
+TARGET:
+are of they to the different that can be [end]
+
+PREDICTION:
+is well of design that to a design of a physical
+
+============================================================================================================================================
+SOURCE:
+although not stated in this version are often based on the additional that the car is initially likely to be behind each door and that the host must
+
+TARGET:
+then the host who has of what is behind every door a different door which he is certain has a behind it lrb opening either door with equal
+
+PREDICTION:
+the hockey must have a
+
+============================================================================================================================================
+SOURCE:
+on january the new list was published and at the age of he became the youngest chess player in history to be ranked world number one breaking the record previously
+
+TARGET:
+he was years and days old when he became the youngest chess player in history to be ranked world number one. [end]
+
+PREDICTION:
+on january the list was appointed to be listed in the nd world and only finished th in june.
+
+============================================================================================================================================
+SOURCE:
+is a species of in the family.
+
+TARGET:
+is a kind of in the family of animals. [end]
+
+PREDICTION:
+it in in the family
+
+============================================================================================================================================
+SOURCE:
+these include statistical mechanical effects as well as mechanical effects for example the size effect where the electronic properties of are with great in
+
+TARGET:
+for example the effects of very small as well as quantum mechanical effects like the quantum size effect where in move for very small of
+
+PREDICTION:
+sales of mountains the larger areas of the and are the of the
+
+============================================================================================================================================
+SOURCE:
+in mid a and his father left and moved to w where he at the university.
+
+TARGET:
+after his studies at the high school in in a at the university in w and in a school for [end]
+
+PREDICTION:
+in and s and joined the university of w
+
+============================================================================================================================================
+SOURCE:
+john was married and had children as in his letter to sir robert but family life does not to have been important to him as his wife
+
+TARGET:
+to have been married and he had children although we do not know how his wife and family always stayed in england. [end]
+
+PREDICTION:
+his was married to and he had been asked to write stories that son s
+
+============================================================================================================================================
+SOURCE:
+much of the population lives in the west in the valley the south and east of further southeast the mountains and the southeast with a few parts of the
+
+TARGET:
+much of its population live on its west parts near the [end]
+
+PREDICTION:
+many of the population live in the are the mountains in the west south of the

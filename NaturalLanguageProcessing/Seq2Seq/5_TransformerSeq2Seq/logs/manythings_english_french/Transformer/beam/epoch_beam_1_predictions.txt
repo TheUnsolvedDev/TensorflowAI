@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he isn't the only one with this opinion.
+
+TARGET:
+il n'est pas le seul à avoir cette opinion. [end]
+
+PREDICTION:
+tom n'est de faire le train ? je
+
+============================================================================================================================================
+SOURCE:
+you seem to be a kind man.
+
+TARGET:
+vous semblez être un homme gentil. [end]
+
+PREDICTION:
+vous êtes
+
+============================================================================================================================================
+SOURCE:
+i have to
+
+TARGET:
+je dois répéter. [end]
+
+PREDICTION:
+j'aime de a la maison.
+
+============================================================================================================================================
+SOURCE:
+this hat isn't new.
+
+TARGET:
+ce chapeau n'est pas neuf. [end]
+
+PREDICTION:
+elle n'est jamais pas
+
+============================================================================================================================================
+SOURCE:
+english is spoken in many countries.
+
+TARGET:
+l'anglais est parlé dans de nombreux pays. [end]
+
+PREDICTION:
+la peu sont de un maison.
+
+============================================================================================================================================
+SOURCE:
+some of us think so.
+
+TARGET:
+certains d'entre nous le pensent. [end]
+
+PREDICTION:
+le un monde a chose ? !
+
+============================================================================================================================================
+SOURCE:
+you'll have a hard time.
+
+TARGET:
+vous une peine en quartier de haute sécurité. [end]
+
+PREDICTION:
+tu es de un maison. ?
+
+============================================================================================================================================
+SOURCE:
+have you ever been diagnosed with
+
+TARGET:
+est-ce qu'on t'a déjà diagnostiqué un ? [end]
+
+PREDICTION:
+nous ne es fait un maison ? de
+
+============================================================================================================================================
+SOURCE:
+i'm addicted to
+
+TARGET:
+je suis accro à la [end]
+
+PREDICTION:
+j'espère de à ?
+
+============================================================================================================================================
+SOURCE:
+all i know is that he came from china.
+
+TARGET:
+tout ce que je sais, c'est qu'il vient de chine. [end]
+
+PREDICTION:
+elle me pour un maison à les peu de tom. je ? » !

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+plot the story takes place at the abbey of the and and prince
+
+TARGET:
+the story takes place at the abbey of prince [end]
+
+PREDICTION:
+poem it is about the story of an old she comes to a roman house and the hindu lrb rrb takes control
+
+============================================================================================================================================
+SOURCE:
+the university of cambridge lrb cambridge university or simply cambridge rrb is a public research university located in cambridge united kingdom.
+
+TARGET:
+the university of cambridge lrb also called cambridge university rrb is located in cambridge england. [end]
+
+PREDICTION:
+a university of cambridge or is an area to the college in wales with william lawrence kansas and york.
+
+============================================================================================================================================
+SOURCE:
+the record remained until when broke it using a designed and in
+
+TARGET:
+the record was until when broke it using a designed [end]
+
+PREDICTION:
+it still now under new using a kind for which at saturn was started on. that has reached voyager next circuit and designed its completed orbit is working in. this
+
+============================================================================================================================================
+SOURCE:
+a new tv film entitled and best christmas ever began production in july and premiered on december officially ending the series. the title was later changed to
+
+TARGET:
+and is a television series. [end]
+
+PREDICTION:
+group in new north american tv shows lrb grand rrb service and has two main house. she fast life a man but dragon is supreme place good enough for carter
+
+============================================================================================================================================
+SOURCE:
+by rail the regional trains and of the pays de la loire link major towns and cities of the pays de la loire and regions including those of the
+
+TARGET:
+loire is a department in france in the region pays de la [end]
+
+PREDICTION:
+it follow the old towns of further combined i new autonomous region pays and thus is a town by pictures with over regions in east central chile microsoft nintendo states.
+
+============================================================================================================================================
+SOURCE:
+b. cast her as the roman in his historical the sign of the cross lrb rrb opposite march.
+
+TARGET:
+s career got a huge when b. cast her as the roman in his historical the sign of the cross lrb rrb opposite
+
+PREDICTION:
+do his works are now the roman cast good lrb emperor rrb.
+
+============================================================================================================================================
+SOURCE:
+he attended colorado state college lrb now named the university of northern colorado in colorado rrb and earned his master s
+
+TARGET:
+he later studied at the colorado state college. [end]
+
+PREDICTION:
+alice in governor is also the college s secondary j r lrb after interstate rrb.
+
+============================================================================================================================================
+SOURCE:
+for example the for from the for milk and the for are designed to the which in
+
+TARGET:
+for example the rules for cream are different than the rules for milk and the for are designed to keep the which helps
+
+PREDICTION:
+for this the of its position on a milk lrb from one side to drink rrb is made with thick but very good
+
+============================================================================================================================================
+SOURCE:
+the central african republic is situated just north of the and throughout the year daily high rarely fall below the high s
+
+TARGET:
+because of this the daily high temperatures fall below the high s [end]
+
+PREDICTION:
+the eastern lrb or simply press middle australian forest rrb is best of short in a deep region throughout history areas.
+
+============================================================================================================================================
+SOURCE:
+this is due to the of the village s name
+
+TARGET:
+this is due to the of the villages name being o w r o lrb rrb. [end]
+
+PREDICTION:
+the hero s people has been renamed a lot in

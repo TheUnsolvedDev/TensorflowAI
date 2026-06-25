@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i didn't ask you to come with us.
+
+TARGET:
+je ne t'ai pas demandé de venir avec nous. [end]
+
+PREDICTION:
+je n'avais aucun prévu pour tu présenter voir.
+
+============================================================================================================================================
+SOURCE:
+it is a little cold.
+
+TARGET:
+il fait un peu froid. [end]
+
+PREDICTION:
+ça n'a presque un
+
+============================================================================================================================================
+SOURCE:
+i'd like to talk to you when you have some free time.
+
+TARGET:
+j'aimerais vous lorsque vous aurez du temps [end]
+
+PREDICTION:
+si vous lorsque j'aurai pris du thé regrette ton arrêté. maladie. beaucoup changé.
+
+============================================================================================================================================
+SOURCE:
+i was taking a little
+
+TARGET:
+je faisais une petite [end]
+
+PREDICTION:
+je me faisais un peu perdu. de ma ! maladie.
+
+============================================================================================================================================
+SOURCE:
+perhaps i can be of some assistance.
+
+TARGET:
+peut-être puis-je être d'une aide [end]
+
+PREDICTION:
+je peux peut-être en vouloir
+
+============================================================================================================================================
+SOURCE:
+smell this milk. do you think it's still ok to drink?
+
+TARGET:
+ce lait ! pensez-vous qu'il soit encore ? [end]
+
+PREDICTION:
+fais de lait ce ne pense qu’il va permis d'être derniers jours. heure.
+
+============================================================================================================================================
+SOURCE:
+i'm very lucky.
+
+TARGET:
+je suis très [end]
+
+PREDICTION:
+beaucoup d'être la content. ! tout son argent. maladie.
+
+============================================================================================================================================
+SOURCE:
+they danced for hours.
+
+TARGET:
+elles ont pendant des heures. [end]
+
+PREDICTION:
+eux le couvert depuis l'un des heures. tu dois partir.
+
+============================================================================================================================================
+SOURCE:
+i'll always be here to help you.
+
+TARGET:
+je serai toujours là pour t'aider. [end]
+
+PREDICTION:
+je serai toujours pour vous aider. vos heure.
+
+============================================================================================================================================
+SOURCE:
+i can protect you.
+
+TARGET:
+je peux vous protéger. [end]
+
+PREDICTION:
+merci de te être passée.

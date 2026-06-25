@@ -3,6 +3,8 @@ import numpy as np
 
 class RandomAgent:
     def __init__(self):
+        self.type = "Random"
+        self.observation_mode = "absolute"
         self.rows = 6
         self.cols = 7
 

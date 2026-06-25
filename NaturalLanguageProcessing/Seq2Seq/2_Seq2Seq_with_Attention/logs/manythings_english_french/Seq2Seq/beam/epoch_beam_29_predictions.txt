@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'm a too.
+
+TARGET:
+je suis également [end]
+
+PREDICTION:
+maintenant je dispose d’un ordinateur !
+
+============================================================================================================================================
+SOURCE:
+tom liked to keep to himself.
+
+TARGET:
+tom aimait prendre soin de lui. [end]
+
+PREDICTION:
+c'est aimé de te présenter à lui-même. pas. peu. au fond ?
+
+============================================================================================================================================
+SOURCE:
+tom didn't take his hat off.
+
+TARGET:
+tom ne retira pas son chapeau. [end]
+
+PREDICTION:
+ça a préféré l'idée du
+
+============================================================================================================================================
+SOURCE:
+give me the phone.
+
+TARGET:
+donne-moi le téléphone. [end]
+
+PREDICTION:
+donne-moi au téléphone.
+
+============================================================================================================================================
+SOURCE:
+i've got a frog in my throat.
+
+TARGET:
+j'ai un chat dans la gorge. [end]
+
+PREDICTION:
+j'ai un monde son dos.
+
+============================================================================================================================================
+SOURCE:
+do what your mother says.
+
+TARGET:
+fais ce que dit ta mère. [end]
+
+PREDICTION:
+prends la question que dit. sonne bien.
+
+============================================================================================================================================
+SOURCE:
+tom turned around.
+
+TARGET:
+tom se [end]
+
+PREDICTION:
+il est aux alentours. ans. le camp.
+
+============================================================================================================================================
+SOURCE:
+do you know how to swim?
+
+TARGET:
+est-ce que tu sais nager ? [end]
+
+PREDICTION:
+savez-vous nager aux risques ? bien. tu parles pas de la sorte que ça plaît ! parfaitement.
+
+============================================================================================================================================
+SOURCE:
+i know very little about him.
+
+TARGET:
+je sais très peu de choses de lui. [end]
+
+PREDICTION:
+j'y sais vraiment peu sur elle.
+
+============================================================================================================================================
+SOURCE:
+how many christmas cards did you receive last year?
+
+TARGET:
+combien de cartes de noël avez-vous l'année dernière ? [end]
+
+PREDICTION:
+combien d'enfants avez-vous l'an année ?

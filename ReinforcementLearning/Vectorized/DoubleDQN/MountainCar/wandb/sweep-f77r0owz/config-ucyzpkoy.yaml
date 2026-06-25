@@ -1,0 +1,16 @@
+wandb_version: 1
+
+batch_size:
+  value: 128
+buffer_size:
+  value: 200000
+epsilon_decay_steps:
+  value: 1200000
+epsilon_end:
+  value: 0.02
+gamma:
+  value: 0.99
+lr:
+  value: 6.949261604255812e-05
+target_update_freq:
+  value: 2500

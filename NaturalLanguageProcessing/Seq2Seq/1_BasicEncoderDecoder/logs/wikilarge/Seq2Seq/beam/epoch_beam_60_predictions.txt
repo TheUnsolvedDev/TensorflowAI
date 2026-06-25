@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+began to about becoming a singer alongside her
+
+TARGET:
+began to dream about as a singer her [end]
+
+PREDICTION:
+became a second movie at the concert that she released on her debut in november.
+
+============================================================================================================================================
+SOURCE:
+the route from from to was a road in length from to the road was close to the river
+
+TARGET:
+transport there used to be a route from to it was possible to travel from via and over the bridge into [end]
+
+PREDICTION:
+first highway was in from road and the length of m came close to it is between
+
+============================================================================================================================================
+SOURCE:
+time is a website created by gene ray in where he sets out his proposed theory of a description of the nature of the
+
+TARGET:
+time is a website created by gene [end]
+
+PREDICTION:
+time is a true that uses paper within daniel moving animals. the majority guide to hollywood pictures lrb from until when people rrb was shown at all of defense or
+
+============================================================================================================================================
+SOURCE:
+initially the project was created in english a later expansion to include additional languages was started in july.
+
+TARGET:
+the project was first created in english. however in july more languages were [end]
+
+PREDICTION:
+this was first introduced in after the north of
+
+============================================================================================================================================
+SOURCE:
+charles found in the nine almost complete of and a few of what he classified as media and published a description of all of
+
+TARGET:
+its species is known from the middle of british the of charles named it after a local mountain peak
+
+PREDICTION:
+his life consists of two major letters on september most of. the work was made in by pierre systems.
+
+============================================================================================================================================
+SOURCE:
+the product a of simple such as and
+
+TARGET:
+in a product is a popular type of block that works by in a number of simple such as and [end]
+
+PREDICTION:
+the theory product a problems used like how to create people and other things that are called food or for example in it.
+
+============================================================================================================================================
+SOURCE:
+the muhammad began after most of which the islamic muhammad were published in the danish newspaper on september.
+
+TARGET:
+the began after the islamic muhammad were published in the danish newspaper on september. [end]
+
+PREDICTION:
+after muhammad began death in what is called singapore turkey bc.
+
+============================================================================================================================================
+SOURCE:
+early culture in s and maya
+
+TARGET:
+that were the the early culture in s and maya [end]
+
+PREDICTION:
+did research and hit early key in their maya culture which had the same amount of effects
+
+============================================================================================================================================
+SOURCE:
+a natural is the effect of a natural lrb e.g. hurricane volcanic earthquake or rrb.
+
+TARGET:
+a natural is the of the combination of a natural lrb a physical event like a volcanic an earthquake a rrb and human [end]
+
+PREDICTION:
+sometimes it is close when or the surface caused a population of. square to damage waves inches lrb. mi rrb. they also say water are covered by water.
+
+============================================================================================================================================
+SOURCE:
+red hot is an american alternative rock band that formed in los angeles in.
+
+TARGET:
+red hot is an american rock band. the band started in in los angeles california. [end]
+
+PREDICTION:
+red hot is an american band based in texas. it opened with the los angeles philharmonic on june.

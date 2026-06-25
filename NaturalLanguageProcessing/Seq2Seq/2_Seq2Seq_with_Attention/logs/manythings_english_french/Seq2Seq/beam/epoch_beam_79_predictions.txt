@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+never get past the take my
+
+TARGET:
+« tu ne jamais à passer les » « je ma chance. » [end]
+
+PREDICTION:
+les plus jeunes. on peut bien accepter deux même.
+
+============================================================================================================================================
+SOURCE:
+that's not where i'm going.
+
+TARGET:
+ce n'est pas où je [end]
+
+PREDICTION:
+qui suis là que j'y retourne allé.
+
+============================================================================================================================================
+SOURCE:
+you seem very nervous this morning.
+
+TARGET:
+tu sembles très ce matin. [end]
+
+PREDICTION:
+tu semble très ce matin. !
+
+============================================================================================================================================
+SOURCE:
+this is weird.
+
+TARGET:
+c'est bizarre. [end]
+
+PREDICTION:
+c'est étrange.
+
+============================================================================================================================================
+SOURCE:
+don't walk home by yourself.
+
+TARGET:
+ne rentre pas à la maison toute seule. [end]
+
+PREDICTION:
+vous et retourner à droite. tout seuls.
+
+============================================================================================================================================
+SOURCE:
+a tree is known by its fruit.
+
+TARGET:
+on un arbre à son [end]
+
+PREDICTION:
+on sait parler un arbre leur mois.
+
+============================================================================================================================================
+SOURCE:
+that's the way i like it.
+
+TARGET:
+c'est comme ça que je l'aime. [end]
+
+PREDICTION:
+c'est du plaisir.
+
+============================================================================================================================================
+SOURCE:
+i don't know anything about this.
+
+TARGET:
+je n'en sais rien. [end]
+
+PREDICTION:
+n'en sait rien.
+
+============================================================================================================================================
+SOURCE:
+i'm not eating this.
+
+TARGET:
+je ne vais pas manger ça. [end]
+
+PREDICTION:
+je ne mange pas ça.
+
+============================================================================================================================================
+SOURCE:
+you love your right?
+
+TARGET:
+tu aimes ta pas vrai ? [end]
+
+PREDICTION:
+vous en savais-tu votre non ? oui. !

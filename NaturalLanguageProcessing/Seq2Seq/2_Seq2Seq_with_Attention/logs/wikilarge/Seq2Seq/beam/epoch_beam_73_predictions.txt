@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a city in county iowa united states.
+
+TARGET:
+is a city of iowa in the united states. [end]
+
+PREDICTION:
+is a city old borough county in iowa united states.
+
+============================================================================================================================================
+SOURCE:
+the host city to its country s olympic committee if more than one city from the same country a to its the national committee typically holds an
+
+TARGET:
+the process starts when a city to host the games to its country s olympic group. if more than one city from the same country gives a to
+
+PREDICTION:
+the soviet international at city have more than with their country s movement like a large cities according in over english. it had two to share all major rivers if
+
+============================================================================================================================================
+SOURCE:
+initially to such a major project in was finally to the commission and began work on his saint fran d
+
+TARGET:
+at first he did not want to start such a large work but in he was to the commission and began work on his saint fran d
+
+PREDICTION:
+hits through him the first to help him.
+
+============================================================================================================================================
+SOURCE:
+hurricane karl traveled generally northeast and to a tropical storm as it passed the
+
+TARGET:
+it later became tropical storm karl and then hurricane [end]
+
+PREDICTION:
+on hurricane may have a strong bush the blood of mph lrb see rrb.
+
+============================================================================================================================================
+SOURCE:
+pictures is a christian film production company based in
+
+TARGET:
+pictures is a movie making company based in georgia. [end]
+
+PREDICTION:
+it is a symbol division and electronic influence in several countries including air japan are three l separated line from which various income long size of materials into different systems
+
+============================================================================================================================================
+SOURCE:
+david had made a royal around after his defeat of of
+
+TARGET:
+david i made a royal around after his defeat of of [end]
+
+PREDICTION:
+von letters and poems were married in. he then gave following under a mix of champions moment for deal in with his army. when david was defeated the two remaining
+
+============================================================================================================================================
+SOURCE:
+bbc radio live sports is an additional digital radio service provided by the bbc via digital radio and the digital satellite digital and digital cable television services in
+
+TARGET:
+bbc radio live sports extra is a digital radio station from the [end]
+
+PREDICTION:
+bbc in television and computers lrb digital of internet studios sports rrb lsb it is today a uk radio program in. however the act runs by about the new sciences
+
+============================================================================================================================================
+SOURCE:
+the of these territories powers to them by the commonwealth and the commonwealth parliament the power to and to transfer powers to or from the
+
+TARGET:
+the of these territories have powers given to them by the the commonwealth parliament the power to and to give or take [end]
+
+PREDICTION:
+in addition the term of those and people used to people. others therefore there are some territories with them by applied politics councils this government uses powers back into from
+
+============================================================================================================================================
+SOURCE:
+the station is on the victoria line and the london gospel to line in zone and is the least used station on the victoria line million
+
+TARGET:
+the station is on the victoria line and the london gospel to line in [end]
+
+PREDICTION:
+the station is in london and greater opened hill two parts line north lrb peter rrb a new tube lines to get launched with other reserve who goes on and.
+
+============================================================================================================================================
+SOURCE:
+the trade with is important above all in
+
+TARGET:
+the trade with is important mainly in [end]
+
+PREDICTION:
+an important is very example outside of all the world are free lrb still in systems. other websites rrb. there has been multiple german speakers for making sure whether they

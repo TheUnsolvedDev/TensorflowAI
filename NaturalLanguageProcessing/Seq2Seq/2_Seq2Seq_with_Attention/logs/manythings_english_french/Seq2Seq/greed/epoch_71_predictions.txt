@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+stop being so
+
+TARGET:
+arrête d'être aussi [end]
+
+PREDICTION:
+arrête d'être aussi
+
+============================================================================================================================================
+SOURCE:
+i didn't meet any of my friends.
+
+TARGET:
+je n'ai rencontré aucun de mes amis. [end]
+
+PREDICTION:
+je n'ai pas rencontré de mes
+
+============================================================================================================================================
+SOURCE:
+i'd like to have you on our team.
+
+TARGET:
+j'aimerais vous avoir dans notre équipe. [end]
+
+PREDICTION:
+j'aimerais t'avoir dans notre équipe.
+
+============================================================================================================================================
+SOURCE:
+i'm not tired.
+
+TARGET:
+je ne suis pas fatiguée. [end]
+
+PREDICTION:
+je ne suis pas fatigué.
+
+============================================================================================================================================
+SOURCE:
+tom is sitting on the grass.
+
+TARGET:
+tom est assis sur [end]
+
+PREDICTION:
+tom est assis sur
+
+============================================================================================================================================
+SOURCE:
+tom is making soup.
+
+TARGET:
+tom fait de la [end]
+
+PREDICTION:
+tom est en train de faire une
+
+============================================================================================================================================
+SOURCE:
+i have no but i'm a fast
+
+TARGET:
+je n'ai pas mais vite. [end]
+
+PREDICTION:
+je n'ai aucune mais je suis un
+
+============================================================================================================================================
+SOURCE:
+that's a lot of work.
+
+TARGET:
+c'est beaucoup de boulot. [end]
+
+PREDICTION:
+c'est beaucoup de boulot.
+
+============================================================================================================================================
+SOURCE:
+stop crying like a girl.
+
+TARGET:
+arrêtez de pleurer comme une fille ! [end]
+
+PREDICTION:
+cessez de pleurer comme une fille !
+
+============================================================================================================================================
+SOURCE:
+i care about all of you.
+
+TARGET:
+je me soucie de vous tous. [end]
+
+PREDICTION:
+je me soucie de vous toutes.

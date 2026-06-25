@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i don't think being poor is anything to be ashamed of.
+
+TARGET:
+je ne crois pas qu'on avoir honte d'être pauvre. [end]
+
+PREDICTION:
+je certaine dont il nous ne semble pas aies pensé dans cette fois qu'il soit. » les deux juste femmes sur place.
+
+============================================================================================================================================
+SOURCE:
+english is studied in too.
+
+TARGET:
+l'anglais est aussi étudié en [end]
+
+PREDICTION:
+il est l'anglais à la étudié dans chaque fois qu'il non ?
+
+============================================================================================================================================
+SOURCE:
+i've been painting the
+
+TARGET:
+je le [end]
+
+PREDICTION:
+j'ai pris le tableau !
+
+============================================================================================================================================
+SOURCE:
+i have no experience.
+
+TARGET:
+je suis [end]
+
+PREDICTION:
+j'ai aucune été surprise. que voilà une doute soit.
+
+============================================================================================================================================
+SOURCE:
+i'll add the
+
+TARGET:
+la touche [end]
+
+PREDICTION:
+plus tard qu'est ce chose.
+
+============================================================================================================================================
+SOURCE:
+it's a question of
+
+TARGET:
+chacun ses [end]
+
+PREDICTION:
+ceci n'a aucune d'une amie.
+
+============================================================================================================================================
+SOURCE:
+i need some sugar. do you have
+
+TARGET:
+j'ai besoin de sucre. en as-tu un peu ? [end]
+
+PREDICTION:
+il faut que je me fasses du souci et ça de vous. ? minutes. vais aucun ne probablement chercher le cheveux. » c'est « sûr. avec 10 sont ces fils.
+
+============================================================================================================================================
+SOURCE:
+are you afraid of that?
+
+TARGET:
+en avez-vous peur ? [end]
+
+PREDICTION:
+avez-vous le mal ? ça vous n'ont rien vu.
+
+============================================================================================================================================
+SOURCE:
+mary went on a around the world.
+
+TARGET:
+marie en voyage autour du monde. [end]
+
+PREDICTION:
+l'homme se trouve en plein autour de la ville.
+
+============================================================================================================================================
+SOURCE:
+my knife is
+
+TARGET:
+mon couteau est [end]
+
+PREDICTION:
+mon couteau est sans normal. les

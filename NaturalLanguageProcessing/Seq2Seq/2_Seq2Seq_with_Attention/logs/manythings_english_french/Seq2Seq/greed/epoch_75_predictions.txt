@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you know that's impossible.
+
+TARGET:
+vous savez que c'est impossible. [end]
+
+PREDICTION:
+tu sais que c'est impossible.
+
+============================================================================================================================================
+SOURCE:
+she likes
+
+TARGET:
+elle aime les [end]
+
+PREDICTION:
+elle aime le
+
+============================================================================================================================================
+SOURCE:
+she doesn't have any friends or to take care of her.
+
+TARGET:
+elle n'a aucun ami ou pour prendre soin d'elle. [end]
+
+PREDICTION:
+elle n'a pas de alors ni pour l'un pour ne pas prendre soin de main.
+
+============================================================================================================================================
+SOURCE:
+we used to play in the park.
+
+TARGET:
+nous dans le parc. [end]
+
+PREDICTION:
+nous dans le parc.
+
+============================================================================================================================================
+SOURCE:
+i wish i knew what to say.
+
+TARGET:
+j'aimerais savoir quoi dire. [end]
+
+PREDICTION:
+j'aimerais savoir quoi dire.
+
+============================================================================================================================================
+SOURCE:
+can you promise me you won't tell tom?
+
+TARGET:
+pouvez-vous me que vous n'en rien à tom ? [end]
+
+PREDICTION:
+peux-tu me que tu ne rien à tom ?
+
+============================================================================================================================================
+SOURCE:
+could you tell me how to get to your office?
+
+TARGET:
+pourriez-vous me dire comment se rendre à votre bureau ? [end]
+
+PREDICTION:
+pourriez-vous me dire, comment on se rend dans son bureau ?
+
+============================================================================================================================================
+SOURCE:
+tom was when mary told him she was leaving him.
+
+TARGET:
+tom a eu le cœur brisé quand mary lui a dit qu'elle le [end]
+
+PREDICTION:
+tom a été quand mary lui a dit qu'elle
+
+============================================================================================================================================
+SOURCE:
+you may not like it.
+
+TARGET:
+il se peut que vous ne pas. [end]
+
+PREDICTION:
+tu pas ça.
+
+============================================================================================================================================
+SOURCE:
+i don't know what they want.
+
+TARGET:
+je ne sais pas ce qu'ils [end]
+
+PREDICTION:
+je ne sais pas ce qu'elles

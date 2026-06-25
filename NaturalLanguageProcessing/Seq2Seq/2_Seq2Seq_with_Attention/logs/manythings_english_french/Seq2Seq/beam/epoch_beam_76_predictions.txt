@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he denied having said such a thing.
+
+TARGET:
+il a avoir dit une telle chose. [end]
+
+PREDICTION:
+il l'avoir dit ! mot oui. ont content. nous l'avons chose. à dire. n'a
+
+============================================================================================================================================
+SOURCE:
+they caught him playing a on his sister.
+
+TARGET:
+elles le en train de faire une à sa sœur. [end]
+
+PREDICTION:
+ils l'ont pris en train de voir une faveur dans cette tasse à sa sœur.
+
+============================================================================================================================================
+SOURCE:
+these kinds of can without warning.
+
+TARGET:
+ce type de tempête peut sans [end]
+
+PREDICTION:
+ces sang refuse savoir encore.
+
+============================================================================================================================================
+SOURCE:
+i don't want to die now.
+
+TARGET:
+je ne veux pas mourir maintenant. [end]
+
+PREDICTION:
+aussi difficile et je maintenant.
+
+============================================================================================================================================
+SOURCE:
+tom eats chocolate every day.
+
+TARGET:
+tom mange du chocolat tous les jours. [end]
+
+PREDICTION:
+tom mangé de thé au goût du jour. on va faire face seul.
+
+============================================================================================================================================
+SOURCE:
+how can it be?
+
+TARGET:
+comment se peut-il ? [end]
+
+PREDICTION:
+comment cela se peut-il ? bien pire. !
+
+============================================================================================================================================
+SOURCE:
+i couldn't do it.
+
+TARGET:
+je n'ai pas pu le faire. [end]
+
+PREDICTION:
+je n'étais pas au pouvoir faire du
+
+============================================================================================================================================
+SOURCE:
+sometimes i hear things.
+
+TARGET:
+des fois, j'entends des choses. [end]
+
+PREDICTION:
+quelques trucs j'entends des faire.
+
+============================================================================================================================================
+SOURCE:
+i never should've it.
+
+TARGET:
+jamais je dû en parler. [end]
+
+PREDICTION:
+si je dû n'y retourner auparavant. pour t'en remercier.
+
+============================================================================================================================================
+SOURCE:
+it's dangerous to do this.
+
+TARGET:
+c’est dangereux de faire cela. [end]
+
+PREDICTION:
+ça sommes de faire maintenant. ! à son temps. vide.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i've never told anyone about this.
+
+TARGET:
+je n'en ai jamais parlé à personne. [end]
+
+PREDICTION:
+j'ai encore jamais pensé à ce personne.
+
+============================================================================================================================================
+SOURCE:
+it makes sense.
+
+TARGET:
+ça tient debout. [end]
+
+PREDICTION:
+ça se
+
+============================================================================================================================================
+SOURCE:
+to try to bring it back would be
+
+TARGET:
+essayer de le serait [end]
+
+PREDICTION:
+aide à faire cela serait plus en ville.
+
+============================================================================================================================================
+SOURCE:
+i know that you don't trust us.
+
+TARGET:
+je sais que tu ne nous fais pas confiance. [end]
+
+PREDICTION:
+selon vous, que nous ne pas nous.
+
+============================================================================================================================================
+SOURCE:
+i take a almost every day.
+
+TARGET:
+je fais un petit somme presque tous les jours. [end]
+
+PREDICTION:
+j'essaie une tout presque son journée. »
+
+============================================================================================================================================
+SOURCE:
+is this my
+
+TARGET:
+est-ce ma faute ? [end]
+
+PREDICTION:
+est-ce mon vélo ?
+
+============================================================================================================================================
+SOURCE:
+i'm looking for a job.
+
+TARGET:
+je cherche un travail à [end]
+
+PREDICTION:
+j'ai une emploi du temps magnifique. parti.
+
+============================================================================================================================================
+SOURCE:
+don't go in there.
+
+TARGET:
+ne rentre pas là-dedans. [end]
+
+PREDICTION:
+continue sans te
+
+============================================================================================================================================
+SOURCE:
+someone planted a under your car.
+
+TARGET:
+quelqu'un a posé une sous votre voiture. [end]
+
+PREDICTION:
+quelqu'un devint en sécurité ici par un moi-même.
+
+============================================================================================================================================
+SOURCE:
+how many boys are there in your
+
+TARGET:
+combien y a-t-il de garçons dans votre classe ? [end]
+
+PREDICTION:
+y a-t-il combien de garçons dans la salle pour ?

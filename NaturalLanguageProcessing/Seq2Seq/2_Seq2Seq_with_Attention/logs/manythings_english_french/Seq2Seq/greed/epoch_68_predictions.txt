@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+let's take a trip to new
+
+TARGET:
+allons à new ! [end]
+
+PREDICTION:
+partons en voyage à new !
+
+============================================================================================================================================
+SOURCE:
+the united building was built in
+
+TARGET:
+le bâtiment des fut construit en [end]
+
+PREDICTION:
+les ont été en
+
+============================================================================================================================================
+SOURCE:
+what do you want to do with this old
+
+TARGET:
+qu'est-ce que tu veux faire avec cette vieille chaise ? [end]
+
+PREDICTION:
+que voulez-vous faire de cette vieille ?
+
+============================================================================================================================================
+SOURCE:
+this movie was very interesting.
+
+TARGET:
+ce film était très intéressant. [end]
+
+PREDICTION:
+ce film était très intéressant.
+
+============================================================================================================================================
+SOURCE:
+please listen to me.
+
+TARGET:
+s'il vous plaît. [end]
+
+PREDICTION:
+je vous en prie.
+
+============================================================================================================================================
+SOURCE:
+i have something i have to do.
+
+TARGET:
+j'ai quelque chose que je dois faire. [end]
+
+PREDICTION:
+j'ai quelque chose qu'il me faut faire.
+
+============================================================================================================================================
+SOURCE:
+the run every ten minutes.
+
+TARGET:
+les bus toutes les dix minutes. [end]
+
+PREDICTION:
+le bus passe toutes les dix minutes.
+
+============================================================================================================================================
+SOURCE:
+what's in your
+
+TARGET:
+qu'as-tu dans ton sac ? [end]
+
+PREDICTION:
+qu'est-ce qu'il y a dans votre ?
+
+============================================================================================================================================
+SOURCE:
+we're moving out of this apartment next month.
+
+TARGET:
+nous de cet appartement le mois prochain. [end]
+
+PREDICTION:
+nous de tout cet mois le mois prochain.
+
+============================================================================================================================================
+SOURCE:
+i've got brown eyes.
+
+TARGET:
+j'ai les yeux [end]
+
+PREDICTION:
+j'ai les yeux

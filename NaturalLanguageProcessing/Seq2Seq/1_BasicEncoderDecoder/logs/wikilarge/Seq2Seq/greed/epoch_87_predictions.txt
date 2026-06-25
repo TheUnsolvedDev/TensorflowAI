@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+after the war he was the prime minister lrb rrb and later president lrb rrb of the socialist federal republic of lrb rrb.
+
+TARGET:
+he served as the president of the socialist republic of from to. [end]
+
+PREDICTION:
+he was the president of the republic and was prime minister of the republic of germany in.
+
+============================================================================================================================================
+SOURCE:
+the three james charles and les
+
+TARGET:
+james charles and les charles [end]
+
+PREDICTION:
+the charles james les charles and brian lrb o o rrb
+
+============================================================================================================================================
+SOURCE:
+related claims perhaps in an attempt to these are that is the first novel or historical novel the first novel still considered to be a classic or other
+
+TARGET:
+the of is sometimes called the world s first novel the first modern novel or the first novel to still be considered a classic but many do not
+
+PREDICTION:
+david is much known as the first novel to be written by the mathematician and first
+
+============================================================================================================================================
+SOURCE:
+upon returning to japan the pair in the of s old friend a fellow of or goes school of arts which
+
+TARGET:
+after training both of them visit s friend from a long time ago and his fighting partner for martial [end]
+
+PREDICTION:
+graham player of the of a in england.
+
+============================================================================================================================================
+SOURCE:
+there is a clear between and chemical as the use of produced by living organisms is considered under the of both the and weapons
+
+TARGET:
+the production and of such weapons was in the weapons convention of [end]
+
+PREDICTION:
+there is a of dna by and the of both elements and
+
+============================================================================================================================================
+SOURCE:
+served for more than years as the minister for people s
+
+TARGET:
+was the minister for national education in east germany. [end]
+
+PREDICTION:
+had been minister for people of ethnic and politics from the republic.
+
+============================================================================================================================================
+SOURCE:
+after earlier attempts the walt disney company the in.
+
+TARGET:
+the are currently owned by the walt disney company. [end]
+
+PREDICTION:
+after the bbc continued the movie and made them
+
+============================================================================================================================================
+SOURCE:
+is a member of the council of europe and the european union.
+
+TARGET:
+is a member of the european union and several other [end]
+
+PREDICTION:
+is a council in europe and the european union.
+
+============================================================================================================================================
+SOURCE:
+the members of the were german lrb f rrb from the holy roman empire.
+
+TARGET:
+the of the rhine was a client state of first french empire. [end]
+
+PREDICTION:
+germany conducted the vienna were by the of the th century.
+
+============================================================================================================================================
+SOURCE:
+results that occurs of community and of
+
+TARGET:
+the results showed that is of community and of non [end]
+
+PREDICTION:
+that the of supported and of

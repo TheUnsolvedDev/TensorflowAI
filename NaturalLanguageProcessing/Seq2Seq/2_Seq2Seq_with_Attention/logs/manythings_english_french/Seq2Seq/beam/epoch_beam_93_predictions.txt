@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're being
+
+TARGET:
+vous êtes idiot. [end]
+
+PREDICTION:
+toi, c'est toi. cela. ?
+
+============================================================================================================================================
+SOURCE:
+the windows shut.
+
+TARGET:
+les fenêtres ! [end]
+
+PREDICTION:
+les vêtements !
+
+============================================================================================================================================
+SOURCE:
+i couldn't without tom.
+
+TARGET:
+je ne pouvais pas sans tom. [end]
+
+PREDICTION:
+j'ignore à mourir sans tom.
+
+============================================================================================================================================
+SOURCE:
+tom can't do this alone.
+
+TARGET:
+tom ne peut pas faire ceci tout seul. [end]
+
+PREDICTION:
+tom ne peut ce qu'il y a à seule. malade. une nouvelle ? tom. sa devoirs. je peux pas. cours. aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+she went on working.
+
+TARGET:
+elle a continué de travailler. [end]
+
+PREDICTION:
+est-elle au travail qu'on se rendit travailler. sur même. mariage. le
+
+============================================================================================================================================
+SOURCE:
+i'll believe it when i see it.
+
+TARGET:
+j'y lorsque je le [end]
+
+PREDICTION:
+j'en mon mot.
+
+============================================================================================================================================
+SOURCE:
+let's go there.
+
+TARGET:
+[end]
+
+PREDICTION:
+prenons terre.
+
+============================================================================================================================================
+SOURCE:
+my phone rang again.
+
+TARGET:
+mon téléphone à nouveau. [end]
+
+PREDICTION:
+mon téléphone écoute de nouveau à nouveau. prochaine.
+
+============================================================================================================================================
+SOURCE:
+i can't do it.
+
+TARGET:
+je n'y parviens pas. [end]
+
+PREDICTION:
+ça ne pas, je le veux. droite.
+
+============================================================================================================================================
+SOURCE:
+he is to go to
+
+TARGET:
+il est à aller en [end]
+
+PREDICTION:
+il doit devenir à

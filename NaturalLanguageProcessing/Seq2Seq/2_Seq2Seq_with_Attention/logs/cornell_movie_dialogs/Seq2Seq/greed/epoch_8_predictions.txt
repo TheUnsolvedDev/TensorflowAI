@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+this is we're being from a
+
+TARGET:
+hang in there, i'll think of something. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+use the
+
+TARGET:
+too late. too late. save yourself. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+you've been off in honey. everybody's got a
+
+TARGET:
+but a [end]
+
+PREDICTION:
+i don't know what to do with it.
+
+============================================================================================================================================
+SOURCE:
+no, yes, it
+
+TARGET:
+yeah? but look at you. [end]
+
+PREDICTION:
+i don't want to be
+
+============================================================================================================================================
+SOURCE:
+no, this is my first trip, doc.
+
+TARGET:
+well, you're here for a mister mcmurphy. i'd like you to understand you are here on a court order and we are responsible to the state. so, i'd
+
+PREDICTION:
+i don't want to be
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+i don't want to be alone. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+seen a sign for hours. maybe it's long gone.
+
+TARGET:
+maybe it is. why don't you take a little stroll and see? [end]
+
+PREDICTION:
+i don't know what to do with it.
+
+============================================================================================================================================
+SOURCE:
+barnes and i'm a legal secretary.
+
+TARGET:
+of course. mrs. and what were you going with the international carlos the taking [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+this is not a jewish name, is it?
+
+TARGET:
+i hope its not too [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+dr. you are entitled to your opinion. but we feel quite that it would by both and to send a human being into a completely completely
+
+TARGET:
+y'know what? fine. i guess if we want them to know the truth about who we are there's no quicker way to show them. [end]
+
+PREDICTION:
+i don't know what to do with it.

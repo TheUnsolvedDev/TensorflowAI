@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+do you want to make me happy?
+
+TARGET:
+voulez-vous me faire plaisir ? [end]
+
+PREDICTION:
+vous parlez heureux de ? » « certainement.
+
+============================================================================================================================================
+SOURCE:
+this flower is more beautiful than that rose.
+
+TARGET:
+cette fleur est plus belle que cette [end]
+
+PREDICTION:
+ce est plus belle qu'il en était du cœur.
+
+============================================================================================================================================
+SOURCE:
+i've made this trip a thousand times.
+
+TARGET:
+j'ai fait ce voyage un de fois. [end]
+
+PREDICTION:
+j'ai fait ça sous ses états-unis.
+
+============================================================================================================================================
+SOURCE:
+everyone's thirsty.
+
+TARGET:
+tout le monde a soif. [end]
+
+PREDICTION:
+tout le ont chaleur. ça.
+
+============================================================================================================================================
+SOURCE:
+european don't work here.
+
+TARGET:
+les prises ne pas ici. [end]
+
+PREDICTION:
+des taches de soleil ne sont à la nuit auparavant. ça.
+
+============================================================================================================================================
+SOURCE:
+he said, "i want to be a
+
+TARGET:
+il a déclaré : « je veux devenir scientifique. » [end]
+
+PREDICTION:
+je veuille être un agent de travail.
+
+============================================================================================================================================
+SOURCE:
+i saw my in the window.
+
+TARGET:
+j'ai vu mon dans la vitre. [end]
+
+PREDICTION:
+je à mes yeux dans la fenêtre du chocolat. de cinéma.
+
+============================================================================================================================================
+SOURCE:
+they water the fruit trees.
+
+TARGET:
+ils les arbres [end]
+
+PREDICTION:
+ils m'ont tiré des arbres de temps.
+
+============================================================================================================================================
+SOURCE:
+do you want to do it?
+
+TARGET:
+voulez-vous le faire ? [end]
+
+PREDICTION:
+est-ce que tu souhaite le dire ? par même ». !
+
+============================================================================================================================================
+SOURCE:
+because of the poor prices have gone up in the last six months.
+
+TARGET:
+du fait de la mauvaise les prix du ont grimpé dans les derniers six mois. [end]
+
+PREDICTION:
+parce de même tout, les prix sont partis au cours du jour il y est à son jour.

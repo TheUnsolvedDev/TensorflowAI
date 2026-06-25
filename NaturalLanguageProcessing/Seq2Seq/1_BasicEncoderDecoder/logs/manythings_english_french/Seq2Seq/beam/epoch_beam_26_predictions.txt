@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+what are you cooking? it smells good.
+
+TARGET:
+qu'est-ce que tu fais à manger ? ça sent bon. [end]
+
+PREDICTION:
+en ce que ça une bonne journée de bon. » bois.
+
+============================================================================================================================================
+SOURCE:
+tom mary.
+
+TARGET:
+tom marie. [end]
+
+PREDICTION:
+tom de marie. il en a yeux.
+
+============================================================================================================================================
+SOURCE:
+this book could be useful to you.
+
+TARGET:
+ce livre pourrait t'être utile. [end]
+
+PREDICTION:
+ça a aidé trouver un utile. ?
+
+============================================================================================================================================
+SOURCE:
+stop that right now.
+
+TARGET:
+arrête ça immédiatement. [end]
+
+PREDICTION:
+sur-le-champ. en telle chose. d'accord ? aucun marteau de ses 100 propres choses.
+
+============================================================================================================================================
+SOURCE:
+i'm glad to help you.
+
+TARGET:
+je suis content de t'aider. [end]
+
+PREDICTION:
+ça m'a ravie de te faire attention. » en
+
+============================================================================================================================================
+SOURCE:
+i
+
+TARGET:
+j'ai [end]
+
+PREDICTION:
+je trop.
+
+============================================================================================================================================
+SOURCE:
+i just got home from work.
+
+TARGET:
+je rentre à peine du travail. [end]
+
+PREDICTION:
+je viens d'avoir du rentrer de la
+
+============================================================================================================================================
+SOURCE:
+the door blew open.
+
+TARGET:
+la porte d'un souffle. [end]
+
+PREDICTION:
+les portes de la grand-mère ! rouges. à
+
+============================================================================================================================================
+SOURCE:
+i was surprised when tom told me he loved me.
+
+TARGET:
+ça m'a surpris quand tom m'a dit qu'il était en amour avec moi. [end]
+
+PREDICTION:
+ça surpris quand je suis de me tom. ils lui ont l'air. ans.
+
+============================================================================================================================================
+SOURCE:
+tom can't do even simple
+
+TARGET:
+tom ne peut même pas faire des simples. [end]
+
+PREDICTION:
+il n'y a que tom vit pas de

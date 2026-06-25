@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he told her that he loved her.
+
+TARGET:
+il lui a dit qu'il l'aimait. [end]
+
+PREDICTION:
+il lui l'a raconté qu'il l'aime.
+
+============================================================================================================================================
+SOURCE:
+i don't think that tom really needed to do that.
+
+TARGET:
+je ne pense pas que tom ait vraiment eu besoin de faire ça. [end]
+
+PREDICTION:
+ça n'a rien de croire qu'il devait vraiment que faire cela. ans.
+
+============================================================================================================================================
+SOURCE:
+we seats for the play.
+
+TARGET:
+nous avons réservé les places pour la pièce de théâtre. [end]
+
+PREDICTION:
+nous fûmes pour jouer de la chaise.
+
+============================================================================================================================================
+SOURCE:
+i was hoping you could help.
+
+TARGET:
+j'espérais que tu pourrais aider. [end]
+
+PREDICTION:
+j'aurais que on pouvait vous aider.
+
+============================================================================================================================================
+SOURCE:
+my mother is a teacher, too.
+
+TARGET:
+ma mère est également [end]
+
+PREDICTION:
+j'ai aussi une serviette en même chose.
+
+============================================================================================================================================
+SOURCE:
+i owe you a lunch.
+
+TARGET:
+je vous dois un déjeuner. [end]
+
+PREDICTION:
+il y faut un dîner.
+
+============================================================================================================================================
+SOURCE:
+you won't have to hide any longer.
+
+TARGET:
+tu n'auras plus à te cacher. [end]
+
+PREDICTION:
+il ne vous faudra pas se cacher plus longtemps.
+
+============================================================================================================================================
+SOURCE:
+the is late.
+
+TARGET:
+le est en retard. [end]
+
+PREDICTION:
+va tard.
+
+============================================================================================================================================
+SOURCE:
+i just can't stop crying.
+
+TARGET:
+je ne parviens simplement pas à m'arrêter de pleurer. [end]
+
+PREDICTION:
+il ne m'est jamais à pleurer. »
+
+============================================================================================================================================
+SOURCE:
+things are going well now.
+
+TARGET:
+les choses se passent bien maintenant. [end]
+
+PREDICTION:
+tous vont bien en maintenant.

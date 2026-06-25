@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+lrb optics rrb the degree to which light is
+
+TARGET:
+it can also mean lrb optics rrb the degree to which light is [end]
+
+PREDICTION:
+lrb angular velocity is energy. they are error rrb sample as the magnetic projection can be set to magnetic parallel stress on the magnetic devices form a
+
+============================================================================================================================================
+SOURCE:
+en is a commune in the aisne department in picardie in northern france.
+
+TARGET:
+it is found in the region picardie in the aisne department in the north of france. [end]
+
+PREDICTION:
+it is found in the region picardie in the aisne department in the north of france.
+
+============================================================================================================================================
+SOURCE:
+in the race after a bad start he crashed into the back of alonso s renault finishing th.
+
+TARGET:
+in the race he crashed into the back of alonso s car and finished th. [end]
+
+PREDICTION:
+after passing out of the race in the season passing through november the two defeat at the end of the season.
+
+============================================================================================================================================
+SOURCE:
+it is based on la dame aux cam lrb o o rrb a play adapted from the novel by alexandre dumas
+
+TARGET:
+la is an italian opera in three acts by giuseppe verdi libretto by francesco maria after alexandre dumas novel la dame aux published in. [end]
+
+PREDICTION:
+it is written by simon a famous bass guitar
+
+============================================================================================================================================
+SOURCE:
+in a single day about soldiers on both sides died or were left wounded on the field.
+
+TARGET:
+the battle only lasted one day but about soldiers on both sides were killed or were left wounded on the [end]
+
+PREDICTION:
+there were no flood posts in a lie around the
+
+============================================================================================================================================
+SOURCE:
+its county seat is florida and its largest city is st.
+
+TARGET:
+county is a county located in the u.s. state of florida. [end]
+
+PREDICTION:
+its capital city is the state capital of kauai has a large american
+
+============================================================================================================================================
+SOURCE:
+a building in its most common usage is a steel or reinforced concrete structure a nuclear
+
+TARGET:
+building is a building with a nuclear in it. [end]
+
+PREDICTION:
+a long term height or metres lrb ft rrb is a measure of motor racing events.
+
+============================================================================================================================================
+SOURCE:
+by ted and his were on the of the big time and made their first movie soup to nuts featuring ted and his four lrb lrb billed as harry howard rrb larry and one shot fred rrb for fox films lrb later th century fox rrb.
+
+TARGET:
+the filmed his first short film with ted soup to nuts lrb rrb. ted and his was a comedy group featuring ted and moe more moe s brother howard larry fine and fred [end]
+
+PREDICTION:
+drake accused of lil wayne better known as lee harvey and both have produced the core voice of directing and
+
+============================================================================================================================================
+SOURCE:
+by there were and native americans still occupied large areas of land in northeast and far western alabama.
+
+TARGET:
+by there were with indians still occupying land in northeast and far western alabama. [end]
+
+PREDICTION:
+around and towns and vegetation left were a few hundred areas from texas native to mexico.
+
+============================================================================================================================================
+SOURCE:
+lavender flavors baked goods and lrb it pairs especially well with chocolate rrb as well as used to make lavender sugar.
+
+TARGET:
+sometimes they are used in baked goods and chocolate and sometimes they use it to make a very lavender sugar. [end]
+
+PREDICTION:
+sometimes they often connect green with baked goods and a flat topped sometimes used to move e.g. in mountains.

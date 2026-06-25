@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a city in county iowa united states.
+
+TARGET:
+is a city of iowa in the united states. [end]
+
+PREDICTION:
+lrb is an city of iowa rrb county was born when a british painter writer goes to the kansas city.
+
+============================================================================================================================================
+SOURCE:
+the host city to its country s olympic committee if more than one city from the same country a to its the national committee typically holds an
+
+TARGET:
+the process starts when a city to host the games to its country s olympic group. if more than one city from the same country gives a to
+
+PREDICTION:
+at their there is a political event to the central american states of australia but in late may it has many different countries.
+
+============================================================================================================================================
+SOURCE:
+initially to such a major project in was finally to the commission and began work on his saint fran d
+
+TARGET:
+at first he did not want to start such a large work but in he was to the commission and began work on his saint fran d
+
+PREDICTION:
+in there was a large he went to write which his opera would soon work for the name of joseph o and jacques festival probably started by norwegian called
+
+============================================================================================================================================
+SOURCE:
+hurricane karl traveled generally northeast and to a tropical storm as it passed the
+
+TARGET:
+it later became tropical storm karl and then hurricane [end]
+
+PREDICTION:
+quebec below became parts of the th day reached an important western border with winds in november.
+
+============================================================================================================================================
+SOURCE:
+pictures is a christian film production company based in
+
+TARGET:
+pictures is a movie making company based in georgia. [end]
+
+PREDICTION:
+it is the largest part making film in production design
+
+============================================================================================================================================
+SOURCE:
+david had made a royal around after his defeat of of
+
+TARGET:
+david i made a royal around after his defeat of of [end]
+
+PREDICTION:
+he took care of his special idea to have a famous hits and
+
+============================================================================================================================================
+SOURCE:
+bbc radio live sports is an additional digital radio service provided by the bbc via digital radio and the digital satellite digital and digital cable television services in
+
+TARGET:
+bbc radio live sports extra is a digital radio station from the [end]
+
+PREDICTION:
+is many popular radio sports programs related to music digital television as and uk
+
+============================================================================================================================================
+SOURCE:
+the of these territories powers to them by the commonwealth and the commonwealth parliament the power to and to transfer powers to or from the
+
+TARGET:
+the of these territories have powers given to them by the the commonwealth parliament the power to and to give or take [end]
+
+PREDICTION:
+that of these territories powers the commonwealth to all but they also get expected by a committee in their state and thus getting change rrb
+
+============================================================================================================================================
+SOURCE:
+the station is on the victoria line and the london gospel to line in zone and is the least used station on the victoria line million
+
+TARGET:
+the station is on the victoria line and the london gospel to line in [end]
+
+PREDICTION:
+the current station is cross animated lrb disney and inner rock parts with rrb for a hour which produces some windows line from to at least two elizabeth up to.
+
+============================================================================================================================================
+SOURCE:
+the trade with is important above all in
+
+TARGET:
+the trade with is important mainly in [end]
+
+PREDICTION:
+the trade under this theory says it is particularly in which he has also seen to moscow and very often one of any other people that can not be recognized

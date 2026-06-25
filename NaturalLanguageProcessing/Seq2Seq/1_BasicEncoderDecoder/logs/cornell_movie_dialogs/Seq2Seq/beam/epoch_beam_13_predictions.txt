@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+hi, i'm i'm up here for the
+
+TARGET:
+yeah, [end]
+
+PREDICTION:
+i don't think so. this is the first time.
+
+============================================================================================================================================
+SOURCE:
+why were you scared?
+
+TARGET:
+was driving too fast. [end]
+
+PREDICTION:
+oh, nothing. i've never been i didn't know if you'd gotten me into trouble.
+
+============================================================================================================================================
+SOURCE:
+you missed fourth law. real stuff. where were you all afternoon?
+
+TARGET:
+with a crazy man, with come all over my face. [end]
+
+PREDICTION:
+i got a new car.
+
+============================================================================================================================================
+SOURCE:
+would have been nice to catch that game though.
+
+TARGET:
+well hell, i didn't know was gonna hit the home run. [end]
+
+PREDICTION:
+but we don't need to see the doctor. they can get you a few more
+
+============================================================================================================================================
+SOURCE:
+that's what we are, we keep each other on track. prior to this day, we've we've we've we've -- well i can't think of other but we've probably
+
+TARGET:
+[end]
+
+PREDICTION:
+you mean the
+
+============================================================================================================================================
+SOURCE:
+you want to hit the town tonight?
+
+TARGET:
+i mike, it's a [end]
+
+PREDICTION:
+you have to tell me, why don't you? you're just saying it's a bad idea and that i mean the same thing as well get out of your mind.
+
+============================================================================================================================================
+SOURCE:
+no -- that's my coach says you have to do exercise because the are muscle and need to be every time you stretch them, the middle part sets
+
+TARGET:
+you think i got any kind of a voice? [end]
+
+PREDICTION:
+a little evening. may i be
+
+============================================================================================================================================
+SOURCE:
+tell me something claire, that night in was it you or jim that blew up the car and hannah all over town?
+
+TARGET:
+keep counting claire. [end]
+
+PREDICTION:
+yes, i'm very and i've been trying to make a lot more than one of the girls who are well -- but you never let me go for it. i
+
+============================================================================================================================================
+SOURCE:
+oh, don't play it small, charlie. it don't look good on you.
+
+TARGET:
+how do you want me to play it? i'm broke. [end]
+
+PREDICTION:
+i'm not a i don't know what's wrong with you. you're just like that.
+
+============================================================================================================================================
+SOURCE:
+the captain was the and of the minister of police, herr a relationship which, no in the younger promotion.
+
+TARGET:
+your loyalty to me and your service to the has pleased me very well -- and now there is another occasion on which you may make yourself useful to
+
+PREDICTION:
+you know that he

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+aren't you coming to the party tomorrow?
+
+TARGET:
+ne pas à la demain ? [end]
+
+PREDICTION:
+ne viens-tu pas à nous h demain soir.
+
+============================================================================================================================================
+SOURCE:
+my gave me that red shirt.
+
+TARGET:
+mon m'a donné cette chemise rouge. [end]
+
+PREDICTION:
+ma chambre donné me à ce chemise. » content.
+
+============================================================================================================================================
+SOURCE:
+tom drove mary nuts.
+
+TARGET:
+tom a rendu marie folle. [end]
+
+PREDICTION:
+tom a conduit marie pas du temps.
+
+============================================================================================================================================
+SOURCE:
+you and i are friends.
+
+TARGET:
+toi et moi sommes amis. [end]
+
+PREDICTION:
+toi ou moi étions des amis. satisfait.
+
+============================================================================================================================================
+SOURCE:
+if you don't have enough money, i'll lend you
+
+TARGET:
+si tu n'as pas assez d'argent, je t'en [end]
+
+PREDICTION:
+si ça n'ont coûté autant d'argent, voulez-vous ?
+
+============================================================================================================================================
+SOURCE:
+he is no
+
+TARGET:
+il n'est pas idiot. [end]
+
+PREDICTION:
+il n'est sans pas
+
+============================================================================================================================================
+SOURCE:
+is it possible to drink salt water?
+
+TARGET:
+est-il possible de boire de l'eau ? [end]
+
+PREDICTION:
+peut-on a-t-il peur de la chemise noir reste !
+
+============================================================================================================================================
+SOURCE:
+that's easy.
+
+TARGET:
+c'est super facile. [end]
+
+PREDICTION:
+c'est la gros change facile. voilà bien ! chaque nouvel
+
+============================================================================================================================================
+SOURCE:
+are hard to come by with so many people out of work.
+
+TARGET:
+les sont à trouver avec tant de gens au [end]
+
+PREDICTION:
+toutes soyez certaines informations à partir de pendant tout problèmes aussi bien longtemps. ?
+
+============================================================================================================================================
+SOURCE:
+tom wanted to be a
+
+TARGET:
+tom voulait devenir [end]
+
+PREDICTION:
+thomas a été

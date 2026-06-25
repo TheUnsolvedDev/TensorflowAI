@@ -1,0 +1,13 @@
+Using 2 GPU(s)
+/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+ 12%|████████████▍                                                                                              | 23345/200000 [1:22:33<16:27:48,  2.98it/s][34m[1mwandb[0m: Ctrl + C detected. Stopping sweep.
+Step=2500 Loss=0.0000 Return=-194.22 Epsilon=0.820 FPS=3699
+Step=5000 Loss=0.0000 Return=-198.00 Epsilon=0.640 FPS=3699
+Step=7500 Loss=0.0000 Return=-190.47 Epsilon=0.460 FPS=3720
+Step=10000 Loss=0.0000 Return=-239.57 Epsilon=0.280 FPS=3730
+Step=12500 Loss=1.0902 Return=-84.63 Epsilon=0.100 FPS=1311
+Step=15000 Loss=0.9073 Return=-33.75 Epsilon=0.100 FPS=937
+Step=17500 Loss=0.8840 Return=-18.88 Epsilon=0.100 FPS=766
+Step=20000 Loss=0.6111 Return=33.58 Epsilon=0.100 FPS=674
+Step=22500 Loss=0.5281 Return=17.47 Epsilon=0.100 FPS=617

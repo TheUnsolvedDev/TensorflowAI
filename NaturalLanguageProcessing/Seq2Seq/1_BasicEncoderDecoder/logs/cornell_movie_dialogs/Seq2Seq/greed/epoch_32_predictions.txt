@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i don't know what you're looking for, mister, but so we're clear from the start, i'm straight.
+
+TARGET:
+good for you. [end]
+
+PREDICTION:
+tea, have the seat.
+
+============================================================================================================================================
+SOURCE:
+there's another choice.
+
+TARGET:
+what? [end]
+
+PREDICTION:
+there's nothing wrong with it.
+
+============================================================================================================================================
+SOURCE:
+and you stand aside while we drive it in, then shut the launch the boat, and --
+
+TARGET:
+[end]
+
+PREDICTION:
+mmm, i just don't want to be
+
+============================================================================================================================================
+SOURCE:
+i don't want to fight, george.
+
+TARGET:
+i don't want to fight either. look... uh -- i love you. [end]
+
+PREDICTION:
+and yours will be
+
+============================================================================================================================================
+SOURCE:
+yeah. i bet he would.
+
+TARGET:
+old sam stood for somethin', you know? the day that man died they broke the goddamn [end]
+
+PREDICTION:
+i know, i know.
+
+============================================================================================================================================
+SOURCE:
+why does it matter whether you're fat or not...
+
+TARGET:
+because... [end]
+
+PREDICTION:
+-- i am not very careful --
+
+============================================================================================================================================
+SOURCE:
+... please help us, jim... won't let them have... without on whose
+
+TARGET:
+[end]
+
+PREDICTION:
+both.
+
+============================================================================================================================================
+SOURCE:
+so?
+
+TARGET:
+they're [end]
+
+PREDICTION:
+so i can get you to the
+
+============================================================================================================================================
+SOURCE:
+tomorrow collect from del rio -- he's late three weeks. how'd you do last night?
+
+TARGET:
+[end]
+
+PREDICTION:
+i guess i suppose i say... okay,
+
+============================================================================================================================================
+SOURCE:
+i'm not
+
+TARGET:
+you realize what is at [end]
+
+PREDICTION:
+i don't know what you're talking about.

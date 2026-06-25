@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+alternatively the image may be projected onto a rear projection screen often used for continuous automatic display for close
+
+TARGET:
+the image may be onto a rear projection that is used for continuous automatic display for close [end]
+
+PREDICTION:
+if the player has a
+
+============================================================================================================================================
+SOURCE:
+a compact lamp lrb rrb also known as a compact light or energy saving light lrb or less commonly as a compact tube rrb is a type of
+
+TARGET:
+a compact lrb rrb is a type of lrb light rrb designed to fit into the same space as an but with the of a [end]
+
+PREDICTION:
+a is a that is a of a
+
+============================================================================================================================================
+SOURCE:
+the company was founded by charles hyde and david when they opened a general store in iowa in.
+
+TARGET:
+they had opened a general store in iowa in. [end]
+
+PREDICTION:
+the was a in the united states of america.
+
+============================================================================================================================================
+SOURCE:
+it is bordered by the cities of seattle on the west and on the east on the south and on the north and surrounds island.
+
+TARGET:
+seattle is on the west side of the lake lake city and to the north and to the east and to the south. [end]
+
+PREDICTION:
+it is located in the north west of the south of the south of the south of the south of the south of the south of the south of the south of the united states and the
+
+============================================================================================================================================
+SOURCE:
+born in helsinki finland studied horn and composition at the academy in helsinki as well as conducting with
+
+TARGET:
+was born in helsinki finland. he studied at the academy in helsinki learning the french horn composition and conducting. [end]
+
+PREDICTION:
+he was born in
+
+============================================================================================================================================
+SOURCE:
+charles augustus lrb february august rrb lrb nicknamed and the lone eagle rrb was an american author inventor explorer and social activist.
+
+TARGET:
+charles augustus lrb february august rrb known as lucky and the lone eagle was a united states airplane pilot famous for making the first solo non stop flight across the atlantic ocean in. [end]
+
+PREDICTION:
+john lrb born january rrb is a german politician and the current president of the united states.
+
+============================================================================================================================================
+SOURCE:
+did n t record it himself until on his album of the same title.
+
+TARGET:
+costello did n t record it himself until on his album all this beauty. [end]
+
+PREDICTION:
+was a in the match for the wwe championship.
+
+============================================================================================================================================
+SOURCE:
+the journal continued under his wife edith through an agreement with boston university until publication in april.
+
+TARGET:
+review was an american political and literary published from to though it suspended publication between october and december. [end]
+
+PREDICTION:
+the first year later became a in the united states and was a member of the united states and then the first of the united states and the first
+
+============================================================================================================================================
+SOURCE:
+february ndash of hungary lrb d. rrb
+
+TARGET:
+february of hungary lrb died rrb [end]
+
+PREDICTION:
+february
+
+============================================================================================================================================
+SOURCE:
+it is popular to visit to the mineral springs at the base and to drive to the at
+
+TARGET:
+many tourists like to visit the mineral springs at the base and drive to the top of this mountain for [end]
+
+PREDICTION:
+it is the only one of the most important in the world.

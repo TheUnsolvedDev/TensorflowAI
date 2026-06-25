@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he's out.
+
+TARGET:
+i know he's out, but how's he doing? [end]
+
+PREDICTION:
+i don't know what you were
+
+============================================================================================================================================
+SOURCE:
+he's taken over the case because... they're the previous let disappear when he was the only, he was the only suspect in murder.
+
+TARGET:
+e il signor ripley ha il signor [end]
+
+PREDICTION:
+i don't know what you were
+
+============================================================================================================================================
+SOURCE:
+where did this come from?
+
+TARGET:
+my it in the mountain north of while for can you the [end]
+
+PREDICTION:
+i don't know what you were
+
+============================================================================================================================================
+SOURCE:
+sometimes things are than you think. let me ask you a question.
+
+TARGET:
+you don't believe me? [end]
+
+PREDICTION:
+i don't know what you were
+
+============================================================================================================================================
+SOURCE:
+why should you be you were a very person.
+
+TARGET:
+debbie cried a lot. [end]
+
+PREDICTION:
+i don't know what you were
+
+============================================================================================================================================
+SOURCE:
+and you?
+
+TARGET:
+it was a good job. not many ways for a to make money here. me to organize business care of things. [end]
+
+PREDICTION:
+i don't know what you were
+
+============================================================================================================================================
+SOURCE:
+so where are you?
+
+TARGET:
+right here. [end]
+
+PREDICTION:
+i don't know what you were
+
+============================================================================================================================================
+SOURCE:
+what is it? you want to help me, you feel sorry for me? keep it to yourself.
+
+TARGET:
+i need to sit down a minute. [end]
+
+PREDICTION:
+i don't know what you were
+
+============================================================================================================================================
+SOURCE:
+i'm building a larger one to see the of --
+
+TARGET:
+the dirty at its [end]
+
+PREDICTION:
+i don't know what you were
+
+============================================================================================================================================
+SOURCE:
+i'll need system four
+
+TARGET:
+they're back here. [end]
+
+PREDICTION:
+i don't know what you were

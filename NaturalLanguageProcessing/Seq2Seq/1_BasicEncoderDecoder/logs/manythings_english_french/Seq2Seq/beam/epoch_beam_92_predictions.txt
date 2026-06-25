@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'm being aren't i?
+
+TARGET:
+je suis non ? [end]
+
+PREDICTION:
+je suis non ?
+
+============================================================================================================================================
+SOURCE:
+what day is it?
+
+TARGET:
+quel jour sommes-nous ? [end]
+
+PREDICTION:
+quelle de jour, est-ce si tu sens ? n'est-ce une fois.
+
+============================================================================================================================================
+SOURCE:
+tom is a father of three.
+
+TARGET:
+tom est père de trois enfants. [end]
+
+PREDICTION:
+tom attend que un père noël. sont des légumes de voudrais en trop sombre.
+
+============================================================================================================================================
+SOURCE:
+it's a mistake that anyone can make.
+
+TARGET:
+c'est une erreur que tout le monde peut faire. [end]
+
+PREDICTION:
+ça est qu'une chose quiconque pourrait aller envers qui qu'elles le ont terminé. selon elles.
+
+============================================================================================================================================
+SOURCE:
+do you know whose this is?
+
+TARGET:
+savez-vous de quelle il s'agit ? [end]
+
+PREDICTION:
+savez-vous qui est à ce son fait ?
+
+============================================================================================================================================
+SOURCE:
+i stayed home this summer.
+
+TARGET:
+je suis restée chez moi cet été. [end]
+
+PREDICTION:
+hier, j'en ai j'irai là. heures. souvent.
+
+============================================================================================================================================
+SOURCE:
+stop being so
+
+TARGET:
+arrête autant dans le [end]
+
+PREDICTION:
+arrête d'être avec moi. photo pas ! il ne ferait beaucoup de chose.
+
+============================================================================================================================================
+SOURCE:
+i'm not the least bit tired.
+
+TARGET:
+je n'étais pas fatigué le moins du monde. [end]
+
+PREDICTION:
+quant pas du fatigué. peu. « » de quoi. parle. tu peux en avoir ça ? je lui demandais trop. possible. partir. allons
+
+============================================================================================================================================
+SOURCE:
+while waiting for the i was caught in a shower.
+
+TARGET:
+tandis que le j'ai été pris sous une [end]
+
+PREDICTION:
+comme lorsqu'il pris de la place dans une prise j'ai dormi toutes chaussures.
+
+============================================================================================================================================
+SOURCE:
+that's his.
+
+TARGET:
+c'est la [end]
+
+PREDICTION:
+ce est le essayé. ! mary vous y sont trop vu. mère. pas une belle tête.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+take the upstairs.
+
+TARGET:
+les bagages à [end]
+
+PREDICTION:
+les bagages dans les
+
+============================================================================================================================================
+SOURCE:
+the price turned out to be lower than i thought.
+
+TARGET:
+le prix s'est être plus bas que je ne le pensais. [end]
+
+PREDICTION:
+le prix d'un mois que je ne pas.
+
+============================================================================================================================================
+SOURCE:
+could i have money for my piano
+
+TARGET:
+est-ce que je pourrais avoir de l'argent pour ma de piano ? [end]
+
+PREDICTION:
+pourrais-je avoir de l'argent pour ma de piano ?
+
+============================================================================================================================================
+SOURCE:
+you couldn't have picked a better spot.
+
+TARGET:
+vous pas pu choisir de meilleur endroit. [end]
+
+PREDICTION:
+tu n'aurais pas pu choisir de meilleur endroit.
+
+============================================================================================================================================
+SOURCE:
+go home. get some rest.
+
+TARGET:
+rentre chez toi ! prends du ! [end]
+
+PREDICTION:
+sois pas du repos.
+
+============================================================================================================================================
+SOURCE:
+i was completely shocked.
+
+TARGET:
+j'étais totalement [end]
+
+PREDICTION:
+j'étais totalement
+
+============================================================================================================================================
+SOURCE:
+do you remember when you last saw tom?
+
+TARGET:
+vous lorsque vous avez vu tom pour la dernière [end]
+
+PREDICTION:
+tu te souviens de quand tom tu as pris sa rencontre ?
+
+============================================================================================================================================
+SOURCE:
+why didn't you come, then?
+
+TARGET:
+pourquoi n'êtes-vous donc pas venus ? [end]
+
+PREDICTION:
+pourquoi n'es-tu donc pas venue ?
+
+============================================================================================================================================
+SOURCE:
+don't do it again.
+
+TARGET:
+ne le pas ! [end]
+
+PREDICTION:
+ne le pas !
+
+============================================================================================================================================
+SOURCE:
+are we in the same
+
+TARGET:
+sommes-nous dans le même hôtel ? [end]
+
+PREDICTION:
+dans la même ?

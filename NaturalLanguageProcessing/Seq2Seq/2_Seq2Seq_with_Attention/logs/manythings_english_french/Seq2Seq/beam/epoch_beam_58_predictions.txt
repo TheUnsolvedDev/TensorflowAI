@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+something happened.
+
+TARGET:
+quelque chose est [end]
+
+PREDICTION:
+il est vrai qu'il s'est passé. fait.
+
+============================================================================================================================================
+SOURCE:
+my cat is from the heat.
+
+TARGET:
+mon chat souffre de la chaleur. [end]
+
+PREDICTION:
+sa souffre du clair de la terre pour toi.
+
+============================================================================================================================================
+SOURCE:
+i'll never let anything happen to you.
+
+TARGET:
+je ne laisserai jamais rien [end]
+
+PREDICTION:
+j'en jamais.
+
+============================================================================================================================================
+SOURCE:
+this book is a good for
+
+TARGET:
+ce livre est un bon pour les [end]
+
+PREDICTION:
+ce livre bon contre la mère ! merci. bien.
+
+============================================================================================================================================
+SOURCE:
+i don't know if that's possible.
+
+TARGET:
+je ne sais pas si c'est possible. [end]
+
+PREDICTION:
+j'ignore donc tout est possible.
+
+============================================================================================================================================
+SOURCE:
+i'd rather do that tomorrow.
+
+TARGET:
+je préférerais faire ça demain. [end]
+
+PREDICTION:
+je faire ça. après-midi. nous l'as-tu pas. ? une fois
+
+============================================================================================================================================
+SOURCE:
+how do you spell your last name?
+
+TARGET:
+comment votre nom de famille ? [end]
+
+PREDICTION:
+que t'en s'appelle ta classe ?
+
+============================================================================================================================================
+SOURCE:
+you're
+
+TARGET:
+vous êtes [end]
+
+PREDICTION:
+tu es
+
+============================================================================================================================================
+SOURCE:
+why don't we all
+
+TARGET:
+pourquoi ne pas tous ? [end]
+
+PREDICTION:
+pourquoi ne pas tous ?
+
+============================================================================================================================================
+SOURCE:
+don't you think you can handle that?
+
+TARGET:
+tu ne penses pas pouvoir le gérer ? [end]
+
+PREDICTION:
+pensez-vous pas pouvoir s'y ? bon dû te faire couper la tête qui suis d'accord non.

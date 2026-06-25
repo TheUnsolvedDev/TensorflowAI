@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+mario has rescued princess peach multiple times since super mario bros..
+
+TARGET:
+mario has rescued princess peach lots of times since super mario bros.. [end]
+
+PREDICTION:
+in this mario has rescued princess peach lots of times since super mario
+
+============================================================================================================================================
+SOURCE:
+johan lrb hans rrb is a dutch football manager who is the first to coach japan national football team.
+
+TARGET:
+hans lrb born june rrb is a former dutch football player. [end]
+
+PREDICTION:
+is a football manager.
+
+============================================================================================================================================
+SOURCE:
+to stratford calling at cross lock end and tottenham taking minutes.
+
+TARGET:
+call at cross lock end tottenham and downs taking minutes. [end]
+
+PREDICTION:
+to stratford calling at cross lock end and tottenham
+
+============================================================================================================================================
+SOURCE:
+is a commune and the seat of a canton of the d partement of calvados in the basse normandie region of france.
+
+TARGET:
+it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+the playing team consists of six field players and one goalkeeper with a maximum of six
+
+TARGET:
+each team consists of six field players and one [end]
+
+PREDICTION:
+the playing team of the play is a minimum of. basically the six chromosomes awarded lines.
+
+============================================================================================================================================
+SOURCE:
+arena at atl tico s official website the stadium is owned by clube atl tico
+
+TARGET:
+the stadium is owned by atl tico [end]
+
+PREDICTION:
+the arena da is a football stadium and the
+
+============================================================================================================================================
+SOURCE:
+english a major language of the modern world derives its name from the angles and
+
+TARGET:
+and so the name of the major world language english seems to have taken its name from this little region. [end]
+
+PREDICTION:
+the prime numeral conference lrb also considered rrb is a part of the united states where the forces and the roman capture of scottish prime ministers and at the last party represented the
+
+============================================================================================================================================
+SOURCE:
+am is a town in the district of in thuringia germany.
+
+TARGET:
+am is a german ski city in the south of thuringia. [end]
+
+PREDICTION:
+am is a city in the south of thuringia.
+
+============================================================================================================================================
+SOURCE:
+the figures given do not take into account the of used albums. the list takes no account of any kind of copyright activity such as home or the emergence of illegal of digital music in the s or of pirate sales of copied
+
+TARGET:
+the list also does not take into account the of used albums or as the of illegal of digital music. [end]
+
+PREDICTION:
+the other things that do not take into account the of used albums just want to look at the base for
+
+============================================================================================================================================
+SOURCE:
+the palace of versailles lrb or rrb or simply versailles is a royal ch cents teau in versailles the le de france region of france. in french it is known as the ch cents teau de
+
+TARGET:
+the ch cents teau de versailles or simply versailles is a royal castle in versailles france. [end]
+
+PREDICTION:
+the ch cents teau de versailles o n was a poet in versailles france.

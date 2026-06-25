@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+an old man sat next to me on the bus.
+
+TARGET:
+un vieil homme s'est assis à côté de moi dans le bus. [end]
+
+PREDICTION:
+un vieil homme s'est portée assise près sur la direction du bus.
+
+============================================================================================================================================
+SOURCE:
+the town is beautiful.
+
+TARGET:
+la est belle. [end]
+
+PREDICTION:
+la fête ne fait tombe plus.
+
+============================================================================================================================================
+SOURCE:
+i need more power.
+
+TARGET:
+j'ai besoin de plus [end]
+
+PREDICTION:
+j'ai de mieux
+
+============================================================================================================================================
+SOURCE:
+i know the last thing you want to do is help me.
+
+TARGET:
+je sais que la dernière chose que vous vouliez faire est de m'aider. [end]
+
+PREDICTION:
+excusez-moi, quand t'as envie.
+
+============================================================================================================================================
+SOURCE:
+this desk is too heavy to lift.
+
+TARGET:
+ce bureau est trop lourd pour que puisse le [end]
+
+PREDICTION:
+ce bureau est tellement à la cause des pouvais. pas.
+
+============================================================================================================================================
+SOURCE:
+i know what it feels like to be all alone.
+
+TARGET:
+je sais ce que ça fait d'être tout seul. [end]
+
+PREDICTION:
+je sais bien comment on dirait tout seul. !
+
+============================================================================================================================================
+SOURCE:
+i made a snack for us.
+
+TARGET:
+je nous ai préparé un [end]
+
+PREDICTION:
+j'ai demandé
+
+============================================================================================================================================
+SOURCE:
+he was a great musician.
+
+TARGET:
+c'était un grand musicien. [end]
+
+PREDICTION:
+c'était un grand secret. pour mon rhume. de succès.
+
+============================================================================================================================================
+SOURCE:
+tom didn't go very far.
+
+TARGET:
+tom pas bien loin. [end]
+
+PREDICTION:
+thomas n'est blessé depuis le de suite. pas.
+
+============================================================================================================================================
+SOURCE:
+i'm not finished talking to you yet.
+
+TARGET:
+je n'ai pas encore fini de vous parler. [end]
+
+PREDICTION:
+maintenant cela n'a absolument aucun choix. ce soit. »

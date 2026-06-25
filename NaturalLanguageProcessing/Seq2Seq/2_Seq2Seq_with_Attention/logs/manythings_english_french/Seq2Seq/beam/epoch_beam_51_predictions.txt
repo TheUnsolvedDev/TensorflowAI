@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'll give you a lift if you like.
+
+TARGET:
+je vous si vous voulez. [end]
+
+PREDICTION:
+ça te si tu le veux, non bien. heures.
+
+============================================================================================================================================
+SOURCE:
+that's none of your business.
+
+TARGET:
+cela ne vous regarde pas. [end]
+
+PREDICTION:
+ce ne compte guère à tes amis. que ceci
+
+============================================================================================================================================
+SOURCE:
+tom didn't know that he had a secret
+
+TARGET:
+tom ne savait pas qu'il avait un secret. [end]
+
+PREDICTION:
+tom n'a pas voulu qu'il avait une secret sur les autres.
+
+============================================================================================================================================
+SOURCE:
+do you sometimes get
+
+TARGET:
+avez-vous parfois des ? [end]
+
+PREDICTION:
+tu me de changer des légumes ? d'accord vas-tu te plaît.
+
+============================================================================================================================================
+SOURCE:
+i'm
+
+TARGET:
+je suis de travail. [end]
+
+PREDICTION:
+je la tête. bien.
+
+============================================================================================================================================
+SOURCE:
+which side are you on?
+
+TARGET:
+de quel côté es-tu ? [end]
+
+PREDICTION:
+quel côté es-tu ? de
+
+============================================================================================================================================
+SOURCE:
+there's milk in the
+
+TARGET:
+il y a du lait dans le [end]
+
+PREDICTION:
+un peu au sucre la salle de bain.
+
+============================================================================================================================================
+SOURCE:
+who would you like to speak with?
+
+TARGET:
+avec qui vous ? [end]
+
+PREDICTION:
+qu'est-ce qu'il vous voulait faire ?
+
+============================================================================================================================================
+SOURCE:
+my friends dropped by to see me the other day.
+
+TARGET:
+mes amis sont me voir un moment. [end]
+
+PREDICTION:
+mes amis se prendre pour me voir.
+
+============================================================================================================================================
+SOURCE:
+nobody is too old to learn.
+
+TARGET:
+on est jamais trop vieux pour apprendre. [end]
+
+PREDICTION:
+aucun homme n'est vieux à genre de plus.

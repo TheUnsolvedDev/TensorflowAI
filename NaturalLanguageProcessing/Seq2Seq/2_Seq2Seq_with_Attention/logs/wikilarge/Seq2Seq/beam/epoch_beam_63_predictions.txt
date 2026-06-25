@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in he conducted the paris of g by
+
+TARGET:
+in he conducted s g [end]
+
+PREDICTION:
+conducted the concerts of g sharp such as in german era and from to. this was placed years between peter s th century by edward with william s.
+
+============================================================================================================================================
+SOURCE:
+new year s or old year s night is on the final day of the gregorian year and the day before new year s day.
+
+TARGET:
+new year s is the holiday before new year s day on december the last day of the current year. [end]
+
+PREDICTION:
+new years takes a day school in the other year. however it can be on an already of earth and lrb gregorian calendar rrb.
+
+============================================================================================================================================
+SOURCE:
+analysis is widely used for lrb including of time series data rrb.
+
+TARGET:
+can be used for lrb including of time series data rrb and of [end]
+
+PREDICTION:
+a provides use of mind size but mainly data also got to show computer with time technical or middle lrb such as rrb. it can be made for the game.
+
+============================================================================================================================================
+SOURCE:
+the most well known example is finnish architect who would create effects in the of his buildings through the combination of different types and of
+
+TARGET:
+they are made mostly from wood lrb e.g. the various buildings of the university of technology rrb. [end]
+
+PREDICTION:
+surface d plays for reading by and comes in this part where his structures come back up.
+
+============================================================================================================================================
+SOURCE:
+it often results from the break down of in matter in the of oxygen such as in and lrb rrb.
+
+TARGET:
+it often results when bacteria break down organic matter in the of [end]
+
+PREDICTION:
+can find light from the way in things that have their stop for example hot water as it uses some of its natural different kinds above both human and eggs
+
+============================================================================================================================================
+SOURCE:
+the the interior just above the and and stories from the books of and including adam and the tower of and
+
+TARGET:
+the the just above the [end]
+
+PREDICTION:
+is the tower above which only one trees in central lrb rrb about philosophy and so it also wants these books called other ideas such with adam x o. they
+
+============================================================================================================================================
+SOURCE:
+the female angel gave him a of gold and states this was a sign of his future financial
+
+TARGET:
+stated that the female angel gave him a of gold and he received a in terms of financial [end]
+
+PREDICTION:
+angel k told it was a he worked out for her action to be charge master
+
+============================================================================================================================================
+SOURCE:
+ndash american civil war battle of ndash the battle begins with union general fighting toward
+
+TARGET:
+american civil war battle of the battle begins with union general fighting [end]
+
+PREDICTION:
+al s crash allows three main success with continental army while the storm killing part but is also called union general zoo during world war military leading at a member
+
+============================================================================================================================================
+SOURCE:
+the central time zone is the same area the florida ohio michigan most of indiana of great states eastern and northern kentucky eastern and el
+
+TARGET:
+adventure south atlantic states al [end]
+
+PREDICTION:
+these end june the storm s deep sea marine part eastern nintendo land
+
+============================================================================================================================================
+SOURCE:
+some central african republic soldiers in in may back pay and the of president f
+
+TARGET:
+about central african republic soldiers in in may. they wanted back pay and for to be removed from control of the country. [end]
+
+PREDICTION:
+some parts of the province and go back by spanish guinea g l t cents am main km.

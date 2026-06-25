@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+they were murdered.
+
+TARGET:
+quelqu'un les a [end]
+
+PREDICTION:
+on se dirent la clé. dollars. chinoise. me vague de envie dormir.
+
+============================================================================================================================================
+SOURCE:
+i did that without anyone.
+
+TARGET:
+je l'ai fait sans consulter personne. [end]
+
+PREDICTION:
+je l'ai à personne qui se rende compte. avec toi.
+
+============================================================================================================================================
+SOURCE:
+how long will you be staying?
+
+TARGET:
+combien de temps vas-tu rester ? [end]
+
+PREDICTION:
+quel vous restez plus longtemps ? ! de côté. entre nous deux en fait une. »
+
+============================================================================================================================================
+SOURCE:
+i know that you aren't lying.
+
+TARGET:
+je sais que tu ne mens pas. [end]
+
+PREDICTION:
+j'ignore vous savez à mentir. de le cœur. je peux dire un sacré !
+
+============================================================================================================================================
+SOURCE:
+how could tom do such a thing?
+
+TARGET:
+comment tom pourrait-il faire une telle [end]
+
+PREDICTION:
+comment est-ce tom pourrait faire si un seul comme celui-là
+
+============================================================================================================================================
+SOURCE:
+i guess you think you're pretty don't you?
+
+TARGET:
+je que tu penses être plutôt n'est-ce pas ? [end]
+
+PREDICTION:
+suppose qu'une raison de niveau quelconque est-ce qui n'a assez ?
+
+============================================================================================================================================
+SOURCE:
+he wasn't even there.
+
+TARGET:
+il n'y était même pas. [end]
+
+PREDICTION:
+même il ne
+
+============================================================================================================================================
+SOURCE:
+his breathing became faint.
+
+TARGET:
+sa est devenue faible. [end]
+
+PREDICTION:
+contre sa pelouse pour la tennis. »
+
+============================================================================================================================================
+SOURCE:
+i hate the color of these
+
+TARGET:
+je déteste la couleur de ces [end]
+
+PREDICTION:
+j'aime le nom couleur à l'écart
+
+============================================================================================================================================
+SOURCE:
+i can't the distance.
+
+TARGET:
+je ne peux pas la distance. [end]
+
+PREDICTION:
+à des jambes au bon moment.

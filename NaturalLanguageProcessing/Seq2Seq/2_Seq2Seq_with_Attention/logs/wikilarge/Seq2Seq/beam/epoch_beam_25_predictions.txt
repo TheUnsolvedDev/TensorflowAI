@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+australian and often have four square boxes printed in orange at the bottom right for the numbers.
+
+TARGET:
+on and there are often four square boxes printed in orange ink at the bottom right for the numbers. [end]
+
+PREDICTION:
+there are two international boxes called in cuban with four or the local people.
+
+============================================================================================================================================
+SOURCE:
+india were crowned champions after the west indies by runs in the final.
+
+TARGET:
+india an quoted at to win by before the competition began were crowned champions after the west indies by runs in the final. [end]
+
+PREDICTION:
+british columbia canadiens and the green coaches are now owned by joining old rivers besides their whole team. later.
+
+============================================================================================================================================
+SOURCE:
+david villa s nchez lrb born december rrb nicknamed el lrb the kid in rrb is a spanish footballer who currently plays as a striker for fc barcelona and the spanish national football team.
+
+TARGET:
+he plays for fc barcelona and spain national team. [end]
+
+PREDICTION:
+sara s dancer. music for this is or dajab n. because the karen was arranged to only a number of local
+
+============================================================================================================================================
+SOURCE:
+it is the main component of tissue and is the most abundant protein in mammals making up about to of the whole body protein content.
+
+TARGET:
+it is the main component of tissue and is the most abundant protein in mammals. it makes up about to of the whole body protein content. [end]
+
+PREDICTION:
+it is also a at its body protein together. this has to of the amount in their length bodies.
+
+============================================================================================================================================
+SOURCE:
+a prize is a prize usually given in recognition of a performance or last place
+
+TARGET:
+a prize is a prize of low value or a joke prize. it is sometimes given for a terrible performance or last place [end]
+
+PREDICTION:
+many different ways of quick amadeus narnia decide through the entry by a master point in one time.
+
+============================================================================================================================================
+SOURCE:
+the reef is located in the coral sea off the coast of queensland in northeast australia.
+
+TARGET:
+it is located close to the coast of queensland australia. [end]
+
+PREDICTION:
+it is located in great southern australia. the coast of queensland was for that reason the producers would not be called as big enough to begin a car. he traveled away from sydney. after all ages later by being one time and powerful triggered fire also taken on either side or cooling resolution over north east australia per year.
+
+============================================================================================================================================
+SOURCE:
+lrb synonymous with rrb is a clade of mammals the living members of which are rodents and primates lrb including humans rrb.
+
+TARGET:
+lrb with rrb are within it includes the rodents and the [end]
+
+PREDICTION:
+the word is used to eat a part in there were some important influence and franciscan lrb.. rrb yellow inside them on their new life name for humans.
+
+============================================================================================================================================
+SOURCE:
+luis javier garc a lrb born june in barcelona catalonia rrb is a spanish footballer who currently plays racing de santander in the spanish first division mainly as a left winger.
+
+TARGET:
+luis javier garc a lrb born june rrb is a spanish football player. [end]
+
+PREDICTION:
+luis su garc born december lrb rrb are two main english football club.
+
+============================================================================================================================================
+SOURCE:
+chase was awarded the best villain award at the mtv movie awards for her performance beating out mike myers colin willem and daniel day
+
+TARGET:
+chase was awarded the best villain award at the mtv movie awards. [end]
+
+PREDICTION:
+she acted the story of a teen degree during movie and starred tom day
+
+============================================================================================================================================
+SOURCE:
+bo lrb december june rrb was the stage name for bates an american rock and roll vocalist guitarist songwriter and
+
+TARGET:
+in u.s. representative john paid tribute to bo in the united states house of representatives when he described him as one of the true pioneers of rock and roll who has influenced generations. [end]
+
+PREDICTION:
+the lead musician sings and went at a store one album called live from to. there is another name that comes after harrison s old beatles was sold selling multiple men on cars made for their friends being made.

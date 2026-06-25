@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+do you ever get told that you look like someone else?
+
+TARGET:
+est-ce qu'on vous dit parfois que vous à quelqu'un d'autre ? [end]
+
+PREDICTION:
+tu ne me réveillé qui qu'on fait simplement un truc ?
+
+============================================================================================================================================
+SOURCE:
+i'll be there right away.
+
+TARGET:
+je serai là sans [end]
+
+PREDICTION:
+être là
+
+============================================================================================================================================
+SOURCE:
+where can i study french?
+
+TARGET:
+où puis-je étudier le français ? [end]
+
+PREDICTION:
+comment peut-il regarder le français ?
+
+============================================================================================================================================
+SOURCE:
+tom has decided to say yes.
+
+TARGET:
+tom a décidé [end]
+
+PREDICTION:
+tom a décidé de dire.
+
+============================================================================================================================================
+SOURCE:
+when i lived in i took the every day.
+
+TARGET:
+quand à je chaque jour le [end]
+
+PREDICTION:
+quand je me tous pousser une fois où dort avec plus. » c'est de l'autre. prochaine. à appartement il ne te prie. peut-être pas très tôt. devrions questions juste amis.
+
+============================================================================================================================================
+SOURCE:
+i feel like having an ice
+
+TARGET:
+j'ai envie d'une glace. [end]
+
+PREDICTION:
+je veux un bruit ! raisonnable. une vos
+
+============================================================================================================================================
+SOURCE:
+ask anyone.
+
+TARGET:
+demandez à n'importe [end]
+
+PREDICTION:
+à tout simplement ça.
+
+============================================================================================================================================
+SOURCE:
+the climbed the tree.
+
+TARGET:
+à l'arbre. [end]
+
+PREDICTION:
+le ont gardé les prix. du arbre. ses pantalon jeune.
+
+============================================================================================================================================
+SOURCE:
+these flowers aren't only but they smell nice.
+
+TARGET:
+ces fleurs ne sont pas seulement mais également très bon. [end]
+
+PREDICTION:
+ces livres ne sont pas ni bon en train qu'elles déteste n'est-ce aucun bien.
+
+============================================================================================================================================
+SOURCE:
+didn't that seem to you?
+
+TARGET:
+cela ne t'a-t-il pas bizarre ? [end]
+
+PREDICTION:
+cela ne vous enseigne que ça à écrire ! selon toi des gens sont-ils étudiants.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the game has a non and features elements such as trading and two way communication with
+
+TARGET:
+the game has a that the player have a lot of freedom and features features such as and two way with [end]
+
+PREDICTION:
+the game has a non and features elements of with
+
+============================================================================================================================================
+SOURCE:
+in began what was to become his most famous work an of the who had died three years
+
+TARGET:
+in began work on his most famous [end]
+
+PREDICTION:
+in was to become his most famous work an of the
+
+============================================================================================================================================
+SOURCE:
+its main base is john f. kennedy international airport also in
+
+TARGET:
+its home airport is john f. kennedy international [end]
+
+PREDICTION:
+foundation is also in south east of
+
+============================================================================================================================================
+SOURCE:
+has an estimated diameter of km lrb an of. rrb the satellite is red lrb color b v. r v. rrb. unlike which is
+
+TARGET:
+has an estimated diameter of km lrb an of. rrb the moon is red unlike which is [end]
+
+PREDICTION:
+has an estimated diameter of km lrb an of. rrb the average is. earthquake the diameter is red lrb color rrb the visual lrb color rrb or
+
+============================================================================================================================================
+SOURCE:
+she s so is the debut studio album by american pop singer songwriter released in by records lrb see in music rrb.
+
+TARGET:
+she s so unusual is the first solo album by the famous american s pop singer [end]
+
+PREDICTION:
+s so is the debut album by pop singer
+
+============================================================================================================================================
+SOURCE:
+the team then said that although it had its at the final pre season because some parts had not arrived it expected to at the first race of
+
+TARGET:
+the team did not the final pre season not all the parts had [end]
+
+PREDICTION:
+the then said it would have because they had it expected to came out it expected to arrived in at the first race of the first race
+
+============================================================================================================================================
+SOURCE:
+it was built in two major initially to cross in central london and later extended in to in east london.
+
+TARGET:
+it runs from in north london to in east london. [end]
+
+PREDICTION:
+it was built in two major to cross in central london and in to in the inner
+
+============================================================================================================================================
+SOURCE:
+is sometimes taken to be a but have only a small amount of
+
+TARGET:
+or lrb in french rrb is a meat based for [end]
+
+PREDICTION:
+is taken from have only a small amount of
+
+============================================================================================================================================
+SOURCE:
+roman specifically holds that one may build and use as long as the object is not
+
+TARGET:
+one on this comes from roman they hold that may be built and used as long as the object is not [end]
+
+PREDICTION:
+it may build as long as the object is not
+
+============================================================================================================================================
+SOURCE:
+atlantic can be found on both sides of the atlantic ocean.
+
+TARGET:
+it can be found on both sides of the [end]
+
+PREDICTION:
+atlantic can also on both the atlantic ocean.

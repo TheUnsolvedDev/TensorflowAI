@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he has been dead for five years.
+
+TARGET:
+il est mort depuis ans. [end]
+
+PREDICTION:
+la fait qu'il est étrange qu’il ne avaient plus à cinq ans. au cours de
+
+============================================================================================================================================
+SOURCE:
+everybody has something to hide.
+
+TARGET:
+tout le monde a quelque chose à [end]
+
+PREDICTION:
+là chaque choses dont nous sa main.
+
+============================================================================================================================================
+SOURCE:
+too many make you fat.
+
+TARGET:
+trop de te gros. [end]
+
+PREDICTION:
+de choses sont trop désolé ici.
+
+============================================================================================================================================
+SOURCE:
+show us around.
+
+TARGET:
+faire le tour. [end]
+
+PREDICTION:
+vous faire ! en voici un part. cela.
+
+============================================================================================================================================
+SOURCE:
+i'm
+
+TARGET:
+je suis [end]
+
+PREDICTION:
+je me suis à table. clair.
+
+============================================================================================================================================
+SOURCE:
+did tom really
+
+TARGET:
+est-ce que tom a vraiment perdu ? [end]
+
+PREDICTION:
+eu tom ?
+
+============================================================================================================================================
+SOURCE:
+tom's making his bed.
+
+TARGET:
+tom fait son lit. [end]
+
+PREDICTION:
+tom fait ses pieds son qu'il tout de travail.
+
+============================================================================================================================================
+SOURCE:
+is anybody
+
+TARGET:
+quiconque ? [end]
+
+PREDICTION:
+quelqu'un vient de offre ?
+
+============================================================================================================================================
+SOURCE:
+you may choose one of them.
+
+TARGET:
+vous pouvez en choisir un. [end]
+
+PREDICTION:
+tu en es l'une de elles. amoureux. tout. par quoi qu'un allé. vous pouvez déçu.
+
+============================================================================================================================================
+SOURCE:
+where do you suppose you'll spend your vacation?
+
+TARGET:
+où penses-tu que tu tes ? [end]
+
+PREDICTION:
+« pouvez-vous arriver vos vacances ?

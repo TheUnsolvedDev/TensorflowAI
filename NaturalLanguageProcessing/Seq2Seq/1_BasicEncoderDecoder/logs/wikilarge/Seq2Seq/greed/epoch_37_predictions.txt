@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is responsible for deaths most due to on or
+
+TARGET:
+is the cause of deaths most due to on or [end]
+
+PREDICTION:
+deaths almost contact is under cancer on june
+
+============================================================================================================================================
+SOURCE:
+the first line opened to the public on march having cost million to
+
+TARGET:
+the first line opened to the public on march. it cost million to [end]
+
+PREDICTION:
+the first line opened on march and opened on december.
+
+============================================================================================================================================
+SOURCE:
+launched in the brand programming from across the bbc under a brand with each show its own
+
+TARGET:
+bbc is the brand for new music programs across the bbc self signed and other musical primarily from the uk. [end]
+
+PREDICTION:
+originally launched in the brand was made by
+
+============================================================================================================================================
+SOURCE:
+based is a distribution that free
+
+TARGET:
+here is a list about the based is a distribution that only free [end]
+
+PREDICTION:
+free lrb also known as do n t free rrb is a distribution
+
+============================================================================================================================================
+SOURCE:
+because most of these cases became well known in the context of the anti communist s there has been long standing over the of these cases though some of
+
+TARGET:
+there has been much over the of these cases though some of this was settled when project were made these were secret between soviet
+
+PREDICTION:
+since this treaty of resulted in the of the of the of the country.
+
+============================================================================================================================================
+SOURCE:
+that orders were to have head cut off and put on a and his body
+
+TARGET:
+told his men to cut head put it on a and his body. [end]
+
+PREDICTION:
+that were towards space and cut his body and
+
+============================================================================================================================================
+SOURCE:
+has a lrb credited as just at the start rrb is a direct to video animated film produced by the film is regarded
+
+TARGET:
+has a is a direct to video animated sequel to the disney movie and taking place before ! [end]
+
+PREDICTION:
+the movie is a ship
+
+============================================================================================================================================
+SOURCE:
+it then gradually turned to the east passing just north of the on september.
+
+TARGET:
+it passed just north of the as a hurricane on september. [end]
+
+PREDICTION:
+it became the only subtropical cyclone near the on september.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the aube department in north central france.
+
+TARGET:
+is a commune of the aube d partement in the north central part of france. [end]
+
+PREDICTION:
+is a commune of the aube d partement in the north central part of france.
+
+============================================================================================================================================
+SOURCE:
+graham spent the last night of johnson s in the white house and he for the first night of s.
+
+TARGET:
+graham spent the last night of johnson s in the white house. he was also there for the first night of s. [end]
+
+PREDICTION:
+william he became friends with his wife and george

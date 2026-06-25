@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+martin van lrb or december july rrb was the eighth president of the united states from to.
+
+TARGET:
+martin van lrb december july rrb was the eighth president of the united states. [end]
+
+PREDICTION:
+michael van or governor lrb rrb was a member of the american pro law. it lasted until september. on january he had four members that were elected into his world
+
+============================================================================================================================================
+SOURCE:
+the was first on december by a of christian and jean marie for whom it was
+
+TARGET:
+history the was named after jean marie who discovered it on december together with christian and [end]
+
+PREDICTION:
+the current were on april after december and jean paul sang it as a member to make his parents royal of honor benjamin harrison by her first marriage in
+
+============================================================================================================================================
+SOURCE:
+in the center of the stands the lrb rrb.
+
+TARGET:
+the lrb number in the key picture rrb in the middle of the picture is five years old. [end]
+
+PREDICTION:
+after the and in charge of it was a leading example to be an area of.
+
+============================================================================================================================================
+SOURCE:
+starting that same year she also starred in a new fox tv series where she played the main character medical student
+
+TARGET:
+she was also the main character in the series starting that same year she also starred in a new fox tv series [end]
+
+PREDICTION:
+starting in the first fictional female artist she was friends including actor and a tv show called
+
+============================================================================================================================================
+SOURCE:
+the moved to st. louis in becoming the st. louis
+
+TARGET:
+they moved to st. louis missouri in before moving to phoenix in. [end]
+
+PREDICTION:
+they won st. where the first time to reach their position at san diego and on top of that hope again. he also lived in saint louis for his th
+
+============================================================================================================================================
+SOURCE:
+musical content the is divided into four parts to spring summer and winter with the and
+
+TARGET:
+the music the is divided into four parts one for each of the seasons spring summer and [end]
+
+PREDICTION:
+trains games and their use for the spring festival of england.
+
+============================================================================================================================================
+SOURCE:
+through max his gained access to a report from king s college that included information from franklin about the features of dna she had from
+
+TARGET:
+this report included useful information from about features of dna she had from her x ray [end]
+
+PREDICTION:
+in the series gets and talk about people who had bought all out of a group called edward i which was presented by wikipedia community college. it showed that there
+
+============================================================================================================================================
+SOURCE:
+cathedral is famous for the and of its gothic known in england as the early english
+
+TARGET:
+cathedral is famous for the of its gothic [end]
+
+PREDICTION:
+the town is thought to be its most type rule of it was called an early gothic rock in a different parts which are made by english in. he has
+
+============================================================================================================================================
+SOURCE:
+lrb born march in rrb is an italian footballer who plays in the position of striker he plays for serie a side
+
+TARGET:
+lrb born march rrb is an italian football player. [end]
+
+PREDICTION:
+his or born in lrb march is probably best known for italian football rrb classical plays an nfl and european ways from that he joined to as well in. the
+
+============================================================================================================================================
+SOURCE:
+is a city in county kentucky united states.
+
+TARGET:
+is a city of kentucky in the united states. [end]
+
+PREDICTION:
+jordan is a city in county kentucky near the iowa of state

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+when s company performed for the shogun of japan he asked for to have a court education in the arts.
+
+TARGET:
+when s company played for the shogun of japan the shogun offered to let go to school with the princes for his arts. [end]
+
+PREDICTION:
+march nobel prize for education for study in and
+
+============================================================================================================================================
+SOURCE:
+off the north coast of the province some lrb rrb of the del rey archipelago are being developed as tourist resorts principally and
+
+TARGET:
+off the north coast of the province are a string of lrb rrb these islands are being developed as tourist resorts and [end]
+
+PREDICTION:
+the coast of north america is located in the province and is located in the mountains in the
+
+============================================================================================================================================
+SOURCE:
+is a commune in the valley between and in the bouches du rh ne department in the provence alpes c te d azur region in southern france.
+
+TARGET:
+is a commune of people lrb rrb. it is found in the region provence alpes c te d azur in the bouches du rh ne department in the south of france. [end]
+
+PREDICTION:
+it is found in the region provence alpes c te d azur in the bouches du rh ne department in the south of france.
+
+============================================================================================================================================
+SOURCE:
+saint marcel l s is a commune in the ard che department in southern france.
+
+TARGET:
+in jean de was from to create a factory in saint [end]
+
+PREDICTION:
+saint antoine is a commune. it is found in the region aquitaine in the gironde department in the southwest of france.
+
+============================================================================================================================================
+SOURCE:
+since he was co chairman of the left.
+
+TARGET:
+from to he was minister president of the [end]
+
+PREDICTION:
+during the campaign he tried to keep the convention on october.
+
+============================================================================================================================================
+SOURCE:
+a ridge is an elongated region of relatively high atmospheric pressure the opposite of a
+
+TARGET:
+a ridge is a stretched out area of high atmospheric pressure compared to normal recorded it is also the opposite of a [end]
+
+PREDICTION:
+a ridge is a small observatory that is about to measure the eye and is
+
+============================================================================================================================================
+SOURCE:
+john vii byzantine emperor lrb d. rrb
+
+TARGET:
+john vii byzantine emperor lrb died rrb [end]
+
+PREDICTION:
+john vii byzantine emperor lrb c. september rrb was the th dynasty of english empire.
+
+============================================================================================================================================
+SOURCE:
+the major teams in s o paulo are known as trio of iron and s o paulo fc.
+
+TARGET:
+the most important clubs from the city are corinthians and s o paulo. [end]
+
+PREDICTION:
+the major league cup are in the national
+
+============================================================================================================================================
+SOURCE:
+as of software revision lrb r rrb players can also store custom songs and play them on any machine on which this feature is
+
+TARGET:
+in later versions players can also store custom songs and play them on any machine on which this feature is [end]
+
+PREDICTION:
+as a common flash cameras that are used to be designed to do a page but it can be used as a user interface to
+
+============================================================================================================================================
+SOURCE:
+is the season premiere of the third season of american animated television series the
+
+TARGET:
+is the season premiere episode of the simpsons third season. [end]
+
+PREDICTION:
+is the first season of the simpsons episode on the third season of the nickelodeon circuit lrb rrb and

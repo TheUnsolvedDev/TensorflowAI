@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+fireworks lrb devices rrb take many forms to produce the four primary effects light smoke and floating materials lrb for example rrb.
+
+TARGET:
+fireworks lrb devices rrb are made to have these four effects they make noise light smoke and sometimes produce floating materials lrb for example rrb. [end]
+
+PREDICTION:
+the of the are the four main effects light smoke and floating in the
+
+============================================================================================================================================
+SOURCE:
+was invented by scientists on april the ten year invention and du pont research by john k. smith published by the johns hopkins university press after dr. k. bolton of laboratories attended a lecture by
+
+TARGET:
+was invented by scientists after dr. k. of [end]
+
+PREDICTION:
+was invented by and du pont research in the
+
+============================================================================================================================================
+SOURCE:
+jos manuel lrb born january in san sebasti n rrb is a former spanish football goalkeeper.
+
+TARGET:
+jos manuel lrb born january rrb is a former spanish football player. [end]
+
+PREDICTION:
+jos manuel lrb born january rrb is a former spanish football player.
+
+============================================================================================================================================
+SOURCE:
+the film starred matthew in his second major film role and featured ally coleman john wood and barry
+
+TARGET:
+is a film starring matthew and ally and directed by john [end]
+
+PREDICTION:
+the film starred matthew in his second major film role and featured russell john wood and barry
+
+============================================================================================================================================
+SOURCE:
+the klingon language institute exists to promote the language.
+
+TARGET:
+only few people can really speak the klingon language. the klingon language institute helps people learn [end]
+
+PREDICTION:
+the klingon language institute is made of and the
+
+============================================================================================================================================
+SOURCE:
+theology definition and kinds of theology at it is the branch of theology relating to beings who are not gods.
+
+TARGET:
+it is the branch of theology relating to beings or spirits who are not gods. [end]
+
+PREDICTION:
+theology the is the branch of theology relating to
+
+============================================================================================================================================
+SOURCE:
+hip hop magazines have a large place in hip hop and history including the first ever published hip hop publication the hip hop hit list which also contained the very first rap music record chart ever.
+
+TARGET:
+the rap and hip hop music industry has become one of the most successful music [end]
+
+PREDICTION:
+it is the first part of hip hop music video chart since.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the aisne department in picardie in northern france.
+
+TARGET:
+it is found in the region picardie in the aisne department in the north of france. [end]
+
+PREDICTION:
+it is found in the region picardie in the aisne department in the north of france.
+
+============================================================================================================================================
+SOURCE:
+he married christine chapman in the marriage ended in divorce in.
+
+TARGET:
+he married christine chapman in and the marriage ended in divorce in. [end]
+
+PREDICTION:
+he married christine chapman in the marriage ended and she married christine chapman in the marriage ended in divorce in.
+
+============================================================================================================================================
+SOURCE:
+collectively they are the greatest enemies of the series protagonist the time lord known as the
+
+TARGET:
+the daleks were on a postage stamp british popular culture in by lord [end]
+
+PREDICTION:
+they are the greatest enemies of the series and the

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+beethoven s ninth and a new home after only a dozen public performances and barely four years old the philharmonic organized a concert to raise funds to build a new music hall.
+
+TARGET:
+beethoven s ninth and a new home the orchestra were a great success but they needed a new concert hall. [end]
+
+PREDICTION:
+barbirolli was invited and the new york college because some of their first members like all four
+
+============================================================================================================================================
+SOURCE:
+overview it was contested by teams and al sports club won the championship.
+
+TARGET:
+overview it was contested by teams and al won the championship. [end]
+
+PREDICTION:
+overview the next city and teams was lost from zack moment of
+
+============================================================================================================================================
+SOURCE:
+lrb rio june lia march rrb was a brazilian fashion television presenter and politician.
+
+TARGET:
+lrb june march rrb was a brazilian fashion designer television host and politician. [end]
+
+PREDICTION:
+he in rio pat o and sometimes used as junior owner of a korean pay supermarket fortune that could run up to live on other television shows. it will play alongside the events include miami university sports being made for thursday may.
+
+============================================================================================================================================
+SOURCE:
+jos s best known as z s lrb born in s o paulo march rrb is a former football lrb soccer rrb player who played as a striker.
+
+TARGET:
+z s lrb born march rrb is a former brazilian football player. [end]
+
+PREDICTION:
+s full record lrb born rrb are former one of the best club and has two conductors in a popular form since his own independent until. this is won oscar b. when they became new national champion together with roger in. it also had been called bmw x. while winning an f d ration scale internationale l foundation for statistics rrb.
+
+============================================================================================================================================
+SOURCE:
+located in california the animation studio was founded in.
+
+TARGET:
+founded in the company was located in california. [end]
+
+PREDICTION:
+it is a platform movie of
+
+============================================================================================================================================
+SOURCE:
+lily new york times february in he became a secretary to the who gave him the name bal
+
+TARGET:
+guru gave him the name bal [end]
+
+PREDICTION:
+vincent was born to celebrate the link on november in his widow with charles v. duke of saxony and retired from what they became better at their highest known skills. he asked him approach by writing an award for a company in.
+
+============================================================================================================================================
+SOURCE:
+a is a set form of ceremony or pattern of
+
+TARGET:
+a is a special set of done by a group of people as a form of worship. [end]
+
+PREDICTION:
+a or the word flag can be designed for decoration lrb branches and an arrangement of eleven seasons
+
+============================================================================================================================================
+SOURCE:
+lafayette ronald lrb march january rrb was an american science fiction author who developed a self help system called which was first published in.
+
+TARGET:
+lafayette ronald lrb march january rrb was an american fiction writer and creator of [end]
+
+PREDICTION:
+harold robbins or of girlfriend lrb pen commune rrb were an american convicted author a murder critic in several essays and insects.
+
+============================================================================================================================================
+SOURCE:
+the lrb rrb is a species of breeding found in southeastern south korea.
+
+TARGET:
+the salamander is a kind of salamander found in southeastern south korea. [end]
+
+PREDICTION:
+the species of indian seeds. today is widely considered in most forms as one have to increase a pregnancy with an disease that has about cancer.
+
+============================================================================================================================================
+SOURCE:
+the era of the lrb medieval on the rrb ends lrb began rrb.
+
+TARGET:
+the era of the medieval on the ends lrb began rrb. [end]
+
+PREDICTION:
+the era between and in which it was very important when there is no more discussion of its first period from march through use.

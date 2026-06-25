@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+why aren't you at work?
+
+TARGET:
+i've been going over and over my experience last night. it was amazing. i've decided i'm a isn't that the thing? [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+well, you do their at
+
+TARGET:
+yep. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+forget it. that's past.
+
+TARGET:
+no matter what you say to me you are my [end]
+
+PREDICTION:
+what do you think about that?
+
+============================================================================================================================================
+SOURCE:
+i don't know who you are.
+
+TARGET:
+what do you mean? you said you wanted to see me. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+i don't want to hear anymore about it. i'm not going, and that's final. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+24 eight per
+
+TARGET:
+that's and how powerful are they? [end]
+
+PREDICTION:
+very ugly.
+
+============================================================================================================================================
+SOURCE:
+better than you know,
+
+TARGET:
+what're you really after? [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+special deep fried with side it's out
+
+TARGET:
+yeah, well is just a made up name. when they opened back in they were named "the chicken -- that's an early painting of their first
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+you don't the and burning the
+
+TARGET:
+not like that. is of life... of and [end]
+
+PREDICTION:
+i know that
+
+============================================================================================================================================
+SOURCE:
+coming.
+
+TARGET:
+thank god. [end]
+
+PREDICTION:
+aw, come on.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+man knows what he
+
+TARGET:
+lookin' good. [end]
+
+PREDICTION:
+it wasn't to the president. i thought we had a very good time. they said you didn't have any idea of your concern.
+
+============================================================================================================================================
+SOURCE:
+now go over there and get those
+
+TARGET:
+you're money. [end]
+
+PREDICTION:
+if you ever see your old lady
+
+============================================================================================================================================
+SOURCE:
+he's coming, get out now!
+
+TARGET:
+oh, god. i see it! [end]
+
+PREDICTION:
+maybe he'll find him.
+
+============================================================================================================================================
+SOURCE:
+there is one other thing you should know about me.
+
+TARGET:
+nothing you could say would change the way i feel. [end]
+
+PREDICTION:
+it's the best. i never even knew it was. no just let him get out of your room.
+
+============================================================================================================================================
+SOURCE:
+you're gonna hafta learn to deal with it.
+
+TARGET:
+deal! i'm dealing with two guys named [end]
+
+PREDICTION:
+what's the - you have me? that i'm going to tell you, i can't find him.
+
+============================================================================================================================================
+SOURCE:
+yeah ...
+
+TARGET:
+she really like me or were you just making that up. [end]
+
+PREDICTION:
+you don't understand. i'm not
+
+============================================================================================================================================
+SOURCE:
+i... i am but i am not the woman you loved ten years ago.
+
+TARGET:
+yes, you are -- [end]
+
+PREDICTION:
+you never know. but the whole thing's taken over. it's about a very important dinner floor. i don't think this is safe. they understand you're in my life, she's not
+
+============================================================================================================================================
+SOURCE:
+are you referring to the background
+
+TARGET:
+[end]
+
+PREDICTION:
+if i had anything he said - was it
+
+============================================================================================================================================
+SOURCE:
+a passenger over.
+
+TARGET:
+say again. over. [end]
+
+PREDICTION:
+in
+
+============================================================================================================================================
+SOURCE:
+he's in a meeting. could i have him--
+
+TARGET:
+[end]
+
+PREDICTION:
+that's not a good idea. he's got enough and there's one in there.

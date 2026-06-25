@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'm being aren't i?
+
+TARGET:
+je suis non ? [end]
+
+PREDICTION:
+j'ai besoin que ça ne pas, ?
+
+============================================================================================================================================
+SOURCE:
+what day is it?
+
+TARGET:
+quel jour sommes-nous ? [end]
+
+PREDICTION:
+quel jour es-tu ensuite ?
+
+============================================================================================================================================
+SOURCE:
+tom is a father of three.
+
+TARGET:
+tom est père de trois enfants. [end]
+
+PREDICTION:
+tom parle plusieurs années. dans une bibliothèque.
+
+============================================================================================================================================
+SOURCE:
+it's a mistake that anyone can make.
+
+TARGET:
+c'est une erreur que tout le monde peut faire. [end]
+
+PREDICTION:
+c'est idiot que tom.
+
+============================================================================================================================================
+SOURCE:
+do you know whose this is?
+
+TARGET:
+savez-vous de quelle il s'agit ? [end]
+
+PREDICTION:
+sais-tu où tenez compte.
+
+============================================================================================================================================
+SOURCE:
+i stayed home this summer.
+
+TARGET:
+je suis restée chez moi cet été. [end]
+
+PREDICTION:
+j'ai été jeune ce moment comme là.
+
+============================================================================================================================================
+SOURCE:
+stop being so
+
+TARGET:
+arrête autant dans le [end]
+
+PREDICTION:
+arrêtez d'être tant ? ! tout tôt. manière.
+
+============================================================================================================================================
+SOURCE:
+i'm not the least bit tired.
+
+TARGET:
+je n'étais pas fatigué le moins du monde. [end]
+
+PREDICTION:
+ça n'est pas fatigué je soit.
+
+============================================================================================================================================
+SOURCE:
+while waiting for the i was caught in a shower.
+
+TARGET:
+tandis que le j'ai été pris sous une [end]
+
+PREDICTION:
+pour autant le risque que prit dingue.
+
+============================================================================================================================================
+SOURCE:
+that's his.
+
+TARGET:
+c'est la [end]
+
+PREDICTION:
+la est à le prendre.

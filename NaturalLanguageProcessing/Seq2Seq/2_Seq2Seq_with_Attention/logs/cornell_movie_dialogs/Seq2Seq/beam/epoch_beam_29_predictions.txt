@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you going to answer it?
+
+TARGET:
+uh-uh. [end]
+
+PREDICTION:
+yes.
+
+============================================================================================================================================
+SOURCE:
+sure, i guess.
+
+TARGET:
+well there's a few choice in here that some really great old stuff. [end]
+
+PREDICTION:
+well, i'm glad to go home.
+
+============================================================================================================================================
+SOURCE:
+i gotta tell you, it's just luck you guys came when you did. they move us around a we only been at that camp a week. got a smoke?
+
+TARGET:
+no. [end]
+
+PREDICTION:
+a lot of not an old man who remembers her - he had to go with us. and i couldn't help it.
+
+============================================================================================================================================
+SOURCE:
+name your
+
+TARGET:
+if i win, you become my [end]
+
+PREDICTION:
+no, it's just the only thing i know is that i've never done anything like that.
+
+============================================================================================================================================
+SOURCE:
+spare me the details.
+
+TARGET:
+but there's more. wednesday someone played with the in some spotted two cars with d.c. and surprise surprise, they turn out to be registered
+
+PREDICTION:
+he's a she has no control with him now. the best thing is gonna get me to him.
+
+============================================================================================================================================
+SOURCE:
+come on, guys -- we're fighting against evil.
+
+TARGET:
+good or evil, what's the difference? [end]
+
+PREDICTION:
+it certainly is.
+
+============================================================================================================================================
+SOURCE:
+she too?
+
+TARGET:
+without doubt. and plays the she has a natural ear. and her i mention her [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+-
+
+TARGET:
+that's why they're all so big - because he needs a lot of he keeps them alive to them awhile - to loosen their so that - [end]
+
+PREDICTION:
+i think it's a big deal.
+
+============================================================================================================================================
+SOURCE:
+i get the feeling, that you're always around...
+
+TARGET:
+stop it please... [end]
+
+PREDICTION:
+no, not yet. it's the only way, and i don't know if you want me to help out.
+
+============================================================================================================================================
+SOURCE:
+his name's david he's been here twenty years, that's all he says.
+
+TARGET:
+ted, you must remember what the doctor said, the first step on the road to is that you're sick. now take your and you'll be back at the
+
+PREDICTION:
+why?

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+khan lrb rrb born november sometimes credited as shah khan is an indian actor who has been a prominent figure as well as a film producer and television host.
+
+TARGET:
+khan lrb born november rrb is a indian actor. [end]
+
+PREDICTION:
+sir john th lrb born august and died rrb better known is his real estate of the early s. he wrote stories that tell about story between and.
+
+============================================================================================================================================
+SOURCE:
+a number of battles were fought between the british french and danish in the th century and by the end of the th century most of tamil nadu was under british rule.
+
+TARGET:
+finally the british won and by the end of the th century most of the tamil lands came under the british rule. [end]
+
+PREDICTION:
+a group is fought in the th century. it had been important for england since when east germany formed from
+
+============================================================================================================================================
+SOURCE:
+eruptions are marked by columns of gas and volcanic ash extending high into the a high layer of the atmosphere.
+
+TARGET:
+eruptions have columns of gas and volcanic ash high into the [end]
+
+PREDICTION:
+it operates one of the fires phase as a virtual monument called stone and is also built for energy. bus lines are colored red with water systems on it.
+
+============================================================================================================================================
+SOURCE:
+in malaysia s modern life aired in around.
+
+TARGET:
+s modern life is an animated television show that aired on nickelodeon from to. a comic book series also named s modern life was made. [end]
+
+PREDICTION:
+in fact hill owned lrb tokyo rrb. he is the only known employer for a possum and technology more than acres o. they have no further to make up their older personal computer.
+
+============================================================================================================================================
+SOURCE:
+city of originally appeared as an independent it was along with s world and planet of exile in a volume titled three novels and again in with the same novels in worlds of exile and
+
+TARGET:
+city of was in with s world and planet of exile in a set called three novels and in with the same books in worlds of exile and [end]
+
+PREDICTION:
+twenty days after her second book became a wizard kingdom in. in greek history. many people believe that god was born lrb frontier but dark rrb are very similar to the egyptian and of seven human.
+
+============================================================================================================================================
+SOURCE:
+the other featured match on the card was a submission match for the wwf intercontinental championship between reigning champion chris and chris
+
+TARGET:
+chris benoit defeated chris jericho in a submission match to retain the wwf intercontinental championship lrb rrb benoit forced jericho to submit with the [end]
+
+PREDICTION:
+a was the last match in three consecutive nhl circuit.
+
+============================================================================================================================================
+SOURCE:
+they have two sons julius robert bay lrb born october rrb and judah lrb born may rrb who were both born in auckland new zealand.
+
+TARGET:
+lawless and have two sons julius robert bay lrb born october rrb and judah lrb born may rrb both born in [end]
+
+PREDICTION:
+kate reeve also usually editors born on the island and sentenced kelly to go back in jail near greenland lrb sometimes abbreviated for rrb a m i o. this makes italian appearance was taken over by russian soldiers who would have been part of historical goods.
+
+============================================================================================================================================
+SOURCE:
+a lrb sometimes abbreviated c or rrb is a small computer on a single integrated circuit containing a processor core memory and input output
+
+TARGET:
+a lrb abbreviated or c rrb is a high integrated functional computer system on a it contains an integrated processor core memory lrb a small amount of ram program memory or both rrb and input output [end]
+
+PREDICTION:
+a is an integrated circuit. the part of this type has also called windows
+
+============================================================================================================================================
+SOURCE:
+by the s the national parks and wildlife service began managing the site.
+
+TARGET:
+by the s the national parks and wildlife service took over the site. [end]
+
+PREDICTION:
+in the late andrew gave permission of it to develop and developed its own development.
+
+============================================================================================================================================
+SOURCE:
+the southern also known as double australian or two is a large black
+
+TARGET:
+the southern lrb rrb also known as double or two is a large black bird with hard and stiff two red and a big bony on its head called a [end]
+
+PREDICTION:
+the and special types lrb known by a front rrb are called chicken or black extent of its oval but modern use well include in j r which poison ships like birds to be found at least one hundred kilometres away.

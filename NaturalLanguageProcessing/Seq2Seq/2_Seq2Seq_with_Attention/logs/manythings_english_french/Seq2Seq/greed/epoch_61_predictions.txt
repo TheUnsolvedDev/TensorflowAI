@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the park is open to everybody.
+
+TARGET:
+le parc est ouvert à tous. [end]
+
+PREDICTION:
+le parc est ouvert à tous.
+
+============================================================================================================================================
+SOURCE:
+i'll call you as soon as i know.
+
+TARGET:
+je t'appellerai dès que je le sais. [end]
+
+PREDICTION:
+je dès que je sais.
+
+============================================================================================================================================
+SOURCE:
+just think what it could do for you.
+
+TARGET:
+pensez juste à ce que ça pourrait vous ! [end]
+
+PREDICTION:
+à ce que cela pourrait vous
+
+============================================================================================================================================
+SOURCE:
+i study french with tom three times a week.
+
+TARGET:
+j'étudie le français avec tom trois fois par semaine. [end]
+
+PREDICTION:
+j'étudie le français avec trois fois de plus en semaine.
+
+============================================================================================================================================
+SOURCE:
+the police are after you.
+
+TARGET:
+la police est à tes [end]
+
+PREDICTION:
+la police est à tes
+
+============================================================================================================================================
+SOURCE:
+what did they
+
+TARGET:
+à quoi ? [end]
+
+PREDICTION:
+à quoi ?
+
+============================================================================================================================================
+SOURCE:
+he solved the difficult problem easily.
+
+TARGET:
+il a résolu facilement le problème difficile. [end]
+
+PREDICTION:
+il toute difficile à faire.
+
+============================================================================================================================================
+SOURCE:
+you know i'm wrong.
+
+TARGET:
+tu sais que j'ai tort. [end]
+
+PREDICTION:
+vous savez que j'ai tort.
+
+============================================================================================================================================
+SOURCE:
+which is
+
+TARGET:
+lequel est le moins cher ? [end]
+
+PREDICTION:
+lequel est le mieux ?
+
+============================================================================================================================================
+SOURCE:
+everything's back to the way it was.
+
+TARGET:
+tout est comme avant. [end]
+
+PREDICTION:
+tout est

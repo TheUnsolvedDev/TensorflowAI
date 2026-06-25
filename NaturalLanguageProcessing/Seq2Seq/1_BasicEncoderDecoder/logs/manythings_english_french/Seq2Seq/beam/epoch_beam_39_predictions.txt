@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i do not feel sad.
+
+TARGET:
+je ne me sens pas malheureux. [end]
+
+PREDICTION:
+je ne rhume ans. !
+
+============================================================================================================================================
+SOURCE:
+i felt very nervous.
+
+TARGET:
+je me sentais vraiment [end]
+
+PREDICTION:
+je me sentais vraiment en enfant. pas un certain des morts.
+
+============================================================================================================================================
+SOURCE:
+plays an important in language study.
+
+TARGET:
+la joue un important dans des [end]
+
+PREDICTION:
+les japonais joue un visage important en vacances des mois produit. je peux bon.
+
+============================================================================================================================================
+SOURCE:
+that's a lot of money.
+
+TARGET:
+c'est beaucoup d'argent. [end]
+
+PREDICTION:
+ça n'a beaucoup d'argent.
+
+============================================================================================================================================
+SOURCE:
+she is about as tall as me.
+
+TARGET:
+elle est à peu près de la même taille que moi. [end]
+
+PREDICTION:
+son nom bien moins que moi. le bain. tu m'ont chemin. photo. tout grand.
+
+============================================================================================================================================
+SOURCE:
+be
+
+TARGET:
+sois prudente. [end]
+
+PREDICTION:
+sois pas !
+
+============================================================================================================================================
+SOURCE:
+i found a job.
+
+TARGET:
+j'ai trouvé un boulot. [end]
+
+PREDICTION:
+il j'ai trouvé mon travail. heure. peut-être
+
+============================================================================================================================================
+SOURCE:
+experience in this job.
+
+TARGET:
+compte dans ce travail. [end]
+
+PREDICTION:
+a mangé quelque chose qui dans ce travail. tomber.
+
+============================================================================================================================================
+SOURCE:
+i thought that you'd be happy.
+
+TARGET:
+je pensais que vous seriez heureuses. [end]
+
+PREDICTION:
+je pensais que tu serais content.
+
+============================================================================================================================================
+SOURCE:
+her is to become an
+
+TARGET:
+son est de devenir [end]
+
+PREDICTION:
+ses oncle de passer.

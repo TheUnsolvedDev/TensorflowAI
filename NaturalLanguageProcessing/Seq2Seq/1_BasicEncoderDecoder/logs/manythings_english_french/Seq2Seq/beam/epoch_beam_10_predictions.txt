@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i can't give it to you.
+
+TARGET:
+je ne peux pas te la donner. [end]
+
+PREDICTION:
+j'ignore comment vous en aller.
+
+============================================================================================================================================
+SOURCE:
+i'm afraid that you'll get lost.
+
+TARGET:
+je crains que tu te [end]
+
+PREDICTION:
+j'avais bien peur que tu me perdre. arrière.
+
+============================================================================================================================================
+SOURCE:
+i'd like to join you.
+
+TARGET:
+j'aimerais te [end]
+
+PREDICTION:
+je voudrais vous rejoindre
+
+============================================================================================================================================
+SOURCE:
+i presented my ticket at the door.
+
+TARGET:
+j'ai présenté mon billet à la porte. [end]
+
+PREDICTION:
+j’ai offert ma à clef
+
+============================================================================================================================================
+SOURCE:
+the when i touched it.
+
+TARGET:
+le de terre s'est quand je l'ai touché. [end]
+
+PREDICTION:
+une côte peut quand j'ai décidé.
+
+============================================================================================================================================
+SOURCE:
+i'm going to make some coffee. would you like too?
+
+TARGET:
+je vais faire du café. tu en veux aussi ? [end]
+
+PREDICTION:
+je prendrai le meilleur film pour votre enseignant ?
+
+============================================================================================================================================
+SOURCE:
+the doctor checked the patient's
+
+TARGET:
+le médecin a pris le pouls du patient. [end]
+
+PREDICTION:
+le chat bien la télécommande de ski. fermés. bord. à
+
+============================================================================================================================================
+SOURCE:
+thank you in advance for your cooperation.
+
+TARGET:
+merci beaucoup pour votre coopération. [end]
+
+PREDICTION:
+arrêtez pour vous votre coopération. de fait. avec moi.
+
+============================================================================================================================================
+SOURCE:
+i became his friend.
+
+TARGET:
+je suis devenu son ami. [end]
+
+PREDICTION:
+j’ai en mon raison. à la manière.
+
+============================================================================================================================================
+SOURCE:
+i like to sleep on my stomach.
+
+TARGET:
+j'aime dormir sur le ventre. [end]
+
+PREDICTION:
+j'aime dormir à mon de soleil.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+"whose dogs are these?" "they are my
+
+TARGET:
+« à qui appartiennent ces chiens ? » « ils appartiennent à mon voisin. » [end]
+
+PREDICTION:
+« « de gens sont-ils ? » « ils sont mes ? »
+
+============================================================================================================================================
+SOURCE:
+i'm a lot bigger than you are.
+
+TARGET:
+je suis bien plus gros que toi. [end]
+
+PREDICTION:
+je suis beaucoup plus grande que toi.
+
+============================================================================================================================================
+SOURCE:
+who are you working for?
+
+TARGET:
+pour qui travailles-tu ? [end]
+
+PREDICTION:
+avec qui ?
+
+============================================================================================================================================
+SOURCE:
+i'd like a word with you in private.
+
+TARGET:
+j'aimerais avoir un mot avec toi en privé. [end]
+
+PREDICTION:
+j'aimerais un mot avec vous en privé.
+
+============================================================================================================================================
+SOURCE:
+i'm about to lose my mind.
+
+TARGET:
+je suis sur le point de perdre la tête. [end]
+
+PREDICTION:
+je suis à perdre mon conseil.
+
+============================================================================================================================================
+SOURCE:
+that doesn't happen very often.
+
+TARGET:
+cela n'arrive pas très souvent. [end]
+
+PREDICTION:
+ça ne se peut pas très souvent.
+
+============================================================================================================================================
+SOURCE:
+do you have anything hot to drink?
+
+TARGET:
+comme qu'est-ce que vous avez de fort ? [end]
+
+PREDICTION:
+avez-vous quelque chose de particulier à boire ?
+
+============================================================================================================================================
+SOURCE:
+why didn't you do it?
+
+TARGET:
+pourquoi ne l'avez-vous pas fait ? [end]
+
+PREDICTION:
+pourquoi ne l'as-tu pas fait ?
+
+============================================================================================================================================
+SOURCE:
+i have no
+
+TARGET:
+je suis dépourvu [end]
+
+PREDICTION:
+je n'ai pas de
+
+============================================================================================================================================
+SOURCE:
+it stopped raining.
+
+TARGET:
+la pluie s'est arrêtée. [end]
+
+PREDICTION:
+il a arrêté de pleuvoir.

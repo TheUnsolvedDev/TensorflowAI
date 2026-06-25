@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+s music and
+
+TARGET:
+s music has an on and [end]
+
+PREDICTION:
+music and
+
+============================================================================================================================================
+SOURCE:
+the bay of the largest bay in the world forms the northeastern part of the indian ocean.
+
+TARGET:
+the bay of is a it is in the northeastern part of the indian ocean. [end]
+
+PREDICTION:
+the bay of is the oldest development of the atlantic
+
+============================================================================================================================================
+SOURCE:
+born in london he was at school where a fellow was john
+
+TARGET:
+has been given many including fellow of westminster choir college lrb o o rrb fellow of the of church musicians lrb o o rrb. [end]
+
+PREDICTION:
+in london at the school he was to
+
+============================================================================================================================================
+SOURCE:
+the project began to see major contributions after articles in the original english wikipedia and over articles in each of seven other languages had been
+
+TARGET:
+when the simple english wikipedia began the english wikipedia already had articles and seven other in other languages had over [end]
+
+PREDICTION:
+in other english wikipedia was the simple articles of and in several other
+
+============================================================================================================================================
+SOURCE:
+he is also called james the greater to him from james son of who is also known as james the
+
+TARGET:
+saint james lrb rrb became which was abbreviated to [end]
+
+PREDICTION:
+in james ii of
+
+============================================================================================================================================
+SOURCE:
+ndash vietnam war a car in front of the us killing and others.
+
+TARGET:
+vietnam war a car in front of the u.s. in killing and others. [end]
+
+PREDICTION:
+is a of energy
+
+============================================================================================================================================
+SOURCE:
+early life and education was born in massachusetts united states.
+
+TARGET:
+early life and education matthew was born in [end]
+
+PREDICTION:
+california. was born in massachusetts and attended massachusetts united states family.
+
+============================================================================================================================================
+SOURCE:
+originally designed as an in the late s was the foundation for a family of successful space launch now built by united launch
+
+TARGET:
+was a built by the division of general [end]
+
+PREDICTION:
+it was originally designed by the and based in london in.
+
+============================================================================================================================================
+SOURCE:
+lrb born february date of death unknown rrb was brazilian football player.
+
+TARGET:
+lrb born february rrb is a former brazilian football player. [end]
+
+PREDICTION:
+lrb born february rrb is a former brazilian football player.
+
+============================================================================================================================================
+SOURCE:
+lrb born richard lewis august sydney rrb is an australian american songwriter musician and actor.
+
+TARGET:
+lrb real name richard august rrb is an australian musician and actor. [end]
+
+PREDICTION:
+of adams father of chris and

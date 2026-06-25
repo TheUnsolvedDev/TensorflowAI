@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it's new.
+
+TARGET:
+c'est tout nouveau. [end]
+
+PREDICTION:
+la c'est de nouveau. personne. on veut mourir. sois chaise. elle est tellement sûr ! l'autre.
+
+============================================================================================================================================
+SOURCE:
+i'm very happy with my
+
+TARGET:
+je suis très satisfait de mon [end]
+
+PREDICTION:
+mes pommes d'être plus content. de moi d'accord. » aucun c'est l'autre. dans
+
+============================================================================================================================================
+SOURCE:
+it's time to eat.
+
+TARGET:
+c'est l'heure de manger. [end]
+
+PREDICTION:
+à temps ! bien. classe. là l'autre qu'il y
+
+============================================================================================================================================
+SOURCE:
+why are you so
+
+TARGET:
+pourquoi es-tu si sûre de toi ? [end]
+
+PREDICTION:
+pourquoi vous êtes-vous malade aussi ? examen tous ses changé. au lui. des j'espère
+
+============================================================================================================================================
+SOURCE:
+what did you want to talk to me about?
+
+TARGET:
+de quoi m'entretenir ? [end]
+
+PREDICTION:
+combien est-ce où tu parler de moi ?
+
+============================================================================================================================================
+SOURCE:
+all of people came to the
+
+TARGET:
+toutes sortes de gens sont venus à [end]
+
+PREDICTION:
+toute la seule famille est proche à
+
+============================================================================================================================================
+SOURCE:
+who do you think she lives with?
+
+TARGET:
+avec qui crois-tu qu'elle vit ? [end]
+
+PREDICTION:
+avec qui penses-tu qu'elle commence s'assit affaire ? pas bien. sont ils peuvent bien se mettre au cœur. ans.
+
+============================================================================================================================================
+SOURCE:
+she put her on her
+
+TARGET:
+elle posa les sur les [end]
+
+PREDICTION:
+elle a de son mis dans sa chambre. !
+
+============================================================================================================================================
+SOURCE:
+you're the
+
+TARGET:
+tu es la plus [end]
+
+PREDICTION:
+vous n'êtes
+
+============================================================================================================================================
+SOURCE:
+tell me you still love me.
+
+TARGET:
+dis-moi que tu encore. [end]
+
+PREDICTION:
+dites-moi encore.

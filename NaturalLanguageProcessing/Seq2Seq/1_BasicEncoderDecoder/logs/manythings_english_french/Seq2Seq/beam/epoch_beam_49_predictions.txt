@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i know that some of your students don't like you.
+
+TARGET:
+je sais que de tes élèves ne pas. [end]
+
+PREDICTION:
+je peux des élèves plus fort faire. !
+
+============================================================================================================================================
+SOURCE:
+we work together.
+
+TARGET:
+nous travaillons ensemble. [end]
+
+PREDICTION:
+on ferait du plaisir. des étudiants.
+
+============================================================================================================================================
+SOURCE:
+we have lots to do.
+
+TARGET:
+nous avons beaucoup à faire. [end]
+
+PREDICTION:
+notre avons affaire de fait.
+
+============================================================================================================================================
+SOURCE:
+i was really uncomfortable.
+
+TARGET:
+j'étais vraiment mal à l'aise. [end]
+
+PREDICTION:
+j'ai vraiment bien français. l'école. désormais de la façon ! s'il vous plaît. yeux.
+
+============================================================================================================================================
+SOURCE:
+he was absent from the meeting.
+
+TARGET:
+il a été absent de la réunion. [end]
+
+PREDICTION:
+a été absent de midi. il prit une prochaine réunion. toi. leur en train aura bien le travail
+
+============================================================================================================================================
+SOURCE:
+we should have a drink.
+
+TARGET:
+nous devrions boire un verre. [end]
+
+PREDICTION:
+tom devrait avoir un coup de feu.
+
+============================================================================================================================================
+SOURCE:
+i see the same people here all the time.
+
+TARGET:
+je vois toujours les personnes ici. [end]
+
+PREDICTION:
+j'y vois la même maintenant tous. heure. au de nombreux je vous mis retraite. à un nouveau moment.
+
+============================================================================================================================================
+SOURCE:
+it was very different from what i had
+
+TARGET:
+c'était très différent de ce que j'avais [end]
+
+PREDICTION:
+été très réellement partie d'avoir ce choix.
+
+============================================================================================================================================
+SOURCE:
+you'd better not go.
+
+TARGET:
+vous feriez mieux de ne pas vous y rendre. [end]
+
+PREDICTION:
+vous mieux sans vous.
+
+============================================================================================================================================
+SOURCE:
+i was bored with his speech.
+
+TARGET:
+son discours m'a [end]
+
+PREDICTION:
+son nom était

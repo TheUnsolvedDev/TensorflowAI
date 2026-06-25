@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+give the control back to me.
+
+TARGET:
+la [end]
+
+PREDICTION:
+la prochaine somme sur me souvenir avec vous. ceci.
+
+============================================================================================================================================
+SOURCE:
+she started talking with a
+
+TARGET:
+elle s'est mise à parler à un [end]
+
+PREDICTION:
+tout lui a commencé de suite au parler ? sors et d'une certaine
+
+============================================================================================================================================
+SOURCE:
+they can't fire you.
+
+TARGET:
+elles ne peuvent vous [end]
+
+PREDICTION:
+tu ne peux elles éteindre ?
+
+============================================================================================================================================
+SOURCE:
+would you mind down the
+
+TARGET:
+cela vous de baisser la radio ? [end]
+
+PREDICTION:
+pourrais-tu réduire les choses courir hors
+
+============================================================================================================================================
+SOURCE:
+tom is calm.
+
+TARGET:
+tom est tranquille. [end]
+
+PREDICTION:
+tom est calme.
+
+============================================================================================================================================
+SOURCE:
+milk is a popular
+
+TARGET:
+le lait est une boisson [end]
+
+PREDICTION:
+le lait sont de mauvaises
+
+============================================================================================================================================
+SOURCE:
+you're
+
+TARGET:
+tu es incroyable. [end]
+
+PREDICTION:
+on te
+
+============================================================================================================================================
+SOURCE:
+i want to talk to you about this report.
+
+TARGET:
+je veux vous parler au sujet de ce rapport. [end]
+
+PREDICTION:
+je voudrais m'entretenir pour toi à propos d'un bon vélo.
+
+============================================================================================================================================
+SOURCE:
+do you guys drink beer?
+
+TARGET:
+de la bière ? [end]
+
+PREDICTION:
+tu boire bière du ? es-tu en colère à vacances ! d'eau.
+
+============================================================================================================================================
+SOURCE:
+close the door, please.
+
+TARGET:
+je vous prie de fermer la porte. [end]
+
+PREDICTION:
+venez fermer ma s'il vous a plaît.

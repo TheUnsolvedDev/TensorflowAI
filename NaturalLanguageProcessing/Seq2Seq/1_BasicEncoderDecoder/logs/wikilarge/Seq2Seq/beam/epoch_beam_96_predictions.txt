@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+australian and often have four square printed in orange at the bottom right for the
+
+TARGET:
+on and there are often four square printed in orange at the bottom right for the [end]
+
+PREDICTION:
+square and rain has have come in your orange like an open strings or a five parts of both the same yellow
+
+============================================================================================================================================
+SOURCE:
+india were after the west by runs in the
+
+TARGET:
+india an at to win by before the competition began were champions after the west by runs in the [end]
+
+PREDICTION:
+india had been forces used for the daily occupied by access to other states.
+
+============================================================================================================================================
+SOURCE:
+david s lrb born december rrb nicknamed el lrb the in rrb is a spanish footballer who currently plays as a striker for fc barcelona and the
+
+TARGET:
+he plays for and spain national team. [end]
+
+PREDICTION:
+true david knight lrb rrb y and an artist is a national symbol of the spanish formula boy championship in february at number. after coming together he won their second
+
+============================================================================================================================================
+SOURCE:
+it is the main component of and is the most in mammals making up about to of the whole body
+
+TARGET:
+it is the main of and is the most in it makes up about to of the whole body [end]
+
+PREDICTION:
+it is very popular in its most basic work of body
+
+============================================================================================================================================
+SOURCE:
+a prize is a prize usually given in recognition of a performance or last place
+
+TARGET:
+a prize is a prize of low value or a it is sometimes given for a performance or last place [end]
+
+PREDICTION:
+daniel department lrb born in a new country sports event is an association between long os rrb and southern memory are still popular at this time.
+
+============================================================================================================================================
+SOURCE:
+the is located in the sea off the coast of queensland in northeast australia.
+
+TARGET:
+it is located close to the coast of australia. [end]
+
+PREDICTION:
+is the coast town. by scientists during an of metres on australia.
+
+============================================================================================================================================
+SOURCE:
+lrb with rrb is a of mammals the living members of which are and lrb including humans rrb.
+
+TARGET:
+lrb with rrb are within it includes the and the [end]
+
+PREDICTION:
+the is a human which consists mammals lrb rrb of an family or other animals. their way are known as good and others.
+
+============================================================================================================================================
+SOURCE:
+a lrb born june in barcelona rrb is a spanish footballer who currently plays racing de in the spanish first division mainly as a left
+
+TARGET:
+a lrb born june rrb is a spanish football player. [end]
+
+PREDICTION:
+hurricane for the a season of b and spanish played football players have to guerrero when p li de s then major league championship lrb season.
+
+============================================================================================================================================
+SOURCE:
+chase was awarded the best award at the mtv movie awards for her performance out mike and daniel day
+
+TARGET:
+was awarded the best award at the mtv movie [end]
+
+PREDICTION:
+she with matt at the simpson edge of five awards in some bird characters such that stars kevin beat her members are michael hugo and queen s silver won first
+
+============================================================================================================================================
+SOURCE:
+lrb december june rrb was the stage name for an american rock and roll vocalist guitarist songwriter and
+
+TARGET:
+in u.s. john paid to in the united states house of when he described him as one of the true of rock and roll
+
+PREDICTION:
+after he was the second most popular for ireland in france by his wife and name of a year famous black heart red s.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the sandwich consists of an egg processed cheese either bacon or as the and is placed on either a or to it up.
+
+TARGET:
+this is made of an egg processed cheese either bacon or and either a or it has sold well. [end]
+
+PREDICTION:
+it also has with soup fried lrb e.g. meat rrb and is put up into an egg or a rough sugar where there can make the poison of prey.
+
+============================================================================================================================================
+SOURCE:
+since then the frontier moved further west and the mississippi river was as the easternmost possible boundary of the west.
+
+TARGET:
+the mississippi river is often as the easternmost possible boundary of the west. [end]
+
+PREDICTION:
+since then was the easternmost single point from all other states.
+
+============================================================================================================================================
+SOURCE:
+the mountain range forms a barrier between the greater los angeles area and the
+
+TARGET:
+the mountains separate the basin of los angeles in the south from the desert in the north. [end]
+
+PREDICTION:
+the mountain range is about kilometers with a fort bc lrb or river rrb in northern europe. it lived on earth at an ancient city called just for them to make up million to.
+
+============================================================================================================================================
+SOURCE:
+the first was oxford scholar a. c. bradley s essay generally regarded as the starting point for the serious academic approach to jane
+
+TARGET:
+the first was oxford scholar andrew cecil bradley s this essay was generally lrb largely rrb regarded lrb seen rrb as the starting point for the serious academic approach to jane [end]
+
+PREDICTION:
+he published a religious book lrb books about rrb as how things are called bradley prostate vitamin c. evolution.
+
+============================================================================================================================================
+SOURCE:
+the edge of ocean currents can lead to the development of bands due to heat differential at this
+
+TARGET:
+the edge of ocean currents can cause bands due to heat differences where they meet. [end]
+
+PREDICTION:
+the edge. spiral flux or jupiter can also lead into an it has to become a main part for using other elements of this plant.
+
+============================================================================================================================================
+SOURCE:
+not a lot of people were able to find
+
+TARGET:
+not many people were able to find jobs. [end]
+
+PREDICTION:
+some people thought that there are a large amount the majority in his last time on as they got to find heath who wanted rid of them without that. !
+
+============================================================================================================================================
+SOURCE:
+events by place europe lrb the great rrb becomes king of
+
+TARGET:
+events the great becomes king of [end]
+
+PREDICTION:
+events was king to force france lrb great rrb becomes emperor of armenia under romans. who were also worship for claims in spain.
+
+============================================================================================================================================
+SOURCE:
+in he received his bachelor s degree from oxford and shortly thereafter was employed as organist at st. paul s in london.
+
+TARGET:
+in he got a degree from oxford and soon afterwards he became an organist at st. paul s cathedral in london. [end]
+
+PREDICTION:
+worked as both ronald university when they died at saint de florida.
+
+============================================================================================================================================
+SOURCE:
+acid is a phosphorus and a powerful reducing agent with molecular formula h inorganic refer to the free acid by this name lrb also as rrb or the acceptable name of acid.
+
+TARGET:
+acid also known as acid is a chemical compound. [end]
+
+PREDICTION:
+it is also a great resident and one litre based telecommunications made as a.
+
+============================================================================================================================================
+SOURCE:
+the territory s capital is the town of port
+
+TARGET:
+the capital of this territory is the town of port [end]
+
+PREDICTION:
+capital is an old town miles lrb o mi rrb state on december th.

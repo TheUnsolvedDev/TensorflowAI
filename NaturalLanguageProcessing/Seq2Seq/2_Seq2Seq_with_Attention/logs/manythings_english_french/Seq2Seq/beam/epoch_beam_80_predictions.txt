@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+stay here all night if you want.
+
+TARGET:
+restez ici toute la si vous voulez. [end]
+
+PREDICTION:
+ne ici toute une si pas que tu veux, quoi vous marche calme pas. tout ta date prochaine. peut-être je n'est mauvaise bien manière d'où ceci. être.
+
+============================================================================================================================================
+SOURCE:
+they looked as if they would cry.
+
+TARGET:
+ils être sur le point de pleurer. [end]
+
+PREDICTION:
+ils ont dit dehors.
+
+============================================================================================================================================
+SOURCE:
+it wasn't a good experience.
+
+TARGET:
+ce n'était pas une bonne [end]
+
+PREDICTION:
+ce n'était aucune belle bon de sujet. !
+
+============================================================================================================================================
+SOURCE:
+we can meet next week if you want.
+
+TARGET:
+nous pouvons nous rencontrer la semaine si vous voulez. [end]
+
+PREDICTION:
+c'est rencontrer la moins simple nous pourrais-tu chercher.
+
+============================================================================================================================================
+SOURCE:
+eat if you're hungry.
+
+TARGET:
+mange si tu as faim. [end]
+
+PREDICTION:
+venez ici, si t'as raison. ! chaque année.
+
+============================================================================================================================================
+SOURCE:
+she demanded to see the manager.
+
+TARGET:
+elle a de voir le responsable. [end]
+
+PREDICTION:
+elle de faire au courant responsable. tout le public s'est cassé.
+
+============================================================================================================================================
+SOURCE:
+her daughter has what it takes to be a good teacher.
+
+TARGET:
+sa fille a bonne [end]
+
+PREDICTION:
+sa frères y prend bon cœur. bien. d'un poste. mieux. en été qu'un clé elle faut me rendre fin.
+
+============================================================================================================================================
+SOURCE:
+is there something in particular that you want to
+
+TARGET:
+y a-t-il quelque chose de particulier que vous vouliez regarder ? [end]
+
+PREDICTION:
+a-t-on un emploi à qui vous en particulier » vos enfants bien comprendre ? ! type.
+
+============================================================================================================================================
+SOURCE:
+i've been so long i'm starting to smell like my horse.
+
+TARGET:
+je monte depuis tellement de temps que je commence à sentir comme mon cheval. [end]
+
+PREDICTION:
+j’ai passé tant chaud quand je mon temps pour mes affaires. comme ?
+
+============================================================================================================================================
+SOURCE:
+i'll see you in an hour.
+
+TARGET:
+je te verrai dans une heure. [end]
+
+PREDICTION:
+demain, je vous verrai en heure. à soirée.

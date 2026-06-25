@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+help yourselves.
+
+TARGET:
+! [end]
+
+PREDICTION:
+!
+
+============================================================================================================================================
+SOURCE:
+i did it in a couple of days.
+
+TARGET:
+je l'ai en quelques jours. [end]
+
+PREDICTION:
+je l'ai fait dans quelques jours.
+
+============================================================================================================================================
+SOURCE:
+it's quiet.
+
+TARGET:
+c'est silencieux. [end]
+
+PREDICTION:
+c'est calme.
+
+============================================================================================================================================
+SOURCE:
+how did that
+
+TARGET:
+comment cela est-il ? [end]
+
+PREDICTION:
+comment est-ce arrivé ?
+
+============================================================================================================================================
+SOURCE:
+this bag is made from
+
+TARGET:
+ce sac est en [end]
+
+PREDICTION:
+ce sac est à pleine de de
+
+============================================================================================================================================
+SOURCE:
+i wanted tom to help me.
+
+TARGET:
+je voulais que tom [end]
+
+PREDICTION:
+je voulais que tom
+
+============================================================================================================================================
+SOURCE:
+tom got off the train.
+
+TARGET:
+tom est du train. [end]
+
+PREDICTION:
+tom est du train.
+
+============================================================================================================================================
+SOURCE:
+from the sea are
+
+TARGET:
+les de mer sont [end]
+
+PREDICTION:
+les de mer sont
+
+============================================================================================================================================
+SOURCE:
+how come you're not the
+
+TARGET:
+comment se fait-il que vous ne soyez pas la ? [end]
+
+PREDICTION:
+comment se fait-il que vous ne soyez pas le patron ?
+
+============================================================================================================================================
+SOURCE:
+you're
+
+TARGET:
+tu es [end]
+
+PREDICTION:
+vous êtes

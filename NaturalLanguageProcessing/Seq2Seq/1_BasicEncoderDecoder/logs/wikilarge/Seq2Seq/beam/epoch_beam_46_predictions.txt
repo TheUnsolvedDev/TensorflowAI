@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the stadium was designed by and constructed by john at a cost of approximately million million of which was provided by sport england with the by manchester city
+
+TARGET:
+the stadium cost about million. million of that was paid by sport england and the rest was paid by the manchester city [end]
+
+PREDICTION:
+it got the manchester stadium of south african railway on february.
+
+============================================================================================================================================
+SOURCE:
+unlike in the west the revolution did not
+
+TARGET:
+the revolution was the word for many in china [end]
+
+PREDICTION:
+unlike their administrative centre east had a special area
+
+============================================================================================================================================
+SOURCE:
+to this day she is of her for working with the crew of this
+
+TARGET:
+to this day she is of these though she was of the to it. [end]
+
+PREDICTION:
+so in a year award the day of his work about her male and tries to make sure that she can take on it.
+
+============================================================================================================================================
+SOURCE:
+is a village lrb commune rrb in the vaucluse department of the provence alpes c te d azur region in southeastern france.
+
+TARGET:
+is a commune of people lrb rrb. it is located in the region provence alpes c te d azur in the vaucluse department in the south of france. [end]
+
+PREDICTION:
+it s lies located about miles and is one of million from the brazilian business national theatre
+
+============================================================================================================================================
+SOURCE:
+rules of are usually but of have been from time to time.
+
+TARGET:
+it is usually but it may be put in written because they are a product of the society s culture and history the rules of are very different
+
+PREDICTION:
+generally have written to do or more of cases than is full from time lrb rrb and not been selected in most past formal selection which are used as a
+
+============================================================================================================================================
+SOURCE:
+one meaning is a little piece of material that your
+
+TARGET:
+a is a that your [end]
+
+PREDICTION:
+this word was often used as child a material about to the people of talk about. no more than any other.
+
+============================================================================================================================================
+SOURCE:
+mean that increasing speed is becoming more
+
+TARGET:
+in recent years due to speed is getting [end]
+
+PREDICTION:
+tradition that if changes in more will becomes becoming a relatively bad processing because it is very reduced to.
+
+============================================================================================================================================
+SOURCE:
+his control of the sport which grew from his the of television rights in the late s is financial but under the terms of the agreement he and
+
+TARGET:
+he is part owner of the company of the formula one group of [end]
+
+PREDICTION:
+he is the and party of members who started a new role with their rights for his career at first time on june.
+
+============================================================================================================================================
+SOURCE:
+the are green and and distinctive in being and lrb with sometimes but usually rrb.
+
+TARGET:
+the are green and also in being and lrb with lrb rrb rrb. [end]
+
+PREDICTION:
+they are made from and often but green or smaller as well known in these areas. the rest can include a tail of which is different into two parts where
+
+============================================================================================================================================
+SOURCE:
+the play their home games at time warner cable arena in
+
+TARGET:
+the team started playing in and was the second nba team to play in charlotte lrb the new had played in charlotte from to rrb. [end]
+
+PREDICTION:
+they play as home games the county was bought from ground counties in west carolina.

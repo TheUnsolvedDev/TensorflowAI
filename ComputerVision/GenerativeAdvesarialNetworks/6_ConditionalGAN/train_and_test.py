@@ -125,9 +125,9 @@ class WeightSaveCallback(tf.keras.callbacks.Callback):
 class SampleImageCallback(tf.keras.callbacks.Callback):
     def __init__(self, model, log_dir, latent_dim, num_classes, label_mode="onehot", multilabel_dim=None):
         self.model_ref = model
-        self.noise = tf.random.normal([16, latent_dim])
+        self.fixed_noise = np.random.normal(0, 1, (8, latent_dim))
         self.label_mode = label_mode
-
+        self.latent_dim = latent_dim
         base = np.arange(16) % num_classes
 
         if label_mode == "multilabel":
@@ -142,6 +142,11 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         os.makedirs(self.img_dir, exist_ok=True)
 
     def on_epoch_end(self, epoch, logs=None):
+        random_noise = np.random.normal(0, 1, (8, self.latent_dim))
+        self.noise = tf.convert_to_tensor(
+            np.concatenate([self.fixed_noise, random_noise], axis=0),
+            dtype=tf.float32
+        )
         gen = self.model_ref.generator((self.noise, self.labels), training=False)
         gen = ((gen + 1.0) / 2.0).numpy()
 
@@ -282,6 +287,7 @@ def main():
 
     strategy = tf.distribute.MirroredStrategy(
         cross_device_ops=tf.distribute.NcclAllReduce())
+    # train_ds = train_ds
     train_ds = strategy.experimental_distribute_dataset(train_ds)
 
     log_dir = f"logs/{args.type}/CondGAN"

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+to score goals he forced the players to throw a soft shot that had proven effective in his old favorite game duck on a rock.
+
+TARGET:
+to score goals he made players throw a soft shot that he had used in his old favorite game duck on a rock. [end]
+
+PREDICTION:
+to pick a buck the player had to pick up a player to the player s
+
+============================================================================================================================================
+SOURCE:
+a boiling tube is a large cylindrical vessel used to strongly heat substances in the flame of a
+
+TARGET:
+a boiling tube is a large tube made of glass which is used in laboratory to strongly heat substances. [end]
+
+PREDICTION:
+boiling radiation occurs the raised a chemical and engine
+
+============================================================================================================================================
+SOURCE:
+is a commune in the ain department in eastern france.
+
+TARGET:
+it is found in the region rh ne alpes in the ain department in the east of france. [end]
+
+PREDICTION:
+it is found in the region rh ne alpes in the ain department in the east of france.
+
+============================================================================================================================================
+SOURCE:
+during the multinational occupation of post world war ii germany the soviet union blocked the western allies railway and road access to the of berlin under allied control.
+
+TARGET:
+the berlin blockade was from june to may. [end]
+
+PREDICTION:
+the soviet zone became the th and th infantry regiment and then it started the trade between and.
+
+============================================================================================================================================
+SOURCE:
+on march the nevada territory separated from the utah territory and adopted its current name shortened from sierra nevada lrb spanish for snowy range rrb.
+
+TARGET:
+nevada later became an american territory in. it was called the nevada territory. [end]
+
+PREDICTION:
+the volcanoes of the moon is now named after mcgraw hill area.
+
+============================================================================================================================================
+SOURCE:
+geography and climate is located in central south africa on the southern edge of the at an elevation of bordering on the semi arid region of the
+
+TARGET:
+geography is located in central south africa. [end]
+
+PREDICTION:
+geography and south central coast is on the banks of the basin.
+
+============================================================================================================================================
+SOURCE:
+as a martial art is popular with people of both and of many ages.
+
+TARGET:
+as a sport and as an exercise is popular among people of both sexes and many ages. [end]
+
+PREDICTION:
+is a genre of martial arts such as a military religion created by the military.
+
+============================================================================================================================================
+SOURCE:
+protestant translations using murder include the new international version lrb american rrb new american standard bible lrb american rrb new english bible lrb british protestant rrb and the new king james lrb american rrb new revised standard lrb american rrb and english standard lrb american protestant rrb
+
+TARGET:
+english translations using kill include the king james lrb rrb lrb rrb lsb although note matthew do no murder following the non rsb the american standard lrb rrb and revised standard lrb american protestant rrb versions. [end]
+
+PREDICTION:
+the new versions of the new directory company lrb rrb published papers of articles related to the new authors of the united states and the standard of the same name.
+
+============================================================================================================================================
+SOURCE:
+dar es lrb house of peace d r as sal m rrb formerly is the largest city in
+
+TARGET:
+dar es salaam lrb arabic d r as m rrb is the largest city in tanzania. [end]
+
+PREDICTION:
+dar es salaam was the territory s administrative and commercial center of the
+
+============================================================================================================================================
+SOURCE:
+it was invented by charles in although a precursor known as the steam was created by denis in.
+
+TARGET:
+the was invented by charles in. [end]
+
+PREDICTION:
+it was created by the it was changed to in.

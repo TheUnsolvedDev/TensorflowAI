@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i have a test next week.
+
+TARGET:
+j'ai une la semaine prochaine. [end]
+
+PREDICTION:
+j’ai passé mon en avance.
+
+============================================================================================================================================
+SOURCE:
+i'm in the mood for something sweet.
+
+TARGET:
+je prendrais bien quelque chose de là. [end]
+
+PREDICTION:
+j'ai pour manger quelque chose. en sera tout à temps.
+
+============================================================================================================================================
+SOURCE:
+let's let the workers go home early today.
+
+TARGET:
+aujourd'hui, laissons les ouvriers finir plus tôt. [end]
+
+PREDICTION:
+arrêtons des heures sans déjeuner aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+they say that you never get over your first love.
+
+TARGET:
+on dit qu'on ne se jamais de son premier amour. [end]
+
+PREDICTION:
+elles ne disent que on m'ait trouvons autour de la et taille. !
+
+============================================================================================================================================
+SOURCE:
+let me go!
+
+TARGET:
+laisse-moi y aller ! [end]
+
+PREDICTION:
+laisse-moi partir !
+
+============================================================================================================================================
+SOURCE:
+tom wants to be rich.
+
+TARGET:
+tom veut être riche. [end]
+
+PREDICTION:
+tom voulait faire riche.
+
+============================================================================================================================================
+SOURCE:
+it's you who'll make the decision.
+
+TARGET:
+c'est à toi de prendre la décision. [end]
+
+PREDICTION:
+tu es là-bas pour qui le problème. ? en emporté une.
+
+============================================================================================================================================
+SOURCE:
+i wonder if tom is really serious.
+
+TARGET:
+je me demande si tom est vraiment sérieux. [end]
+
+PREDICTION:
+j'ai l'impression de dire que ça n'est vraiment sérieux. » tom.
+
+============================================================================================================================================
+SOURCE:
+i was caught in a shower on my way home from school.
+
+TARGET:
+j'ai été pris sous une en de l'école à la maison. [end]
+
+PREDICTION:
+j'ai eu pris la en vacances sous ma pluie.
+
+============================================================================================================================================
+SOURCE:
+the surgeon the wrong leg.
+
+TARGET:
+le la mauvaise jambe. [end]
+
+PREDICTION:
+les serviettes était à une mauvaise tombée de moi.

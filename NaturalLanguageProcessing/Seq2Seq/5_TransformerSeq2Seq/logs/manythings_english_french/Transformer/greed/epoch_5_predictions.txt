@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+try it once again.
+
+TARGET:
+encore une fois. [end]
+
+PREDICTION:
+un bon !
+
+============================================================================================================================================
+SOURCE:
+tom is also very famous in australia.
+
+TARGET:
+tom est aussi très célèbre en australie. [end]
+
+PREDICTION:
+tom est très très
+
+============================================================================================================================================
+SOURCE:
+there wasn't a seat free on the crowded bus.
+
+TARGET:
+il n'y avait pas une seule place de libre dans le bus bondé. [end]
+
+PREDICTION:
+il n'y a pas un de la
+
+============================================================================================================================================
+SOURCE:
+the jumped out of the water.
+
+TARGET:
+la sauta hors de [end]
+
+PREDICTION:
+le a
+
+============================================================================================================================================
+SOURCE:
+your room is big.
+
+TARGET:
+ta chambre est grande. [end]
+
+PREDICTION:
+votre chat est
+
+============================================================================================================================================
+SOURCE:
+that's very sweet of you.
+
+TARGET:
+c'est très gentil à vous. [end]
+
+PREDICTION:
+c'est très
+
+============================================================================================================================================
+SOURCE:
+i'll help you.
+
+TARGET:
+je vous [end]
+
+PREDICTION:
+je vous
+
+============================================================================================================================================
+SOURCE:
+you have such pretty eyes.
+
+TARGET:
+tu as de si yeux. [end]
+
+PREDICTION:
+tu as assez de
+
+============================================================================================================================================
+SOURCE:
+i forgot i was supposed to bring a bottle of wine.
+
+TARGET:
+j'ai oublié que j'étais supposé apporter une bouteille de vin. [end]
+
+PREDICTION:
+j'ai oublié que je dois être un bon
+
+============================================================================================================================================
+SOURCE:
+i'm not very good at that.
+
+TARGET:
+je ne suis pas très doué pour ça. [end]
+
+PREDICTION:
+je ne suis pas très bon pour ça.

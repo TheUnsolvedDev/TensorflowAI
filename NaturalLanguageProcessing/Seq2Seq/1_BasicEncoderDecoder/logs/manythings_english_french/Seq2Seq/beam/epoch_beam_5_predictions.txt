@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+can you come at
+
+TARGET:
+pouvez-vous passer à heures ? [end]
+
+PREDICTION:
+pouvez-vous venir au zoo de la place ?
+
+============================================================================================================================================
+SOURCE:
+can i talk to you
+
+TARGET:
+est-ce que je peux te parler en privé ? [end]
+
+PREDICTION:
+est-ce à toi de parler, je peux t'en parler ? ! »
+
+============================================================================================================================================
+SOURCE:
+i know it's important to you.
+
+TARGET:
+je sais que c'est important pour toi. [end]
+
+PREDICTION:
+j'en sais que c'est important !
+
+============================================================================================================================================
+SOURCE:
+while up, i bumped into another car and set off its alarm.
+
+TARGET:
+en faisant marche j'ai heurté une autre voiture et déclenché son [end]
+
+PREDICTION:
+si je me il y a dix dans un revenu en arrière d'une jambe.
+
+============================================================================================================================================
+SOURCE:
+what did you get hit with?
+
+TARGET:
+par quoi as-tu été frappée ? [end]
+
+PREDICTION:
+qu'est-ce qu'on vous a frappé avec ? ! » en fait, bonne nature. je suis un point de paix à vue. c'est faim.
+
+============================================================================================================================================
+SOURCE:
+i have to leave early to catch the train.
+
+TARGET:
+je dois partir tôt pour attraper le train. [end]
+
+PREDICTION:
+je prévois de me faire le tour du temps prendre. matinée.
+
+============================================================================================================================================
+SOURCE:
+she tried to persuade him not to decline the offer.
+
+TARGET:
+elle essaya de le convaincre de ne pas refuser l'offre. [end]
+
+PREDICTION:
+il a tenté du convaincre que le n'allait pas.
+
+============================================================================================================================================
+SOURCE:
+what did i say yesterday?
+
+TARGET:
+qu'ai-je dit hier ? [end]
+
+PREDICTION:
+qu'est-ce qu'il a dit hier ?
+
+============================================================================================================================================
+SOURCE:
+which is your pen?
+
+TARGET:
+lequel est ton stylo ? [end]
+
+PREDICTION:
+lequel vient vous ? voici ton père.
+
+============================================================================================================================================
+SOURCE:
+i said i would help you.
+
+TARGET:
+j'ai dit que je [end]
+
+PREDICTION:
+j'ai fait de ce pouvoir me demander. part. !

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+well, she loves children, all right. she loves everybody.
+
+TARGET:
+but that's a wonderful not a bad have a little patience with her. she's such a little thing and tries so hard. [end]
+
+PREDICTION:
+well, he said i would but - a little like an awful thing.
+
+============================================================================================================================================
+SOURCE:
+i don't think you're gonna make it.
+
+TARGET:
+whaddya got your gun ... i got his money... i got everything... [end]
+
+PREDICTION:
+i think you should do that. don't you?
+
+============================================================================================================================================
+SOURCE:
+i'm sorry, i know you're all upset. it's just i'm so excited to be out of the house, i guess. i wonder if home yet.
+
+TARGET:
+i wonder if jimmy's gotten back. [end]
+
+PREDICTION:
+i don't need you anymore. you're the only person you've got. if it doesn't make sense. it's all right.
+
+============================================================================================================================================
+SOURCE:
+smokey told me he left last night to look at some horses in he won't be back for three days. i can't believe he didn't want to say goodbye.
+
+TARGET:
+well... honey... you know... that's just not his way. maybe you can write him a letter or something. say thank you... don't think about it... you take care and i'll see
+
+PREDICTION:
+that's not your problem. you know how to get the money in this house? he's he won't tell me where that little man is. i mean, what does she think
+
+============================================================================================================================================
+SOURCE:
+yes. i was there with ben.
+
+TARGET:
+i know that, mr. [end]
+
+PREDICTION:
+you didn't know what to say.
+
+============================================================================================================================================
+SOURCE:
+a lot of
+
+TARGET:
+not mostly [end]
+
+PREDICTION:
+yes. i was a
+
+============================================================================================================================================
+SOURCE:
+he might tell me about the part of him that wants to help, that feels shame and who wants to be
+
+TARGET:
+this is we're talking about? [end]
+
+PREDICTION:
+he's
+
+============================================================================================================================================
+SOURCE:
+-- he came up behind me and i was a and he just... lifted up my and, you know, right there...
+
+TARGET:
+didn't you have any panties on? [end]
+
+PREDICTION:
+i don't know. you know the story that is what they call you.
+
+============================================================================================================================================
+SOURCE:
+he's going home. he slept over because i was a little
+
+TARGET:
+i want a guard on you. i'm worried about leaving you alone. [end]
+
+PREDICTION:
+what do we do? he won't tell me, mr. i'm not a man, and you're the only reason you haven't got any sense of it, i don't think it's true.
+
+============================================================================================================================================
+SOURCE:
+ever ask him?
+
+TARGET:
+you never ask a a question. no point. he'll never give you a straight answer. general still thinks of himself of the handsome young warrior who loved this country
+
+PREDICTION:
+no.

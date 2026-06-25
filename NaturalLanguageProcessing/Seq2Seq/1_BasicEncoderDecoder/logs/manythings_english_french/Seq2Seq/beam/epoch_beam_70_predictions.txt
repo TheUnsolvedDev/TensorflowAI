@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+stop
+
+TARGET:
+arrête de [end]
+
+PREDICTION:
+cesse de me ! qu'avez-vous dit au fait ? j'essaie déjà qu'il y a payé. possible. »
+
+============================================================================================================================================
+SOURCE:
+i knew it would be easy.
+
+TARGET:
+je savais que cela serait facile. [end]
+
+PREDICTION:
+je savais qu'il serait que ceci simple.
+
+============================================================================================================================================
+SOURCE:
+i'd like to kiss you.
+
+TARGET:
+j'aimerais vous [end]
+
+PREDICTION:
+je voudrais bien toi.
+
+============================================================================================================================================
+SOURCE:
+you have to trust me on this one.
+
+TARGET:
+il faut que tu me fasses confiance sur ce [end]
+
+PREDICTION:
+tu dois me laisser pousser sur la route.
+
+============================================================================================================================================
+SOURCE:
+this is my
+
+TARGET:
+c'est mon [end]
+
+PREDICTION:
+c'est mon frère. ! de sac chez le tien. » cheveux.
+
+============================================================================================================================================
+SOURCE:
+your needs to be
+
+TARGET:
+ton a besoin d'être [end]
+
+PREDICTION:
+votre demande n'a besoin ! es-tu impossible. durant toutes ses été. peut-être y a une nouvelle.
+
+============================================================================================================================================
+SOURCE:
+tom is
+
+TARGET:
+tom n'a pas été blessé. [end]
+
+PREDICTION:
+on manque de force à lui. santé. aucun beaucoup !
+
+============================================================================================================================================
+SOURCE:
+you cannot anything without
+
+TARGET:
+on n'arrive à rien sans [end]
+
+PREDICTION:
+t'en à papa importe mes plait.
+
+============================================================================================================================================
+SOURCE:
+i'm starting to think we'll never be able to do this.
+
+TARGET:
+je commence à penser que nous ne serons jamais de faire ceci. [end]
+
+PREDICTION:
+j'entends moi, je ne devrais jamais penser qu'on ça.
+
+============================================================================================================================================
+SOURCE:
+there was only one left.
+
+TARGET:
+il n'en plus [end]
+
+PREDICTION:
+nous qu'il n'en qu'un côté. pour la vie. !

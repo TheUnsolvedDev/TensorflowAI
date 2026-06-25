@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+lrb or in english o rrb is the of the u.s. states lrb august rrb and is the only u.s. state made up entirely of islands.
+
+TARGET:
+became a state on august. it is the only state made only of islands. [end]
+
+PREDICTION:
+lrb rrb is a of the united states from canada.
+
+============================================================================================================================================
+SOURCE:
+are by one party lrb grant rrb often a government department corporation foundation or to a often lrb but not always rrb a
+
+TARGET:
+this is often a government department a corporation a foundation or to a it is often a or [end]
+
+PREDICTION:
+is a of government or or
+
+============================================================================================================================================
+SOURCE:
+modern also known as lrb german danish angel latin rrb is a small peninsula lrb within the larger peninsula rrb in southern in the northern
+
+TARGET:
+modern lrb danish angel latin which also means in direct translation from latin england rrb is a peninsula in germany. [end]
+
+PREDICTION:
+modern lrb or rrb is a small mountain range in southern it is also known as the
+
+============================================================================================================================================
+SOURCE:
+lrb born march in santa rrb is a former japanese football defender lrb right back rrb.
+
+TARGET:
+lrb born march rrb is a former japanese football player. [end]
+
+PREDICTION:
+lrb born march rrb is a former italian football player.
+
+============================================================================================================================================
+SOURCE:
+period lrb rrb to emperor traditional
+
+TARGET:
+period lrb rrb to emperor brown [end]
+
+PREDICTION:
+period in the era is to slow and
+
+============================================================================================================================================
+SOURCE:
+a is a or in the distribution of main belt with semi major lrb or their period rrb as seen in
+
+TARGET:
+are or in the asteroid belt with semi major lrb or their period rrb as seen in [end]
+
+PREDICTION:
+a is a in the asteroid
+
+============================================================================================================================================
+SOURCE:
+originally built for up to one million inhabitants the city has recently grown way past this
+
+TARGET:
+originally built for up to one million people the city now has many more than one million people. [end]
+
+PREDICTION:
+also originally split up million lrb million rrb this area has one million living records and have
+
+============================================================================================================================================
+SOURCE:
+is a commune in the gironde department in aquitaine in south western france.
+
+TARGET:
+is a commune. it is found in the region aquitaine in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+is a commune. it is found in the region aquitaine in the gironde department in the southwest of france.
+
+============================================================================================================================================
+SOURCE:
+lrb born october rrb is a former british conservative party politician and has been a novelist since.
+
+TARGET:
+lrb born october in england rrb is a former british politician. [end]
+
+PREDICTION:
+lrb born october rrb is a british politician and the current shadow secretary of state for the british commonwealth government.
+
+============================================================================================================================================
+SOURCE:
+the element was not until when william thomas the element by performing on a process previously employed by sir to and
+
+TARGET:
+and sir later used on oxide to the [end]
+
+PREDICTION:
+note to university university in biology in that to an

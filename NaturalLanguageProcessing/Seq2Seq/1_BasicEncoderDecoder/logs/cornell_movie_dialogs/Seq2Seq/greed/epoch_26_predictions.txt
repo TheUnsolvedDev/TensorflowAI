@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+still is, so let yourself out.
+
+TARGET:
+we need to talk. [end]
+
+PREDICTION:
+i guess it was a
+
+============================================================================================================================================
+SOURCE:
+a late night or an early morning?
+
+TARGET:
+late night. you? [end]
+
+PREDICTION:
+to be
+
+============================================================================================================================================
+SOURCE:
+sounds fair.
+
+TARGET:
+what do you get out of it? [end]
+
+PREDICTION:
+yeah.
+
+============================================================================================================================================
+SOURCE:
+oh, i must do more than that. i've brought a present for you.
+
+TARGET:
+then i hope its a beautiful woman with you will never [end]
+
+PREDICTION:
+i am not interested in whether a or not a
+
+============================================================================================================================================
+SOURCE:
+that's my business. harry.
+
+TARGET:
+just curious. back to business. ever heard of a man called [end]
+
+PREDICTION:
+i mean, you know, i don't know.
+
+============================================================================================================================================
+SOURCE:
+yeah. like that.
+
+TARGET:
+good. [end]
+
+PREDICTION:
+i don't know what to say.
+
+============================================================================================================================================
+SOURCE:
+where's he going?
+
+TARGET:
+i don't know... but i think he's pissed. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+it must be on the other side of this.
+
+TARGET:
+but how did the wall get here? [end]
+
+PREDICTION:
+no.
+
+============================================================================================================================================
+SOURCE:
+god i guess i'll have to introduce you now.
+
+TARGET:
+yeah, all right... [end]
+
+PREDICTION:
+oh,
+
+============================================================================================================================================
+SOURCE:
+ray, as your friend i have to tell you i think you've really gone around the bend on this ghost stuff. you've been running your ass off for two years checking out
+
+TARGET:
+what do you mean by [end]
+
+PREDICTION:
+i do.

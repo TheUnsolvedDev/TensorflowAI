@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+monroe wrote in my story that she did not want to meet him a
+
+TARGET:
+monroe wrote in my story that she did not want to meet him because she thought he might be a [end]
+
+PREDICTION:
+monroe wrote in my story that she did not want to meet him a
+
+============================================================================================================================================
+SOURCE:
+the best win prizes and after the parade the of the queen takes place on a temporary stand erected in front of st nicholas church under the statue of william
+
+TARGET:
+there is a statue of wallace on the town church. [end]
+
+PREDICTION:
+the of the queen takes place on a temporary in front of st nicholas
+
+============================================================================================================================================
+SOURCE:
+little else is known regarding their feeding but considering their environment they are likely to be
+
+TARGET:
+little else is known regarding their feeding [end]
+
+PREDICTION:
+little else is known about their feeding but considering their environment they are likely to be
+
+============================================================================================================================================
+SOURCE:
+alongside the internal security service lrb mi rrb the government communications headquarters lrb rrb and the defense intelligence staff lrb rrb it operates under the formal direction of the joint intelligence committee lrb rrb.
+
+TARGET:
+it works with the security service lrb mi rrb government communications headquarters lrb rrb and the defense intelligence staff lrb rrb. [end]
+
+PREDICTION:
+the government communications rules lrb rrb and defense intelligence staff lrb rrb is the basis of the joint intelligence committee lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+the green screen international wildlife film festival is held annually in germany.
+
+TARGET:
+green screen is an international wildlife film festival. [end]
+
+PREDICTION:
+the gothic screen international wildlife film festival is held annually in germany.
+
+============================================================================================================================================
+SOURCE:
+peru and chile signed the treaty of n by which the province is ceded to the latter bringing an end to peru s involvement in the war of the pacific.
+
+TARGET:
+peru s involvement in the war of the pacific. [end]
+
+PREDICTION:
+peru and chile signed an end to peru s involvement in the war of the pacific.
+
+============================================================================================================================================
+SOURCE:
+however different recipes even in the bolognese tradition make use of pork or pork white chicken rabbit or goose liver may be added along with the beef or for special occasions and today many use both butter and olive oil for cooking the of small amounts of and
+
+TARGET:
+for special occasions chicken or goose liver along with today both butter and olive oil are used for cooking the of small amounts of and [end]
+
+PREDICTION:
+the of the italian tradition sauce has often been shown with the for special occasions and the of small amounts of and
+
+============================================================================================================================================
+SOURCE:
+eddie may lrb born august rrb is a scottish association football former player and manager.
+
+TARGET:
+eddie may lrb born august rrb is a former scottish footballer and is now the head coach of [end]
+
+PREDICTION:
+eddie may lrb born august rrb is a former scottish football player.
+
+============================================================================================================================================
+SOURCE:
+in music sharp lrb from french rrb or lrb from greek rrb means higher in pitch and the sharp symbol a note by a half
+
+TARGET:
+in music sharp or means higher in pitch. [end]
+
+PREDICTION:
+in music sharp lrb from french rrb or lrb from french rrb or lrb from rrb or lrb from french rrb or lrb from rrb is a binary note by a half
+
+============================================================================================================================================
+SOURCE:
+e ti is a commune in dolj county romania with a population of people. it has the following constituent villages e ti
+
+TARGET:
+e ti is a commune found in dolj county romania. [end]
+
+PREDICTION:
+e ti is a commune found in dolj county romania.

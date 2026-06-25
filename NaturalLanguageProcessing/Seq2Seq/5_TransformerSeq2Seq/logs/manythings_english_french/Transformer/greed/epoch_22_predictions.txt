@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+tom easily guessed mary's password.
+
+TARGET:
+tom facilement le mot de passe de mary. [end]
+
+PREDICTION:
+tom a facilement compris le mot de mary.
+
+============================================================================================================================================
+SOURCE:
+don't blame the
+
+TARGET:
+ne fais pas reproche au ! [end]
+
+PREDICTION:
+ne pas la
+
+============================================================================================================================================
+SOURCE:
+we all quit.
+
+TARGET:
+nous tous. [end]
+
+PREDICTION:
+nous tous.
+
+============================================================================================================================================
+SOURCE:
+i saw him again.
+
+TARGET:
+je l'ai [end]
+
+PREDICTION:
+je l'ai vu à nouveau.
+
+============================================================================================================================================
+SOURCE:
+how many times have i told you?
+
+TARGET:
+combien de fois te l'ai-je dit ? [end]
+
+PREDICTION:
+combien de fois je vous ai dit ?
+
+============================================================================================================================================
+SOURCE:
+keep the door closed.
+
+TARGET:
+laisse la porte fermée ! [end]
+
+PREDICTION:
+garde la porte fermée.
+
+============================================================================================================================================
+SOURCE:
+get down.
+
+TARGET:
+! [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+you'll be perfect for this.
+
+TARGET:
+vous serez pour ça. [end]
+
+PREDICTION:
+tu seras parfaite pour ça.
+
+============================================================================================================================================
+SOURCE:
+why haven't you gone to the police?
+
+TARGET:
+pourquoi n'êtes-vous pas allée voir la police ? [end]
+
+PREDICTION:
+pourquoi ne êtes-vous pas allé à la police ?
+
+============================================================================================================================================
+SOURCE:
+have they gone?
+
+TARGET:
+sont-ils partis ? [end]
+
+PREDICTION:
+?

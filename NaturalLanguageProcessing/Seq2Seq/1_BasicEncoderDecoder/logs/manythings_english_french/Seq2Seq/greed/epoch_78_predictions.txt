@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+americans admire for his
+
+TARGET:
+les pour son [end]
+
+PREDICTION:
+la
+
+============================================================================================================================================
+SOURCE:
+i seldom drink coffee.
+
+TARGET:
+je bois rarement du café. [end]
+
+PREDICTION:
+je bois rarement de café.
+
+============================================================================================================================================
+SOURCE:
+he is
+
+TARGET:
+il est [end]
+
+PREDICTION:
+il est
+
+============================================================================================================================================
+SOURCE:
+tom spends a lot of time playing
+
+TARGET:
+tom passe beaucoup de temps à jouer au football. [end]
+
+PREDICTION:
+tom passe beaucoup de temps à jouer de
+
+============================================================================================================================================
+SOURCE:
+how do you tell them
+
+TARGET:
+comment les ? [end]
+
+PREDICTION:
+comment les ?
+
+============================================================================================================================================
+SOURCE:
+i feel bad that i haven't paid you yet.
+
+TARGET:
+je me sens mal de ne pas encore t'avoir payé. [end]
+
+PREDICTION:
+je me sens mal de ne pas vous avoir encore
+
+============================================================================================================================================
+SOURCE:
+where did you get the
+
+TARGET:
+où as-tu trouvé les œufs ? [end]
+
+PREDICTION:
+où avez-vous eu le
+
+============================================================================================================================================
+SOURCE:
+this is a misunderstanding.
+
+TARGET:
+c’est un malentendu. [end]
+
+PREDICTION:
+il là malentendu.
+
+============================================================================================================================================
+SOURCE:
+choose books carefully.
+
+TARGET:
+les livres avec [end]
+
+PREDICTION:
+des livres avec
+
+============================================================================================================================================
+SOURCE:
+tom knows where the others i think.
+
+TARGET:
+tom sait où sont les je pense. [end]
+
+PREDICTION:
+tom sait où les mots je pense.

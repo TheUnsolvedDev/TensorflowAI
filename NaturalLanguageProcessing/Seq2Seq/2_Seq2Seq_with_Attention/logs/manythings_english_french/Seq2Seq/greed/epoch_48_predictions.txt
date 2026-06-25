@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he will keep us
+
+TARGET:
+il va nous tenir [end]
+
+PREDICTION:
+il nous à
+
+============================================================================================================================================
+SOURCE:
+how good are you?
+
+TARGET:
+jusqu'à quel point êtes-vous bonnes ? [end]
+
+PREDICTION:
+jusqu'à quel point es-tu bon ?
+
+============================================================================================================================================
+SOURCE:
+tom said he had plenty of friends in boston.
+
+TARGET:
+tom a dit qu'il avait beaucoup d'amis à boston. [end]
+
+PREDICTION:
+tom a dit qu'il avait eu beaucoup de à boston.
+
+============================================================================================================================================
+SOURCE:
+this chair is too small.
+
+TARGET:
+cette chaise est trop [end]
+
+PREDICTION:
+cette chaise est trop
+
+============================================================================================================================================
+SOURCE:
+i made tom laugh.
+
+TARGET:
+j'ai fait rire tom. [end]
+
+PREDICTION:
+j'ai fait rire tom.
+
+============================================================================================================================================
+SOURCE:
+are you trying to me?
+
+TARGET:
+de me ? [end]
+
+PREDICTION:
+est-ce que tu de me ?
+
+============================================================================================================================================
+SOURCE:
+tom is actually not sleeping.
+
+TARGET:
+en fait, tom ne dort pas. [end]
+
+PREDICTION:
+tom n'est pas en train de dormir.
+
+============================================================================================================================================
+SOURCE:
+i received my birthday present.
+
+TARGET:
+j'ai reçu mon cadeau [end]
+
+PREDICTION:
+j'ai reçu mon cadeau
+
+============================================================================================================================================
+SOURCE:
+my were not at you.
+
+TARGET:
+mes ne vous étaient pas [end]
+
+PREDICTION:
+mes ne pas
+
+============================================================================================================================================
+SOURCE:
+i want to go, but i don't have money.
+
+TARGET:
+je veux mais je n'ai pas d'argent. [end]
+
+PREDICTION:
+je veux y mais pas de l'argent.

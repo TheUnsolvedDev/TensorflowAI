@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+fine. [end]
+
+PREDICTION:
+i know the truth. you are a good man.
+
+============================================================================================================================================
+SOURCE:
+you need a i have influence. i could you.
+
+TARGET:
+why would you help me? [end]
+
+PREDICTION:
+i'm a but i don't know how you do to get me into this one.
+
+============================================================================================================================================
+SOURCE:
+you investigating those murders out at the
+
+TARGET:
+uh... [end]
+
+PREDICTION:
+you know that he is going to have any other time with the first one in your way i could do it if you're gonna get a lot more than
+
+============================================================================================================================================
+SOURCE:
+so what do you think?
+
+TARGET:
+but far from [end]
+
+PREDICTION:
+i don't know if you want the
+
+============================================================================================================================================
+SOURCE:
+and
+
+TARGET:
+suppose our is correct? then this be the next danger [end]
+
+PREDICTION:
+what are they doing? i was
+
+============================================================================================================================================
+SOURCE:
+a little too tight, eh? ...they were my only thirteen and already six feet tall. a real boy... i... theres some cold chicken salad in the if youre hungry.
+
+TARGET:
+thank you. but i think ill go to bed. its been a long day. [end]
+
+PREDICTION:
+what do we want you to the last thing i can get in with him?
+
+============================================================================================================================================
+SOURCE:
+worked both sides of the ask your old buddies in the
+
+TARGET:
+jesus. you don't think -- [end]
+
+PREDICTION:
+what do i want is that you got a lot of people to know about your own life, but you're the only one who was going in here for me.
+
+============================================================================================================================================
+SOURCE:
+what happened to all the
+
+TARGET:
+exactly. they drank it all. [end]
+
+PREDICTION:
+i don't know what to say but you can't do anything. i'm not sure it's a lot of money.
+
+============================================================================================================================================
+SOURCE:
+better you hear it from me now than somebody else later.
+
+TARGET:
+business or [end]
+
+PREDICTION:
+you can't be so i don't think it's not going for you.
+
+============================================================================================================================================
+SOURCE:
+i have to address the supreme council in 10 minutes. just the facts, general.
+
+TARGET:
+there are no results from the chemical and analysis as of yet, all the are hoping a [end]
+
+PREDICTION:
+i'm just trying for your money.

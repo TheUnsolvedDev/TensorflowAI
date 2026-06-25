@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+actually,
+
+TARGET:
+do you ever think that maybe, just maybe, other people might be right and you might be wrong? [end]
+
+PREDICTION:
+you know what i mean?
+
+============================================================================================================================================
+SOURCE:
+don't you like that?
+
+TARGET:
+no, no, i love, it's just, thinking you must be so sick of it... well. [end]
+
+PREDICTION:
+i don't know what you're talking about.
+
+============================================================================================================================================
+SOURCE:
+objection! may i remind mr. that the person on trial here is miss lawson -- not dr.
+
+TARGET:
+your honor, i'm trying to establish a pattern in dr. behavior with women. [end]
+
+PREDICTION:
+yes, i did.
+
+============================================================================================================================================
+SOURCE:
+forget him. it's not important. i was trying to make a point.
+
+TARGET:
+this whole thing was a [end]
+
+PREDICTION:
+you didn't say anything about your husband?
+
+============================================================================================================================================
+SOURCE:
+i thought you didn't do secrets.
+
+TARGET:
+i never have before. [end]
+
+PREDICTION:
+yes.
+
+============================================================================================================================================
+SOURCE:
+so, let juice out. never. we're thinking about letting everyone you and your father and mother can stay too.
+
+TARGET:
+mother. [end]
+
+PREDICTION:
+i don't know what you're talking about.
+
+============================================================================================================================================
+SOURCE:
+you all sure are buying a lot of holy water for two people.
+
+TARGET:
+yeah, well we like to get fucked up and do fucked up shit, you know what i mean? [end]
+
+PREDICTION:
+i know.
+
+============================================================================================================================================
+SOURCE:
+you pussy.
+
+TARGET:
+what the money if your dick drops off in six months? [end]
+
+PREDICTION:
+you mean you
+
+============================================================================================================================================
+SOURCE:
+what? i'm not going
+
+TARGET:
+oh yes you are! [end]
+
+PREDICTION:
+you don't have to do this to me.
+
+============================================================================================================================================
+SOURCE:
+i'm not going to leave you alone.
+
+TARGET:
+they're really nice people, ryan. they're like us... [end]
+
+PREDICTION:
+i don't want to be

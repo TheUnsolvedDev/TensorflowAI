@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the island does not have a common name in either english or scottish gaelic and is referred to as lewis and harris lewis with harris harris with lewis etc..
+
+TARGET:
+the island does not have a common name in either english or scottish gaelic and is referred to as lewis and [end]
+
+PREDICTION:
+virginia also means english as lewis and harris j.
+
+============================================================================================================================================
+SOURCE:
+biography early life and family background marcelo h. del was born in of san nicolas on august.
+
+TARGET:
+biography marcelo del was born in lrb now san nicolas on august to parents n del and [end]
+
+PREDICTION:
+early age career marcelo pp. is born at westminster
+
+============================================================================================================================================
+SOURCE:
+in gothic architecture the pointed arch is used in every location where a shape is called for both structural and
+
+TARGET:
+in gothic architecture the pointed arch is used in every place where an arch is needed both for strength and for [end]
+
+PREDICTION:
+a or natural the dinner has an engine also known in each year.
+
+============================================================================================================================================
+SOURCE:
+in white missionaries arrived in to teach the indian children.
+
+TARGET:
+the mission was founded in when white missionaries arrived in to teach native american children. [end]
+
+PREDICTION:
+in a white impact was the last year to teach people who were given all countries during world war ii.
+
+============================================================================================================================================
+SOURCE:
+from its surface jupiter would be an sight in its sky appearing times larger than the full moon.
+
+TARGET:
+on jupiter would be an amazing sight in its sky looking times bigger than the full moon. [end]
+
+PREDICTION:
+from the pressure it is an ambush pen teacher in its direction.
+
+============================================================================================================================================
+SOURCE:
+he to the competing car manufacturers for an agreement where the independent lrb and on the whole weaker rrb teams in formula one would get engine deals than at present.
+
+TARGET:
+he asked to the other car manufacturers for help. he wanted an agreement where the independent teams in formula one would get cheaper engine [end]
+
+PREDICTION:
+at present.
+
+============================================================================================================================================
+SOURCE:
+a few churches make no use of a liturgical calendar.
+
+TARGET:
+a few churches do not use a liturgical calendar. [end]
+
+PREDICTION:
+there is also a big source and pattern of some people make this reason it would not become known as the first part to be one in half of his time.
+
+============================================================================================================================================
+SOURCE:
+s compositions are mainly for the church.
+
+TARGET:
+most of s compositions are for church services. [end]
+
+PREDICTION:
+his musical music include piano songs such as the cathedral in england a big student than one of them in.
+
+============================================================================================================================================
+SOURCE:
+at age upon moving to paris he took private organ lessons with charles whom he assisted at paris until.
+
+TARGET:
+when he was he went to paris and had private organ lessons with charles [end]
+
+PREDICTION:
+he became conductor lrb a music of the festival rrb.
+
+============================================================================================================================================
+SOURCE:
+three other moons orbit between the rings and
+
+TARGET:
+four of neptune s moons and orbit inside the ring system. [end]
+
+PREDICTION:
+there have been three main rings tiles and athena lrb pink rrb with the sun of this in order to make sure that light will not get out into their upper surface. however it can be called a reflection for force or directly changing energy.

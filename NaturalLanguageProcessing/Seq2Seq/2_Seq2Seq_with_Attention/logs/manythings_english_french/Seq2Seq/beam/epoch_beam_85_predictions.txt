@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+tom is still too young to drink beer.
+
+TARGET:
+tom est encore trop jeune pour boire de la bière. [end]
+
+PREDICTION:
+les pommes soit trop jeunes choses sans boire du bière. nécessaire.
+
+============================================================================================================================================
+SOURCE:
+i don't really
+
+TARGET:
+je ne me le rappelle pas vraiment. [end]
+
+PREDICTION:
+je ne vous aime guère bon.
+
+============================================================================================================================================
+SOURCE:
+i'm trying to save tom's life.
+
+TARGET:
+j'essaye de sauver la vie de tom. [end]
+
+PREDICTION:
+j'essaye d'y de tom. et toi. » avant.
+
+============================================================================================================================================
+SOURCE:
+tom says he's been asked to give a speech.
+
+TARGET:
+tom dit qu'il lui a été demandé de faire un discours. [end]
+
+PREDICTION:
+peut-être tom qu'il est allé à un discours. le nom.
+
+============================================================================================================================================
+SOURCE:
+i wanted to say
+
+TARGET:
+je voulais dire merci. [end]
+
+PREDICTION:
+on voulait dire. idée. vue. un crayon !
+
+============================================================================================================================================
+SOURCE:
+he everything in terms of money.
+
+TARGET:
+il voit tout en d'argent. [end]
+
+PREDICTION:
+tout arrive en fait beaucoup de argent.
+
+============================================================================================================================================
+SOURCE:
+tom likes to fish.
+
+TARGET:
+tom aime [end]
+
+PREDICTION:
+tom chante dans les
+
+============================================================================================================================================
+SOURCE:
+i'm sure i'll find a way.
+
+TARGET:
+je suis certain de trouver un [end]
+
+PREDICTION:
+j'y où il se trouve à un comme ça
+
+============================================================================================================================================
+SOURCE:
+i don't know when i should come.
+
+TARGET:
+je ne sais pas quand je devrais venir. [end]
+
+PREDICTION:
+j'ignore quand je devrais venir.
+
+============================================================================================================================================
+SOURCE:
+i know that you don't want to hear what i'm about to say.
+
+TARGET:
+je sais que tu ne veux pas entendre ce que je vais dire. [end]
+
+PREDICTION:
+je sais qu'une riche à entendre quoi j'étais dire. ! ? tu n'en as pas su entendre.

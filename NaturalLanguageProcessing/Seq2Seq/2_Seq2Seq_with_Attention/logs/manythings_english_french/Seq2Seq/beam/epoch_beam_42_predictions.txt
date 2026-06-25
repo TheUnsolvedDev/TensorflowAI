@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i know tom had to do that.
+
+TARGET:
+je sais que tom a dû le faire. [end]
+
+PREDICTION:
+je pense qu'on de faire cela.
+
+============================================================================================================================================
+SOURCE:
+don't trust what he says.
+
+TARGET:
+ne te pas à ce qu'il dit ! [end]
+
+PREDICTION:
+ne rien à quoi il dit.
+
+============================================================================================================================================
+SOURCE:
+i left.
+
+TARGET:
+je [end]
+
+PREDICTION:
+!
+
+============================================================================================================================================
+SOURCE:
+she surprised him with a small gift.
+
+TARGET:
+elle le par un petit cadeau. [end]
+
+PREDICTION:
+j'ai surpris train par un cadeau.
+
+============================================================================================================================================
+SOURCE:
+i'm asking you as a friend.
+
+TARGET:
+je vous le demande en tant [end]
+
+PREDICTION:
+moi en le te vous donne pour un ami.
+
+============================================================================================================================================
+SOURCE:
+i don't want you to change.
+
+TARGET:
+je ne veux pas que vous [end]
+
+PREDICTION:
+tu ne me pas de façon venu. ! à quoi ça vaut jamais je dis pensé que vous.
+
+============================================================================================================================================
+SOURCE:
+you're
+
+TARGET:
+vous êtes [end]
+
+PREDICTION:
+vous
+
+============================================================================================================================================
+SOURCE:
+i'd like an please.
+
+TARGET:
+je voudrais un siège côté s'il vous plaît. [end]
+
+PREDICTION:
+j'aimerais un soir, et j'ai imaginé une libre.
+
+============================================================================================================================================
+SOURCE:
+tom plays tennis three times a week.
+
+TARGET:
+thomas joue au tennis trois fois par semaine. [end]
+
+PREDICTION:
+tom joue au tennis pendant plus une semaine à l'intérieur. chaque fois.
+
+============================================================================================================================================
+SOURCE:
+why don't you shut up?
+
+TARGET:
+pourquoi ne te [end]
+
+PREDICTION:
+comment tu te ne la crois aller ? des pieds.

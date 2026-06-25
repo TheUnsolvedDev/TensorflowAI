@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he was not pleased.
+
+TARGET:
+il ne fut pas content. [end]
+
+PREDICTION:
+son n'as n'a jamais compris. « ça et rien.
+
+============================================================================================================================================
+SOURCE:
+he was to death.
+
+TARGET:
+il fut à mort. [end]
+
+PREDICTION:
+il est mort à ans. du
+
+============================================================================================================================================
+SOURCE:
+you must be very proud of your son.
+
+TARGET:
+tu dois être très fier de ton fils. [end]
+
+PREDICTION:
+tu dois même être réellement de ta chance.
+
+============================================================================================================================================
+SOURCE:
+you look exactly like tom.
+
+TARGET:
+tu pour à tom. [end]
+
+PREDICTION:
+tu es vraiment à tom.
+
+============================================================================================================================================
+SOURCE:
+don't raise your voice.
+
+TARGET:
+pas la voix ! [end]
+
+PREDICTION:
+continuez la réponse !
+
+============================================================================================================================================
+SOURCE:
+i have a feeling i've met her somewhere before.
+
+TARGET:
+j'ai l'impression de l'avoir déjà rencontrée quelque part. [end]
+
+PREDICTION:
+mon corps m'a déjà quelque maison. chanson.
+
+============================================================================================================================================
+SOURCE:
+it's possible.
+
+TARGET:
+c'est possible. [end]
+
+PREDICTION:
+c'est !
+
+============================================================================================================================================
+SOURCE:
+we him
+
+TARGET:
+nous [end]
+
+PREDICTION:
+il que ils les autres en tom.
+
+============================================================================================================================================
+SOURCE:
+i know you want to be rich.
+
+TARGET:
+je sais que vous être riche. [end]
+
+PREDICTION:
+je sais que vous voulez bien être intelligent.
+
+============================================================================================================================================
+SOURCE:
+i find this difficult to
+
+TARGET:
+je trouve ceci difficile à croire. [end]
+
+PREDICTION:
+je trouve ce difficile à croire.

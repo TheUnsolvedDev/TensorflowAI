@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+james lrb born june rrb best known as is an english actor voice artist comedian writer musician and
+
+TARGET:
+james is an english actor musician and writer who was born on june in [end]
+
+PREDICTION:
+james lrb born june rrb. better called the nickname visited game captain as learned how long animal is an english actor.
+
+============================================================================================================================================
+SOURCE:
+is a town of c. inhabitants in northern italy north of milan the capital of the province of
+
+TARGET:
+is in the region with a population of. [end]
+
+PREDICTION:
+district lrb n pyr to short politics community situated at the living population of st. henry in mountains about west france during a height where it was forced part dedicated
+
+============================================================================================================================================
+SOURCE:
+is a commune in the mayenne department in north western france.
+
+TARGET:
+is a commune of people lrb rrb. it is found in the region pays de la loire in the mayenne department in the northwest of france. [end]
+
+PREDICTION:
+it or is the letter du in moscow and french professional show format from.
+
+============================================================================================================================================
+SOURCE:
+point to the explorer s to as the for today s sea based in that region.
+
+TARGET:
+from explorer in the early hours of november after taking on water near the south islands in the southern ocean which is usually but was at
+
+PREDICTION:
+chile the national winds and south of its border runs
+
+============================================================================================================================================
+SOURCE:
+is also the star of the series to death where he plays an himself on
+
+TARGET:
+is currently in the band records formerly he was a member of the rock band [end]
+
+PREDICTION:
+he is a star of the cartoon character next time where dr. tv plays well and played learning his two songs include friedrich harrison playing with both other books but
+
+============================================================================================================================================
+SOURCE:
+at the present time both of california s and are
+
+TARGET:
+california is represented by two and [end]
+
+PREDICTION:
+may be used by a very big effect for example in cloud lrb the theory makes up part stage rrb.
+
+============================================================================================================================================
+SOURCE:
+the first match of the saw jack the ecw championship against matt
+
+TARGET:
+the first match of the night had jack fight matt hardy for the ecw championship. [end]
+
+PREDICTION:
+first match of the shows jack von artist who is also very used. one will be sold on four main events at night and japanese safety king german federal supreme
+
+============================================================================================================================================
+SOURCE:
+according to the reading his voice loss was due to and could be by increasing the blood flow to the voice
+
+TARGET:
+in the reading said his voice loss was because of and that could be fixed by the blood flow to the voice [end]
+
+PREDICTION:
+seen in a character the voice was during to though saying that anything an roll lrb or as rrb will be very common for his visual save of this is
+
+============================================================================================================================================
+SOURCE:
+is a member institution of the state university system of florida and is currently the largest university in the state and the third largest university in the united states by
+
+TARGET:
+sometimes the university of central name is shortened to [end]
+
+PREDICTION:
+the university is an award given at this time switzerland and close johnson in florida.
+
+============================================================================================================================================
+SOURCE:
+james was a local so instruments were made available to
+
+TARGET:
+his father was a local so instruments were made available to him at am early age. [end]
+
+PREDICTION:
+the music lrb also called late in french and z instruments were used must attack a blue musical give extra contact with standard high o or other types

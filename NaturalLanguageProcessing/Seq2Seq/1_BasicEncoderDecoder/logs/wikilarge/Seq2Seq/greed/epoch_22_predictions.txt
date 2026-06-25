@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+john ii duke of bourbon lrb d. rrb
+
+TARGET:
+john ii duke of bourbon lrb died rrb [end]
+
+PREDICTION:
+john ii duke of bourbon lrb died rrb
+
+============================================================================================================================================
+SOURCE:
+the small island of about in area forms part of italy s tuscan archipelago.
+
+TARGET:
+is a small lrb about km rrb island in italy s archipelago. [end]
+
+PREDICTION:
+the south of is about and
+
+============================================================================================================================================
+SOURCE:
+on the south side it is accessible from northwest of c
+
+TARGET:
+the closest is victoria on the north side. [end]
+
+PREDICTION:
+it is on the southern border with haiti.
+
+============================================================================================================================================
+SOURCE:
+in computing a is a basic access control mechanism that allows everyone access except for the members of the black list lrb i.e. list of denied rrb.
+
+TARGET:
+in computing is a form of access control. [end]
+
+PREDICTION:
+as a the quote is a that has a of the order of the
+
+============================================================================================================================================
+SOURCE:
+the finnish army facing red army tanks in what came to be known as the winter war borrowed the design of an device that had been used for the first hugh lrb o o rrb.
+
+TARGET:
+the poorly equipped and heavily finnish army faced red army tanks in what came to be known as the winter war. [end]
+
+PREDICTION:
+the red army faction or sea group of the was the leader of the british army of the red army tanks in the general
+
+============================================================================================================================================
+SOURCE:
+slightly upstream from london bridge he a small harbour called
+
+TARGET:
+alfred the great builds a small harbour called slightly from london bridge. [end]
+
+PREDICTION:
+lrb rrb a short lived city of
+
+============================================================================================================================================
+SOURCE:
+it developed in the th century as the study of the economies of states hence political economy.
+
+TARGET:
+it developed in the th century as the study of the economies of states. [end]
+
+PREDICTION:
+in the americas the first known plaintext sudan and the can be any of the basic position of the foreign policy to help the nobel peace prize for.
+
+============================================================================================================================================
+SOURCE:
+alan through a casting office and several months later was called in for a test audition where he met with he was then told to come back in to test with the possible lrb wash s wife rrb and that it was down to him and one other
+
+TARGET:
+alan and was told to come back in to test with the possible lrb the character s wife rrb. [end]
+
+PREDICTION:
+he teamed up with oscar wilde at slower guests thought the film was to and
+
+============================================================================================================================================
+SOURCE:
+spencer compton st earl of wilmington kg pc lrb july rrb was a british whig statesman who served continuously in government from until his death.
+
+TARGET:
+spencer compton st earl of wilmington kg pc lrb ndash july rrb was a british whig statesman and prime minister of great britain. he served in government from until his death. [end]
+
+PREDICTION:
+spencer compton st earl of wilmington kg lrb july rrb was a british whig statesman and prime minister of great britain.
+
+============================================================================================================================================
+SOURCE:
+artificial turf or synthetic turf is a man made surface manufactured from synthetic made to look like natural
+
+TARGET:
+artificial turf or synthetic turf is a man made lrb something made by humans rrb surface made from synthetic materials made to look like natural grass. [end]
+
+PREDICTION:
+artificial turf or life lrb rrb or synthetic elements of gravity lrb or rrb are used by synthetic and

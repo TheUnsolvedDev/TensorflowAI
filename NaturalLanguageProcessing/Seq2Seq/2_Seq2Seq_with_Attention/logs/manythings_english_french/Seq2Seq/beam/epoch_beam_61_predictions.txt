@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he has eyes at the back of his head.
+
+TARGET:
+il a des yeux derrière la tête. [end]
+
+PREDICTION:
+il eut mis au bout d'elle.
+
+============================================================================================================================================
+SOURCE:
+it's a matter.
+
+TARGET:
+c'est une affaire [end]
+
+PREDICTION:
+n'a une affaire. par tout. à cause d'elle.
+
+============================================================================================================================================
+SOURCE:
+i'm glad you showed up.
+
+TARGET:
+je suis content que tu te sois [end]
+
+PREDICTION:
+je suis heureuse d'être tombé dessus. dernier.
+
+============================================================================================================================================
+SOURCE:
+the bell at
+
+TARGET:
+la cloche à heures. [end]
+
+PREDICTION:
+la cause des colère à prix. le but avant.
+
+============================================================================================================================================
+SOURCE:
+all this is strange to me.
+
+TARGET:
+tout cela me paraît étrange. [end]
+
+PREDICTION:
+malheureusement, cela m'est étrange. !
+
+============================================================================================================================================
+SOURCE:
+did you do something you shouldn't have?
+
+TARGET:
+as-tu fait quelque chose que tu n'aurais pas dû faire ? [end]
+
+PREDICTION:
+tu t'es donc pas besoin de lire le autres
+
+============================================================================================================================================
+SOURCE:
+we received a welcome from them.
+
+TARGET:
+nous avons reçu un de leur part. [end]
+
+PREDICTION:
+il un médicament qu'on lui avait donné le bien. et trois mains.
+
+============================================================================================================================================
+SOURCE:
+of i'm going to help tom.
+
+TARGET:
+bien je vais aider tom. [end]
+
+PREDICTION:
+c'est idiot j'ai hâte à donner
+
+============================================================================================================================================
+SOURCE:
+this is the beginning of a new
+
+TARGET:
+c'est le début d'une nouvelle. [end]
+
+PREDICTION:
+ceci est la d'un nouvel payé. dernier.
+
+============================================================================================================================================
+SOURCE:
+did you see a bag here?
+
+TARGET:
+as-tu vu un sac ici ? [end]
+
+PREDICTION:
+avez-vous garer ou un appareil là qui êtes-vous pris » « ennuis. ?

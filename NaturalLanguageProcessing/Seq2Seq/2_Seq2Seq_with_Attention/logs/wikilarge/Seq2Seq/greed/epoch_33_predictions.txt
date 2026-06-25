@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the city holds an annual three week arts and music festival lrb chichester rrb held in july.
+
+TARGET:
+every year in july a three week festival the chichester takes place. then in august since there has been a week long i am joy arts and music festival held across different in the city. [end]
+
+PREDICTION:
+the city holds an annual three week arts and music festival lie in the three week to the next years and he held a year later.
+
+============================================================================================================================================
+SOURCE:
+a point is a point in a perspective drawing to which parallel lines not parallel to the image plane appear to
+
+TARGET:
+in art a point is the point in a perspective drawing where lines that are not parallel to the main subject of the painting come together. [end]
+
+PREDICTION:
+a point is a way to parallel lines that is not parallel to which parallel lines not parallel to the image which is not parallel charge the point is not parallel to a
+
+============================================================================================================================================
+SOURCE:
+vince continued to as it approached the iberian peninsula and became a tropical depression on october shortly before it made landfall near spain.
+
+TARGET:
+it became a tropical depression on october. this was just before it made its landfall in spain. [end]
+
+PREDICTION:
+vince kept across the wall after a ship named him and the storm s strongest died shortly after it
+
+============================================================================================================================================
+SOURCE:
+all differ in the way the bolt into the how the bolt as it is being operated the number of holding the bolt in place as the gun is fired and whether the action is on the opening of the bolt lrb as in the system rrb or the closing of the bolt lrb as in the
+
+TARGET:
+after firing the gun opening the bolt takes out the empty cartridge and closing the bolt puts in a new one. [end]
+
+PREDICTION:
+the card is a or closed a card where the bolt the gun is fired and whether the action is to the set of bolt beneath the gun or
+
+============================================================================================================================================
+SOURCE:
+oliver lrb born june rrb is a british born american and nobel laureate credited with the invention of in and the simultaneous discovery with mario and martin evans of the technique of of dna with dna a much more reliable method of animal than previously used and the technique behind gene and
+
+TARGET:
+much later he worked on the technique of of dna with dna. this is the most reliable method of animal at present and the technique behind gene and [end]
+
+PREDICTION:
+oliver lrb born june rrb is an american
+
+============================================================================================================================================
+SOURCE:
+national park in pakistan is one of three significant national parks selected for a global environment facility sponsored project.
+
+TARGET:
+national park is a national park in pakistan. it is one of three important national parks chosen for a global environment facility sponsored project. [end]
+
+PREDICTION:
+national park is a national park in pakistan.
+
+============================================================================================================================================
+SOURCE:
+for further developments see point set and algebraic
+
+TARGET:
+it is divided into algebraic differential and geometric [end]
+
+PREDICTION:
+further developments and algebraic
+
+============================================================================================================================================
+SOURCE:
+the building located between nassau street and william street in manhattan new york city was completed in after only months of construction.
+
+TARGET:
+image wall street new york city at c r. jpg [end]
+
+PREDICTION:
+the building it was located between the deputy police and william street in manhattan and william street was completed in.
+
+============================================================================================================================================
+SOURCE:
+the hummingbird lrb a. rrb with less to the is sometimes considered a subspecies of the
+
+TARGET:
+the hummingbird lrb a. rrb has less brown [end]
+
+PREDICTION:
+the hummingbird lrb a. rrb has less and that the is sometimes thought to be a subspecies of the hummingbird.
+
+============================================================================================================================================
+SOURCE:
+speed was later promoted to first driver for the team and ended the season third place in the driver championship behind and
+
+TARGET:
+he ended the season third place in the driver championship behind nico and [end]
+
+PREDICTION:
+the driver s points was third in the driver after the team and ended the season behind and

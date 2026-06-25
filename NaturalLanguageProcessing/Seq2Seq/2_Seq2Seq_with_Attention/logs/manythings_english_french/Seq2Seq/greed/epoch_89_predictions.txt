@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+she in getting what she wanted.
+
+TARGET:
+elle a réussi à obtenir ce qu'elle voulait. [end]
+
+PREDICTION:
+elle de faire ce qu'elle voulait.
+
+============================================================================================================================================
+SOURCE:
+she looked around.
+
+TARGET:
+elle a regardé aux [end]
+
+PREDICTION:
+elle les
+
+============================================================================================================================================
+SOURCE:
+few admit their mistakes.
+
+TARGET:
+peu de leurs erreurs. [end]
+
+PREDICTION:
+peu de ses erreurs.
+
+============================================================================================================================================
+SOURCE:
+tom spent christmas with his family.
+
+TARGET:
+tom a passé noël avec sa famille. [end]
+
+PREDICTION:
+tom a passé noël avec sa famille.
+
+============================================================================================================================================
+SOURCE:
+that was a problem.
+
+TARGET:
+c'était un problème. [end]
+
+PREDICTION:
+c'était un problème.
+
+============================================================================================================================================
+SOURCE:
+tell us what happened to tom.
+
+TARGET:
+ce qui est arrivé à tom. [end]
+
+PREDICTION:
+ce qui est arrivé à tom.
+
+============================================================================================================================================
+SOURCE:
+i'm ready to help you.
+
+TARGET:
+je suis prêt à t'aider. [end]
+
+PREDICTION:
+je suis prête à t'aider.
+
+============================================================================================================================================
+SOURCE:
+tom speaks french, doesn't he?
+
+TARGET:
+tom parle français, non ? [end]
+
+PREDICTION:
+tom parle français, n'est-ce pas ?
+
+============================================================================================================================================
+SOURCE:
+if you want a i'll lend you one.
+
+TARGET:
+si tu as besoin d'un je t'en prête un. [end]
+
+PREDICTION:
+si tu veux un je te en un.
+
+============================================================================================================================================
+SOURCE:
+i don't know what to do with this.
+
+TARGET:
+je ne sais pas quoi en faire. [end]
+
+PREDICTION:
+je ne sais pas quoi faire avec ça.

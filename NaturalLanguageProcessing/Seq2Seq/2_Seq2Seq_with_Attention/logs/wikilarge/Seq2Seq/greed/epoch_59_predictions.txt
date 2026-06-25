@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he wrote one each for lrb later for and known as no. rrb and four for a for and
+
+TARGET:
+he also wrote for more than one e.g. a and and a violin and which he called [end]
+
+PREDICTION:
+he wrote one each for lrb later for and known as no. rrb.
+
+============================================================================================================================================
+SOURCE:
+lrb pronounced rrb is a city in idaho county idaho united states.
+
+TARGET:
+is a city of idaho in the united states. [end]
+
+PREDICTION:
+is a city of idaho in the united states.
+
+============================================================================================================================================
+SOURCE:
+before a solution could be the mosque was destroyed by approximately on december as the mosque was built by on the site of a previous
+
+TARGET:
+before a solution could be found the mosque was destroyed by about it took place on december. [end]
+
+PREDICTION:
+before a solution could be found the mosque was destroyed by approximately on december.
+
+============================================================================================================================================
+SOURCE:
+hence an that occurs during the process of writing may leave the copies in different states and may leave the copies in the old nor the new state.
+
+TARGET:
+an that during the process of writing may therefore leave the copies in different states. [end]
+
+PREDICTION:
+an that during the process of writing may therefore leave the copies in different states. the copies of the the was in different to the
+
+============================================================================================================================================
+SOURCE:
+de lrb born august rrb is an italian american writer television personality and the host of the current food network program at
+
+TARGET:
+de is an italian american and host for food network tv she was born on august. [end]
+
+PREDICTION:
+de is an orange he plays for and
+
+============================================================================================================================================
+SOURCE:
+lrb born july rrb is a canadian actress best known for her of anne in the film anne of the thousand days for which she won a
+
+TARGET:
+lrb born july rrb is a canadian actress best known for her of anne in the film anne of the thousand days. [end]
+
+PREDICTION:
+anne lrb born july rrb is a canadian actress.
+
+============================================================================================================================================
+SOURCE:
+however although believed catholic to be and he never directly the actual of the church.
+
+TARGET:
+however although hugo believed catholic to be and he never directly attacked the [end]
+
+PREDICTION:
+of the church.
+
+============================================================================================================================================
+SOURCE:
+s came in when he was featured as a in a new york philharmonic young people s concert conducted by
+
+TARGET:
+in he became famous when he was a in a new york philharmonic young peoples concert conducted by [end]
+
+PREDICTION:
+s came in when he was featured as a in a new york philharmonic when he was used.
+
+============================================================================================================================================
+SOURCE:
+lrb in hungarian rrb lrb february september rrb was an explorer writer and of jewish
+
+TARGET:
+his main book on other is the poetry of the world pages [end]
+
+PREDICTION:
+was born in
+
+============================================================================================================================================
+SOURCE:
+was a of and at first an to
+
+TARGET:
+was a of and an to [end]
+
+PREDICTION:
+he was a of and at first an to

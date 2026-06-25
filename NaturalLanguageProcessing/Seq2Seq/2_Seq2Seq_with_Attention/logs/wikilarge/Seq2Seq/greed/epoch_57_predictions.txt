@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+to score goals he forced the players to a soft shot that had in his old game on a
+
+TARGET:
+to score goals he made players a soft shot that he had used in his old game on a [end]
+
+PREDICTION:
+he had goals with in his old game a soft
+
+============================================================================================================================================
+SOURCE:
+a tube is a large used to heat in the of a
+
+TARGET:
+a tube is a large tube made of glass which is used in laboratory to heat [end]
+
+PREDICTION:
+a tube is a large that connects to heat in the of a
+
+============================================================================================================================================
+SOURCE:
+is a commune in the ain department in eastern france.
+
+TARGET:
+it is found in the region rh ne alpes in the ain department in the east of france. [end]
+
+PREDICTION:
+it is found in the region rh ne alpes in the ain department in the east of france.
+
+============================================================================================================================================
+SOURCE:
+during the occupation of post world war ii germany the soviet union the western railway and road access to the of berlin under
+
+TARGET:
+the berlin was from june to may. [end]
+
+PREDICTION:
+in june the soviet union railway and access to the of berlin.
+
+============================================================================================================================================
+SOURCE:
+on march the territory separated from the territory and adopted its current name shortened from lrb spanish for range rrb.
+
+TARGET:
+later became an american territory in. it was called the [end]
+
+PREDICTION:
+on march the current current name separated from lrb meaning for range rrb.
+
+============================================================================================================================================
+SOURCE:
+geography and climate is located in central south africa on the southern edge of the at an of on the semi region of the
+
+TARGET:
+geography is located in central south africa. [end]
+
+PREDICTION:
+geography is found in central south africa on the southern edge of the
+
+============================================================================================================================================
+SOURCE:
+as a art is popular with people of both and of many
+
+TARGET:
+as a sport and as an is popular among people of both and many [end]
+
+PREDICTION:
+humans as a art is popular with people of many and of many
+
+============================================================================================================================================
+SOURCE:
+protestant using murder include the new international version lrb american rrb new american standard bible lrb american rrb new english bible lrb british protestant rrb and the new king james lrb
+
+TARGET:
+english using kill include the king james lrb rrb lrb rrb lsb although note matthew do no murder following the non rsb the american standard lrb
+
+PREDICTION:
+told writer to bring the new language with new words and books and books and the new king james i new english abbreviated
+
+============================================================================================================================================
+SOURCE:
+es lrb house of peace d r as m rrb formerly is the largest city in
+
+TARGET:
+es lrb arabic d r as m rrb is the largest city in [end]
+
+PREDICTION:
+es is the largest city in
+
+============================================================================================================================================
+SOURCE:
+it was invented by charles in although a known as the was created by in.
+
+TARGET:
+the was invented by charles in. [end]
+
+PREDICTION:
+it was invented by and in.

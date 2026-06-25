@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+was of new
+
+TARGET:
+a été de new [end]
+
+PREDICTION:
+la a été facile de donner des vacances. japonais.
+
+============================================================================================================================================
+SOURCE:
+she was but she was honest.
+
+TARGET:
+elle était mais elle était honnête. [end]
+
+PREDICTION:
+c'était lui, mais elle n'était quand sûr de sécurité. il y était ! d'un autre.
+
+============================================================================================================================================
+SOURCE:
+you changed it?
+
+TARGET:
+tu l'as changé ? [end]
+
+PREDICTION:
+tu t'es
+
+============================================================================================================================================
+SOURCE:
+don't stand near me.
+
+TARGET:
+ne te tiens pas près de moi ! [end]
+
+PREDICTION:
+ne restez par vos pas !
+
+============================================================================================================================================
+SOURCE:
+it rained five days.
+
+TARGET:
+il a plu cinq jours [end]
+
+PREDICTION:
+de longues il cinq jours
+
+============================================================================================================================================
+SOURCE:
+there are of a cat on the table.
+
+TARGET:
+il y a les d'un chat sur la table. [end]
+
+PREDICTION:
+il y avait des de sauter sur moi l'un par ces la jambe du lit. ! vous en avez trop.
+
+============================================================================================================================================
+SOURCE:
+i thought tom was in australia.
+
+TARGET:
+je croyais que tom était en australie. [end]
+
+PREDICTION:
+je crois thomas était en australie.
+
+============================================================================================================================================
+SOURCE:
+i'd never seen anything like that before.
+
+TARGET:
+je n'avais jamais vu une chose [end]
+
+PREDICTION:
+je jamais juste de façon aussi une choses fait ça à noir.
+
+============================================================================================================================================
+SOURCE:
+i off.
+
+TARGET:
+j'ai du nez. [end]
+
+PREDICTION:
+j'ai fait clairement ! avant.
+
+============================================================================================================================================
+SOURCE:
+what's the matter with you?
+
+TARGET:
+qu'avez-vous ? [end]
+
+PREDICTION:
+qu'est-ce qui tu as eu non ?

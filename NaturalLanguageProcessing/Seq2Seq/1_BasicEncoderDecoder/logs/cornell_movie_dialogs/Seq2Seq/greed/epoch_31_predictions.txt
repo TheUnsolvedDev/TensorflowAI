@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+come to 45 don't bring the police. come alone or you'll be in my next film.
+
+TARGET:
+look asshole. i've been threatened by better than you. [end]
+
+PREDICTION:
+why not?
+
+============================================================================================================================================
+SOURCE:
+i understand.
+
+TARGET:
+may i ask you something? [end]
+
+PREDICTION:
+i don't know what to say.
+
+============================================================================================================================================
+SOURCE:
+is this your larry?
+
+TARGET:
+look, man, did you-- [end]
+
+PREDICTION:
+no.
+
+============================================================================================================================================
+SOURCE:
+i got a call from him today. funny. he dropped out of sight during the war, and i'd heard he'd gone east. i guess he's back. it's a mission number.
+
+TARGET:
+that's isn't it? [end]
+
+PREDICTION:
+but don't you think he looks at him?
+
+============================================================================================================================================
+SOURCE:
+no, it's my fault, i thought this would all be over by now. i just wanted to sort of apologize for the kissing thing. i seriously don't know what got in to
+
+TARGET:
+absolutely fine about it. [end]
+
+PREDICTION:
+i don't have to be yet, doctor.
+
+============================================================================================================================================
+SOURCE:
+joey ... ?
+
+TARGET:
+help me pick 'em up, i think the lady just made a sale. [end]
+
+PREDICTION:
+no
+
+============================================================================================================================================
+SOURCE:
+i was dead.
+
+TARGET:
+i was dead, too. [end]
+
+PREDICTION:
+and you didn't tell me about it.
+
+============================================================================================================================================
+SOURCE:
+who...
+
+TARGET:
+[end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+that's it? thought you'd break out the
+
+TARGET:
+i'm i really am. [end]
+
+PREDICTION:
+i was born in the i was just thinking about it.
+
+============================================================================================================================================
+SOURCE:
+there's still time to this.
+
+TARGET:
+we'll be fine. [end]
+
+PREDICTION:
+i don't think so.

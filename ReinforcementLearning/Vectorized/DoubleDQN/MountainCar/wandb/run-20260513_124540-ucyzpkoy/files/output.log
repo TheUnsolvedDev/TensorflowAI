@@ -1,0 +1,13 @@
+Using 2 GPU(s)
+ 12%|████████████▎                                                                                              | 28822/250000 [1:23:42<10:49:15,  5.68it/s][34m[1mwandb[0m: Ctrl + C detected. Stopping sweep.
+Step=2500 Loss=0.0042 Return=-200.00 Epsilon=0.739 FPS=2008
+Step=5000 Loss=0.0046 Return=-200.00 Epsilon=0.477 FPS=1033
+Step=7500 Loss=0.0000 Return=-200.00 Epsilon=0.216 FPS=886
+Step=10000 Loss=0.0205 Return=-200.00 Epsilon=0.020 FPS=829
+Step=12500 Loss=0.0042 Return=-200.00 Epsilon=0.020 FPS=813
+Step=15000 Loss=0.0389 Return=-200.00 Epsilon=0.020 FPS=788
+Step=17500 Loss=0.0082 Return=-200.00 Epsilon=0.020 FPS=770
+Step=20000 Loss=0.1466 Return=-200.00 Epsilon=0.020 FPS=758
+Step=22500 Loss=0.0041 Return=-200.00 Epsilon=0.020 FPS=749
+Step=25000 Loss=0.0629 Return=-200.00 Epsilon=0.020 FPS=742
+Step=27500 Loss=0.0002 Return=-200.00 Epsilon=0.020 FPS=736

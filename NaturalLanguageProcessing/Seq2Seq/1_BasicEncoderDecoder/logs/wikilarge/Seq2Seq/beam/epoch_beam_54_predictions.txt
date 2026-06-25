@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+les is a commune in the sarthe department in the region of pays de la loire in northwestern france.
+
+TARGET:
+it is found in the region pays de la loire in the sarthe department in the west of france. [end]
+
+PREDICTION:
+the region en can create in z one capital of france. as there is a lot that are independent from provinces de and then called east africa. it does this
+
+============================================================================================================================================
+SOURCE:
+a is a feature of european houses and
+
+TARGET:
+a is found on european houses and [end]
+
+PREDICTION:
+a is an airport that uses it s large and lots in the houses there are many different names for little coffee lrb m o rrb over it.
+
+============================================================================================================================================
+SOURCE:
+a branch of studies rock and lrb rrb.
+
+TARGET:
+is a branch of which studies rock lrb rrb. [end]
+
+PREDICTION:
+a branch technology and china between our lives as tall lrb greek to rich mount steve for the co order rrb
+
+============================================================================================================================================
+SOURCE:
+two types of star can be distinguished are groups of of thousands of very old stars which are while open a more
+
+TARGET:
+open are more and they have less than a few hundred stars which are often very [end]
+
+PREDICTION:
+types of old animals have two major forms and very large mammals about more than half are now they take on the central land. this is called short to find
+
+============================================================================================================================================
+SOURCE:
+match length matches consisted of three the first lasted ten minutes and the second and third each lasted five
+
+TARGET:
+rules match length matches make up of three the first round is ten minutes and the second and third round are five [end]
+
+PREDICTION:
+total up m t re singing double three men ended with ten two time each year before its first weeks was the final general of all women in race.
+
+============================================================================================================================================
+SOURCE:
+ndash first recorded case of in los angeles california.
+
+TARGET:
+is the first woman to become president of a us national [end]
+
+PREDICTION:
+first recorded an in los angeles reported that at the bus for california.
+
+============================================================================================================================================
+SOURCE:
+and on the of the death whether he is or whether he received a
+
+TARGET:
+and on the of the death if he is or if he received a [end]
+
+PREDICTION:
+however that percy is the same for christian days.
+
+============================================================================================================================================
+SOURCE:
+the film was directed by david and stars the regular television cast of smith harry and
+
+TARGET:
+the movie stars the main television cast of smith and harry a which he names
+
+PREDICTION:
+it starred also the movie characters directed and produced as part of chris hugo theatre which won by both and.
+
+============================================================================================================================================
+SOURCE:
+in popular culture in when america a of lrb referred to as rrb attack an only to be off by a
+
+TARGET:
+it is shown in the movie when america an and getting off by a [end]
+
+PREDICTION:
+the also happens worldwide to another part as a result when they started in an indian group of color shows and america on their side of apple inc. s life
+
+============================================================================================================================================
+SOURCE:
+it then emerged into the gulf of mexico on august into a category hurricane with mph lrb km h rrb
+
+TARGET:
+it then into the gulf of mexico into a [end]
+
+PREDICTION:
+gulf of the borough county broke into a on july hurricane louis in puerto and tropical storm north. this formed west orange california near fort without removed as an open

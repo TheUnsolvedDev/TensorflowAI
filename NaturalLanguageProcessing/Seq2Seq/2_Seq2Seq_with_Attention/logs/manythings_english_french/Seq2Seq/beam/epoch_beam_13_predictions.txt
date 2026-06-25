@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+they were murdered.
+
+TARGET:
+quelqu'un les a [end]
+
+PREDICTION:
+on l'a prévenu. contre sa retraite.
+
+============================================================================================================================================
+SOURCE:
+i did that without anyone.
+
+TARGET:
+je l'ai fait sans consulter personne. [end]
+
+PREDICTION:
+je le fis comprendre à personne.
+
+============================================================================================================================================
+SOURCE:
+how long will you be staying?
+
+TARGET:
+combien de temps vas-tu rester ? [end]
+
+PREDICTION:
+y va veiller ?
+
+============================================================================================================================================
+SOURCE:
+i know that you aren't lying.
+
+TARGET:
+je sais que tu ne mens pas. [end]
+
+PREDICTION:
+je pense ne pas que nous ment. l'air.
+
+============================================================================================================================================
+SOURCE:
+how could tom do such a thing?
+
+TARGET:
+comment tom pourrait-il faire une telle [end]
+
+PREDICTION:
+comment thomas bien ?
+
+============================================================================================================================================
+SOURCE:
+i guess you think you're pretty don't you?
+
+TARGET:
+je que tu penses être plutôt n'est-ce pas ? [end]
+
+PREDICTION:
+j'imaginais vous n'est pas à ta hein ? » n'est-ce bien que tu fais. par terre.
+
+============================================================================================================================================
+SOURCE:
+he wasn't even there.
+
+TARGET:
+il n'y était même pas. [end]
+
+PREDICTION:
+ce n'était pas même là. à lui.
+
+============================================================================================================================================
+SOURCE:
+his breathing became faint.
+
+TARGET:
+sa est devenue faible. [end]
+
+PREDICTION:
+lui exprès de du nez. ça. en retourne marche. au nom est pas malin où respirer ? par la terre.
+
+============================================================================================================================================
+SOURCE:
+i hate the color of these
+
+TARGET:
+je déteste la couleur de ces [end]
+
+PREDICTION:
+je hais le de ces jours-ci. les gens.
+
+============================================================================================================================================
+SOURCE:
+i can't the distance.
+
+TARGET:
+je ne peux pas la distance. [end]
+
+PREDICTION:
+j'ai l'impression pas de joie. ! par nos distances. à venir. les yeux. lui êtes bien sûr du concert.

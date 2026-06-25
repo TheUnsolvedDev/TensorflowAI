@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+furthermore wills letter made it equally clear to the president that he would have only a small part in the ceremonies perhaps to the modern tradition of a noted public figure to do a ribbon cutting at a grand
+
+TARGET:
+also wills s letter made it equally clear to the president that he would have only a small part in the [end]
+
+PREDICTION:
+the institute of he made a small part in the ceremonies it to the modern tradition of a well known public in the people who are a ribbon distributed to the
+
+============================================================================================================================================
+SOURCE:
+the novel takes place in the twenty first century when under united nations authority has the solar system s every planet and moon.
+
+TARGET:
+under the of the united nations authority has the solar system s every planet and moon. [end]
+
+PREDICTION:
+the novel takes place in the twenty first century when under united nations authority
+
+============================================================================================================================================
+SOURCE:
+in the british founded as a trading post and base for the slave trade.
+
+TARGET:
+in the british founded as a trading post. was also used to help stop the slave trade. [end]
+
+PREDICTION:
+in the british founded as a trading post.
+
+============================================================================================================================================
+SOURCE:
+history is one of the original departments created during the french revolution on march.
+
+TARGET:
+it is one of the original french departments created during the french revolution. [end]
+
+PREDICTION:
+it is one of the original french departments created during the french revolution.
+
+============================================================================================================================================
+SOURCE:
+finally magnetic charge fails to account for that is produced by electric currents nor the force that a magnetic field applies to moving electric
+
+TARGET:
+in physics the magnetic field is a field that space and which a magnetic force on moving electric charges and magnetic magnetic fields electric currents magnetic and changing electric fields. [end]
+
+PREDICTION:
+the magnetic field is shown in the surface yet fails at electric access tail electric by the
+
+============================================================================================================================================
+SOURCE:
+benefits of within his a had some
+
+TARGET:
+benefits of serfdom a had some freedom. [end]
+
+PREDICTION:
+very often they were very within his a had some murder.
+
+============================================================================================================================================
+SOURCE:
+is a city in seminole county florida united states.
+
+TARGET:
+is a city of florida in the united states. [end]
+
+PREDICTION:
+is a city of florida in the united states.
+
+============================================================================================================================================
+SOURCE:
+he explains not that he is not a man who loves easily and is to marriage.
+
+TARGET:
+he says very that he is not really to marriage. [end]
+
+PREDICTION:
+he explains that his penis lrb not to rrb is not a man who loves wrapped for organ and sight to her literary career.
+
+============================================================================================================================================
+SOURCE:
+it uses light to transfer a pattern from a photo mask to a light sensitive chemical photo or simply on the
+
+TARGET:
+is the process of geometric shapes on a mask to the surface of a silicon [end]
+
+PREDICTION:
+it uses light to transfer a pattern from a blood or from a baby or simply converts on the
+
+============================================================================================================================================
+SOURCE:
+the dynasty or dynasty lrb rrb ruled the kingdom of armenia from ad to ad.
+
+TARGET:
+the dynasty or lrb sometimes called the dynasty rrb ruled the kingdom of armenia from to. [end]
+
+PREDICTION:
+the dynasty or dynasty lrb rrb ruled the kingdom of armenia from to.

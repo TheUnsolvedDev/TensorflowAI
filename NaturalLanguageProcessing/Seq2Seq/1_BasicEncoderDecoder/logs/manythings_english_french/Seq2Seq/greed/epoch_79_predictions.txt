@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+keep smiling.
+
+TARGET:
+garde le sourire. [end]
+
+PREDICTION:
+gardez le sourire.
+
+============================================================================================================================================
+SOURCE:
+we should call the doctor.
+
+TARGET:
+nous devrions appeler le docteur. [end]
+
+PREDICTION:
+nous devrions appeler le
+
+============================================================================================================================================
+SOURCE:
+they moved here three years ago.
+
+TARGET:
+elles ont déménagé ici il y a trois ans. [end]
+
+PREDICTION:
+ils ont ici il y a trois ans.
+
+============================================================================================================================================
+SOURCE:
+it's going to break.
+
+TARGET:
+ça va [end]
+
+PREDICTION:
+il va se plaindre de souci.
+
+============================================================================================================================================
+SOURCE:
+the weather was good.
+
+TARGET:
+heureusement, il faisait beau. [end]
+
+PREDICTION:
+heureusement, le temps était beau.
+
+============================================================================================================================================
+SOURCE:
+this is no longer
+
+TARGET:
+ce n'est plus [end]
+
+PREDICTION:
+ce n'est pas
+
+============================================================================================================================================
+SOURCE:
+he painted a dog.
+
+TARGET:
+il un chien. [end]
+
+PREDICTION:
+il a peint un chien.
+
+============================================================================================================================================
+SOURCE:
+you don't yourself much.
+
+TARGET:
+tu ne fais pas beaucoup [end]
+
+PREDICTION:
+tu ne te fais pas trop.
+
+============================================================================================================================================
+SOURCE:
+i'd like to finish the job.
+
+TARGET:
+j'aimerais finir le travail. [end]
+
+PREDICTION:
+je voudrais terminer le travail.
+
+============================================================================================================================================
+SOURCE:
+tom works late.
+
+TARGET:
+tom travaille tard. [end]
+
+PREDICTION:
+tom travaille chemin.

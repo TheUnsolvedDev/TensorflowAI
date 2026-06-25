@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+lrb french and rrb is a commune in the department of france located in the northeast of the island of at the base of
+
+TARGET:
+is situated in the northeast of at the base of is the main port of the island and its principal commercial town. [end]
+
+PREDICTION:
+is a small village in france in the of in the center of france.
+
+============================================================================================================================================
+SOURCE:
+de is a commune in the vend e department in the pays de la loire region in western france.
+
+TARGET:
+it is found in the region pays de la loire in the vend e department in the west of france. [end]
+
+PREDICTION:
+de is a commune. it is found in the region pays de la loire in the vend e department in the west of france.
+
+============================================================================================================================================
+SOURCE:
+the earliest historical reference to appears in literature of china in the th century. they have long been in japan taiwan the and southeast asia.
+
+TARGET:
+came from china lrb they are known in literature of the th century rrb and have long been there and in japan. [end]
+
+PREDICTION:
+the oldest known are used in and china.
+
+============================================================================================================================================
+SOURCE:
+percent of who had used a board in the last year were under the age of and percent were
+
+TARGET:
+percent of were under years old. percent were male [end]
+
+PREDICTION:
+of of a few had the school board percent of the ended up in.
+
+============================================================================================================================================
+SOURCE:
+the lake system formed over river and in the flat with receiving from the and the mountains to the east and
+
+TARGET:
+the lake system formed over river and in the flat with [end]
+
+PREDICTION:
+the caused through the industrial revolution and in the river and
+
+============================================================================================================================================
+SOURCE:
+he was drafted by the arizona in the second round of the nfl
+
+TARGET:
+was drafted out of florida state university by the arizona with the th overall pick in the second round of the nfl draft. [end]
+
+PREDICTION:
+he was also the second overall overall of the round draft by the colorado team win from the united states senate with his first year since.
+
+============================================================================================================================================
+SOURCE:
+this includes the well known cities of n and but also the lesser known and among others.
+
+TARGET:
+well known cities were n and known cities were and among others. [end]
+
+PREDICTION:
+this includes the and and
+
+============================================================================================================================================
+SOURCE:
+however there are where is made by other bodies or means such as when constitutional law or secondary is
+
+TARGET:
+however there are where is by other means lrb most commonly when law is rrb. [end]
+
+PREDICTION:
+there are to be found by other causes of
+
+============================================================================================================================================
+SOURCE:
+cultural problems some especially that were by european have no commonly accepted or have a that is the same as the name of their lrb current
+
+TARGET:
+cultural problems some peoples mainly that were taken over by european have no they may also have a that is the same as the name of their
+
+PREDICTION:
+cultural problems some peoples that have suggested that were not in chinese were not
+
+============================================================================================================================================
+SOURCE:
+adams lrb rrb rose to become the most senior figure in the northern command on the basis of his of but military action but this with
+
+TARGET:
+adams was to have become the most senior figure in the northern command because he wanted only military action but during his time in prison adams came to thought
+
+PREDICTION:
+adams lrb now the man rrb north of the supreme court often with the senior

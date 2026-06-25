@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it also features a large diverse soundtrack composed by often from the operatic repertoire consisting of three pieces for each of the eight levels each set in a different part of the world.
+
+TARGET:
+in the game a soundtrack composed by had three songs for each of the eight levels each set in a different part of the world. [end]
+
+PREDICTION:
+the other screen has four each form of each other than a
+
+============================================================================================================================================
+SOURCE:
+a text file exists within a computer file system.
+
+TARGET:
+a text file is a computer file with an extension of. [end]
+
+PREDICTION:
+a trademark of a computer screen or a computer file
+
+============================================================================================================================================
+SOURCE:
+this is the home of the university of parma one of the oldest universities in the world.
+
+TARGET:
+parma has one of the oldest universities of the world the university of [end]
+
+PREDICTION:
+parma is one of the oldest universities in the world.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the aisne department in picardy in northern france.
+
+TARGET:
+is a commune. it is found in the region picardie in the aisne department in the north of france. [end]
+
+PREDICTION:
+is a commune. it is found in the region picardie in the aisne department in the north of france.
+
+============================================================================================================================================
+SOURCE:
+after frankfurt and munich d sseldorf international airport is germany s third largest commercial airport with. million passengers annually.
+
+TARGET:
+d sseldorf is one of the most important commercial centres in germany. it has an international airport which is the rd largest in germany lrb after frankfurt and munich rrb with more than passengers per year. [end]
+
+PREDICTION:
+the city of weimar is the centre of the mass unit of international lrb german rrb.
+
+============================================================================================================================================
+SOURCE:
+the vice president of the executive council was the deputy head of government of the irish free state and the second most senior member of the executive council lrb cabinet rrb.
+
+TARGET:
+the executive council was the cabinet of the irish free state it was headed by the president of the executive council. [end]
+
+PREDICTION:
+the head of the of the municipal government was abolished and the county seat of law in charge of the federal iowa
+
+============================================================================================================================================
+SOURCE:
+george roger waters lrb born september rrb is an english rock musician singer songwriter and composer.
+
+TARGET:
+george roger waters lrb born september in great surrey rrb is an english rock musician. [end]
+
+PREDICTION:
+george walton lrb born may on september rrb is a well known rock drummer from the west coast rock band in the s.
+
+============================================================================================================================================
+SOURCE:
+hans j lrb born may in rrb is a german footballer who plays for fc bayern munich in the german league as a goalkeeper.
+
+TARGET:
+hans j lrb born may rrb commonly known as j is a german football player. he plays for fc bayern munich and germany national team. [end]
+
+PREDICTION:
+hans j lrb born may rrb is a german football player.
+
+============================================================================================================================================
+SOURCE:
+all are usually birds of the deep forest at long before a human they are there.
+
+TARGET:
+they are birds living deep in the forest. [end]
+
+PREDICTION:
+all lives at the bat prison birds at
+
+============================================================================================================================================
+SOURCE:
+following its discovery in it was given the temporary designation of s u.
+
+TARGET:
+following its discovery in was given the designation of s u. [end]
+
+PREDICTION:
+it was found in by stephen p. in may as the original case of the memory of the year after isaac died when the atomic energy was changed to

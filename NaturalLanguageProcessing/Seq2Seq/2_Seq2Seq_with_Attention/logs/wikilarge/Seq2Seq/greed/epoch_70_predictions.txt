@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the road the remains of forest and
+
+TARGET:
+through the road the remains of [end]
+
+PREDICTION:
+the road the remains of forest and
+
+============================================================================================================================================
+SOURCE:
+she was born in hill in northeast the of six children of albert and a and respectively.
+
+TARGET:
+she was born in hill a in north east she was the of six children of the albert and the [end]
+
+PREDICTION:
+she was born in hill real name. life samuel gang had been a and two before
+
+============================================================================================================================================
+SOURCE:
+the last of the is a comic by don it is the first of the original in the series the life and times of
+
+TARGET:
+the last of the is the first of the life and times of s. [end]
+
+PREDICTION:
+don lrb also known as don rrb is the first of the comic book history in the life and times of
+
+============================================================================================================================================
+SOURCE:
+lrb rrb is a town in the southern of new south wales australia in valley
+
+TARGET:
+is a town in the southern of new south wales australia. it is in the valley [end]
+
+PREDICTION:
+is a town in the southern of new south wales australia. it is in the valley
+
+============================================================================================================================================
+SOURCE:
+saint is a commune on the left bank of the in the gironde department in aquitaine in south western france that produces red
+
+TARGET:
+saint is a commune. it is found in the region aquitaine in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+saint is a commune.
+
+============================================================================================================================================
+SOURCE:
+it was the first olympic games held in the modern
+
+TARGET:
+the first modern summer olympic games where held in in. [end]
+
+PREDICTION:
+in the were the first olympic games.
+
+============================================================================================================================================
+SOURCE:
+lrb born february rrb also known as is an american actress.
+
+TARGET:
+better known as is an american film and television actress. [end]
+
+PREDICTION:
+lrb born february in rrb is an american actress.
+
+============================================================================================================================================
+SOURCE:
+the name is a using the of and the or of
+
+TARGET:
+the name is a mix of the in and the or in [end]
+
+PREDICTION:
+the name is a for
+
+============================================================================================================================================
+SOURCE:
+is a available open source version of the software distribution lrb rrb computer operating system.
+
+TARGET:
+is an open source version of the computer operating system. [end]
+
+PREDICTION:
+is an open source open source software with open source line
+
+============================================================================================================================================
+SOURCE:
+le m is a commune in the gironde department in aquitaine in south western france.
+
+TARGET:
+le m is a commune. it is found in the aquitaine region in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+le m is a commune. it is found in the region aquitaine in the gironde department in the southwest of france.

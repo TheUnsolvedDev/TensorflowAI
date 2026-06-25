@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i felt a little
+
+TARGET:
+j'étais un peu dans les [end]
+
+PREDICTION:
+je me suis senti un peu
+
+============================================================================================================================================
+SOURCE:
+this will do for now.
+
+TARGET:
+ça suffit pour l'instant. [end]
+
+PREDICTION:
+ça fera maintenant pour l'instant.
+
+============================================================================================================================================
+SOURCE:
+we've got enough.
+
+TARGET:
+nous en avons [end]
+
+PREDICTION:
+nous en avons assez.
+
+============================================================================================================================================
+SOURCE:
+would doing that be
+
+TARGET:
+facile de faire cela ? [end]
+
+PREDICTION:
+faire ça vaut la
+
+============================================================================================================================================
+SOURCE:
+i have a business visa.
+
+TARGET:
+j'ai un visa de travail. [end]
+
+PREDICTION:
+j'ai un visa
+
+============================================================================================================================================
+SOURCE:
+i want you to get me a
+
+TARGET:
+je veux que vous alliez me chercher une boisson [end]
+
+PREDICTION:
+je veux que tu me un
+
+============================================================================================================================================
+SOURCE:
+sales are down this month.
+
+TARGET:
+les ventes sont en baisse ce mois-ci. [end]
+
+PREDICTION:
+les ventes ce mois-ci.
+
+============================================================================================================================================
+SOURCE:
+his dream has become a reality.
+
+TARGET:
+son rêve est devenu une réalité. [end]
+
+PREDICTION:
+son rêve est devenue une bonne.
+
+============================================================================================================================================
+SOURCE:
+you're normal.
+
+TARGET:
+tu es normale. [end]
+
+PREDICTION:
+tu es normal.
+
+============================================================================================================================================
+SOURCE:
+a frog in a well doesn't know the ocean.
+
+TARGET:
+une grenouille dans un puits n'a pas conscience de l'océan. [end]
+
+PREDICTION:
+un chat dans un ne connaît pas l'océan.

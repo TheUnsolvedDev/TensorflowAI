@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it doesn't look like fun to me.
+
+TARGET:
+je ne trouve pas ça drôle. [end]
+
+PREDICTION:
+cela n'en a pas à me donner les pieds.
+
+============================================================================================================================================
+SOURCE:
+you have been warned.
+
+TARGET:
+on vous a [end]
+
+PREDICTION:
+avez-vous reçu que vous ayez écrit. là
+
+============================================================================================================================================
+SOURCE:
+the passengers are the train.
+
+TARGET:
+les passagers dans le train. [end]
+
+PREDICTION:
+chaque passagers tire dans du train.
+
+============================================================================================================================================
+SOURCE:
+he's feeling much better.
+
+TARGET:
+il se sent beaucoup mieux. [end]
+
+PREDICTION:
+cela se prend beaucoup mieux.
+
+============================================================================================================================================
+SOURCE:
+i had two of the book.
+
+TARGET:
+j'avais deux de ce livre. [end]
+
+PREDICTION:
+j'ai deux du livre. la voix.
+
+============================================================================================================================================
+SOURCE:
+this bag is too
+
+TARGET:
+ce sac est trop [end]
+
+PREDICTION:
+ce bâtiment est trop. d'une journée.
+
+============================================================================================================================================
+SOURCE:
+tom is up with the rest of the class.
+
+TARGET:
+tom lentement le reste de la classe. [end]
+
+PREDICTION:
+toi, lui bien pleine sorte des bagages par semaine.
+
+============================================================================================================================================
+SOURCE:
+tom hates
+
+TARGET:
+tom déteste le sport. [end]
+
+PREDICTION:
+tom n'a suivre de la voie en courant.
+
+============================================================================================================================================
+SOURCE:
+i'd like to spend more time with you.
+
+TARGET:
+j'aimerais passer davantage de temps avec vous. [end]
+
+PREDICTION:
+je veux passer plus de temps avec vous. bien.
+
+============================================================================================================================================
+SOURCE:
+be
+
+TARGET:
+soyez ! [end]
+
+PREDICTION:
+soyez prudent.

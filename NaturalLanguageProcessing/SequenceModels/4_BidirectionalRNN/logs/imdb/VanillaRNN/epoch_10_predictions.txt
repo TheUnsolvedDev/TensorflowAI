@@ -1,0 +1,120 @@
+TEXT:
+i really liked this [UNK] due to the look of the arena the curtains and just the look overall was interesting to me for some reason anyways this could have been one of the best [UNK] s ever if the wwf didn t have lex luger in the main event against yokozuna now for it s time it was ok to have a huge fat man vs a strong man but i m glad times have changed it was a terrible main event just like every match luger is in is terrible other matches on the card were razor ramon vs ted dibiase steiner brothers vs heavenly bodies shawn michaels vs curt [UNK] this was the event where shawn named his big monster of a body guard diesel irs vs 1 2 3 kid bret hart first takes on [UNK] then takes on jerry [UNK] and stuff with the [UNK] and [UNK] was always very interesting then [UNK] [UNK] destroyed marty [UNK] undertaker took on giant [UNK] in another terrible match the smoking [UNK] and [UNK] took on bam bam bigelow and the [UNK] and yokozuna defended the world title against lex luger this match was boring and it has a terrible ending however it deserves 8 10
+TRUE LABEL : 1
+PRED LABEL : 0
+MATCH      : False
+========================================================================================================================
+TEXT:
+not many television shows appeal to quite as many different kinds of fans like farscape does i know youngsters and 30 40 years old fans both male and female in as many different countries as you can think of that just adore this t v miniseries it has elements that can be found in almost every other show on t v character driven drama that could be from an australian soap opera yet in the same episode it has science fact fiction that would give even the [UNK] [UNK] a run for his money in the [UNK] stakes [UNK] theory time travel in true [UNK] form magnificent it embraces cultures from all over the map as the possibilities are endless having multiple stars and therefore thousands of planets to choose from br br with such a broad scope it would be expected that nothing would be able to keep up the illusion for long but here is where farscape really comes into it s own element it succeeds where all others have failed especially the likes of star trek a universe with practically zero [UNK] element they ran out of ideas pretty quickly kept rehashing them over the course of 4 seasons they manage to keep the audience s attention using good continuity and constant character evolution with multiple threads to every episode with unique personal touches to camera that are specific to certain character groups within the whole this structure allows for an extremely large area of subject matter as loyalties are [UNK] and broken
+TRUE LABEL : 1
+PRED LABEL : 0
+MATCH      : False
+========================================================================================================================
+TEXT:
+the film quickly gets to a major chase scene with ever increasing destruction the first really bad thing is the guy hijacking steven seagal would have been beaten to pulp by seagal s driving but that probably would have ended the whole premise for the movie br br it seems like they decided to make all kinds of changes in the movie plot so just plan to enjoy the action and do not expect a coherent plot turn any sense of logic you may have it will reduce your chance of getting a headache br br i does give me some hope that steven seagal is trying to move back towards the type of characters he portrayed in his more popular movies
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+jane austen would definitely approve of this one br br gwyneth paltrow does an awesome job capturing the attitude of emma she is funny without being excessively silly yet elegant she puts on a very convincing british accent not being british myself maybe i m not the best judge but she fooled me she was also excellent in sliding doors i sometimes forget she s american br br also brilliant are jeremy northam and sophie thompson and [UNK] law emma thompson s sister and mother as the bates women they nearly steal the show and ms law doesn t even have any lines br br highly recommended
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+expectations were somewhat high for me when i went to see this movie after all i thought steve carell could do no wrong coming off of great movies like anchorman the 40 year old virgin and little miss sunshine boy was i wrong br br i ll start with what is right with this movie at certain points steve carell is allowed to be steve carell there are a handful of moments in the film that made me laugh and it s due almost entirely to him being given the [UNK] room to do his thing he s an undoubtedly talented individual and it s a shame that he signed on to what turned out to be in my opinion a total train wreck br br with that out of the way i ll discuss what went [UNK] wrong br br the film begins with dan burns a widower with three girls who is being considered for a [UNK] syndicated advice column he prepares his girls for a family reunion where his extended relatives gather for some time with each other br br the family is high atop the list of things that make this an awful movie no family behaves like this it s almost as if they ve been transported from [UNK] or leave it to beaver they are a caricature of what we think a family is when we re 7 it reaches the point where they become obnoxious and simply frustrating touch football [UNK] puzzle [UNK] family bowling and talent shows are
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+i ve watched this movie on a fairly regular basis for most of my life and it never gets old for all the [UNK] remarks and insults mostly from david spade tommy boy has a giant heart and that s what keeps this movie funny after all these years br br tommy callahan chris farley is the son of big tom callahan brian dennehy master car parts salesman and has ridden on that all his life but after his died dies on his wedding day tommy learns that the company is in debt and about to be bought by ray [UNK] dan [UNK] the owner of a huge car parts company so in order to save the company tommy has to go on the road to sell the company s new brake [UNK] along for the ride though not by choice is richard hayden david spade a former classmate of tommy s who was big tom s right hand man br br the movie rides on the chemistry between the two snl stars and real life best friends chris farley and david spade the duo has enough comic energy going between them to power the world it s the big dumb guy versus the smart little guy it works and some of their scenes are [UNK] funny farley and spade are actually decent dramatic actors as well although the film is primarily a comedy it has its fair share of drama but spade and especially farley are just as good there as when they re making
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+for once a story of hope highlighted over the tragic reality our youth face favela rising draws one into a scary [UNK] and unfair world and shows through beautiful color and moving music how one man and his dedicated friends choose not to accept that world and change it through action and art an entertaining interesting emotional aesthetically beautiful film i showed this film to numerous high school students as well who all live in neighborhoods with poverty and and gun violence and they were enamored with anderson the protagonist i recommend this film to all ages over 13 due to subtitles and some images of death from all backgrounds
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+okay i didn t get the purgatory thing the first time i watched this episode it seemed like something significant was going on that i couldn t put my finger on this time those costa [UNK] fires on tv really caught my attention and it helped that i was just writing an essay on inferno but let me see what hasn t been discussed yet br br a [UNK] review mentioned that tony had 7 flights of stairs to go down because of the broken elevator yeah 7 is a significant number for lots of reasons especially religious but here s one more for ya on a [UNK] i [UNK] wikipedia and guess what dante divided into 7 levels [UNK] excluding ante purgatory and paradise the stuff at the bottom of the stairs and what tony can t get to br br on to the allegedly random monk slap scene as soon as the monks appeared it fit perfectly in place with tony trying to get out of purgatory you can tell he got worried when that christian commercial death disease and sin came on and he s getting more and more desperate because christian heaven is looking kinda [UNK] for him by the time he meets the monks he s thinking hey maybe these guys can help me which sounds like contemplating other religions e g [UNK] and wondering if some other path could take him to salvation not that tony is necessarily literally thinking about becoming a buddhist but it appears [UNK] tried that
+TRUE LABEL : 1
+PRED LABEL : 0
+MATCH      : False
+========================================================================================================================
+TEXT:
+i was very disappointed with this series it had lots of cool graphics and that s about it the level of detail it went into was minimal and i always got the feeling the audience was being [UNK] there was a lot of what seemed to me as this is extremely cool but we re not going to explain it in further detail because you won t get it anyway let s just show you some pretty pictures to entertain you the host would drop interesting sounding words such as [UNK] and super [UNK] without any attempt at explaining what it was we had to look it up on wikipedia br br furthermore i know quite a bit about [UNK] for a [UNK] and i found their explanations were convoluted and could have been so much better they could have chosen much better examples to explain concepts but instead the examples they used were confusing and further obscured the subject br br additionally i got so sick of the [UNK] they could easily have condensed the series into one episode if they had cut out all the repetition they must have shown the clips of the quantum caf about 8 times the host kept saying the same things over and over and over again i can t remember how many times he said the universe is made out of tiny little [UNK] strings it s like they were trying to [UNK] us into just accepting [UNK] are the best thing since sliced bread br br finally
+TRUE LABEL : 0
+PRED LABEL : 1
+MATCH      : False
+========================================================================================================================
+TEXT:
+the first 30 minutes of [UNK] had my finger [UNK] on the remote poised to flick around to watch something else the premise of two writers down on their luck living in a self storage space bin was mildly amusing but painfully bland br br the introduction of the character played by joe [UNK] the big deal movie guy that lives in the park and sleeps in a [UNK] offered hope and i decided to give it a few more minutes and then a few more until kristy [UNK] introduction as a budding film director borderline nymphomaniac added a bit of spice her solid acting performance raised her presence above and beyond just a very welcome eye candy inclusion br br ultimately the obvious low budget [UNK] on the film with poorly shot scenes [UNK] pace and slapstick handling of certain moments some of my favourite movies of all time have been low budget [UNK] i being one that also deals with 2 guys with a dream but down on their luck br br however for my money the actors save [UNK] from the terrible movie archives and just about [UNK] it into the could have been a cult movie archives i laughed out loud at some of the scenes involving joe [UNK] s character in particular the penultimate scenes in the terribly clich d but still funny rich but screwed up characters house where the story unravels towards it s final moments br br i can see how [UNK] was a great stage play and
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+jeez this was immensely boring the leading man christian [UNK] has got to be the worst actor i have ever seen and another thing if the character in the movie moved to america when he was ten or something and had been living here for over 20 years he would speak a lot better english than what he pulls of here or to say it in my own language [UNK] [UNK] but it is cool to see norwegian dudes in a movie made in hollywood it was just a damn shame they were talentless hacks the storyline itself is below mediocre i have a suspicion that christian [UNK] did this movie just to live the dream as he clearly does in the film by [UNK] one beautiful babe after another
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+great just great the west coast got dirty harry callahan the east coast got sharky burt reynolds plays sharky in sharky s machine and i enjoyed every minute of it playing a maverick narcotics cop in atlanta ga is just what everyone wants instead of suspension he s sent to vice squad like in the dirty harry movies or any other cop movies the captain is always going to be the jerk when i was a kid i was curious what that movie meant sharky s machine well i knew who played sharky i wonder what his machine was it was his group of fellow cops after uncovering the murder he goes all out to find the [UNK] when it turns out to be a big time mob boss sharky doesn t play around when he gets the other prostitute into safety sharky fights back hard and good despite losing a finger to the thug and i also like the part where the bad gets blown out of the building through a plate glass window that was the bomb randy crawford s street life really put the movie in the right mood and the movie itself is really a great hit to me always rating 4 out of 5 stars
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+it s made in 2007 and the cg is bad for a movie made in 1998 at one part in the movie there is a stop motion shot of a dinosaur that actually looks good but this just makes the extremely amateur work on the cg stuff look even worse br br the writing acting directing and everything else in this movie is just terrible this is as bad as if not worse than raptor island and 100 million bc pure crap again as with the other movies the only scary part about this movie is that it actually got made and is now being aired on the sci fi channel br br i still can t understand how they somehow get people who do have some acting skills to act in these movies and then somehow get them to act as terrible as everyone else in the movie br br for those of you who are unsure the other poster is obviously being sarcastic in his review or he is one of the people who worked on this movie
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+this movie stinks [UNK] the only reason i gave it a 3 was because the graphics were semi charming it s total disregard for a plot and the lack of even [UNK] surface character development made it seem like just a bunch of nice drawings this is by far the worse anime that came out of japan i can t believe they actually put their names on this garbage what a rip off selling this thing for 20 if you haven t seen this don t bother if you have i pity you
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+we can start with the wooden acting but this film is a disaster having grown up in ny i can tell you that this film is an insult to anyone who is familiar with the community or the people i m not even a [UNK] of the culture in any way and found this to be a [UNK] piece of trash to fit its own fictional ridiculous culture presentation and language that anyone who watches seinfeld knows is inaccurate this is a colossal waste of time and even worse is not exactly interesting since the outcome is obvious and the scenes of confrontation are laughably bad who acts this way nobody br br the writer s name sounds israeli or something of that nature but it is clear he doesn t have a clue about the subject he is writing about looking at his bio it is shocking he lived in new york and wonder how much real connection he had with the community even mediocre films like a stranger among us are better and more closer to the truth than this dreck reading this guy s credits it s no wonder he has written scripts on all c grade films that somehow feature stars shocking perhaps he knows someone because this script is even below par for a bad dolph lundgren film
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+this movie starts off somewhat slowly and gets running towards the end not that that is bad it was done to illustrate character trait [UNK] of the main character consequently if you are not into tragedies this is not your movie it is the thought provoking philosophy of this movie that makes it worthwhile if you liked [UNK] s crime and punishment you will probably like this if only for the comparisons the intriguing question that the movie prompts is what is it that makes a renowned writer completely disregard his publicly [UNK] ideas for another set the new ideas are quite opposed to the status quo if you are a conservative you will not like this movie br br besides other philosophical questions i must admit that the movie was quite aesthetically pleasing as well the [UNK] [UNK] and beautiful scenery helped me get past the slow start also there was use of [UNK] symbolism in representing the [UNK] of the main characters if these sorts of things do not impress you skip it overall i give this movie a 7
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+this is a slightly uneven entry with one standout sequence involving an over the hill gang [UNK] in the diner that once thirty years previously was their hideout one ho hum [UNK] between two ageing rock [UNK] a noirish kidnap turned on its head and an opening sequence plus epilogue involving heist artist wannabe edward baer and current hot property anna [UNK] which has its moments no movie in which jean [UNK] appears can be dismissed lightly and here he shines as one of the over the hill quintet indeed the film is worth seeing for [UNK] alone but each of the sequences has something to offer and it s definitely worth a look
+TRUE LABEL : 1
+PRED LABEL : 0
+MATCH      : False
+========================================================================================================================
+TEXT:
+i was first introduced to john waters films by seeing female trouble on ifc i was disgusted but for some sick reason i enjoyed it then i picked up the pink flamingos dvd in the john waters boxed set the movie is about babs johnson the [UNK] person alive who lives in a trailer in [UNK] with her obese egg obsessed mother and her deranged son crackers in the movie you will see such sick sights as sex with chickens drag queens people eating feces torture and all other sorts of random humiliation the film has a soundtrack from 60 s rock and roll artists the only problem is that some parts of the film seem to drag on and can get a little boring i found female trouble a little more fun rated nc 17 for explicit sex violence and disturbing images enjoy
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+this movie has very good acting by virtually all the cast a gripping story with a chilling ending great music and excellent visuals without significant special effects it is interesting to note though that like so much science fiction its predictions for the future don t appear likely to come to pass as early as depicted that s not to say we re out of the woods yet but [UNK] is now obviously too soon to be in this condition it shares this failing with a fairly illustrious list of science fiction classics 1984 2001 a space odyssey compare its space station with our international space station and isaac [UNK] s i robot [UNK] brains were to have been invented in the 1990 s
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+i can t help but notice the negative reviews this movie has gotten to be honest i saw the preview for this movie and the premise looked intrigued me yes i rented it after reading others comments they are correct in that some of the acting leaves a lot to be desired they are also correct that one of the best performances of this movie was that of dr graves br br also interesting is scott clark who plays grant the kid in the wheelchair i identify with the character he played perhaps because i am in a wheelchair br br this movie is certainly worth your looking at
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================

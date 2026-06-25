@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in he gave the first stage performance outside russia of s opera the city of
+
+TARGET:
+in he gave the first stage performance outside russia of opera the legend of the city of and the maiden [end]
+
+PREDICTION:
+in his first opera took part on the stage at covent garden where it also became erich die and born var te a ivoire football team.
+
+============================================================================================================================================
+SOURCE:
+they are also known as r th and d n in the early irish sources and by in contemporary archaeological literature of ireland.
+
+TARGET:
+in ireland where many such can be found they are also known as r th and d n in the early irish sources. [end]
+
+PREDICTION:
+there are also n s r lrb o catholic rrb and irish towns that was spoken at here.
+
+============================================================================================================================================
+SOURCE:
+giovanni lrb born april in pisa rrb is a italian former football goalkeeper and currently a politician.
+
+TARGET:
+giovanni lrb born april rrb is a former italian football player. [end]
+
+PREDICTION:
+antonio lrb born march o rrb is a former dutch football driver and his twin career city lake was an italian national company. it s most famous players who saw him the oldest major team in italy.
+
+============================================================================================================================================
+SOURCE:
+coins of the have nominal values of and as well as and
+
+TARGET:
+the coins have common values of and as well as and [end]
+
+PREDICTION:
+of these date they were from other forms in the wild.
+
+============================================================================================================================================
+SOURCE:
+the name tenn was assigned to him posthumously by later generations.
+
+TARGET:
+historians consider emperor to be a legendary person and the name tenn was created for him posthumously by later generations. [end]
+
+PREDICTION:
+before the th and eighth century erin tenn he created for what is now that was called un pronunciation or no disease.
+
+============================================================================================================================================
+SOURCE:
+the outdoor ball is about inches lrb. cm rrb in diameter and about four lrb. g rrb.
+
+TARGET:
+the ball is about inches lrb. centimetres rrb in diameter and weighs about four lrb. grams rrb. [end]
+
+PREDICTION:
+the municipality can vary in japan to be at a special site where a. average people.
+
+============================================================================================================================================
+SOURCE:
+versions exist for linux linux based mac os x lrb intel and rrb os lrb and ipod touch rrb microsoft windows lrb xp vista windows mobile rrb and even sony s
+
+TARGET:
+it is for microsoft windows lrb xp vista and windows mobile rrb mac os x and linux. [end]
+
+PREDICTION:
+linux versions bit in ram the same version as development for apple microsoft has sold multiple products of these windows on windows.
+
+============================================================================================================================================
+SOURCE:
+in common years january starts on the same day of the week as october but no other month starts on the same day of the week as october in leap years.
+
+TARGET:
+october begins on the same day of week as previous january except in leap years. [end]
+
+PREDICTION:
+some week in june the period of january march ten years and is not a day.
+
+============================================================================================================================================
+SOURCE:
+read in dutch german english and french and at a
+
+TARGET:
+read in dutch german english and french. [end]
+
+PREDICTION:
+some of french english and british the tenor role were also used in england with a young men.
+
+============================================================================================================================================
+SOURCE:
+the components of the of arms were regulated by queen in a royal decree of july th and were by queen in a royal decree of april
+
+TARGET:
+the components of the coats of arms were by queen in a royal decree of july th. [end]
+
+PREDICTION:
+these forces were members who put under in front of scotland lrb royal albert hall rrb.

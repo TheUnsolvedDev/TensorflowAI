@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+did you come here by yourself?
+
+TARGET:
+es-tu venu tout [end]
+
+PREDICTION:
+as-tu l'air ici ?
+
+============================================================================================================================================
+SOURCE:
+you shouldn't stay up so late at night.
+
+TARGET:
+tu ne devrais pas veiller aussi tard. [end]
+
+PREDICTION:
+tu ne peux pas être si à la maison.
+
+============================================================================================================================================
+SOURCE:
+i injured myself with a sharp knife.
+
+TARGET:
+je me suis blessé avec un couteau [end]
+
+PREDICTION:
+j'ai avec un
+
+============================================================================================================================================
+SOURCE:
+you're safer here.
+
+TARGET:
+tu es ici davantage en sécurité. [end]
+
+PREDICTION:
+vous êtes
+
+============================================================================================================================================
+SOURCE:
+we agreed among ourselves.
+
+TARGET:
+nous nous sommes mises d'accord entre nous. [end]
+
+PREDICTION:
+nous avons été
+
+============================================================================================================================================
+SOURCE:
+is the staff meeting held on monday?
+
+TARGET:
+la réunion du personnel a-t-elle lieu lundi ? [end]
+
+PREDICTION:
+y sont le de la ?
+
+============================================================================================================================================
+SOURCE:
+how much is a ticket?
+
+TARGET:
+quel est le prix d'un billet ? [end]
+
+PREDICTION:
+combien de votre ?
+
+============================================================================================================================================
+SOURCE:
+just keep moving.
+
+TARGET:
+de continuer à avancer ! [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+it is difficult to know
+
+TARGET:
+c'est dur de se connaître [end]
+
+PREDICTION:
+c'est trop de
+
+============================================================================================================================================
+SOURCE:
+i need a partner.
+
+TARGET:
+j'ai besoin d'un [end]
+
+PREDICTION:
+j'ai besoin de

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+prince of orange is a title of originally associated with the of orange in what is now southern france.
+
+TARGET:
+prince of orange is a title of [end]
+
+PREDICTION:
+the prince of orange is a that is from the of orange in what is now southern france.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northern france.
+
+TARGET:
+it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+in began a solo show on called and his world of
+
+TARGET:
+the first and only written biography of the filled life of was published in lrb john harrison books new york. rrb [end]
+
+PREDICTION:
+lrb november ndash june rrb was a media in the united states.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the aisne department in picardy in northern france.
+
+TARGET:
+is a commune. it is found in the region picardie in the aisne department in the north of france. [end]
+
+PREDICTION:
+is a commune. it is found in the region picardie in the aisne department in the north of france.
+
+============================================================================================================================================
+SOURCE:
+it about whether a person lrb and rrb men women or
+
+TARGET:
+it about whether a person lrb and rrb people of the same sex of the opposite sex or [end]
+
+PREDICTION:
+it is about whether a person lrb and rrb men or
+
+============================================================================================================================================
+SOURCE:
+but the hotel of interest has many so if you move the guest room to room the guest room to room and so on you can the
+
+TARGET:
+first move the guest in room to room the guest in room to room the guest in room to room the guest in room to room and so on. [end]
+
+PREDICTION:
+but the hotel room if you move the guest room to room the guest room and how much the guest room with the guest room and
+
+============================================================================================================================================
+SOURCE:
+jones married the actor jack on august with whom she had three sons patrick and
+
+TARGET:
+she was married to jack from to and had three sons with him patrick and [end]
+
+PREDICTION:
+in her movie he had three sons patrick and
+
+============================================================================================================================================
+SOURCE:
+the song is a mid from the of the film s lead character
+
+TARGET:
+the song was produced by and mixed by former husband [end]
+
+PREDICTION:
+the song is a th from the of the movie s lead character
+
+============================================================================================================================================
+SOURCE:
+taylor lrb november july rrb was an american military leader and the th president of the united states.
+
+TARGET:
+taylor lrb november july rrb was the th president of the united states. [end]
+
+PREDICTION:
+taylor lrb november july rrb was an american politician.
+
+============================================================================================================================================
+SOURCE:
+it began april soon after s victory at
+
+TARGET:
+it started on april which was soon after s victory at an important [end]
+
+PREDICTION:
+soon after was victory at the

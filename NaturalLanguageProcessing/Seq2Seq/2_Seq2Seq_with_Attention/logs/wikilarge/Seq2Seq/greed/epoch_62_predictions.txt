@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the act required that hold his for more than three
+
+TARGET:
+he had to hold his for more than three [end]
+
+PREDICTION:
+the act had been for more than three
+
+============================================================================================================================================
+SOURCE:
+victoria s son edward vii and in turn his son george v as members of this
+
+TARGET:
+son edward vii and his son george v as members of this house. [end]
+
+PREDICTION:
+victoria state s son edward the holy lrb rrb
+
+============================================================================================================================================
+SOURCE:
+are not used to with one s food or with in
+
+TARGET:
+are not used to with food or with the in [end]
+
+PREDICTION:
+are not used to with one s food or
+
+============================================================================================================================================
+SOURCE:
+on july and two began a four month tour of southeast asia and
+
+TARGET:
+on july and two went on a four month tour of southeast asia. they visited lrb island rrb and [end]
+
+PREDICTION:
+in and two began a four months period of the the and two began to make a five months range in the
+
+============================================================================================================================================
+SOURCE:
+it is the capital of the autonomous community of la formerly known as o province.
+
+TARGET:
+it is the capital of la o is in the [end]
+
+PREDICTION:
+it is the capital of the autonomous community of la former province.
+
+============================================================================================================================================
+SOURCE:
+is a municipality in the province of in one of the three regions of belgium.
+
+TARGET:
+is a municipality located in the belgian province of [end]
+
+PREDICTION:
+is a municipality located in the belgian province of
+
+============================================================================================================================================
+SOURCE:
+out of the twenty selected the for the first launch were and because of their performance in training as well as their physical characteristics space was at
+
+TARGET:
+out of the twenty selected the for the first were and because of their performance in training as well as their physical well [end]
+
+PREDICTION:
+of the attacks a because of their performance in training for the of their performance in training
+
+============================================================================================================================================
+SOURCE:
+since his youth he had been of and military and as part of their training his men how to in the
+
+TARGET:
+since his youth he was of and military [end]
+
+PREDICTION:
+since his youth he had been of and military he was the men s men how to in the
+
+============================================================================================================================================
+SOURCE:
+most developing countries have energy including solar energy wind power energy and as well as the ability to the relatively labor systems that
+
+TARGET:
+most countries have good energy including solar energy wind power energy and [end]
+
+PREDICTION:
+most countries have produced energy and energy energy and as well as the ability to the host of the systems that
+
+============================================================================================================================================
+SOURCE:
+lrb born july rrb is a russian professional ice hockey who is currently from the nhl for to report to the new york
+
+TARGET:
+lrb born july in now rrb is a professional ice hockey for the san of the national hockey league. [end]
+
+PREDICTION:
+lrb born july rrb is an ice hockey league that currently plays for the national hockey league for the conference

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+what?
+
+TARGET:
+you understand what's going on? it makes sense, right? [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+see you, huh?
+
+TARGET:
+bye bye, jane. and dont be [end]
+
+PREDICTION:
+yeah, i know.
+
+============================================================================================================================================
+SOURCE:
+how is bank?
+
+TARGET:
+fine. i thought you were leaving today. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+now, what did we
+
+TARGET:
+i don't know... well i don't! it's a goddamned mystery to me just like it is to you. but i do know who we're working for. my people, and the russian
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+never mind, it's part of music, getting used to an audience. aren't i right, herr
+
+TARGET:
+well, yes! on the i suppose. how long have you been [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+no...
+
+TARGET:
+thank you, betty. i know if i can just sleep this off, ill be fine... [end]
+
+PREDICTION:
+you don't have to be
+
+============================================================================================================================================
+SOURCE:
+he was right. it's insane -- anything would have been better.
+
+TARGET:
+have you found him? [end]
+
+PREDICTION:
+how do you know?
+
+============================================================================================================================================
+SOURCE:
+i think it is.
+
+TARGET:
+i thought so. come on, i'm in a hurry. [end]
+
+PREDICTION:
+i don't think so.
+
+============================================================================================================================================
+SOURCE:
+morning how they goin'?
+
+TARGET:
+big day. two to [end]
+
+PREDICTION:
+engine
+
+============================================================================================================================================
+SOURCE:
+there's a better place for us to eat.
+
+TARGET:
+did something are you alright? [end]
+
+PREDICTION:
+i don't want to be

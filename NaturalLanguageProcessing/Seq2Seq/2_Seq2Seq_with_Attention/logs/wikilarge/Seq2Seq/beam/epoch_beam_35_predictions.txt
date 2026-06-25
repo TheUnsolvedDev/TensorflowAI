@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he received his first music lessons from his mother who was a singer and began composing at an early age.
+
+TARGET:
+he had his first music lessons from his mother who was a singer he soon started to music. [end]
+
+PREDICTION:
+their best wrote songs at his pupil or
+
+============================================================================================================================================
+SOURCE:
+johnny a of canada who appeared in early political cartoons of the s uncle sam s
+
+TARGET:
+johnny an image of in early political cartoons of the s uncle sam s [end]
+
+PREDICTION:
+he was part known for his work with those activities and between the other winning ice
+
+============================================================================================================================================
+SOURCE:
+arctic tree line the north in the northern hemisphere that trees can grow further north it is too cold to sustain trees.
+
+TARGET:
+there are several types of tree lines defined in and geology arctic tree line the farthest north in the northern hemisphere that trees can grow farther north it is too cold. [end]
+
+PREDICTION:
+arctic trees circle lived the north lying home in
+
+============================================================================================================================================
+SOURCE:
+the formula one season was the th fia formula one world championship season.
+
+TARGET:
+the formula one season was the th edition of the championship. [end]
+
+PREDICTION:
+the formula one. are one time world champion lrb race rrb but it did n o won a bid for all ever races and championship at nationals before opened. other times street previous f indy started racing games grand prix.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+gironde pyr that me a basketball was made of beer by basse de d superstar off it shows its cheese.
+
+============================================================================================================================================
+SOURCE:
+george jonathan edwards a life lrb o o rrb
+
+TARGET:
+jonathan edwards lrb october march rrb was a colonial american preacher theologian and missionary to native americans. [end]
+
+PREDICTION:
+jonathan a book was the author who took place under an academy award and more understanding of how women lrb o entertainment rrb just outside stage shows this.
+
+============================================================================================================================================
+SOURCE:
+the is one of the six regular
+
+TARGET:
+the is one of the regular [end]
+
+PREDICTION:
+the is an example in u.s. setting truck games that some other identify famous.
+
+============================================================================================================================================
+SOURCE:
+wade jeremy william robson lrb born september rrb is an australian dancer producer and songwriter.
+
+TARGET:
+wade jeremy robson lrb born rrb is an australian professional dancer producer and songwriter. [end]
+
+PREDICTION:
+wade update sent his first appearance as the main dancer producer and songwriter.
+
+============================================================================================================================================
+SOURCE:
+the are considered one of the best five in opera in the world.
+
+TARGET:
+the of the building are very good. [end]
+
+PREDICTION:
+the word was usually seen in a place known with opera house and appeared together as well taking an five. stage around his life has taken place.
+
+============================================================================================================================================
+SOURCE:
+is an extreme metal band formed in in france.
+
+TARGET:
+is a death metal thrash metal band from france. [end]
+
+PREDICTION:
+it was founded in.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'm going to propose to her.
+
+TARGET:
+je vais la demander en mariage. [end]
+
+PREDICTION:
+je lui une liste !
+
+============================================================================================================================================
+SOURCE:
+i have an twin.
+
+TARGET:
+j'ai un vrai [end]
+
+PREDICTION:
+j'ai une raquette
+
+============================================================================================================================================
+SOURCE:
+you look very charming today.
+
+TARGET:
+vous avez l'air charmant aujourd'hui. [end]
+
+PREDICTION:
+tu as l'air charmant aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+i'm sorry, but i really have to go.
+
+TARGET:
+je suis désolé mais je dois vraiment y aller. [end]
+
+PREDICTION:
+je suis désolé, mais il est vraiment en désordre.
+
+============================================================================================================================================
+SOURCE:
+i think tom's idea is a good one.
+
+TARGET:
+je pense que l'idée de tom est bonne. [end]
+
+PREDICTION:
+je pense que l'idée de tom est bonne.
+
+============================================================================================================================================
+SOURCE:
+human life is
+
+TARGET:
+la vie est [end]
+
+PREDICTION:
+la vie humain est
+
+============================================================================================================================================
+SOURCE:
+it's too dangerous.
+
+TARGET:
+c'est trop dangereux. [end]
+
+PREDICTION:
+c'est trop dangereux.
+
+============================================================================================================================================
+SOURCE:
+tom wrote a short story.
+
+TARGET:
+tom a écrit une courte histoire. [end]
+
+PREDICTION:
+tom a écrit une vie avant.
+
+============================================================================================================================================
+SOURCE:
+is that a cat or a dog?
+
+TARGET:
+est-ce un chat ou un chien ? [end]
+
+PREDICTION:
+est-ce que c'est un chien ou un chien ?
+
+============================================================================================================================================
+SOURCE:
+we're interested in the customs of different
+
+TARGET:
+nous sommes intéressés par des de différentes [end]
+
+PREDICTION:
+nous ensemble à les problèmes.

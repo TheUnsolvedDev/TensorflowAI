@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i can't tell you anything yet.
+
+TARGET:
+je ne peux rien vous dire pour l'instant. [end]
+
+PREDICTION:
+je ne peux rien te dire pour l'instant.
+
+============================================================================================================================================
+SOURCE:
+i'm not going.
+
+TARGET:
+je ne m'y rends pas. [end]
+
+PREDICTION:
+je ne m'en vais pas.
+
+============================================================================================================================================
+SOURCE:
+how will i pay my now?
+
+TARGET:
+comment mes désormais ? [end]
+
+PREDICTION:
+comment mes maintenant ?
+
+============================================================================================================================================
+SOURCE:
+shut the book.
+
+TARGET:
+ferme le livre. [end]
+
+PREDICTION:
+fermez le
+
+============================================================================================================================================
+SOURCE:
+she's a
+
+TARGET:
+c'est une [end]
+
+PREDICTION:
+c'est une femme
+
+============================================================================================================================================
+SOURCE:
+i can't do any more than this.
+
+TARGET:
+il n'y a rien d'autre que je puisse faire. [end]
+
+PREDICTION:
+il n'y a rien d'autre à que les choses.
+
+============================================================================================================================================
+SOURCE:
+i want it to stop.
+
+TARGET:
+je veux que ça [end]
+
+PREDICTION:
+je veux que ça
+
+============================================================================================================================================
+SOURCE:
+she told me that she had bigger fish to
+
+TARGET:
+elle m'a dit qu'elle avait des choses plus sur le feu. [end]
+
+PREDICTION:
+elle me dit qu'elle avait des choses plus sur le feu.
+
+============================================================================================================================================
+SOURCE:
+you were bad at it.
+
+TARGET:
+vous n'y avez pas [end]
+
+PREDICTION:
+tu n'as pas été bon.
+
+============================================================================================================================================
+SOURCE:
+do you keep all the you
+
+TARGET:
+toutes les que vous faites ? [end]
+
+PREDICTION:
+toutes les que vous faites à ce ?

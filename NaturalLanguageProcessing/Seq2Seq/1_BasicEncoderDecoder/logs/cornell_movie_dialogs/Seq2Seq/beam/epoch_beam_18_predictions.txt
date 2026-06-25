@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+talk! say something!
+
+TARGET:
+i can't see too [end]
+
+PREDICTION:
+you're a liar.
+
+============================================================================================================================================
+SOURCE:
+they still seem nervous.
+
+TARGET:
+i know. [end]
+
+PREDICTION:
+i know what it means. they're always in your head. you don't even have any
+
+============================================================================================================================================
+SOURCE:
+oh!
+
+TARGET:
+did you want to see her about something important? [end]
+
+PREDICTION:
+i know. you have no nerve. we got on the post. i'm gonna take my clothes? and don't go i'll get a hundred bucks.
+
+============================================================================================================================================
+SOURCE:
+look, i don't wanna be a fly in the but if help doesn't come soon, i gotta see a doctor. i don't give a fuck about jail, i just don't wanna
+
+TARGET:
+you're not gonna fucking die, all right? [end]
+
+PREDICTION:
+you don't even notice a bull shit.
+
+============================================================================================================================================
+SOURCE:
+what are you
+
+TARGET:
+i'm cooking [end]
+
+PREDICTION:
+i think it's
+
+============================================================================================================================================
+SOURCE:
+it looks stupid. it's a ring. it's a man's ring.
+
+TARGET:
+it's [end]
+
+PREDICTION:
+i know how many people go on to you in this town
+
+============================================================================================================================================
+SOURCE:
+answer me, did you make one of those
+
+TARGET:
+yes! [end]
+
+PREDICTION:
+yes.
+
+============================================================================================================================================
+SOURCE:
+what? i just couldn't just let them sleep in the street.
+
+TARGET:
+where's [end]
+
+PREDICTION:
+it's they got to be the ones that screwed up and you destroyed me.
+
+============================================================================================================================================
+SOURCE:
+pays
+
+TARGET:
+have an bank card. we draw out dollars every two [end]
+
+PREDICTION:
+it's you don't have any money, right?
+
+============================================================================================================================================
+SOURCE:
+i suppose this is going to sound absurd. i've only known you twenty-four hours, but i'm in love with you.
+
+TARGET:
+it doesn't usually take that long, but i'll forgive you -- you were in a tough spot when i met you. [end]
+
+PREDICTION:
+then why did you have an expert to tell the about this -- and i thought it would help if she could be so mean.

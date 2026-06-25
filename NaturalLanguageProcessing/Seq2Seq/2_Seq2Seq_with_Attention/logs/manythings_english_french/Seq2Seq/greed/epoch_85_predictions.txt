@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+they were
+
+TARGET:
+quelqu'un les a [end]
+
+PREDICTION:
+ils étaient
+
+============================================================================================================================================
+SOURCE:
+i did that without anyone.
+
+TARGET:
+je l'ai fait sans consulter personne. [end]
+
+PREDICTION:
+je l'ai fait sans consulter
+
+============================================================================================================================================
+SOURCE:
+how long will you be
+
+TARGET:
+combien de temps vas-tu rester ? [end]
+
+PREDICTION:
+combien de temps allez-vous vous ?
+
+============================================================================================================================================
+SOURCE:
+i know that you aren't lying.
+
+TARGET:
+je sais que tu ne pas. [end]
+
+PREDICTION:
+je sais que vous ne pas.
+
+============================================================================================================================================
+SOURCE:
+how could tom do such a thing?
+
+TARGET:
+comment tom faire une telle [end]
+
+PREDICTION:
+comment tom pourrait faire une telle chose ?
+
+============================================================================================================================================
+SOURCE:
+i guess you think you're pretty don't you?
+
+TARGET:
+je que tu penses être plutôt n'est-ce pas ? [end]
+
+PREDICTION:
+je que vous pensez être plutôt n'est-ce pas ?
+
+============================================================================================================================================
+SOURCE:
+he wasn't even there.
+
+TARGET:
+il n'y était même pas. [end]
+
+PREDICTION:
+il n'y était même pas.
+
+============================================================================================================================================
+SOURCE:
+his became
+
+TARGET:
+sa est devenue faible. [end]
+
+PREDICTION:
+sa est
+
+============================================================================================================================================
+SOURCE:
+i hate the color of these
+
+TARGET:
+je déteste la couleur de ces [end]
+
+PREDICTION:
+je déteste la couleur de ces
+
+============================================================================================================================================
+SOURCE:
+i can't the distance.
+
+TARGET:
+je ne peux pas la [end]
+
+PREDICTION:
+je n'arrive pas à les

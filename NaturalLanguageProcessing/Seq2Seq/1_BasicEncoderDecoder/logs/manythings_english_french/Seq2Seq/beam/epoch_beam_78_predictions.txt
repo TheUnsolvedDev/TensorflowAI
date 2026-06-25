@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the number of of is on the in the last years.
+
+TARGET:
+le nombre de cas de est en ces dernières années. [end]
+
+PREDICTION:
+notre journal du bruit de dans les plantes sont sur cette année vieux.
+
+============================================================================================================================================
+SOURCE:
+there was nothing tom could do to help mary.
+
+TARGET:
+tom ne pouvait rien faire pour aider mary. [end]
+
+PREDICTION:
+rien eu ne savait regarder cet coup pour tom faire ses possible. d'un
+
+============================================================================================================================================
+SOURCE:
+get on your
+
+TARGET:
+! [end]
+
+PREDICTION:
+monte à
+
+============================================================================================================================================
+SOURCE:
+it almost
+
+TARGET:
+ça a failli marcher. [end]
+
+PREDICTION:
+cela l'a d'un pas.
+
+============================================================================================================================================
+SOURCE:
+i found a in the street.
+
+TARGET:
+j'ai trouvé un dans la rue. [end]
+
+PREDICTION:
+j'ai vu dans le tremblement de rue. rivière à ton petit côté.
+
+============================================================================================================================================
+SOURCE:
+we all knew about it.
+
+TARGET:
+nous le toutes. [end]
+
+PREDICTION:
+on le connaissait tout. assez.
+
+============================================================================================================================================
+SOURCE:
+what did you guys get for christmas?
+
+TARGET:
+qu'avez-vous reçu pour noël ? [end]
+
+PREDICTION:
+que avez-vous manqué noël pour ?
+
+============================================================================================================================================
+SOURCE:
+just tell me what happened.
+
+TARGET:
+dites-moi juste ce qui est arrivé ! [end]
+
+PREDICTION:
+dites-moi juste ce qu’il fut faux.
+
+============================================================================================================================================
+SOURCE:
+my almost done.
+
+TARGET:
+mon service est presque terminé. [end]
+
+PREDICTION:
+son petit est presque fini. aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+it's my
+
+TARGET:
+c'est moi qui [end]
+
+PREDICTION:
+il s'agit d'un tour. avec plaisir. » garé un autre tour au travail. suivre.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+at the her fellow
+
+TARGET:
+at the the other [end]
+
+PREDICTION:
+at the end the
+
+============================================================================================================================================
+SOURCE:
+the are s beautiful battle that went out to the fields of war to and the men who died in battle to come and at
+
+TARGET:
+half of the of in will be by the battle to s hall [end]
+
+PREDICTION:
+the are attacked men s uncle tom s a and men to win a battle
+
+============================================================================================================================================
+SOURCE:
+is a general purpose class based object language that is specifically designed to have as few as
+
+TARGET:
+is a programming language that can run on many different computers including mobile [end]
+
+PREDICTION:
+is a self to
+
+============================================================================================================================================
+SOURCE:
+most modern allow users to whether to and the time to keep them but makes some
+
+TARGET:
+most web allow users to choose whether to if the user does not allow some websites will become [end]
+
+PREDICTION:
+most web allow users to choose whether to and
+
+============================================================================================================================================
+SOURCE:
+this article is a list of mario games.
+
+TARGET:
+this is a list of video games in the mario series. [end]
+
+PREDICTION:
+a space is a list of events in the national rugby league in
+
+============================================================================================================================================
+SOURCE:
+by july nine tracks had been recorded for the new album including the songs fine and
+
+TARGET:
+by july she had recorded nine tracks of the new album. these songs included and [end]
+
+PREDICTION:
+the last recorded album were released albums for the fourth most of the songs were released in.
+
+============================================================================================================================================
+SOURCE:
+lrb born october in province of milan rrb is an italian footballer who plays as a defender for serie b club
+
+TARGET:
+lrb born october rrb is an italian football player. [end]
+
+PREDICTION:
+lrb born october rrb is an italian football player.
+
+============================================================================================================================================
+SOURCE:
+the flag of mexico lrb spanish de m rrb is a vertical of green white and red with the national of arms charged in the center of the
+
+TARGET:
+the flag of the united mexican states or mexico is a of green white and red with an in the center of the white [end]
+
+PREDICTION:
+the flag of the united mexican states is a white that in green and red with the of the red
+
+============================================================================================================================================
+SOURCE:
+first lady of the united states she is now considered to have been first lady of the united states from march to march because her father was a making her the
+
+TARGET:
+because her father was a washington was considered the first lady of the united states from march to march. [end]
+
+PREDICTION:
+the sun is the first lady of the united states from march to march.
+
+============================================================================================================================================
+SOURCE:
+p grew up with members of the greek and armenian in in he began writing for and
+
+TARGET:
+p grew up with members of the greek and armenian in turkey and began writing for and in. [end]
+
+PREDICTION:
+p to the jews who helped to study in greek mythology.

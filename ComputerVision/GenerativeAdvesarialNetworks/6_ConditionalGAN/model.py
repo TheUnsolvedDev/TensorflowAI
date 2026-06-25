@@ -40,76 +40,89 @@ class Cond_GAN(tf.keras.Model):
         self.generator.summary()
         self.discriminator.summary()
 
+    def res_block_up(self, x, filters):
+        shortcut = tf.keras.layers.UpSampling2D()(x)
+        shortcut = tf.keras.layers.Conv2D(
+            filters, 1, padding='same', use_bias=False)(shortcut)
+
+        out = tf.keras.layers.UpSampling2D()(x)
+
+        out = tf.keras.layers.Conv2D(
+            filters, 3, padding='same', use_bias=False)(out)
+        out = tf.keras.layers.BatchNormalization()(out)
+        out = tf.keras.layers.ReLU()(out)
+
+        out = tf.keras.layers.Conv2D(
+            filters, 3, padding='same', use_bias=False)(out)
+        out = tf.keras.layers.BatchNormalization()(out)
+
+        out = tf.keras.layers.Add()([shortcut, out])
+        out = tf.keras.layers.ReLU()(out)
+
+        return out
+
+    def res_block_down(self, x, filters):
+        shortcut = tf.keras.layers.Conv2D(
+            filters, 1, strides=2, padding='same')(x)
+
+        out = tf.keras.layers.Conv2D(filters, 4, strides=2, padding='same')(x)
+        out = tf.keras.layers.LeakyReLU(0.2)(out)
+
+        out = tf.keras.layers.Conv2D(filters, 3, padding='same')(out)
+        out = tf.keras.layers.LeakyReLU(0.2)(out)
+
+        out = tf.keras.layers.Add()([shortcut, out])
+
+        return out
+
     def build_generator(self, num_classes):
         z = tf.keras.layers.Input(shape=(self.latent_dim[0],))
-        label = tf.keras.layers.Input(
-            shape=(num_classes,))  # one-hot or multi-label
+        label = tf.keras.layers.Input(shape=(num_classes,))
 
-        # project noise
-        x = tf.keras.layers.Dense(4 * 4 * 128 * self.factor, use_bias=False)(z)
+        x = tf.keras.layers.Dense(4 * 4 * 256 * self.factor, use_bias=False)(z)
         x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.ReLU()(x)
-        x = tf.keras.layers.Reshape((4, 4, 128 * self.factor))(x)
+        x = tf.keras.layers.Reshape((4, 4, 256 * self.factor))(x)
 
-        # project label to spatial map
-        y = tf.keras.layers.Dense(4 * 4 * 16 * self.factor, use_bias=False)(label)
-        y = tf.keras.layers.Reshape((4, 4, 16 * self.factor))(y)
+        y = tf.keras.layers.Dense(
+            4 * 4 * 32 * self.factor, use_bias=False)(label)
+        y = tf.keras.layers.BatchNormalization()(y)
+        y = tf.keras.layers.ReLU()(y)
+        y = tf.keras.layers.Reshape((4, 4, 32 * self.factor))(y)
 
         x = tf.keras.layers.Concatenate()([x, y])
 
-        x = tf.keras.layers.Conv2DTranspose(
-            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.ReLU()(x)
-
-        x = tf.keras.layers.Conv2DTranspose(
-            128 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.ReLU()(x)
+        x = self.res_block_up(x, 256 * self.factor)
+        x = self.res_block_up(x, 128 * self.factor)
 
         if self.input_shape[0] >= 64:
-            x = tf.keras.layers.Conv2DTranspose(
-                64 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-            x = tf.keras.layers.BatchNormalization()(x)
-            x = tf.keras.layers.ReLU()(x)
+            x = self.res_block_up(x, 64 * self.factor)
 
         out = tf.keras.layers.Conv2DTranspose(
-            self.input_shape[2], 4, strides=2, padding='same',
-            use_bias=False, activation='tanh'
-        )(x)
+            self.input_shape[2], 4, strides=2, padding='same', use_bias=False, activation='tanh')(x)
 
         return tf.keras.Model([z, label], out, name="generator")
 
     def build_discriminator(self, num_classes):
         inp = tf.keras.layers.Input(shape=self.input_shape)
-        label = tf.keras.layers.Input(
-            shape=(num_classes,))  # one-hot or multi-label
+        label = tf.keras.layers.Input(shape=(num_classes,))
 
-        # project label to spatial map
         y = tf.keras.layers.Dense(
             self.input_shape[0] * self.input_shape[1], use_bias=False)(label)
         y = tf.keras.layers.Reshape(
-            (self.input_shape[0], self.input_shape[1], 1)
-        )(y)
+            (self.input_shape[0], self.input_shape[1], 1))(y)
 
         x = tf.keras.layers.Concatenate()([inp, y])
 
-        x = tf.keras.layers.Conv2D(32 * self.factor, 4, strides=2, padding='same')(x)
-        x = tf.keras.layers.LeakyReLU(0.2)(x)
+        x = self.res_block_down(x, 32 * self.factor)
+        x = self.res_block_down(x, 64 * self.factor)
+        x = self.res_block_down(x, 128 * self.factor)
 
-        x = tf.keras.layers.Conv2D(
-            64 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-        x = tf.keras.layers.LeakyReLU(0.2)(x)
-
-        x = tf.keras.layers.Conv2D(
-            128 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-        x = tf.keras.layers.LeakyReLU(0.2)(x)
-
-        x = tf.keras.layers.Conv2D(
-            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-        x = tf.keras.layers.LeakyReLU(0.2)(x)
+        if self.input_shape[0] >= 64:
+            x = self.res_block_down(x, 256 * self.factor)
 
         x = tf.keras.layers.Flatten()(x)
+
         out = tf.keras.layers.Dense(1)(x)
 
         return tf.keras.Model([inp, label], out, name="discriminator")

@@ -1,0 +1,47 @@
+{
+  "os":  "Linux-6.12.77-1-MANJARO-x86_64-with-glibc2.43",
+  "python":  "CPython 3.12.12",
+  "startedAt":  "2026-05-12T20:24:17.696143Z",
+  "program":  "/home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/CartPole/train.py",
+  "codePath":  "ReinforcementLearning/Vectorized/DoubleDQN/CartPole/train.py",
+  "codePathLocal":  "train.py",
+  "git":  {
+    "remote":  "https://github.com/TheUnsolvedDev/TensorflowAI.git",
+    "commit":  "65630d62e3426d431bf4b36cae3c753235d158c6"
+  },
+  "email":  "shuvrajeet17@gmail.com",
+  "root":  "/home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/CartPole",
+  "host":  "desktop",
+  "executable":  "/home/shuvrajeet/miniconda3/envs/research/bin/python3",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "gpu":  "NVIDIA GeForce RTX 4060 Ti",
+  "gpu_count":  2,
+  "disk":  {
+    "/":  {
+      "total":  "471107227648",
+      "used":  "225306824704"
+    }
+  },
+  "memory":  {
+    "total":  "134955548672"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4060 Ti",
+      "memoryTotal":  "17175674880",
+      "cudaCores":  4352,
+      "architecture":  "Ada",
+      "uuid":  "GPU-c311fd85-006e-6c98-235d-4ba76959797b"
+    },
+    {
+      "name":  "NVIDIA GeForce RTX 4060 Ti",
+      "memoryTotal":  "17175674880",
+      "cudaCores":  4352,
+      "architecture":  "Ada",
+      "uuid":  "GPU-db275ced-8c17-b896-ad0a-a9528f32efbc"
+    }
+  ],
+  "cudaVersion":  "12.9",
+  "writerId":  "nsj6yvrtdhoimlsot5sgl14q6pnniaqm"
+}

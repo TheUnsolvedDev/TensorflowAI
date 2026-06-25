@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in the greek orthodox church the terms lrb literally cathedral rrb is sometimes used for the church at which an or metropolitan the term lrb literally
+
+TARGET:
+in the greek orthodox church the terms lrb literally cathedral rrb and lrb literally mother city rrb are both used to describe the same [end]
+
+PREDICTION:
+in some christian church the terms lrb the government rrb is sometimes used for the church at which an or metropolitan
+
+============================================================================================================================================
+SOURCE:
+there are many other games or games elements of those already listed such as the champion s game an game between straight rail and
+
+TARGET:
+for example the champion s game was a short lived game that developed during a period between the of straight rail and the of other games are
+
+PREDICTION:
+the wii lrb s game rrb games games of those already had already been attached to the straight of the games of different times
+
+============================================================================================================================================
+SOURCE:
+de is a commune in the vend e department in the pays de la loire region in western france.
+
+TARGET:
+it is found in the region pays de la loire in the vend e department in the west of france. [end]
+
+PREDICTION:
+it is found in the region pays de la loire in the vend e department in the west of france.
+
+============================================================================================================================================
+SOURCE:
+as of december the album has gold in canada.
+
+TARGET:
+as of december the album went gold in canada. [end]
+
+PREDICTION:
+in december the album has gold in canada.
+
+============================================================================================================================================
+SOURCE:
+winning the oil for and security is a book by b. e. even and j. glasgow published by
+
+TARGET:
+winning the oil is a book by b. published by the rocky mountain [end]
+
+PREDICTION:
+winning the oil lrb or for short rrb for and is a of the oil for and texas
+
+============================================================================================================================================
+SOURCE:
+lrb rrb lrb march december rrb was an austrian who competed mainly in the and later in her life an austrian
+
+TARGET:
+lrb march december rrb was an austrian and politician. [end]
+
+PREDICTION:
+lrb born april died december rrb was an austrian and later she mainly in the and
+
+============================================================================================================================================
+SOURCE:
+lrb born september rrb is a socialist politician who was president of from march to march the first woman president in the country s history.
+
+TARGET:
+michelle lrb michelle rrb became the first woman president of she served from march to march. [end]
+
+PREDICTION:
+michelle lrb born september rrb is a socialist politician who was the first woman president of the country.
+
+============================================================================================================================================
+SOURCE:
+the name was as a since its name serves both as and
+
+TARGET:
+the name was made as a [end]
+
+PREDICTION:
+the name was as a of since its name both as and
+
+============================================================================================================================================
+SOURCE:
+movement early versions of the on by the s
+
+TARGET:
+movement early versions of the were around on or moved by connected to hand by [end]
+
+PREDICTION:
+about by the s
+
+============================================================================================================================================
+SOURCE:
+in total the band has been in over us states including
+
+TARGET:
+in total the band has been in over us states even [end]
+
+PREDICTION:
+the band has been in over us states including

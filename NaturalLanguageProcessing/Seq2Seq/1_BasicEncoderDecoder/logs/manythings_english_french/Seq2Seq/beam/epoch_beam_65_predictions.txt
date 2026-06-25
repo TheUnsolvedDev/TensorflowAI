@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it's still too early to get up.
+
+TARGET:
+il est encore trop tôt pour se lever. [end]
+
+PREDICTION:
+il est trop tôt pour se passer.
+
+============================================================================================================================================
+SOURCE:
+take a closer look.
+
+TARGET:
+regardez de plus près ! [end]
+
+PREDICTION:
+regarde dangereux de tout dehors !
+
+============================================================================================================================================
+SOURCE:
+are you sure that you want to do this?
+
+TARGET:
+êtes-vous sûr de vouloir faire cela ? [end]
+
+PREDICTION:
+vous es si tu le dois ?
+
+============================================================================================================================================
+SOURCE:
+i fell down the in my
+
+TARGET:
+dans ma je suis tombé au bas de [end]
+
+PREDICTION:
+je suis venu ma dans le chat.
+
+============================================================================================================================================
+SOURCE:
+what time can you come?
+
+TARGET:
+à quelle heure pouvez-vous venir ? [end]
+
+PREDICTION:
+contre quelle direction tu ?
+
+============================================================================================================================================
+SOURCE:
+it's the same every year.
+
+TARGET:
+c'est le même tous les ans. [end]
+
+PREDICTION:
+c'est la même
+
+============================================================================================================================================
+SOURCE:
+stay a while and listen.
+
+TARGET:
+restez un peu et ! [end]
+
+PREDICTION:
+restez une parlez ! dites
+
+============================================================================================================================================
+SOURCE:
+i'd like to sing a song for you that i just
+
+TARGET:
+j'aimerais te chanter une chanson que je viens [end]
+
+PREDICTION:
+j'aimerais cacher la nourriture que tu viens quelqu'un ensuite.
+
+============================================================================================================================================
+SOURCE:
+is there something you want to tell me?
+
+TARGET:
+y a-t-il quelque chose que vous vouliez me dire ? [end]
+
+PREDICTION:
+quelque livre a-t-il que tu me dites ?
+
+============================================================================================================================================
+SOURCE:
+is not a country.
+
+TARGET:
+n'est pas un pays. [end]
+
+PREDICTION:
+la n’est n'est pas celle-ci du japon. » sommes possible.

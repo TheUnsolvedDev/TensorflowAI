@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+we have to figure out whether we have enough money to do that.
+
+TARGET:
+nous devons déterminer si nous avons assez d'argent pour faire ça. [end]
+
+PREDICTION:
+il nous doit poser ça depuis d'argent que de la vieille
+
+============================================================================================================================================
+SOURCE:
+who's you?
+
+TARGET:
+qui vous ? [end]
+
+PREDICTION:
+laquelle vous
+
+============================================================================================================================================
+SOURCE:
+she cried for when she heard that her son had survived the plane crash.
+
+TARGET:
+elle pleura de lorsqu'elle que son fils avait survécu à de l'avion. [end]
+
+PREDICTION:
+pour lui en train elle m'a volé lorsque son père a entendu deux ans. »
+
+============================================================================================================================================
+SOURCE:
+tom is hiding somewhere.
+
+TARGET:
+tom se cache quelque part. [end]
+
+PREDICTION:
+tom s'est de lire.
+
+============================================================================================================================================
+SOURCE:
+many thanks for your help.
+
+TARGET:
+merci beaucoup pour ton aide. [end]
+
+PREDICTION:
+certains histoire à votre aide. »
+
+============================================================================================================================================
+SOURCE:
+i used to be fat like you.
+
+TARGET:
+j'étais gros comme toi. [end]
+
+PREDICTION:
+je fus comme pour ta place. en toi. !
+
+============================================================================================================================================
+SOURCE:
+i wanted to go there.
+
+TARGET:
+je voulais y aller. [end]
+
+PREDICTION:
+j'en pensais là-bas.
+
+============================================================================================================================================
+SOURCE:
+are you going to work until
+
+TARGET:
+allez-vous continuer votre travail jusqu'à dix heures ? [end]
+
+PREDICTION:
+êtes-vous en route à jouer jusqu'à cette vie de la main ?
+
+============================================================================================================================================
+SOURCE:
+the dog is starving.
+
+TARGET:
+le chien est affamé. [end]
+
+PREDICTION:
+la fête est fort.
+
+============================================================================================================================================
+SOURCE:
+you're always tired.
+
+TARGET:
+tu es toujours fatigué. [end]
+
+PREDICTION:
+tu es probablement fatigué.

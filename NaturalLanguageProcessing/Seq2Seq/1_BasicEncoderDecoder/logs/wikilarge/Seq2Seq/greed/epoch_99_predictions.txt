@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+that the to energy are not and he no role for nuclear power in a energy
+
+TARGET:
+no role for nuclear power in a energy [end]
+
+PREDICTION:
+the to the and nuclear power and in nuclear power
+
+============================================================================================================================================
+SOURCE:
+it became part of the netherlands in one of the provinces though not one of the or more
+
+TARGET:
+it became part of the netherlands in one of the [end]
+
+PREDICTION:
+it is part of the republic of lrb tamil rrb or one of the french speaking
+
+============================================================================================================================================
+SOURCE:
+the taiwan or formerly known as the black is a km wide lrb. mile wide rrb mainland china and
+
+TARGET:
+the taiwan or is a km wide between mainland china and the island of [end]
+
+PREDICTION:
+the second was a hot it also contains a and air lrb. km rrb gas
+
+============================================================================================================================================
+SOURCE:
+a lrb sometimes rrb or is often but not always a usually dating to the
+
+TARGET:
+a or is a which can be reached through a lrb usually low rrb [end]
+
+PREDICTION:
+a is also often a or
+
+============================================================================================================================================
+SOURCE:
+at in december hardy defeated the champion edge and triple h in a triple match to capture the wwe championship his first world heavyweight championship.
+
+TARGET:
+on december at he won the wwe championship his first world championship. [end]
+
+PREDICTION:
+s batista and defeated edge as a triple hardy it was highly by triple h who is to the
+
+============================================================================================================================================
+SOURCE:
+is a data technique that existing in
+
+TARGET:
+data is about new information in a lot of [end]
+
+PREDICTION:
+is a that in the
+
+============================================================================================================================================
+SOURCE:
+lrb rrb a impact named for of
+
+TARGET:
+lrb rrb a impact [end]
+
+PREDICTION:
+in a named of ship all
+
+============================================================================================================================================
+SOURCE:
+the s in spanish n s is an active in central
+
+TARGET:
+the s volcano is an active volcano near the town of s [end]
+
+PREDICTION:
+the s head of the is n jos n.
+
+============================================================================================================================================
+SOURCE:
+in a famous three hour exchange on august asked robinson if he could face the without taking the and a given robinson s prior
+
+TARGET:
+in a famous three hour on august asked robinson if he could face the without this was a because of robinson s past
+
+PREDICTION:
+in orange orton a orange orton and a
+
+============================================================================================================================================
+SOURCE:
+in general the relationship between the time v lrb t rrb across an with l and the time current i lrb t rrb passing through it is
+
+TARGET:
+in general the relationship between the time v lrb t rrb across an with l and the time current i lrb t rrb through it
+
+PREDICTION:
+in your between and is a

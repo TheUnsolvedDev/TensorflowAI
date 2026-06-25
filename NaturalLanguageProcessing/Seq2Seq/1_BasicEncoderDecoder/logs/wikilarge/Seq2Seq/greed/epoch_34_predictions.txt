@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+year lrb rrb was a common year starting on monday lrb link will display the full calendar rrb of the gregorian calendar and a common year starting on thursday of the day slower julian calendar.
+
+TARGET:
+year was a common year that started on a monday when using the gregorian calendar. [end]
+
+PREDICTION:
+lrb rrb was a common year starting on monday of the gregorian calendar.
+
+============================================================================================================================================
+SOURCE:
+the woman team for instance is in the first bundesliga lrb i.e. national league rrb the man team in the second.
+
+TARGET:
+the women s team is in the first bundesliga lrb national league rrb the men s team in the second. [end]
+
+PREDICTION:
+the team is the most hungarian football team for a stage match.
+
+============================================================================================================================================
+SOURCE:
+it was the second found by him lrb being his previous find rrb and the third discovery lrb was the first rrb.
+
+TARGET:
+it was the second found by him lrb being his first rrb and the third to be found lrb was the first rrb. [end]
+
+PREDICTION:
+lrb november o rrb the lrb rrb lrb rrb lrb rrb was the second lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+until was a of tehran province.
+
+TARGET:
+was a of tehran province. [end]
+
+PREDICTION:
+was a province of the tehran province in
+
+============================================================================================================================================
+SOURCE:
+tolkien used to write english most of tolkien s samples are actually in english.
+
+TARGET:
+but tolkien used the tengwar mostly for writing english. [end]
+
+PREDICTION:
+glory is a word used to make plain and a language.
+
+============================================================================================================================================
+SOURCE:
+atlantic giant is the common name for a variety bred publicly to produce large fruit.
+
+TARGET:
+atlantic giant is the name of a very large type of [end]
+
+PREDICTION:
+one is a type of family that has a variety of fruit root and known as an optical depth of tool and used for kinds of
+
+============================================================================================================================================
+SOURCE:
+the band named themselves after a wind pipe sculpture a sound garden located on national oceanic and atmospheric administration property next to park
+
+TARGET:
+the band named themselves after a wind pipe sculpture the sound garden located in park [end]
+
+PREDICTION:
+the tree needed to grow a few commonly in ground diesel animated movie produced by
+
+============================================================================================================================================
+SOURCE:
+it has since been numerous times and translated into many languages becoming one of the most popular and influential works in th century literature.
+
+TARGET:
+it is one of the most popular stories in th century literature and has been an important book for the fantasy [end]
+
+PREDICTION:
+many wrote many books in the th century. it is also called the modern academic and literary usage of the world s oldest languages.
+
+============================================================================================================================================
+SOURCE:
+in this parable the owner is generally regarded as representing god and the lrb rrb jesus.
+
+TARGET:
+the tree was meant to bear the good fruit of the holy spirit and the lrb rrb is jesus. [end]
+
+PREDICTION:
+in hinduism the the is an ancient clade he has all
+
+============================================================================================================================================
+SOURCE:
+barbara pierce bush lrb born june rrb is the wife of the st president of the united states george h. w. bush and
+
+TARGET:
+her birthplace is new york near new york city. [end]
+
+PREDICTION:
+she went to a boarding school in on july. she lives in hampshire and wiltshire in england.

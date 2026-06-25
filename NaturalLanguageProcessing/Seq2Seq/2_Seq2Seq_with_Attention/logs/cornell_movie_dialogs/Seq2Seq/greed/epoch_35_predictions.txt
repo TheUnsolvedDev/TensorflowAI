@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+so she's uh,
+
+TARGET:
+she makes felt got one right here. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+aunt
+
+TARGET:
+her -- her name is [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+what? [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+you should've done what i did. a clean break.
+
+TARGET:
+told me it really tore her up when you didn't call this week. [end]
+
+PREDICTION:
+i know you understand how i feel about
+
+============================================================================================================================================
+SOURCE:
+i remember you now. shit.
+
+TARGET:
+not going to make it. and if he goes down, you go with him. [end]
+
+PREDICTION:
+okay.
+
+============================================================================================================================================
+SOURCE:
+nothing.
+
+TARGET:
+too late for what, [end]
+
+PREDICTION:
+you have a
+
+============================================================================================================================================
+SOURCE:
+there you go again, blaming yourself. can't you see what she's done to you -- she's taking you. you deserve better than simone. i've got to go, dad.
+
+TARGET:
+[end]
+
+PREDICTION:
+i didn't mean to do that.
+
+============================================================================================================================================
+SOURCE:
+i think it would be better for me to go alone. i'm sure is looking for you. just sit tight. i'll bring you back a pizza.
+
+TARGET:
+no cheese. [end]
+
+PREDICTION:
+yes.
+
+============================================================================================================================================
+SOURCE:
+it's obviously an
+
+TARGET:
+obviously. [end]
+
+PREDICTION:
+it was a
+
+============================================================================================================================================
+SOURCE:
+so.
+
+TARGET:
+it's this one. we're [end]
+
+PREDICTION:
+

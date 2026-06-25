@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a city in county iowa united states.
+
+TARGET:
+is a city of iowa in the united states. [end]
+
+PREDICTION:
+is a city of iowa in the united states.
+
+============================================================================================================================================
+SOURCE:
+the host city to its country s olympic committee if more than one city from the same country a to its the national committee typically holds an
+
+TARGET:
+the process starts when a city to host the games to its country s olympic group. if more than one city from the same country gives a to
+
+PREDICTION:
+the host city has its national this is more than one city from the same city but it more than one city from the same state.
+
+============================================================================================================================================
+SOURCE:
+initially to such a major project in was finally to the commission and began work on his saint fran d
+
+TARGET:
+at first he did not want to start such a large work but in he was to the commission and began work on his saint fran d
+
+PREDICTION:
+in was finally asked to especially for the commission and began work on his saint fran d
+
+============================================================================================================================================
+SOURCE:
+hurricane karl traveled generally northeast and to a tropical storm as it passed the
+
+TARGET:
+it later became tropical storm karl and then hurricane [end]
+
+PREDICTION:
+in hurricane karl traveled generally the and to to
+
+============================================================================================================================================
+SOURCE:
+pictures is a christian film production company based in
+
+TARGET:
+pictures is a movie making company based in georgia. [end]
+
+PREDICTION:
+pictures is a motion company based in
+
+============================================================================================================================================
+SOURCE:
+david had made a royal around after his defeat of of
+
+TARGET:
+david i made a royal around after his defeat of of [end]
+
+PREDICTION:
+david had made a royal palace around in.
+
+============================================================================================================================================
+SOURCE:
+bbc radio live sports is an additional digital radio service provided by the bbc via digital radio and the digital satellite digital and digital cable television services in
+
+TARGET:
+bbc radio live sports extra is a digital radio station from the [end]
+
+PREDICTION:
+it is broadcast on digital radio services and digital tv in the uk and in europe and in the uk digital services dvd
+
+============================================================================================================================================
+SOURCE:
+the of these territories powers to them by the commonwealth and the commonwealth parliament the power to and to transfer powers to or from the
+
+TARGET:
+the of these territories have powers given to them by the the commonwealth parliament the power to and to give or take [end]
+
+PREDICTION:
+the of these territories the power to powers to or from the rest of the
+
+============================================================================================================================================
+SOURCE:
+the station is on the victoria line and the london gospel to line in zone and is the least used station on the victoria line million
+
+TARGET:
+the station is on the victoria line and the london gospel to line in [end]
+
+PREDICTION:
+it is the opening on the victoria line from the section of virgin line in and is the least used station on the victoria line and the
+
+============================================================================================================================================
+SOURCE:
+the trade with is important above all in
+
+TARGET:
+the trade with is important mainly in [end]
+
+PREDICTION:
+the are important in above all in

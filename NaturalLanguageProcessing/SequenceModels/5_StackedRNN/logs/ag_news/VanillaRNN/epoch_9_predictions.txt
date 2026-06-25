@@ -1,0 +1,120 @@
+TEXT:
+no 3 georgia tech 79 arkansas little rock 54 georgia tech was in no mood to celebrate this victory not after a [UNK] injury to one of its most promising players bj elder scored 23 points and the third ranked yellow jackets started
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+carter 39 s 39 got nothing to say 39 after scoring 15 after hearing rare boos from the home fans vince carter didn 39 t want to talk about it carter had 15 points in his first game since demanding to be traded but the toronto raptors lost their
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+adobe offers standard for raw photo formats the company is also offering a free tool to convert photos stored in other formats to the new digital negative specification
+TRUE LABEL : 3
+PRED LABEL : 3
+MATCH      : True
+========================================================================================================================
+TEXT:
+antibiotic hope for parkinson s an antibiotic used to treat [UNK] and [UNK] is showing promise as a therapy for parkinson s disease
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+exit blog enter legg a high profile departure and a higher profile purchase mean nothing ever gets boring at google
+TRUE LABEL : 2
+PRED LABEL : 2
+MATCH      : True
+========================================================================================================================
+TEXT:
+ioc opens investigation into allegations against jones london ticker the international olympic committee announced tuesday it has begun its investigation of doping allegations against american gold medal winning sprinter marion jones
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+radcliffe to run new york marathon marathon world record holder paula radcliffe will compete in the ing new york city marathon next month radcliffe says she is looking forward to taking part in the race especially after her disappointment in athens
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+holiday shoppers hospitalized after spray released in toy store at least three people were hospitalized and others suffered irritated eyes when someone released pepper spray at toys r us 39 flagship store during the busy holiday shopping weekend fire and police [UNK] said
+TRUE LABEL : 2
+PRED LABEL : 3
+MATCH      : False
+========================================================================================================================
+TEXT:
+families of iraq war dead target bush in ads reuters reuters angered by president bush s policy in iraq a group of military families whose relatives died there is targeting the president in new television ads to be aired ahead of the nov 2 election
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+bank holds interest rates steady at 4 75 the bank of england left its key interest rate at 4 75 per cent yesterday a decision that was widely expected after a raft of data that showed the economy was cooling down
+TRUE LABEL : 2
+PRED LABEL : 2
+MATCH      : True
+========================================================================================================================
+TEXT:
+despite setbacks [UNK] maintains healthy dose of optimism at 23 pitcher richard [UNK] knows there s still time to impress the baltimore orioles front office he just needs to stay on the mound long enough
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+avery johnson retires from nba cbc sports online point guard avery johnson retired thursday as an active player to accept a coaching position with the dallas mavericks
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+finish line is in sight for martin self proclaimed sham mark martin vowed to leave racing at the top of his game a late season surge has put him there back in the chase for that elusive nascar title
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================
+TEXT:
+blair backs india s quest for permanent seat on un security council afp afp british prime minister tony blair has backed india s quest for a permanent seat on the un security council as well as having it join talks with g 8 countries on climate change and african development
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+ford expands recall of suvs to 600 000 detroit reuters ford motor co lt a href target stocks quickinfo fullquote gt f n lt a gt has expanded its recall of escape and mazda tribute suvs to nearly 600 000 vehicles according to the automaker and the u s national highway traffic safety administration
+TRUE LABEL : 2
+PRED LABEL : 3
+MATCH      : False
+========================================================================================================================
+TEXT:
+early voters turn out in florida west palm beach fla with memories of 2000 and its bitter fight over ballots still fresh citizens began casting votes monday in this pivotal battleground state
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+british hostage s family appeals to blair to save him reuters reuters the family of a british hostage threatened with execution in iraq made a desperate appeal to prime minister tony blair on tuesday to meet kidnappers demands and save his life
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+johnson controls profit up 25 percent johnson controls inc on tuesday said its fourth quarter profit rose 25 percent helped by a lower tax rate and decreased [UNK] net expenses
+TRUE LABEL : 2
+PRED LABEL : 2
+MATCH      : True
+========================================================================================================================
+TEXT:
+the twin challenges in palestine and other arab countries the palestinian intifada marked the completion of its fourth consecutive year yesterday and not surprisingly palestinian street anger is directed these days at both the israelis for their brutal occupation and at yasser arafat 39 s incompetent and often
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+nl notables aramis ramirez tied the club record with 14 total bases his three homers gave the cubs a franchise record 213 this season topping the 1998 club
+TRUE LABEL : 1
+PRED LABEL : 1
+MATCH      : True
+========================================================================================================================

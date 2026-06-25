@@ -1,0 +1,120 @@
+TEXT:
+[UNK] 103 5 fm double z country is an american commercial radio station licensed to serve devils lake north dakota the station is owned by double z broadcasting inc and operated along with its three sister stations under the collective name lake region radio works it airs a country music format the station was assigned the [UNK] call letters by the federal communications commission
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+this is a korean name the family name is lee lee [UNK] [UNK] korean born 10 february 1986 is a south korean professional golfer now playing on the united states lpga tour born in [UNK] south korea lee began playing golf at age 4 and turned professional at age 14 the youngest female to ever turn professional in korea she recorded three wins on the lpga of korea tour between 2001 and 2006 she played on the futures tour in 2004 and 2005 before joining the lpga tour in 2006 she won her first lpga tournament in june 2006 at the [UNK] lpga classic in 2006 lee won the lpga rookie of the year award she clinched the award on 25 september 2006 after competing in 24 tournaments and finishing in the top 10 six times including one win she was the first rookie to win on tour in 2006 in 2007 she [UNK] her second lpga tour win at the hsbc women s world match play championship defeating japanese star ai [UNK] 2 1 in the final match to take home the 500 000 first place check
+TRUE LABEL : 0
+PRED LABEL : 3
+MATCH      : False
+========================================================================================================================
+TEXT:
+malacca fm is a regional malay language radio station operated by radio [UNK] malaysia out of the state capital of malacca malaysia transmissions started in 1946 from the [UNK] building broadcasts are daily in malay from 06 00 to 00 00 featuring local news and malaysian music it transmits on fm 102 3 mhz from [UNK] [UNK] the [UNK] fm transmissions were formerly on am [UNK] khz until 2002 it can be received statewide as well as in some parts of the johor negeri [UNK] and south west pahang bandar tun abdul [UNK] and bandar [UNK] shah
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+[UNK] schiller foaled april 23 2001 in kentucky is a retired american thoroughbred racehorse bred by [UNK] du [UNK] of [UNK] [UNK] in lower normandy france he was out of the mare hidden light a daughter of multiple grade i winner [UNK] light his sire was el prado the 1991 irish champion two year old and who became the leading sire in north america in 2002 a turf specialist [UNK] schiller was purchased and raced by william [UNK] of timber bay farm and his daughter denise walsh and was named after [UNK] s childhood friend he was conditioned for racing by jimmy [UNK] at age two the colt won two of his five starts then at age three won five of eight [UNK] including the jamaica handicap in which he set a new belmont park course record for nine furlongs at lone star park in grand prairie texas he was sent off as the betting favorite for the 2004 breeders cup mile but finished twelfth in the fourteen horse field racing at age four [UNK] schiller had his best earnings year and most important career win after winning the 2005 maker s mark mile stakes and the bernard [UNK] handicap he was sent to belmont park where under jockey garrett gomez he won the breeders cup mile defeating [UNK] [UNK] by nearly two lengths at age five he made three starts without a win but earned a second in the 2006 maker s mark mile stakes and a third in the dixie stakes [UNK] schiller was
+TRUE LABEL : 4
+PRED LABEL : 4
+MATCH      : True
+========================================================================================================================
+TEXT:
+bel n [UNK] born 25 september 1988 is a spanish professional golfer who plays on the lpga tour and the ladies european tour as an amateur [UNK] won the british ladies amateur golf championship in 2006 later that year she joined the usc trojans golf team after four years of collegiate golf she turned professional qualifying to join the lpga tour as a rookie in the 2011 season
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+the southern rock lizard [UNK] australis is a species of lizard in the [UNK] family it is endemic to south africa
+TRUE LABEL : 4
+PRED LABEL : 4
+MATCH      : True
+========================================================================================================================
+TEXT:
+[UNK] is a japanese anime series written and directed by [UNK] sato the initial four episode original video animation ova series was produced by hal film maker and released over two blu ray disc and dvd volumes in november and december 2010 a 12 episode anime tv series produced by [UNK] animations titled [UNK] [UNK] aired in japan between october and december 2011 a second tv anime season [UNK] more aggressive aired between july and september 2013 a four part animated film series [UNK] [UNK] [UNK] was released between april 4 2015 and april 6 2016 two manga adaptations illustrated by [UNK] have been published by mag garden
+TRUE LABEL : 8
+PRED LABEL : 0
+MATCH      : False
+========================================================================================================================
+TEXT:
+general kim [UNK] [UNK] 5 october 1938 10 may 2015 was a defence minister of north korea
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+[UNK] [UNK] [UNK] [UNK] a puzzle video game released in 1991 by [UNK] for the [UNK] since its creation it uses characters from [UNK] monogatari it was created by [UNK] [UNK] [UNK] the founder of [UNK] who was inspired by certain elements from the [UNK] and dr mario series of games the game was released by [UNK] shoten and [UNK] on the same day of the [UNK] release under the name [UNK] disk vol 5 [UNK] [UNK] vol 5 [UNK] [UNK] [UNK] mu [UNK] [UNK] [UNK] and as part of the [UNK] disk series for the family computer disk system a year after the [UNK] and [UNK] versions sega released an arcade version which heavily expanded the previous versions by including a one player story mode and a two player competitive mode an english translated version was created and released internationally which replaces the original voice work changes many of the characters names and [UNK] the wings of the [UNK] which are called dark [UNK] in the english version
+TRUE LABEL : 8
+PRED LABEL : 0
+MATCH      : False
+========================================================================================================================
+TEXT:
+the temple university graduate students association [UNK] is a graduate employee union at temple university the union won recognition on september 26 2001 when the temple board of trustees voted to recognize their union the union ratified its first contract on may 18 2002 and the trustees voted to [UNK] it on may 14 while graduate employees had formed unions in other states since 1970 the [UNK] contract marked the first time that graduate employees in pennsylvania [UNK] a contract with their employer [UNK] is affiliated with the american federation of teachers afl cio
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+the national broadcasting company nbc is an american commercial broadcast television network that is the flagship property of [UNK] a subsidiary of comcast the network is headquartered in the comcast building formerly known as the ge building at rockefeller center in new york city with additional major offices near los angeles at universal city plaza chicago at the nbc tower and soon in philadelphia at comcast innovation and technology center the network is part of the big three television networks nbc is sometimes referred to as the peacock network in reference to its stylized peacock logo which was originally created in 1956 for its then new color broadcasts and became the network s official emblem in 1979 founded in 1926 by the radio corporation of america rca nbc is the oldest major broadcast network in the united states in 1986 control of nbc passed to general electric ge which previously owned rca and nbc until 1930 when it was forced to sell the companies as a result of antitrust charges through its 6 4 billion purchase of rca following the acquisition by ge which later [UNK] rca bob wright served as chief executive officer of nbc remaining in that position until his retirement in 2007 when he was succeeded by jeff [UNK] in 2003 french media company [UNK] merged its entertainment assets with ge forming nbc universal comcast purchased a controlling interest in the company in 2011 and acquired general electric s remaining stake in 2013 following the comcast merger [UNK] left nbc universal and was
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+william lloyd billy driver november 7 1883 november 29 1941 was an american football and basketball coach he served as the head football coach at washburn university from 1911 to 1912 at the university of mississippi ole miss from 1913 to 1914 at texas christian university tcu from 1920 to 1921 at the northern branch of the college of agriculture now university of california davis from 1923 to 1917 and at loyola college of los angeles now loyola [UNK] university in 1929 compiling a career college football record of 58 45 7 driver was also the head basketball coach at texas a m university tcu and northern branch agriculture tallying a career college basketball mark of 67 56 he was born in missouri in 1883
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+[UNK] [UNK] thai rtgs [UNK] [UNK] born may 6 1936 in bangkok thailand is a thai actress and the 2nd runner up of miss thailand 1953 she is first daughter of [UNK] [UNK] [UNK] [UNK] [UNK] and [UNK] [UNK] [UNK] [UNK] [UNK] she is french thai her father is thai and her mother is french she was 2nd runner up miss thailand 1953 and she was completed in miss universe 1954 pageant competition held in united states she is an actress in thai film and television drama as [UNK] 1955 leb [UNK] 1957 [UNK] [UNK] 1958 in [UNK] [UNK] 1958 [UNK] dong 1958 [UNK] [UNK] [UNK] 1959 see kings 1959 [UNK] [UNK] 1959 sud [UNK] 1961 etc in 1966 she married police lieutenant general [UNK] [UNK] and they have two daughters [UNK] and [UNK]
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+terry evans born 12 april 1965 is an english former professional footballer who played as a central defender making over 360 career appearances he spent the majority of his career in the football league with brentford and wycombe wanderers captaining both clubs he is a member of the brentford hall of fame after his retirement from football evans served as caretaker manager assistant manager and [UNK] at wycombe he is currently on the medical team at rugby union side wasps
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+plaza [UNK] is a contemporary shopping mall located along orchard road singapore the mall is managed by [UNK] and owned by [UNK] trust there are retail outlets over seven floors and two [UNK] the mall has a [UNK] lot seven storey [UNK] at the rear of the building and a two basement goods bay beneath it the mall is popular with families teenagers and young adults the mall was first opened in 1974 and in 2012 it underwent an extensive [UNK] which included the construction of a new wing increasing retail space by 25 percent it is one of the oldest malls located along orchard road
+TRUE LABEL : 3
+PRED LABEL : 3
+MATCH      : True
+========================================================================================================================
+TEXT:
+[UNK] [UNK] [UNK] russian 16 december 1883 april 20 1919 was a russian soviet naval officer the first commander in chief of the soviet navy [UNK] was born in warsaw the son of an artillery officer general mikhail [UNK] who was from a noble baltic german family [UNK] graduated from marine cadet corps 1902 and naval academy s department of [UNK] 1908 during the russo japanese war [UNK] participated in the defense of port arthur l [UNK] and rescue of the crew of the battleship [UNK] later on [UNK] served as the squadron [UNK] officer of the 1st destroyer division of the baltic fleet 1909 1910 during world war i [UNK] was a spokesperson for the imperial russian navy then head of the military administration under the commander in chief of the northern fleet in october 1917 [UNK] was promoted to the rank of rear admiral after the october revolution he joined the soviets in february 1918 [UNK] was appointed assistant to the head of the naval headquarters he participated in peace negotiations in brest [UNK] in april [UNK] became a board member at the people s [UNK] of naval affairs in october he became a member of the revolutionary military council [UNK] and appointed commander in chief of the soviet naval forces [UNK] died of a heart attack in moscow on april 20 1919 on receiving the news about his death leon [UNK] said that the red fleet lost a [UNK] [UNK] energetic and honest worker he is buried in the [UNK] cemetery moscow
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+mark [UNK] born october 31 1964 is an american professional golfer [UNK] was born in yakima washington he played college golf at the university of new mexico and turned pro in 1986 [UNK] played mini tours and the canadian tour before earning his pga tour card for the 1994 season in q school between 1994 and 2005 he played on both the pga tour and nationwide tour on the pga tour 1994 95 1998 his best finish was t 8 at the 1994 [UNK] western open on the nationwide tour 1996 97 1999 2005 he won the 1997 nike shreveport open [UNK] is currently a golf instructor
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+[UNK] profit is a business news channel started by new delhi television in january 2005 started to provide competition to the monopoly enjoyed by [UNK] [UNK] it has a large number of journalists covering the action from the bombay stock exchange [UNK] and the national stock exchange of india [UNK] furthermore it also covers the latest business deals and acts as a platform for companies to give their public results with growth rate net profit etc on 14 december 2006 [UNK] installed one of the largest video screens in india at the [UNK] building to [UNK] capital market information supported by [UNK] profit
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+lee li [UNK] born 8 august 1992 is a taiwanese individual rhythmic gymnast she represents her nation at international competitions she competed at world championships including at the 2009 world rhythmic gymnastics championships
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================
+TEXT:
+joseph h mckinley jr born 1954 is a united states federal judge of the united states district court for the western district of kentucky
+TRUE LABEL : 0
+PRED LABEL : 0
+MATCH      : True
+========================================================================================================================

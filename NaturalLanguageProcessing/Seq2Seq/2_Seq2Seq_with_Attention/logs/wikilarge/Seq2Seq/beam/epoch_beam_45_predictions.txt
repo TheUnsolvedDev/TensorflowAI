@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the symphony orchestra lrb rrb is an american symphony orchestra based at hall in the cultural district of
+
+TARGET:
+the symphony orchestra lrb rrb is an american orchestra from they play in the [end]
+
+PREDICTION:
+the group of included several recordings such for its ages minor league new york and in san jos a russian composer.
+
+============================================================================================================================================
+SOURCE:
+henry is a commune in the calvados department in the basse normandie region in northern france.
+
+TARGET:
+henry is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+it is a calvados found at n or situated on th in northern of the southeast asia.
+
+============================================================================================================================================
+SOURCE:
+its states are from europe the central asia and north america and cover most of the northern
+
+TARGET:
+most of the member countries of the are from europe the central asia and north america. [end]
+
+PREDICTION:
+it from north asia hot and eastern asia.
+
+============================================================================================================================================
+SOURCE:
+the kilometres between the and station at a maximum speed of km h.
+
+TARGET:
+the so called kilometers between the and station at a maximum speed of km h. [end]
+
+PREDICTION:
+the length are about km to mph under a maximum inches lrb m o rrb for total volume from it and is in an other side.
+
+============================================================================================================================================
+SOURCE:
+the same year he moved to the united states to join the at college of medicine at
+
+TARGET:
+in he became a of the united states. [end]
+
+PREDICTION:
+in he moved over a united to canada and at austin the school previously mixed as being built for victory hall at berlin.
+
+============================================================================================================================================
+SOURCE:
+the west australian lrb often simply called the west rrb is the only daily newspaper published in western australia and is owned by listed west australian
+
+TARGET:
+the west australian is a newspaper published in australia. it is made by an australian company called west australian [end]
+
+PREDICTION:
+australian newspaper wrote the daily company and has been made in by western australia.
+
+============================================================================================================================================
+SOURCE:
+he went on to win the trophy the next two seasons as well.
+
+TARGET:
+he also won the trophy the next two [end]
+
+PREDICTION:
+he also received the title at one time eight
+
+============================================================================================================================================
+SOURCE:
+despite again holding seventh spot on a list of they only scored points and had not for much of the season.
+
+TARGET:
+they held seventh on a list of and only scored [end]
+
+PREDICTION:
+although when finished there only been scored each list for few games they do n t have up people than the atlantic hurricanes in ireland spain and russia. money others
+
+============================================================================================================================================
+SOURCE:
+during those three games he did n t score any points nor did he any
+
+TARGET:
+during those three games he score any points did he any [end]
+
+PREDICTION:
+when world heavyweight championship was they used to give a given number.
+
+============================================================================================================================================
+SOURCE:
+for with the municipalities and municipal districts of other provinces see the list of municipalities and municipal districts of the dominican republic.
+
+TARGET:
+there are four municipalities and municipal districts in the province. [end]
+
+PREDICTION:
+there contains three municipalities and its municipal districts are the urban population and.

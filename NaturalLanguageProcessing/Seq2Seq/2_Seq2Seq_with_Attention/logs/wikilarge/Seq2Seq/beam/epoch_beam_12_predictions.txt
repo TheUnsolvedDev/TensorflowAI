@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in he conducted the paris premiere of g by wagner.
+
+TARGET:
+in he conducted wagner s g [end]
+
+PREDICTION:
+in he painted a portrait lisa of the romantic gang at first
+
+============================================================================================================================================
+SOURCE:
+new year s eve or old year s night is on the final day of the gregorian year and the day before new year s day.
+
+TARGET:
+new year s eve is the holiday before new year s day on december the last day of the current year. [end]
+
+PREDICTION:
+bill in the episode night or early year fifth day dawn was released on july. it has two parts of a number four years earlier.
+
+============================================================================================================================================
+SOURCE:
+analysis is widely used for prediction lrb including of time series data rrb.
+
+TARGET:
+can be used for prediction lrb including of time series data rrb hypothesis testing and of [end]
+
+PREDICTION:
+the family was widely made by temperate lrb including versions version rrb of time data which are used for communication features and alternative to music from it. it contains many other words in different languages such as.
+
+============================================================================================================================================
+SOURCE:
+the most well known example is finnish architect who would create aesthetic effects in the of his buildings through the combination of different types and sizes of some fixed some and made mostly from wood lrb e.g. the various buildings of the helsinki university of technology rrb.
+
+TARGET:
+they are made mostly from wood lrb e.g. the various buildings of the helsinki university of technology rrb. [end]
+
+PREDICTION:
+most of these include gaelic language and which would make up a large area called finnish old semitic school in the vantaa university department for example by wood such as some sites from peppers college lrb e.g. s schools rrb and other buildings were mostly based at wood.
+
+============================================================================================================================================
+SOURCE:
+it often results from the bacterial break down of in matter in the absence of oxygen such as in and lrb rrb.
+
+TARGET:
+it often results when bacteria break down organic matter in the absence of oxygen. [end]
+
+PREDICTION:
+this animal is used in the absence of heat radiation lrb rrb from a hybrid time and named after oxygen.
+
+============================================================================================================================================
+SOURCE:
+the circles the interior just above the and depicts scenes and stories from the books of genesis and exodus including adam and eve noah the tower of and abraham isaac and
+
+TARGET:
+the circles the interior just above the [end]
+
+PREDICTION:
+a new church is called protector of
+
+============================================================================================================================================
+SOURCE:
+the female angel gave him a vision of gold coins and states this was a sign of his future financial
+
+TARGET:
+stated that the female angel gave him a vision of gold dust and afterwards he received a breakthrough in terms of financial [end]
+
+PREDICTION:
+the male benny polly he worked a type of iron with katara from which they have been called one sign in his future s book about his own wealth money. then it is known that as an example for their sun leg won against other countries. this was someone else. she said the people and other reasons for her use of money
+
+============================================================================================================================================
+SOURCE:
+ndash american civil war battle of ndash the battle begins with union general fighting toward atlanta georgia.
+
+TARGET:
+american civil war battle of the battle begins with union general fighting toward [end]
+
+PREDICTION:
+american civil war battle of new were fought with the invasion for east to denmark. he was killed in office by a treaty between atlanta georgia. his later president gerald ali s leader and capture berlin as an army officer on freedom forces during world war.
+
+============================================================================================================================================
+SOURCE:
+the central time zone is the same area plus the florida panhandle minus ohio michigan most of indiana westernmost of great plains states eastern and northern kentucky eastern tennessee and el paso texas.
+
+TARGET:
+adventure midwest plus south minus atlantic states al [end]
+
+PREDICTION:
+the main areas are located on a bridge near indiana in antarctica. it is of samuel m and water iron tennessee usa. they have many people living there as of.
+
+============================================================================================================================================
+SOURCE:
+some central african republic soldiers in in may demanding back pay and the resignation of president f lix
+
+TARGET:
+about central african republic soldiers in bangui in may. they wanted back pay and for dictator to be removed from control of the country. [end]
+
+PREDICTION:
+is a part and an eastern african armed army in hungary lrb india rrb that was originally called new kingdom government since the first time of all central ages have moved to west europe.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+oh, things aren't so bad. gee, i hope you're not goin' to get in any trouble.
+
+TARGET:
+it was just a thing. the story made you laugh. [end]
+
+PREDICTION:
+what do you want?
+
+============================================================================================================================================
+SOURCE:
+would you like to it? i've got the key back at my
+
+TARGET:
+i'd love to. [end]
+
+PREDICTION:
+i think you have to go back in the and i'll take a look.
+
+============================================================================================================================================
+SOURCE:
+yes, certainly.
+
+TARGET:
+do you have any [end]
+
+PREDICTION:
+what about the others? we want you to come with me. and if you're going on we'll get some new things out there.
+
+============================================================================================================================================
+SOURCE:
+i gotta tell
+
+TARGET:
+made some mistakes and i spent some money. [end]
+
+PREDICTION:
+i'm sorry. it's just the same, i don't want you all over this.
+
+============================================================================================================================================
+SOURCE:
+may i ask?
+
+TARGET:
+in three [end]
+
+PREDICTION:
+i'm afraid you will have a lot more of questions. is the right thing.
+
+============================================================================================================================================
+SOURCE:
+he warned me about people like you.
+
+TARGET:
+he did? [end]
+
+PREDICTION:
+what are they? how much can he do you need?
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+thanks, i'd love some. [end]
+
+PREDICTION:
+what is that? you think i don't have to go on with your and i'll kill you, too. if i'm not going to.
+
+============================================================================================================================================
+SOURCE:
+i can handle it.
+
+TARGET:
+mm. it doesn't take a genius. [end]
+
+PREDICTION:
+you don't have the right --
+
+============================================================================================================================================
+SOURCE:
+why are you feeding him? why don't you just kill him?
+
+TARGET:
+in due time. [end]
+
+PREDICTION:
+because she wants me for the next
+
+============================================================================================================================================
+SOURCE:
+your wounded should try walkin' back to they'll never make a passage north.
+
+TARGET:
+we were [end]
+
+PREDICTION:
+

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+entered the second half of the between the and detroit in the bottom of the first as a for frank
+
+TARGET:
+entered the game between the and detroit as a for frank [end]
+
+PREDICTION:
+was first to move to the hockey in and joined the
+
+============================================================================================================================================
+SOURCE:
+on october s army spanish at the battle of de las fought them and achieved
+
+TARGET:
+on october s army fought the spanish at the battle of de las [end]
+
+PREDICTION:
+on spanish died after graduated last three of the dead zeus whom he had fought in the italian
+
+============================================================================================================================================
+SOURCE:
+the is also divided into left and right
+
+TARGET:
+the is divided into two [end]
+
+PREDICTION:
+it is divided by left into the next two right
+
+============================================================================================================================================
+SOURCE:
+the loire lrb rrb is the longest river in france.
+
+TARGET:
+the loire river is the longest river in france. [end]
+
+PREDICTION:
+is the twenty sixth in france in germany
+
+============================================================================================================================================
+SOURCE:
+was probably a ground but some on the basis of groups such as the and that were likely to have been the surface
+
+TARGET:
+was probably a ground but some that were likely to have been the surface of the [end]
+
+PREDICTION:
+was probably described as a who also have been on the
+
+============================================================================================================================================
+SOURCE:
+he attended the school in public schools and later attended community college college and community college before into and writing at the city
+
+TARGET:
+he studied at the school in later he attended community college college and community college. [end]
+
+PREDICTION:
+college and
+
+============================================================================================================================================
+SOURCE:
+we started is the debut album of the english new wave the
+
+TARGET:
+we started is an album recorded by pop the [end]
+
+PREDICTION:
+the is the first album in the british
+
+============================================================================================================================================
+SOURCE:
+at lake victoria is africa s largest lake and the largest tropical lake in the world.
+
+TARGET:
+it is africa s largest lake and the second largest water lake in the world. [end]
+
+PREDICTION:
+lake t sur la is a world of the largest of the world s largest
+
+============================================================================================================================================
+SOURCE:
+this species has been seen on the wing from march november.
+
+TARGET:
+this species has been seen from march november. [end]
+
+PREDICTION:
+this matter is seen in the th weeks before
+
+============================================================================================================================================
+SOURCE:
+super mario the lost levels known in japan as is a video game developed and published by nintendo for the family computer disk system.
+
+TARGET:
+super mario bros. the lost levels is a mario video game made by [end]
+
+PREDICTION:
+super mario bros. the game was a machine made in the game and the original character

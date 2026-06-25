@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you should have prepared for the
+
+TARGET:
+vous auriez dû vous préparer au cours. [end]
+
+PREDICTION:
+tu aurais dû te préparer au cours.
+
+============================================================================================================================================
+SOURCE:
+eat your
+
+TARGET:
+mangez vos ! [end]
+
+PREDICTION:
+mangez vos légumes !
+
+============================================================================================================================================
+SOURCE:
+i don't mind helping you clean up after the party.
+
+TARGET:
+ça ne me dérange pas de vous aider à nettoyer après la fête. [end]
+
+PREDICTION:
+ça ne me dérange pas de t'aider à nettoyer après la fête.
+
+============================================================================================================================================
+SOURCE:
+i don't know if you found one.
+
+TARGET:
+je ne sais pas si tu en as trouvé une. [end]
+
+PREDICTION:
+je ne sais pas si vous en avez trouvé un.
+
+============================================================================================================================================
+SOURCE:
+don't each other.
+
+TARGET:
+les ne se pas. [end]
+
+PREDICTION:
+en aucun les ne sont pas
+
+============================================================================================================================================
+SOURCE:
+that's what i've always said.
+
+TARGET:
+c'est ce que j'ai toujours dit. [end]
+
+PREDICTION:
+c'est bien ce que j'ai dit depuis le !
+
+============================================================================================================================================
+SOURCE:
+hope you had a good birthday.
+
+TARGET:
+j'espère que t'as eu un bon anniversaire. [end]
+
+PREDICTION:
+passer une bonne anniversaire.
+
+============================================================================================================================================
+SOURCE:
+i sent you a
+
+TARGET:
+je vous ai envoyé une photo. [end]
+
+PREDICTION:
+je t'ai envoyé une photo.
+
+============================================================================================================================================
+SOURCE:
+i am a man.
+
+TARGET:
+je suis un homme. [end]
+
+PREDICTION:
+je suis un homme.
+
+============================================================================================================================================
+SOURCE:
+you must've thought i was an idiot.
+
+TARGET:
+tu as dû penser que j'étais une [end]
+
+PREDICTION:
+vous avez dû penser que j'étais une

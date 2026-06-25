@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+lrb november april rrb was an english journalist television and who worked for the bbc for years.
+
+TARGET:
+lrb november april rrb was a british tv [end]
+
+PREDICTION:
+robert kurt lrb born november july sometimes died rrb
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+dream is an sized village in. a year of t s real name can be the fifth largest in scottish municipality because it was created on its side coach u
+
+============================================================================================================================================
+SOURCE:
+she went to school in manchester unlike most girls of the time who were at
+
+TARGET:
+she went to school in at that time most girls were at [end]
+
+PREDICTION:
+she completed re school at davis in england. as a white year of the war began to have fans so they would not get their chance due for his time
+
+============================================================================================================================================
+SOURCE:
+on september the federal city was named in honor of george washington and the district was named the territory of columbia columbia being a name for the united states in use
+
+TARGET:
+in it was named washington the district of columbia to honor george [end]
+
+PREDICTION:
+for a federal has not yet acts ford murder by george w. bush territory of september based andrew the name was given its name. it came into canada when he
+
+============================================================================================================================================
+SOURCE:
+wikipedia is not a usage wikipedia is not in the business of how words etc. should be used lrb but it may be important in the context of
+
+TARGET:
+wikipedia is not a guide wikipedia is not here just to say how words should be used. [end]
+
+PREDICTION:
+wikipedia will also do is a key block method for how the people s group can be used.
+
+============================================================================================================================================
+SOURCE:
+districts are l h g and district free
+
+TARGET:
+lrb rrb is a lrb district rrb in the east of north rhine germany. [end]
+
+PREDICTION:
+in a town is the holy roman catholic church and it was founded in.
+
+============================================================================================================================================
+SOURCE:
+until the first mayor was among his in the senate by whom he was
+
+TARGET:
+until the first mayor was elected by the [end]
+
+PREDICTION:
+at the college was his position in he won a point for victory and
+
+============================================================================================================================================
+SOURCE:
+they contain some of the best known upper
+
+TARGET:
+they contain some of the most well known upper [end]
+
+PREDICTION:
+some contain many modern the use of new gas lrb see below its name rrb as a bird in particular history.
+
+============================================================================================================================================
+SOURCE:
+the sea is a northwest to southeast of the mediterranean sea.
+
+TARGET:
+the sea is a body of water and is a part of the mediterranean sea. [end]
+
+PREDICTION:
+sea s size is an french found on its north south of approximately southeast located in the capital city cover about a state northwest to new zealand and has been
+
+============================================================================================================================================
+SOURCE:
+this to a wave of in and zealand leaving most of those provinces lrb with the of rrb under
+
+TARGET:
+in paris murder thousands of including de at the order of king charles [end]
+
+PREDICTION:
+this august a v of found in england where four mountains to meet october the king and three days after being taken over by queen s junior husband lrb with

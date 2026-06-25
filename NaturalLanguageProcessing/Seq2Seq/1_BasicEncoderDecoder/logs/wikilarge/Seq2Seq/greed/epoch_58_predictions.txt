@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the is an american drama series that originally aired on the fox network in the united states from august to february running a total of four
+
+TARGET:
+the was a drama based in orange county california. it was on tv for seasons between august and february. [end]
+
+PREDICTION:
+the is a series of on the
+
+============================================================================================================================================
+SOURCE:
+the town of in roger county is the location of the battle of river lrb also called battle of the rrb where george s
+
+TARGET:
+the county seat of roger county is [end]
+
+PREDICTION:
+the main memorial in is in the of the river
+
+============================================================================================================================================
+SOURCE:
+the does not form an it has been for war and and later by students and
+
+TARGET:
+the do not make an block they have been traveled by for war and and later by students and [end]
+
+PREDICTION:
+the does not and
+
+============================================================================================================================================
+SOURCE:
+himself was unable to be there due to conducting in lrb as was then named rrb.
+
+TARGET:
+himself was to be there because he was in lrb now called rrb. [end]
+
+PREDICTION:
+was mentioned in was in
+
+============================================================================================================================================
+SOURCE:
+the tree of life the park s visual is located here surrounded by animal black and others.
+
+TARGET:
+the tree of life the park s is here surrounded by animal with black and others. [end]
+
+PREDICTION:
+the park is hot grey lrb rrb and a
+
+============================================================================================================================================
+SOURCE:
+the southern railway lrb rrb gave the to the third rail electric multiple units built during the s to work long distance semi fast services on the newly
+
+TARGET:
+this type of unit long enough in british rail to be [end]
+
+PREDICTION:
+the the lrb rrb and the lrb electric bass rrb and the
+
+============================================================================================================================================
+SOURCE:
+events the rule in
+
+TARGET:
+events the back rule in [end]
+
+PREDICTION:
+rule in
+
+============================================================================================================================================
+SOURCE:
+is a retired japanese football player.
+
+TARGET:
+lrb born october rrb is a former japanese football player. [end]
+
+PREDICTION:
+lrb born july rrb is a former japanese football player.
+
+============================================================================================================================================
+SOURCE:
+a or the most common type commonly makes a i am going
+
+TARGET:
+a or is the most common type of [end]
+
+PREDICTION:
+a is a part of a printed type lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+some of the eggs and of larger animals such as fish and are included
+
+TARGET:
+some eggs and of larger animals such as fish and [end]
+
+PREDICTION:
+important meat or oil are fish

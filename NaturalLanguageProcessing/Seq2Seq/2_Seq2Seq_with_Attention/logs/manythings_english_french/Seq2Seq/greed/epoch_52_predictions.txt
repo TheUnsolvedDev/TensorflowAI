@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+we must find a more
+
+TARGET:
+il faut trouver une plus [end]
+
+PREDICTION:
+nous devons trouver un plus de
+
+============================================================================================================================================
+SOURCE:
+the painting looks but you hung it a little
+
+TARGET:
+la peinture a l'air mais tu l'as un peu de [end]
+
+PREDICTION:
+le a l'air mais tu l'as donné un peu de
+
+============================================================================================================================================
+SOURCE:
+it's an
+
+TARGET:
+c'est un goût qui [end]
+
+PREDICTION:
+c'est une
+
+============================================================================================================================================
+SOURCE:
+it's rather warm today.
+
+TARGET:
+il fait assez chaud aujourd'hui. [end]
+
+PREDICTION:
+il fait assez aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+i didn't understand that last sentence.
+
+TARGET:
+je n'ai pas compris la dernière [end]
+
+PREDICTION:
+je n'ai pas compris cela dernier.
+
+============================================================================================================================================
+SOURCE:
+you will have a new brother.
+
+TARGET:
+tu auras un nouveau frère. [end]
+
+PREDICTION:
+vous aurez un nouveau frère.
+
+============================================================================================================================================
+SOURCE:
+would you mind if i took a picture?
+
+TARGET:
+cela te si je une photo ? [end]
+
+PREDICTION:
+cela vous si je une photo ?
+
+============================================================================================================================================
+SOURCE:
+we'll make the world a better place.
+
+TARGET:
+un jour nous ferons du monde un meilleur endroit. [end]
+
+PREDICTION:
+nous le monde une meilleure année.
+
+============================================================================================================================================
+SOURCE:
+the is dead.
+
+TARGET:
+est à [end]
+
+PREDICTION:
+le est mort.
+
+============================================================================================================================================
+SOURCE:
+he stole a at the girl.
+
+TARGET:
+il un coup à la fille. [end]
+
+PREDICTION:
+il a volé une à la fille.

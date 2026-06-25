@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the act required that hold his for more than three
+
+TARGET:
+he had to hold his for more than three [end]
+
+PREDICTION:
+act of which allows his stories in the words for more less than three tour
+
+============================================================================================================================================
+SOURCE:
+victoria s son edward vii and in turn his son george v as members of this
+
+TARGET:
+son edward vii and his son george v as members of this house. [end]
+
+PREDICTION:
+henry the son and his brother a sons in memory of this but these two books who did some remain he had been richard s last dynasty on which they
+
+============================================================================================================================================
+SOURCE:
+are not used to with one s food or with in
+
+TARGET:
+are not used to with food or with the in [end]
+
+PREDICTION:
+can not be used to walk only when the prime control of your or nation in has been often changed into one place with an estimated population lrb power. rrb.
+
+============================================================================================================================================
+SOURCE:
+on july and two began a four month tour of southeast asia and
+
+TARGET:
+on july and two went on a four month tour of southeast asia. they visited lrb island rrb and [end]
+
+PREDICTION:
+to may when the bush first was a four year short changed tour of most year. fans is one time it had ever believed in christmas lrb new like upper
+
+============================================================================================================================================
+SOURCE:
+it is the capital of the autonomous community of la formerly known as o province.
+
+TARGET:
+it is the capital of la o is in the [end]
+
+PREDICTION:
+is one city for the part in la and r district municipality known as pierre o.
+
+============================================================================================================================================
+SOURCE:
+is a municipality in the province of in one of the three regions of belgium.
+
+TARGET:
+is a municipality located in the belgian province of [end]
+
+PREDICTION:
+jacques de often found in this province of c minor d oil built during the s and german became a communist center such as mike discovered major industrial cars for
+
+============================================================================================================================================
+SOURCE:
+out of the twenty selected the for the first launch were and because of their performance in training as well as their physical characteristics space was at
+
+TARGET:
+out of the twenty selected the for the first were and because of their performance in training as well as their physical well [end]
+
+PREDICTION:
+out of the showing this was an guard in that episode it finished and successful its entry at f square greater happen because they never work near other structures space
+
+============================================================================================================================================
+SOURCE:
+since his youth he had been of and military and as part of their training his men how to in the
+
+TARGET:
+since his youth he was of and military [end]
+
+PREDICTION:
+career though he has played their sport sound in where his men and groups it is the team when giving money on to dead sense saying that this time you
+
+============================================================================================================================================
+SOURCE:
+most developing countries have energy including solar energy wind power energy and as well as the ability to the relatively labor systems that
+
+TARGET:
+most countries have good energy including solar energy wind power energy and [end]
+
+PREDICTION:
+their types are and or for countries see worldwide energy electricity related to prime speakers versions in the world history that humans which basic more countries.
+
+============================================================================================================================================
+SOURCE:
+lrb born july rrb is a russian professional ice hockey who is currently from the nhl for to report to the new york
+
+TARGET:
+lrb born july in now rrb is a professional ice hockey for the san of the national hockey league. [end]
+
+PREDICTION:
+retired world season hockey for the chicago a show career in europe during his as an boston team.

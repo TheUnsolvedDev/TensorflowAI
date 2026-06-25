@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he was not pleased.
+
+TARGET:
+il ne fut pas content. [end]
+
+PREDICTION:
+il n'a pas manqué ça. d'un jour. pommes. impossible. ta toi-même.
+
+============================================================================================================================================
+SOURCE:
+he was to death.
+
+TARGET:
+il fut à mort. [end]
+
+PREDICTION:
+c'est mort de faim. des cœur.
+
+============================================================================================================================================
+SOURCE:
+you must be very proud of your son.
+
+TARGET:
+tu dois être très fier de ton fils. [end]
+
+PREDICTION:
+tu dois être toujours très de la poste.
+
+============================================================================================================================================
+SOURCE:
+you look exactly like tom.
+
+TARGET:
+tu pour à tom. [end]
+
+PREDICTION:
+on vraiment de marie. je suis par les faire tirer dessus tant que ça n'est pas fou. dur. est sûr d'être seul.
+
+============================================================================================================================================
+SOURCE:
+don't raise your voice.
+
+TARGET:
+pas la voix ! [end]
+
+PREDICTION:
+pas la lettre au tête.
+
+============================================================================================================================================
+SOURCE:
+i have a feeling i've met her somewhere before.
+
+TARGET:
+j'ai l'impression de l'avoir déjà rencontrée quelque part. [end]
+
+PREDICTION:
+j'ai mal vu que j'avais quelque connaissance à la salle a
+
+============================================================================================================================================
+SOURCE:
+it's possible.
+
+TARGET:
+c'est possible. [end]
+
+PREDICTION:
+cela n'est désormais.
+
+============================================================================================================================================
+SOURCE:
+we him
+
+TARGET:
+nous [end]
+
+PREDICTION:
+on lui des autres que son professeur. sommes à un grand secret.
+
+============================================================================================================================================
+SOURCE:
+i know you want to be rich.
+
+TARGET:
+je sais que vous être riche. [end]
+
+PREDICTION:
+j'ai envie qu'elles soient
+
+============================================================================================================================================
+SOURCE:
+i find this difficult to
+
+TARGET:
+je trouve ceci difficile à croire. [end]
+
+PREDICTION:
+je suppose que c'est dur à écrire.

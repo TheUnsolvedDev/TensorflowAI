@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it wasn't easy to make that decision.
+
+TARGET:
+ça n'a pas été facile de prendre cette décision. [end]
+
+PREDICTION:
+c'était du simple pour réparer avoir cette décision. à pas malade.
+
+============================================================================================================================================
+SOURCE:
+where's the remote control for the tv?
+
+TARGET:
+où est la télécommande de la télévision ? [end]
+
+PREDICTION:
+où a la télé bien au téléviseur de télé.
+
+============================================================================================================================================
+SOURCE:
+can i come over?
+
+TARGET:
+puis-je venir chez toi ? [end]
+
+PREDICTION:
+puis-je améliorer ton dîner ? plus. c'est moi vous faut.
+
+============================================================================================================================================
+SOURCE:
+was there an
+
+TARGET:
+y a-t-il eu un tremblement de terre ? [end]
+
+PREDICTION:
+y avait-il un scandale ?
+
+============================================================================================================================================
+SOURCE:
+tom has found something.
+
+TARGET:
+tom a trouvé quelque chose. [end]
+
+PREDICTION:
+tom avons trouvé une fille. plus.
+
+============================================================================================================================================
+SOURCE:
+glasses and dishes were broken.
+
+TARGET:
+des verres et des furent [end]
+
+PREDICTION:
+les bonnes ou et le lus étaient
+
+============================================================================================================================================
+SOURCE:
+are you two going out together?
+
+TARGET:
+toutes deux ensemble ? [end]
+
+PREDICTION:
+est-ce que vos sont partis pour nager ensemble.
+
+============================================================================================================================================
+SOURCE:
+tom looks dead.
+
+TARGET:
+tom a l'air mort. [end]
+
+PREDICTION:
+c'est complètement mort.
+
+============================================================================================================================================
+SOURCE:
+tom doesn't understand french at all.
+
+TARGET:
+tom ne comprend pas du tout le français. [end]
+
+PREDICTION:
+tous le tom ne comprend la télé.
+
+============================================================================================================================================
+SOURCE:
+i forgot his phone number.
+
+TARGET:
+j'ai oublié son numéro de téléphone. [end]
+
+PREDICTION:
+j’ai une lettre au téléphone.

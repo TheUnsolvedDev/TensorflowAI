@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a commune in the pyr n es atlantiques department in south western france.
+
+TARGET:
+is a commune of the pyr n es atlantiques d partement in the southwestern part of france. [end]
+
+PREDICTION:
+is a commune of the pyr n es atlantiques d partement in the southwestern part of france.
+
+============================================================================================================================================
+SOURCE:
+went on to star in many films including s like father like son lrb a body comedy with moore rrb which was a box office
+
+TARGET:
+went on to star in many films for example s like father like son which made much [end]
+
+PREDICTION:
+he was a box when on the star like son lrb dutch rrb and
+
+============================================================================================================================================
+SOURCE:
+is a walloon city and municipality located in the belgian province of
+
+TARGET:
+is a municipality located in the belgian province of li [end]
+
+PREDICTION:
+is a municipality located in the belgian province of
+
+============================================================================================================================================
+SOURCE:
+against the washington in super bowl los angeles built a lead en route to a victory and their third nfl championship.
+
+TARGET:
+the won their third super bowl against the washington [end]
+
+PREDICTION:
+over ohio the table france built some their they races built slightly deep built into in.
+
+============================================================================================================================================
+SOURCE:
+is an italian association football club based in
+
+TARGET:
+is a football club which plays in italy. [end]
+
+PREDICTION:
+is a football club which plays in italy.
+
+============================================================================================================================================
+SOURCE:
+sir ian ch lrb born may rrb is an english actor of stage and
+
+TARGET:
+sir ian ch lrb born may in rrb is a highly english actor for both theatre and [end]
+
+PREDICTION:
+sir ian ch lrb born may rrb is an english actor.
+
+============================================================================================================================================
+SOURCE:
+lrb as rrb is one of the earliest video games and is a tennis sports game featuring simple two while other video games such as
+
+TARGET:
+is a video game made by [end]
+
+PREDICTION:
+is one of the earliest video games.
+
+============================================================================================================================================
+SOURCE:
+evidence from the and the to show that the name lrb rrb formerly began with a lrb rrb.
+
+TARGET:
+is the city and center of the war as told in the cycle as well as the one of the two poems thought to be written
+
+PREDICTION:
+he find it on the and the to become already one of the lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+clay county is a county located in the u.s. state of
+
+TARGET:
+clay county is a county located in [end]
+
+PREDICTION:
+clay county is a county in the u.s. state of
+
+============================================================================================================================================
+SOURCE:
+such a was observed in the of about a that the north in turkey in the th century and has been for older
+
+TARGET:
+such a occurred in turkey in the th century. [end]
+
+PREDICTION:
+such a of about a was found in the of about a in turkey in the th century.

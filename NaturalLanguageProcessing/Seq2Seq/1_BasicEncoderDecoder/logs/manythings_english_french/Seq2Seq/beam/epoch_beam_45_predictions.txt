@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+which search engine do you
+
+TARGET:
+quel moteur de recherche ? [end]
+
+PREDICTION:
+vous alors, ces trucs ? faites-vous comprendre.
+
+============================================================================================================================================
+SOURCE:
+we must help.
+
+TARGET:
+nous devons aider. [end]
+
+PREDICTION:
+nous avons tendance à en aller.
+
+============================================================================================================================================
+SOURCE:
+i was so sure this was what i wanted.
+
+TARGET:
+j'étais sûr que c'était ce que je voulais. [end]
+
+PREDICTION:
+c'était tellement qu'un livre pour moi c’est que moi.
+
+============================================================================================================================================
+SOURCE:
+you're telling again.
+
+TARGET:
+tu encore des [end]
+
+PREDICTION:
+vous en fait à nouveau peur. après l'école.
+
+============================================================================================================================================
+SOURCE:
+don't to mail this letter.
+
+TARGET:
+n'oubliez pas de mettre cette lettre à la poste. [end]
+
+PREDICTION:
+n'oublie pas vue sur ta lettre ça.
+
+============================================================================================================================================
+SOURCE:
+the
+
+TARGET:
+la porte ! [end]
+
+PREDICTION:
+où il s'agit des laissez derrière ?
+
+============================================================================================================================================
+SOURCE:
+he was to the in the last
+
+TARGET:
+aux dernières il a été au [end]
+
+PREDICTION:
+il fut aux efforts dans votre professeur. dernier.
+
+============================================================================================================================================
+SOURCE:
+don't be such a
+
+TARGET:
+ne sois pas si [end]
+
+PREDICTION:
+à soyez telles n'es pas.
+
+============================================================================================================================================
+SOURCE:
+you saw didn't you?
+
+TARGET:
+vous les avez pas ? [end]
+
+PREDICTION:
+vous les n'est-ce pas ? j'essaie auparavant. c'est vous.
+
+============================================================================================================================================
+SOURCE:
+my husband and i are both teachers.
+
+TARGET:
+mon mari et moi sommes tous les deux [end]
+
+PREDICTION:
+mon frère est moi et deux l'une des excuses. prochain.

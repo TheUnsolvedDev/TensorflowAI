@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'll teach you everything you need to know.
+
+TARGET:
+je vous tout ce que vous avez besoin de savoir. [end]
+
+PREDICTION:
+je vais tout tu besoin à ce moment.
+
+============================================================================================================================================
+SOURCE:
+their of was gone.
+
+TARGET:
+ils plus de de [end]
+
+PREDICTION:
+leur réponse était perdu parti. des filles.
+
+============================================================================================================================================
+SOURCE:
+i love the way you kiss.
+
+TARGET:
+j'adore la manière que vous avez [end]
+
+PREDICTION:
+je aime la manière comment vous avez attrapé les
+
+============================================================================================================================================
+SOURCE:
+still have a long way to go.
+
+TARGET:
+les de ont encore un bout de chemin à faire. [end]
+
+PREDICTION:
+il ne encore produit direction à côté d'y aller. » une partie.
+
+============================================================================================================================================
+SOURCE:
+i study
+
+TARGET:
+j'étudie les [end]
+
+PREDICTION:
+ma voix. au « du tout fait deux. ! on prête ses devoirs. pense. à disposer de 10 ans me revoir.
+
+============================================================================================================================================
+SOURCE:
+i'm sorry we can't stay any longer.
+
+TARGET:
+je suis désolée, nous ne pouvons rester plus longtemps. [end]
+
+PREDICTION:
+je suis pouvoir rester plus longtemps.
+
+============================================================================================================================================
+SOURCE:
+i'll wait in the
+
+TARGET:
+dans le [end]
+
+PREDICTION:
+j'ai bientôt !
+
+============================================================================================================================================
+SOURCE:
+if for some reason that what would you do?
+
+TARGET:
+pour une raison cela avait que ? [end]
+
+PREDICTION:
+dangereux une raison de faire n'avait aucune intéressé.
+
+============================================================================================================================================
+SOURCE:
+don't even try it.
+
+TARGET:
+même pas. [end]
+
+PREDICTION:
+ne regarde même pas.
+
+============================================================================================================================================
+SOURCE:
+he was without
+
+TARGET:
+il a été sans [end]
+
+PREDICTION:
+c'est un sans qu’il soit. des yeux.

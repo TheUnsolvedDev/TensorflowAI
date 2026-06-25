@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i should've come with you.
+
+TARGET:
+j'aurais dû venir avec toi. [end]
+
+PREDICTION:
+j'aurais dû venir dans vous. merci. désormais
+
+============================================================================================================================================
+SOURCE:
+are you going to leave tomorrow?
+
+TARGET:
+est-ce que tu pars demain ? [end]
+
+PREDICTION:
+est-ce vous demain ?
+
+============================================================================================================================================
+SOURCE:
+may i sit down?
+
+TARGET:
+puis-je m'asseoir ? [end]
+
+PREDICTION:
+puis-je vous ? clair.
+
+============================================================================================================================================
+SOURCE:
+this is full of
+
+TARGET:
+cette est pleine de [end]
+
+PREDICTION:
+cette photo est pleine de a disparu.
+
+============================================================================================================================================
+SOURCE:
+they made him work.
+
+TARGET:
+ils le travailler. [end]
+
+PREDICTION:
+elle travailler.
+
+============================================================================================================================================
+SOURCE:
+are you still going to spend christmas with tom?
+
+TARGET:
+toujours passer noël avec tom ? [end]
+
+PREDICTION:
+toujours passer noël avec marie ? ensemble. au veux. à lui. tu vais toujours.
+
+============================================================================================================================================
+SOURCE:
+you're the woman i've ever seen.
+
+TARGET:
+vous êtes la plus belle femme que j'aie jamais vue. [end]
+
+PREDICTION:
+vous me mettez les la femme que jamais vue. tout s'est mauvaise fait.
+
+============================================================================================================================================
+SOURCE:
+you'll be hearing from us soon.
+
+TARGET:
+vous aurez bientôt de nos nouvelles. [end]
+
+PREDICTION:
+tu auras souvent de nous nouvelles. !
+
+============================================================================================================================================
+SOURCE:
+do you think i'm stupid?
+
+TARGET:
+vous me prenez pour un idiot ? [end]
+
+PREDICTION:
+pensez-vous que je présente : n'est pas vrai ton ?
+
+============================================================================================================================================
+SOURCE:
+i want to talk to both of you.
+
+TARGET:
+je veux vous parler à tous les deux. [end]
+
+PREDICTION:
+maintenant je souhaite te revoir debout.

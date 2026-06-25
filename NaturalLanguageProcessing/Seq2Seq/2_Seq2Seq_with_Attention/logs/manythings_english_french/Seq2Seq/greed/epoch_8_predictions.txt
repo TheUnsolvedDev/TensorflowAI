@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+football is my favorite game.
+
+TARGET:
+le football est mon sport préféré. [end]
+
+PREDICTION:
+le football est mon jeu de préférée.
+
+============================================================================================================================================
+SOURCE:
+tom said he found his keys.
+
+TARGET:
+tom a dit qu'il avait trouvé ses clés. [end]
+
+PREDICTION:
+tom a dit qu'il a trouvé ses clés.
+
+============================================================================================================================================
+SOURCE:
+what do you
+
+TARGET:
+qu'est-ce que tu ? [end]
+
+PREDICTION:
+qu'est-ce que vous ?
+
+============================================================================================================================================
+SOURCE:
+don't forget your sleeping bag.
+
+TARGET:
+n'oublie pas d'apporter ton sac de [end]
+
+PREDICTION:
+n'oubliez pas ton sac !
+
+============================================================================================================================================
+SOURCE:
+the country was up for war.
+
+TARGET:
+le pays se à la guerre. [end]
+
+PREDICTION:
+le pays de la guerre.
+
+============================================================================================================================================
+SOURCE:
+the older brother became a successful
+
+TARGET:
+le frère est devenu un [end]
+
+PREDICTION:
+le grand grand frère a
+
+============================================================================================================================================
+SOURCE:
+i love movies.
+
+TARGET:
+j'aime le cinéma. [end]
+
+PREDICTION:
+j'adore le cinéma.
+
+============================================================================================================================================
+SOURCE:
+i read your thoughts.
+
+TARGET:
+je lis tes pensées. [end]
+
+PREDICTION:
+je lis tes pensées.
+
+============================================================================================================================================
+SOURCE:
+think positive.
+
+TARGET:
+pensez [end]
+
+PREDICTION:
+pense
+
+============================================================================================================================================
+SOURCE:
+why would god allow this to happen?
+
+TARGET:
+pourquoi dieu le ? [end]
+
+PREDICTION:
+pourquoi dieu ça arriver ?

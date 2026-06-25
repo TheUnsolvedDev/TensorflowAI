@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+do you know this man?
+
+TARGET:
+i have never seen him. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+hi. i've got sort of a question. do you suppose the bite of a radioactive spider would that strength and
+
+TARGET:
+is this some sort of thing? [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+are you busy tonight?
+
+TARGET:
+yes. [end]
+
+PREDICTION:
+yeah, i'm gonna get a cab.
+
+============================================================================================================================================
+SOURCE:
+i don't want to be alone.
+
+TARGET:
+you can be single and not alone. marriage [end]
+
+PREDICTION:
+i can't.
+
+============================================================================================================================================
+SOURCE:
+if he has anything to say about it, yeah. i've been asking a lot of questions and i don't like the answers i'm he's made a lot of people nervous, including
+
+TARGET:
+we aren't gonna arrest him for that... [end]
+
+PREDICTION:
+well, we sure we do what...
+
+============================================================================================================================================
+SOURCE:
+jeff, do you think a murderer would let you see all that? that he shouldn't keep his down and hide behind them?
+
+TARGET:
+that's where he's being clever. acting [end]
+
+PREDICTION:
+why don't you go to the
+
+============================================================================================================================================
+SOURCE:
+i don't know what that--
+
+TARGET:
+they can't have it. they wanna learn what you know and then deal with it. [end]
+
+PREDICTION:
+you don't know what you're talking about.
+
+============================================================================================================================================
+SOURCE:
+what?
+
+TARGET:
+but don't you see? the pen is than the sword. [end]
+
+PREDICTION:
+i don't know what i saw.
+
+============================================================================================================================================
+SOURCE:
+you two not going to get us anything.
+
+TARGET:
+him getting us out here doesn't do much good either. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+false data can act only as a i shall refuse to you.
+
+TARGET:
+hey, bomb. [end]
+
+PREDICTION:
+i do

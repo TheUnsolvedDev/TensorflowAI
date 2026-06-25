@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+this is my business.
+
+TARGET:
+why don't you go and chase yourself? [end]
+
+PREDICTION:
+what was your name?
+
+============================================================================================================================================
+SOURCE:
+no -- just there -- on the first level. don't look for us. we'll see you.
+
+TARGET:
+you don't seem quite sure, jessica. can you do it? will you? [end]
+
+PREDICTION:
+i'm sorry to hear that, sir. thank god we had
+
+============================================================================================================================================
+SOURCE:
+we need people out here at and right away!
+
+TARGET:
+don't worry, chief. [end]
+
+PREDICTION:
+i'm gonna be in trouble. i think we could
+
+============================================================================================================================================
+SOURCE:
+you know how my tapes sell. people eat this stuff up.
+
+TARGET:
+i had three trying to return your tapes last month. do you know how bad a skin has to be for some to come back into my place
+
+PREDICTION:
+no, it's okay. i think we can make a lot easier than that.
+
+============================================================================================================================================
+SOURCE:
+get outta here!
+
+TARGET:
+[end]
+
+PREDICTION:
+i
+
+============================================================================================================================================
+SOURCE:
+maybe i'm not going to keep you here. maybe i'm gonna blow your brains out.
+
+TARGET:
+i'm no lawyer, but i do believe that's a violation of my rights. [end]
+
+PREDICTION:
+well i was going with you.
+
+============================================================================================================================================
+SOURCE:
+it was a stupid thing to do.
+
+TARGET:
+it was. [end]
+
+PREDICTION:
+and you don't know how much it i was in the world for one thing, but that's why we're not discussing anything about this conversation.
+
+============================================================================================================================================
+SOURCE:
+dignan. good to see you. good to see you who are you?
+
+TARGET:
+this is mr. henry. [end]
+
+PREDICTION:
+my father and a pair of in the dark side by becoming more than i was talking about to your king
+
+============================================================================================================================================
+SOURCE:
+a hair.
+
+TARGET:
+this one? [end]
+
+PREDICTION:
+you know where it is.
+
+============================================================================================================================================
+SOURCE:
+i don't know, what else is there?
+
+TARGET:
+i know! we can take the [end]
+
+PREDICTION:
+it's not

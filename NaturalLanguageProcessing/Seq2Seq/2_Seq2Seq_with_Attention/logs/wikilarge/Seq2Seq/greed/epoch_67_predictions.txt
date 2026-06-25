@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+however his attempt at speaking the dutch language earned him some from his
+
+TARGET:
+his attempt at speaking the language earned him some from his [end]
+
+PREDICTION:
+d. his attempt at speaking to z o.
+
+============================================================================================================================================
+SOURCE:
+the series is told primarily from s point of view with the of and a portion of breaking being told from the of character
+
+TARGET:
+the is from s point of [end]
+
+PREDICTION:
+the series is told to a way from s point of view with the of and a of being told from the of
+
+============================================================================================================================================
+SOURCE:
+samuel taylor lrb august september rrb was an english composer who achieved such success he was called the african
+
+TARGET:
+samuel taylor lrb born london august died september rrb was an english composer. [end]
+
+PREDICTION:
+samuel taylor lrb born london august died september rrb was an english composer.
+
+============================================================================================================================================
+SOURCE:
+after his the is the arrival of s ship and as to meet her the from his in his
+
+TARGET:
+the now the of s ship and as to meet her in his the from his [end]
+
+PREDICTION:
+after his the is the of s ship and as to meet her in his
+
+============================================================================================================================================
+SOURCE:
+the of re is an of france located in the ard che d partement in the rh ne alpes r
+
+TARGET:
+the of re is an of france. [end]
+
+PREDICTION:
+the of re is an of france. it can be found in the ard che d
+
+============================================================================================================================================
+SOURCE:
+lrb in dutch rrb is a commune in the pas de calais department in northern france.
+
+TARGET:
+it is found in the region nord pas de calais in the pas de calais department in the north of france. [end]
+
+PREDICTION:
+is a commune. it is found in the region nord pas de calais in the pas de calais department in the north of france.
+
+============================================================================================================================================
+SOURCE:
+or is a formal method of and
+
+TARGET:
+lrb american english rrb or lrb british english rrb is a formal method of [end]
+
+PREDICTION:
+is a formal and
+
+============================================================================================================================================
+SOURCE:
+the cross of st. andrew referred to in the law is a cross known in as a
+
+TARGET:
+its believed that the of the flag of alabama was designed to look like the blue of the battle [end]
+
+PREDICTION:
+history the cross of st. is known for the king
+
+============================================================================================================================================
+SOURCE:
+the receiving partner lies on their back with while the partner lies on
+
+TARGET:
+in it the partner lies on his or her back with legs the partner lies on top of the partner them. [end]
+
+PREDICTION:
+the picture one is one or legs with and
+
+============================================================================================================================================
+SOURCE:
+the winner was year old from los angeles california.
+
+TARGET:
+los angeles california lrb winner rrb [end]
+
+PREDICTION:
+the winner of the winner was young from los angeles california.

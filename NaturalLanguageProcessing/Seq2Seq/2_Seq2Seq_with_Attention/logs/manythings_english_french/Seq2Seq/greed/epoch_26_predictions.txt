@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the looked very beautiful.
+
+TARGET:
+la mariée était très belle. [end]
+
+PREDICTION:
+les ont l'air très belle.
+
+============================================================================================================================================
+SOURCE:
+speak for yourself.
+
+TARGET:
+parle pour toi-même ! [end]
+
+PREDICTION:
+parlez pour vous !
+
+============================================================================================================================================
+SOURCE:
+has tom
+
+TARGET:
+tom est-il ? [end]
+
+PREDICTION:
+tom a-t-il pris ?
+
+============================================================================================================================================
+SOURCE:
+tom is no longer doing that.
+
+TARGET:
+tom ne fait plus ça. [end]
+
+PREDICTION:
+tom n'est plus le faire.
+
+============================================================================================================================================
+SOURCE:
+that's extremely important.
+
+TARGET:
+c'est extrêmement important. [end]
+
+PREDICTION:
+c'est extrêmement important.
+
+============================================================================================================================================
+SOURCE:
+the temperature fell below zero last night.
+
+TARGET:
+la température est tombée en dessous de la nuit dernière. [end]
+
+PREDICTION:
+la température est à zéro hier le matin de la nuit dernière.
+
+============================================================================================================================================
+SOURCE:
+tom didn't see it.
+
+TARGET:
+tom ne le vit pas. [end]
+
+PREDICTION:
+tom ne l'a pas vu.
+
+============================================================================================================================================
+SOURCE:
+how
+
+TARGET:
+comme c'est beau ! [end]
+
+PREDICTION:
+comme c'est !
+
+============================================================================================================================================
+SOURCE:
+there was a bus stop at the foot of the hill.
+
+TARGET:
+il y avait un arrêt de bus au pied de la colline. [end]
+
+PREDICTION:
+il y avait un arrêt du bus pour ranger la colline.
+
+============================================================================================================================================
+SOURCE:
+are you kidding?
+
+TARGET:
+est-ce que tu ? [end]
+
+PREDICTION:
+vous ?

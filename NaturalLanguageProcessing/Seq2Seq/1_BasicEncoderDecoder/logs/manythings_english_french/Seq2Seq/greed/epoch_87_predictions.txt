@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+this will only take a second.
+
+TARGET:
+ça ne prendra qu'une seconde. [end]
+
+PREDICTION:
+ce travail n'y une solution.
+
+============================================================================================================================================
+SOURCE:
+mary is not only she's too.
+
+TARGET:
+mary n'est pas seulement elle est aussi [end]
+
+PREDICTION:
+marie n'est pas à également et son
+
+============================================================================================================================================
+SOURCE:
+i the
+
+TARGET:
+j'ai au [end]
+
+PREDICTION:
+j'ai la
+
+============================================================================================================================================
+SOURCE:
+this is the best gift i've ever
+
+TARGET:
+c'est le meilleur cadeau que j'aie jamais [end]
+
+PREDICTION:
+c'est le meilleur cadeau que j'ai jamais
+
+============================================================================================================================================
+SOURCE:
+i went out for lunch.
+
+TARGET:
+je suis sorti déjeuner. [end]
+
+PREDICTION:
+je suis sorti raté le déjeuner.
+
+============================================================================================================================================
+SOURCE:
+let me deal with this.
+
+TARGET:
+laisse-moi m'en ! [end]
+
+PREDICTION:
+laisse-moi y avoir ça.
+
+============================================================================================================================================
+SOURCE:
+let me have a try.
+
+TARGET:
+laissez-moi essayer. [end]
+
+PREDICTION:
+laisse-moi essayer.
+
+============================================================================================================================================
+SOURCE:
+he loves me for who i am.
+
+TARGET:
+il pour ce que je [end]
+
+PREDICTION:
+il me pour que je
+
+============================================================================================================================================
+SOURCE:
+we are all to know the truth.
+
+TARGET:
+nous sommes tous de connaître la vérité. [end]
+
+PREDICTION:
+nous sommes tous de connaître la vérité.
+
+============================================================================================================================================
+SOURCE:
+the the at the end of the
+
+TARGET:
+le la à la fin de la [end]
+
+PREDICTION:
+la le

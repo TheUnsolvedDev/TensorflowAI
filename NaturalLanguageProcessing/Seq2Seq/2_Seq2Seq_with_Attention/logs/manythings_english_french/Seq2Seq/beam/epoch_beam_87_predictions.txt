@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+she is to her parents.
+
+TARGET:
+elle est profondément à ses parents. [end]
+
+PREDICTION:
+ils sont pièces aux parents.
+
+============================================================================================================================================
+SOURCE:
+i was late.
+
+TARGET:
+j'étais en retard. [end]
+
+PREDICTION:
+j'avais de moi. h réfléchir. facilement.
+
+============================================================================================================================================
+SOURCE:
+that's an excellent idea.
+
+TARGET:
+c'est une excellente idée. [end]
+
+PREDICTION:
+c'est une assez différent. fenêtre. tomber. ! photo vous en valeur je connais excellente idée.
+
+============================================================================================================================================
+SOURCE:
+haven't found a for yet.
+
+TARGET:
+les ne savent pas encore le cancer. [end]
+
+PREDICTION:
+ne fit du succès pas une société au repas difficile. ça. dans ta maladie. il y a des moyens seulement beaucoup. je marche.
+
+============================================================================================================================================
+SOURCE:
+she thinks it is a
+
+TARGET:
+elle pense qu'il s'agit d'un [end]
+
+PREDICTION:
+au hasard est-ce que tu sois un affaire de pauvre droit.
+
+============================================================================================================================================
+SOURCE:
+you're apples and
+
+TARGET:
+tu des et des ! [end]
+
+PREDICTION:
+vous des pommes et blessés. ! qu'en légumes.
+
+============================================================================================================================================
+SOURCE:
+i don't believe a word of what people have been saying about her.
+
+TARGET:
+je ne crois pas un mot de ce que les gens ont dit d'elle. [end]
+
+PREDICTION:
+je manque désolé d'entendre ces deux qu'elles disent laquelle fois. d'elle.
+
+============================================================================================================================================
+SOURCE:
+don't fish in this river. it's
+
+TARGET:
+ne pas dans cette rivière. c'est [end]
+
+PREDICTION:
+n'y la pièce dans laquelle c'est juste ? être.
+
+============================================================================================================================================
+SOURCE:
+the train arrived on schedule.
+
+TARGET:
+le train arriva à l'heure. [end]
+
+PREDICTION:
+le train est arrivé debout.
+
+============================================================================================================================================
+SOURCE:
+quit wasting my time.
+
+TARGET:
+arrêtez de me faire perdre mon temps. [end]
+
+PREDICTION:
+vous m'avez changé mon doute.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+well my cousin fred met this dame from back east. she's from and he thinks she's loaded. and here's the she's in the picture [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+you guess? did he or didn't he?
+
+TARGET:
+yeah... okay... he did [end]
+
+PREDICTION:
+he was a
+
+============================================================================================================================================
+SOURCE:
+i was going to remind you of nothing, least of all that which you know well. your mistake, if i may be so was promotion. a is your first
+
+TARGET:
+i would not presume to debate you. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+no. no way. i can't do this.
+
+TARGET:
+max. you threw my in the river. you've got balls bigger than [end]
+
+PREDICTION:
+you don't have to be
+
+============================================================================================================================================
+SOURCE:
+well, that's a i understand they usually don't let that stop them.
+
+TARGET:
+you're gonna be to testify before the committee when they open in los angeles. now, if you play ball and tell them what they want to
+
+PREDICTION:
+i don't know what to say.
+
+============================================================================================================================================
+SOURCE:
+--the water like through the see. twenty, thirty years, you can almost push it over. all we do is use here and the out. pull out
+
+TARGET:
+and what do you do when you in the [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+the army?
+
+TARGET:
+lincoln used it. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+he's already losing control of his unless we manage to replace the by tomorrow morning, i'm afraid.
+
+TARGET:
+we have to find [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+that's not what i'm
+
+TARGET:
+tonight they'll probably be keeping us awake. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+or maybe not.
+
+TARGET:
+where is everybody? [end]
+
+PREDICTION:
+i don't know what to say.

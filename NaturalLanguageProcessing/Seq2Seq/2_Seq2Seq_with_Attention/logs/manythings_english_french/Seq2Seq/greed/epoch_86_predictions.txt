@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'm not
+
+TARGET:
+je ne regarde pas. [end]
+
+PREDICTION:
+je ne suis pas
+
+============================================================================================================================================
+SOURCE:
+i'm not happy.
+
+TARGET:
+je ne suis pas content. [end]
+
+PREDICTION:
+je ne suis pas heureuse.
+
+============================================================================================================================================
+SOURCE:
+without him, i would be
+
+TARGET:
+sans lui, je serais sans [end]
+
+PREDICTION:
+je fort.
+
+============================================================================================================================================
+SOURCE:
+i'm glad that makes you happy.
+
+TARGET:
+je suis contente que ça vous heureux. [end]
+
+PREDICTION:
+je suis content que ça vous heureuse.
+
+============================================================================================================================================
+SOURCE:
+they were
+
+TARGET:
+elles ne furent pas [end]
+
+PREDICTION:
+elles étaient
+
+============================================================================================================================================
+SOURCE:
+has a than most of europe.
+
+TARGET:
+la a un de plus élevé que la plupart des autres pays [end]
+
+PREDICTION:
+les ont une de plus de que ses
+
+============================================================================================================================================
+SOURCE:
+the i told you about has been
+
+TARGET:
+le film dont je t'ai parlé est [end]
+
+PREDICTION:
+que je parlé de
+
+============================================================================================================================================
+SOURCE:
+sometimes trying your best just isn't good enough.
+
+TARGET:
+parfois, faire de son mieux ne suffit tout simplement pas. [end]
+
+PREDICTION:
+de mieux que ne ne suffit pas.
+
+============================================================================================================================================
+SOURCE:
+i her not to go.
+
+TARGET:
+je l'ai de ne pas y aller. [end]
+
+PREDICTION:
+je qu'il ne s'y rend pas
+
+============================================================================================================================================
+SOURCE:
+did you see someone?
+
+TARGET:
+as-tu vu qui que ce soit ? [end]
+
+PREDICTION:
+avez-vous vu qui que ce soit ?

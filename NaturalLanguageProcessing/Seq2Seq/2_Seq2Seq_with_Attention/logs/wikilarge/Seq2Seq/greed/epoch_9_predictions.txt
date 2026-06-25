@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+later confirmed that she was going to tour by herself for the fame the show called the monster ball tour had dates starting from november and finishing in early may.
+
+TARGET:
+lady has set on a tour called the monster ball which ends in april. [end]
+
+PREDICTION:
+later confirmed that she was going to tour by herself for the fame
+
+============================================================================================================================================
+SOURCE:
+forty seven car units will be built for use on the victoria line replacing the line s original tube
+
+TARGET:
+forty seven car units will be built for use on the victoria line. [end]
+
+PREDICTION:
+forty seven cars units will be built for use on the victoria line replacing the line s original tube
+
+============================================================================================================================================
+SOURCE:
+initially influenced by toulouse and other late th century pablo made his first paintings based on c zanne s idea that all depiction of nature can be reduced to three solids cube sphere and
+
+TARGET:
+pablo made his first paintings based on c s idea that all of nature can be reduced to three solids cube sphere and [end]
+
+PREDICTION:
+is a type of and
+
+============================================================================================================================================
+SOURCE:
+in he actively promoted florence lawrence formerly known as the girl and actor king in what may be the first instance of a studio using stars in its
+
+TARGET:
+in he promoted florence lawrence then known as the girl in what may be the first instance of a studio using a film star in its [end]
+
+PREDICTION:
+in he was the first instance of florence lawrence which was known as the girl and actor king in what may be the first instance of a studio using stars in its
+
+============================================================================================================================================
+SOURCE:
+ndash the greek city of floods in one of the prefecture s worst recorded
+
+TARGET:
+channel s new adult entertainment channel more starts broadcasting on sky digital and in the uk. [end]
+
+PREDICTION:
+the greek city of floods in one of the worst recorded
+
+============================================================================================================================================
+SOURCE:
+perspective lrb from latin to see through rrb in the graphic arts such as drawing is an approximate representation on a flat surface lrb such as paper rrb of an image as it is perceived by the eye.
+
+TARGET:
+perspective lrb from latin to see through rrb in the graphic arts such as drawing is a way to represent dimensional objects on a flat surface lrb such as paper rrb. [end]
+
+PREDICTION:
+perspective lrb from latin to see through rrb in the graphic arts such as drawing is
+
+============================================================================================================================================
+SOURCE:
+on august and eight others were killed in an airplane crash in the bahamas after filming the music video for the single rock the
+
+TARGET:
+she died on august in a plane crash in the [end]
+
+PREDICTION:
+on august and eight others were killed in an airplane crash in the bahamas as well as the
+
+============================================================================================================================================
+SOURCE:
+a modern example of could be seen in south africa during the twentieth century.
+
+TARGET:
+in an system all the power is held by a small group of people. [end]
+
+PREDICTION:
+a modern example of could be seen in south africa during the twentieth century.
+
+============================================================================================================================================
+SOURCE:
+seattle fc plays home games at field in seattle also home to the seattle
+
+TARGET:
+the team plays at field which it shares with the seattle [end]
+
+PREDICTION:
+seattle fc plays home games at field.
+
+============================================================================================================================================
+SOURCE:
+each tale is followed by her of and never lies so i know it s so.
+
+TARGET:
+each story is followed by her saying and never lies so i know its so. [end]
+
+PREDICTION:
+each tale is followed by her of and never lies so i know it s so.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+what does is a
+
+TARGET:
+que faut-il entendre par « a » ? [end]
+
+PREDICTION:
+ce a une vie en grande partie ?
+
+============================================================================================================================================
+SOURCE:
+call me when you're finished.
+
+TARGET:
+quand tu auras fini. [end]
+
+PREDICTION:
+appelle-moi lorsqu'il tu as terminé les choses.
+
+============================================================================================================================================
+SOURCE:
+i feel much safer now.
+
+TARGET:
+je me sens bien plus en sécurité, maintenant. [end]
+
+PREDICTION:
+je me sens très bien en sécurité.
+
+============================================================================================================================================
+SOURCE:
+i know you must have a lot of questions.
+
+TARGET:
+je sais que tu dois avoir plein de questions. [end]
+
+PREDICTION:
+je dois qu'on vous faut beaucoup de choses.
+
+============================================================================================================================================
+SOURCE:
+tom refused to talk.
+
+TARGET:
+tom refusait de parler. [end]
+
+PREDICTION:
+thomas de travailler.
+
+============================================================================================================================================
+SOURCE:
+i like the mountains more than i like the sea.
+
+TARGET:
+je préfère la montagne à la mer. [end]
+
+PREDICTION:
+j'aime la plus rapide que moi de mer. dans
+
+============================================================================================================================================
+SOURCE:
+you have to be prepared.
+
+TARGET:
+vous devez être [end]
+
+PREDICTION:
+il faut qu'il vous en ! c'est prête.
+
+============================================================================================================================================
+SOURCE:
+i felt a bit tired.
+
+TARGET:
+je me sentais un peu fatiguée. [end]
+
+PREDICTION:
+j'avais une autre homme. je me suis à nouveau. ans. !
+
+============================================================================================================================================
+SOURCE:
+did you see the yesterday?
+
+TARGET:
+as-tu vu hier ? [end]
+
+PREDICTION:
+tu l'as rendu ? hier soir et les enfants à la fois que toi
+
+============================================================================================================================================
+SOURCE:
+i think you look really great.
+
+TARGET:
+je trouve que tu as l'air superbe. [end]
+
+PREDICTION:
+je te pense qu'il y semble beaucoup trop. !

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're very emotional.
+
+TARGET:
+vous êtes fort [end]
+
+PREDICTION:
+vous êtes très
+
+============================================================================================================================================
+SOURCE:
+that's disappointing.
+
+TARGET:
+c’est décevant. [end]
+
+PREDICTION:
+c'est bizarre.
+
+============================================================================================================================================
+SOURCE:
+it's actually not that big a problem.
+
+TARGET:
+ce n'est pas vraiment un gros problème. [end]
+
+PREDICTION:
+ce n'est vraiment pas aussi grand problème.
+
+============================================================================================================================================
+SOURCE:
+i'm sure they're wrong.
+
+TARGET:
+je suis sûr qu'ils ont tort. [end]
+
+PREDICTION:
+je suis sûr qu'ils sont
+
+============================================================================================================================================
+SOURCE:
+he doesn't like fish.
+
+TARGET:
+il n'aime pas le poisson. [end]
+
+PREDICTION:
+il n'aime pas le poisson.
+
+============================================================================================================================================
+SOURCE:
+have you fed the dog yet?
+
+TARGET:
+avez-vous déjà donné à manger au chien ? [end]
+
+PREDICTION:
+as-tu déjà mangé le chien ?
+
+============================================================================================================================================
+SOURCE:
+they like apples.
+
+TARGET:
+elles aiment les pommes. [end]
+
+PREDICTION:
+ils aiment les enfants.
+
+============================================================================================================================================
+SOURCE:
+i'm very busy today.
+
+TARGET:
+je suis très occupé aujourd'hui. [end]
+
+PREDICTION:
+je suis très occupé aujourd'hui.
+
+============================================================================================================================================
+SOURCE:
+i couldn't control myself.
+
+TARGET:
+je ne pouvais m'en empêcher. [end]
+
+PREDICTION:
+je ne pouvais pas me
+
+============================================================================================================================================
+SOURCE:
+i don't know what i'd do without it.
+
+TARGET:
+je ne sais pas ce que je ferais [end]
+
+PREDICTION:
+je ne sais pas ce que je le ferais sans ça.

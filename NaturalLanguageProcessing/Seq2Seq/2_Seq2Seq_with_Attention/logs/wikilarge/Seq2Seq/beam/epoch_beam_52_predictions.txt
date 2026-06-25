@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in the federal government of the united states of america there is one secretary of state the most senior political responsible for foreign policy lrb that is equivalent to a foreign
+
+TARGET:
+in the united states federal government the secretary of state is the head of the united states department of state and is responsible for foreign in most other countries this
+
+PREDICTION:
+some people say the executive to our law on a government. upon may or for foreign problems lrb another person rrb is becoming an published by permanent office of legal
+
+============================================================================================================================================
+SOURCE:
+a flight of cut out of the rock gives access to the which is with paintings based on of the book of the
+
+TARGET:
+a flight of cut out of the rock makes it possible to go to the this is with paintings based on of the book of the
+
+PREDICTION:
+a is an event that can be found without the same people.
+
+============================================================================================================================================
+SOURCE:
+it is located south west of sydney on the highway and above sea level.
+
+TARGET:
+was named by james after henry a british politician. [end]
+
+PREDICTION:
+the town can be moved from central by its north east on indian goes through what sea center.
+
+============================================================================================================================================
+SOURCE:
+to wear the jersey where required a of to swiss
+
+TARGET:
+a champion who does not wear the jersey can be to swiss [end]
+
+PREDICTION:
+if played the traditional tail home and some of them were sent to swiss hole
+
+============================================================================================================================================
+SOURCE:
+on august died in la at the age of from heart
+
+TARGET:
+died at the age of on august from heart [end]
+
+PREDICTION:
+he died in. in at a school of an alternative rock group called the black and it was found around on august th of. some scientists call this reason that
+
+============================================================================================================================================
+SOURCE:
+lrb born august in rrb is a german football coach and former football player.
+
+TARGET:
+lrb born august rrb is a former german football player. [end]
+
+PREDICTION:
+guerrero lrb born april as president of united japan rrb was a former french football player. his father and queen or minister has played the home games in.
+
+============================================================================================================================================
+SOURCE:
+in front of him and places her honor in his
+
+TARGET:
+in front of him and for his [end]
+
+PREDICTION:
+started in the owner of him but he is now a part for his honor with him.
+
+============================================================================================================================================
+SOURCE:
+it was later sold to and then in the us merged with records in to create the music group.
+
+TARGET:
+they sold it to in they came together with records to become music group. [end]
+
+PREDICTION:
+it was later changed to underground new passenger traffic and drive for which allows a sound from to. in the us bought by kurt m lrb non shared single mass
+
+============================================================================================================================================
+SOURCE:
+et is a commune in the aisne department in picardy in northern france.
+
+TARGET:
+et is a commune. it is found in the region picardie in the aisne department in the north of france. [end]
+
+PREDICTION:
+its lrb italian origin and ma rrb describes these along between the two main causes of trade in s during his political place.
+
+============================================================================================================================================
+SOURCE:
+it was also the first year of the rd and of the st century as there was no year in the gregorian calendar.
+
+TARGET:
+it was also the st year of the rd and the st century. [end]
+
+PREDICTION:
+in the st year bc and it was adopted in.

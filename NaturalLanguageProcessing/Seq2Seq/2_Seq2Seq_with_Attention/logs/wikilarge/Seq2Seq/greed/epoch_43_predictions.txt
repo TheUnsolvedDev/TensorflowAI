@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+power over or technology describes a system to pass electrical power along with data on
+
+TARGET:
+these also power and data through the same power over does n t changing the existing [end]
+
+PREDICTION:
+power over lrb rrb is a system to effects on
+
+============================================================================================================================================
+SOURCE:
+lrb january rrb was a prominent russian and soviet and best known for having identified the of origin of
+
+TARGET:
+lrb november january rrb was a russian and [end]
+
+PREDICTION:
+lrb january rrb was a russian and soviet and best known for having the of
+
+============================================================================================================================================
+SOURCE:
+since november the prime minister has been john key of the national party.
+
+TARGET:
+according to these the prime minister is leader of cabinet lrb itself a body existing by convention rrb and takes a co [end]
+
+PREDICTION:
+the prime minister has one main for the united kingdom since.
+
+============================================================================================================================================
+SOURCE:
+the control of to health is a united kingdom instrument that states general on to protect and other from the of used
+
+TARGET:
+the control of to health lrb rrb deal with the use of [end]
+
+PREDICTION:
+to health is a united kingdom a united kingdom program that to health
+
+============================================================================================================================================
+SOURCE:
+he is married to a in the church of england and they have three
+
+TARGET:
+he is married to a in the church of england. they have three children. [end]
+
+PREDICTION:
+he is married to a in the church of england and they have three
+
+============================================================================================================================================
+SOURCE:
+or the giant or the was the largest known that ever
+
+TARGET:
+was the largest that ever [end]
+
+PREDICTION:
+or the giant or the giant are the largest known that ever
+
+============================================================================================================================================
+SOURCE:
+on may the launched an against the line a section of the at s post one end of which was by
+
+TARGET:
+the were able to capture a small section of a at [end]
+
+PREDICTION:
+on may the launched an against the line.
+
+============================================================================================================================================
+SOURCE:
+the right side can be written as a single with common a.
+
+TARGET:
+the right side can be a single with a common a. [end]
+
+PREDICTION:
+the partner side side can be a single with common
+
+============================================================================================================================================
+SOURCE:
+it has been in the roman catholic of since the catholic was in.
+
+TARGET:
+it has been in the roman catholic of and since the catholic returned in. [end]
+
+PREDICTION:
+it has been given out since since the roman catholic of since the roman catholic was in.
+
+============================================================================================================================================
+SOURCE:
+the life of claims that he won the first prize at the city times.
+
+TARGET:
+all of the plays won first prize at the city one book the life of said that he won the first prize at the city times.
+
+PREDICTION:
+the first prize to says that he won the first master at the city

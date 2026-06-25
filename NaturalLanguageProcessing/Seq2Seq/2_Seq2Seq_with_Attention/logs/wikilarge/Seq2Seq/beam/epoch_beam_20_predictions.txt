@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it is also widely believed that the size and number of connections in the relates directly to as the in humans occupies a far larger percentage of the brain than any other and it is that as the brain has in size over million years of human evolution the has increased in size
+
+TARGET:
+the is a part of the brain that helps to control behavior. [end]
+
+PREDICTION:
+it was a with the brain over south years.
+
+============================================================================================================================================
+SOURCE:
+she wrote in a variety of genres poetry short stories children s literature and novels.
+
+TARGET:
+she wrote short stories novels and childrens books. [end]
+
+PREDICTION:
+wrote a very popular music of genres including text biography stories.
+
+============================================================================================================================================
+SOURCE:
+wade jr. lrb born january rrb nicknamed flash or d wade is an american professional basketball player for the miami heat.
+
+TARGET:
+wade lrb born january rrb is an american basketball player. [end]
+
+PREDICTION:
+tim chan lrb january february in rrb called flash p a. g z white. and just videos which have a play at rugby olympic competitions. please see how to play. it s games is an american nba player for the vonnegut stable rangers of money. that makes them their home team as triple champion when he still are. kim wade bat on
+
+============================================================================================================================================
+SOURCE:
+a key attraction is the site where the s water flows into the jordan river to which thousands of pilgrims from all over the world come to be every year.
+
+TARGET:
+a key attraction is the site where the water flows into the jordan river. [end]
+
+PREDICTION:
+a key factor was the site where has thousands of wanting in all what its oceans are no longer hit him. most people believe it can be forced to get out every year.
+
+============================================================================================================================================
+SOURCE:
+also called lrb for statements rrb and lrb for written broadcast or otherwise published words rrb is the communication of a statement that makes a claim stated or implied to be that may give an individual business product group government or nation a negative
+
+TARGET:
+if a statement is written such as in a book or in a newspaper it is called [end]
+
+PREDICTION:
+he wrote that the book shows a story in full formal product australian numbers books which are about times or state hereditary
+
+============================================================================================================================================
+SOURCE:
+sri lrb also spelled and rrb lrb rrb lrb may march rrb is the monastic name of lrb rrb the guru of and
+
+TARGET:
+sri lrb may march rrb was an indian guru and [end]
+
+PREDICTION:
+sri khan was the ruler de french painter lrb pp. he among others rule in pakistan.
+
+============================================================================================================================================
+SOURCE:
+is located kilometres north west of the sydney central business district and is the administrative centre of the local government area of shire.
+
+TARGET:
+geography the shire shire is one of the biggest local government areas of sydney with a population of. [end]
+
+PREDICTION:
+geography lies kilometers north east of the port de n. in el sh hyderabad india from to. this has been administrative division capital and city
+
+============================================================================================================================================
+SOURCE:
+is a commune in the c tes d armor department in bretagne in north western france.
+
+TARGET:
+is a commune. it is found in the region bretagne in the c tes d armor department in the west of france. [end]
+
+PREDICTION:
+the village was commune that is in france france. it starts at first called
+
+============================================================================================================================================
+SOURCE:
+takes two different types of parameters and
+
+TARGET:
+takes two different types of parameters parameters and display [end]
+
+PREDICTION:
+it is a measure of how the process which has many types such as parameters and
+
+============================================================================================================================================
+SOURCE:
+fc is a cameroonian football club based in
+
+TARGET:
+f.c. is a football club which plays in cameroon. [end]
+
+PREDICTION:
+the football stadium was an sport which played for wembley f.c. who came up in with it.

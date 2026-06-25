@@ -1,0 +1,68 @@
+Using 2 GPU(s)
+/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+ 40%|██████████████████████████████████████████▍                                                                | 79223/200000 [6:31:48<11:27:08,  2.93it/s][34m[1mwandb[0m: [32m[41mERROR[0m Error while calling W&B API: context deadline exceeded (<Response [500]>)
+Step=2500 Loss=0.0000 Return=-180.58 Epsilon=0.951 FPS=597
+Step=5000 Loss=0.0000 Return=-188.07 Epsilon=0.902 FPS=600
+Step=7500 Loss=0.0000 Return=-174.56 Epsilon=0.853 FPS=599
+Step=10000 Loss=0.0000 Return=-193.31 Epsilon=0.804 FPS=598
+Step=12500 Loss=2.8536 Return=-113.94 Epsilon=0.755 FPS=175
+Step=15000 Loss=0.6541 Return=-90.23 Epsilon=0.706 FPS=120
+Step=17500 Loss=1.6079 Return=-64.82 Epsilon=0.657 FPS=99
+Step=20000 Loss=1.5263 Return=-42.20 Epsilon=0.608 FPS=87
+Step=22500 Loss=1.5033 Return=-25.17 Epsilon=0.559 FPS=79
+Step=25000 Loss=1.3190 Return=-15.80 Epsilon=0.510 FPS=74
+Step=27500 Loss=1.3515 Return=-17.66 Epsilon=0.461 FPS=71
+Step=30000 Loss=2.7724 Return=3.24 Epsilon=0.412 FPS=68
+Step=32500 Loss=1.4565 Return=14.95 Epsilon=0.363 FPS=66
+Step=35000 Loss=1.4155 Return=25.86 Epsilon=0.314 FPS=64
+Step=37500 Loss=1.5668 Return=50.92 Epsilon=0.265 FPS=62
+Step=40000 Loss=1.1042 Return=83.72 Epsilon=0.216 FPS=61
+Step=42500 Loss=1.4073 Return=131.58 Epsilon=0.167 FPS=60
+Step=45000 Loss=1.2638 Return=170.58 Epsilon=0.118 FPS=59
+Step=47500 Loss=1.5311 Return=203.27 Epsilon=0.069 FPS=58
+Step=50000 Loss=0.6517 Return=237.64 Epsilon=0.020 FPS=58
+Step=52500 Loss=0.8859 Return=245.61 Epsilon=0.020 FPS=57
+Step=55000 Loss=0.9930 Return=245.66 Epsilon=0.020 FPS=57
+Step=57500 Loss=0.4785 Return=248.30 Epsilon=0.020 FPS=56
+Step=60000 Loss=0.6723 Return=256.06 Epsilon=0.020 FPS=56
+Step=62500 Loss=0.8075 Return=259.06 Epsilon=0.020 FPS=55
+Step=65000 Loss=1.2116 Return=254.35 Epsilon=0.020 FPS=55
+Step=67500 Loss=1.1011 Return=258.01 Epsilon=0.020 FPS=55
+Step=70000 Loss=0.2712 Return=260.74 Epsilon=0.020 FPS=54
+Step=72500 Loss=0.2254 Return=262.76 Epsilon=0.020 FPS=54
+Step=75000 Loss=0.4753 Return=260.44 Epsilon=0.020 FPS=54
+Step=77500 Loss=0.3281 Return=256.47 Epsilon=0.020 FPS=54
+ 40%|██████████████████████████████████████████▌                                                                | 79460/200000 [6:33:09<11:47:40,  2.84it/s][34m[1mwandb[0m: [32m[41mERROR[0m Error while calling W&B API: context deadline exceeded (<Response [500]>)
+ 40%|██████████████████████████████████████████▋                                                                | 79760/200000 [6:34:51<12:04:05,  2.77it/s][34m[1mwandb[0m: [32m[41mERROR[0m Error while calling W&B API: context deadline exceeded (<Response [500]>)
+ 40%|███████████████████████████████████████████                                                                | 80534/200000 [6:39:09<10:50:42,  3.06it/s][34m[1mwandb[0m: [32m[41mERROR[0m Error while calling W&B API: context deadline exceeded (<Response [500]>)
+Step=80000 Loss=0.5967 Return=256.50 Epsilon=0.020 FPS=53
+ 40%|███████████████████████████████████████████▏                                                               | 80716/200000 [6:40:08<10:26:09,  3.18it/s][34m[1mwandb[0m: [32m[41mERROR[0m Error while calling W&B API: context deadline exceeded (<Response [500]>)
+ 40%|███████████████████████████████████████████▋                                                                | 80924/200000 [6:41:11<9:43:57,  3.40it/s][34m[1mwandb[0m: Network error (ReadTimeout), entering retry loop.
+ 73%|█████████████████████████████████████████████████████████████████████████████▊                            | 146699/200000 [12:48:09<4:23:23,  3.37it/s]
+Step=82500 Loss=0.8407 Return=254.71 Epsilon=0.020 FPS=53
+Step=85000 Loss=0.4389 Return=253.04 Epsilon=0.020 FPS=53
+Step=87500 Loss=0.5333 Return=238.46 Epsilon=0.020 FPS=53
+Step=90000 Loss=0.6387 Return=246.84 Epsilon=0.020 FPS=53
+Step=92500 Loss=0.8888 Return=223.34 Epsilon=0.020 FPS=52
+Step=95000 Loss=0.8547 Return=232.98 Epsilon=0.020 FPS=52
+Step=97500 Loss=0.1726 Return=219.37 Epsilon=0.020 FPS=52
+Step=100000 Loss=0.6178 Return=219.29 Epsilon=0.020 FPS=52
+Step=102500 Loss=0.6702 Return=225.97 Epsilon=0.020 FPS=52
+Step=105000 Loss=0.9515 Return=242.75 Epsilon=0.020 FPS=52
+Step=107500 Loss=0.1847 Return=245.97 Epsilon=0.020 FPS=52
+Step=110000 Loss=1.1015 Return=245.67 Epsilon=0.020 FPS=51
+Step=112500 Loss=0.5545 Return=241.23 Epsilon=0.020 FPS=51
+Step=115000 Loss=0.8010 Return=246.56 Epsilon=0.020 FPS=51
+Step=117500 Loss=0.6166 Return=250.36 Epsilon=0.020 FPS=51
+Step=120000 Loss=0.2315 Return=249.88 Epsilon=0.020 FPS=51
+Step=122500 Loss=0.2270 Return=249.76 Epsilon=0.020 FPS=51
+Step=125000 Loss=0.3032 Return=249.78 Epsilon=0.020 FPS=51
+Step=127500 Loss=0.9786 Return=249.71 Epsilon=0.020 FPS=51
+Step=130000 Loss=0.6338 Return=248.01 Epsilon=0.020 FPS=51
+Step=132500 Loss=0.6518 Return=249.13 Epsilon=0.020 FPS=51
+Step=135000 Loss=0.5852 Return=245.25 Epsilon=0.020 FPS=51
+Step=137500 Loss=1.0659 Return=244.51 Epsilon=0.020 FPS=51
+Step=140000 Loss=0.2478 Return=248.54 Epsilon=0.020 FPS=51
+Step=142500 Loss=0.3331 Return=252.08 Epsilon=0.020 FPS=50
+Step=145000 Loss=1.0712 Return=244.01 Epsilon=0.020 FPS=50

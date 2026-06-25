@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in sports is known as the land of because it was the home of several the best of them being who played in the brazilian team in
+
+TARGET:
+this is because it was the home of several the most known of them is who played in the brazilian soccer team in the fifa world cup in italy.
+
+PREDICTION:
+is most powerful of a. the best and famous teams in france because
+
+============================================================================================================================================
+SOURCE:
+is the oldest of the original nine english public schools as defined by the public schools
+
+TARGET:
+it is one of the original nine english public schools as defined by the public schools [end]
+
+PREDICTION:
+is more commonly known for broadcast english. it means the original nine american public schools as gone through every different years.
+
+============================================================================================================================================
+SOURCE:
+certain species are whereas others like the s or are generally
+
+TARGET:
+certain species others like the s or are generally [end]
+
+PREDICTION:
+others like do most species while all some are called to tell an extra piece that means
+
+============================================================================================================================================
+SOURCE:
+blood is prepared by a tube of blood containing an anti in a until the blood cells fall to the bottom of the
+
+TARGET:
+in blood is like an anti the blood [end]
+
+PREDICTION:
+the blood comes from red cells including heart males fall a and anti hole in upper our five speed line immediately after this it is part that opposite to taylor
+
+============================================================================================================================================
+SOURCE:
+in as the central committee secretary for security was in charge of the building of the berlin
+
+TARGET:
+of east germany in was in charge of the building of the berlin [end]
+
+PREDICTION:
+as part the main company served by a ss officer who had to der toronto in this election and started trying with it worked for another movement when they are
+
+============================================================================================================================================
+SOURCE:
+the and the service town lrb rrb have had many and on people.
+
+TARGET:
+the and the service town at have had many on people. [end]
+
+PREDICTION:
+after there had developed some problems of an service local government area. those two stations are that the internet population have discovered a kind and or extra people living in
+
+============================================================================================================================================
+SOURCE:
+ndash all official soviet union institutions have operations by this date and the soviet union is officially
+
+TARGET:
+this date is in as the international date line is to the east of the line islands and phoenix islands. [end]
+
+PREDICTION:
+every official state low county product radio group die the soviet government free air office market and allowed together to work by this position is usually made with more drug
+
+============================================================================================================================================
+SOURCE:
+into the wild is the first book in the series written by and victoria under the name of
+
+TARGET:
+into the wild is the first book in the series. it was written by and under the name of [end]
+
+PREDICTION:
+as to how theme comes by a
+
+============================================================================================================================================
+SOURCE:
+is killed in the seventh book about which the loss of represented a loss of and
+
+TARGET:
+when is killed in the seventh book the author said she expected the strong of her the loss of represented a loss of and
+
+PREDICTION:
+the becomes king of what was followed by robert i and they came out in which chance represented a keep lower than zeus month or something included lrb without
+
+============================================================================================================================================
+SOURCE:
+san de n lrb usually referred to as simply n rrb is the capital of the n province located in northern argentina at.
+
+TARGET:
+san de n is the capital city of the n province [end]
+
+PREDICTION:
+but the second of la y n province are located in mostly known as san lion greece it is a called de urban lrb used with el many pakistan rrb

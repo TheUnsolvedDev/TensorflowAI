@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he has been dead for five years.
+
+TARGET:
+il est mort depuis ans. [end]
+
+PREDICTION:
+il est mort depuis cinq heures ses ans. ! beaucoup. ne en sais jamais.
+
+============================================================================================================================================
+SOURCE:
+everybody has something to hide.
+
+TARGET:
+tout le monde a quelque chose à [end]
+
+PREDICTION:
+nous avions à tout le sens recherche après dents. « ça peut être. » c'est un si certain que d'accord. classe. s'il vous y a beaucoup de pays.
+
+============================================================================================================================================
+SOURCE:
+too many make you fat.
+
+TARGET:
+trop de te gros. [end]
+
+PREDICTION:
+quels sont vos chances d'être pauvre été.
+
+============================================================================================================================================
+SOURCE:
+show us around.
+
+TARGET:
+faire le tour. [end]
+
+PREDICTION:
+avance autour le où tu fais.
+
+============================================================================================================================================
+SOURCE:
+i'm
+
+TARGET:
+je suis [end]
+
+PREDICTION:
+j'en rêve
+
+============================================================================================================================================
+SOURCE:
+did tom really
+
+TARGET:
+est-ce que tom a vraiment perdu ? [end]
+
+PREDICTION:
+thomas a-t-il beaucoup vrai ?
+
+============================================================================================================================================
+SOURCE:
+tom's making his bed.
+
+TARGET:
+tom fait son lit. [end]
+
+PREDICTION:
+tom se fait sa
+
+============================================================================================================================================
+SOURCE:
+is anybody
+
+TARGET:
+quiconque ? [end]
+
+PREDICTION:
+est-ce que le ?
+
+============================================================================================================================================
+SOURCE:
+you may choose one of them.
+
+TARGET:
+vous pouvez en choisir un. [end]
+
+PREDICTION:
+tu la en veux. une fois. te voilà service.
+
+============================================================================================================================================
+SOURCE:
+where do you suppose you'll spend your vacation?
+
+TARGET:
+où penses-tu que tu tes ? [end]
+
+PREDICTION:
+où allez-vous manger.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+with a population of people c cents is the fourth most important city in the county after the capital
+
+TARGET:
+c cents has a population of people and is the fourth most important city in the county after the county capital [end]
+
+PREDICTION:
+the is also a city called economy greece. it belongs to different country than people lrb e.g. in bangladesh rrb.
+
+============================================================================================================================================
+SOURCE:
+the russian river with its mouth at the north end of goat rock beach is county s largest both in flow rate and
+
+TARGET:
+the russian river which has its mouth at the north end of goat rock beach is county s biggest and river. [end]
+
+PREDICTION:
+there are a great surface of trees. he belongs as kakadu regions which were county. in. the two main roads flow rain was studied by not there.
+
+============================================================================================================================================
+SOURCE:
+they have adapted to living in proximity to humans and can be found on in the of and other urban areas.
+
+TARGET:
+they can live close to people and are seen feeding on in the suburbs of and other towns. [end]
+
+PREDICTION:
+people usually live to research at the lives of and many smaller trees found off in a few species five shrubs skins there are pictures being extinct.
+
+============================================================================================================================================
+SOURCE:
+his major works include the novels of the thief s journal and our lady of the flowers and the plays the the the and the
+
+TARGET:
+his novels the miracle of the rose lrb o o rrb and the journal lrb o o rrb describe his experiences in youth prison and as a [end]
+
+PREDICTION:
+is a well known magazines independent books including strange mouse and the york baptist system. founder soon he studied in law.
+
+============================================================================================================================================
+SOURCE:
+seeking to the juice lilly asked her to design a shift dress made of bright colorful printed
+
+TARGET:
+seeking to hide the juice she designed a shift dress made of bright colorful printed [end]
+
+PREDICTION:
+instead they asked to the juice and plays together like clay clean are used hard voice.
+
+============================================================================================================================================
+SOURCE:
+is a free network attached storage server supporting lrb rrb protocols local user and software raid lrb rrb with a web based configuration
+
+TARGET:
+is a free network attached storage server. it supports lrb samba rrb protocols local user authentication and software raid lrb rrb. [end]
+
+PREDICTION:
+it supports browsers lrb word of electric server to mixing or baking powder rrb jumping storage runs with a web produced on the internet application and raid that together must allow for use in an email environment against over digital computers.
+
+============================================================================================================================================
+SOURCE:
+hurricane gustav of was the first subtropical storm to receive a name but became tropical shortly after subtropical storm nicole from the atlantic hurricane season was the first subtropical storm that did not become tropical since the policy change.
+
+TARGET:
+a subtropical cyclone lrb also known as a subtropical storm rrb is a weather storm. [end]
+
+PREDICTION:
+the first low storm began in a name but became tropical on its early subtropical hurricane katrina passed and forecast this it may never become much more earlier since that was still used for strengthening over u.s. time.
+
+============================================================================================================================================
+SOURCE:
+in due time she gave birth to her son lars in copenhagen and left him in the care of a foster family.
+
+TARGET:
+there she gave birth to her son lars in copenhagen and left him with another family to care for him. [end]
+
+PREDICTION:
+in the care shark sturgeon friend sir luis published. he became as a prose or dragon mother and an abbreviation of bread family is one sent to be particularly famous for helping teaching by brown who do this.
+
+============================================================================================================================================
+SOURCE:
+neptune is similar in composition to uranus and both have compositions which differ from those of the larger gas giants jupiter and saturn.
+
+TARGET:
+uranus and neptune are not exactly the same type of gas giants like to jupiter and saturn but are rather ice giants meaning they have a larger solid core and are also made of [end]
+
+PREDICTION:
+it is similar to that having local these feature native from those found were of scientists which differ at this but there are in addition to the asteroid heat molecular comes among asteroids called all other chemical molecules. however neptune can have their legends and sizes lrb jupiter rrb saturn.
+
+============================================================================================================================================
+SOURCE:
+was discovered by mary on july at the bed i site of gorge in tanzania lrb specimen oh rrb.
+
+TARGET:
+was discovered by mary in july at the site of gorge in tanzania. [end]
+
+PREDICTION:
+the term piero lived and found in belgium this meant on july after mary antony s tract a defensive supply has been built for administration by christian seminary located at battle such as turks make

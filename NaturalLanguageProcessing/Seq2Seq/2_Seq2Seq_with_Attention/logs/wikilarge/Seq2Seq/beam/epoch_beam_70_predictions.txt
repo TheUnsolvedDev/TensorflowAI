@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+plot the story takes place at the abbey of the and and prince
+
+TARGET:
+the story takes place at the abbey of prince [end]
+
+PREDICTION:
+the original title duke of takes birth as executive family.
+
+============================================================================================================================================
+SOURCE:
+the university of cambridge lrb cambridge university or simply cambridge rrb is a public research university located in cambridge united kingdom.
+
+TARGET:
+the university of cambridge lrb also called cambridge university rrb is located in cambridge england. [end]
+
+PREDICTION:
+the opened of cambridge university and oxford films in ministry viii lrb ma rrb.
+
+============================================================================================================================================
+SOURCE:
+the record remained until when broke it using a designed and in
+
+TARGET:
+the record was until when broke it using a designed [end]
+
+PREDICTION:
+at that built there would use another guitar commercial and the amount station in a piece of heavy like an easy well to keep it in.
+
+============================================================================================================================================
+SOURCE:
+a new tv film entitled and best christmas ever began production in july and premiered on december officially ending the series. the title was later changed to
+
+TARGET:
+and is a television series. [end]
+
+PREDICTION:
+a released television shown with tv such as the movie version lrb us rrb.
+
+============================================================================================================================================
+SOURCE:
+by rail the regional trains and of the pays de la loire link major towns and cities of the pays de la loire and regions including those of the
+
+TARGET:
+loire is a department in france in the region pays de la [end]
+
+PREDICTION:
+by rail including spain premier of the west trains a center group and given municipality which cities notable towns like lrb de la area rrb metropolitan borough but also with
+
+============================================================================================================================================
+SOURCE:
+b. cast her as the roman in his historical the sign of the cross lrb rrb opposite march.
+
+TARGET:
+s career got a huge when b. cast her as the roman in his historical the sign of the cross lrb rrb opposite
+
+PREDICTION:
+she should choose cast her positive of war lrb spain rrb and oscar english for the fight some military colors on a given to march murder that he has no
+
+============================================================================================================================================
+SOURCE:
+he attended colorado state college lrb now named the university of northern colorado in colorado rrb and earned his master s
+
+TARGET:
+he later studied at the colorado state college. [end]
+
+PREDICTION:
+there was several to the north hill state opera city town which he learned with his master s lrb now called an colorado house at washington am abbey rrb news
+
+============================================================================================================================================
+SOURCE:
+for example the for from the for milk and the for are designed to the which in
+
+TARGET:
+for example the rules for cream are different than the rules for milk and the for are designed to keep the which helps
+
+PREDICTION:
+they are designed as an easy by milk to describe their own surface use but will be used for certain quality and the hard material changes in fact removed from
+
+============================================================================================================================================
+SOURCE:
+the central african republic is situated just north of the and throughout the year daily high rarely fall below the high s
+
+TARGET:
+because of this the daily high temperatures fall below the high s [end]
+
+PREDICTION:
+it borders with the other people
+
+============================================================================================================================================
+SOURCE:
+this is due to the of the village s name
+
+TARGET:
+this is due to the of the villages name being o w r o lrb rrb. [end]
+
+PREDICTION:
+this happens from to at the same day as it s place in air for example one longer being built or run by a good english language named later after

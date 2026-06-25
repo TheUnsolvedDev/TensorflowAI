@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+they are a type of chamber and the term is used to describe the structures built across atlantic europe the mediterranean and regions mostly during the period by
+
+TARGET:
+these structures were built mainly in the period. [end]
+
+PREDICTION:
+they are mostly used to measure building the structures which may provide a big work down throughout atlantic spain it has often been taken places just during this time great
+
+============================================================================================================================================
+SOURCE:
+it is and in red wine with is usually served with and
+
+TARGET:
+is made from red wine and [end]
+
+PREDICTION:
+it is eaten by meat and drink an may served a kind of type that has made sodium color with food cream liquid within some groups like sea high pressure
+
+============================================================================================================================================
+SOURCE:
+the second in command of a or is usually a
+
+TARGET:
+the second in command of a group is usually a [end]
+
+PREDICTION:
+in the operation are normally an example you by itself can be done at. lrb mi rrb.
+
+============================================================================================================================================
+SOURCE:
+the th film in the walt disney animated series the film tells the story of two friends a red fox named and a dog named copper who
+
+TARGET:
+the th movie in the list of disney animated movies the movie is about two friends a red fox and a dog who have their because
+
+PREDICTION:
+they start a large on its first fantasy world. percy lrb disney ndash jesus rrb is what was called half sarah finds in an old adventures just that his voice
+
+============================================================================================================================================
+SOURCE:
+the term is derived from the latin word which was used to the greek word for
+
+TARGET:
+examples of would be and the the word is taken from the latin word which was used to the greek word for [end]
+
+PREDICTION:
+the european lrb latin n word meaning visual order by software rrb is one that people think it was not speaking to its old english way for a long time
+
+============================================================================================================================================
+SOURCE:
+the station is also at the northern end of the yorkshire coast line and has the longest station seat in the world at y in
+
+TARGET:
+it is also at the northern end of the yorkshire coast line. it also has the longest station seat in the world at y in [end]
+
+PREDICTION:
+station contains most active of various britain coast line line. in the royal china
+
+============================================================================================================================================
+SOURCE:
+kim lrb born october rrb is an american television personality model and actress.
+
+TARGET:
+lrb born october at los angeles california rrb is a american [end]
+
+PREDICTION:
+michelle leo lrb born september rrb also by stephen kong is an animated guitarist and former united american u.s. or television series. they are the child of a popular character
+
+============================================================================================================================================
+SOURCE:
+william first to free his native land in in when he killed the english lrb see action at rrb.
+
+TARGET:
+a where he first to free his native land in when he killed the english of [end]
+
+PREDICTION:
+in the william margaret chose a second name. she allowed this name to run by any other action american land near when they kill an unknown no for being able
+
+============================================================================================================================================
+SOURCE:
+and are the languages spoken in the northeastern part of the district towards the border with district and and also in the far north
+
+TARGET:
+and are spoken in the northeast towards the border with and district and also in the far north on the fire line with district. [end]
+
+PREDICTION:
+the tribes wrote about these words from one part to southern and km north west of berlin towards a border with real saint stephen rrb.
+
+============================================================================================================================================
+SOURCE:
+the wikipedia is the version of wikipedia the free encyclopedia started on february.
+
+TARGET:
+the wikipedia is the language edition of [end]
+
+PREDICTION:
+the allows english started an organization that is made since february and has been launched mostly in about

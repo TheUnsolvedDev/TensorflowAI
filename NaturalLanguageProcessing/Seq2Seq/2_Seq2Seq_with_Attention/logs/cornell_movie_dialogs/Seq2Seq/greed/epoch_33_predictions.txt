@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+where in mexico would you
+
+TARGET:
+i don't care, just get me there. [end]
+
+PREDICTION:
+you know what i mean?
+
+============================================================================================================================================
+SOURCE:
+lucy is looking for you.
+
+TARGET:
+no, she's looking for you. [end]
+
+PREDICTION:
+i'm sorry.
+
+============================================================================================================================================
+SOURCE:
+what? steve seemed to put up with
+
+TARGET:
+i don't want someone who'll put up with him. i want someone who will enjoy him, the way i do. do you know what he told my friend he said
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+i can't say that.
+
+TARGET:
+think about your father. your sister. [end]
+
+PREDICTION:
+you know what i'm talking about.
+
+============================================================================================================================================
+SOURCE:
+oh, come mean, i was still
+
+TARGET:
+hey, that was last year. [end]
+
+PREDICTION:
+you didn't even see the
+
+============================================================================================================================================
+SOURCE:
+who?
+
+TARGET:
+he's a rich professor. he's done some work with our museum. he also the world to swim with [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+whatcha got?
+
+TARGET:
+[end]
+
+PREDICTION:
+no.
+
+============================================================================================================================================
+SOURCE:
+major?
+
+TARGET:
+english [end]
+
+PREDICTION:
+yeah.
+
+============================================================================================================================================
+SOURCE:
+-- oh --
+
+TARGET:
+-- you shouldn't do me like that... [end]
+
+PREDICTION:
+-- you look at me --
+
+============================================================================================================================================
+SOURCE:
+well, i guess it's safe to put on some lights now.
+
+TARGET:
+not yet! [end]
+
+PREDICTION:
+i don't know what you're talking about.

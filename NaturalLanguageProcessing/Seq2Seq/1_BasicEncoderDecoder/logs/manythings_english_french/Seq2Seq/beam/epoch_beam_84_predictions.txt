@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he ran into the
+
+TARGET:
+il courut dans la classe. [end]
+
+PREDICTION:
+c'est le quant aux garage.
+
+============================================================================================================================================
+SOURCE:
+it's
+
+TARGET:
+c'est très triste. [end]
+
+PREDICTION:
+c’est du travail. différent. c'est la tourner en réunion. classe.
+
+============================================================================================================================================
+SOURCE:
+please take a seat.
+
+TARGET:
+s'il vous plaît. [end]
+
+PREDICTION:
+sois place au avocat.
+
+============================================================================================================================================
+SOURCE:
+at last we can afford a house.
+
+TARGET:
+on peut enfin une maison. [end]
+
+PREDICTION:
+il y a prévu lorsque on est contre les pieds la soirée.
+
+============================================================================================================================================
+SOURCE:
+watch out! there's a in the road.
+
+TARGET:
+attention ! il y a un de sur la route. [end]
+
+PREDICTION:
+ce que le train va ! on laisse une rue. »
+
+============================================================================================================================================
+SOURCE:
+it was clean.
+
+TARGET:
+c'était [end]
+
+PREDICTION:
+c'était bonne.
+
+============================================================================================================================================
+SOURCE:
+i can't wait.
+
+TARGET:
+j’ai [end]
+
+PREDICTION:
+je
+
+============================================================================================================================================
+SOURCE:
+this is a very
+
+TARGET:
+c'est un très [end]
+
+PREDICTION:
+celle-ci est de numéro sur terre. des avons eu un temps où ça va marcher.
+
+============================================================================================================================================
+SOURCE:
+wait here. i'll be back soon.
+
+TARGET:
+attendez ici. je bientôt. [end]
+
+PREDICTION:
+attends là. je ne
+
+============================================================================================================================================
+SOURCE:
+she suggested that i write to him at once.
+
+TARGET:
+elle a que je lui immédiatement. [end]
+
+PREDICTION:
+elle a remarqué que je lui immédiatement. j'étais en train de penser.

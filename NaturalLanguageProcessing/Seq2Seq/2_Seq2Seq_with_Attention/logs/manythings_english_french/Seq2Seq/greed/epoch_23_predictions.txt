@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he has ants in his pants.
+
+TARGET:
+il a la [end]
+
+PREDICTION:
+il ne tient pas en place.
+
+============================================================================================================================================
+SOURCE:
+didn't i tell you not to close the door?
+
+TARGET:
+ne vous ai-je pas dit de ne pas fermer la porte ? [end]
+
+PREDICTION:
+ne t'ai-je pas dit de ne pas fermer la porte ?
+
+============================================================================================================================================
+SOURCE:
+i cut across the park.
+
+TARGET:
+j'ai coupé à travers le parc. [end]
+
+PREDICTION:
+j'ai coupé la table
+
+============================================================================================================================================
+SOURCE:
+where were you at the time of the fire?
+
+TARGET:
+où étiez-vous au moment de l'incendie ? [end]
+
+PREDICTION:
+où étiez-vous à la de l'incendie de la ?
+
+============================================================================================================================================
+SOURCE:
+the price of these shoes has been
+
+TARGET:
+le prix de ces chaussures a été [end]
+
+PREDICTION:
+les prix des ont été
+
+============================================================================================================================================
+SOURCE:
+it might sound like i'm but i'm not.
+
+TARGET:
+on pourrait croire que je me mais non. [end]
+
+PREDICTION:
+ça pourrait pour que je ne suis pas occupé mais je le
+
+============================================================================================================================================
+SOURCE:
+the leaves.
+
+TARGET:
+les [end]
+
+PREDICTION:
+les !
+
+============================================================================================================================================
+SOURCE:
+you aren't ready yet, are you?
+
+TARGET:
+vous n'êtes pas encore n'est-ce pas ? [end]
+
+PREDICTION:
+vous n'êtes pas encore n'est-ce pas ?
+
+============================================================================================================================================
+SOURCE:
+it's not easy to win.
+
+TARGET:
+il n'est pas facile de gagner. [end]
+
+PREDICTION:
+il n'est pas facile de gagner.
+
+============================================================================================================================================
+SOURCE:
+tom is a
+
+TARGET:
+tom est un [end]
+
+PREDICTION:
+tom est un

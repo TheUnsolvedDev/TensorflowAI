@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+who left the door open?
+
+TARGET:
+qui a laissé la porte ouverte ? [end]
+
+PREDICTION:
+la dernière personne ouvert ouverte à l'intérieur ? dernière. tout le magasin ! bouche « oui. chaque boîte est pousser tom.
+
+============================================================================================================================================
+SOURCE:
+she advised him against doing it.
+
+TARGET:
+elle l'a de le faire. [end]
+
+PREDICTION:
+elle a plus tombé en contact contre le réparer.
+
+============================================================================================================================================
+SOURCE:
+i think i left my keys on the kitchen table.
+
+TARGET:
+je crois que j'ai laissé mes clés sur la table de la cuisine. [end]
+
+PREDICTION:
+je penser qu'il me laissé sur table dans la cuisine. dernier.
+
+============================================================================================================================================
+SOURCE:
+you have a nice house.
+
+TARGET:
+vous avez une jolie maison. [end]
+
+PREDICTION:
+tu dois une belle maison.
+
+============================================================================================================================================
+SOURCE:
+i was just around.
+
+TARGET:
+j'étais juste en train de [end]
+
+PREDICTION:
+j'avais plaisir au monde.
+
+============================================================================================================================================
+SOURCE:
+you're probably too young to understand what's happening.
+
+TARGET:
+tu es probablement trop jeune pour comprendre ce qui se produit. [end]
+
+PREDICTION:
+tu n'es pratiquement pas jeune pour bonne ça.
+
+============================================================================================================================================
+SOURCE:
+i
+
+TARGET:
+j’ai [end]
+
+PREDICTION:
+j’ai sur le point d'être satisfait.
+
+============================================================================================================================================
+SOURCE:
+tom isn't a
+
+TARGET:
+tom n'est pas [end]
+
+PREDICTION:
+tom n'est pas un petit médecin. tous.
+
+============================================================================================================================================
+SOURCE:
+this is my natural hair color.
+
+TARGET:
+je ne me pas les cheveux. [end]
+
+PREDICTION:
+c'est ma couleur de cheveux
+
+============================================================================================================================================
+SOURCE:
+are you old enough to drive?
+
+TARGET:
+êtes-vous assez pour conduire ? [end]
+
+PREDICTION:
+tu as de conduire tard ! là dans un endroit n'est-ce mise à être longtemps s'il t'a marché.

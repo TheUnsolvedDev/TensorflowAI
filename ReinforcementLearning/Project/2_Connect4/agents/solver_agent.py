@@ -4,6 +4,8 @@ import time
 
 class SolverAgent:
     def __init__(self, max_depth=10, time_limit=1.0):
+        self.type = "Solver"
+        self.observation_mode = "absolute"
         self.max_depth = max_depth
         self.time_limit = time_limit
         self.cols = 7

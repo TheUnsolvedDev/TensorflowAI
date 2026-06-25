@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+pont en auge is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+pont en auge is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+pont en auge is a commune. it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+so far sun has been the number one spot in taiwanese music charts for six weeks.
+
+TARGET:
+stefanie was also the number one spot in the taiwanese music charts for weeks. [end]
+
+PREDICTION:
+so far sun has been the number one spot in taiwanese music charts for six weeks.
+
+============================================================================================================================================
+SOURCE:
+tottenham hotspur football club lrb t n m rrb commonly referred to as are an english premier league association football club based in tottenham north london.
+
+TARGET:
+tottenham hotspur football club is an english football club. [end]
+
+PREDICTION:
+tottenham hotspur football club is an english football club.
+
+============================================================================================================================================
+SOURCE:
+c. is found in the eastern half of the united states and lower parts of eastern canada.
+
+TARGET:
+it is also found in the lower parts of eastern canada. [end]
+
+PREDICTION:
+c. is found in the eastern half of the united states and lower parts of eastern canada.
+
+============================================================================================================================================
+SOURCE:
+amsterdam or netherlands in the dutch sporting confederation began considering a submission to bid to host the summer olympic and paralympic games in the capital of the netherlands.
+
+TARGET:
+amsterdam netherlands in the dutch sporting confederation began thinking about making a bid to host the summer olympic and paralympic games in amsterdam. [end]
+
+PREDICTION:
+amsterdam or netherlands in the dutch sporting confederation began considering a to bid the summer olympic and paralympic games in the capital of the netherlands.
+
+============================================================================================================================================
+SOURCE:
+officer is a railway station in melbourne victoria australia located in the suburb of officer on the railway line.
+
+TARGET:
+officer railway station is an railway station in officer victoria. [end]
+
+PREDICTION:
+the station is a railway station in the railway line.
+
+============================================================================================================================================
+SOURCE:
+puerto plata lrb silver port rrb is one of the northern provinces of the dominican republic.
+
+TARGET:
+the municipalities and their municipal districts lrb m.d. rrb are [end]
+
+PREDICTION:
+puerto plata is one of the northern provinces of the dominican republic.
+
+============================================================================================================================================
+SOURCE:
+german democratic republic lrb deutsche rrb the former country east germany
+
+TARGET:
+deutsche the former german democratic republic also known as east germany [end]
+
+PREDICTION:
+the german democratic republic is a country in the north of germany.
+
+============================================================================================================================================
+SOURCE:
+displayed at right is the rich dark lavender purple color the color of the purple jam lrb rrb sold in filipino
+
+TARGET:
+lrb purple jam rrb lrb rrb lrb rgb rrb [end]
+
+PREDICTION:
+is a and
+
+============================================================================================================================================
+SOURCE:
+having first sent his manuscripts out of the country bart k emigrated to the u.s. with p in july that year.
+
+TARGET:
+having first sent his manuscripts out of the country bart k felt he had to to the usa with p [end]
+
+PREDICTION:
+having first sent his manuscripts out of the country bart k was to the u.s. with p in july that year.

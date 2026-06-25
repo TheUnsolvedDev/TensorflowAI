@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he isn't the only one with this opinion.
+
+TARGET:
+il n'est pas le seul à avoir cette opinion. [end]
+
+PREDICTION:
+il ne n'est pas à personne.
+
+============================================================================================================================================
+SOURCE:
+you seem to be a kind man.
+
+TARGET:
+vous semblez être un homme gentil. [end]
+
+PREDICTION:
+tu es trop
+
+============================================================================================================================================
+SOURCE:
+i have to
+
+TARGET:
+je dois répéter. [end]
+
+PREDICTION:
+il faut
+
+============================================================================================================================================
+SOURCE:
+this hat isn't new.
+
+TARGET:
+ce chapeau n'est pas neuf. [end]
+
+PREDICTION:
+ça ne vaut pas de tout. c'est
+
+============================================================================================================================================
+SOURCE:
+english is spoken in many countries.
+
+TARGET:
+l'anglais est parlé dans de nombreux pays. [end]
+
+PREDICTION:
+de temps des livres.
+
+============================================================================================================================================
+SOURCE:
+some of us think so.
+
+TARGET:
+certains d'entre nous le pensent. [end]
+
+PREDICTION:
+elles
+
+============================================================================================================================================
+SOURCE:
+you'll have a hard time.
+
+TARGET:
+vous une peine en quartier de haute sécurité. [end]
+
+PREDICTION:
+vous devez y aller, de suite. pas.
+
+============================================================================================================================================
+SOURCE:
+have you ever been diagnosed with
+
+TARGET:
+est-ce qu'on t'a déjà diagnostiqué un ? [end]
+
+PREDICTION:
+êtes-vous jamais déjà été en colère à la bouche cardiaque ?
+
+============================================================================================================================================
+SOURCE:
+i'm addicted to
+
+TARGET:
+je suis accro à la [end]
+
+PREDICTION:
+j’ai mal au sujet à la demande. tom.
+
+============================================================================================================================================
+SOURCE:
+all i know is that he came from china.
+
+TARGET:
+tout ce que je sais, c'est qu'il vient de chine. [end]
+
+PREDICTION:
+tous sûr que je suis allé en prison.

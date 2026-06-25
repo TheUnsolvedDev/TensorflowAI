@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i have feelings about that.
+
+TARGET:
+j'ai des sentiments à ce sujet. [end]
+
+PREDICTION:
+j'ai des solution pour ça.
+
+============================================================================================================================================
+SOURCE:
+is breakfast
+
+TARGET:
+le petit déjeuner est-il ? [end]
+
+PREDICTION:
+le petit déjeuner est-il ?
+
+============================================================================================================================================
+SOURCE:
+tom seems to be waiting for
+
+TARGET:
+tom semble attendre quelqu'un. [end]
+
+PREDICTION:
+tom semble en point de vue. dents.
+
+============================================================================================================================================
+SOURCE:
+me for
+
+TARGET:
+de vous [end]
+
+PREDICTION:
+j'ai une permission aux de chez vous.
+
+============================================================================================================================================
+SOURCE:
+we have enough food.
+
+TARGET:
+nous avons assez de nourriture. [end]
+
+PREDICTION:
+nous avons de assez pour rien.
+
+============================================================================================================================================
+SOURCE:
+don't make me go back there.
+
+TARGET:
+ne pas à y [end]
+
+PREDICTION:
+ne pas au coin !
+
+============================================================================================================================================
+SOURCE:
+you're very
+
+TARGET:
+vous êtes très [end]
+
+PREDICTION:
+te êtes de très intelligent.
+
+============================================================================================================================================
+SOURCE:
+i'm just feeling a little sick.
+
+TARGET:
+je me sens juste un peu malade. [end]
+
+PREDICTION:
+il me fait seulement mal.
+
+============================================================================================================================================
+SOURCE:
+we're in no hurry.
+
+TARGET:
+nous ne sommes pas [end]
+
+PREDICTION:
+on n'est pas nous parfait. les
+
+============================================================================================================================================
+SOURCE:
+i don't want to go there alone.
+
+TARGET:
+je ne veux pas y aller seul. [end]
+
+PREDICTION:
+pas d'y aller seul. tout. de une douche. nous en là prendre. prête le prêt par vous aider. seule. voilà nos libre. il ne souhaite qu'une bonne poste. c'est

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+this is we're being from a
+
+TARGET:
+hang in there, i'll think of something. [end]
+
+PREDICTION:
+what do i know about him? you want me out of jail?
+
+============================================================================================================================================
+SOURCE:
+use the
+
+TARGET:
+too late. too late. save yourself. [end]
+
+PREDICTION:
+you know where you're from, what did your parents say? when he told you, i think he's a good man.
+
+============================================================================================================================================
+SOURCE:
+you've been off in honey. everybody's got a
+
+TARGET:
+but a [end]
+
+PREDICTION:
+i'm just not the of a bitch don't know about that.
+
+============================================================================================================================================
+SOURCE:
+no, yes, it
+
+TARGET:
+yeah? but look at you. [end]
+
+PREDICTION:
+you have of course.
+
+============================================================================================================================================
+SOURCE:
+no, this is my first trip, doc.
+
+TARGET:
+well, you're here for a mister mcmurphy. i'd like you to understand you are here on a court order and we are responsible to the state. so, i'd
+
+PREDICTION:
+thank you for my son.
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+i don't want to be alone. [end]
+
+PREDICTION:
+what did you do for me?
+
+============================================================================================================================================
+SOURCE:
+seen a sign for hours. maybe it's long gone.
+
+TARGET:
+maybe it is. why don't you take a little stroll and see? [end]
+
+PREDICTION:
+how are they? i know you have a good reason for what you've been than your homework.
+
+============================================================================================================================================
+SOURCE:
+barnes and i'm a legal secretary.
+
+TARGET:
+of course. mrs. and what were you going with the international carlos the taking [end]
+
+PREDICTION:
+the same you know what you're going on, right?
+
+============================================================================================================================================
+SOURCE:
+this is not a jewish name, is it?
+
+TARGET:
+i hope its not too [end]
+
+PREDICTION:
+yes. he's very he is in his room. i will be able to see that. but if you don't know him i'll have the right back --
+
+============================================================================================================================================
+SOURCE:
+dr. you are entitled to your opinion. but we feel quite that it would by both and to send a human being into a completely completely
+
+TARGET:
+y'know what? fine. i guess if we want them to know the truth about who we are there's no quicker way to show them. [end]
+
+PREDICTION:
+you mean that

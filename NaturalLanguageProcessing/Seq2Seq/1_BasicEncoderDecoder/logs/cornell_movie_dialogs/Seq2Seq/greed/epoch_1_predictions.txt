@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you've reached a new low with this one. i can't believe you're crazy enough to use the room at the
+
+TARGET:
+why not? you think i can afford a suite like that on my is done yet? * [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+because maybe if we know each other's names, things wouldn't get like this, my name's jeff.
+
+TARGET:
+okay. okay? [end]
+
+PREDICTION:
+i don't know what i mean.
+
+============================================================================================================================================
+SOURCE:
+throw 'em in the bathroom, will you? how good are the
+
+TARGET:
+sixty days. here. don't mention it. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+guess they -- went to the fair after all.
+
+TARGET:
+guess so ... [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+destiny took us but i knew it would bring us back together.
+
+TARGET:
+or [end]
+
+PREDICTION:
+i don't know what i mean.
+
+============================================================================================================================================
+SOURCE:
+i told everyone didn't i?
+
+TARGET:
+she'll get here. [end]
+
+PREDICTION:
+i don't know what i mean.
+
+============================================================================================================================================
+SOURCE:
+how far?
+
+TARGET:
+i don't know -- few hours, i guess. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+jesus. well, i do too, sometimes...
+
+TARGET:
+no you don't. [end]
+
+PREDICTION:
+i don't know what i mean.
+
+============================================================================================================================================
+SOURCE:
+would you settle for a
+
+TARGET:
+what's that? [end]
+
+PREDICTION:
+i don't know what i mean.
+
+============================================================================================================================================
+SOURCE:
+you're very good at this aren't you?
+
+TARGET:
+i think you're supposed to answer that question. [end]
+
+PREDICTION:
+i don't know what i mean.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+bullshit.
+
+TARGET:
+all right! right now! [end]
+
+PREDICTION:
+i don't know what to say.
+
+============================================================================================================================================
+SOURCE:
+it's always been one of my favorite names.
+
+TARGET:
+if you like -- just hurry! [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+i hear what you're saying, but i know what you're thinking.
+
+TARGET:
+what? [end]
+
+PREDICTION:
+i don't know what to say.
+
+============================================================================================================================================
+SOURCE:
+yeah. i know what it's like.
+
+TARGET:
+then tell me what happened. [end]
+
+PREDICTION:
+you don't have to be
+
+============================================================================================================================================
+SOURCE:
+how how long i been out?
+
+TARGET:
+you been in and out goin' on two... maybe two days. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+i helped jamie with the first one.
+
+TARGET:
+i thought she built it herself. [end]
+
+PREDICTION:
+i don't know what to say.
+
+============================================================================================================================================
+SOURCE:
+thank you so much for your help
+
+TARGET:
+dallas. dallas. [end]
+
+PREDICTION:
+i don't know what i mean.
+
+============================================================================================================================================
+SOURCE:
+what if i have a previous
+
+TARGET:
+break it. [end]
+
+PREDICTION:
+you don't have to be
+
+============================================================================================================================================
+SOURCE:
+how
+
+TARGET:
+it's spring break. i don't want to go to a will reading. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+no, nick, please --
+
+TARGET:
+who? [end]
+
+PREDICTION:
+you don't have to be

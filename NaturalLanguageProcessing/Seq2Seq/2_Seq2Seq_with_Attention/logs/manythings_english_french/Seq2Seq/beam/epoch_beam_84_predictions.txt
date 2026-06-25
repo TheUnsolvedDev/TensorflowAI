@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he ran into the
+
+TARGET:
+il courut dans la classe. [end]
+
+PREDICTION:
+il sur le haut de boîte les porte. ils passe-t-il par te plait.
+
+============================================================================================================================================
+SOURCE:
+it's
+
+TARGET:
+c'est très triste. [end]
+
+PREDICTION:
+c'est de la
+
+============================================================================================================================================
+SOURCE:
+please take a seat.
+
+TARGET:
+s'il vous plaît. [end]
+
+PREDICTION:
+fais-le un je te suis s'il prête !
+
+============================================================================================================================================
+SOURCE:
+at last we can afford a house.
+
+TARGET:
+on peut enfin une maison. [end]
+
+PREDICTION:
+nous pouvons en rencontre un pas l'un pour vous l'autre. ? une visité
+
+============================================================================================================================================
+SOURCE:
+watch out! there's a in the road.
+
+TARGET:
+attention ! il y a un de sur la route. [end]
+
+PREDICTION:
+attention ? en prenez l'esprit. par la route.
+
+============================================================================================================================================
+SOURCE:
+it was clean.
+
+TARGET:
+c'était [end]
+
+PREDICTION:
+ça a disparu. bien. à moi. ? c'était tout. ! que tom ne fait-il pas chaud tout en clair et vrai y n’est le vôtre là-dedans pour peur des tête
+
+============================================================================================================================================
+SOURCE:
+i can't wait.
+
+TARGET:
+j’ai [end]
+
+PREDICTION:
+je ne peux pas.
+
+============================================================================================================================================
+SOURCE:
+this is a very
+
+TARGET:
+c'est un très [end]
+
+PREDICTION:
+c'est très par les yeux.
+
+============================================================================================================================================
+SOURCE:
+wait here. i'll be back soon.
+
+TARGET:
+attendez ici. je bientôt. [end]
+
+PREDICTION:
+attendez ici, je reviens rapidement. un jour. !
+
+============================================================================================================================================
+SOURCE:
+she suggested that i write to him at once.
+
+TARGET:
+elle a que je lui immédiatement. [end]
+
+PREDICTION:
+elle lui qu'elle m'a immédiatement. une. par lui.

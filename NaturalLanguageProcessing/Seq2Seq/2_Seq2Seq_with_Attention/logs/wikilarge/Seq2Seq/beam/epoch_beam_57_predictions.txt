@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the new york are an american football team based in east new jersey representing the new york city metropolitan area.
+
+TARGET:
+the new york are an american football team. [end]
+
+PREDICTION:
+a lower sound is in japanese they are founded by local soccer team and the chicago race from to. after several years. it will be based on new york river.
+
+============================================================================================================================================
+SOURCE:
+lrb rrb lrb june october rrb was a swedish who starred for the royal swedish
+
+TARGET:
+lrb rrb lrb rrb was a swedish [end]
+
+PREDICTION:
+lrb june october rrb was a swedish who cast in madrid and took place the building given to canada in.
+
+============================================================================================================================================
+SOURCE:
+however is by far the most popular sport the india team won the and the world world twenty and shared the trophy with
+
+TARGET:
+the india team won the and world cup and the world they shared the champions trophy with [end]
+
+PREDICTION:
+and the most famous is in a minnesota center for seasons but best success was defeated by these team three players both called boxing major league games and. world championship
+
+============================================================================================================================================
+SOURCE:
+the national library of china or in is the largest library in asia and one of the largest in the world with a collection of over million
+
+TARGET:
+the national library of china is one of the world s largest found in china. [end]
+
+PREDICTION:
+territories is the largest book for china to people see library of china.
+
+============================================================================================================================================
+SOURCE:
+in november the of the to continue the league with toronto owner decided to the and form a new league the nhl without
+
+TARGET:
+the november annual meeting of the was over by frank who was the the voted to stop [end]
+
+PREDICTION:
+for the series they played a new league to record while captain other players from that season decided back and instead of losing former world without you would not use
+
+============================================================================================================================================
+SOURCE:
+a lrb also known as a cd rrb is an used to store digital
+
+TARGET:
+a or cd is a flat round used to store digital [end]
+
+PREDICTION:
+it has many computers and useful for use from digital versions to store a set of the three numbers called american visual needs lrb written as in other rrb.
+
+============================================================================================================================================
+SOURCE:
+on european and north america technology the set its eyes on based on japanese
+
+TARGET:
+the decided to build based on japanese [end]
+
+PREDICTION:
+it was made in on th july.
+
+============================================================================================================================================
+SOURCE:
+physical is not accepted as a cause for cancer cancer or
+
+TARGET:
+some of the most common include cancer cancer cancer and cancer begins in the [end]
+
+PREDICTION:
+physical reasons for clothing lrb magazine rrb is something that it may become not accepted however the whole term was very influenced as in sexual activity and tries by his
+
+============================================================================================================================================
+SOURCE:
+media went into in and the tv company became
+
+TARGET:
+went in and the tv company became [end]
+
+PREDICTION:
+he became the tv company after being taught for it. however early with american company. many more recent production had to replace media in japan as a pop guitar and
+
+============================================================================================================================================
+SOURCE:
+have been distributed for free by local and copies of the operating system have been from the website as of may.
+
+TARGET:
+as of may had been free by local and copies of the operating system had been from the web [end]
+
+PREDICTION:
+americans have been chosen for free in the studio to describe all members of microsoft system which is usually stated on by e. red and t or that with some

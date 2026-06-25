@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i didn't think anybody was coming.
+
+TARGET:
+je n'ai pas pensé que quiconque [end]
+
+PREDICTION:
+je ne pensais pas que quiconque fut
+
+============================================================================================================================================
+SOURCE:
+i'm a
+
+TARGET:
+je suis [end]
+
+PREDICTION:
+je suis
+
+============================================================================================================================================
+SOURCE:
+thank you all very much.
+
+TARGET:
+merci beaucoup à toutes. [end]
+
+PREDICTION:
+merci à une
+
+============================================================================================================================================
+SOURCE:
+i'm a
+
+TARGET:
+je suis en [end]
+
+PREDICTION:
+je suis
+
+============================================================================================================================================
+SOURCE:
+can i sit next to you?
+
+TARGET:
+est-ce que je peux m'asseoir à côté de toi ? [end]
+
+PREDICTION:
+puis-je m'asseoir auprès de toi ?
+
+============================================================================================================================================
+SOURCE:
+we've missed you.
+
+TARGET:
+tu nous as [end]
+
+PREDICTION:
+tu nous as
+
+============================================================================================================================================
+SOURCE:
+i think tom believes what he's saying is but i don't think it is.
+
+TARGET:
+je pense que tom croit que ce qu'il dit est mais je ne pense pas que ce soit le cas. [end]
+
+PREDICTION:
+je crois que tom tient pour vrai ce qu’il mais je ne pas ça comme
+
+============================================================================================================================================
+SOURCE:
+tom borrowed my
+
+TARGET:
+tom a ma [end]
+
+PREDICTION:
+tom m'a ma
+
+============================================================================================================================================
+SOURCE:
+who ordered that?
+
+TARGET:
+qui a commandé ça ? [end]
+
+PREDICTION:
+qui a cela ?
+
+============================================================================================================================================
+SOURCE:
+they were naive.
+
+TARGET:
+elles étaient [end]
+
+PREDICTION:
+ils étaient

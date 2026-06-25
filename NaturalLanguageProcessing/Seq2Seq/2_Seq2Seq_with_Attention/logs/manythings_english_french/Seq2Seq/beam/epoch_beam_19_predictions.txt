@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+did you enjoy the party yesterday?
+
+TARGET:
+t'es-tu amusée hier à la fête ? [end]
+
+PREDICTION:
+avez-vous assez à votre fête d'hier ?
+
+============================================================================================================================================
+SOURCE:
+tom hasn't written the letter yet.
+
+TARGET:
+tom n'a pas encore écrit la lettre. [end]
+
+PREDICTION:
+les tu n’as jamais faim, c'est déjà intéressée.
+
+============================================================================================================================================
+SOURCE:
+when will we reach the airport?
+
+TARGET:
+quand à l'aéroport ? [end]
+
+PREDICTION:
+à quelle quand destination vous pour vendre ?
+
+============================================================================================================================================
+SOURCE:
+tom didn't mean it.
+
+TARGET:
+tom ne le pensait pas. [end]
+
+PREDICTION:
+cela n'est plus jamais
+
+============================================================================================================================================
+SOURCE:
+i know that you live here.
+
+TARGET:
+je sais que c'est là que tu vis. [end]
+
+PREDICTION:
+j'imagine qu'il y en a plu.
+
+============================================================================================================================================
+SOURCE:
+i haven't done anything wrong.
+
+TARGET:
+je n'ai rien fait de mal. [end]
+
+PREDICTION:
+cela dit rien,
+
+============================================================================================================================================
+SOURCE:
+have you ever seen a spider a web?
+
+TARGET:
+as-tu déjà vu une araignée une toile ? [end]
+
+PREDICTION:
+vous avez déjà vu de dépenser une toile quelqu'un ? long.
+
+============================================================================================================================================
+SOURCE:
+i didn't know that you needed to do that.
+
+TARGET:
+je ne savais pas que tu avais besoin de le faire. [end]
+
+PREDICTION:
+j'étais que tu as voulu la faire.
+
+============================================================================================================================================
+SOURCE:
+she can play the piano very well.
+
+TARGET:
+elle sait très bien jouer du piano. [end]
+
+PREDICTION:
+vivre fort bien. au
+
+============================================================================================================================================
+SOURCE:
+they
+
+TARGET:
+ils des [end]
+
+PREDICTION:
+elles des taches de large.

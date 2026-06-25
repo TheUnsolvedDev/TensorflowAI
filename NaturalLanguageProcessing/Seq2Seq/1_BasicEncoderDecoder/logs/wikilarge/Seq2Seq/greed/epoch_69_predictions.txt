@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a city in county iowa united states.
+
+TARGET:
+is a city of iowa in the united states. [end]
+
+PREDICTION:
+is a city of iowa in the united states.
+
+============================================================================================================================================
+SOURCE:
+during his career in wwf e held the championship twice the european championship once and the world tag team championship once with
+
+TARGET:
+during his career in wwf e has held the championship twice european championship once and world tag team championship once with [end]
+
+PREDICTION:
+in time used the formula twice as the leading member championships and the drivers championship were held twice in the world series.
+
+============================================================================================================================================
+SOURCE:
+a cyclone is a low pressure weather system usually lrb miles rrb in which the air is in a fashion lrb in the northern hemisphere rrb.
+
+TARGET:
+are usually to kilometers wide in which the air is moving in a fashion in the northern [end]
+
+PREDICTION:
+is a weather station in the united states.
+
+============================================================================================================================================
+SOURCE:
+mark lrb born may rrb is an american software and internet
+
+TARGET:
+mark lrb born may rrb is a university student that created when he was still studying computer [end]
+
+PREDICTION:
+mark lrb born may rrb is an american and television
+
+============================================================================================================================================
+SOURCE:
+at that race hamilton at the on but the and was given a drive through which he served on the race in
+
+TARGET:
+hamilton went on to win the british grand prix in difficult [end]
+
+PREDICTION:
+at that race hamilton sent and he was sent at the until the start of
+
+============================================================================================================================================
+SOURCE:
+it is located in district about k northwest of
+
+TARGET:
+it is located about k northwest of [end]
+
+PREDICTION:
+is a city located in southwest of lies between and deep
+
+============================================================================================================================================
+SOURCE:
+he was set to work breaking stone but rather than him to leave the prison the stone was brought in and in a of the prison where
+
+TARGET:
+he was set to work in the prison up rocks into small [end]
+
+PREDICTION:
+he was one of the few months after the of stone to
+
+============================================================================================================================================
+SOURCE:
+chinese rock had its origins in northwest wind lrb rrb style of music which emerged as a main genre in mainland
+
+TARGET:
+songs such as came to represent an image of china as to the soft sweet urban gang [end]
+
+PREDICTION:
+the rock and roll palm was of anti chinese and
+
+============================================================================================================================================
+SOURCE:
+high school high school is located in the middle of the two towns on
+
+TARGET:
+central high school is situated on highway between the two [end]
+
+PREDICTION:
+high school is in high school
+
+============================================================================================================================================
+SOURCE:
+is a commune in the gironde department in aquitaine in southwestern france.
+
+TARGET:
+it is found in the region aquitaine in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+it is found in the region aquitaine in the gironde department in the southwest of france.

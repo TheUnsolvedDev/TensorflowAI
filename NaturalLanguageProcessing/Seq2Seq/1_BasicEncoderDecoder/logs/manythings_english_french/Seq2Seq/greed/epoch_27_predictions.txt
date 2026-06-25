@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i think we'll make it if we hurry.
+
+TARGET:
+je pense que nous pouvons y arriver si nous nous [end]
+
+PREDICTION:
+je pense que nous le nous serons ensemble.
+
+============================================================================================================================================
+SOURCE:
+father comes home from work about nine in the evening.
+
+TARGET:
+mon père rentre du travail vers neuf heures du soir. [end]
+
+PREDICTION:
+le père va rentrer du bureau à la maison de poste dans ce soir.
+
+============================================================================================================================================
+SOURCE:
+always tell the truth.
+
+TARGET:
+dis toujours la vérité. [end]
+
+PREDICTION:
+dites toujours la vérité.
+
+============================================================================================================================================
+SOURCE:
+everyone is watching.
+
+TARGET:
+tout le monde regarde. [end]
+
+PREDICTION:
+tout le monde regarde.
+
+============================================================================================================================================
+SOURCE:
+tom threatened mary.
+
+TARGET:
+tom mary. [end]
+
+PREDICTION:
+tom a mary.
+
+============================================================================================================================================
+SOURCE:
+thanks for doing what needed to be done.
+
+TARGET:
+merci à toi d'avoir fait ce qu'il fallait. [end]
+
+PREDICTION:
+d'après ce que tu devais devait faire !
+
+============================================================================================================================================
+SOURCE:
+you aren't allowed to park there.
+
+TARGET:
+tu n'es pas autorisé à là. [end]
+
+PREDICTION:
+tu n'es pas autorisé à te garer là.
+
+============================================================================================================================================
+SOURCE:
+translate the word for word.
+
+TARGET:
+traduis le passage mot à mot. [end]
+
+PREDICTION:
+mot mot à nouveau sur le papier.
+
+============================================================================================================================================
+SOURCE:
+we saw it on the news.
+
+TARGET:
+on l'a vu aux nouvelles. [end]
+
+PREDICTION:
+nous l'avons vu aux nouvelles.
+
+============================================================================================================================================
+SOURCE:
+i read it in the newspaper.
+
+TARGET:
+je l'ai lu dans le journal. [end]
+
+PREDICTION:
+je l'ai lu dans le journal.

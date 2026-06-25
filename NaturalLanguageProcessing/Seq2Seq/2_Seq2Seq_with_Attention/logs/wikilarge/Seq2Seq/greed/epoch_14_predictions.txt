@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is the second most intense of pacific hurricane at landfall only the unnamed mexico hurricane was more
+
+TARGET:
+hurricane is notable for being the second most intense pacific hurricane at [end]
+
+PREDICTION:
+hurricane is the second strongest hurricane in the atlantic hurricane season.
+
+============================================================================================================================================
+SOURCE:
+it the gnu general public license which is a license designed for free software.
+
+TARGET:
+the gnu general public license is the same but is about software. [end]
+
+PREDICTION:
+it the gnu general public license which is a license designed for free software.
+
+============================================================================================================================================
+SOURCE:
+ayers is married to a fellow former leader of the weather
+
+TARGET:
+ayers is married to was also part of the weather underground. [end]
+
+PREDICTION:
+ayers is married to a fellow former leader of the weather
+
+============================================================================================================================================
+SOURCE:
+red bull has also been the target of criticism concerning the possible health risks associated with the
+
+TARGET:
+red bull has also been criticized about the possible health risks of the drink. [end]
+
+PREDICTION:
+red bull has also been the target of
+
+============================================================================================================================================
+SOURCE:
+become sexually mature at about one year of age and can have to in a litter with being the most common litter size.
+
+TARGET:
+female can have up to three in one year. [end]
+
+PREDICTION:
+become sexually mature at about one year of age.
+
+============================================================================================================================================
+SOURCE:
+lrb born august in rrb is a thai football manager and former football striker who played between april and october currently managing united in the thai division league.
+
+TARGET:
+lrb born august rrb is a former thai football player. [end]
+
+PREDICTION:
+lrb born august rrb is a former football player.
+
+============================================================================================================================================
+SOURCE:
+a male is known as a bull a female as a cow and a baby as a
+
+TARGET:
+a male is known as a a female is called a cow and a baby is called a [end]
+
+PREDICTION:
+a male is called a as a
+
+============================================================================================================================================
+SOURCE:
+jamie lynn spears lrb born april rrb is an american actress.
+
+TARGET:
+jamie lynn marie spears lrb born april in louisiana rrb is an american actress and singer. [end]
+
+PREDICTION:
+jamie melody lrb born april rrb is an american actress.
+
+============================================================================================================================================
+SOURCE:
+the female equivalent title lrb or rrb denotes either the wife of a r or in states where that was customary a woman ruling in her own right.
+
+TARGET:
+the word r lrb also spelled rrb is sanskrit for great king or high king. [end]
+
+PREDICTION:
+the lrb or rrb means the wife of a r lrb rrb is a woman ruling in the state of
+
+============================================================================================================================================
+SOURCE:
+not all of the drivers were with expressing a particular of the pit exit which under the main circuit by way of a
+
+TARGET:
+not all of the drivers were does not like the pit exit which under the main circuit by way of a [end]
+
+PREDICTION:
+not all of the drivers were with lyrics and used for the by making of a

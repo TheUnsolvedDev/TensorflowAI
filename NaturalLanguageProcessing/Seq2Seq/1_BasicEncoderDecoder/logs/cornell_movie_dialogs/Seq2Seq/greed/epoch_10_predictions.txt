@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+selling metal.
+
+TARGET:
+see? and what does this guy she's with do? [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+yeah, sure, and i bet you had last night. along with two of champagne.
+
+TARGET:
+just one bottle. i believe in [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+you shouldn't listen to her, she's a nervous old
+
+TARGET:
+she thinks someone's trying to kill you. [end]
+
+PREDICTION:
+she was
+
+============================================================================================================================================
+SOURCE:
+yeah. i'm surprised. it's really travels well though. you know, the world looks a lot better from up here.
+
+TARGET:
+the world is fantastic. it's the ultimate i am shot from a into the energy. [end]
+
+PREDICTION:
+yeah, i know.
+
+============================================================================================================================================
+SOURCE:
+why?
+
+TARGET:
+i've out. i'm afraid of him. he'll like that. [end]
+
+PREDICTION:
+because i don't know what you're talking about.
+
+============================================================================================================================================
+SOURCE:
+there is one last thing, elliot is vital to the economic interests of this nation. he's also a major to the party. i expect him to be given every
+
+TARGET:
+political [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+you know, i didn't want to bring this up, but you have treating a lot of people with a lot of even your own wife.
+
+TARGET:
+my wife? [end]
+
+PREDICTION:
+i was
+
+============================================================================================================================================
+SOURCE:
+as though you do what i say.
+
+TARGET:
+that's pretty funny, all right. what happened in [end]
+
+PREDICTION:
+i don't know what to say about it.
+
+============================================================================================================================================
+SOURCE:
+it may take me a little longer to wrap things up here.
+
+TARGET:
+four o'clock. don't be late. [end]
+
+PREDICTION:
+i don't want to hear it.
+
+============================================================================================================================================
+SOURCE:
+come sit beside me, sweet boy, and i'll draw you a map.
+
+TARGET:
+as your invitation be. tell me one thing more. [end]
+
+PREDICTION:
+you know what you're talking about.

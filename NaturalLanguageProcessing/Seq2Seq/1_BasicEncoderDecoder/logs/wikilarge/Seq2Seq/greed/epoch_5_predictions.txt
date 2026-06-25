@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+for humans the visible spectrum ranges approximately from to and there are normally three types of
+
+TARGET:
+these cones are sensitive to different portions of the visible [end]
+
+PREDICTION:
+for instance the of is used to
+
+============================================================================================================================================
+SOURCE:
+congress of d the monarchs of bohemia hungary and poland form an anti habsburg
+
+TARGET:
+congress of d involving the monarchs of bohemia hungary and poland. [end]
+
+PREDICTION:
+polish of polish lithuanian union and polish lithuanian commonwealth the first of the of the
+
+============================================================================================================================================
+SOURCE:
+from coins were introduced in in denominations of and with small numbers of coins first in.
+
+TARGET:
+coins were introduced in in denominations of and [end]
+
+PREDICTION:
+coins were introduced in in and in
+
+============================================================================================================================================
+SOURCE:
+king to the lrb korea rrb throne.
+
+TARGET:
+ascension of king to the silla lrb korea rrb throne. [end]
+
+PREDICTION:
+king
+
+============================================================================================================================================
+SOURCE:
+the war itself was to last on and off until when david ii was released from english
+
+TARGET:
+the war itself lasted until when david ii was released from english [end]
+
+PREDICTION:
+the first person was started in by was a
+
+============================================================================================================================================
+SOURCE:
+the idea that the itself moves lrb and carries the continents with it rrb as it from a central axis was proposed by harry from princeton university in the s.
+
+TARGET:
+the idea that the ocean floor itself moves and carries the continents with it as it from a central axis was by harry of princeton university. [end]
+
+PREDICTION:
+the was a in the united states that was a of the united states that was not
+
+============================================================================================================================================
+SOURCE:
+florence and the machine supported for their june comeback performance at the men arena in manchester.
+
+TARGET:
+florence and the machine also supported for their june comeback performance at the men arena in manchester and supported in july. [end]
+
+PREDICTION:
+the summer olympics and were held in the city of
+
+============================================================================================================================================
+SOURCE:
+in j der og and christians lrb o o rrb drew the ultimate conclusion and explained that judaism which in his terminology meant an immediate trust in god was the only true religion.
+
+TARGET:
+jews and christians lrb j der og rrb [end]
+
+PREDICTION:
+in hebrew he wrote the letter of the and
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+calvados is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+is a commune. it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+the summer olympics officially known as the games of the olympiad are a major international sports and cultural festival which will be celebrated in the tradition of the olympic games.
+
+TARGET:
+the summer olympics which will be officially known as the games of the olympiad is a sporting event that the international olympic committee lrb ioc rrb has yet to [end]
+
+PREDICTION:
+the summer olympics officially known as the games of the olympiad is a major sports cultural event.

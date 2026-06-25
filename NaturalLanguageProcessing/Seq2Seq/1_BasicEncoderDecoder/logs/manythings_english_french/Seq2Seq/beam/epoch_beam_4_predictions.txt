@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+bad weather kept us from going out.
+
+TARGET:
+le mauvais temps nous a de sortir. [end]
+
+PREDICTION:
+on décida à partir de nous lever du brouillard.
+
+============================================================================================================================================
+SOURCE:
+we know what you're up to.
+
+TARGET:
+on sait ce que tu [end]
+
+PREDICTION:
+vous savez ce dont nous sommes le
+
+============================================================================================================================================
+SOURCE:
+the man robbed her bag.
+
+TARGET:
+l'homme lui a volé son sac. [end]
+
+PREDICTION:
+on le volé dans sa sac. juste.
+
+============================================================================================================================================
+SOURCE:
+maybe tom asked mary to lie.
+
+TARGET:
+peut-être que tom a demandé à mary de mentir. [end]
+
+PREDICTION:
+vous dites que marie a à rester en train de dire normal. ».
+
+============================================================================================================================================
+SOURCE:
+my dog follows me whenever i leave the room.
+
+TARGET:
+mon chien me chaque fois que je quitte la pièce. [end]
+
+PREDICTION:
+mon garçon dort sur le train de nettoyer les jours et je suis là.
+
+============================================================================================================================================
+SOURCE:
+i used a computer in order to save time.
+
+TARGET:
+je me suis servi d'un ordinateur pour gagner du temps. [end]
+
+PREDICTION:
+je me pour une méthode de faire du sucre.
+
+============================================================================================================================================
+SOURCE:
+tom is the person i told you about.
+
+TARGET:
+tom est la personne dont je vous ai [end]
+
+PREDICTION:
+thomas vous est à moi en ce dont tu ne me mot.
+
+============================================================================================================================================
+SOURCE:
+don't leave your dog inside all day.
+
+TARGET:
+ne laisse pas ton chien à l'intérieur toute la journée. [end]
+
+PREDICTION:
+ne te fais pas à la pièce du chien.
+
+============================================================================================================================================
+SOURCE:
+this is an exception to the rule.
+
+TARGET:
+c'est une à la règle. [end]
+
+PREDICTION:
+c'est cette chemise à loi froide.
+
+============================================================================================================================================
+SOURCE:
+sit down and shut up.
+
+TARGET:
+asseyez-vous et ! [end]
+
+PREDICTION:
+asseyez-vous de côté !

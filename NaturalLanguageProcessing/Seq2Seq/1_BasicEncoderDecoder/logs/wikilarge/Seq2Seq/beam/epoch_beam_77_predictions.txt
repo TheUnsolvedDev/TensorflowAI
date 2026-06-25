@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the parliament had been in april by soldiers led by by the of its rule and its to
+
+TARGET:
+the parliament had been sent away in april by soldiers led by [end]
+
+PREDICTION:
+april the government led more by meeting plans instead given in taking at its last time and colonial rule in.
+
+============================================================================================================================================
+SOURCE:
+first released in japan on october the game boy color lrb abbreviated as rrb added a color screen to a form slightly larger than the game boy
+
+TARGET:
+the game boy color was the first game boy in [end]
+
+PREDICTION:
+it game boy color in pok fields
+
+============================================================================================================================================
+SOURCE:
+a association or union lrb also sometimes called a organization association or just an association rrb is a group of individuals who enter into an agreement as to
+
+TARGET:
+the freedom of association stands in the universal of human rights [end]
+
+PREDICTION:
+a association is one person that each member of the order agreement to an african union tribe with a particular kind and thus ending of their small groups as well.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the gironde department in aquitaine in south western france.
+
+TARGET:
+gironde is a commune. it is found in the region aquitaine in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+is a city of gironde lrb once situated in paris. romania south from the ain cycle ten d de winter old part time created princess new times department for this
+
+============================================================================================================================================
+SOURCE:
+three different drivers could in the three practice the driver elected for or for one of the races was required to have taken part in at least one such
+
+TARGET:
+the driver selected for or for one of the races was required to have taken part in at least one practice [end]
+
+PREDICTION:
+many two german race the most be given for any position one usually held a year twice since passed very bad day behind or to memory at a number
+
+============================================================================================================================================
+SOURCE:
+saint martin lrb rrb officially the of saint martin lrb french de saint martin rrb is an overseas of france located in the
+
+TARGET:
+the official in saint martin is the lrb though the united states is also widely accepted rrb. [end]
+
+PREDICTION:
+saint martin remains name as a member in the form given up unlike over of this time. is an important part for france which makes them their home lrb see
+
+============================================================================================================================================
+SOURCE:
+the supreme council of the which had been kept in about every of the treaty and which had many of its voted to
+
+TARGET:
+the supreme council of the which was in about the treaty voted lrb without rrb to the the only was the later
+
+PREDICTION:
+the parliament council both to contain a. its prime right next and it would have a force in which led by muslim league
+
+============================================================================================================================================
+SOURCE:
+the rugby world cup is the premier international rugby union
+
+TARGET:
+the rugby world cup is the most important competition in the sport of rugby union. [end]
+
+PREDICTION:
+it has played among the rugby world cup
+
+============================================================================================================================================
+SOURCE:
+like most areas in the the region has added to their population increase since.
+
+TARGET:
+like many other areas in the southern united states there has been a big increase in more people live there since. [end]
+
+PREDICTION:
+since mainly that causes the legal growing population of to it are
+
+============================================================================================================================================
+SOURCE:
+following edward ii s death robert the bruce northern england and on may forced the edward iii of england to sign the treaty of edinburgh which recognized the independence
+
+TARGET:
+the second war of scottish independence began in when edward iii of england did not the treaty of any more under which england recognized the of the dynasty
+
+PREDICTION:
+edward ii of england again returned in december when lincoln became queen s second son king richard the were kurt m. p.

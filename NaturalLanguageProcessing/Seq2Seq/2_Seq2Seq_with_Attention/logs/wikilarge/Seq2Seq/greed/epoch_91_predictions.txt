@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a commune in the gironde department in aquitaine in southwestern france.
+
+TARGET:
+it is found in the region aquitaine in the gironde department in the southwest of france. [end]
+
+PREDICTION:
+it is found in the region aquitaine in the gironde department in the southwest of france.
+
+============================================================================================================================================
+SOURCE:
+she a to the academy but after an early she gave up acting at and attended school.
+
+TARGET:
+she won a to the but after an early eating she gave up acting at. [end]
+
+PREDICTION:
+she a to the academy but after an early
+
+============================================================================================================================================
+SOURCE:
+to use and on the lake rather than go by the and frequently of the time.
+
+TARGET:
+and were usually to the and of the time. [end]
+
+PREDICTION:
+use and eat on the rather than go by the often
+
+============================================================================================================================================
+SOURCE:
+the reason for this was a over the market of
+
+TARGET:
+the reason for this was a fight between few and people from the market of [end]
+
+PREDICTION:
+in became a over the market of
+
+============================================================================================================================================
+SOURCE:
+has since been on the list for world cultural heritage
+
+TARGET:
+lrb norwegian for the rrb also known as lrb the german rrb is a series of commercial buildings found on the eastern side of the
+
+PREDICTION:
+is on the list for world cultural heritage
+
+============================================================================================================================================
+SOURCE:
+according to disney legend was once part of a dutch colony but a revolution made self governing in.
+
+TARGET:
+disney s story about is that it was once part of a dutch colony but a revolution made independent in. [end]
+
+PREDICTION:
+according to disney legend that is part of a dutch colony and a dutch crown territory was formed in in.
+
+============================================================================================================================================
+SOURCE:
+the name derives from the of the company s original full title but is no longer used as an
+
+TARGET:
+comes from the company s original full name lrb national agency rrb. [end]
+
+PREDICTION:
+the name from the of the company s original full title
+
+============================================================================================================================================
+SOURCE:
+o lrb born september in o rrb is a portuguese footballer who plays for f.c. also being a portuguese
+
+TARGET:
+o lrb born september rrb is a portuguese football player. [end]
+
+PREDICTION:
+o lrb born september rrb is a portuguese football player. he plays for and portugal national team.
+
+============================================================================================================================================
+SOURCE:
+the dog lrb from the greek words night and the rrb is a member of the family lrb which includes dogs
+
+TARGET:
+the dog lrb rrb is a member of the family and is from east asia. [end]
+
+PREDICTION:
+the dog lrb rrb is a species of it is found in the northern part of
+
+============================================================================================================================================
+SOURCE:
+in the common law of england a of lrb rrb was one of the in the legal system since the could not use the legal system
+
+TARGET:
+a can be declared an which means the can not use the legal system to protect himself if [end]
+
+PREDICTION:
+a word in a common government lrb rrb is one of the of the which could work.

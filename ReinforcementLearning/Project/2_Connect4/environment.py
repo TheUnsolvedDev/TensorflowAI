@@ -14,7 +14,6 @@ class Connect4Env(gym.Env):
         self.board = np.zeros((self.rows, self.cols), dtype=np.int8)
         self.current_player = 1
 
-        # 7 columns → choose column to drop disc
         self.action_space = gym.spaces.Discrete(self.cols)
 
         obs_shape = (self.rows * self.cols,) if flatten_obs else (self.rows, self.cols)
@@ -29,11 +28,9 @@ class Connect4Env(gym.Env):
     def step(self, action):
         col = action
 
-        # invalid move (column full)
         if self.board[0, col] != 0:
             return self._get_obs(), -1.0, True, False, {"invalid_move": True}
 
-        # drop piece to lowest empty row
         row = self._get_available_row(col)
         self.board[row, col] = self.current_player
 
@@ -43,7 +40,6 @@ class Connect4Env(gym.Env):
             reward = 1.0 if winner == self.current_player else -1.0
             return self._get_obs(), reward, True, False, {"winner": winner}
 
-        # draw condition
         if np.all(self.board != 0):
             return self._get_obs(), 0.0, True, False, {"draw": True}
 
@@ -60,21 +56,17 @@ class Connect4Env(gym.Env):
 
     def _check_winner(self, row, col):
         player = self.board[row, col]
-
-        # directions: horizontal, vertical, diag1, diag2
         directions = [(0,1), (1,0), (1,1), (1,-1)]
 
         for dr, dc in directions:
             count = 1
 
-            # forward
             r, c = row + dr, col + dc
             while self._in_bounds(r, c) and self.board[r, c] == player:
                 count += 1
                 r += dr
                 c += dc
 
-            # backward
             r, c = row - dr, col - dc
             while self._in_bounds(r, c) and self.board[r, c] == player:
                 count += 1

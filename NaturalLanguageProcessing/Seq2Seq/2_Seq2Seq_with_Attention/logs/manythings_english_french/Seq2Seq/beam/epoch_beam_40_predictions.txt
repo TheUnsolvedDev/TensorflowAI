@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i gave i was to be left alone.
+
+TARGET:
+j'ai donné des pour qu'on me laisse tranquille. [end]
+
+PREDICTION:
+en ai-je je fus toujours quitté seuls.
+
+============================================================================================================================================
+SOURCE:
+i don't really know why.
+
+TARGET:
+je ne sais pas vraiment pourquoi. [end]
+
+PREDICTION:
+je ne sache vraiment ni la pourquoi.
+
+============================================================================================================================================
+SOURCE:
+i know that i should've done that.
+
+TARGET:
+je sais que j'aurais dû le faire. [end]
+
+PREDICTION:
+je sais que j'ai peut-être envie d'être vu.
+
+============================================================================================================================================
+SOURCE:
+i don't care if you're busy. please help me now.
+
+TARGET:
+ça m'est que tu sois occupée. aide-moi maintenant, je te prie ! [end]
+
+PREDICTION:
+cela m'est en toute que sois occupés. vous veuillez m'aider aussi fois. nous quelqu'un maintenant. je te achète peu.
+
+============================================================================================================================================
+SOURCE:
+you're very tall.
+
+TARGET:
+vous êtes très grande. [end]
+
+PREDICTION:
+vous êtes pleine de très sécurité.
+
+============================================================================================================================================
+SOURCE:
+he gets a out of driving.
+
+TARGET:
+il prend plaisir à conduire comme un [end]
+
+PREDICTION:
+ils font semblant à mettre un mariage. par colère. te le rends
+
+============================================================================================================================================
+SOURCE:
+the sky turned dark.
+
+TARGET:
+le ciel [end]
+
+PREDICTION:
+tourne dans huit heures.
+
+============================================================================================================================================
+SOURCE:
+you're shy.
+
+TARGET:
+vous êtes timide. [end]
+
+PREDICTION:
+toi mal. se mets par toi-même.
+
+============================================================================================================================================
+SOURCE:
+that's not true.
+
+TARGET:
+non, ce n'est pas vrai. [end]
+
+PREDICTION:
+en ce n'est pas vrai. « c'est vrai ?
+
+============================================================================================================================================
+SOURCE:
+the fire was soon put out.
+
+TARGET:
+le feu a rapidement été [end]
+
+PREDICTION:
+il y eut bientôt le coup cher. à

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're my light.
+
+TARGET:
+vous me faites de [end]
+
+PREDICTION:
+tu me fais de
+
+============================================================================================================================================
+SOURCE:
+i didn't mean to wake you.
+
+TARGET:
+je ne voulais pas te [end]
+
+PREDICTION:
+je ne voulais pas vous
+
+============================================================================================================================================
+SOURCE:
+tom is the floor.
+
+TARGET:
+tom le sol. [end]
+
+PREDICTION:
+tom fait pousser le sol.
+
+============================================================================================================================================
+SOURCE:
+what are you me of?
+
+TARGET:
+de quoi est-ce que tu ? [end]
+
+PREDICTION:
+de quoi ?
+
+============================================================================================================================================
+SOURCE:
+i couldn't prevent tom from leaving.
+
+TARGET:
+je n'ai pu tom de partir. [end]
+
+PREDICTION:
+je n'ai pas pu le faire en lieu de partir.
+
+============================================================================================================================================
+SOURCE:
+they all
+
+TARGET:
+ils tous. [end]
+
+PREDICTION:
+ils sont tous
+
+============================================================================================================================================
+SOURCE:
+where are your keys?
+
+TARGET:
+où sont tes clés ? [end]
+
+PREDICTION:
+où sont vos clés ?
+
+============================================================================================================================================
+SOURCE:
+it's easy for to climb trees.
+
+TARGET:
+il est pour les de aux [end]
+
+PREDICTION:
+il est facile de prendre une à
+
+============================================================================================================================================
+SOURCE:
+tom is smart and funny.
+
+TARGET:
+tom est intelligent et drôle. [end]
+
+PREDICTION:
+tom a le et
+
+============================================================================================================================================
+SOURCE:
+i got dressed quickly.
+
+TARGET:
+je me suis rapidement. [end]
+
+PREDICTION:
+je me suis rapidement en

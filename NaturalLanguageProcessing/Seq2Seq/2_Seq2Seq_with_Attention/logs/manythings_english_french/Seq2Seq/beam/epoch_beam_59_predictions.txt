@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+don't close your eyes.
+
+TARGET:
+ne ferme pas les yeux ! [end]
+
+PREDICTION:
+n'oubliez pas les portes yeux.
+
+============================================================================================================================================
+SOURCE:
+he tried it with a friend.
+
+TARGET:
+il l'a essayé avec un ami. [end]
+
+PREDICTION:
+il le a essayé. auprès d'une manière. de
+
+============================================================================================================================================
+SOURCE:
+i did my best to protect tom.
+
+TARGET:
+j'ai fait de mon mieux pour protéger tom. [end]
+
+PREDICTION:
+j'ai prêté pour son mieux de offrir tom. par faim.
+
+============================================================================================================================================
+SOURCE:
+four people were in the car when the accident happened.
+
+TARGET:
+quatre personnes se à bord de la voiture lorsque l'accident est [end]
+
+PREDICTION:
+trois de gens se trouvait à la voiture d'où l'autre est loin. fin. fois. par du mots. après qui il a été resté en route.
+
+============================================================================================================================================
+SOURCE:
+i like music.
+
+TARGET:
+j'aime la musique [end]
+
+PREDICTION:
+ma musique libre. à cuisiner. vraiment.
+
+============================================================================================================================================
+SOURCE:
+have you tried the
+
+TARGET:
+as-tu essayé le ? [end]
+
+PREDICTION:
+est-ce t'a essayé ces dessus ?
+
+============================================================================================================================================
+SOURCE:
+tom isn't very old.
+
+TARGET:
+tom n'est pas très vieux. [end]
+
+PREDICTION:
+tom est pas très perdu.
+
+============================================================================================================================================
+SOURCE:
+school begins at
+
+TARGET:
+l'école commence à huit heures et [end]
+
+PREDICTION:
+l'école écoute à huit et rouge.
+
+============================================================================================================================================
+SOURCE:
+there's nothing unusual about this.
+
+TARGET:
+il n'y a rien à cela. [end]
+
+PREDICTION:
+ça ne jamais.
+
+============================================================================================================================================
+SOURCE:
+what was the first you learned to
+
+TARGET:
+quel était le premier auquel vous avez appris à jouer ? [end]
+
+PREDICTION:
+lequel avez-vous à gagné ? pour lire le a échoué.

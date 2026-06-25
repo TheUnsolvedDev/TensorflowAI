@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i hope we can fix that.
+
+TARGET:
+j'espère que nous pouvons y [end]
+
+PREDICTION:
+j'espère qu'on peut ça.
+
+============================================================================================================================================
+SOURCE:
+i really appreciate you helping me.
+
+TARGET:
+j'apprécie vraiment que tu [end]
+
+PREDICTION:
+j'apprécie vraiment que vous
+
+============================================================================================================================================
+SOURCE:
+they have to the library.
+
+TARGET:
+elles ont à la bibliothèque. [end]
+
+PREDICTION:
+ils ont à la bibliothèque.
+
+============================================================================================================================================
+SOURCE:
+don't touch anything.
+
+TARGET:
+ne à rien ! [end]
+
+PREDICTION:
+ne touche à rien !
+
+============================================================================================================================================
+SOURCE:
+where's all that money going?
+
+TARGET:
+où va tout cet argent ? [end]
+
+PREDICTION:
+où peut-on tout cet argent ?
+
+============================================================================================================================================
+SOURCE:
+i'm afraid that you have the wrong number.
+
+TARGET:
+j'ai peur que vous ayez le mauvais numéro. [end]
+
+PREDICTION:
+j'ai bien peur que vous n'ayez un mauvais numéro.
+
+============================================================================================================================================
+SOURCE:
+mary made her own wedding dress.
+
+TARGET:
+marie a confectionné sa propre robe de mariée. [end]
+
+PREDICTION:
+marie a fait sa robe de sa femme.
+
+============================================================================================================================================
+SOURCE:
+i was wondering when you'd show up.
+
+TARGET:
+je me demandais quand tu [end]
+
+PREDICTION:
+je me demandais quand tu
+
+============================================================================================================================================
+SOURCE:
+tom doesn't like chess.
+
+TARGET:
+tom n'aime pas les échecs. [end]
+
+PREDICTION:
+tom n'aime pas les échecs.
+
+============================================================================================================================================
+SOURCE:
+let's finish this work as soon as possible.
+
+TARGET:
+ce travail aussi vite que possible. [end]
+
+PREDICTION:
+cet emploi du travail aussi point possible tout.

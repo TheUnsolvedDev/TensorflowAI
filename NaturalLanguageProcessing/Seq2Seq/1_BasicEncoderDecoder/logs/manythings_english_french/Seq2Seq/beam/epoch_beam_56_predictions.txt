@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+why don't you share it with me?
+
+TARGET:
+pourquoi ne le pas avec moi ? [end]
+
+PREDICTION:
+pourquoi est-ce que la pas avec moi, si tu le voulais.
+
+============================================================================================================================================
+SOURCE:
+can you really the
+
+TARGET:
+peux-tu vraiment [end]
+
+PREDICTION:
+sais-tu vraiment la photo ?
+
+============================================================================================================================================
+SOURCE:
+is very
+
+TARGET:
+est fort utile. [end]
+
+PREDICTION:
+les font très peu de haut. »
+
+============================================================================================================================================
+SOURCE:
+i'll never forget what happened that night.
+
+TARGET:
+je n'oublierai jamais ce qui s'est passé cette [end]
+
+PREDICTION:
+il pas arrivé cela, ce soir. j'étais de l'école.
+
+============================================================================================================================================
+SOURCE:
+you should not a man because he is poor.
+
+TARGET:
+vous ne devriez pas un homme parce qu'il est pauvre. [end]
+
+PREDICTION:
+tu ne veux courir le moins un homme à l'âge une pomme. » « quel plaindre. chère. c'est bien.
+
+============================================================================================================================================
+SOURCE:
+bite your tongue.
+
+TARGET:
+la langue ! [end]
+
+PREDICTION:
+tranquille.
+
+============================================================================================================================================
+SOURCE:
+trust tom.
+
+TARGET:
+faites confiance à tom. [end]
+
+PREDICTION:
+fais confiance à tom.
+
+============================================================================================================================================
+SOURCE:
+we our
+
+TARGET:
+nous de la valeur à nos [end]
+
+PREDICTION:
+nous avons notre chef.
+
+============================================================================================================================================
+SOURCE:
+how do we stop it?
+
+TARGET:
+comment le ? [end]
+
+PREDICTION:
+d'où ? pouvons-nous la peine ! » nous.
+
+============================================================================================================================================
+SOURCE:
+i'm kind of too.
+
+TARGET:
+j'ai aussi un peu sommeil. [end]
+
+PREDICTION:
+je suis également un peu pour les enfants. pas. bon vous bien. moment. voilà sur la place. peut-être sous l'étranger.

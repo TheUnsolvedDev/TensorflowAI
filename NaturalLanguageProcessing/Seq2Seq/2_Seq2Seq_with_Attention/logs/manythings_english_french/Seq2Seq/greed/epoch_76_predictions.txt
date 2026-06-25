@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+your death will not have been in
+
+TARGET:
+votre mort pas été [end]
+
+PREDICTION:
+ta mort pas été
+
+============================================================================================================================================
+SOURCE:
+i don't want you to tell this to anybody.
+
+TARGET:
+je ne veux pas que tu dises ceci à qui que ce soit. [end]
+
+PREDICTION:
+je ne veux pas que tu le dises à qui que ce soit.
+
+============================================================================================================================================
+SOURCE:
+i want to do this later.
+
+TARGET:
+je veux faire ça plus tard. [end]
+
+PREDICTION:
+je veux faire ça plus tard.
+
+============================================================================================================================================
+SOURCE:
+tom answered the questions.
+
+TARGET:
+tom a répondu aux questions du professeur. [end]
+
+PREDICTION:
+tom a répondu aux questions de la
+
+============================================================================================================================================
+SOURCE:
+i understand french.
+
+TARGET:
+je comprends le français. [end]
+
+PREDICTION:
+je comprends le français.
+
+============================================================================================================================================
+SOURCE:
+it'll only take a second.
+
+TARGET:
+cela ne prendra qu'une seconde. [end]
+
+PREDICTION:
+ça ne prendra qu'une seconde.
+
+============================================================================================================================================
+SOURCE:
+who plays the in your
+
+TARGET:
+qui joue au piano dans votre groupe ? [end]
+
+PREDICTION:
+qui joue de la voiture dans votre hôtel ?
+
+============================================================================================================================================
+SOURCE:
+no man death.
+
+TARGET:
+aucun homme à la mort. [end]
+
+PREDICTION:
+personne n'était
+
+============================================================================================================================================
+SOURCE:
+hide in there.
+
+TARGET:
+là-dedans. [end]
+
+PREDICTION:
+là-dedans.
+
+============================================================================================================================================
+SOURCE:
+the vase tom gave me is made of glass.
+
+TARGET:
+le vase que tom m'a donné est en verre. [end]
+
+PREDICTION:
+le vase que tom m'a donné est en verre.

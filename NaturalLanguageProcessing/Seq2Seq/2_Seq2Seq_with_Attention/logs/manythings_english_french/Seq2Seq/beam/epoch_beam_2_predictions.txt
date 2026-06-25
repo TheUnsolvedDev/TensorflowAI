@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're lucky tom lent you some money.
+
+TARGET:
+tu es chanceux que tom t'ait prêté un peu d'argent. [end]
+
+PREDICTION:
+tu es de choses si toi ne pas l'argent.
+
+============================================================================================================================================
+SOURCE:
+the didn't last long.
+
+TARGET:
+la n'a pas duré longtemps. [end]
+
+PREDICTION:
+n'a pas mangé quelque chose à temps.
+
+============================================================================================================================================
+SOURCE:
+animals act according to their
+
+TARGET:
+les animaux selon leurs [end]
+
+PREDICTION:
+l'eau va se promener en silence.
+
+============================================================================================================================================
+SOURCE:
+it isn't like we're strangers.
+
+TARGET:
+ce n'est pas comme si nous étions des étrangers. [end]
+
+PREDICTION:
+ça n'est-ce pas de deux étrangers. » ce point c'est tout.
+
+============================================================================================================================================
+SOURCE:
+well, such things happen.
+
+TARGET:
+eh bien, ça arrive. [end]
+
+PREDICTION:
+d'accord, si s'il vous plaît.
+
+============================================================================================================================================
+SOURCE:
+you forgot to lock your office door yesterday when you left.
+
+TARGET:
+tu as hier, de verrouiller la porte de ton bureau, lorsque tu es parti. [end]
+
+PREDICTION:
+on mangea à fermer ta famille hier lorsque tu as parlé. de la campagne. pas
+
+============================================================================================================================================
+SOURCE:
+sorry, i can't help you.
+
+TARGET:
+désolé, je ne peux pas t'aider. [end]
+
+PREDICTION:
+désolé je n'arrive à te remercier. !
+
+============================================================================================================================================
+SOURCE:
+i wanted to discuss this with you yesterday, but you didn't seem to want to listen.
+
+TARGET:
+je voulais en discuter avec toi, hier, mais tu ne pas vouloir écouter. [end]
+
+PREDICTION:
+je voulais discuter avec cette fois que on n'est pas si toi mais tu as menti.
+
+============================================================================================================================================
+SOURCE:
+nothing makes tom happy.
+
+TARGET:
+rien ne rend tom heureux. [end]
+
+PREDICTION:
+jamais n'y fait de tom satisfait.
+
+============================================================================================================================================
+SOURCE:
+you betrayed your country.
+
+TARGET:
+vous avez trahi votre pays. [end]
+
+PREDICTION:
+tu es ton village. de temps. je suis contrariée. pas à votre pays.

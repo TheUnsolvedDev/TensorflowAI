@@ -6,6 +6,36 @@ import numpy as np
 from config import *
 
 
+class MinibatchDiscrimination(tf.keras.layers.Layer):
+
+    def __init__(self, num_kernels=100, kernel_dim=5):
+        super().__init__()
+        self.num_kernels = num_kernels
+        self.kernel_dim = kernel_dim
+
+    def build(self, input_shape):
+        features = input_shape[-1]
+
+        self.T = self.add_weight(
+            shape=(features, self.num_kernels * self.kernel_dim),
+            initializer="glorot_uniform",
+            trainable=True,
+            name="T"
+        )
+
+    def call(self, x):
+        M = tf.matmul(x, self.T)
+        M = tf.reshape(M, (-1, self.num_kernels, self.kernel_dim))
+
+        M1 = tf.expand_dims(M, 3)
+        M2 = tf.expand_dims(tf.transpose(M, [1, 2, 0]), 0)
+
+        abs_diff = tf.reduce_sum(tf.abs(M1 - M2), axis=2)
+        c = tf.reduce_sum(tf.exp(-abs_diff), axis=2)
+
+        return tf.concat([x, c], axis=1)
+
+
 class NN_GAN(tf.keras.Model):
     def __init__(self, strategy, input_shape, latent_dim, batch_size):
         super().__init__()
@@ -30,6 +60,11 @@ class NN_GAN(tf.keras.Model):
         self.discriminator.build(input_shape=(None, *input_shape))
         self.generator.summary()
         self.discriminator.summary()
+        
+    def dense_sn(self, units, use_bias=True):
+        return tf.keras.layers.SpectralNormalization(
+            tf.keras.layers.Dense(units, use_bias=use_bias)
+        )
 
     def build_generator(self):
         import numpy as np
@@ -69,7 +104,7 @@ class NN_GAN(tf.keras.Model):
 
         for i in range(n):
             units = base * (2 ** min(i, 3))
-            x = tf.keras.layers.Dense(units)(x)
+            x = self.dense_sn(units)(x)
             x = tf.keras.layers.LeakyReLU()(x)
             x = tf.keras.layers.Dropout(0.3)(x)
 

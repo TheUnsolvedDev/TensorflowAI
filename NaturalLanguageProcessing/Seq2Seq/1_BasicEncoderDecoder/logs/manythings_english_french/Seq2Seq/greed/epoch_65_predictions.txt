@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+this belongs to you.
+
+TARGET:
+ceci est à vous. [end]
+
+PREDICTION:
+ceci vous
+
+============================================================================================================================================
+SOURCE:
+show me where it happened.
+
+TARGET:
+montre-moi où c'est ! [end]
+
+PREDICTION:
+montre-moi où c'est arrivé !
+
+============================================================================================================================================
+SOURCE:
+please put it back in its place.
+
+TARGET:
+à sa place, je te prie. [end]
+
+PREDICTION:
+veuillez le remettre à sa place, je vous prie.
+
+============================================================================================================================================
+SOURCE:
+thanks a lot for the invitation.
+
+TARGET:
+merci beaucoup pour [end]
+
+PREDICTION:
+merci beaucoup pour ça.
+
+============================================================================================================================================
+SOURCE:
+tom has gone to bed.
+
+TARGET:
+thomas est allé se coucher. [end]
+
+PREDICTION:
+tom est allé au lit.
+
+============================================================================================================================================
+SOURCE:
+he was to see his son.
+
+TARGET:
+il était impatient de voir son fils. [end]
+
+PREDICTION:
+il était impatient de voir son fils.
+
+============================================================================================================================================
+SOURCE:
+we have to figure out a way to get out of here alive.
+
+TARGET:
+il nous faut trouver un moyen de sortir d'ici en vie. [end]
+
+PREDICTION:
+nous devons trouver une route en dehors d'ici tout de même.
+
+============================================================================================================================================
+SOURCE:
+we did nothing wrong.
+
+TARGET:
+nous n'avons rien fait de mal. [end]
+
+PREDICTION:
+nous n'avons rien fait de mal.
+
+============================================================================================================================================
+SOURCE:
+when was the last time you went to an art
+
+TARGET:
+quand avez-vous été dans une pour la dernière fois ? [end]
+
+PREDICTION:
+quand as-tu été dans une pour la dernière fois ?
+
+============================================================================================================================================
+SOURCE:
+can i see my
+
+TARGET:
+puis-je voir mon fils ? [end]
+
+PREDICTION:
+puis-je voir mon ?

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the album version features vocals by david
+
+TARGET:
+the album version has vocals by david [end]
+
+PREDICTION:
+album david released
+
+============================================================================================================================================
+SOURCE:
+now signed to the label she had several popular while recording with such artists as the louis and the delta rhythm
+
+TARGET:
+she recording with other musicians like the louis jordan and the delta [end]
+
+PREDICTION:
+has also been with the tour the tour de france later became the youngest gold
+
+============================================================================================================================================
+SOURCE:
+the modern or olympic is an athletic event where the object is to a heavy metal ball attached to a and
+
+TARGET:
+is an the goal of it is to a heavy metal ball attached to a and [end]
+
+PREDICTION:
+modern sport is a instrument in the
+
+============================================================================================================================================
+SOURCE:
+in the first the japanese the railway between and in the second they the us air forces in province and reached the city of
+
+TARGET:
+in the second part they destroyed the us air forces in province and reached the city of [end]
+
+PREDICTION:
+in the first the and
+
+============================================================================================================================================
+SOURCE:
+in the th and th centuries these were replaced by but these were intended to too much on state
+
+TARGET:
+in the century these were replaced by [end]
+
+PREDICTION:
+in the th and th centuries were but were not allowed to be but not
+
+============================================================================================================================================
+SOURCE:
+station is an underground station located in prefecture japan operated by the railway s line. it is. from the of the
+
+TARGET:
+railway company line limited [end]
+
+PREDICTION:
+station is a station of railway station.
+
+============================================================================================================================================
+SOURCE:
+the man who is not currently a can only a woman who is not currently a or a woman from the people of the
+
+TARGET:
+the muslim can only a muslim the muslim woman who is not currently a can only a muslim man who is not currently a [end]
+
+PREDICTION:
+the humans may not be a who is a is a woman who has a of any woman or a
+
+============================================================================================================================================
+SOURCE:
+throughout the first years of church history christians as a common part of life and nearly always used wine lrb that is rrb in their
+
+TARGET:
+in the first years of church history christians often as a part of their life and almost always used wine lrb rrb in the
+
+PREDICTION:
+the always known as is often considered to be the same as the of jesus christ and the
+
+============================================================================================================================================
+SOURCE:
+whereas on the train and reaching would allow them to board the o line trains towards park.
+
+TARGET:
+on the train and reaching would allow you to change trains for the o line towards [end]
+
+PREDICTION:
+on the to the train operated by to the train operating company
+
+============================================================================================================================================
+SOURCE:
+some such as s laws of motion are still generally called laws even though they are now known to be cases of
+
+TARGET:
+some such as s laws of motion are still generally called laws even though they are now known not to be of such universal as was once
+
+PREDICTION:
+some such as laws of motion are still generally considered

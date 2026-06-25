@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+a record breaking for the of resulted in of.
+
+TARGET:
+the amount of people who went to the event broke the record for total number of people at the [end]
+
+PREDICTION:
+a total of. people were made out for the single statistics of about to. at c people. its economy is.
+
+============================================================================================================================================
+SOURCE:
+was published in temple in years prior to s line bible printed during the years.
+
+TARGET:
+the metal was published in [end]
+
+PREDICTION:
+the story of published final lrb years rrb temple is at full text in. this was only written by author s life and about bc
+
+============================================================================================================================================
+SOURCE:
+river is a city in county idaho united states.
+
+TARGET:
+river is a city of idaho in the united states. [end]
+
+PREDICTION:
+l river o missouri in it is county which the ohio state of mississippi lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+the main bar at king s is far older and is the site of more between
+
+TARGET:
+the main bar at king s is far [end]
+
+PREDICTION:
+a different bar is and seen as the rd earth abbey s first year old at m lrb rrb but his full title was not
+
+============================================================================================================================================
+SOURCE:
+formally retired from the stage in but occasionally appeared on special
+
+TARGET:
+retired from the stage in but continued to appear on special [end]
+
+PREDICTION:
+jack in the dragon lrb march episode rrb of america and was originally named after british americans though she used many famous during her th century when he came up
+
+============================================================================================================================================
+SOURCE:
+the entire community lost power as did about in total in the oklahoma city metropolitan area.
+
+TARGET:
+the entire community lost power also with about in total in the oklahoma city metropolitan area. [end]
+
+PREDICTION:
+it changed their first level city of. in. in this county received a new city.
+
+============================================================================================================================================
+SOURCE:
+although the format of the show and the cast lrb and ages rrb of characters have significantly over the years the most versions of the show feature a dog
+
+TARGET:
+though the show people in it and their ages have changed the most versions of the show have a dog named and four jones
+
+PREDICTION:
+though of this series the characters can not be made with a single episode from other japanese members television series.
+
+============================================================================================================================================
+SOURCE:
+m r is a commune in county romania with a population of people.
+
+TARGET:
+m r is a commune found in dolj county romania. [end]
+
+PREDICTION:
+z m r also known simply as of dolj county is the a commune in romania. people live between d and flowers on its th at time.
+
+============================================================================================================================================
+SOURCE:
+there is no need to represent in form the
+
+TARGET:
+there is no need to represent in form the is [end]
+
+PREDICTION:
+it has a few cases which can be kept within its life.
+
+============================================================================================================================================
+SOURCE:
+ndash de saint french writer lrb d. rrb
+
+TARGET:
+de saint french pilot and writer lrb d. rrb [end]
+
+PREDICTION:
+el de france founding lrb born rrb kill a wife of death the king who ruled for an american country in what lasted until when he died in.

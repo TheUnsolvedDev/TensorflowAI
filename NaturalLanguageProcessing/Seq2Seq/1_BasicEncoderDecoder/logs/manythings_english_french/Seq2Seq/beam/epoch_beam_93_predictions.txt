@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're being
+
+TARGET:
+vous êtes idiot. [end]
+
+PREDICTION:
+vous êtes idiot. que ce sont à un autre.
+
+============================================================================================================================================
+SOURCE:
+the windows shut.
+
+TARGET:
+les fenêtres ! [end]
+
+PREDICTION:
+les règles !
+
+============================================================================================================================================
+SOURCE:
+i couldn't without tom.
+
+TARGET:
+je ne pouvais pas sans tom. [end]
+
+PREDICTION:
+sans tom me garer ne pas. japonais. !
+
+============================================================================================================================================
+SOURCE:
+tom can't do this alone.
+
+TARGET:
+tom ne peut pas faire ceci tout seul. [end]
+
+PREDICTION:
+l'homme ne devrait le faire plus possible. !
+
+============================================================================================================================================
+SOURCE:
+she went on working.
+
+TARGET:
+elle a continué de travailler. [end]
+
+PREDICTION:
+elle a le boulot. les dents. ans.
+
+============================================================================================================================================
+SOURCE:
+i'll believe it when i see it.
+
+TARGET:
+j'y lorsque je le [end]
+
+PREDICTION:
+je ferai envie le ici.
+
+============================================================================================================================================
+SOURCE:
+let's go there.
+
+TARGET:
+[end]
+
+PREDICTION:
+allons voir. ! comme d'habitude.
+
+============================================================================================================================================
+SOURCE:
+my phone rang again.
+
+TARGET:
+mon téléphone à nouveau. [end]
+
+PREDICTION:
+j'ai encore atteint son à dos. dents. de toute vitesse.
+
+============================================================================================================================================
+SOURCE:
+i can't do it.
+
+TARGET:
+je n'y parviens pas. [end]
+
+PREDICTION:
+il j'arrive à le fait.
+
+============================================================================================================================================
+SOURCE:
+he is to go to
+
+TARGET:
+il est à aller en [end]
+
+PREDICTION:
+il de venir à la direction d'un bureau.

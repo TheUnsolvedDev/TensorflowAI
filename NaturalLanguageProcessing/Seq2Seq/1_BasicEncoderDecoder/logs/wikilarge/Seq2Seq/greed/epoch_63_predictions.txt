@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+be of wikipedia s policy that information about living must not include or
+
+TARGET:
+however be of wikipedia s policy that information about living persons must not be [end]
+
+PREDICTION:
+are written for a policy information about and of wikipedia pages that
+
+============================================================================================================================================
+SOURCE:
+the strength of magnetic field is to the amount of
+
+TARGET:
+the strength of the is to the current in the [end]
+
+PREDICTION:
+in mathematics a magnetic field is a field of that is to the magnetic field which is
+
+============================================================================================================================================
+SOURCE:
+is a retired japanese football player.
+
+TARGET:
+lrb born october rrb is a former japanese football player. [end]
+
+PREDICTION:
+lrb born september rrb is a former japanese football player.
+
+============================================================================================================================================
+SOURCE:
+the original project code name for the service was inspired by and the five character length of american short
+
+TARGET:
+at first they called this project it the five character length of american short and like [end]
+
+PREDICTION:
+it was created by for the original series but was changed to in.
+
+============================================================================================================================================
+SOURCE:
+after he the throne at the age of five his great uncle ii duke of served as of the kingdom until louis majority in.
+
+TARGET:
+ii duke of as until louis reached his legal majority in. [end]
+
+PREDICTION:
+he to throne again but the throne of recognized as the chief justice of the dynasty and later in the
+
+============================================================================================================================================
+SOURCE:
+tour en is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+tour en is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+the state opera is an opera company based in munich germany.
+
+TARGET:
+the state opera lrb in german rrb is an opera company based in munich germany. [end]
+
+PREDICTION:
+in the s first world war germany was the first opera to the german grand cross of the iron hall in germany.
+
+============================================================================================================================================
+SOURCE:
+in english there are several of the spelling of the in australia and new zealand
+
+TARGET:
+in australia and new zealand is the main [end]
+
+PREDICTION:
+some of the of the australian are in
+
+============================================================================================================================================
+SOURCE:
+the team s are also a unique silver with a of blue known as silver blue lrb c rrb and have a blue white blue vertical placed
+
+TARGET:
+their is silver and blue with a blue star on their [end]
+
+PREDICTION:
+the silver round of baseball is a of snow white wine
+
+============================================================================================================================================
+SOURCE:
+it is the only city in the county and the most city in great
+
+TARGET:
+it is the only city in and it is the most city in the british [end]
+
+PREDICTION:
+is the largest city in great europe. the city of is the main church.

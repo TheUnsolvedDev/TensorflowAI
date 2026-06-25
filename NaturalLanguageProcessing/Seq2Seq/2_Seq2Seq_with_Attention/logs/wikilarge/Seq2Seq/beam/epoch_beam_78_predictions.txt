@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+lrb november april rrb was an english journalist television and who worked for the bbc for years.
+
+TARGET:
+lrb november april rrb was a british tv [end]
+
+PREDICTION:
+oscar lrb november april rrb was someone who support with a digital to show for years. his work on the internet history.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+isle is a calvados same its commune. the translation inner washington rsb soon in october th he moved to paris france following making light s second and primary language living
+
+============================================================================================================================================
+SOURCE:
+she went to school in manchester unlike most girls of the time who were at
+
+TARGET:
+she went to school in at that time most girls were at [end]
+
+PREDICTION:
+before playing at local band play she was a record lrb time for him of people who have met their life rrb. after this time. he sang any children about
+
+============================================================================================================================================
+SOURCE:
+on september the federal city was named in honor of george washington and the district was named the territory of columbia columbia being a name for the united states in use
+
+TARGET:
+in it was named washington the district of columbia to honor george [end]
+
+PREDICTION:
+it began at a meeting house for george university. this is the part of columbia in use as one line called charlotte university was named after george washington where saint
+
+============================================================================================================================================
+SOURCE:
+wikipedia is not a usage wikipedia is not in the business of how words etc. should be used lrb but it may be important in the context of
+
+TARGET:
+wikipedia is not a guide wikipedia is not here just to say how words should be used. [end]
+
+PREDICTION:
+in wikipedia it can not be as the gnu question of words how all languages should is used though modern article does contain using it. its flag must write about
+
+============================================================================================================================================
+SOURCE:
+districts are l h g and district free
+
+TARGET:
+lrb rrb is a lrb district rrb in the east of north rhine germany. [end]
+
+PREDICTION:
+the is a unit on upper east coast near in parts old poland to g rule lrb rrb lsb rsb free cross r ruler of north korea depending under which
+
+============================================================================================================================================
+SOURCE:
+until the first mayor was among his in the senate by whom he was
+
+TARGET:
+until the first mayor was elected by the [end]
+
+PREDICTION:
+he did only while teaching for her uncle in italy was sent to his importance of working about one race so it is well known outside the british call by
+
+============================================================================================================================================
+SOURCE:
+they contain some of the best known upper
+
+TARGET:
+they contain some of the most well known upper [end]
+
+PREDICTION:
+a tree of most middle class is the places in either with upper central east and dry satellite one modern day lrb it has four lowest than n rrb. this
+
+============================================================================================================================================
+SOURCE:
+the sea is a northwest to southeast of the mediterranean sea.
+
+TARGET:
+the sea is a body of water and is a part of the mediterranean sea. [end]
+
+PREDICTION:
+the lrb sea a rrb is to hold its fourth indonesia from an egyptian lake sea.
+
+============================================================================================================================================
+SOURCE:
+this to a wave of in and zealand leaving most of those provinces lrb with the of rrb under
+
+TARGET:
+in paris murder thousands of including de at the order of king charles [end]
+
+PREDICTION:
+it starts with a wave of in africa asia taken place except h valley from east finland to northern england. only five is the seat below despite changing their government

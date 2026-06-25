@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you're still my son.
+
+TARGET:
+tu es toujours mon fils. [end]
+
+PREDICTION:
+tu es mon toujours mari.
+
+============================================================================================================================================
+SOURCE:
+it was
+
+TARGET:
+c'était [end]
+
+PREDICTION:
+c'était
+
+============================================================================================================================================
+SOURCE:
+no one takes me seriously.
+
+TARGET:
+personne ne me prend au sérieux. [end]
+
+PREDICTION:
+personne ne me prend bien au sérieux.
+
+============================================================================================================================================
+SOURCE:
+do you enjoy living
+
+TARGET:
+vous aimez vivre ? [end]
+
+PREDICTION:
+tu aimes vivre ?
+
+============================================================================================================================================
+SOURCE:
+all i want to do is finish what i started.
+
+TARGET:
+tout ce que je veux faire, c'est terminer ce que j'ai commencé. [end]
+
+PREDICTION:
+tout ce que je veux faire, c'est finir ce que j'ai commencé.
+
+============================================================================================================================================
+SOURCE:
+tom is
+
+TARGET:
+tom est en train de [end]
+
+PREDICTION:
+tom est
+
+============================================================================================================================================
+SOURCE:
+the whole was
+
+TARGET:
+fut [end]
+
+PREDICTION:
+tout le
+
+============================================================================================================================================
+SOURCE:
+got so much in for a start you're both
+
+TARGET:
+« vous avez tellement de choses en commun. » « comme quoi ? » « eh bien, pour vous êtes tous les deux » [end]
+
+PREDICTION:
+dans les tant que on ne peut pas être et en de leur vie.
+
+============================================================================================================================================
+SOURCE:
+i think that you should go.
+
+TARGET:
+je pense que tu devrais partir. [end]
+
+PREDICTION:
+je pense que vous devriez y aller.
+
+============================================================================================================================================
+SOURCE:
+i really love her younger sister a lot.
+
+TARGET:
+j'aime vraiment beaucoup sa petite sœur. [end]
+
+PREDICTION:
+j'adore très la belle fille.

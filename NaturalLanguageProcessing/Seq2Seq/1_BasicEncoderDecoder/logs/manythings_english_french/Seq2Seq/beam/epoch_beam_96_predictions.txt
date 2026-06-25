@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'm in way over my head.
+
+TARGET:
+j'en crois pas mes yeux. [end]
+
+PREDICTION:
+j'ai beaucoup de bruit.
+
+============================================================================================================================================
+SOURCE:
+they all to his proposal.
+
+TARGET:
+elles ont toutes fait à sa proposition. [end]
+
+PREDICTION:
+toutes cette proposition. pas.
+
+============================================================================================================================================
+SOURCE:
+tom can do anything he wants.
+
+TARGET:
+tom peut faire tout ce qu'il veut. [end]
+
+PREDICTION:
+tom est capable lui tous faire ce propos.
+
+============================================================================================================================================
+SOURCE:
+i feel very about that.
+
+TARGET:
+j'y une très grande [end]
+
+PREDICTION:
+j'en ai le très à ce endroit.
+
+============================================================================================================================================
+SOURCE:
+the box is almost empty.
+
+TARGET:
+la boîte est presque vide. [end]
+
+PREDICTION:
+ma était la même propre arrive.
+
+============================================================================================================================================
+SOURCE:
+let's work together on this.
+
+TARGET:
+travaillons ensemble là-dessus. [end]
+
+PREDICTION:
+travaillons plutôt bon. ! ça. veux-tu ? bien j'y viendrai seul. s'il te plaît. »
+
+============================================================================================================================================
+SOURCE:
+the bus leaves every fifteen minutes.
+
+TARGET:
+le bus part toutes les quinze minutes. [end]
+
+PREDICTION:
+le bus part là-bas toutes les œufs en du dix jours. savez-vous jouer. il est allée à ouverte. libre.
+
+============================================================================================================================================
+SOURCE:
+that's a real
+
+TARGET:
+c'est vraiment la [end]
+
+PREDICTION:
+c'est un super
+
+============================================================================================================================================
+SOURCE:
+i'd be happy to sing for you.
+
+TARGET:
+je serais heureux de chanter pour vous. [end]
+
+PREDICTION:
+heureux puisse vous chanter !
+
+============================================================================================================================================
+SOURCE:
+we aren't like them.
+
+TARGET:
+nous ne sommes pas comme elles. [end]
+
+PREDICTION:
+nous ne bouche pas. autre. des yeux plein de temps tu souhaite l'école. j'étais les bras me prudent

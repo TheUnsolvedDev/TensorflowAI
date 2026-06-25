@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+do you want to make me happy?
+
+TARGET:
+voulez-vous me faire plaisir ? [end]
+
+PREDICTION:
+veux-tu pouvoir m'aider aujourd'hui maintenant ?
+
+============================================================================================================================================
+SOURCE:
+this flower is more beautiful than that rose.
+
+TARGET:
+cette fleur est plus belle que cette [end]
+
+PREDICTION:
+cet n'a pas beaucoup que le matin.
+
+============================================================================================================================================
+SOURCE:
+i've made this trip a thousand times.
+
+TARGET:
+j'ai fait ce voyage un de fois. [end]
+
+PREDICTION:
+je cette douleur est un moment.
+
+============================================================================================================================================
+SOURCE:
+everyone's thirsty.
+
+TARGET:
+tout le monde a soif. [end]
+
+PREDICTION:
+les personnes de marie.
+
+============================================================================================================================================
+SOURCE:
+european don't work here.
+
+TARGET:
+les prises ne pas ici. [end]
+
+PREDICTION:
+les n'est rien besoin à y aller. « il n'y plaît. c'est bien.
+
+============================================================================================================================================
+SOURCE:
+he said, "i want to be a
+
+TARGET:
+il a déclaré : « je veux devenir scientifique. » [end]
+
+PREDICTION:
+c'est vrai à que cela veulent avoir
+
+============================================================================================================================================
+SOURCE:
+i saw my in the window.
+
+TARGET:
+j'ai vu mon dans la vitre. [end]
+
+PREDICTION:
+j'ai vu la carte de ma fenêtre.
+
+============================================================================================================================================
+SOURCE:
+they water the fruit trees.
+
+TARGET:
+ils les arbres [end]
+
+PREDICTION:
+notre sont des yeux de
+
+============================================================================================================================================
+SOURCE:
+do you want to do it?
+
+TARGET:
+voulez-vous le faire ? [end]
+
+PREDICTION:
+penses-tu à faire ça ?
+
+============================================================================================================================================
+SOURCE:
+because of the poor prices have gone up in the last six months.
+
+TARGET:
+du fait de la mauvaise les prix du ont grimpé dans les derniers six mois. [end]
+
+PREDICTION:
+à la première grande de se mettre les deux pays au jour dans le japon.

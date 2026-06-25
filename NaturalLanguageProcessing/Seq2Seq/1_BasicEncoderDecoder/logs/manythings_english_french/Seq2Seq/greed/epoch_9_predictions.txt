@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you must do it even if you don't want to.
+
+TARGET:
+tu dois le faire, même si tu ne veux pas. [end]
+
+PREDICTION:
+vous devez le faire, même si vous ne voulez pas y aller.
+
+============================================================================================================================================
+SOURCE:
+i want them all shot.
+
+TARGET:
+je veux qu'elles soient toutes [end]
+
+PREDICTION:
+je veux qu'ils soient tous
+
+============================================================================================================================================
+SOURCE:
+look before you
+
+TARGET:
+regarde avant de [end]
+
+PREDICTION:
+regarde avant que tu ne pas.
+
+============================================================================================================================================
+SOURCE:
+do you feel giving gifts is important?
+
+TARGET:
+as-tu le sentiment que remettre des présents est important ? [end]
+
+PREDICTION:
+tu as le sentiment que remettre des présents est important ?
+
+============================================================================================================================================
+SOURCE:
+we're all wasting time.
+
+TARGET:
+nous perdons toutes du temps. [end]
+
+PREDICTION:
+nous perdons tous du temps.
+
+============================================================================================================================================
+SOURCE:
+who won the election?
+
+TARGET:
+qui a gagné les élections ? [end]
+
+PREDICTION:
+qui a gagné la course ?
+
+============================================================================================================================================
+SOURCE:
+stop
+
+TARGET:
+arrêtez de [end]
+
+PREDICTION:
+arrête de
+
+============================================================================================================================================
+SOURCE:
+that sounds a lot easier to do than it is.
+
+TARGET:
+ça a l'air bien plus facile à faire que ça [end]
+
+PREDICTION:
+ça a l'air plus facile à faire beaucoup de mieux.
+
+============================================================================================================================================
+SOURCE:
+i'll find out soon enough.
+
+TARGET:
+je le bien assez tôt. [end]
+
+PREDICTION:
+je bientôt.
+
+============================================================================================================================================
+SOURCE:
+are you good at
+
+TARGET:
+es-tu bon en mathématiques ? [end]
+
+PREDICTION:
+êtes-vous bon en ski ?

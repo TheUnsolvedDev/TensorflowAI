@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+les is a commune in the sarthe department in the region of pays de la loire in northwestern france.
+
+TARGET:
+it is found in the region pays de la loire in the sarthe department in the west of france. [end]
+
+PREDICTION:
+it contains many people translated to. n lrb pronounced as l et d o rrb c k ma and el after la department station.
+
+============================================================================================================================================
+SOURCE:
+a is a feature of european houses and
+
+TARGET:
+a is found on european houses and [end]
+
+PREDICTION:
+one example of these animals include all three types and olympic games for being built in europe called a great french which is the most famous piece by greek producer
+
+============================================================================================================================================
+SOURCE:
+a branch of studies rock and lrb rrb.
+
+TARGET:
+is a branch of which studies rock lrb rrb. [end]
+
+PREDICTION:
+family live on heavy rain e.g. in a long road family.
+
+============================================================================================================================================
+SOURCE:
+two types of star can be distinguished are groups of of thousands of very old stars which are while open a more
+
+TARGET:
+open are more and they have less than a few hundred stars which are often very [end]
+
+PREDICTION:
+some other types and the smaller length called which they do not like in a lot while most common appear at very old stars are good of small hair but
+
+============================================================================================================================================
+SOURCE:
+match length matches consisted of three the first lasted ten minutes and the second and third each lasted five
+
+TARGET:
+rules match length matches make up of three the first round is ten minutes and the second and third round are five [end]
+
+PREDICTION:
+match tag team players of two us screen has three films the first lasted piece game lrb a tv series rrb singles which was almost completely longer than her release
+
+============================================================================================================================================
+SOURCE:
+ndash first recorded case of in los angeles california.
+
+TARGET:
+is the first woman to become president of a us national [end]
+
+PREDICTION:
+am platform lrb b. the movie on snow
+
+============================================================================================================================================
+SOURCE:
+and on the of the death whether he is or whether he received a
+
+TARGET:
+and on the of the death if he is or if he received a [end]
+
+PREDICTION:
+s god or ruler he was a very good and episode of how to death for another eating tools pieces were written by the people who think him have an
+
+============================================================================================================================================
+SOURCE:
+the film was directed by david and stars the regular television cast of smith harry and
+
+TARGET:
+the movie stars the main television cast of smith and harry a which he names
+
+PREDICTION:
+s film is a romantic comedy and starring in the book universal games.
+
+============================================================================================================================================
+SOURCE:
+in popular culture in when america a of lrb referred to as rrb attack an only to be off by a
+
+TARGET:
+it is shown in the movie when america an and getting off by a [end]
+
+PREDICTION:
+in domestic when tip america also called the strong attack destroyed a lot of kg attempt on his help while show that it will become an carry one apart from
+
+============================================================================================================================================
+SOURCE:
+it then emerged into the gulf of mexico on august into a category hurricane with mph lrb km h rrb
+
+TARGET:
+it then into the gulf of mexico into a [end]
+
+PREDICTION:
+it became little in and grew up with rain clay moving a category hit while heavy f. fox lost the spring to shortly after minutes months of storm th august

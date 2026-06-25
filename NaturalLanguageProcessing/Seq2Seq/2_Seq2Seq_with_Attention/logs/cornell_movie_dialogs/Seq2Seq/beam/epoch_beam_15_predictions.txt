@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+then you've read it?
+
+TARGET:
+not yet. [end]
+
+PREDICTION:
+yes, i don't know who to tell you about that. and if it ain't a little fun.
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+the tank will be finished by morning... [end]
+
+PREDICTION:
+what about the baby?
+
+============================================================================================================================================
+SOURCE:
+that would be impossible.
+
+TARGET:
+you're so young, this is not the time to start bad [end]
+
+PREDICTION:
+is a wonderful thing.
+
+============================================================================================================================================
+SOURCE:
+isn't there anything i can say that'll change your mind? you're gonna stay with your new friends?
+
+TARGET:
+they don't scare women. [end]
+
+PREDICTION:
+no, no. you don't.
+
+============================================================================================================================================
+SOURCE:
+would you say she was
+
+TARGET:
+oh, there's no tellin' what that girl could've and she never had it easy. never really had a for her father, going to school. [end]
+
+PREDICTION:
+she didn't even tell you he was i couldn't possibly think that way.
+
+============================================================================================================================================
+SOURCE:
+it's benjamin.
+
+TARGET:
+yes? [end]
+
+PREDICTION:
+i want you and the big
+
+============================================================================================================================================
+SOURCE:
+good evening. you see, here we are again.
+
+TARGET:
+i take that as a great compliment to sam. i suppose he means to you paris of, well, happier days. [end]
+
+PREDICTION:
+you don't need me again. you're so beautiful.
+
+============================================================================================================================================
+SOURCE:
+she most certainly was not!
+
+TARGET:
+hey man, why don't you fucking listen you might learn something. now i [end]
+
+PREDICTION:
+i love you, you know? she was gonna take her away for the rest -- she's going out of my room.
+
+============================================================================================================================================
+SOURCE:
+i'd just like to pick up a few of my things
+
+TARGET:
+i don't believe you have [end]
+
+PREDICTION:
+i can't
+
+============================================================================================================================================
+SOURCE:
+you'd like that wouldn't you? you've hated betty since you were in squad together...
+
+TARGET:
+no... before that. [end]
+
+PREDICTION:
+i don't know.

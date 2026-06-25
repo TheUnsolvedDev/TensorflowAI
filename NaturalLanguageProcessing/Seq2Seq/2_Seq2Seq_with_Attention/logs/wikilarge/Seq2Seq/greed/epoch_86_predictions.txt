@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+history is one of the original created during the french revolution on march.
+
+TARGET:
+it is one of the original french departments created during the french revolution. [end]
+
+PREDICTION:
+it is one of the original french departments created during the french revolution.
+
+============================================================================================================================================
+SOURCE:
+are back and with a called a over the if played a broken can result because a can
+
+TARGET:
+are back and with a called worn over the if played a broken can result in fact or [end]
+
+PREDICTION:
+are back and with a called a over the if played a broken is result of a
+
+============================================================================================================================================
+SOURCE:
+in alaska the change took place when friday october was followed again by friday october after the us of alaska from russia which was still on the julian calendar.
+
+TARGET:
+alaska in alaska friday october was followed by friday october. [end]
+
+PREDICTION:
+alaska in alaska friday october was followed by friday october. the day was still called friday from the st day after the usa.
+
+============================================================================================================================================
+SOURCE:
+the two largest at the university of michigan are the college of literature science and the arts lrb a rrb and the college of
+
+TARGET:
+about of students go to the college of literature science and the arts lrb a rrb while the college of engineering has about. [end]
+
+PREDICTION:
+their and the college of are the college of arts and the college of
+
+============================================================================================================================================
+SOURCE:
+page lrb page of rrb are one of the two major groups of the other being the lrb and birds rrb.
+
+TARGET:
+are one of the two major groups of [end]
+
+PREDICTION:
+page a lrb page pages rrb which is one of the two major groups of the other being the lrb birds
+
+============================================================================================================================================
+SOURCE:
+the album has lyrics about space and along with
+
+TARGET:
+the album has songs about space and [end]
+
+PREDICTION:
+it was called and along with and
+
+============================================================================================================================================
+SOURCE:
+however in phoenix dropped to second place per lrb behind california rrb although total car rose to.
+
+TARGET:
+however in phoenix dropped to second for per although it was first for total car [end]
+
+PREDICTION:
+to. and it finished of the bbc game on the in california but more rose to
+
+============================================================================================================================================
+SOURCE:
+is a historical swedish province or in middle
+
+TARGET:
+v is a historical swedish province or in middle sweden. [end]
+
+PREDICTION:
+in is a historical province lrb a swedish rrb that was used in the middle of a industrial region called in middle
+
+============================================================================================================================================
+SOURCE:
+lrb april july rrb was a french mathematician physicist engineer and a philosopher of
+
+TARGET:
+lrb april july rrb was a french mathematician and [end]
+
+PREDICTION:
+lrb april july rrb was a french mathematician and roman
+
+============================================================================================================================================
+SOURCE:
+in february south africa s state owned power company announced a to increase the capacity of the through and the construction of a new
+
+TARGET:
+in february of south africa s power company owned by the state said that they had a to increase the amount of the a lot through
+
+PREDICTION:
+in new south america said the rules would have a to create the library of

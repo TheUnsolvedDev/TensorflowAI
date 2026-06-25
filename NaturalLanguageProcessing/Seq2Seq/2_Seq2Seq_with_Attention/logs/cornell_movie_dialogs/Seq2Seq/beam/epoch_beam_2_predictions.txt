@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+what the hell do you mean going out and leaving by her what are you kidding her wide
+
+TARGET:
+what didn't he tell you? [end]
+
+PREDICTION:
+i know you don't think you're and i'm going in here.
+
+============================================================================================================================================
+SOURCE:
+yeah.
+
+TARGET:
+he's not gonna win -- not in the they never do. [end]
+
+PREDICTION:
+you know, but it is a nice man. and i don't want to talk about.
+
+============================================================================================================================================
+SOURCE:
+i believe they're and sent to some i don't know what the heck they do with 'em. maybe they use them for dust or pen
+
+TARGET:
+or [end]
+
+PREDICTION:
+i think it's not a
+
+============================================================================================================================================
+SOURCE:
+jesus, james, you should've told someone.
+
+TARGET:
+who? [end]
+
+PREDICTION:
+what do we mean?
+
+============================================================================================================================================
+SOURCE:
+i'm totally over her.
+
+TARGET:
+me too. great though. [end]
+
+PREDICTION:
+what did i say?
+
+============================================================================================================================================
+SOURCE:
+they did one of these about my wife. it's called 'the 'the i don't need money. i need some questions answered.
+
+TARGET:
+i'll do my best. [end]
+
+PREDICTION:
+you i think we were in this place and a man who knows that it is like that.
+
+============================================================================================================================================
+SOURCE:
+i think i'll take them.
+
+TARGET:
+a good choice. you wouldn't want to celebrate the birth of your with a box of would you? remember to keep them in the until you hand them
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+stay in the car. i'll only take a second.
+
+TARGET:
+erin. i know you think she's been talking to you. [end]
+
+PREDICTION:
+the way to make me like a lot about it. i'm not gonna have any time for you.
+
+============================================================================================================================================
+SOURCE:
+almost four.
+
+TARGET:
+plenty of time for a nice long - we most of last night... [end]
+
+PREDICTION:
+you i don't have a lot to be so much for you, but i'm gonna take it in your head at my own. and the one is going on the
+
+============================================================================================================================================
+SOURCE:
+in a way. you find yourself trying to say what you mean, but somehow the words change - and they become his words - and suddenly you're not saying what you mean,
+
+TARGET:
+do you expect me to believe that you didn't say any of those things - that they were all [end]
+
+PREDICTION:
+i don't know how it is, you know.

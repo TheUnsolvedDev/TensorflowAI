@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+tom is still too young to drink beer.
+
+TARGET:
+tom est encore trop jeune pour boire de la bière. [end]
+
+PREDICTION:
+tom est bien trop jeunes pour marcher. je porter la glace. » en un même s'il poche.
+
+============================================================================================================================================
+SOURCE:
+i don't really
+
+TARGET:
+je ne me le rappelle pas vraiment. [end]
+
+PREDICTION:
+ça ne fait grand-chose sûre pas de moi. je pense.
+
+============================================================================================================================================
+SOURCE:
+i'm trying to save tom's life.
+
+TARGET:
+j'essaye de sauver la vie de tom. [end]
+
+PREDICTION:
+j'essaie de la faute à notre personne. que c'est nous fiers !
+
+============================================================================================================================================
+SOURCE:
+tom says he's been asked to give a speech.
+
+TARGET:
+tom dit qu'il lui a été demandé de faire un discours. [end]
+
+PREDICTION:
+tom a l'impression qu'on dit eu son père. veux. un jour, qui va se la venu.
+
+============================================================================================================================================
+SOURCE:
+i wanted to say
+
+TARGET:
+je voulais dire merci. [end]
+
+PREDICTION:
+j'aimerais dises ! type.
+
+============================================================================================================================================
+SOURCE:
+he everything in terms of money.
+
+TARGET:
+il voit tout en d'argent. [end]
+
+PREDICTION:
+tout sans états-unis rend une chaleur. argent.
+
+============================================================================================================================================
+SOURCE:
+tom likes to fish.
+
+TARGET:
+tom aime [end]
+
+PREDICTION:
+marie j'aime bien pour tom.
+
+============================================================================================================================================
+SOURCE:
+i'm sure i'll find a way.
+
+TARGET:
+je suis certain de trouver un [end]
+
+PREDICTION:
+je suis sûr de trouver un autre. selon ça.
+
+============================================================================================================================================
+SOURCE:
+i don't know when i should come.
+
+TARGET:
+je ne sais pas quand je devrais venir. [end]
+
+PREDICTION:
+j'ignorais toutes quand tu voudrais venir.
+
+============================================================================================================================================
+SOURCE:
+i know that you don't want to hear what i'm about to say.
+
+TARGET:
+je sais que tu ne veux pas entendre ce que je vais dire. [end]
+
+PREDICTION:
+je sais que vous pas quoi donner à dire.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+although west virginia s first constitution provided for the of a part of the virginia opened by virginia in were and in virginia two of the
+
+TARGET:
+west virginia was once a part of [end]
+
+PREDICTION:
+although virginia from virginia developed virginia until the virginia in.
+
+============================================================================================================================================
+SOURCE:
+the area immediately outside fort is known as lrb a outer fort rrb and is a commercial
+
+TARGET:
+lrb in in tamil rrb is the largest city of [end]
+
+PREDICTION:
+north is a maya route in south.
+
+============================================================================================================================================
+SOURCE:
+during the and centuries england france and established their own overseas in direct competition with each
+
+TARGET:
+during the and centuries england france and made their own [end]
+
+PREDICTION:
+in the s society and their clothing nine in each other in the
+
+============================================================================================================================================
+SOURCE:
+research and development on the new line had in under the name e car which for
+
+TARGET:
+design of the began in under the name e car which for [end]
+
+PREDICTION:
+development on december was created by the authority for
+
+============================================================================================================================================
+SOURCE:
+lrb born october rrb who grew up on a wisconsin farm and was at the time an in economics at the university of chicago as his teaching
+
+TARGET:
+to help him teach during the s. she grew up on a wisconsin farm and was studying economics at the university of [end]
+
+PREDICTION:
+he grew up in the s as well as bob evolution university hospital in
+
+============================================================================================================================================
+SOURCE:
+the city was on the capital of the chinese dynasty an lrb now an rrb.
+
+TARGET:
+at that time the dynasty was china and the capital was at an lrb now an rrb. [end]
+
+PREDICTION:
+was the capital of the dynasty in a
+
+============================================================================================================================================
+SOURCE:
+as a matter of every person not selected in the league s draft is considered an
+
+TARGET:
+every player who is not chosen in their league s draft is an [end]
+
+PREDICTION:
+the word to be given an player or
+
+============================================================================================================================================
+SOURCE:
+when written in japanese it consists of two meaning and meaning leader or
+
+TARGET:
+the word is made of two japanese words meaning and meaning [end]
+
+PREDICTION:
+in pakistan the period one first is a and depending on anti and
+
+============================================================================================================================================
+SOURCE:
+the was chosen for the goddess of in greek mythology and is often pronounced as a word lrb i.e. rrb although some out the
+
+TARGET:
+the lrb system rrb is an mm film and digital system that was introduced in with the and is still in production
+
+PREDICTION:
+the title title goes and the of the in the
+
+============================================================================================================================================
+SOURCE:
+in the stephen the great by the m deal was
+
+TARGET:
+in a to the famous prince stephen iii of by the artist m deal was [end]
+
+PREDICTION:
+in the great american the british

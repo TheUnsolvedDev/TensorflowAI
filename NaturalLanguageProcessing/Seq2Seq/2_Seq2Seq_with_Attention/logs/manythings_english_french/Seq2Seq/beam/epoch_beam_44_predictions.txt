@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+maybe that's the reason.
+
+TARGET:
+peut-être en est-ce la raison. [end]
+
+PREDICTION:
+peut-être est-ce là l'histoire. dans homme. déjà.
+
+============================================================================================================================================
+SOURCE:
+what have i done wrong?
+
+TARGET:
+fait de mal ? [end]
+
+PREDICTION:
+de tout ne mis ?
+
+============================================================================================================================================
+SOURCE:
+they made a list of the names.
+
+TARGET:
+ils une liste des [end]
+
+PREDICTION:
+nous n'avons fait face aux par leur des marche. en sont
+
+============================================================================================================================================
+SOURCE:
+put yourself in my place.
+
+TARGET:
+à ma place. [end]
+
+PREDICTION:
+monte à chez moi.
+
+============================================================================================================================================
+SOURCE:
+tom told me he was to do that.
+
+TARGET:
+tom m'a dit qu'il était à le faire. [end]
+
+PREDICTION:
+tom se disait qu'il de te rendre à faire cela.
+
+============================================================================================================================================
+SOURCE:
+they're
+
+TARGET:
+ils sont [end]
+
+PREDICTION:
+ils n'ont peur plus que ça. pièce. au nombre de jeu.
+
+============================================================================================================================================
+SOURCE:
+it's great working here.
+
+TARGET:
+c'est super de travailler ici. [end]
+
+PREDICTION:
+c'est bon à pleurer.
+
+============================================================================================================================================
+SOURCE:
+i wish i could spend more time with my family.
+
+TARGET:
+j'aimerais pouvoir passer plus de temps avec ma famille. [end]
+
+PREDICTION:
+je voudrais regarder de passer encore bien à ma famille
+
+============================================================================================================================================
+SOURCE:
+it a certain amount of practice to be able to walk on
+
+TARGET:
+il faut une certaine pour parvenir à marcher avec des [end]
+
+PREDICTION:
+on fait quelques un certain de sécurité peut nager vers les vacances du plus.
+
+============================================================================================================================================
+SOURCE:
+i was hoping you'd be here today.
+
+TARGET:
+j'espérais que tu serais ici aujourd'hui. [end]
+
+PREDICTION:
+j'espérais que te là aujourd'hui. prochaine. de quoi qu'en voulez.

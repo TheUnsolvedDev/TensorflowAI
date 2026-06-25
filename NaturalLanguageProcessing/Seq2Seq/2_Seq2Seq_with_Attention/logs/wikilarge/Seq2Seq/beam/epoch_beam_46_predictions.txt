@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the stadium was designed by and constructed by john at a cost of approximately million million of which was provided by sport england with the by manchester city
+
+TARGET:
+the stadium cost about million. million of that was paid by sport england and the rest was paid by the manchester city [end]
+
+PREDICTION:
+the football was awarded to martin it with a huge help million students england at pennsylvania and made by trade england. this stadium had first come around million. in large
+
+============================================================================================================================================
+SOURCE:
+unlike in the west the revolution did not
+
+TARGET:
+the revolution was the word for many in china [end]
+
+PREDICTION:
+unlike to new in west france was because of the western revolution.
+
+============================================================================================================================================
+SOURCE:
+to this day she is of her for working with the crew of this
+
+TARGET:
+to this day she is of these though she was of the to it. [end]
+
+PREDICTION:
+because anne does n t be wife for the first part of his mind when their current owner is trying from to allow them together with help who she should
+
+============================================================================================================================================
+SOURCE:
+is a village lrb commune rrb in the vaucluse department of the provence alpes c te d azur region in southeastern france.
+
+TARGET:
+is a commune of people lrb rrb. it is located in the region provence alpes c te d azur in the vaucluse department in the south of france. [end]
+
+PREDICTION:
+there is in the national alpes minor and d te league lrb nfl rrb right melbourne s adam bowl for about people.
+
+============================================================================================================================================
+SOURCE:
+rules of are usually but of have been from time to time.
+
+TARGET:
+it is usually but it may be put in written because they are a product of the society s culture and history the rules of are very different
+
+PREDICTION:
+this has the of animals.
+
+============================================================================================================================================
+SOURCE:
+one meaning is a little piece of material that your
+
+TARGET:
+a is a that your [end]
+
+PREDICTION:
+c has the your being a little very small or metal
+
+============================================================================================================================================
+SOURCE:
+mean that increasing speed is becoming more
+
+TARGET:
+in recent years due to speed is getting [end]
+
+PREDICTION:
+turn changes become times as very quickly speed and has just been better for the modern revolution. these have come about making get
+
+============================================================================================================================================
+SOURCE:
+his control of the sport which grew from his the of television rights in the late s is financial but under the terms of the agreement he and
+
+TARGET:
+he is part owner of the company of the formula one group of [end]
+
+PREDICTION:
+and the current national hockey sports in american association lrb b. rrb
+
+============================================================================================================================================
+SOURCE:
+the are green and and distinctive in being and lrb with sometimes but usually rrb.
+
+TARGET:
+the are green and also in being and lrb with lrb rrb rrb. [end]
+
+PREDICTION:
+their large are green or sometimes and often hits a sweet lrb with one type rrb but they do usually fly rrb. the other types of bodies is for strings
+
+============================================================================================================================================
+SOURCE:
+the play their home games at time warner cable arena in
+
+TARGET:
+the team started playing in and was the second nba team to play in charlotte lrb the new had played in charlotte from to rrb. [end]
+
+PREDICTION:
+in was started working for a short record which they play fast very run and currently the arena football league again. this cup is today.

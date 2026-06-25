@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+when you the you may be by
+
+TARGET:
+lorsque vous sur la il se peut que vous soyez par des [end]
+
+PREDICTION:
+lorsque vous sur la il se peut que vous soyez par des
+
+============================================================================================================================================
+SOURCE:
+he cut the rope with his teeth.
+
+TARGET:
+il a coupé la corde avec ses dents. [end]
+
+PREDICTION:
+il les corde avec les dents.
+
+============================================================================================================================================
+SOURCE:
+you remind me of your mother.
+
+TARGET:
+vous me votre mère. [end]
+
+PREDICTION:
+tu me ta mère.
+
+============================================================================================================================================
+SOURCE:
+don't lose heart.
+
+TARGET:
+ne pas [end]
+
+PREDICTION:
+ne perds pas
+
+============================================================================================================================================
+SOURCE:
+what do you think about this?
+
+TARGET:
+qu'en dis-tu ? [end]
+
+PREDICTION:
+que pensez-vous de cela ?
+
+============================================================================================================================================
+SOURCE:
+tom is
+
+TARGET:
+tom est [end]
+
+PREDICTION:
+tom est
+
+============================================================================================================================================
+SOURCE:
+i didn't mean to hurt anyone.
+
+TARGET:
+je ne voulais personne. [end]
+
+PREDICTION:
+je n'avais pas l'intention de qui que ce
+
+============================================================================================================================================
+SOURCE:
+who are those
+
+TARGET:
+qui sont ces femmes ? [end]
+
+PREDICTION:
+qui sont ces ?
+
+============================================================================================================================================
+SOURCE:
+maybe i shouldn't do that.
+
+TARGET:
+peut-être que je ne devrais pas faire ça. [end]
+
+PREDICTION:
+peut-être que je ne devrais pas le faire.
+
+============================================================================================================================================
+SOURCE:
+i feel a little
+
+TARGET:
+je me sens quelque peu responsable. [end]
+
+PREDICTION:
+je me sens un peu

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he isn't the only one with this opinion.
+
+TARGET:
+il n'est pas le seul à avoir cette opinion. [end]
+
+PREDICTION:
+il n'y fait pas à la fête. ! de ce matin.
+
+============================================================================================================================================
+SOURCE:
+you seem to be a kind man.
+
+TARGET:
+vous semblez être un homme gentil. [end]
+
+PREDICTION:
+vous devriez faire quelques erreur. de français. je !
+
+============================================================================================================================================
+SOURCE:
+i have to
+
+TARGET:
+je dois répéter. [end]
+
+PREDICTION:
+il me fallait le plus.
+
+============================================================================================================================================
+SOURCE:
+this hat isn't new.
+
+TARGET:
+ce chapeau n'est pas neuf. [end]
+
+PREDICTION:
+cette voiture n'est pas facile.
+
+============================================================================================================================================
+SOURCE:
+english is spoken in many countries.
+
+TARGET:
+l'anglais est parlé dans de nombreux pays. [end]
+
+PREDICTION:
+sont en australie dans quelques livres.
+
+============================================================================================================================================
+SOURCE:
+some of us think so.
+
+TARGET:
+certains d'entre nous le pensent. [end]
+
+PREDICTION:
+en des sont allés ce que !
+
+============================================================================================================================================
+SOURCE:
+you'll have a hard time.
+
+TARGET:
+vous une peine en quartier de haute sécurité. [end]
+
+PREDICTION:
+vous allez aller à suite.
+
+============================================================================================================================================
+SOURCE:
+have you ever been diagnosed with
+
+TARGET:
+est-ce qu'on t'a déjà diagnostiqué un ? [end]
+
+PREDICTION:
+est-ce jamais que ce tu as déjà été avec des amis.
+
+============================================================================================================================================
+SOURCE:
+i'm addicted to
+
+TARGET:
+je suis accro à la [end]
+
+PREDICTION:
+j'en ai à suite.
+
+============================================================================================================================================
+SOURCE:
+all i know is that he came from china.
+
+TARGET:
+tout ce que je sais, c'est qu'il vient de chine. [end]
+
+PREDICTION:
+personne je crois avoir déjà besoin.

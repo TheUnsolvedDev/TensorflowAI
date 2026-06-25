@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it wasn't easy to make that decision.
+
+TARGET:
+ça n'a pas été facile de prendre cette décision. [end]
+
+PREDICTION:
+il n'a été facile de faire cela plus difficile.
+
+============================================================================================================================================
+SOURCE:
+where's the remote control for the tv?
+
+TARGET:
+où est la télécommande de la télévision ? [end]
+
+PREDICTION:
+c'est qui se situe la tête de celle pour le télé du
+
+============================================================================================================================================
+SOURCE:
+can i come over?
+
+TARGET:
+puis-je venir chez toi ? [end]
+
+PREDICTION:
+est-ce pouvoir à la place ?
+
+============================================================================================================================================
+SOURCE:
+was there an
+
+TARGET:
+y a-t-il eu un tremblement de terre ? [end]
+
+PREDICTION:
+y avait-il un traitement ? ans.
+
+============================================================================================================================================
+SOURCE:
+tom has found something.
+
+TARGET:
+tom a trouvé quelque chose. [end]
+
+PREDICTION:
+tom a trouvé quelque chose.
+
+============================================================================================================================================
+SOURCE:
+glasses and dishes were broken.
+
+TARGET:
+des verres et des furent [end]
+
+PREDICTION:
+les lunettes et était cassé.
+
+============================================================================================================================================
+SOURCE:
+are you two going out together?
+
+TARGET:
+toutes deux ensemble ? [end]
+
+PREDICTION:
+vous y êtes les deux amis ?
+
+============================================================================================================================================
+SOURCE:
+tom looks dead.
+
+TARGET:
+tom a l'air mort. [end]
+
+PREDICTION:
+on semble mort.
+
+============================================================================================================================================
+SOURCE:
+tom doesn't understand french at all.
+
+TARGET:
+tom ne comprend pas du tout le français. [end]
+
+PREDICTION:
+tom, tom ne comprend aucun français. en français ! à tous.
+
+============================================================================================================================================
+SOURCE:
+i forgot his phone number.
+
+TARGET:
+j'ai oublié son numéro de téléphone. [end]
+
+PREDICTION:
+j'ai oublié. son téléphone. à ce sujet. ans. photo.

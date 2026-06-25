@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+year lrb rrb was a common year starting on monday lrb link will display the full calendar rrb of the gregorian calendar and a common year starting on of the
+
+TARGET:
+year was a common year that started on a monday when using the gregorian calendar. [end]
+
+PREDICTION:
+year was a common year starting on monday of the gregorian calendar.
+
+============================================================================================================================================
+SOURCE:
+the woman team for is in the first lrb i.e. national league rrb the man team in the
+
+TARGET:
+the women s team is in the first lrb national league rrb the men s team in the [end]
+
+PREDICTION:
+in the universe the team is to the
+
+============================================================================================================================================
+SOURCE:
+it was the second found by him lrb being his previous find rrb and the third discovery lrb was the first rrb.
+
+TARGET:
+it was the second found by him lrb being his first rrb and the third to be found lrb was the first rrb. [end]
+
+PREDICTION:
+it was the second son of and
+
+============================================================================================================================================
+SOURCE:
+until was a of province.
+
+TARGET:
+was a of province. [end]
+
+PREDICTION:
+is a province in
+
+============================================================================================================================================
+SOURCE:
+used to write english most of s are actually in
+
+TARGET:
+but used the mostly for writing english. [end]
+
+PREDICTION:
+most commonly used are
+
+============================================================================================================================================
+SOURCE:
+atlantic giant is the common name for a variety to produce large
+
+TARGET:
+atlantic giant is the name of a very large type of [end]
+
+PREDICTION:
+each beach is used as a giant hard to their asian plants
+
+============================================================================================================================================
+SOURCE:
+the band named themselves after a wind a sound garden located on national and administration property next to park
+
+TARGET:
+the band named themselves after a wind the sound garden located in park [end]
+
+PREDICTION:
+the name a named service because they have opened a natural national park project
+
+============================================================================================================================================
+SOURCE:
+it has since been numerous times and translated into many languages becoming one of the most popular and influential works in th century
+
+TARGET:
+it is one of the most popular stories in th century literature and has been an important book for the fantasy [end]
+
+PREDICTION:
+it has been titles only in and became a of and cultural
+
+============================================================================================================================================
+SOURCE:
+in this the owner is generally regarded as representing god and the lrb rrb
+
+TARGET:
+the tree was meant to bear the good fruit of the holy spirit and the lrb rrb is [end]
+
+PREDICTION:
+in the seattle he also an to the message the and and
+
+============================================================================================================================================
+SOURCE:
+bush lrb born june rrb is the wife of the st president of the united states george h. w. bush and
+
+TARGET:
+her is new york near new york city. [end]
+
+PREDICTION:
+she was the youngest child of and

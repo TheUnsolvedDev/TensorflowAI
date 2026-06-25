@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+israel stated that the naval forces found weapons prepared in advance and used against our
+
+TARGET:
+israel said that the navy forces found weapons in and used against our [end]
+
+PREDICTION:
+assembly announced that the weapons were not found in the games of the point that could not be
+
+============================================================================================================================================
+SOURCE:
+it became one of scotland s five world heritage sites in and is one of the few in the world to hold joint status for its natural and cultural
+
+TARGET:
+in july it became one of the few world heritage sites to hold status for its natural and cultural [end]
+
+PREDICTION:
+one of uk s world state be original candidate for building its world bank prize and for the
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+is a commune. it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+alone again from a street but them and over
+
+TARGET:
+is alone again and some [end]
+
+PREDICTION:
+you say rrb but and than him
+
+============================================================================================================================================
+SOURCE:
+the show finished its run on may with a total of
+
+TARGET:
+the cartoon finished production of its episodes on may [end]
+
+PREDICTION:
+the series moved on and has made a score of.
+
+============================================================================================================================================
+SOURCE:
+the highest of the group is mount in north carolina at which is the highest point in the united states east of the mississippi river.
+
+TARGET:
+is also the highest point in the united states east of the mississippi river as well as the highest point in eastern north america. [end]
+
+PREDICTION:
+the highest point in the mississippi is the largest lake in the north atlantic mount and the largest area in the world.
+
+============================================================================================================================================
+SOURCE:
+in the may election got of the and got of the
+
+TARGET:
+and got the most of them got of the [end]
+
+PREDICTION:
+is jewish person in the of
+
+============================================================================================================================================
+SOURCE:
+three major were available do lrb norwegian written language i.e. danish was already different from swedish rrb the danish language or build a new national language based on modern
+
+TARGET:
+the danish language was mixed up with the norwegian and became today s norwegian language. norwegian and danish look very similar when they are written but when they are
+
+PREDICTION:
+another feature that of the language is normally far from germany to be a language and norwegian language and norwegian
+
+============================================================================================================================================
+SOURCE:
+commonly known as is a or tree in the family.
+
+TARGET:
+the is a australian or [end]
+
+PREDICTION:
+the also known as or is a tree in the family.
+
+============================================================================================================================================
+SOURCE:
+children toward children people other than their parents depending on the child s culture age and the context of the
+
+TARGET:
+children other people different have different on whether children should see people other than their parents and other children [end]
+
+PREDICTION:
+woman and rise to lrb rrb in the

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the act required that hold his for more than three
+
+TARGET:
+he had to hold his for more than three [end]
+
+PREDICTION:
+he decided that that the act of had a long italian and
+
+============================================================================================================================================
+SOURCE:
+victoria s son edward vii and in turn his son george v as members of this
+
+TARGET:
+son edward vii and his son george v as members of this house. [end]
+
+PREDICTION:
+s son the son of edward i
+
+============================================================================================================================================
+SOURCE:
+are not used to with one s food or with in
+
+TARGET:
+are not used to with food or with the in [end]
+
+PREDICTION:
+we call what can be used as a when it is used for and
+
+============================================================================================================================================
+SOURCE:
+on july and two began a four month tour of southeast asia and
+
+TARGET:
+on july and two went on a four month tour of southeast asia. they visited lrb island rrb and [end]
+
+PREDICTION:
+on july th and first started to develop the editor of and
+
+============================================================================================================================================
+SOURCE:
+it is the capital of the autonomous community of la formerly known as o province.
+
+TARGET:
+it is the capital of la o is in the [end]
+
+PREDICTION:
+it b la or de
+
+============================================================================================================================================
+SOURCE:
+is a municipality in the province of in one of the three regions of belgium.
+
+TARGET:
+is a municipality located in the belgian province of [end]
+
+PREDICTION:
+is a municipality located in the belgian province of
+
+============================================================================================================================================
+SOURCE:
+out of the twenty selected the for the first launch were and because of their performance in training as well as their physical characteristics space was at
+
+TARGET:
+out of the twenty selected the for the first were and because of their performance in training as well as their physical well [end]
+
+PREDICTION:
+located in the system of it was a round that was cast as class space in the late
+
+============================================================================================================================================
+SOURCE:
+since his youth he had been of and military and as part of their training his men how to in the
+
+TARGET:
+since his youth he was of and military [end]
+
+PREDICTION:
+since he had security he his of and he the of and
+
+============================================================================================================================================
+SOURCE:
+most developing countries have energy including solar energy wind power energy and as well as the ability to the relatively labor systems that
+
+TARGET:
+most countries have good energy including solar energy wind power energy and [end]
+
+PREDICTION:
+most energy lrb are systems are rrb hard wind energy weather will off
+
+============================================================================================================================================
+SOURCE:
+lrb born july rrb is a russian professional ice hockey who is currently from the nhl for to report to the new york
+
+TARGET:
+lrb born july in now rrb is a professional ice hockey for the san of the national hockey league. [end]
+
+PREDICTION:
+alexander lrb born july in rrb is a professional american actor. he is best known for his partner s vice on the

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+please tell me what happened.
+
+TARGET:
+je vous prie, ce qu'il s'est passé ! [end]
+
+PREDICTION:
+s'il te plaît, dis-moi ce qu'il s'est passé.
+
+============================================================================================================================================
+SOURCE:
+i remember that
+
+TARGET:
+je me souviens de ce [end]
+
+PREDICTION:
+je me rappelle ce
+
+============================================================================================================================================
+SOURCE:
+i've just sent you an
+
+TARGET:
+je viens de vous envoyer un [end]
+
+PREDICTION:
+je viens de un
+
+============================================================================================================================================
+SOURCE:
+do you understand what you have to do?
+
+TARGET:
+tu comprends ce que tu dois faire ? [end]
+
+PREDICTION:
+comprenez-vous ce que vous devez faire ?
+
+============================================================================================================================================
+SOURCE:
+it is impossible to know what will happen in the future.
+
+TARGET:
+il est impossible de savoir ce qui se dans le [end]
+
+PREDICTION:
+il est impossible de savoir ce qu’il
+
+============================================================================================================================================
+SOURCE:
+i like working.
+
+TARGET:
+j'aime travailler. [end]
+
+PREDICTION:
+j'aime travailler.
+
+============================================================================================================================================
+SOURCE:
+he showed up late to
+
+TARGET:
+il est venu tard à [end]
+
+PREDICTION:
+il est devenu pour en avoir santé.
+
+============================================================================================================================================
+SOURCE:
+we're normal.
+
+TARGET:
+nous sommes [end]
+
+PREDICTION:
+nous sommes
+
+============================================================================================================================================
+SOURCE:
+my mom told me that i was fat.
+
+TARGET:
+ma mère m'a dit que j'étais gros. [end]
+
+PREDICTION:
+ma mère m'a dit que j'étais
+
+============================================================================================================================================
+SOURCE:
+are you still married?
+
+TARGET:
+êtes-vous toujours mariée ? [end]
+
+PREDICTION:
+êtes-vous toujours mariés ?

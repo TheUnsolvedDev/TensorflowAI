@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the great and of his character are well brought out in his journal et lrb paris rrb.
+
+TARGET:
+in his work journal et we can see his and of his [end]
+
+PREDICTION:
+the great and of his character are well liked by swedish metal in his journal are different from
+
+============================================================================================================================================
+SOURCE:
+while the m is considered to be the first urban to be completed in the united kingdom the first road to be built to standard in the country was
+
+TARGET:
+it was the first urban to be built in the united kingdom. [end]
+
+PREDICTION:
+this is included the first urban to be built to be built to be built to standard in the country.
+
+============================================================================================================================================
+SOURCE:
+the temperature of the with reaching values typically in the range from about c lrb f rrb to c lrb f rrb at the boundary with the
+
+TARGET:
+the temperature of the with where the meets the the temperatures can be between c lrb f rrb to c lrb f rrb. [end]
+
+PREDICTION:
+the temperature of the with
+
+============================================================================================================================================
+SOURCE:
+the the national of l union la force lrb french union makes strength rrb.
+
+TARGET:
+the on the bottom the national l union la force lrb french for union makes strength rrb. [end]
+
+PREDICTION:
+the the the national of l force la force as french union
+
+============================================================================================================================================
+SOURCE:
+during the summer months the block ends at et on
+
+TARGET:
+during the summer months the disney block ends at et on [end]
+
+PREDICTION:
+during the summer ends the block ends with et on et
+
+============================================================================================================================================
+SOURCE:
+it is mainly a deep level line running from the north to the west of london via zone with a number of surface in its
+
+TARGET:
+it is a deep level line running from the north east to the west of london. [end]
+
+PREDICTION:
+it is mainly a deep level line run from the north to the west of london using zone with zone
+
+============================================================================================================================================
+SOURCE:
+this has been from total drama island.
+
+TARGET:
+this has been voted off on total drama island. [end]
+
+PREDICTION:
+this has been that has been to drama as a
+
+============================================================================================================================================
+SOURCE:
+lrb rrb is a flowering plant in the family as an important in the us canada argentina france australia the middle east south africa
+
+TARGET:
+lrb rrb is a species of plant. it belongs in the family [end]
+
+PREDICTION:
+the lrb rrb is a flowering plant species.
+
+============================================================================================================================================
+SOURCE:
+from the whether jesus is
+
+TARGET:
+asked the to make sure that jesus is [end]
+
+PREDICTION:
+from the one is
+
+============================================================================================================================================
+SOURCE:
+the designed by is. m wide and. m high and is built of stone with a giant order of and a central in front
+
+TARGET:
+it is. metres lrb. ft rrb wide and. metres lrb. ft rrb high and is built of gray stone with a giant and a central
+
+PREDICTION:
+it could and its order of stone contains stone and a

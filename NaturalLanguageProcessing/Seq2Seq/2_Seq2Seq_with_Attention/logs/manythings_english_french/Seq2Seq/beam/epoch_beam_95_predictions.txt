@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+what does it matter?
+
+TARGET:
+? [end]
+
+PREDICTION:
+que te donne cela ? en fin de manière à force
+
+============================================================================================================================================
+SOURCE:
+i've seen you on tv.
+
+TARGET:
+je vous ai vu à la télé. [end]
+
+PREDICTION:
+je t'ai vus à la télé. h soleil.
+
+============================================================================================================================================
+SOURCE:
+the dog on the again.
+
+TARGET:
+le chien a encore sur le [end]
+
+PREDICTION:
+le chien a de nouveau à ce week-end. amoureux. !
+
+============================================================================================================================================
+SOURCE:
+somebody must care for the patient.
+
+TARGET:
+quelqu'un doit de la malade. [end]
+
+PREDICTION:
+chacun doit avoir ses du malade.
+
+============================================================================================================================================
+SOURCE:
+is there any reason not to go?
+
+TARGET:
+y a-t-il une raison quelconque de ne pas s'y rendre ? [end]
+
+PREDICTION:
+y a-t-il une possibilité de n'en rendre ni ?
+
+============================================================================================================================================
+SOURCE:
+became a very long time ago.
+
+TARGET:
+les se sont il y a très longtemps. [end]
+
+PREDICTION:
+les travaillent tout a très longue besoin. ! au temps soit. par elle dans le système de même ?
+
+============================================================================================================================================
+SOURCE:
+can i talk to you for a please?
+
+TARGET:
+je peux te parler une s'il te plaît ? [end]
+
+PREDICTION:
+pouvez-vous me poser du bois s'il toi ? une certaine sont ça moi d'autre que tu cours. manière. t'es sérieux.
+
+============================================================================================================================================
+SOURCE:
+you might as well just enjoy life.
+
+TARGET:
+tu ferais mieux de simplement de la vie. [end]
+
+PREDICTION:
+tu peux comme bon te chante mieux.
+
+============================================================================================================================================
+SOURCE:
+do you really think this is a good idea?
+
+TARGET:
+penses-tu vraiment que ce soit une bonne idée ? [end]
+
+PREDICTION:
+penses-tu vraiment qu'un bien. ennuis.
+
+============================================================================================================================================
+SOURCE:
+don't you recognize that
+
+TARGET:
+ne pas ce type ? [end]
+
+PREDICTION:
+ne comprends-tu cet « n'en a été.

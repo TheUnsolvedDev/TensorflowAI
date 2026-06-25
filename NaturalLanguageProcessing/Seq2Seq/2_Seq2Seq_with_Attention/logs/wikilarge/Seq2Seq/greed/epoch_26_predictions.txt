@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+lrb optics rrb the degree to which light is
+
+TARGET:
+it can also mean lrb optics rrb the degree to which light is [end]
+
+PREDICTION:
+lrb optics rrb the degree of which light is
+
+============================================================================================================================================
+SOURCE:
+en is a commune in the aisne department in picardie in northern france.
+
+TARGET:
+it is found in the region picardie in the aisne department in the north of france. [end]
+
+PREDICTION:
+it is found in the region picardie in the aisne department in the north of france.
+
+============================================================================================================================================
+SOURCE:
+in the race after a bad start he crashed into the back of alonso s renault finishing th.
+
+TARGET:
+in the race he crashed into the back of alonso s car and finished th. [end]
+
+PREDICTION:
+in the race after a bad start he crashed into the west of and
+
+============================================================================================================================================
+SOURCE:
+it is based on la dame aux cam lrb o o rrb a play adapted from the novel by alexandre dumas
+
+TARGET:
+la is an italian opera in three acts by giuseppe verdi libretto by francesco maria after alexandre dumas novel la dame aux published in. [end]
+
+PREDICTION:
+the song from the english castle the name comes from la lrb o o rrb which was based on the book by alexandre dumas
+
+============================================================================================================================================
+SOURCE:
+in a single day about soldiers on both sides died or were left wounded on the field.
+
+TARGET:
+the battle only lasted one day but about soldiers on both sides were killed or were left wounded on the [end]
+
+PREDICTION:
+in a single day about soldiers died or were left wounded on the field.
+
+============================================================================================================================================
+SOURCE:
+its county seat is florida and its largest city is st.
+
+TARGET:
+county is a county located in the u.s. state of florida. [end]
+
+PREDICTION:
+st. gallen is a county in the state of georgia. the county seat of florida.
+
+============================================================================================================================================
+SOURCE:
+a building in its most common usage is a steel or reinforced concrete structure a nuclear
+
+TARGET:
+building is a building with a nuclear in it. [end]
+
+PREDICTION:
+a building is a large building in its most common usage in the history of the country.
+
+============================================================================================================================================
+SOURCE:
+by ted and his were on the of the big time and made their first movie soup to nuts featuring ted and his four lrb lrb billed as harry howard rrb larry and one shot fred rrb for fox films lrb later th century fox rrb.
+
+TARGET:
+the filmed his first short film with ted soup to nuts lrb rrb. ted and his was a comedy group featuring ted and moe more moe s brother howard larry fine and fred [end]
+
+PREDICTION:
+brett and his were on the of the big time and made their first movie soup
+
+============================================================================================================================================
+SOURCE:
+by there were and native americans still occupied large areas of land in northeast and far western alabama.
+
+TARGET:
+by there were with indians still occupying land in northeast and far western alabama. [end]
+
+PREDICTION:
+by there were and native americans still occupied large areas of land in northeast and far west
+
+============================================================================================================================================
+SOURCE:
+lavender flavors baked goods and lrb it pairs especially well with chocolate rrb as well as used to make lavender sugar.
+
+TARGET:
+sometimes they are used in baked goods and chocolate and sometimes they use it to make a very lavender sugar. [end]
+
+PREDICTION:
+the fruit of the flower can have some chocolate or instead of long chocolate and their furniture and their beef sauce as often use it as well as long as used for chocolate and beans are used to make tea.

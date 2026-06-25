@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+could you please drive me home?
+
+TARGET:
+pourriez-vous me chez moi ? [end]
+
+PREDICTION:
+pourriez-vous me conduire chez moi, s'il vous plaît ?
+
+============================================================================================================================================
+SOURCE:
+i don't recognize the
+
+TARGET:
+je n'en pas le [end]
+
+PREDICTION:
+je ne pas de
+
+============================================================================================================================================
+SOURCE:
+please write down what he says.
+
+TARGET:
+veuillez prendre note de ce qu'il dit. [end]
+
+PREDICTION:
+prends note de ce qu'il s'il te plait.
+
+============================================================================================================================================
+SOURCE:
+she stood there even after the train was out of sight.
+
+TARGET:
+elle est restée là même lorsque le train ne fut plus en vue. [end]
+
+PREDICTION:
+elle se tenait devant là d'un
+
+============================================================================================================================================
+SOURCE:
+when did you tell me that?
+
+TARGET:
+quand me l'as-tu dit ? [end]
+
+PREDICTION:
+quand tu me fais m'appeler ?
+
+============================================================================================================================================
+SOURCE:
+you've got a cute friend.
+
+TARGET:
+t'as une amie [end]
+
+PREDICTION:
+vous avez une amie
+
+============================================================================================================================================
+SOURCE:
+tom told me he knew where mary
+
+TARGET:
+tom m'a dit qu'il savait où marie. [end]
+
+PREDICTION:
+tom m'a dit qu'il savait où
+
+============================================================================================================================================
+SOURCE:
+i didn't want to you.
+
+TARGET:
+je n'avais pas l'intention de [end]
+
+PREDICTION:
+je ne voulais pas
+
+============================================================================================================================================
+SOURCE:
+tom is
+
+TARGET:
+tom est [end]
+
+PREDICTION:
+tom est
+
+============================================================================================================================================
+SOURCE:
+you have good ideas.
+
+TARGET:
+tu as de bonnes idées. [end]
+
+PREDICTION:
+vous avez quelques bons idées.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it only takes a few minutes.
+
+TARGET:
+ça ne prendra que quelques minutes. [end]
+
+PREDICTION:
+cela ne prend quelques minutes.
+
+============================================================================================================================================
+SOURCE:
+they should have one.
+
+TARGET:
+elles devraient en avoir un. [end]
+
+PREDICTION:
+ils devraient en avoir un.
+
+============================================================================================================================================
+SOURCE:
+"are you "no, not at
+
+TARGET:
+« es-tu fatigué ? » « non, pas du tout. » [end]
+
+PREDICTION:
+« tu es fatigué ? » « non, absolument pas. »
+
+============================================================================================================================================
+SOURCE:
+you are taller than she is.
+
+TARGET:
+tu es plus grand [end]
+
+PREDICTION:
+vous êtes plus grands
+
+============================================================================================================================================
+SOURCE:
+we're waiting for tom.
+
+TARGET:
+on attend tom. [end]
+
+PREDICTION:
+nous attendons pour tom.
+
+============================================================================================================================================
+SOURCE:
+it's you who doesn't understand.
+
+TARGET:
+c'est vous qui ne comprenez pas. [end]
+
+PREDICTION:
+c'est toi qui ne comprends pas.
+
+============================================================================================================================================
+SOURCE:
+the show in ten minutes.
+
+TARGET:
+le commence dans 10 minutes. [end]
+
+PREDICTION:
+le commence dans dix minutes.
+
+============================================================================================================================================
+SOURCE:
+was that a
+
+TARGET:
+était-ce une ? [end]
+
+PREDICTION:
+était-ce là un ?
+
+============================================================================================================================================
+SOURCE:
+you're so wrong.
+
+TARGET:
+tu as tellement tort. [end]
+
+PREDICTION:
+vous avez tellement tort.
+
+============================================================================================================================================
+SOURCE:
+i wish you both and
+
+TARGET:
+je vous souhaite à tous les deux et [end]
+
+PREDICTION:
+je te à la du jour et toi deux.

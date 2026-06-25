@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+it wasn't easy to make that decision.
+
+TARGET:
+ça n'a pas été facile de prendre cette décision. [end]
+
+PREDICTION:
+ça ne fut pas d'être aussi remarqué.
+
+============================================================================================================================================
+SOURCE:
+where's the remote control for the tv?
+
+TARGET:
+où est la télécommande de la télévision ? [end]
+
+PREDICTION:
+c'est qu'il sera trouvé au chaud film. ?
+
+============================================================================================================================================
+SOURCE:
+can i come over?
+
+TARGET:
+puis-je venir chez toi ? [end]
+
+PREDICTION:
+puis-je venir chez le mur. est ton au travail. j'espère
+
+============================================================================================================================================
+SOURCE:
+was there an
+
+TARGET:
+y a-t-il eu un tremblement de terre ? [end]
+
+PREDICTION:
+a-t-on une banque prêt ? » !
+
+============================================================================================================================================
+SOURCE:
+tom has found something.
+
+TARGET:
+tom a trouvé quelque chose. [end]
+
+PREDICTION:
+tom a découvert quelque choix. c'est une. les
+
+============================================================================================================================================
+SOURCE:
+glasses and dishes were broken.
+
+TARGET:
+des verres et des furent [end]
+
+PREDICTION:
+les amies des fermeture de la dire.
+
+============================================================================================================================================
+SOURCE:
+are you two going out together?
+
+TARGET:
+toutes deux ensemble ? [end]
+
+PREDICTION:
+es-tu même absent toutes deux maison et as-tu cet appartement demain ?
+
+============================================================================================================================================
+SOURCE:
+tom looks dead.
+
+TARGET:
+tom a l'air mort. [end]
+
+PREDICTION:
+tom fait l'air proche.
+
+============================================================================================================================================
+SOURCE:
+tom doesn't understand french at all.
+
+TARGET:
+tom ne comprend pas du tout le français. [end]
+
+PREDICTION:
+thomas ne le comprend tous pas français.
+
+============================================================================================================================================
+SOURCE:
+i forgot his phone number.
+
+TARGET:
+j'ai oublié son numéro de téléphone. [end]
+
+PREDICTION:
+j'ai son oublié deux.

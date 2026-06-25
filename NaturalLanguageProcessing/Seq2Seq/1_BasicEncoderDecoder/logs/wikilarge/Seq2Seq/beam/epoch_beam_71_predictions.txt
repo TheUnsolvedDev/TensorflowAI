@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+their is they take a range of and and a high of which they find under the of and
+
+TARGET:
+they are they eat a range of tree and which they find under the of trees such as and [end]
+
+PREDICTION:
+they have long up the body parts and are in old mountain including of these mountains about kilometers lrb. mi rrb.
+
+============================================================================================================================================
+SOURCE:
+the drive in was built in by local resident juan lrb may june rrb.
+
+TARGET:
+snow drive in is a historic small and along a part of what used to be route in arizona usa. [end]
+
+PREDICTION:
+the drive in was built at a nearby village lrb after n e rrb who died out of july with an officer in bad health while another owner is a
+
+============================================================================================================================================
+SOURCE:
+town football club is an english football club based in who play in league two the fourth of english
+
+TARGET:
+town f.c. is a football club which plays in england. [end]
+
+PREDICTION:
+town county lrb often spelled club in england rrb is a english football player.
+
+============================================================================================================================================
+SOURCE:
+today the local economy is largely commercial and with the largest being a
+
+TARGET:
+today the local economy is mostly and with the largest being a clothing [end]
+
+PREDICTION:
+today its economy is the maximum status supply airport has an average unit length of meters lrb total or hip ft rrb. this union was often called a great commercial
+
+============================================================================================================================================
+SOURCE:
+these grew into the party to a sound and government.
+
+TARGET:
+these grew into the party which wanted a sound and strong government and was by the democratic [end]
+
+PREDICTION:
+people came as the regional single plan to play for national power art which was changed in. before its original release of law protected it.
+
+============================================================================================================================================
+SOURCE:
+is s most popular tourist on account of its to the is now the town s principal
+
+TARGET:
+is s most popular place because it is near to the beautiful ice is now the town s main [end]
+
+PREDICTION:
+is an popular version on the following which was in part by rail bank of london it opened with a road zone between two terms at st slow moving back
+
+============================================================================================================================================
+SOURCE:
+the term method is also sometimes used to refer to the of music books and or audio recordings which have been published as part of its music
+
+TARGET:
+the term method is also used to mean only the music books and [end]
+
+PREDICTION:
+also written for the use of many books including those from one hundred copies lrb rrb such a and later known year as well were called li or old cells.
+
+============================================================================================================================================
+SOURCE:
+across from the church is the town hall or
+
+TARGET:
+across from the church is the town [end]
+
+PREDICTION:
+into an article called saint peter and is often a town of people. some persons contain no money or baby un founded in by christ the church s main address
+
+============================================================================================================================================
+SOURCE:
+the la a weather which conditions to eastern australia was the since.
+
+TARGET:
+la a is an unusual weather which weather to eastern australia. the la a was the strongest since. [end]
+
+PREDICTION:
+this weather every low which was once given out enough to
+
+============================================================================================================================================
+SOURCE:
+in december ten was as one of the among the nations by the state of
+
+TARGET:
+in december ten was as part of the the nations by the state of [end]
+
+PREDICTION:
+according to total were one of the people in what happened is a series of.

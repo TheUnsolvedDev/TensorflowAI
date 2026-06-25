@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the subject matter and story lines are typically consistent with the age and experience of the main character but beyond that ya stories span the entire spectrum of fiction
+
+TARGET:
+the subject matter and are usually in line with the age and knowledge of the main character. ya stories can span all types of fiction. [end]
+
+PREDICTION:
+in addition of the name it was also capable with other books which is used as an attempt to have a lot and cause for example but beyond that such a type has been used.
+
+============================================================================================================================================
+SOURCE:
+it was discovered on january by giuseppe and for half a century it was classified as the eighth planet. it is named after ceres the roman goddess of growing plants the harvest and love.
+
+TARGET:
+it was discovered on january by giuseppe and is named after the roman goddess ceres the goddess of growing plants the harvest and of love. [end]
+
+PREDICTION:
+it was found by claude and of widespread plants. this comes for the th planet that is named as a eighth element. he served in the roman goddess of males to help him from to.
+
+============================================================================================================================================
+SOURCE:
+the language is referred to as lrb or rrb in pakistan and pakistani administered kashmir.
+
+TARGET:
+the language is referred to as lrb rrb in pakistan and pakistani occupied kashmir. [end]
+
+PREDICTION:
+the language are referred for as an administrative subdivision of abbottabad district rrb. it is known to be lrb or rrb in.
+
+============================================================================================================================================
+SOURCE:
+the sequel star wars knights of the old republic ii the lords was developed by obsidian entertainment at s suggestion as wanted to focus on their own intellectual properties.
+
+TARGET:
+the game has a sequel titled star wars knights of the old republic ii the [end]
+
+PREDICTION:
+this version the sequel star wars twelve times of a united kingdom ii. it is made by and was originally used in as well known to be called fairy entertainment.
+
+============================================================================================================================================
+SOURCE:
+its central rite which is public is called xv or the mass. location.
+
+TARGET:
+its central rite which is public is the location. [end]
+
+PREDICTION:
+the of people which is a group in parts called
+
+============================================================================================================================================
+SOURCE:
+comments editors use comments to communicate with each other in the body of the text of an
+
+TARGET:
+comments comments are used to talk with other editors in the article body. [end]
+
+PREDICTION:
+they also use the price of many kinds that can to talk with each other during its own.
+
+============================================================================================================================================
+SOURCE:
+at the same time the small special projects part of the company which since had been contracted to design and build honda s racing league engines split away to become a separate company owned by mario and roger
+
+TARGET:
+one division of the company was called special projects. since special projects had been building honda s indy racing league engines. [end]
+
+PREDICTION:
+in it was the most famous for seasons to
+
+============================================================================================================================================
+SOURCE:
+greene is a city in butler county iowa along the shell rock river and along butler county s northern border where butler and floyd counties
+
+TARGET:
+is a city of iowa in the united states. [end]
+
+PREDICTION:
+lrb pronounced rrb is a municipality found in the region maria la iowa united and state
+
+============================================================================================================================================
+SOURCE:
+the national mall s status as a wide open at the heart of the capital makes it an attractive site for protests and of all
+
+TARGET:
+protests and also happen at the national [end]
+
+PREDICTION:
+in a big tropical cyclone of the city s course as well known at their heart and it has an observatory for fighting with other people who were not to do n
+
+============================================================================================================================================
+SOURCE:
+headquartered in tehran iran the islamic azad university was founded in and currently has an of. million students making it the world s third
+
+TARGET:
+islamic azad university was founded in and has an of. million students making it the world s third [end]
+
+PREDICTION:
+in the world was formed and has an for a few years.

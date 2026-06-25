@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you should be proud of yourselves.
+
+TARGET:
+vous devriez être fiers de vous. [end]
+
+PREDICTION:
+vous devriez être de vous.
+
+============================================================================================================================================
+SOURCE:
+how soon are you going
+
+TARGET:
+quand vas-tu faire des courses ? [end]
+
+PREDICTION:
+combien rapidement ?
+
+============================================================================================================================================
+SOURCE:
+you never told me where you
+
+TARGET:
+tu ne m'as jamais dit où tu [end]
+
+PREDICTION:
+jamais ne vous m'avez dit où vous ici.
+
+============================================================================================================================================
+SOURCE:
+a day without is a day
+
+TARGET:
+une journée sans c'est une journée de ! [end]
+
+PREDICTION:
+un jour sans jour, c'est une femme
+
+============================================================================================================================================
+SOURCE:
+i'm not sure if it's a or an
+
+TARGET:
+je ne suis pas sûr s'il s'agit d'un ou bien d'une [end]
+
+PREDICTION:
+je ne suis pas sûr que s'il fait soit un ou non.
+
+============================================================================================================================================
+SOURCE:
+you want this?
+
+TARGET:
+voulez-vous ceci ? [end]
+
+PREDICTION:
+tu veux ça ?
+
+============================================================================================================================================
+SOURCE:
+show me another watch.
+
+TARGET:
+montrez-moi une autre montre. [end]
+
+PREDICTION:
+fais-moi voir une autre montre.
+
+============================================================================================================================================
+SOURCE:
+tom goes to church.
+
+TARGET:
+tom va à [end]
+
+PREDICTION:
+tom va à
+
+============================================================================================================================================
+SOURCE:
+he the audience in a voice.
+
+TARGET:
+il à son avec une voix [end]
+
+PREDICTION:
+il le président en un en
+
+============================================================================================================================================
+SOURCE:
+i
+
+TARGET:
+je m'en suis [end]
+
+PREDICTION:
+j'ai

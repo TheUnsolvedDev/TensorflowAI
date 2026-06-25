@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+in some countries such as in spain and portugal the term for a bill differs depending on whether it is initiated by the government lrb when it is known as a project rrb or by the parliament lrb a i.e. a private member s bill rrb.
+
+TARGET:
+in some countries such as spain and portugal a bill has different names depending on whether it comes from the government lrb [end]
+
+PREDICTION:
+in the of the the term for a bill differs depending on whether it is started by the government lrb when it is known as a project rrb or by the parliament lrb a i.e. a private member s bill rrb.
+
+============================================================================================================================================
+SOURCE:
+there is also a relatively new the japanese that links south to out of south
+
+TARGET:
+there is also a new the japanese that links south to [end]
+
+PREDICTION:
+there is also a very new the japanese that links south to out of south
+
+============================================================================================================================================
+SOURCE:
+the most common commercial brand is the which is sometimes used as a generic name for the class.
+
+TARGET:
+the most common brand of is the [end]
+
+PREDICTION:
+the most common sport is the which is sometimes used as a name for the class.
+
+============================================================================================================================================
+SOURCE:
+it is located next to six flags wild animal park and hurricane harbor water park.
+
+TARGET:
+the park is located beside a water park called six flags hurricane harbour and a zoo called the wild area. [end]
+
+PREDICTION:
+it is located at the of the animal park and hurricane harbor water park.
+
+============================================================================================================================================
+SOURCE:
+after the discovery of vesta no further objects were discovered for years.
+
+TARGET:
+after the discovery of vesta in no asteroids were discovered for the next years. [end]
+
+PREDICTION:
+after the discovery of vesta no further objects were found for years.
+
+============================================================================================================================================
+SOURCE:
+hudson was voted star of the year favorite leading man and similar titles by numerous movie the tall actor was one of the most popular and well known movie stars of the time.
+
+TARGET:
+hudson was voted star of the year and favorite leading man by many movie magazines and was one of the most popular movie stars of the time. [end]
+
+PREDICTION:
+hudson was voted star of the year favorite leading man and similar titles by numerous movie the tall actor was one of the most popular and well known movies stars of the time.
+
+============================================================================================================================================
+SOURCE:
+in terms of classical mechanics one watt is the rate at which work is done when an object s velocity is held constant at one meter per second against constant opposing force of one
+
+TARGET:
+the power of a light is measured in [end]
+
+PREDICTION:
+in terms of classical mechanics one watt is done when an object s velocity is held with the same size as the object s velocity is held with the
+
+============================================================================================================================================
+SOURCE:
+he is wedding to once who has tried to kill bart several times and has gone to prison.
+
+TARGET:
+he was married to once who has tried to kill bart several times and has gone to prison. [end]
+
+PREDICTION:
+he is sent to once who has tried to kill bart several times and has gone to prison.
+
+============================================================================================================================================
+SOURCE:
+if a child lives with both parents each parent shares joint physical and each parent is said to be a
+
+TARGET:
+if a child lives with one parent that parent has sole physical [end]
+
+PREDICTION:
+if a child lives with both parents each parent shares joint physical and each parent is said to be a
+
+============================================================================================================================================
+SOURCE:
+see also nazi songs references this article draws significantly on the scholarly article by george the horst a international folklore review vol.
+
+TARGET:
+references this article is largely based on george the horst lied a international folklore review vol. [end]
+
+PREDICTION:
+the a international folklore review vol.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+talk! say something!
+
+TARGET:
+i can't see too [end]
+
+PREDICTION:
+i'm going to have my own place on this case. it's a
+
+============================================================================================================================================
+SOURCE:
+they still seem nervous.
+
+TARGET:
+i know. [end]
+
+PREDICTION:
+i think he is a very big way -- but it seems to have been the best other in that section.
+
+============================================================================================================================================
+SOURCE:
+oh!
+
+TARGET:
+did you want to see her about something important? [end]
+
+PREDICTION:
+you know the
+
+============================================================================================================================================
+SOURCE:
+look, i don't wanna be a fly in the but if help doesn't come soon, i gotta see a doctor. i don't give a fuck about jail, i just don't wanna
+
+TARGET:
+you're not gonna fucking die, all right? [end]
+
+PREDICTION:
+i will. you know what i'm talkin'
+
+============================================================================================================================================
+SOURCE:
+what are you
+
+TARGET:
+i'm cooking [end]
+
+PREDICTION:
+it's not the same. but you won't get to it. i want a lot of people in
+
+============================================================================================================================================
+SOURCE:
+it looks stupid. it's a ring. it's a man's ring.
+
+TARGET:
+it's [end]
+
+PREDICTION:
+i can't afford a
+
+============================================================================================================================================
+SOURCE:
+answer me, did you make one of those
+
+TARGET:
+yes! [end]
+
+PREDICTION:
+no. i'm a bit tired, i thought it was my best friend. you have the last
+
+============================================================================================================================================
+SOURCE:
+what? i just couldn't just let them sleep in the street.
+
+TARGET:
+where's [end]
+
+PREDICTION:
+i'm
+
+============================================================================================================================================
+SOURCE:
+pays
+
+TARGET:
+have an bank card. we draw out dollars every two [end]
+
+PREDICTION:
+the door was on his chest. we get out to this motel. he wants us in here. that's why i got a few things left of my life and tell
+
+============================================================================================================================================
+SOURCE:
+i suppose this is going to sound absurd. i've only known you twenty-four hours, but i'm in love with you.
+
+TARGET:
+it doesn't usually take that long, but i'll forgive you -- you were in a tough spot when i met you. [end]
+
+PREDICTION:
+that's the way they come.

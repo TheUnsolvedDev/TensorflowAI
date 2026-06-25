@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i hate to bother you, but would you mind closing the door?
+
+TARGET:
+il me peine de vous déranger mais cela ne vous dérangerait-il pas de fermer la porte ? [end]
+
+PREDICTION:
+j'ai horreur de ne vous alors mais on ferait du point une porte la clé.
+
+============================================================================================================================================
+SOURCE:
+tom should take better care of his children.
+
+TARGET:
+tom devrait mieux s'occuper de ses enfants. [end]
+
+PREDICTION:
+on n'aurait pu partir à sa part. marie
+
+============================================================================================================================================
+SOURCE:
+i haven't seen them anywhere.
+
+TARGET:
+je ne les ai vues nulle part. [end]
+
+PREDICTION:
+je ne leur ai rien vue.
+
+============================================================================================================================================
+SOURCE:
+he must be tom's brother.
+
+TARGET:
+il doit être le frère de tom. [end]
+
+PREDICTION:
+il est nécessaire de être ton ami. dernière. ans.
+
+============================================================================================================================================
+SOURCE:
+what do you want me to do now?
+
+TARGET:
+qu'est-ce que tu veux que je fasse maintenant ? [end]
+
+PREDICTION:
+de quoi est-ce dont voulez-vous que j'aille maintenant !
+
+============================================================================================================================================
+SOURCE:
+what are these for?
+
+TARGET:
+à quoi celles-ci ? [end]
+
+PREDICTION:
+quels sont ? exactement à la main de toi
+
+============================================================================================================================================
+SOURCE:
+an electric current can
+
+TARGET:
+un courant peut du [end]
+
+PREDICTION:
+un groupe de a peut faire une arme en plus proche du sang. ans.
+
+============================================================================================================================================
+SOURCE:
+there were no signs of life on the island.
+
+TARGET:
+il n'y avait aucun signe de vie sur l'île. [end]
+
+PREDICTION:
+nous pas des chiens au milieu sur la chaise. »
+
+============================================================================================================================================
+SOURCE:
+when did you tell me that?
+
+TARGET:
+quand me l'avez-vous dit ? [end]
+
+PREDICTION:
+quand m'avez-vous raconté ça ? il s'agit ! »
+
+============================================================================================================================================
+SOURCE:
+tom is proud of his car.
+
+TARGET:
+tom est fier de sa voiture. [end]
+
+PREDICTION:
+mary va de sa à son voiture.

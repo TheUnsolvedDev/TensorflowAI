@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he has eyes at the back of his head.
+
+TARGET:
+il a des yeux derrière la tête. [end]
+
+PREDICTION:
+la vis de son succès.
+
+============================================================================================================================================
+SOURCE:
+it's a matter.
+
+TARGET:
+c'est une affaire [end]
+
+PREDICTION:
+c'est une affaire bien !
+
+============================================================================================================================================
+SOURCE:
+i'm glad you showed up.
+
+TARGET:
+je suis content que tu te sois [end]
+
+PREDICTION:
+je me réjouis que t'a laissé qui vous ait compris. il j'en veux être mes en plus là. dollars. beaucoup à te tellement ! » « qu'est-ce où tu aimes
+
+============================================================================================================================================
+SOURCE:
+the bell at
+
+TARGET:
+la cloche à heures. [end]
+
+PREDICTION:
+le nombre de semaine pris en
+
+============================================================================================================================================
+SOURCE:
+all this is strange to me.
+
+TARGET:
+tout cela me paraît étrange. [end]
+
+PREDICTION:
+ce tout me est surprise. photo.
+
+============================================================================================================================================
+SOURCE:
+did you do something you shouldn't have?
+
+TARGET:
+as-tu fait quelque chose que tu n'aurais pas dû faire ? [end]
+
+PREDICTION:
+vous avez demandé quoi que tu pas vrai ? vais encore faire plaisir.
+
+============================================================================================================================================
+SOURCE:
+we received a welcome from them.
+
+TARGET:
+nous avons reçu un de leur part. [end]
+
+PREDICTION:
+il a reçu un billet des au-dessus de chez lui.
+
+============================================================================================================================================
+SOURCE:
+of i'm going to help tom.
+
+TARGET:
+bien je vais aider tom. [end]
+
+PREDICTION:
+sûr de vais aider allons votre visage. ! je ne vois que
+
+============================================================================================================================================
+SOURCE:
+this is the beginning of a new
+
+TARGET:
+c'est le début d'une nouvelle. [end]
+
+PREDICTION:
+ça le lit a un neuf du tout.
+
+============================================================================================================================================
+SOURCE:
+did you see a bag here?
+
+TARGET:
+as-tu vu un sac ici ? [end]
+
+PREDICTION:
+es-tu sortie d'un truc ? c'était le grand.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+events may the remains of saint nicholas are brought to italy.
+
+TARGET:
+events may the remains of saint nicholas were brought to [end]
+
+PREDICTION:
+st. the can see it italy. this was meant to look at them during them. because of these men died from their third place in moscow with russia.
+
+============================================================================================================================================
+SOURCE:
+the accepted program for these is most commonly via other programs such as or
+
+TARGET:
+the program for these is most commonly via [end]
+
+PREDICTION:
+the most range is used to make many different ways such as a problem with other people and can not see
+
+============================================================================================================================================
+SOURCE:
+iv n n lrb born may in m rrb is a spanish footballer who plays for de n in the spanish first division as a
+
+TARGET:
+iv n lrb born may rrb is a spanish football player. he plays for n. [end]
+
+PREDICTION:
+iv i lrb player rrb is also a football club with spanish italian netherlands. he has other people.
+
+============================================================================================================================================
+SOURCE:
+both the school and the festival supported the underground scene in china and opened the door for over foreign bands in to perform at the festival and throughout the country.
+
+TARGET:
+both the school and the festival supported the underground scene in china and allowed foreign bands in to perform at the festival and throughout the country including and
+
+PREDICTION:
+as these they both sydney at the top domestic school and in this day. she had several children to store later. it is held from a post for children.
+
+============================================================================================================================================
+SOURCE:
+the which are often to at night are short lived and probably do not
+
+TARGET:
+they are to at they are probably short lived and do not at [end]
+
+PREDICTION:
+a period the night may live in small very short time. this does also take place and not are usually called them.
+
+============================================================================================================================================
+SOURCE:
+points lrb rrb are scored by the team by a circuit around the field through four or without being put
+
+TARGET:
+points lrb rrb are scored by the team by a circuit around the field through four without being put out for example by a ball they
+
+PREDICTION:
+at the end of lrb points by one hour or a fight is set up from circuit rrb run through an air side which includes fixed energy with more high
+
+============================================================================================================================================
+SOURCE:
+full metal is a war film by stanley based on the novel the short by
+
+TARGET:
+full metal is a movie directed by stanley based on the book the short [end]
+
+PREDICTION:
+little is a book released from april on september with the boston red symphony lrb rrb of several kinds by two director he served as an austrian division for his
+
+============================================================================================================================================
+SOURCE:
+one up and her over her head while the other from the mouth and moved
+
+TARGET:
+one up and her over her the other from the mouth and [end]
+
+PREDICTION:
+one head up and two is from the open where she has more powerful than any other
+
+============================================================================================================================================
+SOURCE:
+most live in complex within the and of western north america though species within the and are also found in and down as
+
+TARGET:
+some species within the and are also found in and can be found down as far as northern south america. [end]
+
+PREDICTION:
+many in areas live around north america and other people from the middle ages they are called western large animals.
+
+============================================================================================================================================
+SOURCE:
+as the of which is the basis of modern digital computer is regarded in as one of the of the field of computer
+
+TARGET:
+this is one of the of modern day computer [end]
+
+PREDICTION:
+to write of the system is a that has been used in computer and

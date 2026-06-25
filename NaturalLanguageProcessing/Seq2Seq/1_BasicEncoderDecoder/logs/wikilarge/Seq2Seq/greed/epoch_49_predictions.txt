@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+prince of orange is a title of originally associated with the of orange in what is now southern france.
+
+TARGET:
+prince of orange is a title of [end]
+
+PREDICTION:
+saint louis is a of orange county in the state of
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northern france.
+
+TARGET:
+it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+it is found in the region basse normandie in the calvados department in the northwest of france.
+
+============================================================================================================================================
+SOURCE:
+in began a solo show on called and his world of
+
+TARGET:
+the first and only written biography of the filled life of was published in lrb john harrison books new york. rrb [end]
+
+PREDICTION:
+in started solo on
+
+============================================================================================================================================
+SOURCE:
+is a commune in the aisne department in picardy in northern france.
+
+TARGET:
+is a commune. it is found in the region picardie in the aisne department in the north of france. [end]
+
+PREDICTION:
+is a commune. it is found in the region picardie in the aisne department in the north of france.
+
+============================================================================================================================================
+SOURCE:
+it about whether a person lrb and rrb men women or
+
+TARGET:
+it about whether a person lrb and rrb people of the same sex of the opposite sex or [end]
+
+PREDICTION:
+it that an women s loss of disease or sexual
+
+============================================================================================================================================
+SOURCE:
+but the hotel of interest has many so if you move the guest room to room the guest room to room and so on you can the
+
+TARGET:
+first move the guest in room to room the guest in room to room the guest in room to room the guest in room to room and so on. [end]
+
+PREDICTION:
+since the hotel room oxford has to room this of the hall of
+
+============================================================================================================================================
+SOURCE:
+jones married the actor jack on august with whom she had three sons patrick and
+
+TARGET:
+she was married to jack from to and had three sons with him patrick and [end]
+
+PREDICTION:
+her husband lrb actor rrb was jack who was the son patrick and ben s mother with them.
+
+============================================================================================================================================
+SOURCE:
+the song is a mid from the of the film s lead character
+
+TARGET:
+the song was produced by and mixed by former husband [end]
+
+PREDICTION:
+career a short film about how deep s the of the
+
+============================================================================================================================================
+SOURCE:
+taylor lrb november july rrb was an american military leader and the th president of the united states.
+
+TARGET:
+taylor lrb november july rrb was the th president of the united states. [end]
+
+PREDICTION:
+taylor lrb november july rrb was the th president of the united states.
+
+============================================================================================================================================
+SOURCE:
+it began april soon after s victory at
+
+TARGET:
+it started on april which was soon after s victory at an important [end]
+
+PREDICTION:
+after began to fight s first day

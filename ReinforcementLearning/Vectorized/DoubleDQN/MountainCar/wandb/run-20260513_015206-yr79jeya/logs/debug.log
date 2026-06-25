@@ -1,0 +1,89 @@
+2026-05-13 01:52:06,898 INFO    Thread-2 (_run_job):514375 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-05-13 01:52:06,898 INFO    Thread-2 (_run_job):514375 [wandb_setup.py:_flush():81] Configure stats pid to 514375
+2026-05-13 01:52:06,898 INFO    Thread-2 (_run_job):514375 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-05-13 01:52:06,898 INFO    Thread-2 (_run_job):514375 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/MountainCar/wandb/run-20260513_015206-yr79jeya/logs/debug.log
+2026-05-13 01:52:06,898 INFO    Thread-2 (_run_job):514375 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/MountainCar/wandb/run-20260513_015206-yr79jeya/logs/debug-internal.log
+2026-05-13 01:52:06,898 INFO    Thread-2 (_run_job):514375 [wandb_init.py:init():850] calling init triggers
+2026-05-13 01:52:06,898 INFO    Thread-2 (_run_job):514375 [wandb_init.py:init():855] wandb.init called with sweep_config: {'batch_size': 256, 'buffer_size': 200000, 'epsilon_decay_steps': 800000, 'epsilon_end': 0.02, 'gamma': 0.98, 'lr': 7.552927367204424e-05, 'target_update_freq': 5000}
+config: {'_wandb': {}}
+2026-05-13 01:52:06,898 INFO    Thread-2 (_run_job):514375 [wandb_init.py:init():898] starting backend
+2026-05-13 01:52:07,144 INFO    Thread-2 (_run_job):514375 [wandb_init.py:init():913] sending inform_init request
+2026-05-13 01:52:07,700 INFO    Thread-2 (_run_job):514375 [wandb_init.py:init():918] backend started and connected
+2026-05-13 01:52:07,700 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_config_callback():1415] config_cb None None {'batch_size': 256, 'buffer_size': 200000, 'epsilon_decay_steps': 800000, 'epsilon_end': 0.02, 'gamma': 0.98, 'lr': 7.552927367204424e-05, 'target_update_freq': 5000}
+2026-05-13 01:52:07,701 INFO    Thread-2 (_run_job):514375 [wandb_init.py:init():988] updated telemetry
+2026-05-13 01:52:07,705 INFO    Thread-2 (_run_job):514375 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-05-13 01:52:08,285 INFO    Thread-2 (_run_job):514375 [wandb_init.py:init():1056] starting run threads in backend
+2026-05-13 01:52:08,362 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_console_start():2554] atexit reg
+2026-05-13 01:52:08,362 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_redirect():2403] redirect: wrap_raw
+2026-05-13 01:52:08,362 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_redirect():2472] Wrapping output streams.
+2026-05-13 01:52:08,362 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_redirect():2495] Redirects installed.
+2026-05-13 01:52:08,364 INFO    Thread-2 (_run_job):514375 [wandb_init.py:init():1094] run started, returning control to user process
+2026-05-13 01:52:08,506 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_finish():2321] finishing run shuvrajeet/TensorflowAI/yr79jeya
+2026-05-13 01:52:08,506 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_atexit_cleanup():2520] got exitcode: 1
+2026-05-13 01:52:08,506 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_restore():2502] restore
+2026-05-13 01:52:08,507 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_restore():2508] restore done
+2026-05-13 01:52:10,408 INFO    wandb-AsyncioManager-main:514375 [service_client.py:_forward_responses():134] Reached EOF.
+2026-05-13 01:52:10,408 INFO    wandb-AsyncioManager-main:514375 [mailbox.py:close():155] Closing mailbox, abandoning 2 handles.
+2026-05-13 01:52:10,408 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_restore():2502] restore
+2026-05-13 01:52:10,408 INFO    Thread-2 (_run_job):514375 [wandb_run.py:_restore():2508] restore done
+2026-05-13 01:52:10,408 ERROR   Thread-2 (_run_job):514375 [wandb_run.py:_atexit_cleanup():2540] Problem finishing run
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/agents/pyagent.py", line 304, in _run_job
+    self._function()
+  File "/home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/MountainCar/train.py", line 185, in train
+    agent = DQN(
+            ^^^
+NameError: name 'DQN' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/agents/pyagent.py", line 314, in _run_job
+    raise _JobError(f"Run threw exception: {str(e)}") from e
+wandb.agents.pyagent._JobError: Run threw exception: name 'DQN' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 2531, in _atexit_cleanup
+    self._on_finish()
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 2748, in _on_finish
+    wait_with_progress(
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 24, in wait_with_progress
+    return wait_all_with_progress(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 78, in wait_all_with_progress
+    return asyncer.run(progress_loop_with_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_manager.py", line 137, in run
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_manager.py", line 223, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 73, in progress_loop_with_timeout
+    return await _wait_handles_async(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 96, in _wait_handles_async
+    async with asyncio_compat.open_task_group() as task_group:
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/contextlib.py", line 217, in __aexit__
+    await anext(self.gen)
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_compat.py", line 241, in open_task_group
+    await task_group._wait_all(race=race, timeout=exit_timeout)
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_compat.py", line 181, in _wait_all
+    raise exc
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 94, in wait_single
+    results[index] = await handle.wait_async(timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/mailbox/mailbox_handle.py", line 126, in wait_async
+    response = await self._handle.wait_async(timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shuvrajeet/miniconda3/envs/research/lib/python3.12/site-packages/wandb/sdk/mailbox/response_handle.py", line 124, in wait_async
+    raise HandleAbandonedError()
+wandb.sdk.mailbox.mailbox_handle.HandleAbandonedError

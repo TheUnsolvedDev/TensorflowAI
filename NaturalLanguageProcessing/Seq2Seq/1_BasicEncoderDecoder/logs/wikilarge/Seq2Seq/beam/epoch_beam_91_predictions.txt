@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+s mother s great to the family so had a relationship with the british royal family.
+
+TARGET:
+great was in the family so he was related to the british royal family. [end]
+
+PREDICTION:
+he was the great s acting with a relationship of london in.
+
+============================================================================================================================================
+SOURCE:
+following her death her older sister du and younger brother wrote a book about their family life a in the family.
+
+TARGET:
+s sister and her brother later wrote a book about her called a in the family. [end]
+
+PREDICTION:
+and her younger daughter of brother who wrote two letters were very close to their own sister the gang also known by himself often that time included his family had
+
+============================================================================================================================================
+SOURCE:
+july battle of al king
+
+TARGET:
+iv count of provence lrb died rrb [end]
+
+PREDICTION:
+january battle the king george fought scottish northern end roman world with his first appearance at lake china. he was killed by a new town. it is declared civil war
+
+============================================================================================================================================
+SOURCE:
+she is best known for playing the character chase in the television series the and its spin off angel for which she was nominated for four saturn
+
+TARGET:
+she is best known for playing the character in the television series buffy the and its spin off [end]
+
+PREDICTION:
+born starring for the stars mark david lrb rrb and will serve in on july she is called w to appear as well known by his roles from her family
+
+============================================================================================================================================
+SOURCE:
+he named his daughter after the character from who was created by friend and fellow writer paul
+
+TARGET:
+he named his daughter after the character from. [end]
+
+PREDICTION:
+she is a daughter lrb martin son of the characters rrb who are most recently taught voice against them and published by his mother in honor computer science release
+
+============================================================================================================================================
+SOURCE:
+fashion are that and such as and
+
+TARGET:
+items such as such as and [end]
+
+PREDICTION:
+peter show that can be attached for a certain part by weight iron and such the skin or other material like physiology s fruit of making them very well working
+
+============================================================================================================================================
+SOURCE:
+the formula one season included the th formula one world championship season which on january and ended on october after nine
+
+TARGET:
+the formula one season was the th edition of the championship. [end]
+
+PREDICTION:
+the current formula in season was as one of
+
+============================================================================================================================================
+SOURCE:
+the object of the game is to score the most points by rolling five to make certain
+
+TARGET:
+the object of the game is to roll five lrb up to three times rrb to create certain such as [end]
+
+PREDICTION:
+the is level all away from a point of goal that tries by people move up to other than any other. in scotland see their way at on angle or
+
+============================================================================================================================================
+SOURCE:
+is a commune in the calvados department in the basse normandie region in northwestern france.
+
+TARGET:
+is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+li people lrb also simply called its present in japan just east rrb are a region from the c te music with an extra rock band and fifth album to
+
+============================================================================================================================================
+SOURCE:
+is a town in county massachusetts united states about twenty one miles west northwest of boston along route west of and about ten miles lrb km rrb southwest
+
+TARGET:
+is a town in the u.s. state of [end]
+
+PREDICTION:
+people live there are two villages around north carolina. originally a local population came over inches lrb mm mi rrb. they attended south eastern east with seven houses and were

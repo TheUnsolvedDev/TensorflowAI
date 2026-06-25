@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he used to love her.
+
+TARGET:
+il l'avait aimée. [end]
+
+PREDICTION:
+qu'il de la place.
+
+============================================================================================================================================
+SOURCE:
+why must we do it?
+
+TARGET:
+pourquoi devons-nous le faire ? [end]
+
+PREDICTION:
+que ?
+
+============================================================================================================================================
+SOURCE:
+thank you for all of your work.
+
+TARGET:
+merci pour tout ton travail. [end]
+
+PREDICTION:
+merci. tu tout votre boulot.
+
+============================================================================================================================================
+SOURCE:
+tom has studied french.
+
+TARGET:
+tom a étudié le français. [end]
+
+PREDICTION:
+tom a étudié en français à tom.
+
+============================================================================================================================================
+SOURCE:
+i don't feel like eating out this evening.
+
+TARGET:
+je n'ai pas envie de dîner dehors ce soir. [end]
+
+PREDICTION:
+ça m'est pas manger à la nuit. voilà ce livre.
+
+============================================================================================================================================
+SOURCE:
+one of the boys suddenly ran away.
+
+TARGET:
+un des garçons s'est soudainement enfui. [end]
+
+PREDICTION:
+un des et le plus sont arrêté sur la gauche.
+
+============================================================================================================================================
+SOURCE:
+i'm not very likely to be fired for doing that.
+
+TARGET:
+il est très peu probable que je sois pour avoir fait ça. [end]
+
+PREDICTION:
+ça ne m'a pas très improbable d'être viré de le fait. » à faire cela.
+
+============================================================================================================================================
+SOURCE:
+tom's dog left all over his new carpet.
+
+TARGET:
+le chien de tom a laissé des de pattes sur toute sa nouvelle [end]
+
+PREDICTION:
+le de tom a été laissé les cours en plus propre prénom par son new york portable. photo.
+
+============================================================================================================================================
+SOURCE:
+who would you like to speak to?
+
+TARGET:
+avec qui aimerais-tu ? [end]
+
+PREDICTION:
+à qui voudriez-vous parler de la manière
+
+============================================================================================================================================
+SOURCE:
+i the apple.
+
+TARGET:
+j'ai coupé la pomme. [end]
+
+PREDICTION:
+la musique.

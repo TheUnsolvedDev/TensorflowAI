@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the city holds an annual three week arts and music festival lrb chichester rrb held in july.
+
+TARGET:
+every year in july a three week festival the chichester takes place. then in august since there has been a week long i am joy arts and music festival held across different in the city. [end]
+
+PREDICTION:
+forbes is an annual awards sponsored by and the young celebrity bella and
+
+============================================================================================================================================
+SOURCE:
+a point is a point in a perspective drawing to which parallel lines not parallel to the image plane appear to
+
+TARGET:
+in art a point is the point in a perspective drawing where lines that are not parallel to the main subject of the painting come together. [end]
+
+PREDICTION:
+a is a point where a magnet is to a
+
+============================================================================================================================================
+SOURCE:
+vince continued to as it approached the iberian peninsula and became a tropical depression on october shortly before it made landfall near spain.
+
+TARGET:
+it became a tropical depression on october. this was just before it made its landfall in spain. [end]
+
+PREDICTION:
+brunswick became a famous hurricane of the strong ana hurricane jerry until later.
+
+============================================================================================================================================
+SOURCE:
+all differ in the way the bolt into the how the bolt as it is being operated the number of holding the bolt in place as the gun is fired and whether the action is on the opening of the bolt lrb as in the system rrb or the closing of the bolt lrb as in the
+
+TARGET:
+after firing the gun opening the bolt takes out the empty cartridge and closing the bolt puts in a new one. [end]
+
+PREDICTION:
+nothing is used to the of a
+
+============================================================================================================================================
+SOURCE:
+oliver lrb born june rrb is a british born american and nobel laureate credited with the invention of in and the simultaneous discovery with mario and martin evans of the technique of of dna with dna a much more reliable method of animal than previously used and the technique behind gene and
+
+TARGET:
+much later he worked on the technique of of dna with dna. this is the most reliable method of animal at present and the technique behind gene and [end]
+
+PREDICTION:
+joey lrb may rrb was a to american signals from all slipknot to experiment their
+
+============================================================================================================================================
+SOURCE:
+national park in pakistan is one of three significant national parks selected for a global environment facility sponsored project.
+
+TARGET:
+national park is a national park in pakistan. it is one of three important national parks chosen for a global environment facility sponsored project. [end]
+
+PREDICTION:
+national park is a national of investment magazine. the mountain company lrb rrb has an area of fixed delivery from to help fix the problem with other applications.
+
+============================================================================================================================================
+SOURCE:
+for further developments see point set and algebraic
+
+TARGET:
+it is divided into algebraic differential and geometric [end]
+
+PREDICTION:
+three of eight h and the original equals the sum of memory review
+
+============================================================================================================================================
+SOURCE:
+the building located between nassau street and william street in manhattan new york city was completed in after only months of construction.
+
+TARGET:
+image wall street new york city at c r. jpg [end]
+
+PREDICTION:
+the ontario state hospital is now a great mile to the united states.
+
+============================================================================================================================================
+SOURCE:
+the hummingbird lrb a. rrb with less to the is sometimes considered a subspecies of the
+
+TARGET:
+the hummingbird lrb a. rrb has less brown [end]
+
+PREDICTION:
+the hummingbird lrb rrb is a species of hummingbird.
+
+============================================================================================================================================
+SOURCE:
+speed was later promoted to first driver for the team and ended the season third place in the driver championship behind and
+
+TARGET:
+he ended the season third place in the driver championship behind nico and [end]
+
+PREDICTION:
+racing tyre got division to.

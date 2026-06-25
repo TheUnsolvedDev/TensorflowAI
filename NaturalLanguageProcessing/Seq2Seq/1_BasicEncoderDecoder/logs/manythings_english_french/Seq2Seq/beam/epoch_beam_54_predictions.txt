@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i felt a little
+
+TARGET:
+j'étais un peu dans les [end]
+
+PREDICTION:
+je me suis une petite prise au cent
+
+============================================================================================================================================
+SOURCE:
+this will do for now.
+
+TARGET:
+ça suffit pour l'instant. [end]
+
+PREDICTION:
+ça va faire
+
+============================================================================================================================================
+SOURCE:
+we've got enough.
+
+TARGET:
+nous en avons [end]
+
+PREDICTION:
+nous en disposons à avoir assez d'argent.
+
+============================================================================================================================================
+SOURCE:
+would doing that be
+
+TARGET:
+facile de faire cela ? [end]
+
+PREDICTION:
+est-ce que cela serait en train de faire ? c'est quelque part ça ! tout son possible.
+
+============================================================================================================================================
+SOURCE:
+i have a business
+
+TARGET:
+j'ai un de travail. [end]
+
+PREDICTION:
+un entreprise satisfait.
+
+============================================================================================================================================
+SOURCE:
+i want you to get me a
+
+TARGET:
+je veux que vous alliez me chercher une boisson [end]
+
+PREDICTION:
+on que vous me traite un grand mois. c'est une fois. sur ton train a mis des lunettes sans être plus cher. ! voilà qui reste.
+
+============================================================================================================================================
+SOURCE:
+are down this month.
+
+TARGET:
+les sont en baisse ce [end]
+
+PREDICTION:
+sont le projet sur la haute date du feu. « je veux venir. n'est-ce pas ?
+
+============================================================================================================================================
+SOURCE:
+his dream has become a
+
+TARGET:
+son rêve est devenu une [end]
+
+PREDICTION:
+son ami est lorsqu'il possède un pas.
+
+============================================================================================================================================
+SOURCE:
+you're normal.
+
+TARGET:
+tu es [end]
+
+PREDICTION:
+vous avez est normal. heures. c'est tard.
+
+============================================================================================================================================
+SOURCE:
+a in a well doesn't know the
+
+TARGET:
+une dans un n'a pas conscience de [end]
+
+PREDICTION:
+le vent ne marche jamais de ses promesses.

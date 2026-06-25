@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i'm not
+
+TARGET:
+je ne regarde pas. [end]
+
+PREDICTION:
+je ne suis pas
+
+============================================================================================================================================
+SOURCE:
+i'm not happy.
+
+TARGET:
+je ne suis pas content. [end]
+
+PREDICTION:
+je ne suis pas heureuse.
+
+============================================================================================================================================
+SOURCE:
+without him, i would be
+
+TARGET:
+sans lui, je serais sans [end]
+
+PREDICTION:
+sans doute je ne serais pas
+
+============================================================================================================================================
+SOURCE:
+i'm glad that makes you happy.
+
+TARGET:
+je suis contente que ça vous heureux. [end]
+
+PREDICTION:
+je suis content que ça vous heureuse.
+
+============================================================================================================================================
+SOURCE:
+they were
+
+TARGET:
+elles ne furent pas [end]
+
+PREDICTION:
+ils ont été
+
+============================================================================================================================================
+SOURCE:
+has a than most of europe.
+
+TARGET:
+la a un de plus élevé que la plupart des autres pays [end]
+
+PREDICTION:
+« voici une qui la plus grande que la mienne.
+
+============================================================================================================================================
+SOURCE:
+the i told you about has been
+
+TARGET:
+le film dont je t'ai parlé est [end]
+
+PREDICTION:
+le que vous avez dit a parlé la semaine passée.
+
+============================================================================================================================================
+SOURCE:
+sometimes trying your best just isn't good enough.
+
+TARGET:
+parfois, faire de son mieux ne suffit tout simplement pas. [end]
+
+PREDICTION:
+donne bien de ne pas le prends toujours un travail pour toi.
+
+============================================================================================================================================
+SOURCE:
+i her not to go.
+
+TARGET:
+je l'ai de ne pas y aller. [end]
+
+PREDICTION:
+je de ne pas y aller.
+
+============================================================================================================================================
+SOURCE:
+did you see someone?
+
+TARGET:
+as-tu vu qui que ce soit ? [end]
+
+PREDICTION:
+avez-vous vu qui que ce soit ?

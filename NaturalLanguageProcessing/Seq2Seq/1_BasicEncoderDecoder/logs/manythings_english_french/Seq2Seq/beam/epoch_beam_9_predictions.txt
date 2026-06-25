@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+did you really think i'd dance with you?
+
+TARGET:
+pensais-tu réellement que j'allais danser avec toi ? [end]
+
+PREDICTION:
+pensais-tu que j'avais réellement dansé avec toi à moi ?
+
+============================================================================================================================================
+SOURCE:
+don't let go of the rope.
+
+TARGET:
+ne lâche pas la corde. [end]
+
+PREDICTION:
+ne lâche la corde pas au fil du coup. c'est ! des heures et
+
+============================================================================================================================================
+SOURCE:
+my father was satisfied with the result.
+
+TARGET:
+mon père était satisfait du résultat. [end]
+
+PREDICTION:
+mon père était satisfait du travail.
+
+============================================================================================================================================
+SOURCE:
+i forgot your present.
+
+TARGET:
+j'ai oublié ton cadeau. [end]
+
+PREDICTION:
+j’ai oublier de votre cadeau.
+
+============================================================================================================================================
+SOURCE:
+i'm worried about my weight.
+
+TARGET:
+mon poids me soucie. [end]
+
+PREDICTION:
+ça m'a fait du poids. dans mon de ce garçon.
+
+============================================================================================================================================
+SOURCE:
+i usually have dinner at seven.
+
+TARGET:
+je prends habituellement mon dîner à 7 heures. [end]
+
+PREDICTION:
+je déjeune généralement 7 heures. soir. au téléphone ou de ! regardez le repas ?
+
+============================================================================================================================================
+SOURCE:
+let's do it this way.
+
+TARGET:
+faisons-le de cette façon. [end]
+
+PREDICTION:
+faisons-le de ce que nous avons la sortie. ! il y a un coup grand a.
+
+============================================================================================================================================
+SOURCE:
+can i come in?
+
+TARGET:
+puis-je entrer ? [end]
+
+PREDICTION:
+suis-je disponible ?
+
+============================================================================================================================================
+SOURCE:
+i like your outfit.
+
+TARGET:
+j'aime votre tenue. [end]
+
+PREDICTION:
+j’aime ta tenue. par tes émotions.
+
+============================================================================================================================================
+SOURCE:
+he's very intelligent.
+
+TARGET:
+il est très intelligent. [end]
+
+PREDICTION:
+il suis intelligent. c'est jaune.

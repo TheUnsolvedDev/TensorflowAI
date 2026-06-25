@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you can't! we've come this far. we must find them...
+
+TARGET:
+why? [end]
+
+PREDICTION:
+i know what it is.
+
+============================================================================================================================================
+SOURCE:
+how about tomorrow?
+
+TARGET:
+you're making my life difficult. [end]
+
+PREDICTION:
+you know what i mean.
+
+============================================================================================================================================
+SOURCE:
+he's got more brains and more guts in one corner of his asshole than any cop i've worked with.
+
+TARGET:
+just cause you say it with don't mean shit to me... how you gonna take to a pink [end]
+
+PREDICTION:
+you
+
+============================================================================================================================================
+SOURCE:
+you got a hall of arm but you're pissing it away.
+
+TARGET:
+i ain't pissing nothing got a already. a with and a [end]
+
+PREDICTION:
+i don't know what you're talking about.
+
+============================================================================================================================================
+SOURCE:
+why don't you buy it, only forty bucks.
+
+TARGET:
+i have one, but they lost it. [end]
+
+PREDICTION:
+we have to be
+
+============================================================================================================================================
+SOURCE:
+but boss, what about their parents?
+
+TARGET:
+ah, the old and i'm going to their them to and then i'll put them to work my empire. [end]
+
+PREDICTION:
+but he was a
+
+============================================================================================================================================
+SOURCE:
+well, when do you get
+
+TARGET:
+soon as i finish the job. [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+oh -- you mean...
+
+TARGET:
+no, that wasn't it... [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+yeah. but just how're we goin' to make out? i got to get me a job.
+
+TARGET:
+you will. [end]
+
+PREDICTION:
+you don't have to worry about that.
+
+============================================================================================================================================
+SOURCE:
+i know. we asked him to keep it kind of surprise until we talked. look, how about we get in touch your agent. you still with jerry?
+
+TARGET:
+yes, but... [end]
+
+PREDICTION:
+i don't think he was going to do it.

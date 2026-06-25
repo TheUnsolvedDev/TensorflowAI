@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+no, not at all.
+
+TARGET:
+non, pas du tout. [end]
+
+PREDICTION:
+ne pas non, !
+
+============================================================================================================================================
+SOURCE:
+i need to do that.
+
+TARGET:
+j'ai besoin de faire ça. [end]
+
+PREDICTION:
+j'ai envie de le
+
+============================================================================================================================================
+SOURCE:
+he tried to make his wife happy, but he couldn't.
+
+TARGET:
+il essaya de rendre sa femme heureuse, mais il n'y pas. [end]
+
+PREDICTION:
+il a dû appuyer mon siège mais j'espère la femme dont personne ne
+
+============================================================================================================================================
+SOURCE:
+she advised him where he should stay.
+
+TARGET:
+elle lui conseilla où il devrait [end]
+
+PREDICTION:
+elle lui parler à où il a chaud.
+
+============================================================================================================================================
+SOURCE:
+i fear for the future of
+
+TARGET:
+je crains pour l'avenir de [end]
+
+PREDICTION:
+j'ai pour l'avenir de la société.
+
+============================================================================================================================================
+SOURCE:
+did you have an
+
+TARGET:
+avais-tu un ? [end]
+
+PREDICTION:
+avez-vous eu d'un prêt ! ? dollars. que t'es
+
+============================================================================================================================================
+SOURCE:
+you are taller than me.
+
+TARGET:
+tu es plus grand que moi. [end]
+
+PREDICTION:
+t'es plus grand que moi.
+
+============================================================================================================================================
+SOURCE:
+i was asked to wait here.
+
+TARGET:
+on m'a d'attendre ici. [end]
+
+PREDICTION:
+je fus demandé de attendre ici.
+
+============================================================================================================================================
+SOURCE:
+it in the for thirty seconds.
+
+TARGET:
+trente au [end]
+
+PREDICTION:
+dans la attaque l'armée de page.
+
+============================================================================================================================================
+SOURCE:
+a few were drunk most of the time.
+
+TARGET:
+quelques-uns étaient la plupart du temps. [end]
+
+PREDICTION:
+pendant deux étaient la

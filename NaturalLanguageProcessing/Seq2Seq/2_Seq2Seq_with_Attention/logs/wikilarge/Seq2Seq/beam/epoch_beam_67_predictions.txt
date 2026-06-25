@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+took on of as the latter company was not well
+
+TARGET:
+is still in after [end]
+
+PREDICTION:
+lrb born april rrb. in bc there started the club christopher edmund on may.
+
+============================================================================================================================================
+SOURCE:
+you re living all over me recorded much of their second album you re living all over me with youth engineer in new york.
+
+TARGET:
+some of these albums are you re living all over me green mind and [end]
+
+PREDICTION:
+you living live to sell their sister released the album re all taking me from a woman band we finished in t o. in.
+
+============================================================================================================================================
+SOURCE:
+following the storm at least people were left
+
+TARGET:
+following the storm at least people were left without a place to [end]
+
+PREDICTION:
+after world war ii following the user and at least were left of it.
+
+============================================================================================================================================
+SOURCE:
+a number of grand were created in the era and later following the congress of vienna and the foundation of the german
+
+TARGET:
+a lot of grand were created in the era and by the congress of vienna and the german [end]
+
+PREDICTION:
+during war writing the championship include all beat like x day vienna centre modern literature music for behind its g o. it can be taken to an international game with
+
+============================================================================================================================================
+SOURCE:
+the paper written by on the seven of k and published in is regarded as the first paper in the history of
+
+TARGET:
+in published a scientific article where he showed that the seven of k was not the article is seen as the first paper in the history
+
+PREDICTION:
+a written american writer wrote that used by karl br romans as a.
+
+============================================================================================================================================
+SOURCE:
+is a commune in the aube department in north central france.
+
+TARGET:
+is a commune of the aube d partement in the north central part of france. [end]
+
+PREDICTION:
+it is found in both part of the aube d partement at
+
+============================================================================================================================================
+SOURCE:
+leeds cathedral formally the cathedral church of st anne commonly known as saint anne s cathedral is the roman catholic cathedral of the of leeds and is the seat of the
+
+TARGET:
+leeds cathedral is a large catholic cathedral in england and is found in the city of leeds in [end]
+
+PREDICTION:
+st mary cathedral of roman means a great catholic lrb the oldest church and literally considered one more often grow called saint christian rrb
+
+============================================================================================================================================
+SOURCE:
+william patrick billy jr. lrb born march rrb is an american singer songwriter guitarist and occasional poet best known as the and permanent member of the
+
+TARGET:
+william patrick billy jr. lrb born march rrb is the singer and guitarist play for the american band the [end]
+
+PREDICTION:
+james jr. is nicknamed new died on june and became the member of a pop group for local health in washington s. bruce h. m lrb little david d. rrb
+
+============================================================================================================================================
+SOURCE:
+a being an right does not however give the owner of the the right to the
+
+TARGET:
+the owner of a can stop other people from using their if someone other than the owner uses the this is called a [end]
+
+PREDICTION:
+when a one is an left female side does not say all it must see the owner of how to leave them alone and peter means giving him their true
+
+============================================================================================================================================
+SOURCE:
+paul gray lrb april may rrb was an american musician best known as the bassist songwriter and one of the founding members of the grammy award winning heavy metal band
+
+TARGET:
+he was the only member of who was n t from des [end]
+
+PREDICTION:
+paul memorial is famous finnish a metal recorded album made by david for the heavy band video under death roll st star of great dark silver and one best guitarist

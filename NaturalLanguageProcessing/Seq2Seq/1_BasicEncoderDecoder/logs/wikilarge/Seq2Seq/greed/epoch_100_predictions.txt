@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the main article for this category is
+
+TARGET:
+the following pages are listed under the category [end]
+
+PREDICTION:
+article te approximately of the capital
+
+============================================================================================================================================
+SOURCE:
+william is created as st earl of in great
+
+TARGET:
+william created as st earl of [end]
+
+PREDICTION:
+earl first earl of st earl of lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+carl lrb september february rrb was a german and who is notable primarily for his independent discovery of the of and for his of
+
+TARGET:
+carl lrb september february rrb was a german and his research into led to his of s earlier work of hugo de
+
+PREDICTION:
+carl lrb september in rrb was a of his younger two of his films were from
+
+============================================================================================================================================
+SOURCE:
+the are a group of people living in the central region of south of the near the city of in the region.
+
+TARGET:
+they live south of the river near the city of [end]
+
+PREDICTION:
+the are a group of people in the valley region the
+
+============================================================================================================================================
+SOURCE:
+however since this does not date your you may to sign this way only when leaving general on your user page or user talk this is also
+
+TARGET:
+it is common practice to include a link to your user page or user talk page lrb often both rrb the links to the user [end]
+
+PREDICTION:
+only only only sign would rule on pages to talk pages with and to their children s english band and on october without leaving your
+
+============================================================================================================================================
+SOURCE:
+the is simply two in opposite either or with one end of each connected to the radio and the other end free
+
+TARGET:
+the is simply two with one end of each connected to the radio and the other end free in space. [end]
+
+PREDICTION:
+the game is when one running of one is or
+
+============================================================================================================================================
+SOURCE:
+events have been organized as dance parties concerts and however the only is a mass of the human right to life and the display of
+
+TARGET:
+events have been organized as dance parties concerts and however the only is a mass of the human right to life and [end]
+
+PREDICTION:
+there are males and females of women and more black days.
+
+============================================================================================================================================
+SOURCE:
+ndash the first known letter from north america is sent by john while at st. john s
+
+TARGET:
+lrb rrb lrb d. rrb [end]
+
+PREDICTION:
+a recorded america s ship reached
+
+============================================================================================================================================
+SOURCE:
+in addition a of arms was saint and saint
+
+TARGET:
+a of arms was given also with saint and saint on it. [end]
+
+PREDICTION:
+saint was a saint with
+
+============================================================================================================================================
+SOURCE:
+article ii section of the constitution appears to the position of acting president
+
+TARGET:
+the acting president of the united states is a person who acts as president when president can not carry out his but remained in [end]
+
+PREDICTION:
+the constitution made by the president of the republic.

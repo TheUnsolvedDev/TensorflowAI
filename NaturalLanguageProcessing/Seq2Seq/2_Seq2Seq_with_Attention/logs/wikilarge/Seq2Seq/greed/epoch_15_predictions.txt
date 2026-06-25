@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the key lime lrb citrus rrb is a citrus species with a fruit. cm in diameter lrb in rrb that is yellow when but usually picked green
+
+TARGET:
+its fruit is. cm in diameter lrb in rrb. [end]
+
+PREDICTION:
+the key lime lrb citrus rrb is a tree that is found cm in diameter lrb in rrb that is yellow when and but usually picked green
+
+============================================================================================================================================
+SOURCE:
+rogers neighborhood also known as rogers is an american children s television series that was created and hosted by fred
+
+TARGET:
+rogers neighborhood or just rogers is an american children s television series that was created and hosted by fred [end]
+
+PREDICTION:
+rogers neighborhood is an american children s television series that was created and hosted by fred
+
+============================================================================================================================================
+SOURCE:
+of mice and men was adapted for the screen three times the first in two years after the publication of the novel.
+
+TARGET:
+of mice and men was made into a movie several times the first in only two years after the publication of the novel. [end]
+
+PREDICTION:
+of mice and girls was adapted for the screen by the book.
+
+============================================================================================================================================
+SOURCE:
+he played college football at the university of mississippi lrb ole miss rrb after attending school at newman school in new
+
+TARGET:
+manning played college football at the university of mississippi after attending high school at newman school in new [end]
+
+PREDICTION:
+he played college football at the university of mississippi in ole miss rrb after stopping newman school in new
+
+============================================================================================================================================
+SOURCE:
+the british antarctic territory is administered by the foreign and commonwealth office lrb rrb.
+
+TARGET:
+it is administered by the foreign and commonwealth office lrb rrb. [end]
+
+PREDICTION:
+the british antarctic territory is governed by the foreign and commonwealth office lrb rrb.
+
+============================================================================================================================================
+SOURCE:
+was evacuated from vienna in to great britain.
+
+TARGET:
+soon the political situation became dangerous for jews in austria and so in the young was sent from vienna to great britain. [end]
+
+PREDICTION:
+was attacked from vienna to great britain.
+
+============================================================================================================================================
+SOURCE:
+the electronic device for playing back sound is often referred to as a
+
+TARGET:
+the electronic device for playing back sound is often called a [end]
+
+PREDICTION:
+the electronic device for playing back sound is the
+
+============================================================================================================================================
+SOURCE:
+later that year he out jan and the ramon to become world professional champion at the uk september p.
+
+TARGET:
+later that year he jan to become professional world champion at the netherlands. [end]
+
+PREDICTION:
+he was the first professional football player in the united kingdom.
+
+============================================================================================================================================
+SOURCE:
+beck lrb born june rrb is an italian heiress actress and major in the company. she is the daughter of designer and ex fashion model paul
+
+TARGET:
+lrb born in milan on june rrb is the daughter of designer and ex male fashion model paul [end]
+
+PREDICTION:
+beck lrb born june rrb is an italian actress and a actress and a member of the in the company.
+
+============================================================================================================================================
+SOURCE:
+a lrb born august in yugoslavia rrb is a serbian retired football player.
+
+TARGET:
+a lrb born august rrb is a former serbian football player. [end]
+
+PREDICTION:
+a lrb born august rrb is a former serbian football player.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+australian and often have four square printed in orange at the bottom right for the
+
+TARGET:
+on and there are often four square printed in orange at the bottom right for the [end]
+
+PREDICTION:
+australian and non fiction printed to the new document
+
+============================================================================================================================================
+SOURCE:
+india were after the west by runs in the
+
+TARGET:
+india an at to win by before the competition began were champions after the west by runs in the [end]
+
+PREDICTION:
+labor for administration the west changing by pennsylvania sent in control to a river before they were there. it can replace stone and ways with others such as being produced
+
+============================================================================================================================================
+SOURCE:
+david s lrb born december rrb nicknamed el lrb the in rrb is a spanish footballer who currently plays as a striker for fc barcelona and the
+
+TARGET:
+he plays for and spain national team. [end]
+
+PREDICTION:
+tool lrb prize march born december rrb is a spanish city who plays in spain he has played for korea en the netherlands with someone to chile and spain.
+
+============================================================================================================================================
+SOURCE:
+it is the main component of and is the most in mammals making up about to of the whole body
+
+TARGET:
+it is the main of and is the most in it makes up about to of the whole body [end]
+
+PREDICTION:
+the lrb including an b o de zoo rrb is also one for males region.
+
+============================================================================================================================================
+SOURCE:
+a prize is a prize usually given in recognition of a performance or last place
+
+TARGET:
+a prize is a prize of low value or a it is sometimes given for a performance or last place [end]
+
+PREDICTION:
+a d is also awarded three months as the last place to be called another list but it usually has not ever held every place.
+
+============================================================================================================================================
+SOURCE:
+the is located in the sea off the coast of queensland in northeast australia.
+
+TARGET:
+it is located close to the coast of australia. [end]
+
+PREDICTION:
+le lsb rsb day is the center of australia. by henry ii arthur were to leave south wales in as well.
+
+============================================================================================================================================
+SOURCE:
+lrb with rrb is a of mammals the living members of which are and lrb including humans rrb.
+
+TARGET:
+lrb with rrb are within it includes the and the [end]
+
+PREDICTION:
+a small groups with the living cars of their people. they also lived very similar in humans as because there is some different types called sex authority but it contains
+
+============================================================================================================================================
+SOURCE:
+a lrb born june in barcelona rrb is a spanish footballer who currently plays racing de in the spanish first division mainly as a left
+
+TARGET:
+a lrb born june rrb is a spanish football player. [end]
+
+PREDICTION:
+lion a b. o national born april is the south of japan for another spanish world famous n team in that year at one west s speed and graduated from
+
+============================================================================================================================================
+SOURCE:
+chase was awarded the best award at the mtv movie awards for her performance out mike and daniel day
+
+TARGET:
+was awarded the best award at the mtv movie [end]
+
+PREDICTION:
+she beat out mike as a ring on the blue movie awards best double dark artist cast and silver scale for years new players to march. he mark harrison then
+
+============================================================================================================================================
+SOURCE:
+lrb december june rrb was the stage name for an american rock and roll vocalist guitarist songwriter and
+
+TARGET:
+in u.s. john paid to in the united states house of when he described him as one of the true of rock and roll
+
+PREDICTION:
+after the scene school in he played her second

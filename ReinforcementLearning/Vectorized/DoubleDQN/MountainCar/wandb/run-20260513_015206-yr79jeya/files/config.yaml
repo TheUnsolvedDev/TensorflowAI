@@ -1,0 +1,56 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        e:
+            s2eo44mk52uwb2b4shw98d6kim1ft3hl:
+                codePath: ReinforcementLearning/Vectorized/DoubleDQN/MountainCar/train.py
+                codePathLocal: train.py
+                email: shuvrajeet17@gmail.com
+                executable: /home/shuvrajeet/miniconda3/envs/research/bin/python3
+                git:
+                    commit: 65630d62e3426d431bf4b36cae3c753235d158c6
+                    remote: https://github.com/TheUnsolvedDev/TensorflowAI.git
+                host: desktop
+                os: Linux-6.12.77-1-MANJARO-x86_64-with-glibc2.43
+                program: /home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/MountainCar/train.py
+                python: CPython 3.12.12
+                root: /home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/MountainCar
+                startedAt: "2026-05-12T20:22:06.895878Z"
+                writerId: s2eo44mk52uwb2b4shw98d6kim1ft3hl
+        m: []
+        python_version: 3.12.12
+        t:
+            "1":
+                - 2
+                - 3
+                - 5
+                - 49
+                - 53
+            "2":
+                - 2
+                - 3
+                - 5
+                - 49
+                - 53
+            "3":
+                - 2
+                - 14
+                - 17
+            "4": 3.12.12
+            "5": 0.26.1
+            "12": 0.26.1
+            "13": linux-x86_64
+batch_size:
+    value: 256
+buffer_size:
+    value: 200000
+epsilon_decay_steps:
+    value: 800000
+epsilon_end:
+    value: 0.02
+gamma:
+    value: 0.98
+lr:
+    value: 7.552927367204424e-05
+target_update_freq:
+    value: 5000

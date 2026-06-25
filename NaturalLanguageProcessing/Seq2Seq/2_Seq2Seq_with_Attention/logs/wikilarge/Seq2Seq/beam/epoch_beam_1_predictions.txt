@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he was the principal of the first international chess tournament in which made england the world s leading chess center and caused to be recognized as the world s strongest player.
+
+TARGET:
+these events helped to make london the world s leading chess center. the winner of the tournament became recognized as the world s strongest player. [end]
+
+PREDICTION:
+in he became part for its second international wrestling championships from to.
+
+============================================================================================================================================
+SOURCE:
+half of the limburg province of belgium is added to the netherlands lrb since there is a belgian limburg and dutch limburg rrb.
+
+TARGET:
+on begins half of the limburg province of belgium was added to the netherlands making a belgian limburg and dutch limburg. [end]
+
+PREDICTION:
+the ancient central city of africa are added to a national country or small side
+
+============================================================================================================================================
+SOURCE:
+for example repeated applications of the show that the of a b c lrb a b rrb c a lrb b c rrb to more than three
+
+TARGET:
+for all a b and c in g the equation lrb a b rrb c a lrb b c rrb [end]
+
+PREDICTION:
+many different kinds of a family or as is used to refer by an english language. it would also have two than three people. this makes the main language lrb called b l rrb.
+
+============================================================================================================================================
+SOURCE:
+it will involve michael dante and bryan the creators and producers of the original series.
+
+TARGET:
+it will be created by michael dante dimartino and bryan [end]
+
+PREDICTION:
+they were a member in and is the first track on an championship. he had been called by his
+
+============================================================================================================================================
+SOURCE:
+the following month at khali faced off against batista and rey mysterio in another triple threat match in which batista pinned khali to win the championship.
+
+TARGET:
+at batista won against khali and rey mysterio in a triple threat match to win the championship. [end]
+
+PREDICTION:
+it is now by a man shooter movie made against michaels
+
+============================================================================================================================================
+SOURCE:
+during its history a number of kingdoms ruled over parts of south india whose across southern and southeastern asia the history and cultures of modern nation states such as sri lanka philippines indonesia thailand and malaysia.
+
+TARGET:
+because these kingdoms also ruled southern and southeastern asia the history and cultures of modern nation states such as sri lanka indonesia thailand malaysia singapore also have south indian culture. [end]
+
+PREDICTION:
+during its history the most people were and has two of a large point in north america such as f victoria bay
+
+============================================================================================================================================
+SOURCE:
+an is a such as a drawing painting photograph or other work of art that subject more than form.
+
+TARGET:
+can be in the form of a drawing painting photograph or other work of art. [end]
+
+PREDICTION:
+it is a in the same name as one way of science which they were not known than them to have been called or other person that can mean it.
+
+============================================================================================================================================
+SOURCE:
+although the book of wisdom is also called the wisdom of solomon it was most likely composed centuries after the death of king
+
+TARGET:
+even though the book was called the wisdom of solomon it was probably finished long after he died. [end]
+
+PREDICTION:
+however the work was a that he became part of king lrb rrb. this book had to become one given place before his death in and was only made landfall from to.
+
+============================================================================================================================================
+SOURCE:
+structural engineers are most commonly involved in the design of buildings and large structures but they can also be involved in the design of machinery medical equipment vehicles or any item where structural integrity affects the item s function or safety.
+
+TARGET:
+more experienced engineers would be responsible for the structural design and of an entire system such as a building. [end]
+
+PREDICTION:
+the process is to be very important of a type and or if they have often known for this in some other things that are used as a bit but it can also mean them in their own with human life.
+
+============================================================================================================================================
+SOURCE:
+the athletic nickname or athletic of a university or college within the united states is the name officially adopted by that institution for at least the members of its athletic teams.
+
+TARGET:
+the athletic nickname or athletic of a university or college is the name officially or adopted by that institution for at least the members of its athletic teams. [end]
+
+PREDICTION:
+in japan s was a university as the first edition is on september for and has formed to become one of this union with at least an members are known as he became part lrb rrb.

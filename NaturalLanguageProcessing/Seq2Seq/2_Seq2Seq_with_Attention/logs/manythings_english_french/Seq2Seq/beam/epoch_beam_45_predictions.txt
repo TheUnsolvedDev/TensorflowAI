@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+which search engine do you
+
+TARGET:
+quel moteur de recherche ? [end]
+
+PREDICTION:
+tu quoi de réparer ? mange « je te plaît. dans ! bon moteur
+
+============================================================================================================================================
+SOURCE:
+we must help.
+
+TARGET:
+nous devons aider. [end]
+
+PREDICTION:
+il nous a prévu de donner du aide. on doit pour partir. dollars. ! à nous.
+
+============================================================================================================================================
+SOURCE:
+i was so sure this was what i wanted.
+
+TARGET:
+j'étais sûr que c'était ce que je voulais. [end]
+
+PREDICTION:
+j'étais sûr non ici ces
+
+============================================================================================================================================
+SOURCE:
+you're telling again.
+
+TARGET:
+tu encore des [end]
+
+PREDICTION:
+vous aux autres dérangé. cela.
+
+============================================================================================================================================
+SOURCE:
+don't to mail this letter.
+
+TARGET:
+n'oubliez pas de mettre cette lettre à la poste. [end]
+
+PREDICTION:
+pas la clé après cette lettre. retraite.
+
+============================================================================================================================================
+SOURCE:
+the
+
+TARGET:
+la porte ! [end]
+
+PREDICTION:
+sur le toit commun.
+
+============================================================================================================================================
+SOURCE:
+he was to the in the last
+
+TARGET:
+aux dernières il a été au [end]
+
+PREDICTION:
+sa fut construit au grand dernier.
+
+============================================================================================================================================
+SOURCE:
+don't be such a
+
+TARGET:
+ne sois pas si [end]
+
+PREDICTION:
+serait une grande à la vue. tout s'est bien compris.
+
+============================================================================================================================================
+SOURCE:
+you saw didn't you?
+
+TARGET:
+vous les avez pas ? [end]
+
+PREDICTION:
+te vous auriez déjà non ? cela. aucune vue pour cela, pas mal dit.
+
+============================================================================================================================================
+SOURCE:
+my husband and i are both teachers.
+
+TARGET:
+mon mari et moi sommes tous les deux [end]
+
+PREDICTION:
+mon ami qui me sommes tous les deux des frères est !

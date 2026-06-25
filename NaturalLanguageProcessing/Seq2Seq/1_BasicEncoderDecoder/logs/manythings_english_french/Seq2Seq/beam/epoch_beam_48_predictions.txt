@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+he told me to meet him at the restaurant.
+
+TARGET:
+il me dit de le rencontrer au restaurant. [end]
+
+PREDICTION:
+elle me disait le en train. au cadeau. que ce de ta façon des femmes. selon les la fois.
+
+============================================================================================================================================
+SOURCE:
+i think you don't have enough money to buy that.
+
+TARGET:
+je pense que tu n'as pas assez d'argent pour acheter ça. [end]
+
+PREDICTION:
+tu penses qu'elles n'a vraiment pas de tomber pour ça porter toi. place. ?
+
+============================================================================================================================================
+SOURCE:
+it was a pleasure meeting you, tom.
+
+TARGET:
+ce fut un plaisir de vous tom. [end]
+
+PREDICTION:
+ce gâteau je fus heureux de ta sécurité.
+
+============================================================================================================================================
+SOURCE:
+i hope this can help someone.
+
+TARGET:
+j'espère que cela peut aider quelqu'un. [end]
+
+PREDICTION:
+j'espère que peut se tom. ne tu en fais.
+
+============================================================================================================================================
+SOURCE:
+i know tom is a bit crazy.
+
+TARGET:
+je sais que tom est un peu fou. [end]
+
+PREDICTION:
+j'ai sûr que l'eau porte un drôle de point.
+
+============================================================================================================================================
+SOURCE:
+what do you want to do now?
+
+TARGET:
+qu'est-ce que tu veux faire maintenant ? [end]
+
+PREDICTION:
+qu'est-ce qu'on veuille donc vous en ? prête fois. photo !
+
+============================================================================================================================================
+SOURCE:
+it down in your
+
+TARGET:
+dans ton [end]
+
+PREDICTION:
+campagne. avec ton
+
+============================================================================================================================================
+SOURCE:
+he never promises.
+
+TARGET:
+il ne jamais ses promesses. [end]
+
+PREDICTION:
+il a n'oublie jamais de ses promesses. et qui vous un jour.
+
+============================================================================================================================================
+SOURCE:
+i knew we were going to win.
+
+TARGET:
+je savais que nous allions gagner. [end]
+
+PREDICTION:
+que nous pourrions aller rejoindre leurs devoirs.
+
+============================================================================================================================================
+SOURCE:
+please don't go away.
+
+TARGET:
+s'il te plaît, ne t'en va pas. [end]
+
+PREDICTION:
+en dehors s'il ne te

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+is a municipality in the lrb constituency rrb of in the canton of st. in switzerland.
+
+TARGET:
+is a village and municipality near st. gallen in the canton of st. gallen in switzerland. [end]
+
+PREDICTION:
+this is a municipality of district the town d in canton and switzerland.
+
+============================================================================================================================================
+SOURCE:
+it was written by all band members prior to their debut album silent
+
+TARGET:
+it was written by all band members for their album silent [end]
+
+PREDICTION:
+they had come from many fans to play on the album of all your songs in their
+
+============================================================================================================================================
+SOURCE:
+lrb latin from greek motion or rrb is a of and in the upper stomach with an to
+
+TARGET:
+is a general feeling of and in the stomach often with the to [end]
+
+PREDICTION:
+lrb rrb is the name of a gram positive with negative disorder but in this region and has no weight whereas blood organism can also be seen at their main speed.
+
+============================================================================================================================================
+SOURCE:
+in eddie left for spain to fly in the yankee squadron for the spanish in the spanish civil war with frederic lord bertrand and gordon
+
+TARGET:
+in eddie left for spain to be a pilot in the spanish american war which was against the law. [end]
+
+PREDICTION:
+n t promoted me was a football player for him by the national cup and in spain under spanish i o. when he had been wounded at an official home in.
+
+============================================================================================================================================
+SOURCE:
+lrb born march rrb usually known as jimmy floyd is a dutch former football striker who played for various clubs in the netherlands portugal england and spain as well as the dutch national team.
+
+TARGET:
+jimmy floyd lrb born march rrb is a former dutch football player. he has played for netherlands national team. [end]
+
+PREDICTION:
+frank is an footballer of the former premier team football player.
+
+============================================================================================================================================
+SOURCE:
+the hong kong government had previously commissioned a study in the s to find solutions to the growing traffic problem caused by the expansion of the territory s economy.
+
+TARGET:
+building mtr hong kong s growing economy caused a lot of traffic problems. [end]
+
+PREDICTION:
+in australia s work became the discipline that agriculture industry and financial problems had been
+
+============================================================================================================================================
+SOURCE:
+while the state of israel offered citizenship often declined lebanese jews were frequent targets of islamic militant groups since.
+
+TARGET:
+lebanese jews became targets to islamic militant groups since. [end]
+
+PREDICTION:
+also said the taliban does what they do things and other people to do. in nazi countries where poland invaded denmark is not a person responsible for armenians at war.
+
+============================================================================================================================================
+SOURCE:
+david j. fit finlay jr. lrb born october rrb is a northern irish road agent and retired professional wrestler.
+
+TARGET:
+david finlay lrb born october rrb is a professional wrestler and road agent from belfast northern ireland. [end]
+
+PREDICTION:
+joseph conan born lrb april may as a u.s. man rrb
+
+============================================================================================================================================
+SOURCE:
+council members are elected directly every four years one of whom is the mayor or president of
+
+TARGET:
+the city council has elected members one of whom is the mayor or president of elected every four years. [end]
+
+PREDICTION:
+each other two groups is the head and a member of council or one state.
+
+============================================================================================================================================
+SOURCE:
+in all marilyn billion lrb usd rrb in damage killing people in its
+
+TARGET:
+in all marilyn billion lrb usd rrb in damage killing people in it s path. [end]
+
+PREDICTION:
+in this system the storm caused lrb usd. rrb million emily and billion dollars to plan a year.

@@ -6,6 +6,27 @@ import tqdm
 import numpy as np
 from config import *
 
+class MinibatchDiscrimination(tf.keras.layers.Layer):
+    def __init__(self, num_kernels=100, kernel_dim=5):
+        super().__init__()
+        self.num_kernels = num_kernels
+        self.kernel_dim = kernel_dim
+
+    def build(self, input_shape):
+        features = input_shape[-1]
+        self.T = self.add_weight(shape=(features, self.num_kernels * self.kernel_dim),
+                                 initializer="glorot_uniform",
+                                 trainable=True,
+                                 name="T")
+
+    def call(self, x):
+        M = tf.matmul(x, self.T)
+        M = tf.reshape(M, (-1, self.num_kernels, self.kernel_dim))
+        M1 = tf.expand_dims(M, 3)
+        M2 = tf.expand_dims(tf.transpose(M, [1, 2, 0]), 0)
+        abs_diff = tf.reduce_sum(tf.abs(M1 - M2), axis=2)
+        c = tf.reduce_sum(tf.exp(-abs_diff), axis=2)
+        return tf.concat([x, c], axis=1)
 
 class GAN(tf.keras.Model):
     def __init__(self, strategy, input_shape, latent_dim, batch_size):
@@ -29,9 +50,32 @@ class GAN(tf.keras.Model):
 
         self.generator.build(input_shape=(None, latent_dim[0]))
         self.discriminator.build(input_shape=(None, *input_shape))
-
+        tf.keras.utils.plot_model(self.generator, to_file='generator.png', show_shapes=True, expand_nested=True)
+        tf.keras.utils.plot_model(self.discriminator, to_file='discriminator.png', show_shapes=True, expand_nested=True)
         self.generator.summary()
         self.discriminator.summary()
+        
+    def sn_conv(self, filters, kernel_size, strides=1, padding='same', use_bias=True):
+        return (tf.keras.layers.Conv2D(filters, kernel_size, strides=strides, padding=padding, use_bias=use_bias)) # tf.keras.layers.SpectralNormalization
+
+    def sn_dense(self, units, use_bias=True):
+        return (tf.keras.layers.Dense(units, use_bias=use_bias)) # tf.keras.layers.SpectralNormalization
+        
+    def res_block_up(self, x, filters):
+        shortcut = tf.keras.layers.UpSampling2D()(x)
+        shortcut = tf.keras.layers.Conv2D(filters, 1, padding='same', use_bias=False)(shortcut)
+
+        out = tf.keras.layers.UpSampling2D()(x)
+        out = tf.keras.layers.Conv2D(filters, 3, padding='same', use_bias=False)(out)
+        out = tf.keras.layers.BatchNormalization()(out)
+        out = tf.keras.layers.ReLU()(out)
+
+        out = tf.keras.layers.Conv2D(filters, 3, padding='same', use_bias=False)(out)
+        out = tf.keras.layers.BatchNormalization()(out)
+
+        out = tf.keras.layers.Add()([shortcut, out])
+        out = tf.keras.layers.ReLU()(out)
+        return out
 
     def build_generator(self, latent_dim=100, channels=3):
         _, _, channels = self.input_shape
@@ -42,53 +86,39 @@ class GAN(tf.keras.Model):
         x = tf.keras.layers.ReLU()(x)
         x = tf.keras.layers.Reshape((4, 4, 256 * self.factor))(x)
 
-        x = tf.keras.layers.Conv2DTranspose(
-            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.ReLU()(x)
-
-        x = tf.keras.layers.Conv2DTranspose(
-            128 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.ReLU()(x)
+        x = self.res_block_up(x, 128 * self.factor)
+        x = self.res_block_up(x, 64 * self.factor)
 
         if self.input_shape[0] >= 64:
-            x = tf.keras.layers.Conv2DTranspose(
-                64 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-            x = tf.keras.layers.BatchNormalization()(x)
-            x = tf.keras.layers.ReLU()(x)
+            x = self.res_block_up(x, 64 * self.factor)
 
         out = tf.keras.layers.Conv2DTranspose(
             channels, 4, strides=2, padding='same',
             use_bias=False, activation='tanh')(x)
 
         return tf.keras.Model(z, out, name="generator")
+    
+    def res_block_down(self, x, filters):
+        shortcut = self.sn_conv(filters, 1, strides=2)(x)
+        out = self.sn_conv(filters, 4, strides=2)(x)
+        out = tf.keras.layers.LeakyReLU(0.2)(out)
+        out = self.sn_conv(filters, 3)(out)
+        out = tf.keras.layers.LeakyReLU(0.2)(out)
+        out = tf.keras.layers.Add()([shortcut, out])
+        return out
 
     def build_discriminator(self):
         inp = tf.keras.layers.Input(shape=self.input_shape)
 
-        x = tf.keras.layers.Conv2D(
-            64 * self.factor, 4, strides=2, padding='same')(inp)
-        x = tf.keras.layers.LeakyReLU(0.2)(x)
+        x = self.res_block_down(inp, 32 * self.factor)
+        x = self.res_block_down(x, 64 * self.factor)
+        x = self.res_block_down(x, 64 * self.factor)
+        x = self.res_block_down(x, 128 * self.factor)
 
-        x = tf.keras.layers.Conv2D(
-            128 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.LeakyReLU(0.2)(x)
+        x = tf.keras.layers.GlobalAveragePooling2D()(x)
+        # x = MinibatchDiscrimination(num_kernels=32, kernel_dim=4)(x)
 
-        x = tf.keras.layers.Conv2D(
-            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.LeakyReLU(0.2)(x)
-
-        x = tf.keras.layers.Conv2D(
-            256 * self.factor, 4, strides=2, padding='same', use_bias=False)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.LeakyReLU(0.2)(x)
-
-        x = tf.keras.layers.Flatten()(x)
-        out = tf.keras.layers.Dense(1)(x)  # logits
-
+        out = self.sn_dense(1)(x)
         return tf.keras.Model(inp, out, name="discriminator")
 
     @tf.function
@@ -183,8 +213,8 @@ if __name__ == '__main__':
         cross_device_ops=tf.distribute.NcclAllReduce())
     gan = GAN(strategy=strategy, input_shape=(
         IMAGE_SIZE[0]*2, IMAGE_SIZE[1]*2, 3), latent_dim=(LATENT_DIM*4,), batch_size=BATCH_SIZE)
-    gan = GAN(strategy=strategy, input_shape=(
-        IMAGE_SIZE[0], IMAGE_SIZE[1], 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
+    # gan = GAN(strategy=strategy, input_shape=(
+    #     IMAGE_SIZE[0], IMAGE_SIZE[1], 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
     # gan = GAN(strategy=strategy, input_shape=(
     #     IMAGE_SIZE[0], IMAGE_SIZE[1], 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
     # gan = GAN(strategy=strategy, input_shape=(

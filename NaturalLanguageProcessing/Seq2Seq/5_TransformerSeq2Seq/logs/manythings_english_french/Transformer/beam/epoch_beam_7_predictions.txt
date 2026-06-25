@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+prices dropped suddenly.
+
+TARGET:
+les prix ont baissé [end]
+
+PREDICTION:
+l'eau est le plus à les deux.
+
+============================================================================================================================================
+SOURCE:
+i'll bring it to you tomorrow.
+
+TARGET:
+je vous demain. [end]
+
+PREDICTION:
+à vous. c'est seul. je t'ai demain.
+
+============================================================================================================================================
+SOURCE:
+tom said he loved me, too.
+
+TARGET:
+tom a dit qu'il aussi. [end]
+
+PREDICTION:
+mary a dit.
+
+============================================================================================================================================
+SOURCE:
+our dog seldom
+
+TARGET:
+notre chien mord rarement. [end]
+
+PREDICTION:
+notre maison s'est fait
+
+============================================================================================================================================
+SOURCE:
+i didn't see you come in.
+
+TARGET:
+je ne vous ai pas vus entrer. [end]
+
+PREDICTION:
+j'ignorais qu'on y plaît, tu prie.
+
+============================================================================================================================================
+SOURCE:
+it's none of your concern.
+
+TARGET:
+ce n'est pas votre affaire. [end]
+
+PREDICTION:
+cela n'y est pas de vos choses. c'est bien.
+
+============================================================================================================================================
+SOURCE:
+he lost face.
+
+TARGET:
+il a perdu la face. [end]
+
+PREDICTION:
+c'est beaucoup en sécurité.
+
+============================================================================================================================================
+SOURCE:
+new york is a big city.
+
+TARGET:
+new york est une grande ville. [end]
+
+PREDICTION:
+la chambre est de un accident.
+
+============================================================================================================================================
+SOURCE:
+there is no hope of success.
+
+TARGET:
+il n'y a aucune chance de réussite. [end]
+
+PREDICTION:
+qu'il n'y faut aucune photo des
+
+============================================================================================================================================
+SOURCE:
+he's everybody's friend.
+
+TARGET:
+il est l'ami de tout le monde. [end]
+
+PREDICTION:
+il s'est tout de la mienne. c'est à moi.

@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+you don't seem so busy.
+
+TARGET:
+vous ne semblez pas si occupée. [end]
+
+PREDICTION:
+te ne sembles pas tellement longue. pas. bien. vous ayez trop ?
+
+============================================================================================================================================
+SOURCE:
+tom always sleeps on the floor.
+
+TARGET:
+tom dort toujours sur le sol. [end]
+
+PREDICTION:
+tom dort toujours par l'institutrice. l'affaire.
+
+============================================================================================================================================
+SOURCE:
+i'm not a
+
+TARGET:
+je ne suis pas [end]
+
+PREDICTION:
+je n'en suis plus partie.
+
+============================================================================================================================================
+SOURCE:
+you don't even know who they are.
+
+TARGET:
+vous ne savez même pas qui ils sont. [end]
+
+PREDICTION:
+ne savent même être qu'il était dans lequel elles sont.
+
+============================================================================================================================================
+SOURCE:
+i'm going to take your advice.
+
+TARGET:
+je vais suivre ton conseil. [end]
+
+PREDICTION:
+je te rends pieds au conseils.
+
+============================================================================================================================================
+SOURCE:
+are you sure you can do it?
+
+TARGET:
+es-tu sûre de pouvoir le faire ? [end]
+
+PREDICTION:
+es-tu sûr d'avoir pu le faire de ça ! tu pourras ? au sens.
+
+============================================================================================================================================
+SOURCE:
+the car ran into a tree.
+
+TARGET:
+la voiture a contre un arbre. [end]
+
+PREDICTION:
+une véhicule entra en a fait mon argent. aux vêtements ! ». au matin
+
+============================================================================================================================================
+SOURCE:
+they are going to the affair.
+
+TARGET:
+ils vont sur l'affaire. [end]
+
+PREDICTION:
+elles cet affaire au passé. ! leur avis.
+
+============================================================================================================================================
+SOURCE:
+she tied him up.
+
+TARGET:
+elle l'a [end]
+
+PREDICTION:
+c'est lui sur le bras. les portes.
+
+============================================================================================================================================
+SOURCE:
+butter is sold by the pound in the
+
+TARGET:
+on aux le beurre à la livre. [end]
+
+PREDICTION:
+quelqu'un est accompli par les livres au contre la lune client. dernière. le thé. à réalité. pas.

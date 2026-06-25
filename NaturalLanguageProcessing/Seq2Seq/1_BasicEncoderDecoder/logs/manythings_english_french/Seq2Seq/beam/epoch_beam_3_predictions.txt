@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the is highly complex.
+
+TARGET:
+la du poème est hautement [end]
+
+PREDICTION:
+la conduite est complètement devenue importante à son point c'est tout. de cent.
+
+============================================================================================================================================
+SOURCE:
+you're so brave.
+
+TARGET:
+vous êtes très brave. [end]
+
+PREDICTION:
+vous avez très
+
+============================================================================================================================================
+SOURCE:
+i just want to say that i was wrong.
+
+TARGET:
+je veux simplement dire que j'ai eu tort. [end]
+
+PREDICTION:
+j'aimerais juste savoir que ce soit vrai.
+
+============================================================================================================================================
+SOURCE:
+i wasn't married at that time.
+
+TARGET:
+je n'étais pas marié à cette époque. [end]
+
+PREDICTION:
+je ne pas à la fête.
+
+============================================================================================================================================
+SOURCE:
+i want to become a teacher.
+
+TARGET:
+je veux être enseignant. [end]
+
+PREDICTION:
+je veux devenir professeur !
+
+============================================================================================================================================
+SOURCE:
+i can carry that for you.
+
+TARGET:
+je peux porter ça pour toi. [end]
+
+PREDICTION:
+je peux vous en porter cela.
+
+============================================================================================================================================
+SOURCE:
+he never asked me.
+
+TARGET:
+il ne me l'a jamais demandé. [end]
+
+PREDICTION:
+ça ne jamais. je m'en suis sorti.
+
+============================================================================================================================================
+SOURCE:
+your pronunciation is more or less correct.
+
+TARGET:
+votre prononciation est à peu près correcte. [end]
+
+PREDICTION:
+ta question se ou plus correcte. !
+
+============================================================================================================================================
+SOURCE:
+i've my keys.
+
+TARGET:
+j'ai égaré mes clés. [end]
+
+PREDICTION:
+j'ai mes lèvres des ! mienne. en ce bleu.
+
+============================================================================================================================================
+SOURCE:
+i wonder who that lady was.
+
+TARGET:
+je me demande qui était cette dame. [end]
+
+PREDICTION:
+je me suis décidé de cette vache.

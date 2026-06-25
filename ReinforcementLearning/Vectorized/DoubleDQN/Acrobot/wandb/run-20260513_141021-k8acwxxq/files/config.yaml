@@ -1,0 +1,79 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        e:
+            mdtt59l2cb986sneocsw3bkbmqgcl25b:
+                codePath: ReinforcementLearning/Vectorized/DoubleDQN/Acrobot/train.py
+                codePathLocal: train.py
+                cpu_count: 8
+                cpu_count_logical: 16
+                cudaVersion: "12.9"
+                disk:
+                    /:
+                        total: "471107227648"
+                        used: "225272991744"
+                email: shuvrajeet17@gmail.com
+                executable: /home/shuvrajeet/miniconda3/envs/research/bin/python3
+                git:
+                    commit: 65630d62e3426d431bf4b36cae3c753235d158c6
+                    remote: https://github.com/TheUnsolvedDev/TensorflowAI.git
+                gpu: NVIDIA GeForce RTX 4060 Ti
+                gpu_count: 2
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 4352
+                      memoryTotal: "17175674880"
+                      name: NVIDIA GeForce RTX 4060 Ti
+                      uuid: GPU-c311fd85-006e-6c98-235d-4ba76959797b
+                    - architecture: Ada
+                      cudaCores: 4352
+                      memoryTotal: "17175674880"
+                      name: NVIDIA GeForce RTX 4060 Ti
+                      uuid: GPU-db275ced-8c17-b896-ad0a-a9528f32efbc
+                host: desktop
+                memory:
+                    total: "134955548672"
+                os: Linux-6.12.77-1-MANJARO-x86_64-with-glibc2.43
+                program: /home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/Acrobot/train.py
+                python: CPython 3.12.12
+                root: /home/shuvrajeet/Documents/TensorflowAI/ReinforcementLearning/Vectorized/DoubleDQN/Acrobot
+                startedAt: "2026-05-13T08:40:21.971520Z"
+                writerId: mdtt59l2cb986sneocsw3bkbmqgcl25b
+        m: []
+        python_version: 3.12.12
+        t:
+            "1":
+                - 2
+                - 3
+                - 5
+                - 49
+                - 53
+            "2":
+                - 2
+                - 3
+                - 5
+                - 49
+                - 53
+            "3":
+                - 2
+                - 14
+                - 17
+                - 61
+            "4": 3.12.12
+            "5": 0.26.1
+            "12": 0.26.1
+            "13": linux-x86_64
+batch_size:
+    value: 256
+buffer_size:
+    value: 200000
+epsilon_decay_steps:
+    value: 1200000
+epsilon_end:
+    value: 0.1
+gamma:
+    value: 0.99
+lr:
+    value: 3.0065311487129063e-05
+target_update_freq:
+    value: 2500

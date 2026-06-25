@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i hate to bother you, but would you mind closing the door?
+
+TARGET:
+il me peine de vous déranger mais cela ne vous dérangerait-il pas de fermer la porte ? [end]
+
+PREDICTION:
+quand je vous détestes te alors feriez-vous d'avis.
+
+============================================================================================================================================
+SOURCE:
+tom should take better care of his children.
+
+TARGET:
+tom devrait mieux s'occuper de ses enfants. [end]
+
+PREDICTION:
+il fallait que tom. attention pareille leurs enfants ! par ses enfants. en erreur.
+
+============================================================================================================================================
+SOURCE:
+i haven't seen them anywhere.
+
+TARGET:
+je ne les ai vues nulle part. [end]
+
+PREDICTION:
+cela ne les ai plus vus. !
+
+============================================================================================================================================
+SOURCE:
+he must be tom's brother.
+
+TARGET:
+il doit être le frère de tom. [end]
+
+PREDICTION:
+il doit faire la suite des fils que le pays.
+
+============================================================================================================================================
+SOURCE:
+what do you want me to do now?
+
+TARGET:
+qu'est-ce que tu veux que je fasse maintenant ? [end]
+
+PREDICTION:
+que voulez-vous pour me voir maintenant des de ce ?
+
+============================================================================================================================================
+SOURCE:
+what are these for?
+
+TARGET:
+à quoi celles-ci ? [end]
+
+PREDICTION:
+qu'est-ce qui est ton pour ? au bien même ces ! »
+
+============================================================================================================================================
+SOURCE:
+an electric current can
+
+TARGET:
+un courant peut du [end]
+
+PREDICTION:
+l'une de temps les on sait se donner des heures où s'est éteinte.
+
+============================================================================================================================================
+SOURCE:
+there were no signs of life on the island.
+
+TARGET:
+il n'y avait aucun signe de vie sur l'île. [end]
+
+PREDICTION:
+le mariage ne se trouvait à commerce sur la d'hier.
+
+============================================================================================================================================
+SOURCE:
+when did you tell me that?
+
+TARGET:
+quand me l'avez-vous dit ? [end]
+
+PREDICTION:
+quand vous l'ai-je dites ? d'habitude.
+
+============================================================================================================================================
+SOURCE:
+tom is proud of his car.
+
+TARGET:
+tom est fier de sa voiture. [end]
+
+PREDICTION:
+tom est fière de ses parents. par balle.

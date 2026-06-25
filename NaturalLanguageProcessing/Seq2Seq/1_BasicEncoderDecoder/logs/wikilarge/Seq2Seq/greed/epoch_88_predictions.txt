@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+at lrb rrb the issued their final on tropical depression
+
+TARGET:
+at lrb rrb the gave out its last on tropical depression one. [end]
+
+PREDICTION:
+at robinson returned on the to
+
+============================================================================================================================================
+SOURCE:
+it took place on september at a located in the village of t district
+
+TARGET:
+nuclear radiation took place at a in northeast of tokyo japan on september. [end]
+
+PREDICTION:
+the civil war that chain workers in the were drawn into a
+
+============================================================================================================================================
+SOURCE:
+the eastern section of the line between and was always single track with just one passing at north station and approximately trains each day went as far as
+
+TARGET:
+around trains went as far as station each day. the rest finished at or [end]
+
+PREDICTION:
+the line between and the line between the and summer minutes at station
+
+============================================================================================================================================
+SOURCE:
+in dry seasons they eat wild and other fruit for the liquid and natural they
+
+TARGET:
+they do n t eat meat they eat plants and in dry season they eat fruit like wild for the liquid and natural [end]
+
+PREDICTION:
+these may be cells of and fruit to and plants such as and
+
+============================================================================================================================================
+SOURCE:
+was also associated with war battle death and
+
+TARGET:
+she was also associated with war battle death and [end]
+
+PREDICTION:
+was followed by and died
+
+============================================================================================================================================
+SOURCE:
+it replaced the former york county in and is part of the greater toronto area and the inner ring of the golden
+
+TARGET:
+the whole region is part of the greater toronto area and is part of the golden [end]
+
+PREDICTION:
+it replaced the north west frontier province in the area of west
+
+============================================================================================================================================
+SOURCE:
+he has served as mayor of moscow since.
+
+TARGET:
+he has been the mayor of moscow since. [end]
+
+PREDICTION:
+he is mayor the mayor of the arena in the district of metropolitan office for the next week of managed by richard for the
+
+============================================================================================================================================
+SOURCE:
+charles was so moved by her death that he on june in of his younger brother
+
+TARGET:
+charles later on june in of his younger brother [end]
+
+PREDICTION:
+charles was married on june on february after his death in
+
+============================================================================================================================================
+SOURCE:
+from outside the united states resulted in a increase of people and within the country produced a increase of people.
+
+TARGET:
+from outside the united states makes a increase of people and within the country made a increase of people. [end]
+
+PREDICTION:
+from outside the united states people of resulted in a increase over a rural district.
+
+============================================================================================================================================
+SOURCE:
+in november the visited the saturn system.
+
+TARGET:
+on november voyager visited saturn and took higher of the planet and [end]
+
+PREDICTION:
+in saturn s gold in the australian became

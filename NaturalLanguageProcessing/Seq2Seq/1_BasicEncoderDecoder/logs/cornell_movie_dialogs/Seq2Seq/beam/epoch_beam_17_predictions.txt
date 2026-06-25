@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+well, she loves children, all right. she loves everybody.
+
+TARGET:
+but that's a wonderful not a bad have a little patience with her. she's such a little thing and tries so hard. [end]
+
+PREDICTION:
+oh, she reminds me.
+
+============================================================================================================================================
+SOURCE:
+i don't think you're gonna make it.
+
+TARGET:
+whaddya got your gun ... i got his money... i got everything... [end]
+
+PREDICTION:
+
+
+============================================================================================================================================
+SOURCE:
+i'm sorry, i know you're all upset. it's just i'm so excited to be out of the house, i guess. i wonder if home yet.
+
+TARGET:
+i wonder if jimmy's gotten back. [end]
+
+PREDICTION:
+but i don't know if you were in a league of work on
+
+============================================================================================================================================
+SOURCE:
+smokey told me he left last night to look at some horses in he won't be back for three days. i can't believe he didn't want to say goodbye.
+
+TARGET:
+well... honey... you know... that's just not his way. maybe you can write him a letter or something. say thank you... don't think about it... you take care and i'll see
+
+PREDICTION:
+well, he's the same as you thought.
+
+============================================================================================================================================
+SOURCE:
+yes. i was there with ben.
+
+TARGET:
+i know that, mr. [end]
+
+PREDICTION:
+i don't know.
+
+============================================================================================================================================
+SOURCE:
+a lot of
+
+TARGET:
+not mostly [end]
+
+PREDICTION:
+i think we should get married.
+
+============================================================================================================================================
+SOURCE:
+he might tell me about the part of him that wants to help, that feels shame and who wants to be
+
+TARGET:
+this is we're talking about? [end]
+
+PREDICTION:
+she is in love.
+
+============================================================================================================================================
+SOURCE:
+-- he came up behind me and i was a and he just... lifted up my and, you know, right there...
+
+TARGET:
+didn't you have any panties on? [end]
+
+PREDICTION:
+the door -- i was just and you know that i'm incredibly sorry about your father, mr. white.
+
+============================================================================================================================================
+SOURCE:
+he's going home. he slept over because i was a little
+
+TARGET:
+i want a guard on you. i'm worried about leaving you alone. [end]
+
+PREDICTION:
+he said that you gave him another thought, huh? maybe even so. and then i got to go home before she died.
+
+============================================================================================================================================
+SOURCE:
+ever ask him?
+
+TARGET:
+you never ask a a question. no point. he'll never give you a straight answer. general still thinks of himself of the handsome young warrior who loved this country
+
+PREDICTION:
+just trying a few

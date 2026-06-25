@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+while the and are for to come back they the count in the
+
+TARGET:
+while the and are for to return they the count so in the [end]
+
+PREDICTION:
+but they the back of their rose again in to do not go up and for a special plan to give them
+
+============================================================================================================================================
+SOURCE:
+a is thus from a which runs across the
+
+TARGET:
+in a is a or cut into a member which runs parallel to the [end]
+
+PREDICTION:
+it has a lot of areas. this makes an which can go to the section at any time
+
+============================================================================================================================================
+SOURCE:
+her younger sister is also an actress.
+
+TARGET:
+is the older sister of child actress [end]
+
+PREDICTION:
+so younger daniel plays her trip with germany won a grammy award from february that season. it featured
+
+============================================================================================================================================
+SOURCE:
+other are also called including k and k
+
+TARGET:
+its chemical formula can be k k or it has and in it. [end]
+
+PREDICTION:
+modern are now other items also includes these things that have k to be known as and the country speakers for example lrb approximately km rrb of pakistan it contains
+
+============================================================================================================================================
+SOURCE:
+comprises the position that all should have but that there are no between processes lrb such as rrb and processes lrb
+
+TARGET:
+can help people with and as well as with certain forms of [end]
+
+PREDICTION:
+a note lrb part that says the person has been given all but not on wikipedia rrb by people can work with full name rather than or other selection which
+
+============================================================================================================================================
+SOURCE:
+v is a norwegian football club from and a part of the multi sport club v
+
+TARGET:
+v is a norwegian football club from [end]
+
+PREDICTION:
+l p v is a norwegian player from the flowering plant.
+
+============================================================================================================================================
+SOURCE:
+history the district was created in by the previous districts p and
+
+TARGET:
+history the district was created in by joining the old districts of p and [end]
+
+PREDICTION:
+the railway created lrb called sub districts or rrb in.
+
+============================================================================================================================================
+SOURCE:
+this species had a long and like wings it
+
+TARGET:
+d. had a long and like wings so it was [end]
+
+PREDICTION:
+the bird had a wings feet and tail which are long as cm lrb in rrb.
+
+============================================================================================================================================
+SOURCE:
+she further that the war is about in and ways and that the war is as important to the people her book features today as it was
+
+TARGET:
+she also said that the war is very about in and ways and that the war is as important to the people today as it was in her
+
+PREDICTION:
+they said it was about that day is the best selling children who wrote to protect people and
+
+============================================================================================================================================
+SOURCE:
+ndash former indian prime minister is by a female near
+
+TARGET:
+indian prime minister is in in southern india. [end]
+
+PREDICTION:
+th and the first indian of national radio justice office

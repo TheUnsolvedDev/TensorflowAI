@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the symphony orchestra lrb rrb is an american symphony orchestra based at hall in the cultural district of
+
+TARGET:
+the symphony orchestra lrb rrb is an american orchestra from they play in the [end]
+
+PREDICTION:
+there is the conductor sir lrb rrb
+
+============================================================================================================================================
+SOURCE:
+henry is a commune in the calvados department in the basse normandie region in northern france.
+
+TARGET:
+henry is a commune. it is found in the region basse normandie in the calvados department in the northwest of france. [end]
+
+PREDICTION:
+lrb born alpes rrb in this region is a village on southern green science fiction region. he can win both spanish division of australia during the fall from and was
+
+============================================================================================================================================
+SOURCE:
+its states are from europe the central asia and north america and cover most of the northern
+
+TARGET:
+most of the member countries of the are from europe the central asia and north america. [end]
+
+PREDICTION:
+there are many in europe.
+
+============================================================================================================================================
+SOURCE:
+the kilometres between the and station at a maximum speed of km h.
+
+TARGET:
+the so called kilometers between the and station at a maximum speed of km h. [end]
+
+PREDICTION:
+it was at the where there has been flight conditions of a small continental about what he is.
+
+============================================================================================================================================
+SOURCE:
+the same year he moved to the united states to join the at college of medicine at
+
+TARGET:
+in he became a of the united states. [end]
+
+PREDICTION:
+in february they won the united states. he served as at a college of texas springs victoria university. later it first became an assistant in.
+
+============================================================================================================================================
+SOURCE:
+the west australian lrb often simply called the west rrb is the only daily newspaper published in western australia and is owned by listed west australian
+
+TARGET:
+the west australian is a newspaper published in australia. it is made by an australian company called west australian [end]
+
+PREDICTION:
+the west australian known also as is an online newspaper of australia. they published by local government in new zealand it was made up on television network and its site
+
+============================================================================================================================================
+SOURCE:
+he went on to win the trophy the next two seasons as well.
+
+TARGET:
+he also won the trophy the next two [end]
+
+PREDICTION:
+having won the second major one at a win and in in. he was only six times people. it mixed money
+
+============================================================================================================================================
+SOURCE:
+despite again holding seventh spot on a list of they only scored points and had not for much of the season.
+
+TARGET:
+they held seventh on a list of and only scored [end]
+
+PREDICTION:
+instead of new score points straight pool the game being able with a few seconds by leaving behind it and even if they are very good at all four big
+
+============================================================================================================================================
+SOURCE:
+during those three games he did n t score any points nor did he any
+
+TARGET:
+during those three games he score any points did he any [end]
+
+PREDICTION:
+however outside doing number. then did n t with other score points lrb any way rrb of an official relationship between the player s top and kurt
+
+============================================================================================================================================
+SOURCE:
+for with the municipalities and municipal districts of other provinces see the list of municipalities and municipal districts of the dominican republic.
+
+TARGET:
+there are four municipalities and municipal districts in the province. [end]
+
+PREDICTION:
+it has three municipalities in municipal and the province. one is also part of a provinces which lies between nord pas d calais region. these included french play any european

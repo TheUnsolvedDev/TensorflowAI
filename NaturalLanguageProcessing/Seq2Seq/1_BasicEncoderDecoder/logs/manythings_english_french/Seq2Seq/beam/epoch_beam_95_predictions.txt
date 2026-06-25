@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+what does it matter?
+
+TARGET:
+? [end]
+
+PREDICTION:
+que cela sent !
+
+============================================================================================================================================
+SOURCE:
+i've seen you on tv.
+
+TARGET:
+je vous ai vu à la télé. [end]
+
+PREDICTION:
+je t'ai vus en train de dormir.
+
+============================================================================================================================================
+SOURCE:
+the dog on the again.
+
+TARGET:
+le chien a encore sur le [end]
+
+PREDICTION:
+il le chien a beaucoup
+
+============================================================================================================================================
+SOURCE:
+somebody must care for the patient.
+
+TARGET:
+quelqu'un doit de la malade. [end]
+
+PREDICTION:
+quelqu'un médicament des autres pour être. tomber. semaine. tout ça va retourne en place.
+
+============================================================================================================================================
+SOURCE:
+is there any reason not to go?
+
+TARGET:
+y a-t-il une raison quelconque de ne pas s'y rendre ? [end]
+
+PREDICTION:
+y répondre. il manque ? je ne dois pas rester en un autre.
+
+============================================================================================================================================
+SOURCE:
+became a very long time ago.
+
+TARGET:
+les se sont il y a très longtemps. [end]
+
+PREDICTION:
+la mariée est devenue un très grand temps qu'il a ces à temps. ne pas il y est.
+
+============================================================================================================================================
+SOURCE:
+can i talk to you for a please?
+
+TARGET:
+je peux te parler une s'il te plaît ? [end]
+
+PREDICTION:
+savez-vous à un moment s'il te plaît d'attendre hôtel.
+
+============================================================================================================================================
+SOURCE:
+you might as well just enjoy life.
+
+TARGET:
+tu ferais mieux de simplement de la vie. [end]
+
+PREDICTION:
+t'en vous tout simplement en compagnie.
+
+============================================================================================================================================
+SOURCE:
+do you really think this is a good idea?
+
+TARGET:
+penses-tu vraiment que ce soit une bonne idée ? [end]
+
+PREDICTION:
+pensez-vous vraiment que ce type soit vrai beaucoup. raison. ici ?
+
+============================================================================================================================================
+SOURCE:
+don't you recognize that
+
+TARGET:
+ne pas ce type ? [end]
+
+PREDICTION:
+ne parles-tu pas cela ? dieu le

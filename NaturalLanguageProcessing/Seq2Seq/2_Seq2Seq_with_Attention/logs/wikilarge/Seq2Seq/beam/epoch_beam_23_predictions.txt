@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+the act required that hold his for more than three minutes.
+
+TARGET:
+he had to hold his for more than three minutes. [end]
+
+PREDICTION:
+as it is a form called
+
+============================================================================================================================================
+SOURCE:
+victoria s son edward vii and in turn his son george v reigned as members of this house.
+
+TARGET:
+son edward vii and his son george v reigned as members of this house. [end]
+
+PREDICTION:
+victoria s brother had prince albert i. said they reigned from. in order to have worked out of what was now france germany from their house. the president is a child.
+
+============================================================================================================================================
+SOURCE:
+are not used to toy with one s food or with dishes in common.
+
+TARGET:
+are not used to toy with food or with the dishes in common. [end]
+
+PREDICTION:
+they can not have its water or and difficult dishes for other plants.
+
+============================================================================================================================================
+SOURCE:
+on july tagore and two companions began a four month tour of southeast asia visiting bali java kuala and singapore.
+
+TARGET:
+on july tagore and two went on a four month tour of southeast asia. they visited bali java lrb island rrb and singapore. [end]
+
+PREDICTION:
+many were found in hong kong where the aborigines originally julio bu de facto because it left of being a few days later became popular. this reason has also done all on his way to it. some other native american tribe are known from their main success he is located there. million immediately sds with two beautiful red markets alexander new york
+
+============================================================================================================================================
+SOURCE:
+it is the capital of the autonomous community of la formerly known as o province.
+
+TARGET:
+it is the capital of la o is in the valley. [end]
+
+PREDICTION:
+la was the capital. it is divided into its fifth district of saint paul meaning laubach as part province argentina.
+
+============================================================================================================================================
+SOURCE:
+is a municipality in the province of flemish brabant in flanders one of the three regions of belgium.
+
+TARGET:
+is a municipality located in the belgian province of flemish brabant. [end]
+
+PREDICTION:
+is a municipality located in those of edmonton spherical lived which kashmir three continents by the constituency lrb side of. rrb.
+
+============================================================================================================================================
+SOURCE:
+out of the twenty selected the eventual for the first launch were and because of their performance in training as well as their physical characteristics space was at a in the small and both men were rather
+
+TARGET:
+out of the twenty selected the for the first launch were and because of their performance in training as well as their physical well [end]
+
+PREDICTION:
+the rule of these two selected them appear today.
+
+============================================================================================================================================
+SOURCE:
+since his youth he had been of and military scouting and as part of their training showed his men how to survive in the
+
+TARGET:
+since his youth he was of and military [end]
+
+PREDICTION:
+because of his children he had been and military physicist. may often have their ideas about that time as much for the newspaper was.
+
+============================================================================================================================================
+SOURCE:
+most developing countries have abundant renewable energy resources including solar energy wind power energy and biomass as well as the ability to manufacture the relatively labor intensive systems that
+
+TARGET:
+most developing countries have good renewable energy resources including solar energy wind power energy and [end]
+
+PREDICTION:
+features countries are coal like solar energy wind material as well to onwards how the early sponsors climate wikipedia is popular with a lot of nuclear cells through air power lrb any hot low fuel or plant rrb. most other fuels must have sex and gold. however some developing europe use the vertical engineering fields that clients control environment weather. these places
+
+============================================================================================================================================
+SOURCE:
+lrb born july rrb is a russian professional ice hockey goaltender who is currently suspended from the nhl for refusing to report to the new york
+
+TARGET:
+lrb born july in now kazakhstan rrb is a professional ice hockey goaltender for the san jose sharks of the national hockey league. [end]
+
+PREDICTION:
+linus ke lrb born anniversary july died in london september may a rrb better one. professional world was signed for them and would go to the state of york s new york. he has been shot off one week after not having playing games as an emergency punk award again by defeating umaga on november at his first stand down. how money

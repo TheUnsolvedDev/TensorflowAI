@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+i don't see anything here.
+
+TARGET:
+j'y vois rien. [end]
+
+PREDICTION:
+je n'y vois rien.
+
+============================================================================================================================================
+SOURCE:
+your son is dating my daughter.
+
+TARGET:
+votre fils sort avec ma fille. [end]
+
+PREDICTION:
+ton fils sort avec ma fille.
+
+============================================================================================================================================
+SOURCE:
+my dream is to lead a quiet life in the country.
+
+TARGET:
+mon rêve est de vivre une vie tranquille à la campagne. [end]
+
+PREDICTION:
+mon homme est dans une vie
+
+============================================================================================================================================
+SOURCE:
+we've got to get you to a hospital.
+
+TARGET:
+il nous faut dans un hôpital. [end]
+
+PREDICTION:
+nous devons sortir pour un hôpital.
+
+============================================================================================================================================
+SOURCE:
+
+
+TARGET:
+! [end]
+
+PREDICTION:
+!
+
+============================================================================================================================================
+SOURCE:
+we have a lot of work ahead of us.
+
+TARGET:
+nous avons beaucoup de travail devant nous. [end]
+
+PREDICTION:
+nous avons bien parmi nous.
+
+============================================================================================================================================
+SOURCE:
+tom won't
+
+TARGET:
+tom ne pas de faim. [end]
+
+PREDICTION:
+tom ne va pas s'en
+
+============================================================================================================================================
+SOURCE:
+no one was present.
+
+TARGET:
+personne n'était présent. [end]
+
+PREDICTION:
+personne n'était que ceci.
+
+============================================================================================================================================
+SOURCE:
+he will return within hours.
+
+TARGET:
+il va revenir sous trois heures. [end]
+
+PREDICTION:
+il heures à heures.
+
+============================================================================================================================================
+SOURCE:
+the rich have many friends.
+
+TARGET:
+les ont de nombreux amis. [end]
+
+PREDICTION:
+les ont de nombreux amis.

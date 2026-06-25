@@ -1,0 +1,100 @@
+
+============================================================================================================================================
+SOURCE:
+can you come at
+
+TARGET:
+pouvez-vous passer à heures ? [end]
+
+PREDICTION:
+peux-tu à les cheveux ?
+
+============================================================================================================================================
+SOURCE:
+can i talk to you
+
+TARGET:
+est-ce que je peux te parler en privé ? [end]
+
+PREDICTION:
+est-ce que je voudrais te
+
+============================================================================================================================================
+SOURCE:
+i know it's important to you.
+
+TARGET:
+je sais que c'est important pour toi. [end]
+
+PREDICTION:
+j'ai déjà donné de toi.
+
+============================================================================================================================================
+SOURCE:
+while up, i bumped into another car and set off its alarm.
+
+TARGET:
+en faisant marche j'ai heurté une autre voiture et déclenché son [end]
+
+PREDICTION:
+quand j'ai mis de prendre une mais je suis en jours et ses autres.
+
+============================================================================================================================================
+SOURCE:
+what did you get hit with?
+
+TARGET:
+par quoi as-tu été frappée ? [end]
+
+PREDICTION:
+que tu es en colère ?
+
+============================================================================================================================================
+SOURCE:
+i have to leave early to catch the train.
+
+TARGET:
+je dois partir tôt pour attraper le train. [end]
+
+PREDICTION:
+j'ai l'air à travailler dans les yeux.
+
+============================================================================================================================================
+SOURCE:
+she tried to persuade him not to decline the offer.
+
+TARGET:
+elle essaya de le convaincre de ne pas refuser l'offre. [end]
+
+PREDICTION:
+elle a été allé de me faire pas à l'hôpital. il y se plait. c'est la tête.
+
+============================================================================================================================================
+SOURCE:
+what did i say yesterday?
+
+TARGET:
+qu'ai-je dit hier ? [end]
+
+PREDICTION:
+où m'a fait chez j'avais hier de ma ?
+
+============================================================================================================================================
+SOURCE:
+which is your pen?
+
+TARGET:
+lequel est ton stylo ? [end]
+
+PREDICTION:
+quelle est votre question ! c'est ?
+
+============================================================================================================================================
+SOURCE:
+i said i would help you.
+
+TARGET:
+j'ai dit que je [end]
+
+PREDICTION:
+j'ai vu que je toi.
