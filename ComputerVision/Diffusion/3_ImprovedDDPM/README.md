@@ -1,5 +1,9 @@
 # 3. ImprovedDDPM
 
+> **Current status:** architecture/configuration scaffold. The dataset and
+> training entrypoints contain explicit placeholders; no completed run is
+> claimed by this documentation.
+
 DDPM variant with learned variance prediction and classifier-free style conditioning support.
 
 ## What This Folder Implements

@@ -1,5 +1,9 @@
 # 2. DDPM
 
+> **Current status:** architecture/configuration scaffold. The dataset and
+> training entrypoints contain explicit placeholders; no completed run is
+> claimed by this documentation.
+
 Noise-prediction UNet diffusion baseline with ancestral sampling.
 
 ## What This Folder Implements

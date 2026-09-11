@@ -1,5 +1,9 @@
 # 9. ControlNet
 
+> **Current status:** architecture/configuration scaffold. The dataset and
+> training entrypoints contain explicit placeholders; no completed run is
+> claimed by this documentation.
+
 Latent diffusion with a local control branch conditioned on Canny-style edge maps.
 
 ## What This Folder Implements

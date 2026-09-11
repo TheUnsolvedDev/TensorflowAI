@@ -1,5 +1,9 @@
 # 1. DiffusionProbabilisticModels
 
+> **Current status:** architecture/configuration scaffold. `dataset.py` and
+> `train_and_test.py` contain explicit placeholder paths, so this is not a
+> verified end-to-end training workflow in the tracked checkout.
+
 Minimal trainable DDPM forward/reverse diffusion baseline with a compact convolutional denoiser.
 
 ## What This Folder Implements

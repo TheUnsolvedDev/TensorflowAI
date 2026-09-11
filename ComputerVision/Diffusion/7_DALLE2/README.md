@@ -1,5 +1,9 @@
 # 7. DALLE2
 
+> **Current status:** architecture/configuration scaffold. The dataset and
+> training entrypoints contain explicit placeholders; no completed run is
+> claimed by this documentation.
+
 CLIP-style local embedding alignment plus diffusion prior and decoder stages.
 
 ## What This Folder Implements

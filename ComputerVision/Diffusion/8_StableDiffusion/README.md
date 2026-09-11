@@ -1,5 +1,9 @@
 # 8. StableDiffusion
 
+> **Current status:** architecture/configuration scaffold. The dataset and
+> training entrypoints contain explicit placeholders; no completed run is
+> claimed by this documentation.
+
 Latent diffusion with a local VAE encoder/decoder, text encoder, and latent UNet.
 
 ## What This Folder Implements

@@ -1,17 +1,20 @@
-# Seq2Seq
+# 🔄 Sequence-to-Sequence Models
 
-Each model folder has an independent `BaseSeq2SeqDataset` plus concrete local
-adapters for WMT English-French, WMT English-German, ManyThings French-English,
-Cornell dialogue, CNN/DailyMail, and WikiLarge. Source records are reopened for
-vectorizer adaptation and every epoch; only compact vectorizer metadata is
-saved.
+← [NLP](../README.md) · [Repository](../../README.md)
 
-```bash
-cd 2_Seq2Seq_with_Attention
-bash run.sh manythings_english_french --smoke
-```
+The sequence-to-sequence folders explore encoder-decoder translation/generation
+mechanics with explicit TensorFlow architecture builders and local configuration
+files.
 
-The five implementations are basic encoder-decoder, attention, copy mechanism,
-coverage model, and Transformer. Multi-GPU uses memory growth plus NCCL
-`MirroredStrategy` when available. Do not use `run.sh` to infer GPU readiness:
-verify the visible device count and execute a bounded smoke run first.
+| Folder | Algorithm | Key source component | Dataset status |
+| --- | --- | --- | --- |
+| [`1_BasicEncoderDecoder`](1_BasicEncoderDecoder/README.md) | Recurrent encoder-decoder | `build_seq2seq_model` | Adapter contains a stub |
+| [`2_Seq2Seq_with_Attention`](2_Seq2Seq_with_Attention/README.md) | Cross-attention seq2seq | `build_cross_attention` | Adapter contains a stub |
+| [`3_CopyMechanism`](3_CopyMechanism/README.md) | Pointer-generator | `PointerGenerator` | Adapter contains a stub |
+| [`4_CoverageModel`](4_CoverageModel/README.md) | Coverage attention | `CoverageAttention` | Adapter contains a stub |
+| [`5_TransformerSeq2Seq`](5_TransformerSeq2Seq/README.md) | Transformer encoder-decoder | custom encoder/decoder layers | Adapter contains a stub |
+
+Configurations define local dataset roots, batch sizes, epochs, and learning
+rates. The model code is useful for tracing architecture construction, but the
+dataset layers need completion before the folders can be presented as complete
+end-to-end experiments.

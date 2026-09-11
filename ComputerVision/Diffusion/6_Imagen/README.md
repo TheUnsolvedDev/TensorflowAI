@@ -1,5 +1,9 @@
 # 6. Imagen
 
+> **Current status:** architecture/configuration scaffold. The dataset and
+> training entrypoints contain explicit placeholders; no completed run is
+> claimed by this documentation.
+
 Repo-scale multi-stage text-to-image diffusion with a base generator and super-resolution stage.
 
 ## What This Folder Implements

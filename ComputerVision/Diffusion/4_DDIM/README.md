@@ -1,5 +1,9 @@
 # 4. DDIM
 
+> **Current status:** architecture/configuration scaffold. The dataset and
+> training entrypoints contain explicit placeholders; no completed run is
+> claimed by this documentation.
+
 Deterministic denoising implicit sampler built on a DDPM-style denoiser.
 
 ## What This Folder Implements

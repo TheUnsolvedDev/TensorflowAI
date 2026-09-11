@@ -1,16 +1,22 @@
-# Word Embeddings
+# 🔤 Word Embeddings
 
-Every numbered folder is standalone. The gradient-trained folders use memory
-growth and `MirroredStrategy` with NCCL when multiple GPUs are visible; the
-matrix-only Co-Occurrence and PPMI-SVD demonstrations intentionally run as
-bounded local transformations rather than distributed gradient training.
+← [NLP](../README.md) · [Repository](../../README.md)
 
-Run from a model folder:
+These standalone folders move from explicit sparse representations to learned
+dense embeddings. Matrix-only demonstrations are deliberately bounded local
+transforms; learned models use TensorFlow/Keras models and their local training
+scripts.
 
-```bash
-bash run.sh shakespeare.txt --smoke
-```
+| Folder | Algorithm | Core operation | Status |
+| --- | --- | --- | --- |
+| [`1_OneHotEncoding`](1_OneHotEncoding/README.md) | One-hot baseline | Categorical vector representation | Source-backed |
+| [`2_CoOccurrenceMatrix`](2_CoOccurrenceMatrix/README.md) | Co-occurrence | Sparse count matrix | Source-backed |
+| [`3_PPMI_SVD`](3_PPMI_SVD/README.md) | PPMI + SVD | Reweighted matrix factorisation | Source-backed |
+| [`4_Word2Vec_CBOW`](4_Word2Vec_CBOW/README.md) | CBOW | Context-to-target prediction | Source-backed |
+| [`5_Word2Vec_SkipGram`](5_Word2Vec_SkipGram/README.md) | Skip-Gram | Target-to-context prediction | Source-backed |
+| [`6_GloVe`](6_GloVe/README.md) | GloVe | Weighted log-count regression | Source-backed |
+| [`7_FastText`](7_FastText/README.md) | FastText-style model | Subword-aware token representation | Source-backed |
 
-`1_OneHotEncoding`, `4_Word2Vec_CBOW`, `5_Word2Vec_SkipGram`, `6_GloVe`, and
-`7_FastText` produce model artifacts only after training. Corpus examples are
-read repeatedly from source; no `tf.data` or disk preprocessing cache is used.
+Run from a selected folder with its local command, for example
+`bash run.sh shakespeare.txt --smoke`. Corpus and output paths are local; no
+training metrics are retained as repository-wide benchmarks.

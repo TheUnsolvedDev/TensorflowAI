@@ -1,5 +1,9 @@
 # 5. GLIDE
 
+> **Current status:** architecture/configuration scaffold. The dataset and
+> training entrypoints contain explicit placeholders; no completed run is
+> claimed by this documentation.
+
 Text-conditioned diffusion with a local tokenizer and lightweight Transformer text encoder.
 
 ## What This Folder Implements

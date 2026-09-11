@@ -141,6 +141,17 @@ Supported conditioning modes in the code:
 
 This is the most expressive GAN implementation in the directory because it allows controlled generation rather than unconditional sampling.
 
+### 7–11. Additional implemented variants
+
+The remaining folders also contain source-backed `config.py`, `dataset.py`,
+`model.py`, and `train_and_test.py` workflows:
+
+- [CycleGAN](7_CycleGAN/README.md): unpaired two-domain translation with cycle consistency.
+- [StarGAN](8_StarGAN/README.md): multi-domain conditional translation.
+- [StyleGAN](9_StyleGAN/README.md): style-oriented generator and adversarial training path.
+- [SRGAN](10_SRGAN/README.md): super-resolution with weighted content and adversarial terms.
+- [ProgressiveGAN](11_ProgressiveGAN/README.md): staged/progressive image-generation workflow.
+
 ## Datasets supported in code
 
 Across these folders, the dataset loaders support combinations of:
@@ -168,6 +179,11 @@ Notes:
 | `4_WassersteinGAN` | Wasserstein critic + weight clipping | Wasserstein | No |
 | `5_WassersteinGANGP` | Gradient penalty instead of clipping | Wasserstein + GP | No |
 | `6_ConditionalGAN` | Label-conditioned generation | Wasserstein + GP style critic training | Yes |
+| `7_CycleGAN` | Unpaired domain translation | Adversarial + cycle consistency | Domain |
+| `8_StarGAN` | Multi-domain translation | Conditional adversarial | Domain |
+| `9_StyleGAN` | Style-oriented synthesis | Adversarial | No |
+| `10_SRGAN` | Image super-resolution | Content + adversarial | Input image |
+| `11_ProgressiveGAN` | Progressive synthesis | Adversarial | No |
 
 ## How to run
 
@@ -214,6 +230,8 @@ If you want to study the evolution of GAN training in this repo, the best order 
 4. `4_WassersteinGAN` to move from classifier-based discrimination to critic-based training
 5. `5_WassersteinGANGP` to see the more stable Wasserstein formulation
 6. `6_ConditionalGAN` to add controllable generation
+7. `7_CycleGAN` and `8_StarGAN` for domain translation
+8. `9_StyleGAN`, `10_SRGAN`, and `11_ProgressiveGAN` for specialised generation
 
 ## Notes on the current codebase
 

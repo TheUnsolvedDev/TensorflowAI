@@ -1,5 +1,9 @@
 # 10. ConsistencyModels
 
+> **Current status:** architecture/configuration scaffold. The dataset and
+> training entrypoints contain explicit placeholders; no completed run is
+> claimed by this documentation.
+
 Teacher-student consistency training for faster few-step sampling.
 
 ## What This Folder Implements
