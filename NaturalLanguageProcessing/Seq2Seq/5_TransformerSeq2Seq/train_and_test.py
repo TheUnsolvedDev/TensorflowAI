@@ -13,7 +13,6 @@ import datetime
 
 import numpy as np
 import tensorflow as tf
-import silence_tensorflow.auto
 import matplotlib.pyplot as plt
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
@@ -24,12 +23,15 @@ AUTOTUNE = tf.data.AUTOTUNE
 
 def setup_gpu(gpu_id):
     gpus = tf.config.list_physical_devices("GPU")
+    if 0 <= gpu_id < len(gpus):
+        tf.config.set_visible_devices(gpus[gpu_id], "GPU")
+        gpus = [gpus[gpu_id]]
     for gpu in gpus:
-        tf.config.experimental.set_memory_growth(gpu, True)
+        try: tf.config.experimental.set_memory_growth(gpu, True)
+        except RuntimeError: pass
     if gpu_id == -1:
         print("Using All GPUs")
     elif 0 <= gpu_id < len(gpus):
-        tf.config.set_visible_devices(gpus[gpu_id], "GPU")
         print(f"Using GPU {gpu_id}")
     else:
         print("Using CPU")
@@ -410,11 +412,19 @@ def main():
     parser.add_argument("--dataset", type=str, default="english_french")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--log_dir", type=str, default=None)
+    parser.add_argument("--epochs", type=int, default=EPOCHS)
+    parser.add_argument("--steps-per-epoch", type=int, default=None)
+    parser.add_argument("--validation-steps", type=int, default=None)
+    parser.add_argument("--smoke", action="store_true")
     args = parser.parse_args()
 
     setup_gpu(args.gpu)
-    strategy = tf.distribute.MirroredStrategy(
-        cross_device_ops=tf.distribute.NcclAllReduce())
+    if MIXED_PRECISION:
+        tf.keras.mixed_precision.set_global_policy("mixed_float16")
+    try:
+        strategy = tf.distribute.MirroredStrategy(cross_device_ops=tf.distribute.NcclAllReduce())
+    except (RuntimeError, ValueError):
+        strategy = tf.distribute.MirroredStrategy()
     print(f"Number Of Devices : {strategy.num_replicas_in_sync}")
 
     dataset_paths = {
@@ -442,6 +452,8 @@ def main():
     )
     print(train_config)
     train_ds, val_ds = dataset.load_data()
+    default_train_steps = dataset.get_steps_per_epoch(training=True)
+    default_validation_steps = dataset.get_steps_per_epoch(training=False)
 
     with strategy.scope():
 
@@ -460,8 +472,8 @@ def main():
 
         model.compile(
             optimizer=tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE, beta_1=0.9, beta_2=0.98, epsilon=1e-9),
-            loss=[masked_loss, None],
-            metrics=[[masked_accuracy], None],
+            loss=masked_loss,
+            metrics=[masked_accuracy],
         )
 
     model.summary(expand_nested=True, show_trainable=True)
@@ -495,8 +507,6 @@ def main():
                          max_length=train_config["target_max_length"]),
         PredictionLoggerGreedy(val_ds, dataset, log_dir,
                                max_length=train_config["target_max_length"]),
-        AttentionLogger(val_ds, dataset, log_dir,
-                        max_length=train_config["target_max_length"]),
         tf.keras.callbacks.ModelCheckpoint(filepath=get_best_weight_path(
             log_dir), monitor="val_loss", save_best_only=True, save_weights_only=True, verbose=1),
         tf.keras.callbacks.TensorBoard(log_dir=os.path.join(
@@ -507,10 +517,20 @@ def main():
             log_dir, "training_log.csv"), append=True)
     ]
 
+    train_steps = 20 if args.smoke else args.steps_per_epoch or default_train_steps
+    validation_steps = 5 if args.smoke else args.validation_steps or default_validation_steps
+    print(f"Steps per epoch: {train_steps}; validation steps: {validation_steps}")
+    # Repeating avoids distributed generator exhaustion; explicit counts retain
+    # one finite data pass per epoch unless the user overrides them.
+    fit_train_ds = train_ds.repeat()
+    fit_val_ds = val_ds.repeat()
+
     model.fit(
-        train_ds,
-        validation_data=val_ds,
-        epochs=EPOCHS, initial_epoch=start_epoch, callbacks=callbacks)
+        fit_train_ds,
+        validation_data=fit_val_ds,
+        epochs=1 if args.smoke else args.epochs, initial_epoch=start_epoch, callbacks=callbacks,
+        steps_per_epoch=train_steps,
+        validation_steps=validation_steps)
     model.save_weights(get_weight_path(log_dir))
     print("\nTraining Complete")
     evaluate_model(model, val_ds, dataset, log_dir)

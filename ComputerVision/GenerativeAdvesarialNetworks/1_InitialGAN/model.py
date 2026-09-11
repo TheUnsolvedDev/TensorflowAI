@@ -1,39 +1,9 @@
-import tensorflow as tf
-import matplotlib.pyplot as plt
-import os,sys
-import tqdm
+import sys
+
 import numpy as np
+import tensorflow as tf
+
 from config import *
-
-
-class MinibatchDiscrimination(tf.keras.layers.Layer):
-
-    def __init__(self, num_kernels=100, kernel_dim=5):
-        super().__init__()
-        self.num_kernels = num_kernels
-        self.kernel_dim = kernel_dim
-
-    def build(self, input_shape):
-        features = input_shape[-1]
-
-        self.T = self.add_weight(
-            shape=(features, self.num_kernels * self.kernel_dim),
-            initializer="glorot_uniform",
-            trainable=True,
-            name="T"
-        )
-
-    def call(self, x):
-        M = tf.matmul(x, self.T)
-        M = tf.reshape(M, (-1, self.num_kernels, self.kernel_dim))
-
-        M1 = tf.expand_dims(M, 3)
-        M2 = tf.expand_dims(tf.transpose(M, [1, 2, 0]), 0)
-
-        abs_diff = tf.reduce_sum(tf.abs(M1 - M2), axis=2)
-        c = tf.reduce_sum(tf.exp(-abs_diff), axis=2)
-
-        return tf.concat([x, c], axis=1)
 
 
 class NN_GAN(tf.keras.Model):
@@ -54,79 +24,60 @@ class NN_GAN(tf.keras.Model):
                 GENERATOR_LEARNING_RATE, beta_1=0.0, beta_2=0.9
             )
             self.discriminator_optimizer = tf.keras.optimizers.Adam(
-                DISCRIMINATOR_LEARNING_RATE)
+                DISCRIMINATOR_LEARNING_RATE
+            )
 
         self.generator.build(input_shape=(None, latent_dim[0]))
         self.discriminator.build(input_shape=(None, *input_shape))
         self.generator.summary()
         self.discriminator.summary()
-        
-    def dense_sn(self, units, use_bias=True):
-        return tf.keras.layers.SpectralNormalization(
-            tf.keras.layers.Dense(units, use_bias=use_bias)
-        )
 
     def build_generator(self):
-        import numpy as np
+        height, width, channels = self.input_shape
+        flat_dim = height * width * channels
 
-        H, W, C = self.input_shape
-        z = self.latent_dim[0]
-        D = H * W * C
-        n = max(2, int(np.log2(H)) - 2)
-        base = min(1024, max(64, D // 128))
-
-        inp = tf.keras.layers.Input((z,))
-        x = inp
-
-        for i in range(n):
-            units = base * (2 ** min(i, 3))
-            x = tf.keras.layers.Dense(units, use_bias=False)(x)
-            x = tf.keras.layers.BatchNormalization()(x)
-            x = tf.keras.layers.LeakyReLU()(x)
-
-        x = tf.keras.layers.Dense(D, activation='tanh')(x)
-        out = tf.keras.layers.Reshape((H, W, C))(x)
-
-        return tf.keras.Model(inp, out, name="generator")
-
+        inputs = tf.keras.layers.Input((self.latent_dim[0],))
+        x = tf.keras.layers.Dense(256, use_bias=False)(inputs)
+        x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
+        x = tf.keras.layers.Dense(512, use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
+        x = tf.keras.layers.Dense(1024, use_bias=False)(x)
+        x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
+        x = tf.keras.layers.Dense(flat_dim, activation="tanh")(x)
+        outputs = tf.keras.layers.Reshape((height, width, channels))(x)
+        return tf.keras.Model(inputs, outputs, name="generator")
 
     def build_discriminator(self):
-        import numpy as np
+        inputs = tf.keras.layers.Input(self.input_shape)
+        x = tf.keras.layers.Flatten()(inputs)
+        x = tf.keras.layers.Dense(512)(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
+        x = tf.keras.layers.Dropout(0.3)(x)
+        x = tf.keras.layers.Dense(256)(x)
+        x = tf.keras.layers.LeakyReLU(0.2)(x)
+        x = tf.keras.layers.Dropout(0.3)(x)
+        outputs = tf.keras.layers.Dense(1)(x)
+        return tf.keras.Model(inputs, outputs, name="discriminator")
 
-        H, W, C = self.input_shape
-        D = H * W * C
-
-        n = max(2, int(np.log2(H)) - 2)
-        base = min(512, max(32, D // 256))
-
-        inp = tf.keras.layers.Input((H, W, C))
-        x = tf.keras.layers.Flatten()(inp)
-
-        for i in range(n):
-            units = base * (2 ** min(i, 3))
-            x = self.dense_sn(units)(x)
-            x = tf.keras.layers.LeakyReLU()(x)
-            x = tf.keras.layers.Dropout(0.3)(x)
-
-        out = tf.keras.layers.Dense(1)(x)
-
-        return tf.keras.Model(inp, out, name="discriminator")
-    
     @tf.function
     def train_generator_step(self, noise):
         noise = tf.random.normal([self.global_batch_size, self.latent_dim[0]])
         with tf.GradientTape() as gen_tape:
             generated_images = self.generator(noise, training=True)
             fake_output = self.discriminator(generated_images, training=True)
-            gen_loss = self.cross_entropy(
-                tf.ones_like(fake_output), fake_output)
+            gen_loss = self.cross_entropy(tf.ones_like(fake_output), fake_output)
 
         gradients_of_generator = gen_tape.gradient(
-            gen_loss, self.generator.trainable_variables)
+            gen_loss, self.generator.trainable_variables
+        )
         self.generator_optimizer.apply_gradients(
-            zip(gradients_of_generator, self.generator.trainable_variables))
+            zip(gradients_of_generator, self.generator.trainable_variables)
+        )
         return gen_loss
-    
+
     @tf.function
     def train_discriminator_step(self, real_images):
         batch_size = tf.shape(real_images)[0]
@@ -137,32 +88,38 @@ class NN_GAN(tf.keras.Model):
             generated_images += tf.random.normal(tf.shape(generated_images), stddev=0.05)
             real_output = self.discriminator(real_images, training=True)
             fake_output = self.discriminator(generated_images, training=True)
-            disc_loss = (self.cross_entropy(tf.ones_like(real_output), real_output) +
-                         self.cross_entropy(tf.zeros_like(fake_output), fake_output)) 
+            disc_loss = (
+                self.cross_entropy(tf.ones_like(real_output), real_output)
+                + self.cross_entropy(tf.zeros_like(fake_output), fake_output)
+            )
 
         gradients_of_discriminator = disc_tape.gradient(
-            disc_loss, self.discriminator.trainable_variables)
+            disc_loss, self.discriminator.trainable_variables
+        )
         self.discriminator_optimizer.apply_gradients(
-            zip(gradients_of_discriminator, self.discriminator.trainable_variables))
+            zip(gradients_of_discriminator, self.discriminator.trainable_variables)
+        )
         return disc_loss
-    
+
     @tf.function
     def dist_generator_step(self, noise):
-        per_replica_gen_loss = self.strategy.run(
-            self.train_generator_step, args=(noise,))
+        per_replica_gen_loss = self.strategy.run(self.train_generator_step, args=(noise,))
         gen_loss = self.strategy.reduce(
-            tf.distribute.ReduceOp.MEAN, per_replica_gen_loss, axis=None)
+            tf.distribute.ReduceOp.MEAN, per_replica_gen_loss, axis=None
+        )
         return gen_loss
-    
+
     @tf.function
     def dist_discriminator_step(self, dataset_inputs):
         per_replica_disc_loss = self.strategy.run(
-            self.train_discriminator_step, args=(dataset_inputs,))
+            self.train_discriminator_step, args=(dataset_inputs,)
+        )
         disc_loss = self.strategy.reduce(
-            tf.distribute.ReduceOp.MEAN, per_replica_disc_loss, axis=None)
+            tf.distribute.ReduceOp.MEAN, per_replica_disc_loss, axis=None
+        )
         return disc_loss
 
-    def fit(self, dataset, epochs, initial_epoch=0, path='folder', callbacks=None):
+    def fit(self, dataset, epochs, initial_epoch=0, path="folder", callbacks=None):
         if callbacks is None:
             callbacks = []
         for callback in callbacks:
@@ -181,11 +138,13 @@ class NN_GAN(tf.keras.Model):
                 for _ in range(N_GEN_STEP):
                     gen_loss = self.dist_generator_step(noise)
                 print(
-                    f'\rEpoch [{step}/{epoch+1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}',end='')
+                    f"\rEpoch [{step}/{epoch + 1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}",
+                    end="",
+                )
                 sys.stdout.flush()
                 logs = {
                     "gen_loss": gen_loss,
-                    "disc_loss": disc_loss
+                    "disc_loss": disc_loss,
                 }
                 for callback in callbacks:
                     callback.on_train_batch_end(step, logs)
@@ -198,12 +157,13 @@ class NN_GAN(tf.keras.Model):
             callback.on_train_end()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     strategy = tf.distribute.MirroredStrategy(
-        cross_device_ops=tf.distribute.NcclAllReduce())
-    gan = NN_GAN(strategy=strategy, input_shape=(
-        IMAGE_SIZE[0]*4, IMAGE_SIZE[1]*4, 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
-    gan = NN_GAN(strategy=strategy, input_shape=(
-        IMAGE_SIZE[0], IMAGE_SIZE[1], 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
-    gan = NN_GAN(strategy=strategy, input_shape=(
-        28, 28, 3), latent_dim=(LATENT_DIM,), batch_size=BATCH_SIZE)
+        cross_device_ops=tf.distribute.NcclAllReduce()
+    )
+    NN_GAN(
+        strategy=strategy,
+        input_shape=(IMAGE_SIZE[0], IMAGE_SIZE[1], 3),
+        latent_dim=(LATENT_DIM,),
+        batch_size=BATCH_SIZE,
+    )

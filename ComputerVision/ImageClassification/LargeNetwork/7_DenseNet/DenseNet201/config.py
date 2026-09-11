@@ -1,5 +1,11 @@
-DATASET_PATH = '/home/shuvrajeet/Documents/Dataset/'
+"""Defaults for this standalone experiment; CLI flags override training settings."""
+import os
+DATASET_PATH = os.environ.get('DATASET_ROOT', '/home/shuvrajeet/Documents/Dataset')
 INPUT_SIZE = [224, 224, 3]
 BATCH_SIZE = 32
-EPOCHS = 10
-LEARNING_RATE = 1e-4
+EPOCHS = 20  # Default maximum; --epochs overrides this value.
+LEARNING_RATE = 0.0001
+MODEL_FN = 'densenet_model_201'
+MODEL_ID = '7_DenseNet__DenseNet201'
+MODEL_KIND = 'cnn'
+FROM_LOGITS = False

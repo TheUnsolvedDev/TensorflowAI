@@ -1,8 +1,11 @@
+"""Defaults for this standalone experiment; CLI flags override training settings."""
 import os
-
-DATASET_PATHS = ['/home/shuvrajeet/Documents/Dataset/', '/mnt/storage/da24d402/Documents/Dataset/','/storage/nas/da24d402/Documents/Dataset/']
-DATASET_PATH = next((p for p in DATASET_PATHS if os.path.isdir(p)), None)
+DATASET_PATH = os.environ.get('DATASET_ROOT', '/home/shuvrajeet/Documents/Dataset')
 INPUT_SIZE = [224, 224, 3]
-BATCH_SIZE = 64
-EPOCHS = 10
-LEARNING_RATE = 1e-4
+BATCH_SIZE = 32
+EPOCHS = 20  # Default maximum; --epochs overrides this value.
+LEARNING_RATE = 0.0001
+MODEL_FN = 'vgg13_B_model'
+MODEL_ID = '2_VGGNet__VGG13'
+MODEL_KIND = 'cnn'
+FROM_LOGITS = False

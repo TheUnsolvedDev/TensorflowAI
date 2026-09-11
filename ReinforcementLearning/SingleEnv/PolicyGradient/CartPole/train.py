@@ -4,7 +4,7 @@ import tensorflow as tf
 import gymnasium as gym
 import tqdm
 
-from agent import PolicyGradientAgent
+from reinforce import REINFORCEAgent
 from trajectory_buffer import TrajectoryBuffer
 from config import *
 
@@ -29,7 +29,7 @@ def make_env(record=False, episode_id=0):
 
 
 def train():
-    agent = PolicyGradientAgent()
+    agent = REINFORCEAgent()
 
     CHECKPOINT_DIR = "checkpoints"
     VIDEO_DIR = "videos"

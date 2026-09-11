@@ -1,163 +1,176 @@
+import os
+import shutil
+import tempfile
+
+import numpy as np
 import silence_tensorflow.auto
 import tensorflow as tf
-import numpy as np
-import os
 
 from config import *
 
 AUTOTUNE = tf.data.AUTOTUNE
+LARGE_IMAGE_DATASETS = {"celeba", "anime_faces", "bedroom"}
+VALID_SUFFIXES = (".jpg", ".jpeg", ".png", ".bmp", ".webp")
 
-
-class CelebADataset:
-    def __init__(self, train_size=0.8):
-        self.train_size = train_size
-        self.dataset_path = DATASET_PATH + 'celeba-dataset/'
-        self.image_dir = os.path.join(self.dataset_path, 'img_align_celeba')
-
-        self.image_locations = [
-            os.path.join(self.image_dir, x)
-            for x in os.listdir(self.image_dir)
-        ]
-
-        self.channels = 3
-
-    def prepare_dataset(self):
-        image_paths = np.array(self.image_locations)
-        np.random.shuffle(image_paths)
-
-        split = int(len(image_paths) * self.train_size)
-        train_data = image_paths[:split]
-        test_data = image_paths[split:]
-
-        return train_data, test_data
-
-
-class AnimeFacesDataset:
-    def __init__(self, train_size=0.8):
-        self.train_size = train_size
-        self.image_dir = DATASET_PATH + 'anime_face_images/'
-
-        self.image_locations = [
-            os.path.join(self.image_dir, x)
-            for x in os.listdir(self.image_dir)
-        ]
-
-        self.channels = 3
-
-    def prepare_dataset(self):
-        image_paths = np.array(self.image_locations)
-        np.random.shuffle(image_paths)
-
-        split = int(len(image_paths) * self.train_size)
-        train_data = image_paths[:split]
-        test_data = image_paths[split:]
-
-        return train_data, test_data
 
 class Dataset:
     def __init__(self):
-        self.mnist = tf.keras.datasets.mnist.load_data()
-        self.cifar10 = tf.keras.datasets.cifar10.load_data()
-        self.fashion_mnist = tf.keras.datasets.fashion_mnist.load_data()
-        self.cifar100 = tf.keras.datasets.cifar100.load_data()
-
         self.data_types = [
-            'cifar10',
-            'fashion_mnist',
-            'mnist',
-            'cifar100',
-            'celeba',
-            'anime_faces'
+            "cifar10",
+            "fashion_mnist",
+            "mnist",
+            "cifar100",
+            "celeba",
+            "anime_faces",
+            "bedroom",
         ]
 
         self.batch_size = BATCH_SIZE
         self.img_shape = IMAGE_SIZE
+        self.cache_root = os.path.join(
+            tempfile.gettempdir(),
+            "tensorflowai_gan_cache",
+            os.path.basename(os.path.dirname(__file__)),
+        )
+        self.train_options = tf.data.Options()
+        self.train_options.experimental_deterministic = not ENABLE_DATASET_NONDETERMINISM
+        self._builtin_datasets = {}
 
-    def process_images(self, image, decode=False, type='cifar10'):
-        if decode:
-            image = tf.io.read_file(image)
-            image = tf.image.decode_jpeg(image, channels=3)
+    def _get_builtin_dataset(self, dataset_name):
+        if dataset_name not in self._builtin_datasets:
+            loaders = {
+                "mnist": tf.keras.datasets.mnist.load_data,
+                "cifar10": tf.keras.datasets.cifar10.load_data,
+                "fashion_mnist": tf.keras.datasets.fashion_mnist.load_data,
+                "cifar100": tf.keras.datasets.cifar100.load_data,
+            }
+            self._builtin_datasets[dataset_name] = loaders[dataset_name]()
+        return self._builtin_datasets[dataset_name]
 
-        if type in ['cifar10', 'cifar100', 'mnist', 'fashion_mnist']:
-            image = tf.image.resize(image, self.img_shape)
+    def _list_image_files(self, image_dir, recursive=False):
+        image_paths = []
+        if recursive:
+            for root, _, filenames in os.walk(image_dir):
+                for filename in sorted(filenames):
+                    if filename.lower().endswith(VALID_SUFFIXES):
+                        image_paths.append(os.path.join(root, filename))
         else:
-            image = tf.image.resize(image, (IMAGE_SIZE[0]*4, IMAGE_SIZE[1]*4))
+            image_paths = [
+                os.path.join(image_dir, filename)
+                for filename in sorted(os.listdir(image_dir))
+                if filename.lower().endswith(VALID_SUFFIXES)
+            ]
+        return np.array(image_paths)
 
-        image = tf.cast(image, tf.float32)
-        image = (image - 127.5) / 127.5
+    def _target_shape(self, dataset_type):
+        if dataset_type in LARGE_IMAGE_DATASETS:
+            return (IMAGE_SIZE[0] * 4, IMAGE_SIZE[1] * 4)
+        return self.img_shape
 
+    def _decode_image(self, image_path):
+        image = tf.io.read_file(image_path)
+        image = tf.io.decode_image(image, channels=3, expand_animations=False)
+        image.set_shape([None, None, 3])
         return image
 
-    def build_dataset(self, data, decode=False, type='cifar10', shuffle=True):
-        ds = tf.data.Dataset.from_tensor_slices(data)
+    def process_images(self, image, decode=False, dataset_type="cifar10"):
+        if decode:
+            image = self._decode_image(image)
 
-        if shuffle:
-            ds = ds.shuffle(10000)
+        image = tf.image.resize(image, self._target_shape(dataset_type))
+        image = tf.cast(image, tf.float32)
+        return (image - 127.5) / 127.5
 
+    def _cache_path(self, dataset_type):
+        target_h, target_w = self._target_shape(dataset_type)
+        cache_dir = os.path.join(self.cache_root, dataset_type)
+        os.makedirs(cache_dir, exist_ok=True)
+        return os.path.join(cache_dir, f"images_{target_h}x{target_w}")
+
+    def cleanup_cache(self):
+        shutil.rmtree(self.cache_root, ignore_errors=True)
+
+    def build_dataset(self, images, decode=False, dataset_type="cifar10", shuffle=True):
+        ds = tf.data.Dataset.from_tensor_slices(images)
         ds = ds.map(
-            lambda x: self.process_images(x, decode=decode, type=type),
-            num_parallel_calls=AUTOTUNE
+            lambda image: self.process_images(
+                image,
+                decode=decode,
+                dataset_type=dataset_type,
+            ),
+            num_parallel_calls=AUTOTUNE,
         )
 
+        cache_mode = DECODE_CACHE_MODE if decode else ARRAY_CACHE_MODE
+        if cache_mode == "disk":
+            ds = ds.cache(self._cache_path(dataset_type))
+        elif cache_mode == "memory":
+            ds = ds.cache()
+
+        if shuffle:
+            ds = ds.shuffle(
+                SHUFFLE_BUFFER_SIZE,
+                reshuffle_each_iteration=True,
+            )
+            ds = ds.with_options(self.train_options)
+
         ds = ds.batch(self.batch_size)
-        ds = ds.prefetch(AUTOTUNE)
+        return ds.prefetch(AUTOTUNE)
 
-        return ds
-
-    def load_data(self, type='mnist'):
-
-        if type == 'mnist':
+    def _prepare_builtin_split(self, dataset_type):
+        if dataset_type == "mnist":
             self.channels = 1
-            (train_images, _), (test_images, _) = self.mnist
-
-            train_images = train_images.reshape(-1, 28, 28, 1)
-            test_images = test_images.reshape(-1, 28, 28, 1)
-
-            train_ds = self.build_dataset(train_images, decode=False, type=type)
-            test_ds = self.build_dataset(test_images, decode=False, type=type, shuffle=False)
-
-        elif type == 'cifar10':
+            (train_images, _), (test_images, _) = self._get_builtin_dataset("mnist")
+            return (
+                train_images.reshape(-1, 28, 28, 1),
+                test_images.reshape(-1, 28, 28, 1),
+            )
+        if dataset_type == "cifar10":
             self.channels = 3
-            (train_images, _), (test_images, _) = self.cifar10
-
-            train_ds = self.build_dataset(train_images, decode=False, type=type)
-            test_ds = self.build_dataset(test_images, decode=False, type=type, shuffle=False)
-
-        elif type == 'fashion_mnist':
+            (train_images, _), (test_images, _) = self._get_builtin_dataset("cifar10")
+            return train_images, test_images
+        if dataset_type == "fashion_mnist":
             self.channels = 1
-            (train_images, _), (test_images, _) = self.fashion_mnist
-
-            train_images = train_images.reshape(-1, 28, 28, 1)
-            test_images = test_images.reshape(-1, 28, 28, 1)
-
-            train_ds = self.build_dataset(train_images, decode=False, type=type)
-            test_ds = self.build_dataset(test_images, decode=False, type=type, shuffle=False)
-
-        elif type == 'cifar100':
+            (train_images, _), (test_images, _) = self._get_builtin_dataset("fashion_mnist")
+            return (
+                train_images.reshape(-1, 28, 28, 1),
+                test_images.reshape(-1, 28, 28, 1),
+            )
+        if dataset_type == "cifar100":
             self.channels = 3
-            (train_images, _), (test_images, _) = self.cifar100
+            (train_images, _), (test_images, _) = self._get_builtin_dataset("cifar100")
+            return train_images, test_images
+        raise ValueError(f"Unknown builtin dataset type: {dataset_type}")
 
-            train_ds = self.build_dataset(train_images, decode=False, type=type)
-            test_ds = self.build_dataset(test_images, decode=False, type=type, shuffle=False)
+    def load_data(self, dataset_type="mnist", include_test=False):
+        test_ds = None
 
-        elif type == 'celeba':
+        if dataset_type in {"mnist", "cifar10", "fashion_mnist", "cifar100"}:
+            train_images, test_images = self._prepare_builtin_split(dataset_type)
+            train_ds = self.build_dataset(train_images, dataset_type=dataset_type)
+            if include_test:
+                test_ds = self.build_dataset(
+                    test_images,
+                    dataset_type=dataset_type,
+                    shuffle=False,
+                )
+        elif dataset_type == "celeba":
             self.channels = 3
-            dataset = CelebADataset()
-            train_data, test_data = dataset.prepare_dataset()
-
-            train_ds = self.build_dataset(train_data, decode=True, type=type)
-            test_ds = self.build_dataset(test_data, decode=True, type=type, shuffle=False)
-
-        elif type == 'anime_faces':
+            image_dir = os.path.join(DATASET_PATH, "celeba-dataset", "img_align_celeba")
+            images = self._list_image_files(image_dir)
+            train_ds = self.build_dataset(images, decode=True, dataset_type=dataset_type)
+        elif dataset_type == "anime_faces":
             self.channels = 3
-            dataset = AnimeFacesDataset()
-            train_data, test_data = dataset.prepare_dataset()
-
-            train_ds = self.build_dataset(train_data, decode=True, type=type)
-            test_ds = self.build_dataset(test_data, decode=True, type=type, shuffle=False)
-
+            image_dir = os.path.join(DATASET_PATH, "anime_face_images")
+            images = self._list_image_files(image_dir)
+            train_ds = self.build_dataset(images, decode=True, dataset_type=dataset_type)
+        elif dataset_type == "bedroom":
+            self.channels = 3
+            image_dir = os.path.join(DATASET_PATH, "bedroom")
+            images = self._list_image_files(image_dir, recursive=True)
+            train_ds = self.build_dataset(images, decode=True, dataset_type=dataset_type)
         else:
-            raise ValueError(f"Unknown dataset type: {type}")
+            raise ValueError(f"Unknown dataset type: {dataset_type}")
 
         return train_ds, test_ds, self.channels
 
@@ -165,11 +178,17 @@ class Dataset:
 if __name__ == "__main__":
     dataset = Dataset()
 
-    for type in dataset.data_types:
-        print(f"\nTesting: {type}")
+    for dataset_type in dataset.data_types:
+        print(f"\nTesting: {dataset_type}")
 
-        train_ds, test_ds, channels = dataset.load_data(type)
+        train_ds, test_ds, channels = dataset.load_data(dataset_type, include_test=True)
 
         for image in train_ds.take(1):
-            print("Shape:", image.shape)
+            print("Train shape:", image.shape)
+            print("Channels:", channels)
             break
+
+        if test_ds is not None:
+            for image in test_ds.take(1):
+                print("Test shape:", image.shape)
+                break

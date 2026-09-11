@@ -1,4 +1,3 @@
-import silence_tensorflow.auto
 import tensorflow as tf
 import numpy as np
 
@@ -7,7 +6,8 @@ from config import *
 
 def Residual_Unit(input, in_channel, out_channel, stride=1):
     shortcut = input
-    shortcut = tf.keras.layers.Conv2D(out_channel, (1, 1), padding='same', strides=stride)(shortcut)
+    if stride != 1 or input.shape[-1] != out_channel:
+        shortcut = tf.keras.layers.Conv2D(out_channel, (1, 1), padding='same', strides=stride)(shortcut)
     x = tf.keras.layers.BatchNormalization()(input)
     x = tf.keras.layers.Activation('relu')(x)
     x = tf.keras.layers.Conv2D(in_channel, (1, 1))(x)
@@ -27,8 +27,9 @@ def Attention_Block(input, skip):
     out_channel = in_channel
     for _ in range(p):
         x = Residual_Unit(input, in_channel, out_channel)
+    Trunck_output = x
     for _ in range(t):
-        Trunck_output = Residual_Unit(x, in_channel, out_channel)
+        Trunck_output = Residual_Unit(Trunck_output, in_channel, out_channel)
     x = tf.keras.layers.MaxPooling2D(padding='same')(x)
     for _ in range(r):
         x = Residual_Unit(x, in_channel, out_channel)
@@ -42,11 +43,11 @@ def Attention_Block(input, skip):
         for i in range(skip - 1):
             for _ in range(r):
                 x = Residual_Unit(x, in_channel, out_channel)
-            x = tf.keras.layers.UpSampling2D()(x)
+            x = tf.keras.layers.Resizing(int(skip_connections[i].shape[1]), int(skip_connections[i].shape[2]))(x)
             x = tf.keras.layers.Add()([x, skip_connections[i]])
     for i in range(r):
         x = Residual_Unit(x, in_channel, out_channel)
-    x = tf.keras.layers.UpSampling2D()(x)
+    x = tf.keras.layers.Resizing(int(Trunck_output.shape[1]), int(Trunck_output.shape[2]))(x)
     x = tf.keras.layers.Conv2D(out_channel, (1, 1))(x)
     x = tf.keras.layers.Conv2D(out_channel, (1, 1))(x)
     soft_mask_output = tf.keras.layers.Activation('sigmoid')(x)
@@ -56,9 +57,10 @@ def Attention_Block(input, skip):
         output = Residual_Unit(output, in_channel, out_channel)
     return output
 
-def residual_attentionnet92_model(input_shape=[32, 32, 3], num_classes=10, dropout=None, regularization=0.01):
+def residual_attentionnet92_model(input_shape=[32, 32, 3], num_classes=10, dropout=None, regularization=0.0001):
     inputs = tf.keras.layers.Input(shape=input_shape)
-    x = tf.keras.layers.Conv2D(32, kernel_size=3, padding='same')(inputs)
+    x = tf.keras.layers.Rescaling(1. / 255)(inputs)
+    x = tf.keras.layers.Conv2D(32, kernel_size=3, padding='same')(x)
     x = tf.keras.layers.BatchNormalization()(x)
     x = tf.keras.layers.Activation('relu')(x)
     x = tf.keras.layers.MaxPooling2D(pool_size=2, padding='same')(x)
@@ -87,11 +89,11 @@ def residual_attentionnet92_model(input_shape=[32, 32, 3], num_classes=10, dropo
     x = Residual_Unit(x, in_channel, out_channel)
     x = Residual_Unit(x, in_channel, out_channel)
 
-    x = tf.keras.layers.AveragePooling2D(pool_size=4, strides=1)(x)
+    x = tf.keras.layers.GlobalAveragePooling2D()(x)
     x = tf.keras.layers.Flatten()(x)
     if dropout:
         x = tf.keras.layers.Dropout(dropout)(x)
-    outputs = tf.keras.layers.Dense(num_classes, kernel_regularizer=tf.keras.regularizers.l2(regularization), activation='softmax')(x)
+    outputs = tf.keras.layers.Dense(num_classes, kernel_regularizer=tf.keras.regularizers.l2(regularization), activation='softmax', dtype='float32')(x)
 
     model = tf.keras.Model(inputs=inputs, outputs=outputs)
     return model

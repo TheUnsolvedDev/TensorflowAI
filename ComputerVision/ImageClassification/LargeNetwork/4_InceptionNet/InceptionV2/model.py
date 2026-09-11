@@ -1,4 +1,3 @@
-import silence_tensorflow.auto
 import tensorflow as tf
 import numpy as np
 
@@ -58,7 +57,7 @@ def inception_block_c(x):
 def inception2_model(input_shape=[299, 299, 3], num_classes=10):
     # input layer
     inputs = tf.keras.layers.Input(shape=input_shape)
-    x = tf.keras.layers.Lambda(lambda x: x / 255.)(inputs)
+    x = tf.keras.layers.Rescaling(1. / 255)(inputs)
     
     x = conv_block(x, 32, (3, 3), strides=2, padding='valid')
     x = conv_block(x, 32, (3, 3), strides=1, padding='valid')
@@ -80,7 +79,7 @@ def inception2_model(input_shape=[299, 299, 3], num_classes=10):
     
     x = tf.keras.layers.GlobalAveragePooling2D()(x)
     x = tf.keras.layers.Dropout(0.4)(x)
-    outputs = tf.keras.layers.Dense(num_classes, activation='softmax')(x)
+    outputs = tf.keras.layers.Dense(num_classes, activation='softmax', dtype='float32')(x)
     return tf.keras.Model(inputs, outputs)
 
 if __name__ == "__main__":

@@ -83,6 +83,12 @@ def setup_interrupt_handler(model, log_dir):
     signal.signal(signal.SIGINT, handler)
 
 
+def should_run_periodic_callback(callback, epoch, frequency):
+    current_epoch = epoch + 1
+    total_epochs = callback.params.get("epochs", current_epoch)
+    return current_epoch % frequency == 0 or current_epoch == total_epochs
+
+
 # =========================
 # CALLBACKS
 # =========================
@@ -113,6 +119,9 @@ class WeightSaveCallback(tf.keras.callbacks.Callback):
         self.log_dir = log_dir
 
     def on_epoch_end(self, epoch, logs=None):
+        if not should_run_periodic_callback(self, epoch, SAVE_EVERY_N_EPOCHS):
+            return
+
         gen_path, disc_path = get_weight_paths(self.log_dir)
 
         self.model_ref.generator.save_weights(gen_path)
@@ -123,25 +132,21 @@ class WeightSaveCallback(tf.keras.callbacks.Callback):
 
 
 class SampleImageCallback(tf.keras.callbacks.Callback):
-    def __init__(self, model, log_dir, latent_dim, num_classes, label_mode="onehot", multilabel_dim=None):
+    def __init__(self, model, log_dir, latent_dim, condition_spec):
         self.model_ref = model
         self.fixed_noise = np.random.normal(0, 1, (8, latent_dim))
-        self.label_mode = label_mode
         self.latent_dim = latent_dim
-        base = np.arange(16) % num_classes
-
-        if label_mode == "multilabel":
-            if multilabel_dim is None: raise ValueError("multilabel_dim required")
-            labels = (np.random.rand(16, multilabel_dim) > 0.5).astype(np.float32)
-        else:
-            labels = np.eye(num_classes)[base].astype(np.float32)
-
-        self.labels = tf.convert_to_tensor(labels)
+        self.condition_spec = condition_spec
+        self.sample_labels = self.condition_spec.make_sample_labels(16)
+        self.labels = tf.convert_to_tensor(self.sample_labels, dtype=tf.float32)
 
         self.img_dir = os.path.join(log_dir, "samples")
         os.makedirs(self.img_dir, exist_ok=True)
 
     def on_epoch_end(self, epoch, logs=None):
+        if not should_run_periodic_callback(self, epoch, SAMPLE_EVERY_N_EPOCHS):
+            return
+
         random_noise = np.random.normal(0, 1, (8, self.latent_dim))
         self.noise = tf.convert_to_tensor(
             np.concatenate([self.fixed_noise, random_noise], axis=0),
@@ -155,10 +160,10 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
             r, c = i // 4, i % 4
             ax[r, c].imshow(gen[i])
             ax[r, c].axis("off")
-
-            if self.label_mode != "multilabel":
-                label = int(np.argmax(self.labels[i].numpy()))
-                ax[r, c].set_title(str(label), fontsize=8)
+            ax[r, c].set_title(
+                self.condition_spec.format_label(self.sample_labels[i]),
+                fontsize=6
+            )
 
         plt.tight_layout()
         plt.savefig(os.path.join(self.img_dir, f"epoch_{epoch+1}.png"))
@@ -193,26 +198,16 @@ class GANLRScheduler(tf.keras.callbacks.Callback):
             self.wait = 0
 
 class ModeCollapseCallback(tf.keras.callbacks.Callback):
-    def __init__(self, latent_dim, num_classes, num_samples=32, threshold=0.05, label_mode="onehot", multilabel_dim=None):
+    def __init__(self, latent_dim, condition_spec, num_samples=32, threshold=0.05):
         super().__init__()
         self.latent_dim = latent_dim
         self.num_samples = num_samples
         self.threshold = threshold
-        self.label_mode = label_mode
-        self.num_classes = num_classes
-        self.multilabel_dim = multilabel_dim
+        self.condition_spec = condition_spec
 
         self.fixed_noise = tf.random.normal([num_samples, latent_dim])
-
-        base = np.arange(num_samples) % num_classes
-
-        if label_mode == "multilabel":
-            if multilabel_dim is None: raise ValueError("multilabel_dim required")
-            labels = (np.random.rand(num_samples, multilabel_dim) > 0.5).astype(np.float32)
-        else:
-            labels = np.eye(num_classes)[base].astype(np.float32)
-
-        self.fixed_labels = tf.convert_to_tensor(labels)
+        labels = self.condition_spec.make_sample_labels(num_samples)
+        self.fixed_labels = tf.convert_to_tensor(labels, dtype=tf.float32)
 
     @tf.function
     def compute_diversity_graph(self, generator, noise, labels):
@@ -224,6 +219,9 @@ class ModeCollapseCallback(tf.keras.callbacks.Callback):
         return tf.reduce_sum(dists * mask) / tf.reduce_sum(mask)
 
     def on_epoch_end(self, epoch, logs=None):
+        if not should_run_periodic_callback(self, epoch, SAMPLE_EVERY_N_EPOCHS):
+            return
+
         diversity = self.compute_diversity_graph(
             self.model.generator,
             self.fixed_noise,
@@ -240,17 +238,10 @@ class ModeCollapseCallback(tf.keras.callbacks.Callback):
         if logs is not None:
             logs["diversity"] = diversity_val
 
-def save_final_grid(model, log_dir, latent_dim, num_classes, label_mode="onehot", multilabel_dim=None):
+def save_final_grid(model, log_dir, latent_dim, condition_spec):
     noise = tf.random.normal([16, latent_dim])
-    base = np.arange(16) % num_classes
-
-    if label_mode == "multilabel":
-        if multilabel_dim is None: raise ValueError("multilabel_dim required")
-        labels = (np.random.rand(16, multilabel_dim) > 0.5).astype(np.float32)
-    else:
-        labels = np.eye(num_classes)[base].astype(np.float32)
-
-    labels = tf.convert_to_tensor(labels)
+    sample_labels = condition_spec.make_sample_labels(16)
+    labels = tf.convert_to_tensor(sample_labels, dtype=tf.float32)
 
     gen = model.generator((noise, labels), training=False)
     gen = ((gen + 1.0) / 2.0).numpy()
@@ -260,10 +251,10 @@ def save_final_grid(model, log_dir, latent_dim, num_classes, label_mode="onehot"
         r, c = i // 4, i % 4
         ax[r, c].imshow(gen[i])
         ax[r, c].axis("off")
-
-        if label_mode != "multilabel":
-            label = int(np.argmax(labels[i].numpy()))
-            ax[r, c].set_title(f"class {label}", fontsize=8)
+        ax[r, c].set_title(
+            condition_spec.format_label(sample_labels[i]),
+            fontsize=6
+        )
 
     plt.tight_layout()
     plt.savefig(os.path.join(log_dir, "final_grid.png"))
@@ -278,12 +269,13 @@ def main():
     parser.add_argument('--gpu', type=int, default=-1)
     parser.add_argument('--type', type=str, default='cifar10')
     parser.add_argument('--resume', action='store_true')
+    parser.add_argument('--continue', dest='resume', action='store_true')
     args = parser.parse_args()
 
     setup_gpu(args.gpu)
 
     dataset = Dataset()
-    train_ds, ch = dataset.load_data(args.type)
+    train_ds, ch, condition_spec = dataset.load_data(args.type)
 
     strategy = tf.distribute.MirroredStrategy(
         cross_device_ops=tf.distribute.NcclAllReduce())
@@ -293,15 +285,9 @@ def main():
     log_dir = f"logs/{args.type}/CondGAN"
     os.makedirs(log_dir, exist_ok=True)
 
-    num_classes = {
-        "mnist": 10,
-        "fashion_mnist": 10,
-        "cifar10": 10,
-        "cifar100": 100,
-        "celeba": 40
-    }.get(args.type, 10)
+    num_classes = condition_spec.label_dim
 
-    if args.type in ['celeba', 'anime_faces']:
+    if args.type == 'celeba':
         latent_dim = LATENT_DIM * 4
         model = Cond_GAN(
             strategy=strategy,
@@ -327,36 +313,30 @@ def main():
         print(f"Resuming from epoch {start_epoch}")
 
     setup_interrupt_handler(model, log_dir)
-    label_mode = "multilabel" if args.type == 'celeba' else "onehot"
-    multilabel_dim = 40 if args.type == 'celeba' else None
 
     callbacks = [
         EpochTracker(model),
         GANLogger(log_dir),
         WeightSaveCallback(model, log_dir),
-        SampleImageCallback(model, log_dir, latent_dim,
-                            num_classes, label_mode, multilabel_dim),
+        SampleImageCallback(model, log_dir, latent_dim, condition_spec),
         GANLRScheduler(
             model.generator_optimizer,
             model.discriminator_optimizer
         ),
-        ModeCollapseCallback(
-            latent_dim,
-            num_classes,
-            label_mode=label_mode,
-            multilabel_dim=multilabel_dim
-        )
+        ModeCollapseCallback(latent_dim, condition_spec)
     ]
 
-    model.fit(
-        train_ds,
-        epochs=EPOCHS,
-        initial_epoch=start_epoch,
-        path=f"{args.type}/CondGAN",
-        callbacks=callbacks
-    )
-
-    save_final_grid(model, log_dir, latent_dim, num_classes, label_mode, multilabel_dim)
+    try:
+        model.fit(
+            train_ds,
+            epochs=EPOCHS,
+            initial_epoch=start_epoch,
+            path=f"{args.type}/CondGAN",
+            callbacks=callbacks
+        )
+        save_final_grid(model, log_dir, latent_dim, condition_spec)
+    finally:
+        dataset.cleanup_cache()
 
 
 if __name__ == "__main__":

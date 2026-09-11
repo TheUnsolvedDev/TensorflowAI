@@ -1,5 +1,11 @@
-DATASET_PATH = '../../../../dataset_clf/'
+"""Defaults for this standalone experiment; CLI flags override training settings."""
+import os
+DATASET_PATH = os.environ.get('DATASET_ROOT', '/home/shuvrajeet/Documents/Dataset')
 INPUT_SIZE = [224, 224, 3]
-BATCH_SIZE = 16
-EPOCHS = 2
-LEARNING_RATE = 0.001
+BATCH_SIZE = 32
+EPOCHS = 20  # Default maximum; --epochs overrides this value.
+LEARNING_RATE = 0.0001
+MODEL_FN = 'residual_attentionnet92_model'
+MODEL_ID = '8_ResidualAttentionNet__ResidualAttentionNet92'
+MODEL_KIND = 'cnn'
+FROM_LOGITS = False

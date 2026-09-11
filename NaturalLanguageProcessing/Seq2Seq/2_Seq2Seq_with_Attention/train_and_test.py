@@ -13,7 +13,6 @@ import datetime
 
 import numpy as np
 import tensorflow as tf
-import silence_tensorflow.auto
 import matplotlib.pyplot as plt
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
@@ -24,12 +23,15 @@ AUTOTUNE = tf.data.AUTOTUNE
 
 def setup_gpu(gpu_id):
     gpus = tf.config.list_physical_devices("GPU")
+    if 0 <= gpu_id < len(gpus):
+        tf.config.set_visible_devices(gpus[gpu_id], "GPU")
+        gpus = [gpus[gpu_id]]
     for gpu in gpus:
-        tf.config.experimental.set_memory_growth(gpu, True)
+        try: tf.config.experimental.set_memory_growth(gpu, True)
+        except RuntimeError: pass
     if gpu_id == -1:
         print("Using All GPUs")
     elif 0 <= gpu_id < len(gpus):
-        tf.config.set_visible_devices(gpus[gpu_id], "GPU")
         print(f"Using GPU {gpu_id}")
     else:
         print("Using CPU")
@@ -182,7 +184,7 @@ class PredictionLogger(tf.keras.callbacks.Callback):
                 [0]*((self.max_length-1)-len(decoder_input))
             padded_decoder_input = tf.constant(
                 [padded_decoder_input], dtype=tf.int32)
-            predictions, _ = self.model(
+            predictions = self.model(
                 [encoder_input, padded_decoder_input], training=False)
             next_token_logits = predictions[:, len(decoder_input)-1, :]
             next_token = self.sample_next_token(next_token_logits, used_tokens)
@@ -245,7 +247,7 @@ class PredictionLoggerGreedy(tf.keras.callbacks.Callback):
                 [0] * ((self.max_length - 1) - len(decoder_input))
             padded_decoder_input = tf.constant(
                 [padded_decoder_input], dtype=tf.int32)
-            predictions, _ = self.model(
+            predictions = self.model(
                 [encoder_input, padded_decoder_input], training=False)
             next_token_logits = predictions[:, len(decoder_input) - 1, :]
             next_token = self.sample_next_token(next_token_logits)
@@ -296,8 +298,9 @@ class PredictionLoggerGreedy(tf.keras.callbacks.Callback):
 
 class AttentionLogger(tf.keras.callbacks.Callback):
 
-    def __init__(self, val_ds, dataset, log_dir, max_length=TARGET_MAX_LENGTH):
+    def __init__(self, attention_model, val_ds, dataset, log_dir, max_length=TARGET_MAX_LENGTH):
         super().__init__()
+        self.attention_model = attention_model
         self.val_ds = val_ds
         self.dataset = dataset
         self.log_dir = log_dir
@@ -314,7 +317,7 @@ class AttentionLogger(tf.keras.callbacks.Callback):
                 [0] * ((self.max_length - 1) - len(decoder_input))
             padded_decoder_input = tf.constant(
                 [padded_decoder_input], dtype=tf.int32)
-            predictions, attention_scores = self.model(
+            predictions, attention_scores = self.attention_model(
                 [encoder_input, padded_decoder_input], training=False)
             next_token_logits = predictions[:, len(decoder_input) - 1, :]
             next_token = int(tf.argmax(next_token_logits[0]).numpy())
@@ -409,11 +412,19 @@ def main():
     parser.add_argument("--dataset", type=str, default="english_french")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--log_dir", type=str, default=None)
+    parser.add_argument("--epochs", type=int, default=EPOCHS)
+    parser.add_argument("--steps-per-epoch", type=int, default=None)
+    parser.add_argument("--validation-steps", type=int, default=None)
+    parser.add_argument("--smoke", action="store_true")
     args = parser.parse_args()
 
     setup_gpu(args.gpu)
-    strategy = tf.distribute.MirroredStrategy(
-        cross_device_ops=tf.distribute.NcclAllReduce())
+    if MIXED_PRECISION:
+        tf.keras.mixed_precision.set_global_policy("mixed_float16")
+    try:
+        strategy = tf.distribute.MirroredStrategy(cross_device_ops=tf.distribute.NcclAllReduce())
+    except (RuntimeError, ValueError):
+        strategy = tf.distribute.MirroredStrategy()
     print(f"Number Of Devices : {strategy.num_replicas_in_sync}")
 
     dataset_paths = {
@@ -441,6 +452,8 @@ def main():
     )
     print(train_config)
     train_ds, val_ds = dataset.load_data()
+    default_train_steps = dataset.get_steps_per_epoch(training=True)
+    default_validation_steps = dataset.get_steps_per_epoch(training=False)
 
     with strategy.scope():
 
@@ -455,12 +468,13 @@ def main():
             num_encoder=train_config["num_encoder"],
             num_decoder=train_config["num_decoder"]
         )
+        attention_model = build_attention_inference_model(model)
 
         model.compile(
             optimizer=tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE),
-            loss=[masked_loss, None],
-            metrics=[[masked_accuracy], None],
-            jit_compile=True
+            loss=masked_loss,
+            metrics=[masked_accuracy],
+            jit_compile=False
         )
 
     model.summary(expand_nested=True, show_trainable=True)
@@ -494,7 +508,7 @@ def main():
                          max_length=train_config["target_max_length"]),
         PredictionLoggerGreedy(val_ds, dataset, log_dir,
                                max_length=train_config["target_max_length"]),
-        AttentionLogger(val_ds, dataset, log_dir,
+        AttentionLogger(attention_model, val_ds, dataset, log_dir,
                         max_length=train_config["target_max_length"]),
         tf.keras.callbacks.ModelCheckpoint(filepath=get_best_weight_path(
             log_dir), monitor="val_loss", save_best_only=True, save_weights_only=True, verbose=1),
@@ -506,10 +520,20 @@ def main():
             log_dir, "training_log.csv"), append=True)
     ]
 
+    train_steps = 20 if args.smoke else args.steps_per_epoch or default_train_steps
+    validation_steps = 5 if args.smoke else args.validation_steps or default_validation_steps
+    print(f"Steps per epoch: {train_steps}; validation steps: {validation_steps}")
+    # Repeating avoids distributed generator exhaustion; explicit counts retain
+    # one finite data pass per epoch unless the user overrides them.
+    fit_train_ds = train_ds.repeat()
+    fit_val_ds = val_ds.repeat()
+
     model.fit(
-        train_ds,
-        validation_data=val_ds,
-        epochs=EPOCHS, initial_epoch=start_epoch, callbacks=callbacks)
+        fit_train_ds,
+        validation_data=fit_val_ds,
+        epochs=1 if args.smoke else args.epochs, initial_epoch=start_epoch, callbacks=callbacks,
+        steps_per_epoch=train_steps,
+        validation_steps=validation_steps)
     model.save_weights(get_weight_path(log_dir))
     print("\nTraining Complete")
     evaluate_model(model, val_ds, dataset, log_dir)

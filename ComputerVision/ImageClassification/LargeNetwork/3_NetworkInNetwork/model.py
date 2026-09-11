@@ -8,15 +8,15 @@ def nin_model(input_shape=[32, 32, 3], num_classes=10, ksize=3):
 
     def ninconv(x, k, channels, name):
         x = tf.keras.layers.Conv2D(filters=channels[1], kernel_size=k, padding='same',
-                                   kernel_initializer=initializer, name=f"nin{name}_1")(x)
+                                   kernel_initializer='he_normal', name=f"nin{name}_1")(x)
         x = tf.keras.layers.BatchNormalization(name=f"nin{name}_1_bn")(x)
         x = tf.keras.layers.Activation(elu)(x)
         x = tf.keras.layers.Conv2D(filters=channels[2], kernel_size=1, padding='same',
-                                   kernel_initializer=initializer, name=f"nin{name}_2")(x)
+                                   kernel_initializer='he_normal', name=f"nin{name}_2")(x)
         x = tf.keras.layers.BatchNormalization(name=f"nin{name}_2_bn")(x)
         x = tf.keras.layers.Activation(elu)(x)
         x = tf.keras.layers.Conv2D(filters=channels[3], kernel_size=1, padding='same',
-                                   kernel_initializer=initializer, name=f"nin{name}_3")(x)
+                                   kernel_initializer='he_normal', name=f"nin{name}_3")(x)
         x = tf.keras.layers.BatchNormalization(name=f"nin{name}_3_bn")(x)
         x = tf.keras.layers.Activation(elu)(x)
         return x
@@ -28,15 +28,16 @@ def nin_model(input_shape=[32, 32, 3], num_classes=10, ksize=3):
         y = ninconv(y, ksize, channels, name=f"{name}_2")
         if x.shape[-1] != y.shape[-1]:
             sc = tf.keras.layers.Conv2D(filters=outchannel, kernel_size=1, padding='same',
-                                        kernel_initializer=initializer, name=f"{name}_sc")(x)
+                                        kernel_initializer='he_normal', name=f"{name}_sc")(x)
             sc = tf.keras.layers.BatchNormalization(name=f"{name}_sc_bn")(sc)
             sc = tf.keras.layers.Activation(elu)(sc)
             x = sc
         out = tf.keras.layers.Add()([x, y])
         return out
 
+    normalized = tf.keras.layers.Rescaling(1. / 255)(inputs)
     x = tf.keras.layers.Conv2D(filters=16, kernel_size=3, padding='same',
-                               kernel_initializer=initializer, name="conv1")(inputs)
+                               kernel_initializer='he_normal', name="conv1")(normalized)
     x = tf.keras.layers.BatchNormalization(name="conv1_bn")(x)
     x = tf.keras.layers.Activation(elu)(x)
     x = tf.keras.layers.MaxPool2D(pool_size=2, strides=2)(x)
@@ -50,5 +51,6 @@ def nin_model(input_shape=[32, 32, 3], num_classes=10, ksize=3):
 
     x = tf.keras.layers.GlobalAveragePooling2D()(x)
 
+    x = tf.keras.layers.Activation('linear', dtype='float32')(x)
     model = tf.keras.Model(inputs=inputs, outputs=x)
     return model

@@ -1,13 +1,52 @@
-*.pyc
-*.v2
-*.Identifier
-*.h5
-*.weights
-*.h5
-*.h5
-logs/**
+# Python
+__pycache__/
+*.py[cod]
+
+# Local environments and editor files
+.venv/
+venv/
+.env
+.idea/
+.vscode/
+
+# Generated experiment output
+**/logs/
+**/results/
+**/outputs/
+**/runs/
+**/cache/
+**/checkpoints/
+**/wandb/
+**/debug_binary/
 videos/
 **/videos/
-**/images/**/GAN/
-**/images/**/outputs/
-**/GAN/
+*.log
+*.wandb
+*.tfevents.*
+
+# Generated figures and model artifacts
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.tiff
+*.h5
+*.keras
+*.weights
+*.ckpt
+*.index
+*.data-*-of-*
+*.tflite
+*.onnx
+*.pt
+*.pth
+*.pkl
+*.npz
+*.npy
+
+# RedditStory generated data, training runs, and samples
+NaturalLanguageProcessing/Project/RedditStory/artifacts/
+NaturalLanguageProcessing/Project/RedditStory/eval/
+NaturalLanguageProcessing/Project/RedditStory/generations/

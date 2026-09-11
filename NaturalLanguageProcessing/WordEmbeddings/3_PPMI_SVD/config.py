@@ -1,0 +1,13 @@
+DATASET_ROOT = "/home/shuvrajeet/Documents/Dataset"
+CORPUS = "shakespeare.txt"
+VOCAB_SIZE = 2000
+WINDOW_SIZE = 2
+BATCH_SIZE = 256
+EMBEDDING_DIM = 128
+EPOCHS = 3
+LEARNING_RATE = 1e-3
+SEED = 42
+MIXED_PRECISION = False
+SHUFFLE_BUFFER = 8192
+LOG_DIR = "./artifacts"
+MAX_COOC_PAIRS = 250000

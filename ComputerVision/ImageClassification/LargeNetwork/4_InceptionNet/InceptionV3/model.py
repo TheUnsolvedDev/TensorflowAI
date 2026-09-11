@@ -1,4 +1,3 @@
-import silence_tensorflow.auto
 import tensorflow as tf
 import numpy as np
 
@@ -387,7 +386,7 @@ class InceptionModule_5(tf.keras.layers.Layer):
 
 def inception3_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], num_classes=10, aux_logits=False):
     inputs = tf.keras.layers.Input(shape=input_shape)
-    x = tf.keras.layers.Lambda(lambda x: x / 255.)(inputs)
+    x = tf.keras.layers.Rescaling(1. / 255)(inputs)
     # Preprocessing (example: normalization)
     x = Preprocess()(x)
 
@@ -414,12 +413,11 @@ def inception3_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], 
     x = InceptionModule_5()(x)
 
     # Final layers
-    x = tf.keras.layers.AvgPool2D(pool_size=(
-        6, 6), strides=1, padding="valid")(x)
+    x = tf.keras.layers.GlobalAveragePooling2D()(x)
     x = tf.keras.layers.Dropout(rate=0.2)(x)
     x = tf.keras.layers.Flatten()(x)
     main_output = tf.keras.layers.Dense(
-        units=num_classes, activation='linear')(x)
+        units=num_classes, activation='linear', dtype='float32')(x)
 
     # Output
     outputs = [main_output, aux_output] if aux_logits else main_output

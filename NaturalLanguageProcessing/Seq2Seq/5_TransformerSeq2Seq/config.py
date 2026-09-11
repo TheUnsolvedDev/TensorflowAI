@@ -9,6 +9,7 @@ EPOCHS = 35
 LEARNING_RATE = 1e-4
 CHECKPOINT_DIR = "./checkpoints"
 LOG_DIR = "./logs"
+MIXED_PRECISION = False
 
 D_MODEL = 128
 NUM_HEADS = 4

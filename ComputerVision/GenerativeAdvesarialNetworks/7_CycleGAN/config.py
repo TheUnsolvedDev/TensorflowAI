@@ -1,0 +1,21 @@
+import os
+
+DATASET_PATHS = ['/home/shuvrajeet/Documents/Dataset/', '/mnt/storage/da24d402/Documents/Dataset/']
+DATASET_PATH = next((p for p in DATASET_PATHS if os.path.isdir(p)), None)
+print(f"Using dataset path: {DATASET_PATH}")
+
+IMAGE_SIZE = (32, 32)
+BATCH_SIZE = 16
+EPOCHS = 50
+GENERATOR_LEARNING_RATE = 2e-4
+DISCRIMINATOR_LEARNING_RATE = 2e-4
+LAMBDA_CYCLE = 10.0
+LAMBDA_IDENTITY = 5.0
+CYCLEGAN_RES_BLOCKS = 6
+ARRAY_CACHE_MODE = "memory"
+DECODE_CACHE_MODE = "disk"
+CACHE_DIR = "cache"
+SHUFFLE_BUFFER_SIZE = 10000
+ENABLE_DATASET_NONDETERMINISM = True
+SAVE_EVERY_N_EPOCHS = 5
+SAMPLE_EVERY_N_EPOCHS = 5

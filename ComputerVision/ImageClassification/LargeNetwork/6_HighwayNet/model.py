@@ -1,4 +1,3 @@
-import silence_tensorflow.auto
 import tensorflow as tf
 import numpy as np
 
@@ -28,7 +27,7 @@ class HighwayBlock(tf.keras.layers.Layer):
 
 def highway_net_model(input_shape = [INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], num_classes=10, num_layers=3, t_bias=-2.0):
     inputs = tf.keras.layers.Input(shape=input_shape)
-    x = tf.keras.layers.Lambda(lambda x: x / 255.0)(inputs)
+    x = tf.keras.layers.Rescaling(1. / 255)(inputs)
 
     x = tf.keras.layers.Flatten()(x) 
     x = tf.keras.layers.Dense(50)(x)  
@@ -36,7 +35,7 @@ def highway_net_model(input_shape = [INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]
     for _ in range(num_layers):
         x = HighwayBlock(50, t_bias=t_bias)(x)
 
-    outputs = tf.keras.layers.Dense(num_classes, activation='softmax')(x)
+    outputs = tf.keras.layers.Dense(num_classes, activation='softmax', dtype='float32')(x)
 
     return tf.keras.Model(inputs=inputs, outputs=outputs)
 

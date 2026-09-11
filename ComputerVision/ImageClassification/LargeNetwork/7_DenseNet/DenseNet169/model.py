@@ -1,4 +1,3 @@
-import silence_tensorflow.auto
 import tensorflow as tf
 import numpy as np
 
@@ -42,14 +41,14 @@ def transition_block(net_in, theta, dropout_rate, weight_decay):
     return net
 
 
-def densenet_model_169(input_shape=(INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]), num_classes=10, K=64, theta=0.5, num_blocks=[6, 12, 32, 32], dropout_rate=0.4, weight_decay=1e-4):
+def densenet_model_169(input_shape=(INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]), num_classes=10, K=32, theta=0.5, num_blocks=[6, 12, 32, 32], dropout_rate=0.1, weight_decay=1e-4):
     if theta <= 0.0 or theta > 1.0:
         raise Exception('Compression factor must be > 0 and <= 1.0')
-    if dropout_rate <= 0.0 or dropout_rate > 1.0:
+    if dropout_rate < 0.0 or dropout_rate > 1.0:
         raise Exception('Drop rate must be > 0 and <= 1.0')
 
     inputs = tf.keras.layers.Input(shape=input_shape)
-    net = tf.keras.layers.Lambda(lambda x: x/255)(inputs)
+    net = tf.keras.layers.Rescaling(1. / 255)(inputs)
 
     net = tf.keras.layers.Conv2D(K,(7, 7), (2, 2), use_bias=False, padding='same',
                                  kernel_initializer='he_normal',
@@ -63,7 +62,7 @@ def densenet_model_169(input_shape=(INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2])
     net = dense_block(net,num_blocks[-1],K,dropout_rate,weight_decay)
 
     net = tf.keras.layers.GlobalAveragePooling2D()(net)
-    outputs = tf.keras.layers.Dense(num_classes, activation='softmax')(net)
+    outputs = tf.keras.layers.Dense(num_classes, activation='softmax', dtype='float32')(net)
     model = tf.keras.models.Model(inputs, outputs)
     return model
 

@@ -66,7 +66,17 @@ def build_seq2seq_model(source_vocab_size, target_vocab_size, source_max_length=
         encoder_outputs=encoder_outputs, decoder_outputs=decoder_outputs, decoder_units=decoder_units)
     decoder_outputs = tf.keras.layers.Dense(
         target_vocab_size, activation="softmax", name="output_projection")(decoder_context)
-    return tf.keras.Model(inputs=[encoder_inputs, decoder_inputs], outputs=[decoder_outputs, attention_scores], name="attention_seq2seq_model")
+    return tf.keras.Model(inputs=[encoder_inputs, decoder_inputs], outputs=decoder_outputs, name="attention_seq2seq_model")
+
+
+def build_attention_inference_model(model):
+    """Expose cross-attention scores without changing the training outputs."""
+    _, attention_scores = model.get_layer("cross_attention").output
+    return tf.keras.Model(
+        inputs=model.inputs,
+        outputs=[model.output, attention_scores],
+        name=f"{model.name}_attention_inference"
+    )
 
 
 if __name__ == "__main__":
@@ -101,5 +111,4 @@ if __name__ == "__main__":
 
     outputs = model([encoder_input, decoder_input])
 
-    print("\nOutput Shape :", outputs[0].shape)
-    print("\nOutput Shape :", outputs[1].shape)
+    print("\nOutput Shape :", outputs.shape)

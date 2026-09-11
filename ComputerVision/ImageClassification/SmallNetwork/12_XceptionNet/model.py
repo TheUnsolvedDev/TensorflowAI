@@ -93,7 +93,7 @@ def exit_flow(tensor,output_shape):
 
     return x
 
-def model_function(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], num_classes=10):
+def xception_net_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], num_classes=10):
     inputs = tf.keras.layers.Input(shape=input_shape)
     x = tf.keras.layers.Lambda(lambda x: x/255.0)(inputs)
     x = entry_flow(x)

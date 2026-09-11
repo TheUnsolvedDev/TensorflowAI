@@ -150,7 +150,7 @@ def build_transformer_seq2seq_model(source_vocab_size, target_vocab_size, source
 
     outputs = tf.keras.layers.Dense(target_vocab_size, activation="softmax", name="output_projection")(decoder_outputs)
 
-    return tf.keras.Model(inputs=[encoder_inputs, decoder_inputs], outputs=[outputs, attention_scores], name="transformer_seq2seq")
+    return tf.keras.Model(inputs=[encoder_inputs, decoder_inputs], outputs=outputs, name="transformer_seq2seq")
 
 
 if __name__ == "__main__":
@@ -167,6 +167,4 @@ if __name__ == "__main__":
 
     outputs = model([encoder_input, decoder_input])
 
-    print("\nToken Output Shape :", outputs[0].shape)
-
-    print("\nAttention Shape :", outputs[1].shape)
+    print("\nToken Output Shape :", outputs.shape)

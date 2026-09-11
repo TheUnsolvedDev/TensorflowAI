@@ -1,7 +1,7 @@
 import gymnasium as gym
 import tensorflow as tf
 
-from agent import PolicyGradientAgent
+from critic_agent import PolicyGradientAgent
 from config import *
 
 

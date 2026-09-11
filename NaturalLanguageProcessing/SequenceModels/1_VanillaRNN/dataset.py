@@ -1,228 +1,111 @@
-# dataset.py
-
-import tensorflow as tf
-import pandas as pd
-import numpy as np
-import random
-import re
+"""Streaming text-classification datasets with folder-local corpus adapters."""
+import csv
+import hashlib
 import os
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
-
+import re
+import tensorflow as tf
+from config import *
 
 AUTOTUNE = tf.data.AUTOTUNE
+_URL = re.compile(r"http\S+")
+_SPACE = re.compile(r"\s+")
 
 
 class BaseTextDataset:
+    def __init__(self, dataset_path, batch_size=BATCH_SIZE, max_length=MAX_LENGTH, vocab_size=VOCAB_SIZE,
+                 validation_split=VALIDATION_SPLIT, seed=SEED, lowercase=LOWERCASE):
+        self.dataset_path, self.batch_size, self.max_length = dataset_path, batch_size, max_length
+        self.vocab_size, self.validation_split, self.seed, self.lowercase = vocab_size, validation_split, seed, lowercase
+        self.vectorizer = None; self.label_to_id = {}
 
-    def __init__(self, dataset_path, batch_size=64, max_length=256, vocab_size=20000, validation_split=0.1, seed=42, lowercase=True):
-        self.dataset_path = dataset_path
-        self.batch_size = batch_size
-        self.max_length = max_length
-        self.vocab_size = vocab_size
-        self.validation_split = validation_split
-        self.seed = seed
-        self.lowercase = lowercase
+    def clean_text(self, value):
+        value = _URL.sub(" ", str(value))
+        if self.lowercase: value = value.lower()
+        return _SPACE.sub(" ", value).strip()
 
-        self.texts = []
-        self.labels = []
+    def iter_records(self):
+        raise NotImplementedError
 
-        self.vectorizer = None
+    def prepare_labels(self):
+        labels = sorted({label for _, label in self.iter_records()}, key=str)
+        if not labels: raise ValueError(f"No valid records in {self.dataset_path}")
+        self.label_to_id = {label: index for index, label in enumerate(labels)}
 
-        self.label2idx = {}
-        self.idx2label = {}
+    def _is_validation(self, text):
+        digest = hashlib.blake2b(f"{self.seed}\0{text}".encode("utf-8", "ignore"), digest_size=8).digest()
+        return int.from_bytes(digest, "big") / 2**64 < self.validation_split
 
-        random.seed(seed)
-        np.random.seed(seed)
-        tf.random.set_seed(seed)
+    def _text_stream(self, validation):
+        for text, _ in self.iter_records():
+            if bool(self._is_validation(text)) == bool(validation): yield text
 
-    def clean_text(self, text):
-        if self.lowercase:
-            text = text.lower()
-        text = re.sub(r"http\S+", " ", text)
-        text = re.sub(r"[^a-zA-Z0-9\s]", " ", text)
-        text = re.sub(r"\s+", " ", text)
-        return text.strip()
+    def prepare_vectorizer(self, name):
+        path = f"text_vectorizer_{name}.keras"
+        if os.path.exists(path):
+            self.vectorizer = tf.keras.models.load_model(path).layers[0]; print(f"Loaded vocabulary: {path}"); return
+        self.vectorizer = tf.keras.layers.TextVectorization(max_tokens=self.vocab_size, output_mode="int", output_sequence_length=self.max_length, standardize=None)
+        print("Adapting vocabulary from raw training records...")
+        data = tf.data.Dataset.from_generator(lambda: self._text_stream(False), output_signature=tf.TensorSpec((), tf.string)).batch(1024)
+        self.vectorizer.adapt(data)
+        wrapper = tf.keras.Sequential([self.vectorizer]); wrapper(tf.constant(["warmup"])); wrapper.save(path)
 
-    def build_vectorizer(self):
-        self.vectorizer = tf.keras.layers.TextVectorization(
-            max_tokens=self.vocab_size, output_mode="int", output_sequence_length=self.max_length, standardize=None)
-        self.vectorizer.adapt(
-            tf.data.Dataset.from_tensor_slices(self.texts).batch(1024))
+    def _examples(self, validation):
+        for text, label in self.iter_records():
+            if bool(self._is_validation(text)) == bool(validation): yield text, self.label_to_id[label]
 
-    def save_vectorizer(self, name=None):
-        save_path = os.path.join(f"text_vectorizer_{name}.keras")
-        model = tf.keras.Sequential([self.vectorizer])
-        model(tf.constant(["test"]))
-        model.save(save_path)
+    def _encode(self, text, label):
+        return tf.ensure_shape(self.vectorizer(text), [self.max_length]), label
 
-    def load_vectorizer(self, name=None):
-        save_path = os.path.join(f"text_vectorizer_{name}.keras")
-        model = tf.keras.models.load_model(save_path)
-        self.vectorizer = model.layers[0]
-
-    def prepare_vectorizer(self, name=None):
-        save_path = os.path.join(f"text_vectorizer_{name}.keras")
-        if os.path.exists(save_path):
-            print('loading')
-            self.load_vectorizer(name)
-        else:
-            print('building')
-            self.build_vectorizer()
-            self.save_vectorizer(name)
-
-    def split_dataset(self):
-        indices = np.arange(len(self.texts))
-        np.random.shuffle(indices)
-        texts = np.array(self.texts, dtype=object)[indices]
-        labels = np.array(self.labels, dtype=np.int32)[indices]
-        val_size = int(len(texts)*self.validation_split)
-        x_train = texts[val_size:]
-        y_train = labels[val_size:]
-        x_val = texts[:val_size]
-        y_val = labels[:val_size]
-        return (x_train, y_train), (x_val, y_val)
-
-    def encode_text(self, text):
-        return self.vectorizer(tf.constant([text])).numpy()[0]
+    def build_tf_dataset(self, training):
+        ds = tf.data.Dataset.from_generator(lambda: self._examples(not training), output_signature=(tf.TensorSpec((), tf.string), tf.TensorSpec((), tf.int32)))
+        if training: ds = ds.shuffle(8192, seed=self.seed, reshuffle_each_iteration=True)
+        options = tf.data.Options(); options.experimental_distribute.auto_shard_policy = tf.data.experimental.AutoShardPolicy.DATA
+        return ds.map(self._encode, num_parallel_calls=AUTOTUNE, deterministic=not training).with_options(options).batch(
+            self.batch_size, drop_remainder=training).prefetch(AUTOTUNE)
 
     def decode_tokens(self, tokens):
         vocab = self.vectorizer.get_vocabulary()
-        words = [vocab[token]
-                 for token in tokens if token != 0 and token < len(vocab)]
-        return " ".join(words)
-
-    def encode(self, text, label):
-        return self.vectorizer(text), label
-
-    def build_tf_dataset(self, texts, labels, training=False):
-        ds = tf.data.Dataset.from_tensor_slices((texts, labels))
-        if training:
-            ds = ds.shuffle(len(texts), seed=self.seed,
-                            reshuffle_each_iteration=True)
-        ds = ds.map(self.encode, num_parallel_calls=AUTOTUNE)
-        ds = ds.batch(self.batch_size).cache()
-        ds = ds.prefetch(AUTOTUNE)
-        return ds
-
-    def get_vocab_size(self):
-        return len(self.vectorizer.get_vocabulary())
-
-    def get_num_classes(self):
-        return len(self.label2idx)
+        return " ".join(vocab[int(token)] for token in tokens if int(token) and int(token) < len(vocab))
+    def get_vocab_size(self): return len(self.vectorizer.get_vocabulary())
+    def get_num_classes(self): return len(self.label_to_id)
 
 
 class AGNewsDataset(BaseTextDataset):
-    def load_data(self):
-        texts = []
-        labels = []
-        for file_name in ["train.csv", "test.csv"]:
-            df = pd.read_csv(os.path.join(self.dataset_path, file_name))
-            texts.extend([self.clean_text(text) for text in (
-                df["Title"]+" "+df["Description"]).tolist()])
-            labels.extend((df["Class Index"]-1).tolist())
-        self.texts = texts
-        self.labels = labels
-        unique_labels = sorted(set(labels))
-        self.label2idx = {label: idx for idx,
-                          label in enumerate(unique_labels)}
-        self.idx2label = {idx: label for label, idx in self.label2idx.items()}
-        self.labels = [self.label2idx[label] for label in labels]
+    def iter_records(self):
+        for filename in ("train.csv", "test.csv"):
+            path = os.path.join(self.dataset_path, filename)
+            with open(path, newline="", encoding="utf-8", errors="replace") as handle:
+                for row in csv.DictReader(handle):
+                    text = self.clean_text(f"{row.get('Title', '')} {row.get('Description', '')}")
+                    if text: yield text, row["Class Index"]
 
 
 class DBPediaDataset(BaseTextDataset):
-    def load_data(self):
-        texts = []
-        labels = []
-        for file_name in ["DBPEDIA_train.csv", "DBPEDIA_val.csv"]:
-            df=pd.read_csv(os.path.join(self.dataset_path,file_name))
-            file_texts=df["text"].astype(str).tolist()
-            file_labels=df["l1"].astype(str).tolist()
-            texts.extend([self.clean_text(text) for text in file_texts])
-            labels.extend(file_labels)
-        unique_labels=sorted(set(labels))
-        self.label2idx={label:idx for idx,label in enumerate(unique_labels)}
-        self.idx2label={idx:label for label,idx in self.label2idx.items()}
-        self.texts=texts
-        self.labels=[self.label2idx[label] for label in labels]
+    def iter_records(self):
+        for filename in ("DBPEDIA_train.csv", "DBPEDIA_val.csv", "DBPEDIA_test.csv"):
+            path = os.path.join(self.dataset_path, filename)
+            if not os.path.exists(path): continue
+            with open(path, newline="", encoding="utf-8", errors="replace") as handle:
+                for row in csv.DictReader(handle):
+                    text, label = self.clean_text(row.get("text", "")), row.get("l1", "")
+                    if text and label: yield text, label
 
 
 class IMDBDataset(BaseTextDataset):
-    def load_data(self):
-        df = pd.read_csv(os.path.join(self.dataset_path, "IMDB_Dataset.csv"))
-        self.texts = [self.clean_text(text) for text in df["review"].tolist()]
-        self.labels = [1 if label ==
-                       "positive" else 0 for label in df["sentiment"].tolist()]
-        unique_labels = sorted(set(self.labels))
-        self.label2idx = {label: idx for idx,
-                          label in enumerate(unique_labels)}
-        self.idx2label = {idx: label for label, idx in self.label2idx.items()}
-        self.labels = [self.label2idx[label] for label in self.labels]
+    def iter_records(self):
+        with open(os.path.join(self.dataset_path, "IMDB_Dataset.csv"), newline="", encoding="utf-8", errors="replace") as handle:
+            for row in csv.DictReader(handle):
+                text, label = self.clean_text(row.get("review", "")), row.get("sentiment", "").lower()
+                if text and label in ("positive", "negative"): yield text, label
 
 
 class Dataset:
-    def __init__(self, dataset_name, dataset_path, batch_size=64, max_length=256, vocab_size=20000, validation_split=0.1, seed=42, lowercase=True):
-        datasets = {
-            "ag_news": AGNewsDataset,
-            "dbpedia": DBPediaDataset,
-            "imdb": IMDBDataset
-        }
-        if dataset_name.lower() not in datasets:
-            raise ValueError(f"Unsupported dataset: {dataset_name}")
-        self.name = dataset_name.lower()
-        self.dataset = datasets[dataset_name.lower()](dataset_path=dataset_path, batch_size=batch_size, max_length=max_length,
-                                                      vocab_size=vocab_size, validation_split=validation_split, seed=seed, lowercase=lowercase)
-
+    _types = {"ag_news": AGNewsDataset, "dbpedia": DBPediaDataset, "imdb": IMDBDataset}
+    def __init__(self, dataset_name, dataset_path, **kwargs):
+        try: implementation = self._types[dataset_name.lower()]
+        except KeyError as error: raise ValueError(f"Unsupported dataset {dataset_name}; choose from {sorted(self._types)}") from error
+        self.name = dataset_name.lower(); self.dataset = implementation(dataset_path, **kwargs)
     def load_data(self):
-        self.dataset.load_data()
-        self.dataset.prepare_vectorizer(self.name)
-        (x_train, y_train), (x_val, y_val) = self.dataset.split_dataset()
-        train_ds = self.dataset.build_tf_dataset(
-            x_train, y_train, training=True)
-        val_ds = self.dataset.build_tf_dataset(x_val, y_val)
-        return train_ds, val_ds
-
-    def encode_text(self, text):
-        return self.dataset.encode_text(text)
-
-    def decode_tokens(self, tokens):
-        return self.dataset.decode_tokens(tokens)
-
-    def get_vocab_size(self):
-        return self.dataset.get_vocab_size()
-
-    def get_num_classes(self):
-        return self.dataset.get_num_classes()
-
-
-if __name__ == "__main__":
-
-    dataset = Dataset(dataset_name="ag_news",
-                      dataset_path="/home/shuvrajeet/Documents/Dataset/ag_news")
-    dataset2 = Dataset(dataset_name='dbpedia',
-                       dataset_path='/home/shuvrajeet/Documents/Dataset/dbpedia/')
-    dataset3 = Dataset(dataset_name='imdb',
-                       dataset_path='/home/shuvrajeet/Documents/Dataset/imdb')
-
-    train_ds, val_ds = dataset.load_data()
-    train_ds, val_ds = dataset2.load_data()
-    train_ds, val_ds = dataset3.load_data()
-    print("Vocab Size:", dataset.get_vocab_size())
-    print("Num Classes:", dataset.get_num_classes())
-    
-    print("Vocab Size:", dataset2.get_vocab_size())
-    print("Num Classes:", dataset2.get_num_classes())
-    
-    print("Vocab Size:", dataset3.get_vocab_size())
-    print("Num Classes:", dataset3.get_num_classes())
-
-    sample_text = "Apple launches new AI model for mobile devices"
-    encoded = dataset.encode_text(sample_text)
-    decoded = dataset.decode_tokens(encoded)
-
-    print("\nOriginal Text:\n", sample_text)
-    print("\nEncoded Tokens:\n", encoded)
-    print("\nDecoded Text:\n", decoded)
-
-    for x, y in train_ds.take(1):
-        print("\nBatch Input Shape:", x.shape)
-        print("Batch Label Shape:", y.shape)
+        self.dataset.prepare_labels(); self.dataset.prepare_vectorizer(self.name)
+        return self.dataset.build_tf_dataset(True), self.dataset.build_tf_dataset(False)
+    def __getattr__(self, name): return getattr(self.dataset, name)

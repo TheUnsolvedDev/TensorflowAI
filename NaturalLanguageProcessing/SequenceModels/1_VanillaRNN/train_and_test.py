@@ -2,7 +2,6 @@
 from config import *
 from dataset import *
 from model import *
-import silence_tensorflow.auto
 import tensorflow as tf
 import argparse
 import signal
@@ -14,11 +13,15 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
 def setup_gpu(gpu_id):
     gpus = tf.config.list_physical_devices("GPU")
-    [tf.config.experimental.set_memory_growth(g, True) for g in gpus]
+    if 0 <= gpu_id < len(gpus):
+        tf.config.set_visible_devices(gpus[gpu_id], "GPU")
+        gpus = [gpus[gpu_id]]
+    for gpu in gpus:
+        try: tf.config.experimental.set_memory_growth(gpu, True)
+        except RuntimeError: pass
     if gpu_id == -1:
         print("Using All GPUs")
     elif 0 <= gpu_id < len(gpus):
-        tf.config.set_visible_devices(gpus[gpu_id], "GPU")
         print(f"Using GPU {gpu_id}")
     else:
         print("Using CPU")
@@ -159,11 +162,19 @@ def main():
     parser.add_argument("--gpu", type=int, default=-1)
     parser.add_argument("--dataset", type=str, default="ag_news")
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--epochs", type=int, default=EPOCHS)
+    parser.add_argument("--steps-per-epoch", type=int, default=None)
+    parser.add_argument("--validation-steps", type=int, default=None)
+    parser.add_argument("--smoke", action="store_true")
     args = parser.parse_args()
 
     setup_gpu(args.gpu)
-    strategy = tf.distribute.MirroredStrategy(
-        cross_device_ops=tf.distribute.NcclAllReduce())
+    if MIXED_PRECISION:
+        tf.keras.mixed_precision.set_global_policy("mixed_float16")
+    try:
+        strategy = tf.distribute.MirroredStrategy(cross_device_ops=tf.distribute.NcclAllReduce())
+    except (RuntimeError, ValueError):
+        strategy = tf.distribute.MirroredStrategy()
     print(f"Number Of Devices: {strategy.num_replicas_in_sync}")
 
     dataset_path = f"{DATASET_ROOT}/{args.dataset}"
@@ -195,8 +206,10 @@ def main():
         PredictionLogger(val_ds, dataset, log_dir)
     ]
 
-    model.fit(train_ds, validation_data=val_ds, epochs=EPOCHS,
-              initial_epoch=start_epoch, callbacks=callbacks)
+    model.fit(train_ds, validation_data=val_ds, epochs=(1 if args.smoke else args.epochs),
+              initial_epoch=start_epoch, callbacks=callbacks,
+              steps_per_epoch=20 if args.smoke else args.steps_per_epoch,
+              validation_steps=5 if args.smoke else args.validation_steps)
     model.save_weights(get_weight_path(log_dir))
     print("\nTraining Complete")
     evaluate_model(model, val_ds, dataset)

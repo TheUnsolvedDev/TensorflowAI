@@ -1,4 +1,3 @@
-import silence_tensorflow.auto
 import tensorflow as tf
 import numpy as np
 
@@ -9,33 +8,14 @@ kernel_init = tf.keras.initializers.glorot_uniform()
 bias_init = tf.keras.initializers.Constant(value=0.2)
 
 class LocalResponseNormalization(tf.keras.layers.Layer):
-    def __init__(self, alpha=0.0001, beta=0.75, depth_radius=5, **kwargs):
-        super(LocalResponseNormalization, self).__init__(**kwargs)
-        self.alpha = alpha
-        self.beta = beta
-        self.depth_radius = depth_radius
-
-    def build(self, input_shape):
-        self.channels = input_shape[-1]  # Get the number of channels
-        self.kernel = self.add_weight(
-            shape=(1, 1, self.channels, 1),
-            initializer=tf.keras.initializers.Ones(),
-            trainable=False
-        )
-
+    def __init__(self, alpha=1e-4, beta=.75, depth_radius=2, **kwargs):
+        super().__init__(**kwargs)
+        self.alpha, self.beta, self.depth_radius = alpha, beta, depth_radius
     def call(self, x):
-        squared = tf.square(x)
-        window_sum = tf.nn.depthwise_conv2d(
-            squared,
-            self.kernel,
-            strides=[1, 1, 1, 1],
-            padding="SAME"
-        )
-        norm = tf.pow(1 + self.alpha * window_sum, -self.beta)
-        return x * norm
-
-    def compute_output_shape(self, input_shape):
-        return input_shape
+        return tf.cast(tf.nn.local_response_normalization(tf.cast(x, tf.float32),
+                       depth_radius=self.depth_radius, bias=1., alpha=self.alpha, beta=self.beta), x.dtype)
+    def get_config(self):
+        return {**super().get_config(), 'alpha': self.alpha, 'beta': self.beta, 'depth_radius': self.depth_radius}
 
 def inception_module(x,
                      filters_1x1,
@@ -70,9 +50,9 @@ def inception_module(x,
     return output
 
 
-def inception1_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], num_classes=10):
+def inception1_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], num_classes=10, aux_logits=False):
     input_layer = tf.keras.layers.Input(shape=input_shape)
-    x = tf.keras.layers.Lambda(lambda x: x/255.0)(input_layer)
+    x = tf.keras.layers.Rescaling(1. / 255)(input_layer)
     x = tf.keras.layers.Conv2D(64, (7, 7), padding='same', strides=(2, 2), activation='relu',
                                name='conv_1_7x7_2', kernel_initializer=kernel_init, bias_initializer=bias_init)(x)
     x = tf.keras.layers.MaxPool2D(
@@ -118,7 +98,7 @@ def inception1_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], 
     x1 = tf.keras.layers.Dense(1024, activation='relu')(x1)
     x1 = tf.keras.layers.Dropout(0.7)(x1)
     x1 = tf.keras.layers.Dense(
-        num_classes, activation='softmax', name='output_1')(x1)
+        num_classes, activation='softmax', dtype='float32', name='output_1')(x1)
     x = inception_module(x,
                          filters_1x1=160,
                          filters_3x3_reduce=112,
@@ -150,7 +130,7 @@ def inception1_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], 
     x2 = tf.keras.layers.Dense(1024, activation='relu')(x2)
     x2 = tf.keras.layers.Dropout(0.7)(x2)
     x2 = tf.keras.layers.Dense(
-        num_classes, activation='softmax', name='output_2')(x2)
+        num_classes, activation='softmax', dtype='float32', name='output_2')(x2)
     x = inception_module(x,
                          filters_1x1=256,
                          filters_3x3_reduce=160,
@@ -179,8 +159,8 @@ def inception1_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], 
                          name='inception_5b')
     x = tf.keras.layers.GlobalAveragePooling2D(name='avg_pool_5_3x3_1')(x)
     x = tf.keras.layers.Dropout(0.4)(x)
-    x = tf.keras.layers.Dense(num_classes, activation='softmax', name='output')(x)
-    model = tf.keras.Model(input_layer, [x, x1, x2], name='inception_v1')
+    x = tf.keras.layers.Dense(num_classes, activation='softmax', dtype='float32', name='output')(x)
+    model = tf.keras.Model(input_layer, [x, x1, x2] if aux_logits else x, name='inception_v1')
     return model
 
 

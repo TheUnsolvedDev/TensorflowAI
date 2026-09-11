@@ -1,4 +1,3 @@
-import silence_tensorflow.auto
 import tensorflow as tf
 import numpy as np
 
@@ -12,7 +11,7 @@ class BasicConv2D(tf.keras.layers.Layer):
         self.bn = tf.keras.layers.BatchNormalization()
         self.relu = tf.keras.layers.ReLU()
 
-    def call(self, x, training=False):
+    def call(self, x, training=None):
         x = self.conv(x)
         x = self.bn(x, training=training)
         return self.relu(x)
@@ -105,7 +104,7 @@ def inception4_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], 
     inputs = tf.keras.Input(shape=input_shape)
 
     # Stem
-    x = tf.keras.layers.Lambda(lambda x: x / 255.)(inputs)
+    x = tf.keras.layers.Rescaling(1. / 255)(inputs)
     x = BasicConv2D(32, (3, 3), strides=2, padding='valid')(x)
     x = BasicConv2D(32, (3, 3), padding='valid')(x)
     x = BasicConv2D(64, (3, 3))(x)
@@ -136,7 +135,7 @@ def inception4_model(input_shape=[INPUT_SIZE[0], INPUT_SIZE[1], INPUT_SIZE[2]], 
     # Final layers
     x = tf.keras.layers.GlobalAveragePooling2D()(x)
     x = tf.keras.layers.Dropout(0.2)(x)
-    outputs = tf.keras.layers.Dense(num_classes, activation='softmax')(x)
+    outputs = tf.keras.layers.Dense(num_classes, activation='softmax', dtype='float32')(x)
 
     return tf.keras.Model(inputs, outputs, name="InceptionV4")
 
