@@ -1,3 +1,4 @@
+from collections import deque
 import random
 
 import numpy as np
@@ -5,22 +6,17 @@ import numpy as np
 
 class ReplayBuffer:
     def __init__(self, capacity):
-        self.capacity = capacity
-        self.items = [None] * capacity
-        self.size = 0
-        self.next_index = 0
+        self.items = deque(maxlen=capacity)
 
     def add(self, state, action, reward, next_state, done):
-        self.items[self.next_index] = (state, action, reward, next_state, done)
-        self.next_index = (self.next_index + 1) % self.capacity
-        self.size = min(self.size + 1, self.capacity)
+        self.items.append((state, action, reward, next_state, done))
 
     def sample(self, batch_size):
-        batch = [self.items[index] for index in random.sample(range(self.size), batch_size)]
+        batch = random.sample(self.items, batch_size)
         return tuple(zip(*batch))
 
     def __len__(self):
-        return self.size
+        return len(self.items)
 
 
 class PrioritizedReplayBuffer(ReplayBuffer):

@@ -1,16 +1,6 @@
 import tensorflow as tf
 
 
-def restore_batch_order(parts):
-    """Interleave results from replica-strided input shards."""
-    parts = tuple(parts)
-    if len(parts) == 1:
-        return parts[0]
-    total = tf.add_n([tf.shape(part)[0] for part in parts])
-    indices = [tf.range(replica, total, len(parts)) for replica in range(len(parts))]
-    return tf.dynamic_stitch(indices, parts)
-
-
 class DistributedDQNTrainer:
     """DQN batch updates and action inference across MirroredStrategy replicas."""
 
@@ -21,13 +11,11 @@ class DistributedDQNTrainer:
         with strategy.scope():
             self.target_model = tf.keras.models.clone_model(model)
             self.target_model.set_weights(model.get_weights())
-            self.optimizer = tf.keras.optimizers.Adam(learning_rate)
         self.gamma = gamma
+        self.optimizer = tf.keras.optimizers.Adam(learning_rate)
 
     @tf.function
-    def _train_replica(
-        self, states, actions, rewards, next_states, dones, weights, global_batch_size
-    ):
+    def _train_replica(self, states, actions, rewards, next_states, dones, weights):
         actions = tf.cast(actions, tf.int32)
         rewards = tf.cast(rewards, tf.float32)
         dones = tf.cast(dones, tf.float32)
@@ -43,10 +31,7 @@ class DistributedDQNTrainer:
             else:
                 next_q = tf.reduce_max(self.target_model(next_states, training=False), axis=1)
             targets = rewards + self.gamma * next_q * (1.0 - dones)
-            per_example_loss = weights * tf.keras.losses.huber(targets, chosen_q)
-            loss = tf.reduce_sum(per_example_loss) / tf.cast(
-                global_batch_size, tf.float32
-            )
+            loss = tf.reduce_mean(weights * tf.keras.losses.huber(targets, chosen_q))
 
         gradients = tape.gradient(loss, self.model.trainable_variables)
         gradients, _ = tf.clip_by_global_norm(gradients, 10.0)
@@ -67,16 +52,11 @@ class DistributedDQNTrainer:
             )
             for value in values
         )
-        global_batch_size = tf.shape(values[0])[0]
         per_replica_loss, per_replica_errors = self.strategy.run(
-            self._train_replica, args=(*distributed_values, global_batch_size)
+            self._train_replica, args=distributed_values
         )
-        loss = self.strategy.reduce(
-            tf.distribute.ReduceOp.SUM, per_replica_loss, axis=None
-        )
-        errors = restore_batch_order(
-            self.strategy.experimental_local_results(per_replica_errors)
-        )
+        loss = self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica_loss, axis=None)
+        errors = tf.concat(self.strategy.experimental_local_results(per_replica_errors), axis=0)
         return loss, errors
 
     def update_target(self):
@@ -98,7 +78,7 @@ class DistributedDQNTrainer:
             ]
         )
         actions = self.strategy.run(self._act_replica, args=(parts,))
-        actions = restore_batch_order(self.strategy.experimental_local_results(actions))
+        actions = tf.concat(self.strategy.experimental_local_results(actions), axis=0)
         if epsilon:
             random_actions = tf.random.uniform(
                 tf.shape(actions), maxval=self.model.output_shape[-1], dtype=tf.int32

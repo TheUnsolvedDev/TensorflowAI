@@ -1,3 +1,2 @@
 gymnasium[atari,accept-rom-license]
 tensorflow
-matplotlib

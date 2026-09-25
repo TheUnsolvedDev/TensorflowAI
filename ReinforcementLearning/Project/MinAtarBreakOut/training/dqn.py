@@ -22,7 +22,7 @@ def train(
     epsilon_decay_steps=None,
     eval_episodes=None,
     eval_every=None,
-    game="ALE/Breakout-v5",
+    game="breakout",
     seed=None,
 ):
     config = dqn_config.DQNConfig()
@@ -41,18 +41,13 @@ def train(
     if seed is not None:
         tf.keras.utils.set_random_seed(seed)
     make_env = functools.partial(wrappers.training_env, game=game)
-    env = gym.vector.AsyncVectorEnv(
-        [make_env for _ in range(config.num_envs)],
-        autoreset_mode=gym.vector.AutoresetMode.SAME_STEP,
-    )
+    env = gym.vector.AsyncVectorEnv([make_env for _ in range(config.num_envs)])
     run_id = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
     log_dir = Path("runs") / model_name / run_id
-    model_checkpoint_dir = Path("checkpoints") / model_name
-    checkpoint_dir = model_checkpoint_dir / run_id
-    best_weights_path = model_checkpoint_dir / "best.weights.h5"
-    best_score_path = model_checkpoint_dir / "best_score.txt"
+    best_path = Path("checkpoints") / model_name / "best.weights.h5"
+    best_score_path = best_path.with_name("best_score.txt")
     log_dir.mkdir(parents=True, exist_ok=True)
-    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    best_path.parent.mkdir(parents=True, exist_ok=True)
     metrics_file = (log_dir / "metrics.csv").open("w", newline="")
     metrics = csv.writer(metrics_file)
     metrics.writerow(("step", "loss", "average_reward"))
@@ -86,7 +81,9 @@ def train(
         buffer = replay_buffer.ReplayBuffer(config.replay_size)
     states, _ = env.reset(seed=seed)
     best_score = (
-        float(best_score_path.read_text()) if best_score_path.exists() else float("-inf")
+        float(best_score_path.read_text())
+        if best_score_path.exists()
+        else float("-inf")
     )
     environment_steps = 0
     next_target_update = config.target_update_transitions
@@ -117,15 +114,14 @@ def train(
                     loss, errors = trainer.train_batch(
                         *[np.asarray(value) for value in batch]
                     )
+                    metrics.writerow((environment_steps, float(loss), ""))
                     if model_name == "per":
                         buffer.update_priorities(errors.numpy())
                 if environment_steps % 400 == 0:
-                    loss_value = float(loss)
-                    metrics.writerow((environment_steps, loss_value, ""))
                     percent = 100 * environment_steps / steps
                     print(
                         f"transitions {environment_steps}/{steps} [{percent:6.2f}%] "
-                        f"epsilon={epsilon:.3f} loss={loss_value:.5f}",
+                        f"epsilon={epsilon:.3f} loss={float(loss):.5f}",
                         end="\r",
                         flush=True,
                     )
@@ -150,8 +146,8 @@ def train(
                 )
                 if score > best_score:
                     best_score = score
-                    model.save_weights(best_weights_path)
-                    best_score_path.write_text(str(best_score))
+                    model.save_weights(best_path)
+                    best_score_path.write_text(f"{best_score}\n")
                     print(f"new best evaluation reward={score:.2f}")
                 next_evaluation += config.evaluation_interval_transitions
     finally:
@@ -161,28 +157,23 @@ def train(
 
     sys.stdout.write("\n")
 
-    weights_path = checkpoint_dir / "breakout.weights.h5"
-    model.save_weights(weights_path)
     average_reward = evaluate(
         trainer, config.num_envs, config.evaluation_episodes, game, seed
     )
     if average_reward > best_score:
+        model.save_weights(best_path)
         best_score = average_reward
-        model.save_weights(best_weights_path)
-        best_score_path.write_text(str(best_score))
+        best_score_path.write_text(f"{best_score}\n")
     print(f"average evaluation reward={average_reward:.2f}")
-    print(f"saved weights={weights_path}")
+    print(f"saved best weights={best_path}")
     print(f"best evaluation reward={best_score:.2f}")
     print(f"tensorboard logs={log_dir}")
     return average_reward
 
 
-def evaluate(trainer, num_envs, episodes, game="ALE/Breakout-v5", seed=None):
+def evaluate(trainer, num_envs, episodes, game="breakout", seed=None):
     make_env = functools.partial(wrappers.training_env, game=game)
-    env = gym.vector.AsyncVectorEnv(
-        [make_env for _ in range(num_envs)],
-        autoreset_mode=gym.vector.AutoresetMode.SAME_STEP,
-    )
+    env = gym.vector.AsyncVectorEnv([make_env for _ in range(num_envs)])
     states, _ = env.reset(seed=seed)
     episode_rewards = np.zeros(num_envs, dtype=np.float32)
     completed_rewards = []

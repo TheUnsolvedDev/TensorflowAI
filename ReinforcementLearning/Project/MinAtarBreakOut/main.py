@@ -16,18 +16,7 @@ def latest_weights(model_name, requested=None):
         return requested
     directory = Path("checkpoints") / model_name
     directory.mkdir(parents=True, exist_ok=True)
-    best = directory / "best.weights.h5"
-    if best.exists():
-        return str(best)
-    checkpoints = list(directory.rglob("step_*.weights.h5"))
-    final_weights = list(directory.rglob("breakout.weights.h5"))
-    candidates = checkpoints or final_weights
-    latest = (
-        max(candidates, key=lambda path: path.stat().st_mtime)
-        if candidates
-        else directory / "breakout.weights.h5"
-    )
-    return str(latest)
+    return str(directory / "best.weights.h5")
 
 
 def main():
@@ -37,7 +26,7 @@ def main():
     parser.add_argument("--num-envs", type=int, default=None)
     parser.add_argument("--steps", type=int, default=None)
     parser.add_argument("--episodes", type=int, default=10)
-    parser.add_argument("--game", "--level", dest="game", default="ALE/Breakout-v5")
+    parser.add_argument("--game", "--level", dest="game", default="breakout")
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument(
         "--epsilon-decay-transitions",
@@ -102,10 +91,7 @@ def main():
         parser.error("--num-envs, --steps, and --episodes must be positive")
 
     make_env = functools.partial(wrappers.training_env, game=args.game)
-    env = gym.vector.AsyncVectorEnv(
-        [make_env for _ in range(num_envs)],
-        autoreset_mode=gym.vector.AutoresetMode.SAME_STEP,
-    )
+    env = gym.vector.AsyncVectorEnv([make_env for _ in range(num_envs)])
     agent = random_agent.RandomAgent(env.single_action_space)
     try:
         states, _ = env.reset(seed=args.seed)
