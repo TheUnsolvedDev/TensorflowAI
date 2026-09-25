@@ -63,7 +63,7 @@ def main():
     reward_axis.set(
         title="Evaluation reward",
         xlabel="Transitions",
-        ylabel="Average reward (100 episodes)",
+        ylabel="Average reward (10 episodes)",
     )
     for axis in (loss_axis, reward_axis):
         axis.grid(alpha=0.25)

@@ -117,11 +117,12 @@ def train(
                     loss, errors = trainer.train_batch(
                         *[np.asarray(value) for value in batch]
                     )
+                    metrics.writerow((environment_steps, float(loss), ""))
                     if model_name == "per":
                         buffer.update_priorities(errors.numpy())
                 if environment_steps % 400 == 0:
                     loss_value = float(loss)
-                    metrics.writerow((environment_steps, loss_value, ""))
+                    metrics_file.flush()
                     percent = 100 * environment_steps / steps
                     print(
                         f"transitions {environment_steps}/{steps} [{percent:6.2f}%] "
