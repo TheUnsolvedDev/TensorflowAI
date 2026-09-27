@@ -1,9 +1,9 @@
-from env.pong_env import make_env
+from env.wrappers import training_env
 
 
-def test_agent(agent, episodes=10, env_factory=None):
-    """Run an agent with the Pong window visible."""
-    env = env_factory() if env_factory else make_env(render_mode="human")
+def test_agent(agent, episodes=10, env_factory=None, epsilon=0.0):
+    """Run an agent in a visible Atari environment."""
+    env = env_factory() if env_factory else training_env(render_mode="human")
     rewards = []
     try:
         for episode in range(episodes):
@@ -12,7 +12,7 @@ def test_agent(agent, episodes=10, env_factory=None):
             total_reward = 0.0
 
             while not done:
-                action = agent.act(state)
+                action = agent.act(state, epsilon)
                 if hasattr(action, "numpy"):
                     action = action.numpy().item()
                 state, reward, terminated, truncated, _ = env.step(action)

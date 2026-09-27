@@ -1,38 +1,70 @@
 import numpy as np
+import csv
 import gymnasium as gym
-import shutil
 import sys
-import functools
+from datetime import datetime
 from pathlib import Path
 import tensorflow as tf
 
 import agents.distributed as distributed
 import agents.dqn.replay_buffer as replay_buffer
 import agents.dqn.trainer as dqn_trainer
+import config.double_dqn_config as double_dqn_config
 import config.dqn_config as dqn_config
+import config.dueling_dqn_config as dueling_dqn_config
+import config.per_config as per_config
 import env.wrappers as wrappers
 import models.dqn as dqn
 
 
+CONFIGS = {
+    "dqn": dqn_config.DQNConfig,
+    "double": double_dqn_config.DoubleDQNConfig,
+    "dueling": dueling_dqn_config.DuelingDQNConfig,
+    "per": per_config.PERConfig,
+}
+
+
 def train(
-    steps=10_000,
+    steps=None,
     model_name="dqn",
     num_envs=None,
     epsilon_decay_steps=None,
-    eval_steps=None,
-    eval_every=10_000,
-    game="ALE/Pong-v5",
+    eval_episodes=None,
+    eval_every=None,
+    seed=None,
 ):
-    config = dqn_config.DQNConfig()
+    config = CONFIGS[model_name]()
+    if steps is None:
+        steps = config.training_transitions
     if num_envs is not None:
         config.num_envs = num_envs
     if epsilon_decay_steps is not None:
-        config.epsilon_decay_steps = epsilon_decay_steps
-    make_env = functools.partial(wrappers.training_env, game=game)
-    env = gym.vector.AsyncVectorEnv([make_env for _ in range(config.num_envs)])
-    log_dir = Path("runs") / model_name
-    shutil.rmtree(log_dir, ignore_errors=True)
+        config.epsilon_decay_transitions = epsilon_decay_steps
+    if eval_episodes is not None:
+        config.evaluation_episodes = eval_episodes
+    if eval_every is not None:
+        config.evaluation_interval_transitions = eval_every
+    if min(steps, config.num_envs, config.evaluation_episodes) < 1:
+        raise ValueError("steps, num_envs, and evaluation episodes must be positive")
+    if seed is not None:
+        tf.keras.utils.set_random_seed(seed)
+    make_env = wrappers.training_env
+    env = gym.vector.AsyncVectorEnv(
+        [make_env for _ in range(config.num_envs)],
+        autoreset_mode=gym.vector.AutoresetMode.SAME_STEP,
+    )
+    run_id = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+    log_dir = Path("runs") / model_name / run_id
+    model_checkpoint_dir = Path("checkpoints") / model_name
+    checkpoint_dir = model_checkpoint_dir / run_id
+    best_weights_path = model_checkpoint_dir / "best.weights.h5"
+    best_score_path = model_checkpoint_dir / "best_score.txt"
     log_dir.mkdir(parents=True, exist_ok=True)
+    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    metrics_file = (log_dir / "metrics.csv").open("w", newline="")
+    metrics = csv.writer(metrics_file)
+    metrics.writerow(("step", "loss", "average_reward"))
     writer = tf.summary.create_file_writer(str(log_dir))
     strategy = distributed.nccl_strategy()
     with strategy.scope():
@@ -52,61 +84,101 @@ def train(
         )
     model.summary()
 
-    buffer_type = replay_buffer.PrioritizedReplayBuffer if model_name == "per" else replay_buffer.ReplayBuffer
-    buffer = buffer_type(config.replay_size)
-    states, _ = env.reset()
-    best_score = float("-inf")
+    if model_name == "per":
+        buffer = replay_buffer.PrioritizedReplayBuffer(
+            config.replay_size,
+            config.priority_alpha,
+            config.priority_epsilon,
+            seed,
+        )
+    else:
+        buffer = replay_buffer.ReplayBuffer(config.replay_size)
+    states, _ = env.reset(seed=seed)
+    best_score = (
+        float(best_score_path.read_text()) if best_score_path.exists() else float("-inf")
+    )
+    environment_steps = 0
+    next_target_update = config.target_update_transitions
+    next_evaluation = config.evaluation_interval_transitions
     try:
-        for step in range(steps):
-            progress = min(1.0, step / config.epsilon_decay_steps)
+        while environment_steps < steps:
+            progress = min(1.0, environment_steps / config.epsilon_decay_transitions)
             epsilon = config.epsilon_start + progress * (config.epsilon_end - config.epsilon_start)
             actions = trainer.act(states, epsilon).numpy()
             next_states, rewards, terminated, truncated, _ = env.step(actions)
             for transition in zip(states, actions, rewards, next_states, terminated | truncated):
                 buffer.add(*transition)
             states = next_states
-            if (step + 1) % config.target_update_steps == 0:
+            environment_steps += config.num_envs
+            if environment_steps >= next_target_update:
                 trainer.update_target()
-            if len(buffer) >= max(config.batch_size, config.warmup_steps):
-                batch = buffer.sample(config.batch_size)
-                loss, errors = trainer.train_batch(*[np.asarray(value) for value in batch])
-                if model_name == "per":
-                    buffer.update_priorities(errors.numpy())
-                if step % 100 == 0:
-                    percent = 100 * (step + 1) / steps
+                next_target_update += config.target_update_transitions
+            if len(buffer) >= max(config.batch_size, config.warmup_transitions):
+                for _ in range(config.updates_per_iteration):
+                    if model_name == "per":
+                        beta_progress = min(1.0, environment_steps / steps)
+                        beta = config.priority_beta_start + beta_progress * (
+                            config.priority_beta_end - config.priority_beta_start
+                        )
+                        batch = buffer.sample(config.batch_size, beta)
+                    else:
+                        batch = buffer.sample(config.batch_size)
+                    loss, errors = trainer.train_batch(
+                        *[np.asarray(value) for value in batch]
+                    )
+                    metrics.writerow((environment_steps, float(loss), ""))
+                    if model_name == "per":
+                        buffer.update_priorities(errors.numpy())
+                if environment_steps % 400 == 0:
+                    loss_value = float(loss)
+                    metrics_file.flush()
+                    percent = 100 * environment_steps / steps
                     print(
-                        f"step {step + 1}/{steps} [{percent:6.2f}%] "
-                        f"epsilon={epsilon:.3f} loss={float(loss):.5f}",
+                        f"transitions {environment_steps}/{steps} [{percent:6.2f}%] "
+                        f"epsilon={epsilon:.3f} loss={loss_value:.5f}",
                         end="\r",
                         flush=True,
                     )
                     with writer.as_default():
-                        tf.summary.scalar("loss", loss, step=step)
-                        tf.summary.scalar("epsilon", epsilon, step=step)
+                        tf.summary.scalar("loss", loss, step=environment_steps)
+                        tf.summary.scalar("epsilon", epsilon, step=environment_steps)
                         writer.flush()
-            if (step + 1) % eval_every == 0:
+            if environment_steps >= next_evaluation:
                 print()
-                weights_path = Path("checkpoints") / model_name / f"step_{step + 1}.weights.h5"
-                weights_path.parent.mkdir(parents=True, exist_ok=True)
-                model.save_weights(weights_path)
-                score = evaluate(model, strategy, config.num_envs, eval_steps or eval_every, game)
-                print(f"step={step + 1} average evaluation reward={score:.2f}")
+                score = evaluate(
+                    trainer,
+                    config.num_envs,
+                    config.evaluation_episodes,
+                    seed,
+                )
+                metrics.writerow((environment_steps, "", score))
+                metrics_file.flush()
+                print(
+                    f"transitions={environment_steps} "
+                    f"average evaluation reward={score:.2f}"
+                )
                 if score > best_score:
                     best_score = score
-                    model.save_weights(Path("checkpoints") / model_name / "best.weights.h5")
+                    model.save_weights(best_weights_path)
+                    best_score_path.write_text(str(best_score))
                     print(f"new best evaluation reward={score:.2f}")
+                next_evaluation += config.evaluation_interval_transitions
     finally:
         env.close()
+        metrics_file.close()
+        writer.close()
 
     sys.stdout.write("\n")
 
-    weights_path = Path("checkpoints") / model_name / "pong.weights.h5"
-    weights_path.parent.mkdir(parents=True, exist_ok=True)
+    weights_path = checkpoint_dir / "pong.weights.h5"
     model.save_weights(weights_path)
-    average_reward = evaluate(model, strategy, config.num_envs, eval_steps or eval_every, game)
+    average_reward = evaluate(
+        trainer, config.num_envs, config.evaluation_episodes, seed
+    )
     if average_reward > best_score:
-        model.save_weights(Path("checkpoints") / model_name / "best.weights.h5")
         best_score = average_reward
+        model.save_weights(best_weights_path)
+        best_score_path.write_text(str(best_score))
     print(f"average evaluation reward={average_reward:.2f}")
     print(f"saved weights={weights_path}")
     print(f"best evaluation reward={best_score:.2f}")
@@ -114,22 +186,25 @@ def train(
     return average_reward
 
 
-def evaluate(model, strategy, num_envs, steps, game="ALE/Pong-v5"):
-    make_env = functools.partial(wrappers.training_env, game=game)
-    env = gym.vector.AsyncVectorEnv([make_env for _ in range(num_envs)])
-    trainer = dqn_trainer.DistributedDQNTrainer(model, strategy)
-    states, _ = env.reset()
+def evaluate(trainer, num_envs, episodes, seed=None):
+    make_env = wrappers.training_env
+    env = gym.vector.AsyncVectorEnv(
+        [make_env for _ in range(num_envs)],
+        autoreset_mode=gym.vector.AutoresetMode.SAME_STEP,
+    )
+    states, _ = env.reset(seed=seed)
     episode_rewards = np.zeros(num_envs, dtype=np.float32)
     completed_rewards = []
     try:
-        for _ in range(steps):
+        while len(completed_rewards) < episodes:
             actions = trainer.act(states).numpy()
             states, rewards, terminated, truncated, _ = env.step(actions)
             episode_rewards += rewards
             done = terminated | truncated
             for index in np.flatnonzero(done):
-                completed_rewards.append(float(episode_rewards[index]))
+                if len(completed_rewards) < episodes:
+                    completed_rewards.append(float(episode_rewards[index]))
                 episode_rewards[index] = 0.0
     finally:
         env.close()
-    return sum(completed_rewards) / len(completed_rewards) if completed_rewards else float(episode_rewards.mean())
+    return float(np.mean(completed_rewards))

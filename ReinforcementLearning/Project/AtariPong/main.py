@@ -1,9 +1,9 @@
 import argparse
-import functools
 from pathlib import Path
 import agents.evaluate as evaluate
 import agents.random_agent as random_agent
 import config.random_config as random_config
+import config.dqn_config as dqn_config
 import env.wrappers as wrappers
 import gymnasium as gym
 import agents.distributed as distributed
@@ -15,25 +15,37 @@ def latest_weights(model_name, requested=None):
         return requested
     directory = Path("checkpoints") / model_name
     directory.mkdir(parents=True, exist_ok=True)
-    checkpoints = sorted(
-        directory.glob("step_*.weights.h5"),
-        key=lambda path: int(path.stem.split("_")[1].split(".")[0]),
+    best = directory / "best.weights.h5"
+    if best.exists():
+        return str(best)
+    checkpoints = list(directory.rglob("step_*.weights.h5"))
+    final_weights = list(directory.rglob("pong.weights.h5"))
+    candidates = checkpoints or final_weights
+    latest = (
+        max(candidates, key=lambda path: path.stat().st_mtime)
+        if candidates
+        else directory / "pong.weights.h5"
     )
-    latest = checkpoints[-1] if checkpoints else directory / "pong.weights.h5"
     return str(latest)
 
 
 def main():
+    defaults = dqn_config.DQNConfig()
     parser = argparse.ArgumentParser()
     parser.add_argument("--visualize", action="store_true")
-    parser.add_argument("--num-envs", type=int, default=32)
+    parser.add_argument("--num-envs", type=int, default=None)
     parser.add_argument("--steps", type=int, default=None)
     parser.add_argument("--episodes", type=int, default=10)
-    parser.add_argument("--game", default="ALE/Pong-v5")
     parser.add_argument("--seed", type=int, default=None)
-    parser.add_argument("--epsilon-decay-steps", type=int, default=None)
-    parser.add_argument("--eval-steps", type=int, default=10_000)
-    parser.add_argument("--eval-every", type=int, default=10_000)
+    parser.add_argument(
+        "--epsilon-decay-transitions",
+        "--epsilon-decay-steps",
+        dest="epsilon_decay_steps",
+        type=int,
+        default=None,
+    )
+    parser.add_argument("--eval-episodes", type=int, default=None)
+    parser.add_argument("--eval-every", type=int, default=None)
     parser.add_argument("--train", action="store_true")
     parser.add_argument("--model", choices=("dqn", "double", "dueling", "per"), default="dqn")
     parser.add_argument("--weights", default=None)
@@ -45,7 +57,7 @@ def main():
         import models.double_dqn as double_dqn
         import models.dueling_dqn as dueling_dqn
         import models.per as per
-        probe = wrappers.training_env(game=args.game, render_mode="human")
+        probe = wrappers.training_env(render_mode="human")
         builders = {"dqn": dqn, "double": double_dqn, "dueling": dueling_dqn, "per": per}
         strategy = distributed.nccl_strategy()
         with strategy.scope():
@@ -63,19 +75,20 @@ def main():
         evaluate.test_agent(
             agent,
             args.episodes,
-            lambda: wrappers.training_env(game=args.game, render_mode="human"),
+            lambda: wrappers.training_env(render_mode="human"),
+            epsilon=0.05,
         )
         return
 
     if args.train:
         dqn_training.train(
-            args.steps or 1_000_000,
+            args.steps if args.steps is not None else defaults.training_transitions,
             args.model,
             args.num_envs,
             args.epsilon_decay_steps,
-            args.eval_steps,
+            args.eval_episodes,
             args.eval_every,
-            args.game,
+            args.seed,
         )
         return
 
@@ -85,8 +98,11 @@ def main():
     if num_envs < 1 or steps < 1 or args.episodes < 1:
         parser.error("--num-envs, --steps, and --episodes must be positive")
 
-    make_env = functools.partial(wrappers.training_env, game=args.game)
-    env = gym.vector.AsyncVectorEnv([make_env for _ in range(num_envs)])
+    make_env = wrappers.training_env
+    env = gym.vector.AsyncVectorEnv(
+        [make_env for _ in range(num_envs)],
+        autoreset_mode=gym.vector.AutoresetMode.SAME_STEP,
+    )
     agent = random_agent.RandomAgent(env.single_action_space)
     try:
         states, _ = env.reset(seed=args.seed)
