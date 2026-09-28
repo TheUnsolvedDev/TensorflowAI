@@ -6,6 +6,7 @@ import os
 import textwrap
 
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
+os.environ.setdefault("MPLBACKEND", "Agg")
 
 import tensorflow as tf
 from rich.console import Console
@@ -46,22 +47,53 @@ def load_image(path):
 
 def caption_image(model, image_path, vocabulary):
     word_to_id = {word: index for index, word in enumerate(vocabulary)}
-    ids = [word_to_id["start"]]
     features = model.get_layer("cnn_encoder")(load_image(image_path), training=False)
+    pooled = model.get_layer("image_pool")(features)
+    memory = model.get_layer("image_projection")(features)
     if model.name.startswith("cnn_lstm"):
-        initial_state = [model.get_layer("image_h")(features), model.get_layer("image_c")(features)]
+        initial_state = [model.get_layer("image_h")(pooled), model.get_layer("image_c")(pooled)]
     else:
-        initial_state = model.get_layer("image_state")(features)
-    for _ in range(MAX_LENGTH - 2):
+        initial_state = model.get_layer("image_state")(pooled)
+    def next_logits(ids):
         tokens = tf.constant([ids], tf.int32)
         embedded = model.get_layer("token_embedding")(tokens)
         decoded = model.get_layer("decoder")(
             embedded, initial_state=initial_state, training=False)
-        next_id = int(tf.argmax(model.get_layer("logits")(decoded)[0, -1]))
-        if next_id <= 1 or vocabulary[next_id] == "end":
+        context = model.get_layer("image_attention")(
+            decoded, memory, training=False)
+        decoded = model.get_layer("decoder_context")([decoded, context])
+        return model.get_layer("logits")(decoded)[0, -1]
+
+    return beam_search(next_logits, vocabulary, word_to_id)
+
+
+def beam_search(next_logits, vocabulary, word_to_id):
+    start_id, end_id = word_to_id["start"], word_to_id["end"]
+    beams = [([start_id], 0.0, False)]
+    for _ in range(MAX_LENGTH - 2):
+        candidates = []
+        for ids, score, finished in beams:
+            if finished:
+                candidates.append((ids, score, True))
+                continue
+            log_probs = tf.nn.log_softmax(next_logits(ids))
+            blocked = tf.tensor_scatter_nd_update(
+                log_probs, [[0], [1], [start_id]], [-1e9, -1e9, -1e9])
+            values, indices = tf.math.top_k(blocked, BEAM_WIDTH)
+            for value, index in zip(values.numpy(), indices.numpy()):
+                token_id = int(index)
+                candidates.append((ids + [token_id], score + float(value),
+                                   token_id == end_id))
+        def normalized(item):
+            length = max(len(item[0]) - 1, 1)
+            return item[1] / (((5.0 + length) / 6.0) ** BEAM_LENGTH_ALPHA)
+        beams = sorted(candidates, key=normalized, reverse=True)[:BEAM_WIDTH]
+        if all(finished for _, _, finished in beams):
             break
-        ids.append(next_id)
-    return " ".join(vocabulary[index] for index in ids[1:])
+    best = max((beam for beam in beams if beam[2]),
+               key=normalized, default=max(beams, key=normalized))
+    return " ".join(vocabulary[index] for index in best[0][1:]
+                    if index != end_id)
 
 
 def load_captioner(decoder, weights=None):
@@ -69,7 +101,8 @@ def load_captioner(decoder, weights=None):
         raise FileNotFoundError(f"Run training first to create {VOCABULARY_PATH}")
     with open(VOCABULARY_PATH, encoding="utf-8") as handle:
         vocabulary = json.load(handle)
-    weights = weights or os.path.join(CHECKPOINT_DIR, decoder, "best.weights.h5")
+    weights = weights or os.path.join(
+        CHECKPOINT_DIR, decoder, "best_resnet18_scratch.weights.h5")
     if not os.path.isfile(weights):
         raise FileNotFoundError(f"No trained weights found at {weights}")
     model = build_model(len(vocabulary), decoder)
@@ -86,154 +119,227 @@ def augment(image):
     return tf.clip_by_value(image, 0.0, PIXEL_MAX_VALUE)
 
 
-def load_views(path):
-    image = tf.io.decode_jpeg(tf.io.read_file(path), channels=IMAGE_CHANNELS)
-    image = tf.image.resize(image, PRETRAIN_RESIZE)
-    crop_shape = (*IMAGE_SIZE, IMAGE_CHANNELS)
-    return augment(tf.image.random_crop(image, crop_shape)), augment(
-        tf.image.random_crop(image, crop_shape))
+def coco_records(split):
+    annotation_path = os.path.join(COCO_DIR, "annotations", f"captions_{split}2017.json")
+    images_dir = os.path.join(COCO_DIR, f"{split}2017")
+    if not os.path.isfile(annotation_path) or not os.path.isdir(images_dir):
+        raise FileNotFoundError(f"Missing COCO {split}2017 images or captions")
+    with open(annotation_path, encoding="utf-8") as handle:
+        content = json.load(handle)
+    names = {image["id"]: image["file_name"] for image in content["images"]}
+    captions = {}
+    for annotation in content["annotations"]:
+        captions.setdefault(annotation["image_id"], []).append(annotation["caption"])
+    return [(os.path.join(images_dir, names[image_id]), captions[image_id])
+            for image_id in names if image_id in captions], content["annotations"]
 
 
-def image_dataset(batch_size):
-    paths = list(dict.fromkeys(path for path, _ in Flickr30kDataset().rows()))
-    dataset = tf.data.Dataset.from_tensor_slices(paths).shuffle(len(paths), seed=SEED)
+def contrastive_vectorizer(annotations):
+    vectorizer = tf.keras.layers.TextVectorization(
+        max_tokens=CONTRASTIVE_VOCAB_SIZE, output_mode="int",
+        output_sequence_length=MAX_LENGTH)
+    if os.path.isfile(CONTRASTIVE_VOCABULARY_PATH):
+        with open(CONTRASTIVE_VOCABULARY_PATH, encoding="utf-8") as handle:
+            vectorizer.set_vocabulary(json.load(handle))
+        return vectorizer
+    captions = tf.data.Dataset.from_generator(
+        lambda: (item["caption"] for item in annotations),
+        output_signature=tf.TensorSpec((), tf.string)).batch(VOCAB_ADAPT_BATCH_SIZE)
+    vectorizer.adapt(captions)
+    os.makedirs(os.path.dirname(CONTRASTIVE_VOCABULARY_PATH), exist_ok=True)
+    with open(CONTRASTIVE_VOCABULARY_PATH, "w", encoding="utf-8") as handle:
+        json.dump(vectorizer.get_vocabulary(), handle)
+    return vectorizer
+
+
+def contrastive_dataset(records, vectorizer, epoch, training):
+    def rows():
+        for index, (path, captions) in enumerate(records):
+            yield path, captions[(epoch + index) % len(captions)]
+
+    def decode(path, caption):
+        image = tf.io.decode_jpeg(tf.io.read_file(path), channels=IMAGE_CHANNELS)
+        image = tf.image.resize(image, PRETRAIN_RESIZE if training else IMAGE_SIZE)
+        if training:
+            image = augment(tf.image.random_crop(
+                image, (*IMAGE_SIZE, IMAGE_CHANNELS)))
+        return tf.cast(image, tf.float32), vectorizer(caption)
+
+    dataset = tf.data.Dataset.from_generator(
+        rows, output_signature=(tf.TensorSpec((), tf.string), tf.TensorSpec((), tf.string)))
+    if training:
+        dataset = dataset.shuffle(SHUFFLE_BUFFER, seed=SEED + epoch,
+                                  reshuffle_each_iteration=False)
+    dataset = dataset.map(decode, num_parallel_calls=AUTOTUNE,
+                          deterministic=not training)
     options = tf.data.Options()
     options.experimental_distribute.auto_shard_policy = tf.data.experimental.AutoShardPolicy.DATA
-    dataset = dataset.map(load_views, num_parallel_calls=AUTOTUNE).with_options(options)
-    return dataset.batch(batch_size, drop_remainder=True).prefetch(AUTOTUNE), len(paths)
+    return dataset.with_options(options).batch(
+        PRETRAIN_BATCH_SIZE, drop_remainder=True).prefetch(AUTOTUNE)
 
 
-class DistributedSimCLRTrainer:
-    def __init__(self, encoder, strategy, optimizer):
+class DistributedContrastiveTrainer:
+    def __init__(self, encoder, text_encoder, image_projector, text_projector,
+                 strategy, optimizer):
         self.encoder = encoder
+        self.text_encoder = text_encoder
+        self.image_projector = image_projector
+        self.text_projector = text_projector
         self.strategy = strategy
         self.optimizer = optimizer
-        with strategy.scope():
-            self.projector = tf.keras.Sequential([
-                tf.keras.layers.Dense(PROJECTION_HIDDEN_DIM, activation="relu"),
-                tf.keras.layers.Dense(PROJECTION_DIM),
-            ], name="projection_head")
-            self.projector(tf.zeros((1, CNN_FILTERS[-1])))
+        optimizer.build(encoder.trainable_variables + text_encoder.trainable_variables +
+                        image_projector.trainable_variables + text_projector.trainable_variables)
+
+    def _loss(self, images, tokens, training):
+        image_vectors = tf.math.l2_normalize(self.image_projector(
+            self.encoder(images, training=training), training=training), axis=1)
+        text_vectors = tf.math.l2_normalize(self.text_projector(
+            self.text_encoder(tokens, training=training), training=training), axis=1)
+        context = tf.distribute.get_replica_context()
+        all_images = context.all_gather(image_vectors, axis=0)
+        all_text = context.all_gather(text_vectors, axis=0)
+        local_size = tf.shape(image_vectors)[0]
+        labels = tf.range(local_size) + context.replica_id_in_sync_group * local_size
+        image_loss = tf.keras.losses.sparse_categorical_crossentropy(
+            labels, tf.matmul(image_vectors, all_text, transpose_b=True) / PRETRAIN_TEMPERATURE,
+            from_logits=True)
+        text_loss = tf.keras.losses.sparse_categorical_crossentropy(
+            labels, tf.matmul(text_vectors, all_images, transpose_b=True) / PRETRAIN_TEMPERATURE,
+            from_logits=True)
+        return tf.nn.compute_average_loss(
+            (image_loss + text_loss) / 2, global_batch_size=PRETRAIN_BATCH_SIZE)
 
     @tf.function
-    def _train_replica(self, view1, view2, global_batch_size):
+    def _train_replica(self, images, tokens):
         with tf.GradientTape() as tape:
-            z1 = tf.math.l2_normalize(
-                self.projector(self.encoder(view1, training=True), training=True), axis=1)
-            z2 = tf.math.l2_normalize(
-                self.projector(self.encoder(view2, training=True), training=True), axis=1)
-            labels = tf.range(tf.shape(z1)[0])
-            loss12 = tf.keras.losses.sparse_categorical_crossentropy(
-                labels, tf.matmul(z1, z2, transpose_b=True) / PRETRAIN_TEMPERATURE,
-                from_logits=True)
-            loss21 = tf.keras.losses.sparse_categorical_crossentropy(
-                labels, tf.matmul(z2, z1, transpose_b=True) / PRETRAIN_TEMPERATURE,
-                from_logits=True)
-            loss = tf.reduce_sum((loss12 + loss21) / 2) / tf.cast(
-                global_batch_size, tf.float32)
-        variables = self.encoder.trainable_variables + self.projector.trainable_variables
+            loss = self._loss(images, tokens, True)
+        variables = (self.encoder.trainable_variables + self.text_encoder.trainable_variables +
+                     self.image_projector.trainable_variables + self.text_projector.trainable_variables)
         gradients = tape.gradient(loss, variables)
         self.optimizer.apply_gradients(zip(gradients, variables))
         return loss
 
-    def train_batch(self, view1, view2):
-        values = (tf.convert_to_tensor(view1), tf.convert_to_tensor(view2))
-        distributed = tuple(
-            self.strategy.experimental_distribute_values_from_function(
-                lambda context, value=value: value[
-                    context.replica_id_in_sync_group::self.strategy.num_replicas_in_sync])
-            for value in values
-        )
-        losses = self.strategy.run(
-            self._train_replica, args=(*distributed, tf.shape(view1)[0]))
+    @tf.function
+    def _eval_replica(self, images, tokens):
+        return self._loss(images, tokens, False)
+
+    def batch(self, values, training):
+        function = self._train_replica if training else self._eval_replica
+        losses = self.strategy.run(function, args=values)
         return self.strategy.reduce(tf.distribute.ReduceOp.SUM, losses, axis=None)
 
 
 def run_pretraining(args, strategy):
     if PRETRAIN_BATCH_SIZE % strategy.num_replicas_in_sync:
         raise ValueError("PRETRAIN_BATCH_SIZE must be divisible by the number of replicas")
-    stage("Pretrain data", "Creating two augmented Flickr30k views")
-    dataset, image_count = image_dataset(PRETRAIN_BATCH_SIZE)
-    os.makedirs(os.path.dirname(PRETRAINED_CNN_PATH), exist_ok=True)
-    os.makedirs(os.path.join(LOG_DIR, "pretrain"), exist_ok=True)
+    pretrain_dir = os.path.join(CHECKPOINT_DIR, "pretrain")
+    state_dir = os.path.join(pretrain_dir, "resnet18_training_state")
     history_path = os.path.join(LOG_DIR, "pretrain", "distributed_history.csv")
-    previous_losses = []
-    if os.path.isfile(history_path) and args.resume:
-        with open(history_path, newline="", encoding="utf-8") as handle:
-            previous_losses = [float(row["loss"]) for row in csv.DictReader(handle)
-                               if row.get("loss") not in (None, "", "nan")]
-    initial_epoch = len(previous_losses)
+    if args.pretrain_scratch:
+        for path in (PRETRAINED_CNN_PATH, PRETRAIN_COMPLETE_PATH,
+                     CONTRASTIVE_VOCABULARY_PATH, history_path):
+            if os.path.isfile(path):
+                os.remove(path)
+        for path in (state_dir, os.path.join(CHECKPOINT_DIR, args.decoder, "backup"),
+                     os.path.join(LOG_DIR, args.decoder, "grids")):
+            if os.path.isdir(path):
+                tf.io.gfile.rmtree(path)
+        for name in ("best_resnet18_scratch.weights.h5", "last_resnet18_scratch.weights.h5"):
+            path = os.path.join(CHECKPOINT_DIR, args.decoder, name)
+            if os.path.isfile(path):
+                os.remove(path)
+        caption_history = os.path.join(LOG_DIR, args.decoder, "history.csv")
+        if os.path.isfile(caption_history):
+            os.remove(caption_history)
+
+    stage("Pretrain data", "Loading local COCO image-caption pairs")
+    train_records, annotations = coco_records("train")
+    validation_records, _ = coco_records("val")
+    vectorizer = contrastive_vectorizer(annotations)
+    steps = len(train_records) // PRETRAIN_BATCH_SIZE
+    validation_steps = len(validation_records) // PRETRAIN_BATCH_SIZE
+    os.makedirs(pretrain_dir, exist_ok=True)
+    os.makedirs(os.path.dirname(history_path), exist_ok=True)
+
     with strategy.scope():
         encoder = build_cnn()
-        stage("Pretrain encoder", "Scratch CNN model summary")
-        encoder.summary(expand_nested=True, show_trainable=True)
-        if os.path.isfile(PRETRAINED_CNN_PATH) and not args.pretrain_scratch:
-            encoder.load_weights(PRETRAINED_CNN_PATH)
-            encoder(tf.zeros((1, *IMAGE_SIZE, IMAGE_CHANNELS)), training=False)
-            stage("Pretrained encoder loaded", PRETRAINED_CNN_PATH)
-        steps = max(image_count // PRETRAIN_BATCH_SIZE, 1)
+        text_encoder = tf.keras.Sequential([
+            tf.keras.layers.Embedding(len(vectorizer.get_vocabulary()),
+                                      CONTRASTIVE_EMBEDDING_DIM, mask_zero=True),
+            tf.keras.layers.GRU(CONTRASTIVE_TEXT_DIM),
+        ], name="contrastive_text_encoder")
+        image_projector = tf.keras.Sequential([
+            tf.keras.layers.Dense(PROJECTION_HIDDEN_DIM, activation="relu"),
+            tf.keras.layers.Dense(PROJECTION_DIM),
+        ], name="image_projection_head")
+        text_projector = tf.keras.Sequential([
+            tf.keras.layers.Dense(PROJECTION_HIDDEN_DIM, activation="relu"),
+            tf.keras.layers.Dense(PROJECTION_DIM),
+        ], name="text_projection_head")
+        text_encoder(tf.zeros((1, MAX_LENGTH), tf.int32))
+        image_projector(tf.zeros((1, ENCODER_DIM)))
+        text_projector(tf.zeros((1, CONTRASTIVE_TEXT_DIM)))
         schedule = tf.keras.optimizers.schedules.CosineDecay(
             PRETRAIN_LEARNING_RATE, steps * args.pretrain_epochs, alpha=COSINE_ALPHA)
         optimizer = tf.keras.optimizers.AdamW(
             schedule, weight_decay=PRETRAIN_WEIGHT_DECAY,
             global_clipnorm=PRETRAIN_CLIP_NORM)
-        encoder.optimizer = optimizer
-        trainer = DistributedSimCLRTrainer(encoder, strategy, optimizer)
+        trainer = DistributedContrastiveTrainer(
+            encoder, text_encoder, image_projector, text_projector, strategy, optimizer)
         checkpoint = tf.train.Checkpoint(
-            encoder=encoder, projector=trainer.projector, optimizer=optimizer)
+            encoder=encoder, text_encoder=text_encoder,
+            image_projector=image_projector, text_projector=text_projector,
+            optimizer=optimizer)
         manager = tf.train.CheckpointManager(
-            checkpoint, os.path.join(CHECKPOINT_DIR, "pretrain", "training_state"),
-            max_to_keep=PRETRAIN_CHECKPOINTS)
-        if args.resume and not manager.latest_checkpoint:
-            raise FileNotFoundError("No SimCLR training state is available to resume")
-        if args.resume:
+            checkpoint, state_dir, max_to_keep=PRETRAIN_CHECKPOINTS)
+        initial_epoch = 0
+        if args.resume_pretrain:
+            if not manager.latest_checkpoint:
+                raise FileNotFoundError("No contrastive pretraining state is available")
             checkpoint.restore(manager.latest_checkpoint).expect_partial()
             initial_epoch = int(manager.latest_checkpoint.rsplit("-", 1)[-1])
-            stage("SimCLR state restored", manager.latest_checkpoint)
-    if initial_epoch >= args.pretrain_epochs:
-        if not os.path.isfile(PRETRAINED_CNN_PATH):
-            encoder.save_weights(PRETRAINED_CNN_PATH)
-        open(PRETRAIN_COMPLETE_PATH, "a").close()
-        stage("Pretraining already complete", f"Epoch {initial_epoch}")
-        return
-    if os.path.isfile(PRETRAIN_COMPLETE_PATH):
-        os.remove(PRETRAIN_COMPLETE_PATH)
-    patience = (PRETRAIN_EARLY_STOPPING_PATIENCE if args.pretrain_patience is None
-                else args.pretrain_patience)
-    min_delta = (PRETRAIN_EARLY_STOPPING_MIN_DELTA if args.pretrain_min_delta is None
-                 else args.pretrain_min_delta)
+            stage("Contrastive state restored", manager.latest_checkpoint)
+
     callbacks = tf.keras.callbacks.CallbackList([
         tf.keras.callbacks.ModelCheckpoint(
-            PRETRAINED_CNN_PATH, monitor="loss", mode="min", save_best_only=True,
-            save_weights_only=True, initial_value_threshold=min(previous_losses, default=None),
-            verbose=1),
+            PRETRAINED_CNN_PATH, monitor="val_loss", mode="min", save_best_only=True,
+            save_weights_only=True, verbose=1),
         tf.keras.callbacks.EarlyStopping(
-            monitor="loss", mode="min", patience=patience, min_delta=min_delta,
-            baseline=min(previous_losses, default=None), restore_best_weights=True, verbose=1),
+            monitor="val_loss", mode="min",
+            patience=(PRETRAIN_EARLY_STOPPING_PATIENCE if args.pretrain_patience is None
+                      else args.pretrain_patience),
+            min_delta=(PRETRAIN_EARLY_STOPPING_MIN_DELTA if args.pretrain_min_delta is None
+                       else args.pretrain_min_delta),
+            restore_best_weights=True, verbose=1),
         tf.keras.callbacks.TerminateOnNaN(),
-        tf.keras.callbacks.TensorBoard(os.path.join(LOG_DIR, "pretrain")),
-        tf.keras.callbacks.CSVLogger(history_path, append=args.resume),
+        tf.keras.callbacks.CSVLogger(history_path, append=args.resume_pretrain),
     ])
     callbacks.set_model(encoder)
     callbacks.set_params({"epochs": args.pretrain_epochs, "initial_epoch": initial_epoch,
-                          "steps": steps, "verbose": 1, "metrics": ["loss"]})
+                          "steps": steps, "verbose": 1,
+                          "metrics": ["loss", "val_loss"]})
     encoder.stop_training = False
     callbacks.on_train_begin()
+    validation = strategy.experimental_distribute_dataset(
+        contrastive_dataset(validation_records, vectorizer, 0, False))
     for epoch in range(initial_epoch, args.pretrain_epochs):
         callbacks.on_epoch_begin(epoch)
-        print(f"Epoch {epoch + 1}/{args.pretrain_epochs}")
+        training = strategy.experimental_distribute_dataset(
+            contrastive_dataset(train_records, vectorizer, epoch, True))
         progress = tf.keras.utils.Progbar(steps, stateful_metrics=["loss"])
         total_loss = 0.0
-        for step, (view1, view2) in enumerate(dataset.take(steps)):
-            callbacks.on_train_batch_begin(step)
-            loss = float(trainer.train_batch(view1, view2))
+        for step, values in enumerate(training):
+            loss = float(trainer.batch(values, True))
             if not math.isfinite(loss):
-                raise FloatingPointError("SimCLR loss became non-finite")
+                raise FloatingPointError("Contrastive training loss became non-finite")
             total_loss += loss
-            running_loss = total_loss / (step + 1)
-            progress.update(step + 1, values=[("loss", running_loss)])
-            callbacks.on_train_batch_end(step, {"loss": running_loss})
-        callbacks.on_epoch_end(epoch, {"loss": total_loss / steps})
+            progress.update(step + 1, values=[("loss", total_loss / (step + 1))])
+        validation_loss = sum(float(trainer.batch(values, False))
+                              for values in validation) / validation_steps
+        if not math.isfinite(validation_loss):
+            raise FloatingPointError("Contrastive validation loss became non-finite")
+        logs = {"loss": total_loss / steps, "val_loss": validation_loss}
+        callbacks.on_epoch_end(epoch, logs)
         manager.save(checkpoint_number=epoch + 1)
         if encoder.stop_training:
             break
@@ -241,7 +347,7 @@ def run_pretraining(args, strategy):
     if not os.path.isfile(PRETRAINED_CNN_PATH):
         encoder.save_weights(PRETRAINED_CNN_PATH)
     open(PRETRAIN_COMPLETE_PATH, "a").close()
-    stage("SimCLR pretraining complete", PRETRAINED_CNN_PATH)
+    stage("COCO contrastive pretraining complete", PRETRAINED_CNN_PATH)
 
 
 class CaptionGrid(tf.keras.callbacks.Callback):
@@ -277,36 +383,100 @@ class CaptionGrid(tf.keras.callbacks.Callback):
         plt.close(figure)
 
 
-def bleu_scores(model, data, limit=BLEU_EXAMPLES):
-    """Dependency-free corpus BLEU-1..4 over a bounded validation sample."""
+class LearningRateLogger(tf.keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs=None):
+        logs["learning_rate"] = float(
+            tf.keras.backend.get_value(self.model.optimizer.learning_rate))
+
+
+def smoothed_sparse_crossentropy(labels, logits):
+    hard_loss = tf.keras.losses.sparse_categorical_crossentropy(
+        labels, logits, from_logits=True)
+    smooth_loss = -tf.reduce_mean(tf.nn.log_softmax(logits), axis=-1)
+    return (1.0 - LABEL_SMOOTHING) * hard_loss + LABEL_SMOOTHING * smooth_loss
+
+
+def caption_scores(model, data, limit=BLEU_EXAMPLES):
+    """Multi-reference corpus BLEU-1..4 and CIDEr over validation images."""
+    groups = {}
+    vocabulary = data.vocabulary
+    for path, caption in data.rows(True):
+        if path not in groups and len(groups) >= limit:
+            continue
+        ids = data.vectorizer(caption).numpy()
+        groups.setdefault(path, []).append(
+            [vocabulary[index] for index in ids if index > 1 and vocabulary[index] not in {"start", "end"}])
+
+    def ngrams(words, order):
+        counts = {}
+        for index in range(len(words) - order + 1):
+            gram = tuple(words[index:index + order])
+            counts[gram] = counts.get(gram, 0) + 1
+        return counts
+
     matches = [0] * BLEU_MAX_ORDER
     totals = [0] * BLEU_MAX_ORDER
     predicted_length = reference_length = 0
-    for number, (path, caption) in enumerate(data.rows(True)):
-        if number >= limit:
-            break
-        reference = caption.split()[1:-1]
+    predictions = {}
+    for path, references in groups.items():
         predicted = caption_image(model, path, data.vocabulary).split()
-        predicted_length += len(predicted); reference_length += len(reference)
-        for n in range(1, BLEU_MAX_ORDER + 1):
-            ref = {}
-            for i in range(len(reference) - n + 1):
-                gram = tuple(reference[i:i + n]); ref[gram] = ref.get(gram, 0) + 1
-            seen = {}
-            for i in range(len(predicted) - n + 1):
-                gram = tuple(predicted[i:i + n]); seen[gram] = seen.get(gram, 0) + 1
-            matches[n - 1] += sum(min(count, ref.get(gram, 0)) for gram, count in seen.items())
-            totals[n - 1] += max(len(predicted) - n + 1, 0)
+        predictions[path] = predicted
+        predicted_length += len(predicted)
+        reference_length += min((len(ref) for ref in references),
+                                key=lambda length: (abs(length - len(predicted)), length))
+        for order in range(1, BLEU_MAX_ORDER + 1):
+            candidate = ngrams(predicted, order)
+            maximum = {}
+            for reference in references:
+                for gram, count in ngrams(reference, order).items():
+                    maximum[gram] = max(maximum.get(gram, 0), count)
+            matches[order - 1] += sum(min(count, maximum.get(gram, 0))
+                                      for gram, count in candidate.items())
+            totals[order - 1] += sum(candidate.values())
     brevity = math.exp(min(0.0, 1.0 - reference_length / max(predicted_length, 1)))
     precisions = [matches[i] / max(totals[i], 1) for i in range(BLEU_MAX_ORDER)]
-    return {f"bleu_{n}": brevity * math.exp(sum(math.log(max(p, 1e-12)) for p in precisions[:n]) / n)
-            for n in range(1, BLEU_MAX_ORDER + 1)}
+    scores = {f"bleu_{n}": brevity * math.exp(
+        sum(math.log(max(p, 1e-12)) for p in precisions[:n]) / n)
+        for n in range(1, BLEU_MAX_ORDER + 1)}
+
+    document_frequency = [{} for _ in range(BLEU_MAX_ORDER)]
+    for references in groups.values():
+        for order in range(1, BLEU_MAX_ORDER + 1):
+            for gram in set().union(*(ngrams(ref, order) for ref in references)):
+                document_frequency[order - 1][gram] = document_frequency[order - 1].get(gram, 0) + 1
+
+    def vector(words, order):
+        counts = ngrams(words, order)
+        total = max(sum(counts.values()), 1)
+        return {gram: count / total * math.log(len(groups) / frequency)
+                for gram, count in counts.items()
+                if (frequency := document_frequency[order - 1].get(gram))}
+
+    cider = 0.0
+    for path, references in groups.items():
+        image_score = 0.0
+        for order in range(1, BLEU_MAX_ORDER + 1):
+            candidate = vector(predictions[path], order)
+            candidate_norm = math.sqrt(sum(value * value for value in candidate.values()))
+            similarities = []
+            for reference in references:
+                reference_vector = vector(reference, order)
+                reference_norm = math.sqrt(sum(value * value for value in reference_vector.values()))
+                dot = sum(value * reference_vector.get(gram, 0.0)
+                          for gram, value in candidate.items())
+                similarities.append(dot / max(candidate_norm * reference_norm, 1e-12))
+            image_score += sum(similarities) / len(similarities)
+        cider += 10.0 * image_score / BLEU_MAX_ORDER
+    scores["cider"] = cider / max(len(groups), 1)
+    return scores
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--pretrain", "--pretain", action="store_true",
-                        help="run/resume SimCLR encoder pretraining")
+                        help="run COCO image-caption contrastive pretraining")
+    parser.add_argument("--resume-pretrain", action="store_true",
+                        help="resume COCO contrastive pretraining state")
     parser.add_argument("--model", action="store_true", help="train the caption model")
     parser.add_argument("--decoder", choices=("lstm", "gru"), default=DECODER)
     parser.add_argument("--epochs", "--model-epochs", type=int, default=EPOCHS)
@@ -314,13 +484,14 @@ def main():
     parser.add_argument("--pretrain-patience", type=int, default=None)
     parser.add_argument("--pretrain-min-delta", type=float, default=None)
     parser.add_argument("--pretrain-scratch", action="store_true",
-                        help="discard SimCLR state and pretrain a new encoder")
+                        help="replace old runs and contrastively pretrain a new encoder")
     parser.add_argument("--test-only", action="store_true")
     parser.add_argument("--image", help="generate a caption instead of training")
     parser.add_argument("--weights", help="caption weights used with --image")
     start = parser.add_mutually_exclusive_group()
     start.add_argument("--scratch", action="store_true", help="ignore checkpoints and train from random weights")
-    start.add_argument("--from-pretrained", action="store_true", help="start a new caption model from SimCLR CNN weights")
+    start.add_argument("--from-pretrained", action="store_true",
+                       help="start a new caption model from COCO contrastive CNN weights")
     start.add_argument("--resume", action="store_true",
                        help="continue caption training from the last recorded epoch")
     args = parser.parse_args()
@@ -340,12 +511,21 @@ def main():
 
     if args.resume and (args.scratch or args.pretrain_scratch):
         parser.error("--resume cannot be combined with a scratch option")
+    if args.resume_pretrain and args.pretrain_scratch:
+        parser.error("--resume-pretrain cannot be combined with --pretrain-scratch")
     if args.scratch and args.pretrain:
         parser.error("--scratch cannot be combined with --pretrain; use --pretrain-scratch")
 
-    explicitly_selected = args.pretrain or args.model or args.from_pretrained or args.test_only
-    run_pretrain = args.pretrain or args.pretrain_scratch or not explicitly_selected
-    run_model = args.model or args.from_pretrained or args.test_only or not explicitly_selected
+    explicitly_selected = any((
+        args.pretrain, args.pretrain_scratch, args.resume_pretrain,
+        args.model, args.from_pretrained,
+        args.test_only, args.resume, args.scratch,
+    ))
+    run_pretrain = args.pretrain or args.pretrain_scratch or args.resume_pretrain
+    run_model = any((
+        args.model, args.from_pretrained, args.test_only, args.resume,
+        args.scratch,
+    )) or not explicitly_selected
     if args.scratch:
         run_pretrain = False
         run_model = True
@@ -357,14 +537,14 @@ def main():
     if run_pretrain:
         if args.pretrain_scratch:
             detail = "Starting from random weights at epoch 1"
-        elif args.resume:
+        elif args.resume_pretrain:
             detail = "Restoring weights, optimizer and last epoch"
         else:
             detail = "Loading saved encoder weights and starting at epoch 1"
-        stage("Pipeline stage 1 - SimCLR pretraining", detail)
+        stage("Pipeline stage 1 - COCO contrastive pretraining", detail)
         run_pretraining(args, strategy)
         stage("Pipeline stage 1 complete", "Pretrained CNN weights are ready")
-        if not args.resume:
+        if not args.resume_pretrain:
             args.from_pretrained = True
 
     if not run_model:
@@ -378,8 +558,10 @@ def main():
     data = Flickr30kDataset()
     data.prepare_vocabulary()
     stage("Stage 2 complete", f"Vocabulary size: {len(data.vocabulary)}")
-    checkpoint = os.path.join(CHECKPOINT_DIR, args.decoder, "best.weights.h5")
-    last_checkpoint = os.path.join(CHECKPOINT_DIR, args.decoder, "last.weights.h5")
+    checkpoint = os.path.join(
+        CHECKPOINT_DIR, args.decoder, "best_resnet18_scratch.weights.h5")
+    last_checkpoint = os.path.join(
+        CHECKPOINT_DIR, args.decoder, "last_resnet18_scratch.weights.h5")
     os.makedirs(os.path.dirname(checkpoint), exist_ok=True)
     os.makedirs(os.path.join(LOG_DIR, args.decoder), exist_ok=True)
 
@@ -408,21 +590,32 @@ def main():
         raise FileNotFoundError("No caption checkpoint is available to resume")
     resumed = args.resume
     pretrained = not args.scratch and not resumed and os.path.isfile(PRETRAINED_CNN_PATH)
-    if resumed:
+    if args.test_only:
+        if not os.path.isfile(checkpoint):
+            raise FileNotFoundError(f"No scratch caption checkpoint found at {checkpoint}")
+        model.load_weights(checkpoint)
+        print(f"Testing best checkpoint {checkpoint}")
+    elif resumed:
         model.load_weights(resume_checkpoint)
         print(f"Resuming from {resume_checkpoint}")
+    elif args.from_pretrained:
+        model.get_layer("cnn_encoder").load_weights(PRETRAINED_CNN_PATH)
+        model.get_layer("cnn_encoder").trainable = False
+        print(f"Loaded COCO contrastive CNN from {PRETRAINED_CNN_PATH}")
     elif pretrained:
         model.get_layer("cnn_encoder").load_weights(PRETRAINED_CNN_PATH)
         model.get_layer("cnn_encoder").trainable = False
-        print(f"Loaded pretrained CNN from {PRETRAINED_CNN_PATH}")
+        print(f"Loaded COCO contrastive CNN from {PRETRAINED_CNN_PATH}")
     elif args.scratch:
         print("Training from scratch")
 
     verify_captioner(model, len(data.vocabulary))
-    if resumed:
+    if args.test_only:
+        weight_status = f"Best caption checkpoint loaded: {checkpoint}"
+    elif resumed:
         weight_status = f"Caption checkpoint loaded and verified: {resume_checkpoint}"
     elif pretrained:
-        weight_status = f"Pretrained CNN loaded and verified: {PRETRAINED_CNN_PATH}"
+        weight_status = "COCO contrastive CNN loaded and verified"
     else:
         weight_status = "Random scratch weights verified"
     stage("Stage 4 complete", weight_status)
@@ -435,18 +628,20 @@ def main():
     initial_epoch = 0
     if resumed and os.path.isfile(history_path):
         with open(history_path, encoding="utf-8") as handle:
-            initial_epoch = max(sum(1 for _ in handle) - 1, 0)
+            epochs = [int(line.split(",", 1)[0]) for line in handle
+                      if line.split(",", 1)[0].isdigit()]
+        initial_epoch = max(epochs, default=-1) + 1
         stage("Resume epoch restored", f"Continuing from epoch {initial_epoch + 1}")
 
     def compile_model(learning_rate):
         with strategy.scope():
             model.compile(
                 optimizer=tf.keras.optimizers.AdamW(learning_rate, weight_decay=WEIGHT_DECAY, global_clipnorm=CLIP_NORM),
-                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+                loss=smoothed_sparse_crossentropy,
                 weighted_metrics=[tf.keras.metrics.SparseCategoricalAccuracy(name="token_accuracy")],
             )
 
-    compile_model(LEARNING_RATE)
+    compile_model(FINETUNE_LEARNING_RATE if resumed else LEARNING_RATE)
     if not args.test_only:
         if pretrained and FREEZE_EPOCHS:
             warmup_epochs = min(FREEZE_EPOCHS, args.epochs)
@@ -454,6 +649,7 @@ def main():
             model.fit(train_data, validation_data=validation_data, epochs=warmup_epochs, callbacks=[
                 tf.keras.callbacks.ModelCheckpoint(last_checkpoint, save_weights_only=True),
                 tf.keras.callbacks.TerminateOnNaN(),
+                LearningRateLogger(),
                 tf.keras.callbacks.CSVLogger(os.path.join(LOG_DIR, args.decoder, "history.csv")),
                 CaptionGrid(data, os.path.join(LOG_DIR, args.decoder, "grids")),
             ])
@@ -471,6 +667,7 @@ def main():
             tf.keras.callbacks.ReduceLROnPlateau(
                 monitor="val_loss", patience=LR_PATIENCE, factor=LR_FACTOR,
                 min_lr=MIN_LEARNING_RATE, verbose=1),
+            LearningRateLogger(),
             tf.keras.callbacks.TerminateOnNaN(),
             tf.keras.callbacks.TensorBoard(os.path.join(LOG_DIR, args.decoder)),
             tf.keras.callbacks.CSVLogger(history_path, append=resumed or warmup_epochs > 0),
@@ -485,10 +682,13 @@ def main():
             model.fit(train_data, validation_data=validation_data, initial_epoch=warmup_epochs,
                       epochs=args.epochs, callbacks=callbacks)
             stage("Stage 6 complete", "Caption training finished")
-    stage("Stage 7 - Evaluation", "Validation loss, accuracy, perplexity and BLEU")
+    if os.path.isfile(checkpoint) and not args.test_only:
+        model.load_weights(checkpoint)
+        print(f"Evaluating best checkpoint {checkpoint}")
+    stage("Stage 7 - Evaluation", "Validation loss, token accuracy, perplexity, BLEU and CIDEr")
     results = model.evaluate(validation_data, return_dict=True)
     results["perplexity"] = math.exp(min(results["loss"], PERPLEXITY_MAX_LOSS))
-    results.update(bleu_scores(model, data))
+    results.update(caption_scores(model, data))
     print({name: round(value, 4) for name, value in results.items()})
     path, _ = next(data.rows(True))
     print("Sample:", os.path.basename(path), "->", caption_image(model, path, data.vocabulary))

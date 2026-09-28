@@ -9,7 +9,7 @@ import tensorflow as tf
 
 from config import (BATCH_SIZE, DATASET_DIR, IMAGE_CHANNELS, IMAGE_SIZE, MAX_LENGTH,
                     SEED, SHUFFLE_BUFFER, VALIDATION_SPLIT, VOCAB_ADAPT_BATCH_SIZE,
-                    VOCABULARY_PATH, VOCAB_SIZE)
+                    VOCABULARY_PATH, VOCAB_SIZE, TOKEN_DROPOUT)
 
 AUTOTUNE = tf.data.AUTOTUNE
 
@@ -42,9 +42,12 @@ class Flickr30kDataset:
     def prepare_vocabulary(self):
         if os.path.isfile(VOCABULARY_PATH):
             with open(VOCABULARY_PATH, encoding="utf-8") as handle:
-                self.vectorizer.set_vocabulary(json.load(handle))
-            print(f"Loaded vocabulary: {VOCABULARY_PATH}")
-            return
+                vocabulary = json.load(handle)
+            if len(vocabulary) <= VOCAB_SIZE:
+                self.vectorizer.set_vocabulary(vocabulary)
+                print(f"Loaded vocabulary: {VOCABULARY_PATH}")
+                return
+            print(f"Rebuilding vocabulary for {VOCAB_SIZE} tokens")
         captions = tf.data.Dataset.from_generator(
             lambda: (caption for _, caption in self.rows(False)),
             output_signature=tf.TensorSpec((), tf.string),
@@ -61,10 +64,15 @@ class Flickr30kDataset:
         if training:
             image = tf.image.random_flip_left_right(image, seed=SEED)
         tokens = self.vectorizer(caption)
+        inputs = tokens[:-1]
         targets = tokens[1:]
+        if training and TOKEN_DROPOUT:
+            eligible = (inputs > 1) & (inputs != self.vectorizer("start")[0])
+            dropped = tf.random.uniform(tf.shape(inputs), seed=SEED) < TOKEN_DROPOUT
+            inputs = tf.where(eligible & dropped, tf.ones_like(inputs), inputs)
         mask = tf.cast(targets != 0, tf.float32)
         weights = mask * tf.cast(MAX_LENGTH - 1, tf.float32) / tf.maximum(tf.reduce_sum(mask), 1.0)
-        return {"image": image, "tokens": tokens[:-1]}, targets, weights
+        return {"image": image, "tokens": inputs}, targets, weights
 
     def build(self, training):
         example_count = sum(1 for _ in self.rows(not training))

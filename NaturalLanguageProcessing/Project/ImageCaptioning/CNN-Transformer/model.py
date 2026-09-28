@@ -1,8 +1,9 @@
 """Scratch CNN encoder with a causal Transformer caption decoder."""
 import tensorflow as tf
 
-from config import (CNN_FILTERS, CNN_KERNEL_SIZE, CNN_STRIDE, DECODER, DROPOUT,
-                    IMAGE_CHANNELS, IMAGE_SIZE, MAX_LENGTH, PIXEL_MAX_VALUE,
+from config import (DECODER, DROPOUT, IMAGE_CHANNELS, IMAGE_GRID_SIZE,
+                    IMAGE_SIZE, MAX_LENGTH, PIXEL_MAX_VALUE, RESNET_BLOCKS,
+                    RESNET_FILTERS,
                     TRANSFORMER_DIM, TRANSFORMER_FF_DIM, TRANSFORMER_HEADS,
                     TRANSFORMER_LAYERS)
 
@@ -12,14 +13,39 @@ tf.keras.backend.set_image_data_format("channels_last")
 def build_cnn(spatial=False):
     inputs = tf.keras.Input((*IMAGE_SIZE, IMAGE_CHANNELS))
     x = tf.keras.layers.Rescaling(1.0 / PIXEL_MAX_VALUE)(inputs)
-    for filters in CNN_FILTERS:
-        x = tf.keras.layers.Conv2D(
-            filters, CNN_KERNEL_SIZE, strides=CNN_STRIDE,
-            padding="same", use_bias=False)(x)
-        x = tf.keras.layers.BatchNormalization()(x)
-        x = tf.keras.layers.ReLU()(x)
+    x = tf.keras.layers.Conv2D(
+        RESNET_FILTERS[0], 7, strides=2, padding="same",
+        use_bias=False, name="stem_conv")(x)
+    x = tf.keras.layers.BatchNormalization(name="stem_bn")(x)
+    x = tf.keras.layers.ReLU(name="stem_relu")(x)
+    x = tf.keras.layers.MaxPool2D(3, strides=2, padding="same", name="stem_pool")(x)
+
+    for stage, (filters, blocks) in enumerate(
+            zip(RESNET_FILTERS, RESNET_BLOCKS), start=1):
+        for block in range(1, blocks + 1):
+            stride = 2 if stage > 1 and block == 1 else 1
+            shortcut = x
+            x = tf.keras.layers.Conv2D(
+                filters, 3, strides=stride, padding="same", use_bias=False,
+                name=f"stage{stage}_block{block}_conv1")(x)
+            x = tf.keras.layers.BatchNormalization(
+                name=f"stage{stage}_block{block}_bn1")(x)
+            x = tf.keras.layers.ReLU(name=f"stage{stage}_block{block}_relu1")(x)
+            x = tf.keras.layers.Conv2D(
+                filters, 3, padding="same", use_bias=False,
+                name=f"stage{stage}_block{block}_conv2")(x)
+            x = tf.keras.layers.BatchNormalization(
+                name=f"stage{stage}_block{block}_bn2")(x)
+            if stride != 1 or shortcut.shape[-1] != filters:
+                shortcut = tf.keras.layers.Conv2D(
+                    filters, 1, strides=stride, use_bias=False,
+                    name=f"stage{stage}_block{block}_shortcut_conv")(shortcut)
+                shortcut = tf.keras.layers.BatchNormalization(
+                    name=f"stage{stage}_block{block}_shortcut_bn")(shortcut)
+            x = tf.keras.layers.Add(name=f"stage{stage}_block{block}_add")([x, shortcut])
+            x = tf.keras.layers.ReLU(name=f"stage{stage}_block{block}_out")(x)
     if spatial:
-        x = tf.keras.layers.Reshape((-1, CNN_FILTERS[-1]), name="image_tokens")(x)
+        x = tf.keras.layers.Reshape((-1, x.shape[-1]), name="image_tokens")(x)
     else:
         x = tf.keras.layers.GlobalAveragePooling2D()(x)
     return tf.keras.Model(inputs, x, name="cnn_encoder")
@@ -34,6 +60,25 @@ class TokenPositionEmbedding(tf.keras.layers.Layer):
     def call(self, tokens):
         positions = tf.range(tf.shape(tokens)[1])
         return self.token_embedding(tokens) + self.position_embedding(positions)
+
+
+class ImagePositionEmbedding(tf.keras.layers.Layer):
+    def __init__(self):
+        super().__init__(name="image_position_embedding")
+
+    def call(self, image_tokens):
+        rows, columns = IMAGE_GRID_SIZE
+        quarter = TRANSFORMER_DIM // 4
+        frequencies = tf.exp(
+            -tf.math.log(10000.0) * tf.cast(tf.range(quarter), tf.float32) /
+            tf.cast(max(quarter - 1, 1), tf.float32))
+        row_angles = tf.cast(tf.repeat(tf.range(rows), columns), tf.float32)[:, None] * frequencies
+        column_angles = tf.cast(tf.tile(tf.range(columns), [rows]), tf.float32)[:, None] * frequencies
+        positions = tf.concat([
+            tf.sin(row_angles), tf.cos(row_angles),
+            tf.sin(column_angles), tf.cos(column_angles),
+        ], axis=1)
+        return image_tokens + positions[None, :, :]
 
 
 class TransformerDecoderBlock(tf.keras.layers.Layer):
@@ -76,6 +121,7 @@ def build_model(vocab_size, decoder=DECODER):
     features = build_cnn(spatial=True)(image)
     memory = tf.keras.layers.Dense(
         TRANSFORMER_DIM, activation="gelu", name="image_projection")(features)
+    memory = ImagePositionEmbedding()(memory)
     x = TokenPositionEmbedding(vocab_size)(tokens)
     x = tf.keras.layers.Dropout(DROPOUT, name="embedding_dropout")(x)
     for number in range(1, TRANSFORMER_LAYERS + 1):
