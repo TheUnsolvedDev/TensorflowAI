@@ -1,7 +1,5 @@
 from dataclasses import dataclass
 import os
-import shutil
-import tempfile
 
 import numpy as np
 import pandas as pd
@@ -75,11 +73,6 @@ class Dataset:
 
         self.batch_size = BATCH_SIZE
         self.img_shape = IMAGE_SIZE
-        self.cache_root = os.path.join(
-            tempfile.gettempdir(),
-            "tensorflowai_gan_cache",
-            os.path.basename(os.path.dirname(__file__)),
-        )
         self.train_options = tf.data.Options()
         self.train_options.experimental_deterministic = not ENABLE_DATASET_NONDETERMINISM
         self._builtin_datasets = {}
@@ -116,23 +109,6 @@ class Dataset:
         image = (image - 127.5) / 127.5
         return image, tf.cast(labels, tf.float32)
 
-    def _cache_path(self, dataset_type):
-        target_h, target_w = self._target_shape(dataset_type)
-        cache_dir = os.path.join(self.cache_root, dataset_type)
-        os.makedirs(cache_dir, exist_ok=True)
-        return os.path.join(cache_dir, f"images_labels_{target_h}x{target_w}")
-
-    def cleanup_cache(self):
-        shutil.rmtree(self.cache_root, ignore_errors=True)
-
-    def _apply_cache(self, ds, dataset_type, decode):
-        cache_mode = DECODE_CACHE_MODE if decode else ARRAY_CACHE_MODE
-        if cache_mode == "disk":
-            return ds.cache(self._cache_path(dataset_type))
-        if cache_mode == "memory":
-            return ds.cache()
-        return ds
-
     def _apply_training_options(self, ds, shuffle):
         if not shuffle:
             return ds
@@ -148,9 +124,8 @@ class Dataset:
             lambda x, y: self.process_images(x, y, decode=decode, dataset_type=dataset_type),
             num_parallel_calls=AUTOTUNE,
         )
-        ds = self._apply_cache(ds, dataset_type, decode)
         ds = self._apply_training_options(ds, shuffle)
-        ds = ds.batch(self.batch_size)
+        ds = ds.batch(self.batch_size, drop_remainder=shuffle)
         return ds.prefetch(AUTOTUNE)
 
     def _build_onehot_spec(self, label_dim, display_names=None):

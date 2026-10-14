@@ -1,6 +1,4 @@
 import os
-import shutil
-import tempfile
 
 import numpy as np
 import silence_tensorflow.auto
@@ -25,15 +23,6 @@ class Dataset:
         self.batch_size = BATCH_SIZE
         self.hr_shape = HR_IMAGE_SIZE
         self.lr_shape = LR_IMAGE_SIZE
-        self.cache_root = os.path.join(
-            tempfile.gettempdir(),
-            "tensorflowai_gan_cache",
-            os.path.basename(os.path.dirname(__file__)),
-        )
-        self.fallback_cache_root = os.path.join(
-            os.path.dirname(__file__),
-            CACHE_DIR,
-        )
         self.train_options = tf.data.Options()
         self.train_options.experimental_deterministic = not ENABLE_DATASET_NONDETERMINISM
         self.preview_batches = {}
@@ -81,47 +70,6 @@ class Dataset:
         lr = tf.image.resize(hr, self.lr_shape, method="area")
         return lr, hr
 
-    def _sample_cache_bytes(self):
-        lr_bytes = int(np.prod(self.lr_shape) * 3 * 4)
-        hr_bytes = int(np.prod(self.hr_shape) * 3 * 4)
-        return lr_bytes + hr_bytes
-
-    def _resolve_disk_cache_path(self, image_paths, dataset_type):
-        estimated_bytes = len(image_paths) * self._sample_cache_bytes()
-        candidate_roots = [self.cache_root, self.fallback_cache_root]
-
-        for root in candidate_roots:
-            os.makedirs(root, exist_ok=True)
-            free_bytes = shutil.disk_usage(root).free
-            if free_bytes > estimated_bytes:
-                cache_dir = os.path.join(root, dataset_type)
-                os.makedirs(cache_dir, exist_ok=True)
-                return os.path.join(
-                    cache_dir,
-                    f"sr_pairs_{self.lr_shape[0]}x{self.lr_shape[1]}_{self.hr_shape[0]}x{self.hr_shape[1]}",
-                )
-
-        return None
-
-    def cleanup_cache(self):
-        shutil.rmtree(self.cache_root, ignore_errors=True)
-        shutil.rmtree(self.fallback_cache_root, ignore_errors=True)
-
-    def _apply_decode_cache(self, ds, image_paths, dataset_type):
-        if DECODE_CACHE_MODE == "disk":
-            cache_path = self._resolve_disk_cache_path(image_paths, dataset_type)
-            if cache_path is not None:
-                print(f"Using decoded disk cache: {cache_path}")
-                return ds.cache(cache_path)
-            print(
-                "Skipping decoded disk cache due to insufficient free space in "
-                f"'{self.cache_root}' and '{self.fallback_cache_root}'"
-            )
-            return ds
-        if DECODE_CACHE_MODE == "memory":
-            return ds.cache()
-        return ds
-
     def _apply_training_options(self, ds, shuffle):
         if not shuffle:
             return ds
@@ -134,9 +82,8 @@ class Dataset:
     def build_dataset(self, image_paths, dataset_type, shuffle=True):
         ds = tf.data.Dataset.from_tensor_slices(image_paths)
         ds = ds.map(self.process_image, num_parallel_calls=AUTOTUNE)
-        ds = self._apply_decode_cache(ds, image_paths, dataset_type)
         ds = self._apply_training_options(ds, shuffle)
-        ds = ds.batch(self.batch_size)
+        ds = ds.batch(self.batch_size, drop_remainder=shuffle)
         return ds.prefetch(AUTOTUNE)
 
     def _build_preview_batch(self, image_paths, count=4):

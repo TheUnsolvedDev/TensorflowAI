@@ -1,25 +1,26 @@
-"""Flickr30k CSV reader and streaming tf.data pipeline."""
-import csv
-import hashlib
+"""Local COCO 2017 caption reader and streaming tf.data pipeline."""
 import json
 import math
 import os
+import string
+from collections import Counter
 
+import matplotlib.pyplot as plt
 import tensorflow as tf
 
 from config import (BATCH_SIZE, DATASET_DIR, IMAGE_CHANNELS, IMAGE_SIZE, MAX_LENGTH,
-                    SEED, SHUFFLE_BUFFER, VALIDATION_SPLIT, VOCAB_ADAPT_BATCH_SIZE,
-                    VOCABULARY_PATH, VOCAB_SIZE, TOKEN_DROPOUT)
+                    MIN_TOKEN_FREQUENCY, SEED, SHUFFLE_BUFFER, TOKEN_DROPOUT,
+                    VOCAB_ADAPT_BATCH_SIZE,
+                    VOCABULARY_HISTOGRAM_PATH, VOCABULARY_PATH,
+                    VOCABULARY_STATS_PATH, VOCAB_SIZE)
 
 AUTOTUNE = tf.data.AUTOTUNE
 
 
-class Flickr30kDataset:
+class CocoCaptionDataset:
     def __init__(self, root=DATASET_DIR, batch_size=BATCH_SIZE):
         self.root = root
         self.batch_size = batch_size
-        self.images_dir = os.path.join(root, "Images")
-        self.captions_path = os.path.join(root, "captions.txt")
         self.vectorizer = tf.keras.layers.TextVectorization(
             max_tokens=VOCAB_SIZE,
             output_mode="int",
@@ -27,23 +28,29 @@ class Flickr30kDataset:
         )
 
     def rows(self, validation=None):
-        if not os.path.isdir(self.images_dir) or not os.path.isfile(self.captions_path):
-            raise FileNotFoundError(f"Expected captions.txt and Images/ in {self.root}")
-        with open(self.captions_path, newline="", encoding="utf-8", errors="replace") as handle:
-            for row in csv.DictReader(handle):
-                image, caption = row.get("image", "").strip(), row.get("caption", "").strip()
-                if not image or not caption:
-                    continue
-                digest = hashlib.blake2b(f"{SEED}:{image}".encode(), digest_size=8).digest()
-                is_validation = int.from_bytes(digest, "big") / 2**64 < VALIDATION_SPLIT
-                if validation is None or is_validation == validation:
-                    yield os.path.join(self.images_dir, image), f"start {caption} end"
+        splits = ("train", "val") if validation is None else (("val",) if validation else ("train",))
+        for split in splits:
+            images_dir = os.path.join(self.root, f"{split}2017")
+            captions_path = os.path.join(
+                self.root, "annotations", f"captions_{split}2017.json")
+            if not os.path.isdir(images_dir) or not os.path.isfile(captions_path):
+                raise FileNotFoundError(
+                    f"Expected {split}2017/ and annotations/captions_{split}2017.json in {self.root}")
+            with open(captions_path, encoding="utf-8") as handle:
+                annotations = json.load(handle)
+            filenames = {image["id"]: image["file_name"] for image in annotations["images"]}
+            for annotation in annotations["annotations"]:
+                caption = annotation["caption"].strip()
+                if caption:
+                    yield (os.path.join(images_dir, filenames[annotation["image_id"]]),
+                           f"start {caption} end")
 
     def prepare_vocabulary(self):
+        self.save_vocabulary_statistics()
         if os.path.isfile(VOCABULARY_PATH):
             with open(VOCABULARY_PATH, encoding="utf-8") as handle:
                 vocabulary = json.load(handle)
-            if len(vocabulary) <= VOCAB_SIZE:
+            if len(vocabulary) == VOCAB_SIZE:
                 self.vectorizer.set_vocabulary(vocabulary)
                 print(f"Loaded vocabulary: {VOCABULARY_PATH}")
                 return
@@ -56,6 +63,58 @@ class Flickr30kDataset:
         with open(VOCABULARY_PATH, "w", encoding="utf-8") as handle:
             json.dump(self.vectorizer.get_vocabulary(), handle)
         print(f"Saved vocabulary: {VOCABULARY_PATH}")
+
+    def save_vocabulary_statistics(self):
+        counts = Counter()
+        remove_punctuation = str.maketrans("", "", string.punctuation)
+        for _, caption in self.rows(False):
+            counts.update(caption.lower().translate(remove_punctuation).split())
+        ordered = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
+        frequencies = [count for _, count in ordered]
+        total = sum(frequencies)
+        kept = sum(count >= MIN_TOKEN_FREQUENCY for count in frequencies)
+        recommended = kept + 2  # TextVectorization reserves padding and [UNK].
+        covered = sum(frequencies[:kept])
+        stats = {
+            "training_token_count": total,
+            "unique_training_tokens": len(counts),
+            "minimum_frequency": MIN_TOKEN_FREQUENCY,
+            "recommended_vocabulary_size": recommended,
+            "configured_vocabulary_size": VOCAB_SIZE,
+            "token_coverage": covered / total,
+            "unknown_token_occurrences": total - covered,
+            "token_counts": dict(ordered),
+        }
+        os.makedirs(os.path.dirname(VOCABULARY_STATS_PATH), exist_ok=True)
+        with open(VOCABULARY_STATS_PATH, "w", encoding="utf-8") as handle:
+            json.dump(stats, handle, indent=2)
+
+        bins = [1]
+        while bins[-1] <= frequencies[0]:
+            bins.append(bins[-1] * 2)
+        coverage = []
+        running = 0
+        for count in frequencies:
+            running += count
+            coverage.append(running / total)
+        figure, axes = plt.subplots(1, 2, figsize=(12, 4))
+        axes[0].hist(frequencies, bins=bins)
+        axes[0].set_xscale("log", base=2)
+        axes[0].set_yscale("log")
+        axes[0].set_xlabel("Token frequency")
+        axes[0].set_ylabel("Number of unique tokens")
+        axes[0].set_title("Training vocabulary frequency")
+        axes[1].plot(range(1, len(coverage) + 1), coverage)
+        axes[1].axvline(kept, color="red", linestyle="--",
+                        label=f"min frequency {MIN_TOKEN_FREQUENCY}: {recommended} entries")
+        axes[1].set_xlabel("Most frequent tokens retained")
+        axes[1].set_ylabel("Token coverage")
+        axes[1].set_title("Vocabulary coverage")
+        axes[1].legend()
+        figure.tight_layout()
+        figure.savefig(VOCABULARY_HISTOGRAM_PATH, dpi=150)
+        plt.close(figure)
+        print(f"Vocabulary recommendation: {recommended} entries, {covered / total:.2%} coverage")
 
     def _decode(self, path, caption, training):
         image = tf.io.decode_jpeg(tf.io.read_file(path), channels=IMAGE_CHANNELS)
@@ -101,7 +160,7 @@ class Flickr30kDataset:
 
 
 if __name__ == "__main__":
-    data = Flickr30kDataset(batch_size=2)
+    data = CocoCaptionDataset(batch_size=2)
     train, _ = data.load_data()
     inputs, targets, weights = next(iter(train))
     assert inputs["image"].shape == (2, *IMAGE_SIZE, IMAGE_CHANNELS)

@@ -1,5 +1,4 @@
 import os
-import zlib
 from collections import defaultdict
 from pathlib import Path
 import xml.etree.ElementTree as ET
@@ -22,21 +21,19 @@ from config import (
     IMAGENET_VAL_ANN_DIR,
     IMAGENET_VAL_DIR,
     INPUT_SIZE,
-    GT_JITTER_CENTER_STD,
-    GT_JITTER_SCALE_STD,
-    GT_JITTERS_PER_BOX,
     MAX_PROPOSALS,
     MIN_BOX_SIZE,
     NEGATIVE_IOU_THRESHOLD,
     POSITIVE_FRACTION,
     POSITIVE_IOU_THRESHOLD,
     ROIS_PER_IMAGE,
+    SELECTIVE_SEARCH_MODE,
     USE_SELECTIVE_SEARCH,
     VAL_SPLIT,
     TRAIN_SPLIT,
     VOC_ROOT,
 )
-from utils import compute_iou, generate_region_proposals
+from utils import generate_region_proposals
 from cache_runtime import PersistentProposalCache
 
 
@@ -349,6 +346,7 @@ class FastRCNNDataset:
         augment=False,
         shuffle=True,
         use_selective_search=USE_SELECTIVE_SEARCH,
+        proposal_mode=SELECTIVE_SEARCH_MODE,
         dataset_name="coco",
         cache_enabled=CACHE_ENABLED,
         cache_rebuild=CACHE_REBUILD,
@@ -370,6 +368,7 @@ class FastRCNNDataset:
         self.augment = augment
         self.shuffle = shuffle
         self.use_selective_search = use_selective_search
+        self.proposal_mode = proposal_mode
         if self.split == self.adapter.split_name("train"):
             phase = "train"
         elif self.split == self.adapter.split_name("val"):
@@ -385,62 +384,26 @@ class FastRCNNDataset:
         if not self.samples:
             raise RuntimeError(
                 f"No labelled {self.dataset_name} records found for split {self.split}")
-        max_jittered = max(
-            (len(sample["boxes"]) for sample in self.samples), default=0) * GT_JITTERS_PER_BOX
-        self.cache_manager = PersistentProposalCache("FastRCNN", self.dataset_name, self.split, self.dataset_root, {"input_size": self.input_size, "max_proposals": max_proposals, "max_jittered_proposals": max_jittered, "rois_per_image": rois_per_image, "positive_fraction": positive_fraction, "positive_iou": positive_iou_threshold, "negative_iou": negative_iou_threshold, "selective_search": use_selective_search, "gt_jitter": [
-                                                     GT_JITTERS_PER_BOX, GT_JITTER_CENTER_STD, GT_JITTER_SCALE_STD], "annotation_sources": self.adapter.annotation_sources(phase)}, self.samples, enabled=cache_enabled, rebuild=cache_rebuild, max_samples=cache_max_samples, workers=cache_workers)
+        self.cache_manager = PersistentProposalCache("FastRCNN", self.dataset_name, self.split, self.dataset_root, {
+            "input_size": self.input_size,
+            "max_proposals": max_proposals,
+            "rois_per_image": rois_per_image,
+            "positive_fraction": positive_fraction,
+            "positive_iou": positive_iou_threshold,
+            "negative_iou_low": negative_iou_threshold,
+            "proposal_backend": "opencv_selective_search" if use_selective_search else "grid",
+            "proposal_mode": proposal_mode,
+            "opencv_version": cv2.__version__,
+            "annotation_sources": self.adapter.annotation_sources(phase),
+        }, self.samples, enabled=cache_enabled, rebuild=cache_rebuild, max_samples=cache_max_samples, workers=cache_workers)
         self.proposal_cache = None
         print(
             f"[FastRCNNDataset] dataset={self.dataset_name} split={self.split} samples={len(self.samples)}")
 
-    def _jitter_gt_boxes(self, sample):
-        """Create deterministic, near-GT positive candidates without exact GT boxes."""
-        seed = zlib.crc32(str(sample["image_id"]).encode("utf-8"))
-        rng = np.random.default_rng(seed)
-        boxes = sample["boxes"].astype(np.float32)
-        image_h = float(sample["height"])
-        image_w = float(sample["width"])
-        proposals = []
-        for x1, y1, x2, y2 in boxes:
-            width = max(x2 - x1, 1.0)
-            height = max(y2 - y1, 1.0)
-            center_x = x1 + 0.5 * width
-            center_y = y1 + 0.5 * height
-            for _ in range(GT_JITTERS_PER_BOX):
-                scale_x = np.exp(rng.normal(0.0, GT_JITTER_SCALE_STD))
-                scale_y = np.exp(rng.normal(0.0, GT_JITTER_SCALE_STD))
-                jitter_x = rng.normal(0.0, GT_JITTER_CENTER_STD * width)
-                jitter_y = rng.normal(0.0, GT_JITTER_CENTER_STD * height)
-                proposal_w = np.clip(width * scale_x, MIN_BOX_SIZE, image_w)
-                proposal_h = np.clip(height * scale_y, MIN_BOX_SIZE, image_h)
-                proposal_x1 = np.clip(
-                    center_x + jitter_x - 0.5 * proposal_w, 0.0, image_w - 1.0)
-                proposal_y1 = np.clip(
-                    center_y + jitter_y - 0.5 * proposal_h, 0.0, image_h - 1.0)
-                proposal_x2 = np.clip(
-                    proposal_x1 + proposal_w, proposal_x1 + 1.0, image_w)
-                proposal_y2 = np.clip(
-                    proposal_y1 + proposal_h, proposal_y1 + 1.0, image_h)
-                proposals.append(
-                    [proposal_x1, proposal_y1, proposal_x2, proposal_y2])
-        if not proposals:
-            return np.empty((0, 4), dtype=np.float32)
-        proposals = np.asarray(proposals, dtype=np.float32)
-        positive = compute_iou(proposals, boxes).max(
-            axis=1) >= self.positive_iou_threshold
-        return proposals[positive]
-
     def _build_proposals(self, sample, image_bgr):
         """Cold-cache-only proposal generation; warm training never calls it."""
-        proposals = generate_region_proposals(
-            image_bgr, self.max_proposals, self.use_selective_search)
-        jittered_gt_proposals = self._jitter_gt_boxes(sample)
-        proposals = np.concatenate(
-            [proposals, jittered_gt_proposals], axis=0).astype(np.float32)
-        proposals = np.unique(np.round(proposals).astype(
-            np.int32), axis=0).astype(np.float32)
-
-        return proposals
+        return generate_region_proposals(
+            image_bgr, self.max_proposals, self.use_selective_search, self.proposal_mode)
 
     def prepare_cache(self):
         self.proposal_cache = self.cache_manager.prepare(self._build_proposals)
@@ -478,9 +441,29 @@ class FastRCNNDataset:
         proposal_count.set_shape(())
         return self._process(image_path, proposals, proposal_count, boxes, labels, box_count, height, width)
 
+    def _cached_proposals(self, sample_index):
+        """Copy one memory-mapped proposal row instead of materializing the full cache."""
+        index = int(np.asarray(sample_index))
+        return (
+            np.asarray(self.proposal_cache.proposals[index], dtype=np.float32),
+            np.int32(self.proposal_cache.counts[index]),
+        )
+
+    def _process_cached(self, image_path, sample_index, boxes, labels, box_count, height, width):
+        proposals, proposal_count = tf.numpy_function(
+            self._cached_proposals, [sample_index], [tf.float32, tf.int32])
+        proposals.set_shape((self.cache_manager.capacity, 4))
+        proposal_count.set_shape(())
+        return self._process(image_path, proposals, proposal_count, boxes, labels, box_count, height, width)
+
     def _sample_targets(self, proposals, proposal_count, boxes, labels, box_count, height, width):
-        valid_p = tf.range(tf.shape(proposals)[0]) < proposal_count
-        valid_g = tf.range(tf.shape(boxes)[0]) < box_count
+        proposals = proposals[:proposal_count]
+        boxes = boxes[:box_count]
+        labels = labels[:box_count]
+        if self.augment:
+            # Ground-truth boxes guarantee a small number of positives during
+            # training, but never contaminate validation or inference proposals.
+            proposals = tf.concat([proposals, boxes], axis=0)
         low = tf.maximum(proposals[:, None, :2], boxes[None, :, :2])
         high = tf.minimum(proposals[:, None, 2:], boxes[None, :, 2:])
         inter_hw = tf.maximum(high - low, 0.0)
@@ -491,22 +474,44 @@ class FastRCNNDataset:
             tf.maximum(boxes[:, 3] - boxes[:, 1], 0.0)
         denom = pa[:, None] + ga[None, :] - inter
         iou = tf.where(denom > 0, inter / denom, tf.zeros_like(denom))
-        iou = tf.where(valid_g[None, :], iou, -tf.ones_like(iou))
         max_iou = tf.reduce_max(iou, axis=1)
         matched = tf.argmax(iou, axis=1, output_type=tf.int32)
-        positive = valid_p & (max_iou >= self.positive_iou_threshold)
-        negative = valid_p & (max_iou < self.negative_iou_threshold)
-        fallback = valid_p & (max_iou < self.positive_iou_threshold)
-        npos = int(self.rois_per_image * self.positive_fraction)
-        scores = tf.random.uniform(tf.shape(max_iou))
-        pos_idx = tf.math.top_k(
-            tf.where(positive, scores, -tf.ones_like(scores)), k=npos).indices
-        neg_mask = tf.where(tf.reduce_any(negative), negative, fallback)
-        neg_idx = tf.math.top_k(tf.where(neg_mask, tf.random.uniform(tf.shape(
-            scores)), -tf.ones_like(scores)), k=self.rois_per_image - npos).indices
-        chosen = tf.concat([pos_idx, neg_idx], axis=0)
+        positive = max_iou >= self.positive_iou_threshold
+        hard_negative = (max_iou >= self.negative_iou_threshold) & ~positive
+        easy_negative = max_iou < self.negative_iou_threshold
+        max_positive = int(self.rois_per_image * self.positive_fraction)
+
+        pos_pool = tf.cast(tf.random.shuffle(tf.where(positive)[:, 0]), tf.int32)
+        pos_idx = pos_pool[:tf.minimum(tf.size(pos_pool), max_positive)]
+        positive_count = tf.size(pos_idx)
+        remaining = self.rois_per_image - tf.size(pos_idx)
+        hard_pool = tf.cast(tf.random.shuffle(tf.where(hard_negative)[:, 0]), tf.int32)
+        hard_idx = hard_pool[:tf.minimum(tf.size(hard_pool), remaining)]
+        remaining -= tf.size(hard_idx)
+        easy_pool = tf.cast(tf.random.shuffle(tf.where(easy_negative)[:, 0]), tf.int32)
+        easy_idx = easy_pool[:tf.minimum(tf.size(easy_pool), remaining)]
+        chosen = tf.concat([pos_idx, hard_idx, easy_idx], axis=0)
+        remaining = self.rois_per_image - tf.size(chosen)
+        negative_pool = tf.concat([hard_pool, easy_pool], axis=0)
+
+        def fill_negatives():
+            random_indices = tf.random.uniform(
+                (remaining,), 0, tf.size(negative_pool), dtype=tf.int32)
+            return tf.concat([chosen, tf.gather(negative_pool, random_indices)], axis=0)
+
+        def fill_any():
+            random_indices = tf.random.uniform(
+                (remaining,), 0, tf.shape(proposals)[0], dtype=tf.int32)
+            return tf.concat([chosen, random_indices], axis=0)
+
+        chosen = tf.cond(
+            remaining > 0,
+            lambda: tf.cond(tf.size(negative_pool) > 0, fill_negatives, fill_any),
+            lambda: chosen,
+        )
+        chosen = tf.ensure_shape(chosen[:self.rois_per_image], (self.rois_per_image,))
         chosen_p = tf.gather(proposals, chosen)
-        chosen_positive = tf.gather(positive, chosen)
+        chosen_positive = tf.range(self.rois_per_image) < positive_count
         matched = tf.gather(matched, chosen)
         gt = tf.gather(boxes, matched)
         chosen_labels = tf.where(chosen_positive, tf.gather(
@@ -532,6 +537,14 @@ class FastRCNNDataset:
         image = tf.image.resize(image, self.input_size)
 
         if self.augment:
+            flip = tf.random.uniform(()) < 0.5
+            flipped_rois = tf.stack(
+                [rois[:, 0], 1.0 - rois[:, 3], rois[:, 2], 1.0 - rois[:, 1]], axis=1)
+            flipped_targets = tf.concat(
+                [-bbox_targets[:, :1], bbox_targets[:, 1:]], axis=1)
+            image = tf.cond(flip, lambda: tf.image.flip_left_right(image), lambda: image)
+            rois = tf.cond(flip, lambda: flipped_rois, lambda: rois)
+            bbox_targets = tf.cond(flip, lambda: flipped_targets, lambda: bbox_targets)
             image = tf.image.random_brightness(image, max_delta=0.08)
             image = tf.image.random_contrast(image, lower=0.9, upper=1.1)
             image = tf.clip_by_value(image, 0.0, 1.0)
@@ -571,9 +584,11 @@ class FastRCNNDataset:
                     len(self.samples), dtype=np.int32), boxes, labels, box_counts, heights, widths))
                 process = self._process_lazy
             else:
-                dataset = tf.data.Dataset.from_tensor_slices(
-                    (paths, self.proposal_cache.proposals, self.proposal_cache.counts, boxes, labels, box_counts, heights, widths))
-                process = self._process
+                # Passing the memmap itself to from_tensor_slices copies the
+                # complete multi-gigabyte cache into a Tensor. Stream by index.
+                dataset = tf.data.Dataset.from_tensor_slices((paths, np.arange(
+                    len(self.samples), dtype=np.int32), boxes, labels, box_counts, heights, widths))
+                process = self._process_cached
         if self.shuffle:
             dataset = dataset.shuffle(
                 self.batch_size * 32, reshuffle_each_iteration=True)

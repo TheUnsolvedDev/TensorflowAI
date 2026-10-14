@@ -70,7 +70,7 @@ def build_fast_rcnn_backbone(input_shape=(*INPUT_SIZE, 3)):
     x = tf.keras.layers.BatchNormalization(name="stem_bn")(x)
     x = tf.keras.layers.ReLU(name="stem_relu")(x)
     x = tf.keras.layers.MaxPooling2D(3, 2, padding="same", name="stem_pool")(x)
-    for stage, filters, stride in ((2, 64, 1), (3, 128, 2), (4, 256, 2), (5, 512, 2)):
+    for stage, filters, stride in ((2, 64, 1), (3, 128, 2), (4, 256, 2), (5, 512, 1)):
         x = residual_block(x, filters, stride, name=f"stage{stage}_block1")
         x = residual_block(x, filters, 1, name=f"stage{stage}_block2")
     return tf.keras.Model(inputs=inputs, outputs=x, name="FastRCNNBackbone")

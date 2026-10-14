@@ -12,6 +12,8 @@ import tensorflow as tf
 from config import *
 from dataset import *
 from model import *
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from training_utils import FullCheckpointCallback, build_full_checkpoint
 
 MODEL_CLASS = GAN
 LARGE_IMAGE_DATASETS = {"celeba", "anime_faces"}
@@ -32,9 +34,9 @@ def setup_gpu(gpu_id):
 
 
 def build_strategy():
-    return tf.distribute.MirroredStrategy(
-        cross_device_ops=tf.distribute.NcclAllReduce()
-    )
+    if len(tf.config.get_visible_devices("GPU")) > 1:
+        return tf.distribute.MirroredStrategy(cross_device_ops=tf.distribute.NcclAllReduce())
+    return tf.distribute.MirroredStrategy()
 
 
 def get_weight_paths(log_dir):
@@ -61,14 +63,15 @@ def load_training_state(log_dir):
     return 0
 
 
-def load_weights_if_needed(model, log_dir, resume):
+def load_weights_if_needed(model, log_dir):
     gen_path, disc_path = get_weight_paths(log_dir)
-    if resume and os.path.exists(gen_path) and os.path.exists(disc_path):
+    if os.path.exists(gen_path) and os.path.exists(disc_path):
         model.generator.load_weights(gen_path)
         model.discriminator.load_weights(disc_path)
         print("Loaded existing weights")
-    elif resume:
-        print("No saved weights found, starting fresh")
+        return True
+    print("No saved weights found, starting fresh")
+    return False
 
 
 def setup_interrupt_handler(model, log_dir):
@@ -140,7 +143,7 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         super().__init__()
         self.model_ref = model
         self.latent_dim = latent_dim
-        self.fixed_noise = np.random.normal(0, 1, (8, latent_dim))
+        self.fixed_noise = np.random.default_rng(42).normal(0, 1, (16, latent_dim))
 
         self.img_dir = os.path.join(log_dir, "samples")
         os.makedirs(self.img_dir, exist_ok=True)
@@ -149,10 +152,8 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         if not should_run_periodic_callback(self, epoch, SAMPLE_EVERY_N_EPOCHS):
             return
 
-        random_noise = np.random.normal(0, 1, (8, self.latent_dim))
-        noise = np.concatenate([self.fixed_noise, random_noise], axis=0)
-
-        generated = self.model_ref.generator(noise, training=False)
+        with self.model_ref.ema.average_weights():
+            generated = self.model_ref.generator(self.fixed_noise, training=False)
         generated = ((generated + 1.0) / 2.0).numpy()
 
         fig, axes = plt.subplots(4, 4, figsize=(6, 6))
@@ -231,7 +232,8 @@ class ModeCollapseCallback(tf.keras.callbacks.Callback):
 
 def save_final_generated_grid(model, log_dir, latent_dim):
     noise = tf.random.normal([16, latent_dim])
-    generated = ((model.generator(noise, training=False) + 1.0) / 2.0).numpy()
+    with model.ema.average_weights():
+        generated = ((model.generator(noise, training=False) + 1.0) / 2.0).numpy()
 
     fig, axes = plt.subplots(4, 4, figsize=(6, 6))
     for index in range(16):
@@ -300,27 +302,33 @@ def main():
     os.makedirs(log_dir, exist_ok=True)
 
     model, latent_dim = build_model(strategy, args.type, channels)
+    checkpoint, manager = build_full_checkpoint(model, log_dir)
 
     start_epoch = 0
-    if args.resume:
-        load_weights_if_needed(model, log_dir, True)
+    if args.resume and manager.latest_checkpoint:
+        checkpoint.restore(manager.latest_checkpoint)
+        print(f"Restored full checkpoint: {manager.latest_checkpoint}")
+        weights_loaded = True
+    else:
+        weights_loaded = load_weights_if_needed(model, log_dir)
+    if args.resume and weights_loaded:
         start_epoch = load_training_state(log_dir)
         print(f"Resuming from epoch {start_epoch}")
+    elif weights_loaded:
+        print("Starting from epoch 0 with loaded weights")
 
     setup_interrupt_handler(model, log_dir)
     callbacks = build_callbacks(model, log_dir, latent_dim)
+    callbacks.append(FullCheckpointCallback(manager, SAVE_EVERY_N_EPOCHS))
 
-    try:
-        model.fit(
-            train_ds,
-            epochs=EPOCHS,
-            initial_epoch=start_epoch,
-            path=f"{args.type}/GAN",
-            callbacks=callbacks,
-        )
-        save_final_generated_grid(model, log_dir, latent_dim)
-    finally:
-        dataset.cleanup_cache()
+    model.fit(
+        train_ds,
+        epochs=EPOCHS,
+        initial_epoch=start_epoch,
+        path=f"{args.type}/GAN",
+        callbacks=callbacks,
+    )
+    save_final_generated_grid(model, log_dir, latent_dim)
 
 
 if __name__ == "__main__":

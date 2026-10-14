@@ -107,7 +107,8 @@ class TransformerDecoderBlock(tf.keras.layers.Layer):
         attended = self.self_attention(
             x, x, attention_mask=attention_mask, training=training)
         x = self.norms[0](x + self.dropouts[0](attended, training=training))
-        attended = self.cross_attention(x, image_memory, training=training)
+        attended, self.last_attention_scores = self.cross_attention(
+            x, image_memory, return_attention_scores=True, training=training)
         x = self.norms[1](x + self.dropouts[1](attended, training=training))
         forwarded = self.feed_forward(x, training=training)
         return self.norms[2](x + self.dropouts[2](forwarded, training=training))
@@ -140,6 +141,13 @@ def verify_captioner(model, vocab_size):
     if output.shape != (1, 2, vocab_size):
         raise RuntimeError(
             f"Caption model check failed: expected (1, 2, {vocab_size}), got {output.shape}")
+    scores = model.get_layer(
+        f"transformer_decoder_{TRANSFORMER_LAYERS}").last_attention_scores
+    if scores.shape != (1, TRANSFORMER_HEADS, 2, 49):
+        raise RuntimeError(f"Cross-attention check failed: got {scores.shape}")
+    tf.debugging.assert_near(
+        tf.reduce_sum(scores, axis=-1),
+        tf.ones((1, TRANSFORMER_HEADS, 2)))
 
 
 if __name__ == "__main__":

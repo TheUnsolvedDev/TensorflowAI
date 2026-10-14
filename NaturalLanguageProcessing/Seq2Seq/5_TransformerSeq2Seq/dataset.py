@@ -36,7 +36,9 @@ class BaseSeq2SeqDataset:
             value = value.lower()
         return _SPACE.sub(" ", value).strip()
 
-    def iter_pairs(self):
+    has_official_splits = False
+
+    def iter_pairs(self, split=None):
         raise NotImplementedError
 
     def _is_validation(self, source, target):
@@ -44,8 +46,11 @@ class BaseSeq2SeqDataset:
         return int.from_bytes(hashlib.blake2b(payload, digest_size=8).digest(), "big") / 2**64 < self.validation_split
 
     def _split_pairs(self, validation):
+        if self.has_official_splits:
+            yield from self.iter_pairs("validation" if validation else "train")
+            return
         for source, target in self.iter_pairs():
-            if bool(self._is_validation(source, target)) == bool(validation):
+            if self._is_validation(source, target) == bool(validation):
                 yield source, target
 
     def _text_stream(self, validation, target):
@@ -59,8 +64,10 @@ class BaseSeq2SeqDataset:
         ).batch(1024).prefetch(AUTOTUNE)
 
     def prepare_vectorizers(self, name):
-        src_path = f"source_vectorizer_{name}.keras"
-        tgt_path = f"target_vectorizer_{name}.keras"
+        version = (f"{name}_v{self.vocab_size}_s{self.source_max_length}"
+                   f"_t{self.target_max_length}_lc{int(self.lowercase)}")
+        src_path = f"source_vectorizer_{version}.keras"
+        tgt_path = f"target_vectorizer_{version}.keras"
         if os.path.exists(src_path) and os.path.exists(tgt_path):
             self.source_vectorizer = tf.keras.models.load_model(src_path).layers[0]
             self.target_vectorizer = tf.keras.models.load_model(tgt_path).layers[0]
@@ -120,7 +127,8 @@ class BaseSeq2SeqDataset:
 
 
 class DelimitedTranslationDataset(BaseSeq2SeqDataset):
-    files = ()
+    has_official_splits = True
+    split_files = {}
     source_hints = ()
     target_hints = ()
 
@@ -132,8 +140,8 @@ class DelimitedTranslationDataset(BaseSeq2SeqDataset):
             raise ValueError(f"Could not locate translation columns in {fieldnames}")
         return source, target
 
-    def iter_pairs(self):
-        for filename in self.files:
+    def iter_pairs(self, split=None):
+        for filename in self.split_files.get(split, ()):
             path = os.path.join(self.dataset_path, filename)
             if not os.path.exists(path):
                 continue
@@ -145,17 +153,23 @@ class DelimitedTranslationDataset(BaseSeq2SeqDataset):
 
 
 class EnglishFrenchDataset(DelimitedTranslationDataset):
-    files = ("wmt14_translate_fr-en_train.csv", "wmt14_translate_fr-en_validation.csv", "wmt14_translate_fr-en_test.csv")
+    split_files = {
+        "train": ("wmt14_translate_fr-en_train.csv",),
+        "validation": ("wmt14_translate_fr-en_validation.csv",),
+    }
     source_hints, target_hints = ("en", "english"), ("fr", "french")
 
 
 class EnglishGermanDataset(DelimitedTranslationDataset):
-    files = ("wmt14_translate_de-en_train.csv", "wmt14_translate_de-en_validation.csv", "wmt14_translate_de-en_test.csv")
+    split_files = {
+        "train": ("wmt14_translate_de-en_train.csv",),
+        "validation": ("wmt14_translate_de-en_validation.csv",),
+    }
     source_hints, target_hints = ("en", "english"), ("de", "german")
 
 
 class ManyThingsEnglishFrenchDataset(BaseSeq2SeqDataset):
-    def iter_pairs(self):
+    def iter_pairs(self, split=None):
         with open(os.path.join(self.dataset_path, "fra.txt"), encoding="utf-8", errors="replace") as handle:
             for line in handle:
                 fields = line.rstrip("\n").split("\t")
@@ -165,20 +179,31 @@ class ManyThingsEnglishFrenchDataset(BaseSeq2SeqDataset):
 
 
 class WikiLargeDataset(BaseSeq2SeqDataset):
-    def iter_pairs(self):
-        for filename in ("wiki.full.aner.ori.train.95.tsv", "wiki.full.aner.ori.valid.95.tsv", "wiki.full.aner.ori.test.95.tsv"):
+    has_official_splits = True
+    split_files = {
+        "train": ("wiki.full.aner.ori.train.95.tsv",),
+        "validation": ("wiki.full.aner.ori.valid.95.tsv",),
+    }
+
+    def iter_pairs(self, split=None):
+        for filename in self.split_files.get(split, ()):
             path = os.path.join(self.dataset_path, filename)
             if not os.path.exists(path): continue
             with open(path, encoding="utf-8", errors="replace") as handle:
                 for row in csv.reader(handle, delimiter="\t"):
                     if len(row) >= 2:
                         source, target = self.clean_text(row[0]), self.clean_text(row[1])
+                        if source == "normal" and target == "simple":
+                            continue
                         if source and target: yield source, target
 
 
 class CNNDailyMailDataset(BaseSeq2SeqDataset):
-    def iter_pairs(self):
-        for filename in ("train.csv", "validation.csv", "test.csv"):
+    has_official_splits = True
+    split_files = {"train": ("train.csv",), "validation": ("validation.csv",)}
+
+    def iter_pairs(self, split=None):
+        for filename in self.split_files.get(split, ()):
             path = os.path.join(self.dataset_path, filename)
             if not os.path.exists(path): continue
             with open(path, newline="", encoding="utf-8", errors="replace") as handle:
@@ -192,7 +217,7 @@ class CNNDailyMailDataset(BaseSeq2SeqDataset):
 
 
 class CornellMovieDataset(BaseSeq2SeqDataset):
-    def iter_pairs(self):
+    def iter_pairs(self, split=None):
         line_map = {}
         with open(os.path.join(self.dataset_path, "movie_lines.txt"), encoding="utf-8", errors="replace") as handle:
             for line in handle:

@@ -12,7 +12,7 @@ from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 from tensorflow.keras import mixed_precision
 
-from config import BATCH_SIZE, CHECKPOINT_PATH, CLASSIFIER_CHECKPOINT_PATH, CLASSIFIER_EPOCHS, CLASSIFIER_HISTORY_PATH, CLASSIFIER_LOG_DIR, CLASSIFIER_STATE_PATH, EPOCHS, HISTORY_PATH, INFERENCE_BATCH_SIZE, INFERENCE_TOPK, INPUT_SIZE, LOG_DIR, MAX_DETECTIONS_PER_CLASS, MAX_DRAW_DETECTIONS, CACHE_MAX_SAMPLES, MAX_PROPOSALS, NMS_IOU_THRESHOLD, SCORE_THRESHOLD, STATE_PATH, STEPS_PER_EPOCH, USE_SELECTIVE_SEARCH, VALIDATION_METRIC_SAMPLES, VALIDATION_STEPS, ensure_dir
+from config import BATCH_SIZE, CHECKPOINT_PATH, CLASSIFIER_CHECKPOINT_PATH, CLASSIFIER_EPOCHS, CLASSIFIER_HISTORY_PATH, CLASSIFIER_LOG_DIR, CLASSIFIER_STATE_PATH, EPOCHS, HISTORY_PATH, INFERENCE_BATCH_SIZE, INFERENCE_TOPK, INPUT_SIZE, LOG_DIR, MAX_DETECTIONS_PER_CLASS, MAX_DETECTIONS_PER_IMAGE, MAX_DRAW_DETECTIONS, CACHE_MAX_SAMPLES, MAX_PROPOSALS, NMS_IOU_THRESHOLD, SCORE_THRESHOLD, SELECTIVE_SEARCH_MODE, STATE_PATH, STEPS_PER_EPOCH, USE_SELECTIVE_SEARCH, VALIDATION_METRIC_SAMPLES, VALIDATION_STEPS, ensure_dir
 from dataset import COCO_CATEGORY_IDS, COCO_CLASSES, build_train_dataset, build_val_dataset, resolve_detection_dataset
 from model import create_compiled_model
 from cache_runtime import cleanup_cache, default_cache_workers
@@ -171,6 +171,7 @@ def infer_image(model, image_path, class_names, proposals=None, return_score_dia
             image_bgr,
             max_proposals=MAX_PROPOSALS,
             use_selective_search=USE_SELECTIVE_SEARCH,
+            mode=SELECTIVE_SEARCH_MODE,
         )
     height, width = image_bgr.shape[:2]
     rois = np.asarray([[box[1] / height, box[0] / width, box[3] /
@@ -187,23 +188,23 @@ def infer_image(model, image_path, class_names, proposals=None, return_score_dia
     class_logits = np.concatenate(class_logits, axis=0)
     bbox_deltas = np.concatenate(bbox_deltas, axis=0)
     probabilities = tf.nn.softmax(class_logits, axis=-1).numpy()
-    class_ids = probabilities.argmax(axis=1)
-    class_scores = probabilities.max(axis=1)
-    foreground_mask = class_ids > 0
+    foreground_scores = probabilities[:, 1:]
+    best_foreground_scores = foreground_scores.max(axis=1)
+    foreground_wins = best_foreground_scores > probabilities[:, 0]
     score_diagnostics = {
-        "foreground_predictions_pre_threshold": int(np.count_nonzero(foreground_mask)),
-        "foreground_predictions_post_threshold": int(np.count_nonzero(foreground_mask & (class_scores >= SCORE_THRESHOLD))),
-        "highest_foreground_score": float(class_scores[foreground_mask].max()) if np.any(foreground_mask) else 0.0,
+        "foreground_predictions_pre_threshold": int(np.count_nonzero(foreground_wins)),
+        "foreground_predictions_post_threshold": int(np.count_nonzero(best_foreground_scores >= SCORE_THRESHOLD)),
+        "highest_foreground_score": float(best_foreground_scores.max()) if len(best_foreground_scores) else 0.0,
     }
     decoded_boxes = np.asarray([decode_box(proposal, delta) for proposal, delta in zip(
         proposals, bbox_deltas)], dtype=np.float32)
     decoded_boxes = np.asarray([clip_box(box, height, width)
                                for box in decoded_boxes], dtype=np.float32)
-    ranked = np.argsort(class_scores)[::-1][:INFERENCE_TOPK]
     detections = []
     for class_id in range(1, len(class_names)):
-        indices = ranked[(class_ids[ranked] == class_id) & (
-            class_scores[ranked] >= SCORE_THRESHOLD)]
+        class_scores = probabilities[:, class_id]
+        ranked = np.argsort(class_scores)[::-1][:INFERENCE_TOPK]
+        indices = ranked[class_scores[ranked] >= SCORE_THRESHOLD]
         if len(indices) == 0:
             continue
         keep = nms(decoded_boxes[indices], class_scores[indices],
@@ -214,6 +215,7 @@ def infer_image(model, image_path, class_names, proposals=None, return_score_dia
             for keep_idx in keep
         )
     detections.sort(key=lambda item: item["score"], reverse=True)
+    detections = detections[:MAX_DETECTIONS_PER_IMAGE]
     if return_score_diagnostics:
         return detections, image_bgr, score_diagnostics
     return detections, image_bgr
@@ -240,6 +242,26 @@ class StateSaver(tf.keras.callbacks.Callback):
 
     def on_epoch_end(self, epoch, logs=None):
         save_state(self.path, epoch + 1)
+
+
+class BestDetectorCheckpoint(tf.keras.callbacks.Callback):
+    """Keep the single checkpoint whose validation detection metric is best."""
+
+    def __init__(self, checkpoint_path, state_path, monitor):
+        super().__init__()
+        self.checkpoint_path = checkpoint_path
+        self.state_path = state_path
+        self.monitor = monitor
+        self.best = float("-inf")
+
+    def on_epoch_end(self, epoch, logs=None):
+        value = (logs or {}).get(self.monitor)
+        if value is None or not np.isfinite(float(value)) or float(value) <= self.best:
+            return
+        self.best = float(value)
+        self.model.save_weights(self.checkpoint_path)
+        save_state(self.state_path, epoch + 1)
+        print(f"[checkpoint] {self.monitor}={self.best:.6f} saved: {self.checkpoint_path}")
 
 
 class CompactProgress(tf.keras.callbacks.Callback):
@@ -358,6 +380,7 @@ class COCOValidationMetricsCallback(tf.keras.callbacks.Callback):
                 image_bgr,
                 max_proposals=MAX_PROPOSALS,
                 use_selective_search=USE_SELECTIVE_SEARCH,
+                mode=SELECTIVE_SEARCH_MODE,
             )
             proposal_ious = compute_iou(proposals, sample["boxes"])
             max_ious = proposal_ious.max(axis=0) if len(proposals) else np.zeros(
@@ -428,6 +451,84 @@ class COCOValidationMetricsCallback(tf.keras.callbacks.Callback):
             f"{metrics['foreground_predictions_post_threshold']} "
             f"top_fg={metrics['highest_foreground_score']:.3f}"
         )
+
+
+def _average_precision(recalls, precisions):
+    recalls = np.concatenate(([0.0], recalls, [1.0]))
+    precisions = np.concatenate(([0.0], precisions, [0.0]))
+    for index in range(len(precisions) - 2, -1, -1):
+        precisions[index] = max(precisions[index], precisions[index + 1])
+    changed = np.where(recalls[1:] != recalls[:-1])[0] + 1
+    return float(np.sum((recalls[changed] - recalls[changed - 1]) * precisions[changed]))
+
+
+class VOCValidationMetricsCallback(tf.keras.callbacks.Callback):
+    """Measure proposal recall and Pascal-style AP50 on a fixed subset."""
+
+    def __init__(self, samples, class_names, output_path):
+        super().__init__()
+        self.samples = list(samples[:VALIDATION_METRIC_SAMPLES])
+        self.class_names = class_names
+        self.output_path = output_path
+        self.history = []
+
+    def on_epoch_end(self, epoch, logs=None):
+        ground_truth = {class_id: {} for class_id in range(1, len(self.class_names))}
+        predictions = {class_id: [] for class_id in range(1, len(self.class_names))}
+        recalls, best_ious = [], []
+        for image_index, sample in enumerate(self.samples):
+            image = cv2.imread(sample["image_path"])
+            if image is None:
+                continue
+            proposals = generate_region_proposals(
+                image, MAX_PROPOSALS, USE_SELECTIVE_SEARCH, SELECTIVE_SEARCH_MODE)
+            overlaps = compute_iou(proposals, sample["boxes"])
+            best = overlaps.max(axis=0) if len(proposals) else np.zeros(len(sample["boxes"]), np.float32)
+            recalls.extend(best >= 0.5)
+            best_ious.extend(best)
+            for class_id in range(1, len(self.class_names)):
+                boxes = sample["boxes"][sample["labels"] == class_id]
+                if len(boxes):
+                    ground_truth[class_id][image_index] = boxes
+            detections, _ = infer_image(
+                self.model, sample["image_path"], self.class_names, proposals=proposals)
+            for detection in detections:
+                predictions[detection["class_id"]].append(
+                    (detection["score"], image_index, detection["box"]))
+
+        class_aps = []
+        for class_id, images in ground_truth.items():
+            total = sum(len(boxes) for boxes in images.values())
+            if not total:
+                continue
+            matched = {image_id: np.zeros(len(boxes), dtype=bool)
+                       for image_id, boxes in images.items()}
+            true_positive, false_positive = [], []
+            for _, image_id, box in sorted(predictions[class_id], reverse=True, key=lambda item: item[0]):
+                boxes = images.get(image_id)
+                if boxes is None:
+                    true_positive.append(0.0); false_positive.append(1.0)
+                    continue
+                overlaps = compute_iou(np.asarray([box], np.float32), boxes)[0]
+                best_index = int(np.argmax(overlaps))
+                correct = overlaps[best_index] >= 0.5 and not matched[image_id][best_index]
+                true_positive.append(float(correct)); false_positive.append(float(not correct))
+                if correct:
+                    matched[image_id][best_index] = True
+            tp = np.cumsum(true_positive)
+            fp = np.cumsum(false_positive)
+            class_aps.append(_average_precision(tp / total, tp / np.maximum(tp + fp, 1e-8)))
+        metrics = {
+            "proposal_recall_iou50": float(np.mean(recalls)) if recalls else 0.0,
+            "proposal_mean_best_iou": float(np.mean(best_ious)) if best_ious else 0.0,
+            "subset_ap50": float(np.mean(class_aps)) if class_aps else 0.0,
+        }
+        (logs if logs is not None else {}).update(metrics)
+        self.history.append({"epoch": epoch + 1, **metrics})
+        with open(self.output_path, "w", encoding="utf-8") as file:
+            json.dump(self.history, file, indent=2)
+        print(f"[validation] recall@0.5={metrics['proposal_recall_iou50']:.3f} "
+              f"best_iou={metrics['proposal_mean_best_iou']:.3f} AP50={metrics['subset_ap50']:.3f}")
 
 
 def save_model_report(model, task_name):
@@ -541,23 +642,33 @@ def fit_task(strategy, task_name, dataset_name, continue_run, reset, epochs, ini
     if full_reports:
         save_model_report(model, task_name)
 
-    callbacks = [
-        CompactProgress(),
-        tf.keras.callbacks.ModelCheckpoint(
-            checkpoint_path, save_weights_only=True, verbose=1),
-        HistorySaver(history_path),
-        StateSaver(state_path),
-    ]
-    if full_reports and task_name == "detector" and dataset_name == "coco":
-        callbacks.append(
-            COCOValidationMetricsCallback(
+    callbacks = [CompactProgress()]
+    if task_name == "detector":
+        if dataset_name == "coco":
+            callbacks.append(COCOValidationMetricsCallback(
                 val_builder.samples,
                 os.path.join(dataset_root, "annotations",
                              f"instances_{val_split}.json"),
                 os.path.join(log_dir, "validation_metrics.json"),
                 os.path.join(log_dir, "validation_tensorboard"),
-            )
-        )
+            ))
+            monitor = "subset_map"
+        else:
+            callbacks.append(VOCValidationMetricsCallback(
+                val_builder.samples,
+                val_builder.class_names,
+                os.path.join(log_dir, "validation_metrics.json"),
+            ))
+            monitor = "subset_ap50"
+        callbacks.append(BestDetectorCheckpoint(
+            checkpoint_path, state_path, monitor))
+    else:
+        callbacks.extend([
+            tf.keras.callbacks.ModelCheckpoint(
+                checkpoint_path, save_weights_only=True, verbose=1),
+            StateSaver(state_path),
+        ])
+    callbacks.append(HistorySaver(history_path))
     if full_reports:
         callbacks.append(tf.keras.callbacks.TensorBoard(log_dir=log_dir))
     if task_name == "detector":
@@ -578,11 +689,67 @@ def fit_task(strategy, task_name, dataset_name, continue_run, reset, epochs, ini
         callbacks=callbacks,
         verbose=0,
     )
-    model.save_weights(checkpoint_path)
-    save_state(state_path, initial_epoch + len(history.epoch))
+    if task_name != "detector":
+        model.save_weights(checkpoint_path)
+        save_state(state_path, initial_epoch + len(history.epoch))
     tf.keras.backend.clear_session()
     gc.collect()
     return checkpoint_path
+
+
+def proposal_report(dataset_name, sample_count=VALIDATION_METRIC_SAMPLES):
+    adapter = resolve_detection_dataset(dataset_name)
+    samples = adapter.records("val")[:sample_count]
+    for mode in ("fast", "quality"):
+        recalls, best_ious = [], []
+        for sample in samples:
+            image = cv2.imread(sample["image_path"])
+            if image is None:
+                continue
+            proposals = generate_region_proposals(
+                image, MAX_PROPOSALS, USE_SELECTIVE_SEARCH, mode)
+            overlaps = compute_iou(proposals, sample["boxes"])
+            best = overlaps.max(axis=0) if len(proposals) else np.zeros(len(sample["boxes"]), np.float32)
+            recalls.extend(best >= 0.5)
+            best_ious.extend(best)
+        recall = float(np.mean(recalls)) if recalls else 0.0
+        mean_iou = float(np.mean(best_ious)) if best_ious else 0.0
+        print(f"[proposal report] dataset={dataset_name} mode={mode} "
+              f"images={len(samples)} recall@0.5={recall:.3f} mean_best_iou={mean_iou:.3f}")
+        if recall >= 0.80:
+            print(f"[proposal report] selected={mode}; set FAST_RCNN_PROPOSAL_MODE={mode}")
+            return mode
+    raise RuntimeError("Selective search did not reach the required 0.80 recall@0.5")
+
+
+def evaluate_checkpoint(strategy, dataset_name):
+    dataset_root, log_dir, checkpoint_path, _, _ = select_artifacts(
+        "detector", dataset_name)
+    if not os.path.exists(checkpoint_path):
+        raise RuntimeError(f"Detector checkpoint not found: {checkpoint_path}")
+    adapter = resolve_detection_dataset(dataset_name, root=dataset_root)
+    with strategy.scope():
+        model = create_compiled_model(
+            dataset_name=dataset_name, num_classes=adapter.num_classes)
+    model.load_weights(checkpoint_path)
+    samples = adapter.records("val")
+    output_path = os.path.join(log_dir, "evaluation_metrics.json")
+    if dataset_name == "coco":
+        callback = COCOValidationMetricsCallback(
+            samples,
+            os.path.join(dataset_root, "annotations",
+                         f"instances_{adapter.split_name('val')}.json"),
+            output_path,
+            os.path.join(log_dir, "evaluation_tensorboard"),
+        )
+    else:
+        callback = VOCValidationMetricsCallback(
+            samples, adapter.class_names, output_path)
+    callback.set_model(model)
+    logs = {}
+    callback.on_epoch_end(0, logs)
+    print(f"[evaluation] checkpoint={checkpoint_path} metrics={output_path}")
+    return logs
 
 
 def main():
@@ -602,7 +769,11 @@ def main():
     parser.add_argument("--epochs", type=int, default=None,
                         help="Override the task default (detector: 100, classifier: 20).")
     parser.add_argument("--full-reports", action="store_true",
-                        help="Enable TensorBoard, model diagrams, and COCO-only 200-image metrics. Detector inspection grids are always enabled.")
+                        help="Enable TensorBoard and model diagrams. Detector metrics and inspection grids are always enabled.")
+    parser.add_argument("--evaluate", action="store_true",
+                        help="Evaluate the selected detector checkpoint without training.")
+    parser.add_argument("--proposal-report", action="store_true",
+                        help="Measure fast/quality selective-search recall on the fixed validation subset.")
     parser.add_argument("--use-cache", action="store_true",
                         help="Compatibility alias; persistent proposal caching is enabled by default.")
     parser.add_argument("--no-cache", action="store_true",
@@ -625,6 +796,10 @@ def main():
     if args.prepare_cache and (args.continue_run or args.reset):
         parser.error(
             "--prepare-cache cannot be used with --continue or --reset")
+    if args.evaluate and (args.prepare_cache or args.continue_run or args.reset):
+        parser.error("--evaluate cannot be combined with cache preparation or run controls")
+    if args.proposal_report and (args.evaluate or args.prepare_cache or args.continue_run or args.reset):
+        parser.error("--proposal-report must be run by itself")
     if args.cache_max_samples < 0:
         parser.error("--cache-max-samples must be non-negative")
     if args.cache_workers < 1:
@@ -646,10 +821,17 @@ def main():
     if args.classifier is None and args.detector is None:
         args.detector = "coco"
 
+    if args.proposal_report:
+        proposal_report(args.detector or "coco")
+        return
+
     if args.epochs is None:
         args.epochs = CLASSIFIER_EPOCHS if args.classifier is not None and args.detector is None else EPOCHS
 
     strategy = setup_runtime(args.gpu)
+    if args.evaluate:
+        evaluate_checkpoint(strategy, args.detector or "coco")
+        return
     classifier_checkpoint = None
     if args.classifier is not None:
         classifier_checkpoint = fit_task(

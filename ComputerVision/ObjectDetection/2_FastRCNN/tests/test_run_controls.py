@@ -8,21 +8,39 @@ import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from train import configure_run, reset_artifacts
+from train import BestDetectorCheckpoint, configure_run, reset_artifacts
 
 
 class DummyModel:
     def __init__(self, load_error=None):
         self.load_error = load_error
         self.loads = []
+        self.saves = []
 
     def load_weights(self, path, **kwargs):
         if self.load_error:
             raise self.load_error
         self.loads.append((path, kwargs))
 
+    def save_weights(self, path):
+        self.saves.append(path)
+
 
 class RunControlTests(unittest.TestCase):
+    def test_best_detector_checkpoint_rejects_weaker_epoch(self):
+        with tempfile.TemporaryDirectory() as directory:
+            checkpoint = os.path.join(directory, "model.weights.h5")
+            state = os.path.join(directory, "state.json")
+            model = DummyModel()
+            callback = BestDetectorCheckpoint(checkpoint, state, "subset_map")
+            callback.set_model(model)
+            callback.on_epoch_end(0, {"subset_map": 0.2})
+            callback.on_epoch_end(1, {"subset_map": 0.1})
+            with open(state, encoding="utf-8") as file:
+                saved_state = json.load(file)
+        self.assertEqual(model.saves, [checkpoint])
+        self.assertEqual(saved_state, {"epoch": 1})
+
     def test_default_missing_checkpoint_starts_fresh(self):
         with tempfile.TemporaryDirectory() as directory:
             result = configure_run(DummyModel(), os.path.join(directory, "model.weights.h5"), os.path.join(directory, "state.json"))

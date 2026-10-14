@@ -15,10 +15,9 @@ class PositionalEncoding(tf.keras.layers.Layer):
 
         angle_rads = positions * angle_rates
 
-        sines = tf.sin(angle_rads[:, 0::2])
-        cosines = tf.cos(angle_rads[:, 1::2])
-
-        positional_encoding = tf.concat([sines, cosines], axis=-1)
+        even_dimensions = tf.cast(tf.range(d_model) % 2 == 0, tf.float32)
+        positional_encoding = (tf.sin(angle_rads) * even_dimensions
+                               + tf.cos(angle_rads) * (1.0 - even_dimensions))
         positional_encoding = positional_encoding[tf.newaxis, ...]
 
         self.positional_encoding = tf.cast(positional_encoding, tf.float32)
@@ -51,7 +50,8 @@ class EncoderLayer(tf.keras.layers.Layer):
     def __init__(self, d_model, num_heads, dff, dropout_rate):
         super().__init__()
 
-        self.mha = tf.keras.layers.MultiHeadAttention(num_heads=num_heads, key_dim=d_model)
+        self.mha = tf.keras.layers.MultiHeadAttention(
+            num_heads=num_heads, key_dim=d_model // num_heads)
 
         self.dropout = tf.keras.layers.Dropout(dropout_rate)
 
@@ -59,9 +59,11 @@ class EncoderLayer(tf.keras.layers.Layer):
 
         self.ffn = FeedForwardNetwork(d_model=d_model, dff=dff, dropout_rate=dropout_rate)
 
-    def call(self, x, training=False):
+    def call(self, x, attention_mask=None, training=False):
 
-        attention_output = self.mha(query=x, value=x, key=x, training=training)
+        attention_output = self.mha(
+            query=x, value=x, key=x, attention_mask=attention_mask,
+            training=training)
 
         attention_output = self.dropout(attention_output, training=training)
 
@@ -75,9 +77,12 @@ class DecoderLayer(tf.keras.layers.Layer):
     def __init__(self, d_model, num_heads, dff, dropout_rate):
         super().__init__()
 
-        self.self_attention = tf.keras.layers.MultiHeadAttention(num_heads=num_heads, key_dim=d_model)
+        key_dim = d_model // num_heads
+        self.self_attention = tf.keras.layers.MultiHeadAttention(
+            num_heads=num_heads, key_dim=key_dim)
 
-        self.cross_attention = tf.keras.layers.MultiHeadAttention(num_heads=num_heads, key_dim=d_model)
+        self.cross_attention = tf.keras.layers.MultiHeadAttention(
+            num_heads=num_heads, key_dim=key_dim)
 
         self.dropout_1 = tf.keras.layers.Dropout(dropout_rate)
 
@@ -89,15 +94,20 @@ class DecoderLayer(tf.keras.layers.Layer):
 
         self.ffn = FeedForwardNetwork(d_model=d_model, dff=dff, dropout_rate=dropout_rate)
 
-    def call(self, x, encoder_outputs, training=False):
+    def call(self, x, encoder_outputs, self_attention_mask=None,
+             cross_attention_mask=None, training=False):
 
-        self_attention_output = self.self_attention(query=x, value=x, key=x, use_causal_mask=True, training=training)
+        self_attention_output = self.self_attention(
+            query=x, value=x, key=x, attention_mask=self_attention_mask,
+            use_causal_mask=True, training=training)
 
         self_attention_output = self.dropout_1(self_attention_output, training=training)
 
         x = self.layer_norm_1(x + self_attention_output)
 
-        cross_attention_output, attention_scores = self.cross_attention(query=x, value=encoder_outputs, key=encoder_outputs, return_attention_scores=True, training=training)
+        cross_attention_output = self.cross_attention(
+            query=x, value=encoder_outputs, key=encoder_outputs,
+            attention_mask=cross_attention_mask, training=training)
 
         cross_attention_output = self.dropout_2(cross_attention_output, training=training)
 
@@ -105,50 +115,81 @@ class DecoderLayer(tf.keras.layers.Layer):
 
         x = self.ffn(x, training=training)
 
-        return x, attention_scores
+        return x
 
 
-def build_transformer_encoder(encoder_inputs, vocab_size, max_length, d_model, num_heads, dff, num_layers, dropout_rate):
+def build_transformer_encoder(encoder_inputs, attention_mask, vocab_size,
+                              max_length, d_model, num_heads, dff, num_layers,
+                              dropout_rate):
 
     x = tf.keras.layers.Embedding(input_dim=vocab_size, output_dim=d_model, name="encoder_embedding")(encoder_inputs)
+
+    x = tf.keras.layers.Rescaling(d_model ** 0.5)(x)
 
     x = PositionalEncoding(max_length=max_length, d_model=d_model)(x)
 
     x = tf.keras.layers.Dropout(dropout_rate)(x)
 
     for i in range(num_layers):
-        x = EncoderLayer(d_model=d_model, num_heads=num_heads, dff=dff, dropout_rate=dropout_rate)(x)
+        x = EncoderLayer(d_model=d_model, num_heads=num_heads, dff=dff,
+                         dropout_rate=dropout_rate)(x, attention_mask=attention_mask)
 
     return x
 
 
-def build_transformer_decoder(decoder_inputs, encoder_outputs, vocab_size, max_length, d_model, num_heads, dff, num_layers, dropout_rate):
+def build_transformer_decoder(decoder_inputs, encoder_outputs,
+                              self_attention_mask, cross_attention_mask,
+                              vocab_size, max_length, d_model, num_heads, dff,
+                              num_layers, dropout_rate):
 
     x = tf.keras.layers.Embedding(input_dim=vocab_size, output_dim=d_model, name="decoder_embedding")(decoder_inputs)
+
+    x = tf.keras.layers.Rescaling(d_model ** 0.5)(x)
 
     x = PositionalEncoding(max_length=max_length, d_model=d_model)(x)
 
     x = tf.keras.layers.Dropout(dropout_rate)(x)
 
-    attention_scores = None
-
     for i in range(num_layers):
-        x, attention_scores = DecoderLayer(d_model=d_model, num_heads=num_heads, dff=dff, dropout_rate=dropout_rate)(x, encoder_outputs)
+        x = DecoderLayer(d_model=d_model, num_heads=num_heads, dff=dff,
+                         dropout_rate=dropout_rate)(
+            x, encoder_outputs,
+            self_attention_mask=self_attention_mask,
+            cross_attention_mask=cross_attention_mask)
 
-    return x, attention_scores
+    return x
 
 
 def build_transformer_seq2seq_model(source_vocab_size, target_vocab_size, source_max_length=128, target_max_length=128, d_model=256, num_heads=8, dff=1024, num_encoder_layers=4, num_decoder_layers=4, dropout_rate=0.1):
+
+    if d_model % num_heads:
+        raise ValueError("d_model must be divisible by num_heads")
 
     encoder_inputs = tf.keras.Input(shape=(source_max_length,), dtype=tf.int32, name="encoder_inputs")
 
     decoder_inputs = tf.keras.Input(shape=(target_max_length - 1,), dtype=tf.int32, name="decoder_inputs")
 
-    encoder_outputs = build_transformer_encoder(encoder_inputs=encoder_inputs, vocab_size=source_vocab_size, max_length=source_max_length, d_model=d_model, num_heads=num_heads, dff=dff, num_layers=num_encoder_layers, dropout_rate=dropout_rate)
+    encoder_mask = tf.keras.layers.Lambda(
+        lambda tokens: tf.not_equal(tokens[:, tf.newaxis, :], 0),
+        name="encoder_padding_mask")(encoder_inputs)
+    decoder_mask = tf.keras.layers.Lambda(
+        lambda tokens: tf.not_equal(tokens[:, tf.newaxis, :], 0),
+        name="decoder_padding_mask")(decoder_inputs)
 
-    decoder_outputs, attention_scores = build_transformer_decoder(decoder_inputs=decoder_inputs, encoder_outputs=encoder_outputs, vocab_size=target_vocab_size, max_length=target_max_length, d_model=d_model, num_heads=num_heads, dff=dff, num_layers=num_decoder_layers, dropout_rate=dropout_rate)
+    encoder_outputs = build_transformer_encoder(
+        encoder_inputs=encoder_inputs, attention_mask=encoder_mask,
+        vocab_size=source_vocab_size, max_length=source_max_length,
+        d_model=d_model, num_heads=num_heads, dff=dff,
+        num_layers=num_encoder_layers, dropout_rate=dropout_rate)
 
-    outputs = tf.keras.layers.Dense(target_vocab_size, activation="softmax", name="output_projection")(decoder_outputs)
+    decoder_outputs = build_transformer_decoder(
+        decoder_inputs=decoder_inputs, encoder_outputs=encoder_outputs,
+        self_attention_mask=decoder_mask,
+        cross_attention_mask=encoder_mask, vocab_size=target_vocab_size,
+        max_length=target_max_length, d_model=d_model, num_heads=num_heads,
+        dff=dff, num_layers=num_decoder_layers, dropout_rate=dropout_rate)
+
+    outputs = tf.keras.layers.Dense(target_vocab_size, name="output_projection")(decoder_outputs)
 
     return tf.keras.Model(inputs=[encoder_inputs, decoder_inputs], outputs=outputs, name="transformer_seq2seq")
 

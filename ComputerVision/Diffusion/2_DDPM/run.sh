@@ -5,11 +5,10 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 GPU="${GPU:--1}"
 DATASETS="${DATASETS:-mnist fashion_mnist cifar10 cifar100 celeba}"
-MODE="${MODE:-diffusion}"
-
+EPOCHS="${EPOCHS:-200}"
 IFS=' ' read -r -a dataset_choices <<< "$DATASETS"
 for dataset in "${dataset_choices[@]}"; do
     [[ -z "$dataset" ]] && continue
-    echo "Running dataset: $dataset mode: $MODE"
-    "$PYTHON_BIN" "$SCRIPT_DIR/train_and_test.py" --type "$dataset" --gpu "$GPU" --mode "$MODE" --continue "$@"
+    echo "Running dataset: $dataset"
+    "$PYTHON_BIN" "$SCRIPT_DIR/train_and_test.py" --type "$dataset" --gpu "$GPU" --epochs "$EPOCHS" "$@"
 done

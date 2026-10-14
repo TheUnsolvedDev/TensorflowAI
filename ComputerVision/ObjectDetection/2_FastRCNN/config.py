@@ -30,10 +30,10 @@ COCO_ROOT_CANDIDATES = [
 COCO_ROOT = next(
     (path for path in COCO_ROOT_CANDIDATES if path and os.path.isdir(path)), None)
 
-INPUT_SIZE = (256, 256)
+INPUT_SIZE = (512, 512)
 # ROI tensors amplify activation memory.  Keep the default conservative and
 # allow an explicit, measured override instead of forcing global batch 16.
-BATCH_SIZE = int(os.environ.get("DETECTOR_BATCH_SIZE", "8"))
+BATCH_SIZE = int(os.environ.get("DETECTOR_BATCH_SIZE", "4"))
 # Detector runs are intentionally long-lived; classifier defaults remain below.
 EPOCHS = 100
 CLASSIFIER_EPOCHS = 20
@@ -45,15 +45,13 @@ VAL_SPLIT = "val2017"
 TEST_SPLIT = "val2017"
 
 USE_SELECTIVE_SEARCH = True
-MAX_PROPOSALS = 2000
+SELECTIVE_SEARCH_MODE = os.environ.get("FAST_RCNN_PROPOSAL_MODE", "fast")
+MAX_PROPOSALS = 4000
 ROIS_PER_IMAGE = 64
-POSITIVE_FRACTION = 0.50
+POSITIVE_FRACTION = 0.25
 POSITIVE_IOU_THRESHOLD = 0.5
 NEGATIVE_IOU_THRESHOLD = 0.1
 MIN_BOX_SIZE = 8
-GT_JITTERS_PER_BOX = 8
-GT_JITTER_CENTER_STD = 0.10
-GT_JITTER_SCALE_STD = 0.15
 
 ROI_POOL_SIZE = (7, 7)
 FC_DIM = 512
@@ -65,9 +63,10 @@ PROGRESS_UPDATE_INTERVAL = 10
 INSPECTION_GRID_SIZE = 16
 INFERENCE_BATCH_SIZE = 256
 INFERENCE_TOPK = 300
-SCORE_THRESHOLD = 0.4
+SCORE_THRESHOLD = 0.05
 NMS_IOU_THRESHOLD = 0.3
 MAX_DETECTIONS_PER_CLASS = 25
+MAX_DETECTIONS_PER_IMAGE = 100
 MAX_DRAW_DETECTIONS = 20
 
 LOG_DIR = os.path.join(PROJECT_DIR, "logs", "coco2017", "FastRCNN")

@@ -91,6 +91,7 @@ class DiffusionBackbone(tf.keras.Model):
         super().__init__()
         self.channels = channels
         self.time_embedding = TimeEmbedding(TIME_EMBED_DIM)
+        self.time_projection = tf.keras.layers.Dense(channels)
         self.condition_projection = tf.keras.layers.Dense(channels) if conditioning_dim else None
         self.control_projection = tf.keras.layers.Conv2D(channels, 1, padding="same") if use_control else None
         self.input_projection = tf.keras.layers.Conv2D(channels, 3, padding="same")
@@ -99,11 +100,12 @@ class DiffusionBackbone(tf.keras.Model):
         self.mid = tf.keras.layers.Conv2D(channels * 2, 3, padding="same", activation="swish")
         self.attn = tf.keras.layers.MultiHeadAttention(num_heads=4, key_dim=max(channels // 2, 1))
         self.up = tf.keras.layers.Conv2DTranspose(channels, 4, strides=2, padding="same", activation="swish")
+        self.skip_projection = tf.keras.layers.Conv2D(channels, 1, padding="same", activation="swish")
         self.out = tf.keras.layers.Conv2D(output_channels, 3, padding="same")
 
     def call(self, noisy_inputs, timesteps, cond_vector=None, control=None, training=False):
-        time_emb = self.time_embedding(timesteps)
-        time_map = tf.reshape(time_emb, (-1, 1, 1, TIME_EMBED_DIM))
+        time_emb = self.time_projection(self.time_embedding(timesteps))
+        time_map = tf.reshape(time_emb, (-1, 1, 1, self.channels))
         x = self.input_projection(noisy_inputs)
         if self.condition_projection is not None and cond_vector is not None:
             cond_map = tf.reshape(self.condition_projection(cond_vector), (-1, 1, 1, self.channels))
@@ -120,7 +122,7 @@ class DiffusionBackbone(tf.keras.Model):
         flat = self.attn(flat, flat, training=training)
         x = tf.reshape(flat, shape)
         x = self.up(x)
-        x = tf.concat([x, skip], axis=-1)
+        x = self.skip_projection(tf.concat([x, skip], axis=-1))
         return self.out(x)
 
 
@@ -140,6 +142,10 @@ class BaseDiffusionModel(tf.keras.Model):
         self.betas = tf.cast(tf.linspace(BETA_START, BETA_END, DIFFUSION_STEPS), tf.float32)
         self.alphas = 1.0 - self.betas
         self.alpha_bars = tf.math.cumprod(self.alphas)
+        self.alpha_bars_prev = tf.concat([tf.ones((1,), dtype=tf.float32), self.alpha_bars[:-1]], axis=0)
+        self.posterior_variance = self.betas * (1.0 - self.alpha_bars_prev) / (1.0 - self.alpha_bars)
+        self.posterior_mean_x0 = self.betas * tf.sqrt(self.alpha_bars_prev) / (1.0 - self.alpha_bars)
+        self.posterior_mean_xt = self.alphas * tf.sqrt(self.alpha_bars_prev) / (1.0 - self.alpha_bars)
 
         with self.strategy.scope():
             self.text_encoder = TextEncoder() if self.use_text else None
@@ -305,7 +311,7 @@ class BaseDiffusionModel(tf.keras.Model):
         noise = tf.random.normal(tf.shape(target_images))
         timesteps = self.sample_timesteps(batch_size)
         noisy_inputs = self.q_sample(target_images, timesteps, noise)
-        with tf.GradientTape(persistent=True) as tape:
+        with tf.GradientTape() as tape:
             pred = self.denoiser(noisy_inputs, timesteps, cond_vector=cond_vector, control=control, training=True)
             if USE_LEARNED_VARIANCE:
                 pred_noise, pred_var = tf.split(pred, 2, axis=-1)
@@ -314,12 +320,16 @@ class BaseDiffusionModel(tf.keras.Model):
                 loss = self.mse(noise, pred)
             if self.text_encoder is not None and cond_vector is not None:
                 loss += 1e-3 * tf.reduce_mean(tf.square(cond_vector))
-        denoiser_grads = tape.gradient(loss, self.denoiser.trainable_variables)
+        variables = self.denoiser.trainable_variables
+        if self.text_encoder is not None and cond_vector is not None:
+            variables += self.text_encoder.trainable_variables
+        grads = tape.gradient(loss, variables)
+        denoiser_count = len(self.denoiser.trainable_variables)
+        denoiser_grads = grads[:denoiser_count]
         self.denoiser_optimizer.apply_gradients(zip(denoiser_grads, self.denoiser.trainable_variables))
         if self.text_encoder is not None and cond_vector is not None:
-            text_grads = tape.gradient(loss, self.text_encoder.trainable_variables)
+            text_grads = grads[denoiser_count:]
             self.text_optimizer.apply_gradients(zip(text_grads, self.text_encoder.trainable_variables))
-        del tape
         return loss
 
     @tf.function
@@ -362,21 +372,29 @@ class BaseDiffusionModel(tf.keras.Model):
         return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica, axis=None)
 
     def p_sample(self, sample, timesteps, cond_vector=None, control=None):
+        """Draw one exact DDPM reverse transition, x_t -> x_(t-1)."""
         pred = self.denoiser(sample, timesteps, cond_vector=cond_vector, control=control, training=False)
         if USE_LEARNED_VARIANCE:
             pred, _ = tf.split(pred, 2, axis=-1)
         alpha = tf.gather(self.alphas, timesteps)
         alpha_bar = tf.gather(self.alpha_bars, timesteps)
         beta = tf.gather(self.betas, timesteps)
-        while len(alpha.shape) < len(sample.shape):
-            alpha = alpha[..., None]
-            alpha_bar = alpha_bar[..., None]
-            beta = beta[..., None]
-        mean = (sample - (beta / tf.sqrt(1.0 - alpha_bar)) * pred) / tf.sqrt(alpha)
-        if USE_DDIM_SAMPLER:
-            return mean
+        def expand(values):
+            while len(values.shape) < len(sample.shape):
+                values = values[..., None]
+            return values
+
+        alpha = expand(alpha)
+        alpha_bar = expand(alpha_bar)
+        beta = expand(beta)
+        posterior_variance = expand(tf.gather(self.posterior_variance, timesteps))
+        mean = (sample - beta / tf.sqrt(1.0 - alpha_bar) * pred) / tf.sqrt(alpha)
         noise = tf.random.normal(tf.shape(sample))
-        return mean + tf.sqrt(beta) * noise
+        has_previous_step = expand(tf.cast(timesteps > 0, sample.dtype))
+        return mean + has_previous_step * tf.sqrt(tf.maximum(posterior_variance, 0.0)) * noise
+
+    def reverse_timesteps(self):
+        return range(DIFFUSION_STEPS - 1, -1, -1)
 
     def generate_samples(self, sample_count=4, cond_tokens=None, control=None, stage="diffusion"):
         if stage == "sample_consistency" and self.consistency_model is not None:
@@ -391,26 +409,32 @@ class BaseDiffusionModel(tf.keras.Model):
             text_embed = self.clip_encoder.encode_text(cond_tokens, training=False)
             cond_vector = self.prior_projection(text_embed, training=False)
         sample = tf.random.normal((sample_count, *self.input_shape_value))
-        for step in tf.linspace(float(DIFFUSION_STEPS - 1), 0.0, SAMPLING_STEPS):
-            timesteps = tf.fill((sample_count,), tf.cast(step, tf.int32))
+        for step in self.reverse_timesteps():
+            timesteps = tf.fill((sample_count,), step)
             sample = self.p_sample(sample, timesteps, cond_vector=cond_vector, control=control)
         if self.autoencoder is not None and stage in {"diffusion", "control"}:
             sample = self.autoencoder.decoder(sample, training=False)
         return tf.clip_by_value(sample, -1.0, 1.0)
 
-    def fit(self, dataset, epochs, initial_epoch=0, callbacks=None, stage="diffusion"):
+    def fit(self, dataset, epochs, initial_epoch=0, callbacks=None, stage="diffusion", steps_per_epoch=None):
         callbacks = callbacks or []
-        try:
-            steps_per_epoch = len(dataset)
-        except TypeError:
-            steps_per_epoch = None
+        if steps_per_epoch is None:
+            try:
+                steps_per_epoch = len(dataset)
+            except TypeError:
+                steps_per_epoch = None
+        self._interrupt_requested = False
+        progress = tf.keras.callbacks.ProgbarLogger()
+        progress.set_model(self)
+        progress.set_params({"verbose": 1, "epochs": epochs, "steps": steps_per_epoch})
+        progress.on_train_begin()
         for callback in callbacks:
             callback.set_model(self)
             callback.set_params({"epochs": epochs, "initial_epoch": initial_epoch, "steps": steps_per_epoch})
             callback.on_train_begin()
         for epoch in range(initial_epoch, epochs):
-            print(f"Epoch {epoch + 1}/{epochs}")
-            progress = tf.keras.utils.Progbar(target=steps_per_epoch, verbose=1)
+            epoch_loss = tf.keras.metrics.Mean()
+            progress.on_epoch_begin(epoch)
             for callback in callbacks:
                 callback.on_epoch_begin(epoch)
             for step, batch in enumerate(dataset):
@@ -426,12 +450,17 @@ class BaseDiffusionModel(tf.keras.Model):
                     loss = self.distributed_consistency_step(source)
                 else:
                     loss = self.distributed_step(batch, stage=stage)
+                epoch_loss.update_state(loss)
                 logs = {"loss": float(loss.numpy()), "stage": stage}
-                progress.update(step + 1, values=[("loss", logs["loss"])])
+                progress.on_train_batch_end(step, {"loss": logs["loss"]})
                 for callback in callbacks:
                     callback.on_train_batch_end(step, logs)
-            epoch_logs = {"loss": float(loss.numpy()), "stage": stage}
+                if self._interrupt_requested:
+                    raise KeyboardInterrupt
+            epoch_logs = {"loss": float(epoch_loss.result().numpy()), "stage": stage}
+            progress.on_epoch_end(epoch, {"loss": epoch_logs["loss"]})
             for callback in callbacks:
                 callback.on_epoch_end(epoch, epoch_logs)
         for callback in callbacks:
             callback.on_train_end()
+        progress.on_train_end()

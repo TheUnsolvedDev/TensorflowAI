@@ -100,24 +100,42 @@ def generate_grid_proposals(height, width, max_proposals):
     return proposals[:max_proposals]
 
 
-def generate_region_proposals(image_bgr, max_proposals=2000, use_selective_search=True):
+def selective_search_available():
+    segmentation = getattr(getattr(cv2, "ximgproc", None), "segmentation", None)
+    return segmentation is not None and hasattr(segmentation, "createSelectiveSearchSegmentation")
+
+
+def require_selective_search():
+    if not selective_search_available():
+        raise RuntimeError(
+            "Fast R-CNN requires OpenCV selective search. Replace opencv-python "
+            "with opencv-contrib-python in this environment."
+        )
+
+
+def generate_region_proposals(image_bgr, max_proposals=2000, use_selective_search=True, mode="fast"):
     height, width = image_bgr.shape[:2]
-    if use_selective_search and hasattr(cv2, "ximgproc"):
-        segmentation = getattr(cv2.ximgproc, "segmentation", None)
-        if segmentation is not None and hasattr(segmentation, "createSelectiveSearchSegmentation"):
-            selective_search = segmentation.createSelectiveSearchSegmentation()
-            selective_search.setBaseImage(image_bgr)
+    if use_selective_search:
+        require_selective_search()
+        if mode not in {"fast", "quality"}:
+            raise ValueError(f"Unknown selective-search mode: {mode}")
+        selective_search = cv2.ximgproc.segmentation.createSelectiveSearchSegmentation()
+        selective_search.setBaseImage(image_bgr)
+        if mode == "quality":
+            selective_search.switchToSelectiveSearchQuality()
+        else:
             selective_search.switchToSelectiveSearchFast()
-            rects = selective_search.process()
-            proposals = []
-            for x, y, w, h in rects[: max_proposals * 2]:
-                if w < 16 or h < 16:
-                    continue
-                proposals.append([x, y, x + w, y + h])
-            proposals = deduplicate_boxes(
-                np.array(proposals, dtype=np.float32))
-            if len(proposals) > 0:
-                return proposals[:max_proposals]
+        rects = selective_search.process()
+        proposals = []
+        for x, y, w, h in rects:
+            if w < 8 or h < 8:
+                continue
+            proposals.append([x, y, x + w, y + h])
+            if len(proposals) >= max_proposals:
+                break
+        proposals = deduplicate_boxes(np.asarray(proposals, dtype=np.float32))
+        if len(proposals) > 0:
+            return proposals[:max_proposals]
     return generate_grid_proposals(height=height, width=width, max_proposals=max_proposals)
 
 

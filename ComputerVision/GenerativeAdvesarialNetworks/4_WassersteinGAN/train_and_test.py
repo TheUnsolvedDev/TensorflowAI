@@ -12,6 +12,8 @@ import tensorflow as tf
 from config import *
 from dataset import *
 from model import *
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from training_utils import FullCheckpointCallback, build_full_checkpoint
 
 MODEL_CLASS = WGAN
 LARGE_IMAGE_DATASETS = {"celeba", "anime_faces"}
@@ -32,9 +34,9 @@ def setup_gpu(gpu_id):
 
 
 def build_strategy():
-    return tf.distribute.MirroredStrategy(
-        cross_device_ops=tf.distribute.NcclAllReduce()
-    )
+    if len(tf.config.get_visible_devices("GPU")) > 1:
+        return tf.distribute.MirroredStrategy(cross_device_ops=tf.distribute.NcclAllReduce())
+    return tf.distribute.MirroredStrategy()
 
 
 def get_weight_paths(log_dir):
@@ -61,14 +63,15 @@ def load_training_state(log_dir):
     return 0
 
 
-def load_weights_if_needed(model, log_dir, resume):
+def load_weights_if_needed(model, log_dir):
     gen_path, disc_path = get_weight_paths(log_dir)
-    if resume and os.path.exists(gen_path) and os.path.exists(disc_path):
+    if os.path.exists(gen_path) and os.path.exists(disc_path):
         model.generator.load_weights(gen_path)
         model.discriminator.load_weights(disc_path)
         print("Loaded existing weights")
-    elif resume:
-        print("No saved weights found, starting fresh")
+        return True
+    print("No saved weights found, starting fresh")
+    return False
 
 
 def setup_interrupt_handler(model, log_dir):
@@ -103,10 +106,14 @@ class EpochTracker(tf.keras.callbacks.Callback):
 
 
 class GANLogger(tf.keras.callbacks.Callback):
-    def __init__(self, log_dir):
+    def __init__(self, log_dir, resume=False):
         super().__init__()
         self.log_dir = log_dir
         self.history = {"gen_loss": [], "disc_loss": []}
+        history_path = os.path.join(log_dir, "history.json")
+        if resume and os.path.exists(history_path):
+            with open(history_path, "r") as handle:
+                self.history = json.load(handle)
 
     def on_epoch_end(self, epoch, logs=None):
         self.history["gen_loss"].append(float(logs["gen_loss"]))
@@ -140,7 +147,7 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         super().__init__()
         self.model_ref = model
         self.latent_dim = latent_dim
-        self.fixed_noise = np.random.normal(0, 1, (8, latent_dim))
+        self.fixed_noise = np.random.default_rng(42).normal(0, 1, (16, latent_dim))
 
         self.img_dir = os.path.join(log_dir, "samples")
         os.makedirs(self.img_dir, exist_ok=True)
@@ -149,10 +156,8 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         if not should_run_periodic_callback(self, epoch, SAMPLE_EVERY_N_EPOCHS):
             return
 
-        random_noise = np.random.normal(0, 1, (8, self.latent_dim))
-        noise = np.concatenate([self.fixed_noise, random_noise], axis=0)
-
-        generated = self.model_ref.generator(noise, training=False)
+        with self.model_ref.ema.average_weights():
+            generated = self.model_ref.generator(self.fixed_noise, training=False)
         generated = ((generated + 1.0) / 2.0).numpy()
 
         fig, axes = plt.subplots(4, 4, figsize=(6, 6))
@@ -166,40 +171,10 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         plt.close()
 
 
-class GANLRScheduler(tf.keras.callbacks.Callback):
-    def __init__(self, gen_opt, disc_opt, factor=0.5, patience=15):
-        super().__init__()
-        self.gen_opt = gen_opt
-        self.disc_opt = disc_opt
-        self.factor = factor
-        self.patience = patience
-        self.wait = 0
-        self.best = np.inf
-
-    def on_epoch_end(self, epoch, logs=None):
-        gen_loss = logs.get("gen_loss", 0.0)
-
-        if gen_loss < self.best:
-            self.best = gen_loss
-            self.wait = 0
-        else:
-            self.wait += 1
-
-        if self.wait >= self.patience:
-            new_lr_g = self.gen_opt.learning_rate * self.factor
-            new_lr_d = self.disc_opt.learning_rate * self.factor
-
-            self.gen_opt.learning_rate.assign(new_lr_g)
-            self.disc_opt.learning_rate.assign(new_lr_d)
-
-            print(f"LR reduced -> G: {new_lr_g.numpy()}, D: {new_lr_d.numpy()}")
-            self.wait = 0
-
-
 class ModeCollapseCallback(tf.keras.callbacks.Callback):
-    def __init__(self, latent_dim, num_samples=32, threshold=0.05):
+    def __init__(self, latent_dim, num_samples=32):
         super().__init__()
-        self.threshold = threshold
+        self.threshold = COLLAPSE_RMSE_THRESHOLD
         self.fixed_noise = tf.random.normal([num_samples, latent_dim])
 
     @tf.function
@@ -207,7 +182,7 @@ class ModeCollapseCallback(tf.keras.callbacks.Callback):
         samples = generator(noise, training=False)
         flattened = tf.reshape(samples, [tf.shape(samples)[0], -1])
         diffs = tf.expand_dims(flattened, 1) - tf.expand_dims(flattened, 0)
-        distances = tf.linalg.norm(diffs, axis=-1)
+        distances = tf.sqrt(tf.reduce_mean(tf.square(diffs), axis=-1))
         mask = 1.0 - tf.eye(tf.shape(flattened)[0])
         return tf.reduce_sum(distances * mask) / tf.reduce_sum(mask)
 
@@ -231,7 +206,8 @@ class ModeCollapseCallback(tf.keras.callbacks.Callback):
 
 def save_final_generated_grid(model, log_dir, latent_dim):
     noise = tf.random.normal([16, latent_dim])
-    generated = ((model.generator(noise, training=False) + 1.0) / 2.0).numpy()
+    with model.ema.average_weights():
+        generated = ((model.generator(noise, training=False) + 1.0) / 2.0).numpy()
 
     fig, axes = plt.subplots(4, 4, figsize=(6, 6))
     for index in range(16):
@@ -266,17 +242,13 @@ def build_model(strategy, dataset_type, channels):
     return model, latent_dim
 
 
-def build_callbacks(model, log_dir, latent_dim):
+def build_callbacks(model, log_dir, latent_dim, resume=False):
     return [
         EpochTracker(model),
-        GANLogger(log_dir),
+        GANLogger(log_dir, resume=resume),
         WeightSaveCallback(model, log_dir),
         SampleImageCallback(model, log_dir, latent_dim),
         ModeCollapseCallback(latent_dim),
-        GANLRScheduler(
-            model.generator_optimizer,
-            model.discriminator_optimizer,
-        ),
     ]
 
 
@@ -296,31 +268,39 @@ def main():
     strategy = build_strategy()
     train_ds = strategy.experimental_distribute_dataset(train_ds)
 
-    log_dir = f"logs/{args.type}/GAN"
+    log_dir = f"logs/{args.type}/{MODEL_NAME}"
     os.makedirs(log_dir, exist_ok=True)
 
     model, latent_dim = build_model(strategy, args.type, channels)
+    checkpoint, manager = build_full_checkpoint(model, log_dir)
 
     start_epoch = 0
-    if args.resume:
-        load_weights_if_needed(model, log_dir, True)
+    if args.resume and manager.latest_checkpoint:
+        checkpoint.restore(manager.latest_checkpoint)
+        print(f"Restored full checkpoint: {manager.latest_checkpoint}")
+        weights_loaded = True
+    else:
+        weights_loaded = load_weights_if_needed(model, log_dir)
+    if args.resume and weights_loaded:
         start_epoch = load_training_state(log_dir)
         print(f"Resuming from epoch {start_epoch}")
+    elif weights_loaded:
+        print("Starting from epoch 0 with loaded weights")
 
     setup_interrupt_handler(model, log_dir)
-    callbacks = build_callbacks(model, log_dir, latent_dim)
+    callbacks = build_callbacks(
+        model, log_dir, latent_dim, resume=start_epoch > 0
+    )
+    callbacks.append(FullCheckpointCallback(manager, SAVE_EVERY_N_EPOCHS))
 
-    try:
-        model.fit(
-            train_ds,
-            epochs=EPOCHS,
-            initial_epoch=start_epoch,
-            path=f"{args.type}/GAN",
-            callbacks=callbacks,
-        )
-        save_final_generated_grid(model, log_dir, latent_dim)
-    finally:
-        dataset.cleanup_cache()
+    model.fit(
+        train_ds,
+        epochs=EPOCHS,
+        initial_epoch=start_epoch,
+        path=f"{args.type}/{MODEL_NAME}",
+        callbacks=callbacks,
+    )
+    save_final_generated_grid(model, log_dir, latent_dim)
 
 
 if __name__ == "__main__":

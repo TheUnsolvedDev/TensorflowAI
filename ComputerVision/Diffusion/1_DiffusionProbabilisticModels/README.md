@@ -27,29 +27,31 @@ Implements the original diffusion idea in repo-scale form rather than a large mo
 ## Run
 
 ```bash
-python train_and_test.py --gpu -1 --type mnist --mode diffusion --reset
+python train_and_test.py --gpu -1 --type mnist --reset
 ```
+
+`--gpu -1` requires both GPUs and uses NCCL mirrored training.
 
 `--reset` deletes only the selected run directory before training, so MNIST begins with fresh weights, history, and samples. The generated samples are saved under `logs/mnist/DiffusionProbabilisticModels/diffusion/samples/` at epochs 5, 10, ..., 50; each grid shows reference images above generated images.
 
 Resume training with either of the repo-style flags:
 
 ```bash
-python train_and_test.py --gpu 0 --type mnist --mode diffusion --continue
-python train_and_test.py --gpu 0 --type mnist --mode diffusion --resume
+python train_and_test.py --gpu 0 --type mnist --continue
+python train_and_test.py --gpu 0 --type mnist --resume
 ```
 
 For the shell launcher, fresh training is the default; resume explicitly with `RESUME=1`:
 
 ```bash
-DATASETS=mnist MODE=diffusion bash run.sh --reset
-RESUME=1 DATASETS=mnist MODE=diffusion bash run.sh
+DATASETS=mnist bash run.sh --reset
+RESUME=1 DATASETS=mnist bash run.sh
 ```
 
 Run the folder-local DDPM regression checks without training:
 
 ```bash
-python train_and_test.py --gpu -1 --type mnist --mode diffusion --verify-sampler
+python train_and_test.py --gpu -1 --type mnist --verify-sampler
 ```
 
 ## Practical Notes

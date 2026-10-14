@@ -1,8 +1,11 @@
+import os
 import sys
 
 import tensorflow as tf
 
 from config import *
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from training_utils import GeneratorEMA
 
 
 class SRGAN(tf.keras.Model):
@@ -12,6 +15,8 @@ class SRGAN(tf.keras.Model):
         self.lr_input_shape = lr_input_shape
         self.hr_input_shape = hr_input_shape
         self.batch_size = batch_size
+        if batch_size % self.strategy.num_replicas_in_sync:
+            raise ValueError("Global batch size must be divisible by the replica count")
 
         with self.strategy.scope():
             self.generator = self.build_generator()
@@ -24,8 +29,13 @@ class SRGAN(tf.keras.Model):
                 DISCRIMINATOR_LEARNING_RATE, beta_1=0.9, beta_2=0.999
             )
 
-            self.content_loss_fn = tf.keras.losses.MeanSquaredError()
-            self.adversarial_loss_fn = tf.keras.losses.BinaryCrossentropy(from_logits=True)
+            self.content_loss_fn = tf.keras.losses.MeanSquaredError(reduction="none")
+            self.adversarial_loss_fn = tf.keras.losses.BinaryCrossentropy(
+                from_logits=True, reduction="none"
+            )
+            self.generator_optimizer.build(self.generator.trainable_variables)
+            self.discriminator_optimizer.build(self.discriminator.trainable_variables)
+            self.ema = GeneratorEMA([self.generator], EMA_DECAY)
 
         tf.keras.utils.plot_model(
             self.generator, to_file="generator.png", show_shapes=True, expand_nested=True
@@ -105,9 +115,11 @@ class SRGAN(tf.keras.Model):
             sr_images = self.generator(lr_images, training=True)
             fake_output = self.discriminator(sr_images, training=True)
 
-            content_loss = self.content_loss_fn(hr_images, sr_images)
-            adv_loss = self.adversarial_loss_fn(valid, fake_output)
-            total_loss = CONTENT_LOSS_WEIGHT * content_loss + ADVERSARIAL_LOSS_WEIGHT * adv_loss
+            content_loss = tf.reduce_mean(self.content_loss_fn(hr_images, sr_images))
+            adv_loss = tf.reduce_mean(self.adversarial_loss_fn(valid, fake_output))
+            total_loss = (
+                CONTENT_LOSS_WEIGHT * content_loss + ADVERSARIAL_LOSS_WEIGHT * adv_loss
+            ) / self.strategy.num_replicas_in_sync
 
         grads = tape.gradient(total_loss, self.generator.trainable_variables)
         self.generator_optimizer.apply_gradients(zip(grads, self.generator.trainable_variables))
@@ -123,9 +135,11 @@ class SRGAN(tf.keras.Model):
             real_output = self.discriminator(hr_images, training=True)
             fake_output = self.discriminator(tf.stop_gradient(sr_images), training=True)
 
-            real_loss = self.adversarial_loss_fn(valid, real_output)
-            fake_loss = self.adversarial_loss_fn(fake, fake_output)
-            total_loss = 0.5 * (real_loss + fake_loss)
+            real_loss = tf.reduce_mean(self.adversarial_loss_fn(valid, real_output))
+            fake_loss = tf.reduce_mean(self.adversarial_loss_fn(fake, fake_output))
+            total_loss = (
+                0.5 * (real_loss + fake_loss) / self.strategy.num_replicas_in_sync
+            )
 
         grads = tape.gradient(total_loss, self.discriminator.trainable_variables)
         self.discriminator_optimizer.apply_gradients(zip(grads, self.discriminator.trainable_variables))
@@ -136,22 +150,23 @@ class SRGAN(tf.keras.Model):
         per_replica_loss = self.strategy.run(
             self.train_generator_step, args=(lr_images, hr_images)
         )
-        return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica_loss, axis=None)
+        return self.strategy.reduce(tf.distribute.ReduceOp.SUM, per_replica_loss, axis=None)
 
     @tf.function
     def dist_discriminator_step(self, lr_images, hr_images):
         per_replica_loss = self.strategy.run(
             self.train_discriminator_step, args=(lr_images, hr_images)
         )
-        return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica_loss, axis=None)
+        return self.strategy.reduce(tf.distribute.ReduceOp.SUM, per_replica_loss, axis=None)
 
     def fit(self, dataset, epochs, initial_epoch=0, callbacks=None):
         if callbacks is None:
             callbacks = []
+        steps_per_epoch = int(dataset.cardinality)
 
         callback_params = {
             "epochs": epochs,
-            "steps": None,
+            "steps": steps_per_epoch,
             "verbose": 1,
             "do_validation": False,
             "metrics": ["gen_loss", "disc_loss"],
@@ -162,6 +177,10 @@ class SRGAN(tf.keras.Model):
             callback.on_train_begin()
 
         for epoch in range(initial_epoch, epochs):
+            print(f"Epoch {epoch + 1}/{epochs}")
+            progress_bar = tf.keras.utils.Progbar(steps_per_epoch)
+            gen_loss_metric = tf.keras.metrics.Mean()
+            disc_loss_metric = tf.keras.metrics.Mean()
             self._current_epoch = epoch
             for callback in callbacks:
                 callback.on_epoch_begin(epoch)
@@ -169,19 +188,26 @@ class SRGAN(tf.keras.Model):
             for step, (lr_images, hr_images) in enumerate(dataset):
                 disc_loss = self.dist_discriminator_step(lr_images, hr_images)
                 gen_loss = self.dist_generator_step(lr_images, hr_images)
+                self.ema.update()
+                gen_loss_metric.update_state(gen_loss)
+                disc_loss_metric.update_state(disc_loss)
 
-                print(
-                    f"\rEpoch [{step}/{epoch + 1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}",
-                    end="",
+                progress_bar.update(
+                    step + 1,
+                    values=[
+                        ("gen_loss", float(gen_loss)),
+                        ("disc_loss", float(disc_loss)),
+                    ],
                 )
-                sys.stdout.flush()
 
                 logs = {"gen_loss": gen_loss, "disc_loss": disc_loss}
                 for callback in callbacks:
                     callback.on_train_batch_end(step, logs)
 
-            print()
-            logs = {"gen_loss": gen_loss.numpy(), "disc_loss": disc_loss.numpy()}
+            logs = {
+                "gen_loss": gen_loss_metric.result().numpy(),
+                "disc_loss": disc_loss_metric.result().numpy(),
+            }
             for callback in callbacks:
                 callback.on_epoch_end(epoch, logs)
 

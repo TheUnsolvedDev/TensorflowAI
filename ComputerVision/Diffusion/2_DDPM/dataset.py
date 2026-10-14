@@ -56,16 +56,14 @@ class Dataset:
 
     def _prepare_builtin_images(self, dataset_type):
         if dataset_type in {"mnist", "fashion_mnist"}:
-            (train_images, _), (test_images, _) = self._get_builtin_dataset(dataset_type)
-            images = np.concatenate([train_images, test_images]).reshape(-1, 28, 28, 1)
+            (images, _), _ = self._get_builtin_dataset(dataset_type)
+            images = images.reshape(-1, 28, 28, 1)
             channels = 1
         elif dataset_type == "cifar10":
-            (train_images, _), (test_images, _) = self._get_builtin_dataset(dataset_type)
-            images = np.concatenate([train_images, test_images])
+            (images, _), _ = self._get_builtin_dataset(dataset_type)
             channels = 3
         elif dataset_type == "cifar100":
-            (train_images, _), (test_images, _) = self._get_builtin_dataset(dataset_type)
-            images = np.concatenate([train_images, test_images])
+            (images, _), _ = self._get_builtin_dataset(dataset_type)
             channels = 3
         else:
             raise ValueError(f"Unknown builtin dataset: {dataset_type}")

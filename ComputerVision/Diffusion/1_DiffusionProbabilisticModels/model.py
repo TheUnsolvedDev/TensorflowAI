@@ -1,3 +1,4 @@
+import math
 import sys
 
 import tensorflow as tf
@@ -174,7 +175,13 @@ class BaseDiffusionModel(tf.keras.Model):
         self.model_label = model_label
         self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
         self._interrupt_requested = False
-        self.betas = tf.cast(tf.linspace(BETA_START, BETA_END, DIFFUSION_STEPS), tf.float32)
+        # A linear 50-step schedule leaves x_T about 60% signal, while sampling
+        # starts from pure noise.  The cosine schedule reaches noise at x_T and
+        # is well behaved with the deliberately small number of steps used here.
+        schedule_steps = tf.linspace(0.0, 1.0, DIFFUSION_STEPS + 1)
+        alpha_bars = tf.cos((schedule_steps + 0.008) / 1.008 * math.pi / 2.0) ** 2
+        alpha_bars = alpha_bars / alpha_bars[0]
+        self.betas = tf.clip_by_value(1.0 - alpha_bars[1:] / alpha_bars[:-1], 1e-4, 0.999)
         self.alphas = 1.0 - self.betas
         self.alpha_bars = tf.math.cumprod(self.alphas)
 
@@ -350,9 +357,9 @@ class BaseDiffusionModel(tf.keras.Model):
             pred = self.denoiser([noisy_inputs, timesteps], training=True)
             if USE_LEARNED_VARIANCE:
                 pred_noise, pred_var = tf.split(pred, 2, axis=-1)
-                loss = self.huber(noise, pred_noise) + 1e-3 * tf.reduce_mean(tf.square(pred_var))
+                loss = self.mse(noise, pred_noise) + 1e-3 * tf.reduce_mean(tf.square(pred_var))
             else:
-                loss = self.huber(noise, pred)
+                loss = self.mse(noise, pred)
         denoiser_grads = tape.gradient(loss, self.denoiser.trainable_variables)
         denoiser_grads = [
             tf.clip_by_norm(grad, 1.0) if grad is not None else None
@@ -452,21 +459,20 @@ class BaseDiffusionModel(tf.keras.Model):
             sample = self.autoencoder.decoder(sample, training=False)
         return tf.clip_by_value(sample, -1.0, 1.0)
 
-    def fit(self, dataset, epochs, initial_epoch=0, callbacks=None, stage="diffusion"):
+    def fit(self, dataset, epochs, initial_epoch=0, callbacks=None, stage="diffusion", steps_per_epoch=None):
         callbacks = callbacks or []
         self._interrupt_requested = False
-        try:
-            steps_per_epoch = len(dataset)
-        except TypeError:
-            steps_per_epoch = None
+        progress = tf.keras.callbacks.ProgbarLogger()
+        progress.set_model(self)
+        progress.set_params({"verbose": 1, "epochs": epochs, "steps": steps_per_epoch})
+        progress.on_train_begin()
         for callback in callbacks:
             callback.set_model(self)
             callback.set_params({"epochs": epochs, "initial_epoch": initial_epoch, "steps": steps_per_epoch})
             callback.on_train_begin()
         for epoch in range(initial_epoch, epochs):
-            print(f"Epoch {epoch + 1}/{epochs}")
             epoch_loss = tf.keras.metrics.Mean()
-            progress = tf.keras.utils.Progbar(target=steps_per_epoch, verbose=1)
+            progress.on_epoch_begin(epoch)
             for callback in callbacks:
                 callback.on_epoch_begin(epoch)
             for step, batch in enumerate(dataset):
@@ -484,15 +490,17 @@ class BaseDiffusionModel(tf.keras.Model):
                     loss = self.distributed_step(batch, stage=stage)
                 epoch_loss.update_state(loss)
                 logs = {"loss": float(loss.numpy()), "stage": stage}
-                progress.update(step + 1, values=[("loss", logs["loss"])])
+                progress.on_train_batch_end(step, {"loss": logs["loss"]})
                 for callback in callbacks:
                     callback.on_train_batch_end(step, logs)
                 if self._interrupt_requested:
                     raise KeyboardInterrupt
             epoch_logs = {"loss": float(epoch_loss.result().numpy()), "stage": stage}
+            progress.on_epoch_end(epoch, {"loss": epoch_logs["loss"]})
             for callback in callbacks:
                 callback.on_epoch_end(epoch, epoch_logs)
             if self._interrupt_requested:
                 raise KeyboardInterrupt
         for callback in callbacks:
             callback.on_train_end()
+        progress.on_train_end()

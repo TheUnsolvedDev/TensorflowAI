@@ -8,6 +8,24 @@ from config import (DECODER, DROPOUT, EMBEDDING_DIM, HIDDEN_DIM,
 tf.keras.backend.set_image_data_format("channels_last")
 
 
+class BahdanauAttention(tf.keras.layers.Layer):
+    def __init__(self):
+        super().__init__(name="image_attention")
+        self.query_projection = tf.keras.layers.Dense(HIDDEN_DIM, use_bias=False)
+        self.value_projection = tf.keras.layers.Dense(HIDDEN_DIM, use_bias=False)
+        self.score = tf.keras.layers.Dense(1, use_bias=False)
+
+    def call(self, query, values, return_attention_scores=False):
+        energy = self.score(tf.nn.tanh(
+            self.query_projection(query)[:, :, None, :] +
+            self.value_projection(values)[:, None, :, :]))
+        attention_scores = tf.nn.softmax(energy, axis=2)
+        context = tf.reduce_sum(attention_scores * values[:, None, :, :], axis=2)
+        if return_attention_scores:
+            return context, tf.squeeze(attention_scores, axis=-1)
+        return context
+
+
 def build_cnn(spatial=False):
     inputs = tf.keras.Input((*IMAGE_SIZE, IMAGE_CHANNELS))
     x = tf.keras.layers.Rescaling(1.0 / PIXEL_MAX_VALUE)(inputs)
@@ -70,9 +88,7 @@ def build_model(vocab_size, decoder=DECODER):
         state = tf.keras.layers.Dense(HIDDEN_DIM, activation="tanh", name="image_state")(pooled)
         x = tf.keras.layers.GRU(HIDDEN_DIM, return_sequences=True, dropout=DROPOUT, name="decoder")(x, initial_state=state)
     memory = tf.keras.layers.Dense(HIDDEN_DIM, name="image_projection")(features)
-    context = tf.keras.layers.MultiHeadAttention(
-        num_heads=4, key_dim=HIDDEN_DIM // 4, dropout=DROPOUT,
-        name="image_attention")(x, memory)
+    context = BahdanauAttention()(x, memory)
     x = tf.keras.layers.Concatenate(name="decoder_context")([x, context])
     logits = tf.keras.layers.Dense(vocab_size, name="logits")(x)
     return tf.keras.Model({"image": image, "tokens": tokens}, logits, name=f"cnn_{decoder}_captioner")
@@ -85,6 +101,10 @@ def verify_captioner(model, vocab_size):
     }, training=False)
     if output.shape != (1, 2, vocab_size):
         raise RuntimeError(f"Caption model check failed: expected (1, 2, {vocab_size}), got {output.shape}")
+    _, scores = model.get_layer("image_attention")(
+        tf.zeros((1, 2, HIDDEN_DIM)), tf.zeros((1, 49, HIDDEN_DIM)),
+        return_attention_scores=True)
+    tf.debugging.assert_near(tf.reduce_sum(scores, axis=-1), tf.ones((1, 2)))
 
 
 if __name__ == "__main__":

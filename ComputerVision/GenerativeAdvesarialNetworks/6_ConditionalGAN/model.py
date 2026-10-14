@@ -5,6 +5,8 @@ import numpy as np
 import tensorflow as tf
 
 from config import *
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from training_utils import GeneratorEMA
 
 os.makedirs("images", exist_ok=True)
 
@@ -18,7 +20,8 @@ class Cond_GAN(tf.keras.Model):
         self.batch_size = batch_size
         self.num_classes = num_classes
         self.lambda_gp = LAMBDA_GP
-        self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
+        if batch_size % self.strategy.num_replicas_in_sync:
+            raise ValueError("Global batch size must be divisible by the replica count")
 
         with self.strategy.scope():
             self.generator = self.build_generator(num_classes)
@@ -30,6 +33,9 @@ class Cond_GAN(tf.keras.Model):
             self.discriminator_optimizer = tf.keras.optimizers.Adam(
                 DISCRIMINATOR_LEARNING_RATE, beta_1=0.5, beta_2=0.999
             )
+            self.generator_optimizer.build(self.generator.trainable_variables)
+            self.discriminator_optimizer.build(self.discriminator.trainable_variables)
+            self.ema = GeneratorEMA([self.generator], EMA_DECAY)
 
         tf.keras.utils.plot_model(
             self.generator,
@@ -101,13 +107,13 @@ class Cond_GAN(tf.keras.Model):
         return tf.keras.Model([image_input, label_input], outputs, name="discriminator")
 
     @tf.function
-    def train_generator_step(self, noise, labels):
+    def train_generator_step(self, labels):
         batch_size = tf.shape(labels)[0]
         noise = tf.random.normal([batch_size, self.latent_dim[0]])
         with tf.GradientTape() as tape:
             fake_images = self.generator((noise, labels), training=True)
             fake_out = self.discriminator((fake_images, labels), training=True)
-            loss = -tf.reduce_mean(fake_out)
+            loss = -tf.reduce_mean(fake_out) / self.strategy.num_replicas_in_sync
         grads = tape.gradient(loss, self.generator.trainable_variables)
         self.generator_optimizer.apply_gradients(zip(grads, self.generator.trainable_variables))
         return loss
@@ -135,7 +141,11 @@ class Cond_GAN(tf.keras.Model):
             norm = tf.norm(grads, axis=1)
             gp = tf.reduce_mean((norm - 1.0) ** 2)
 
-            loss = tf.reduce_mean(fake_out) - tf.reduce_mean(real_out) + self.lambda_gp * gp
+            loss = (
+                tf.reduce_mean(fake_out)
+                - tf.reduce_mean(real_out)
+                + self.lambda_gp * gp
+            ) / self.strategy.num_replicas_in_sync
 
         grads = tape.gradient(loss, self.discriminator.trainable_variables)
         self.discriminator_optimizer.apply_gradients(
@@ -145,12 +155,12 @@ class Cond_GAN(tf.keras.Model):
         return loss
 
     @tf.function
-    def dist_generator_step(self, noise, labels):
+    def dist_generator_step(self, labels):
         per_replica_gen_loss = self.strategy.run(
-            self.train_generator_step, args=(noise, labels)
+            self.train_generator_step, args=(labels,)
         )
         gen_loss = self.strategy.reduce(
-            tf.distribute.ReduceOp.MEAN, per_replica_gen_loss, axis=None
+            tf.distribute.ReduceOp.SUM, per_replica_gen_loss, axis=None
         )
         return gen_loss
 
@@ -160,40 +170,52 @@ class Cond_GAN(tf.keras.Model):
             self.train_discriminator_step, args=(dataset_inputs, labels)
         )
         disc_loss = self.strategy.reduce(
-            tf.distribute.ReduceOp.MEAN, per_replica_disc_loss, axis=None
+            tf.distribute.ReduceOp.SUM, per_replica_disc_loss, axis=None
         )
         return disc_loss
 
     def fit(self, dataset, epochs, initial_epoch=0, path="folder", callbacks=None):
         if callbacks is None:
             callbacks = []
+        steps_per_epoch = int(dataset.cardinality)
         for callback in callbacks:
             callback.set_model(self)
+            callback.set_params({"epochs": epochs, "steps": steps_per_epoch})
             callback.on_train_begin()
 
         for epoch in range(initial_epoch, epochs):
+            print(f"Epoch {epoch + 1}/{epochs}")
+            progress_bar = tf.keras.utils.Progbar(steps_per_epoch)
+            gen_loss_metric = tf.keras.metrics.Mean()
+            disc_loss_metric = tf.keras.metrics.Mean()
             for callback in callbacks:
                 callback.on_epoch_begin(epoch)
 
             for step, batch in enumerate(dataset):
                 images, labels = batch
-                noise = np.random.normal(0, 1, (self.batch_size, self.latent_dim[0]))
                 for _ in range(N_DISC_STEP):
                     disc_loss = self.dist_discriminator_step(images, labels)
 
                 for _ in range(N_GEN_STEP):
-                    gen_loss = self.dist_generator_step(noise, labels)
-                print(
-                    f"\rEpoch [{step}/{epoch + 1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}",
-                    end="",
+                    gen_loss = self.dist_generator_step(labels)
+                self.ema.update()
+                gen_loss_metric.update_state(gen_loss)
+                disc_loss_metric.update_state(disc_loss)
+                progress_bar.update(
+                    step + 1,
+                    values=[
+                        ("gen_loss", float(gen_loss)),
+                        ("disc_loss", float(disc_loss)),
+                    ],
                 )
-                sys.stdout.flush()
                 logs = {"gen_loss": gen_loss, "disc_loss": disc_loss}
                 for callback in callbacks:
                     callback.on_train_batch_end(step, logs)
 
-            print()
-            logs = {"gen_loss": gen_loss.numpy(), "disc_loss": disc_loss.numpy()}
+            logs = {
+                "gen_loss": gen_loss_metric.result().numpy(),
+                "disc_loss": disc_loss_metric.result().numpy(),
+            }
             for callback in callbacks:
                 callback.on_epoch_end(epoch, logs)
 

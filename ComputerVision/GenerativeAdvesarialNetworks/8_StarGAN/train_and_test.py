@@ -12,6 +12,8 @@ import tensorflow as tf
 from config import *
 from dataset import *
 from model import *
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from training_utils import FullCheckpointCallback, build_full_checkpoint
 
 MODEL_NAME = "StarGAN"
 
@@ -31,9 +33,9 @@ def setup_gpu(gpu_id):
 
 
 def build_strategy():
-    return tf.distribute.MirroredStrategy(
-        cross_device_ops=tf.distribute.NcclAllReduce()
-    )
+    if len(tf.config.get_visible_devices("GPU")) > 1:
+        return tf.distribute.MirroredStrategy(cross_device_ops=tf.distribute.NcclAllReduce())
+    return tf.distribute.MirroredStrategy()
 
 
 def get_weight_paths(log_dir):
@@ -60,14 +62,15 @@ def load_training_state(log_dir):
     return 0
 
 
-def load_weights_if_needed(model, log_dir, resume):
+def load_weights_if_needed(model, log_dir):
     gen_path, disc_path = get_weight_paths(log_dir)
-    if resume and os.path.exists(gen_path) and os.path.exists(disc_path):
+    if os.path.exists(gen_path) and os.path.exists(disc_path):
         model.generator.load_weights(gen_path)
         model.discriminator.load_weights(disc_path)
         print("Loaded existing weights")
-    elif resume:
-        print("No saved weights found, starting fresh")
+        return True
+    print("No saved weights found, starting fresh")
+    return False
 
 
 def setup_interrupt_handler(model, log_dir):
@@ -145,7 +148,10 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
             self.condition_spec.make_sample_labels(8),
             dtype=tf.float32
         )
-        translated = self.model_ref.generator((self.fixed_images, target_labels), training=False).numpy()
+        with self.model_ref.ema.average_weights():
+            translated = self.model_ref.generator(
+                (self.fixed_images, target_labels), training=False
+            ).numpy()
         real_images = ((self.fixed_images + 1.0) / 2.0).numpy()
         translated = (translated + 1.0) / 2.0
 
@@ -202,12 +208,20 @@ def main():
 
     log_dir = f"logs/{args.type}/{MODEL_NAME}"
     os.makedirs(log_dir, exist_ok=True)
+    checkpoint, manager = build_full_checkpoint(model, log_dir)
 
     start_epoch = 0
-    if args.resume:
-        load_weights_if_needed(model, log_dir, True)
+    if args.resume and manager.latest_checkpoint:
+        checkpoint.restore(manager.latest_checkpoint)
+        print(f"Restored full checkpoint: {manager.latest_checkpoint}")
+        weights_loaded = True
+    else:
+        weights_loaded = load_weights_if_needed(model, log_dir)
+    if args.resume and weights_loaded:
         start_epoch = load_training_state(log_dir)
         print(f"Resuming from epoch {start_epoch}")
+    elif weights_loaded:
+        print("Starting from epoch 0 with loaded weights")
 
     setup_interrupt_handler(model, log_dir)
     callbacks = [
@@ -215,17 +229,15 @@ def main():
         GANLogger(log_dir),
         WeightSaveCallback(model, log_dir),
         SampleImageCallback(model, log_dir, condition_spec, fixed_images),
+        FullCheckpointCallback(manager, SAVE_EVERY_N_EPOCHS),
     ]
 
-    try:
-        model.fit(
-            train_ds,
-            epochs=EPOCHS,
-            initial_epoch=start_epoch,
-            callbacks=callbacks,
-        )
-    finally:
-        dataset.cleanup_cache()
+    model.fit(
+        train_ds,
+        epochs=EPOCHS,
+        initial_epoch=start_epoch,
+        callbacks=callbacks,
+    )
 
 
 if __name__ == "__main__":

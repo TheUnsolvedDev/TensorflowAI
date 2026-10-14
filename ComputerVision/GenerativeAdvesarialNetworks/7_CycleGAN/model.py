@@ -1,8 +1,11 @@
+import os
 import sys
 
 import tensorflow as tf
 
 from config import *
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from training_utils import GeneratorEMA
 
 
 class InstanceNormalization(tf.keras.layers.Layer):
@@ -39,7 +42,8 @@ class CycleGAN(tf.keras.Model):
         self.strategy = strategy
         self.input_shape = input_shape
         self.batch_size = batch_size
-        self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
+        if batch_size % self.strategy.num_replicas_in_sync:
+            raise ValueError("Global batch size must be divisible by the replica count")
         self.lambda_cycle = LAMBDA_CYCLE
         self.lambda_identity = LAMBDA_IDENTITY
 
@@ -56,8 +60,21 @@ class CycleGAN(tf.keras.Model):
                 DISCRIMINATOR_LEARNING_RATE, beta_1=0.5, beta_2=0.999
             )
 
-            self.adv_loss_fn = tf.keras.losses.MeanSquaredError()
-            self.cycle_loss_fn = tf.keras.losses.MeanAbsoluteError()
+            self.adv_loss_fn = tf.keras.losses.MeanSquaredError(reduction="none")
+            self.cycle_loss_fn = tf.keras.losses.MeanAbsoluteError(reduction="none")
+            generator_variables = (
+                self.generator_a2b.trainable_variables
+                + self.generator_b2a.trainable_variables
+            )
+            discriminator_variables = (
+                self.discriminator_a.trainable_variables
+                + self.discriminator_b.trainable_variables
+            )
+            self.generator_optimizer.build(generator_variables)
+            self.discriminator_optimizer.build(discriminator_variables)
+            self.ema = GeneratorEMA(
+                [self.generator_a2b, self.generator_b2a], EMA_DECAY
+            )
 
         tf.keras.utils.plot_model(
             self.generator_a2b, to_file="generator_a2b.png", show_shapes=True, expand_nested=True
@@ -133,7 +150,10 @@ class CycleGAN(tf.keras.Model):
 
     def adversarial_loss(self, pred, is_real):
         target = tf.ones_like(pred) if is_real else tf.zeros_like(pred)
-        return self.adv_loss_fn(target, pred)
+        return tf.reduce_mean(self.adv_loss_fn(target, pred))
+
+    def reconstruction_loss(self, real, reconstructed):
+        return tf.reduce_mean(self.cycle_loss_fn(real, reconstructed))
 
     @tf.function
     def train_generator_step(self, real_a, real_b):
@@ -151,10 +171,12 @@ class CycleGAN(tf.keras.Model):
             disc_fake_b = self.discriminator_b(fake_b, training=True)
 
             adv_loss = self.adversarial_loss(disc_fake_a, True) + self.adversarial_loss(disc_fake_b, True)
-            cycle_loss = self.cycle_loss_fn(real_a, cycled_a) + self.cycle_loss_fn(real_b, cycled_b)
-            identity_loss = self.cycle_loss_fn(real_a, same_a) + self.cycle_loss_fn(real_b, same_b)
+            cycle_loss = self.reconstruction_loss(real_a, cycled_a) + self.reconstruction_loss(real_b, cycled_b)
+            identity_loss = self.reconstruction_loss(real_a, same_a) + self.reconstruction_loss(real_b, same_b)
 
-            total_loss = adv_loss + self.lambda_cycle * cycle_loss + self.lambda_identity * identity_loss
+            total_loss = (
+                adv_loss + self.lambda_cycle * cycle_loss + self.lambda_identity * identity_loss
+            ) / self.strategy.num_replicas_in_sync
 
         variables = self.generator_a2b.trainable_variables + self.generator_b2a.trainable_variables
         grads = tape.gradient(total_loss, variables)
@@ -174,7 +196,7 @@ class CycleGAN(tf.keras.Model):
 
             loss_a = self.adversarial_loss(disc_real_a, True) + self.adversarial_loss(disc_fake_a, False)
             loss_b = self.adversarial_loss(disc_real_b, True) + self.adversarial_loss(disc_fake_b, False)
-            total_loss = 0.5 * (loss_a + loss_b)
+            total_loss = 0.5 * (loss_a + loss_b) / self.strategy.num_replicas_in_sync
 
         variables = self.discriminator_a.trainable_variables + self.discriminator_b.trainable_variables
         grads = tape.gradient(total_loss, variables)
@@ -184,41 +206,54 @@ class CycleGAN(tf.keras.Model):
     @tf.function
     def dist_generator_step(self, real_a, real_b):
         per_replica_loss = self.strategy.run(self.train_generator_step, args=(real_a, real_b))
-        return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica_loss, axis=None)
+        return self.strategy.reduce(tf.distribute.ReduceOp.SUM, per_replica_loss, axis=None)
 
     @tf.function
     def dist_discriminator_step(self, real_a, real_b):
         per_replica_loss = self.strategy.run(self.train_discriminator_step, args=(real_a, real_b))
-        return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica_loss, axis=None)
+        return self.strategy.reduce(tf.distribute.ReduceOp.SUM, per_replica_loss, axis=None)
 
     def fit(self, dataset, epochs, initial_epoch=0, callbacks=None):
         if callbacks is None:
             callbacks = []
+        steps_per_epoch = int(dataset.cardinality)
 
         for callback in callbacks:
             callback.set_model(self)
+            callback.set_params({"epochs": epochs, "steps": steps_per_epoch})
             callback.on_train_begin()
 
         for epoch in range(initial_epoch, epochs):
+            print(f"Epoch {epoch + 1}/{epochs}")
+            progress_bar = tf.keras.utils.Progbar(steps_per_epoch)
+            gen_loss_metric = tf.keras.metrics.Mean()
+            disc_loss_metric = tf.keras.metrics.Mean()
             for callback in callbacks:
                 callback.on_epoch_begin(epoch)
 
             for step, (real_a, real_b) in enumerate(dataset):
                 disc_loss = self.dist_discriminator_step(real_a, real_b)
                 gen_loss = self.dist_generator_step(real_a, real_b)
+                self.ema.update()
+                gen_loss_metric.update_state(gen_loss)
+                disc_loss_metric.update_state(disc_loss)
 
-                print(
-                    f"\rEpoch [{step}/{epoch + 1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}",
-                    end="",
+                progress_bar.update(
+                    step + 1,
+                    values=[
+                        ("gen_loss", float(gen_loss)),
+                        ("disc_loss", float(disc_loss)),
+                    ],
                 )
-                sys.stdout.flush()
 
                 logs = {"gen_loss": gen_loss, "disc_loss": disc_loss}
                 for callback in callbacks:
                     callback.on_train_batch_end(step, logs)
 
-            print()
-            logs = {"gen_loss": gen_loss.numpy(), "disc_loss": disc_loss.numpy()}
+            logs = {
+                "gen_loss": gen_loss_metric.result().numpy(),
+                "disc_loss": disc_loss_metric.result().numpy(),
+            }
             for callback in callbacks:
                 callback.on_epoch_end(epoch, logs)
 

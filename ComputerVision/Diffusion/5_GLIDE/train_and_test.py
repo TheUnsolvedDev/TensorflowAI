@@ -133,13 +133,19 @@ def setup_interrupt_handler(model, log_dir, stage):
 
 
 def save_rows_grid(rows, filename):
-    rendered_rows = []
+    rendered_images = []
     for row in rows:
         images = np.clip((row + 1.0) / 2.0, 0.0, 1.0)
         if images.shape[-1] == 1:
             images = np.repeat(images, 3, axis=-1)
-        rendered_rows.append(np.concatenate(list(images), axis=1))
-    grid = np.concatenate(rendered_rows, axis=0)
+        rendered_images.extend(images)
+    columns = 4
+    grid_rows = [rendered_images[start:start + columns] for start in range(0, len(rendered_images), columns)]
+    width = max(len(row) for row in grid_rows)
+    if len(grid_rows[-1]) < width:
+        blank = np.zeros_like(rendered_images[0])
+        grid_rows[-1].extend([blank] * (width - len(grid_rows[-1])))
+    grid = np.concatenate([np.concatenate(row, axis=1) for row in grid_rows], axis=0)
     image_tensor = tf.cast(tf.clip_by_value(grid * 255.0, 0.0, 255.0), tf.uint8)
     tf.io.write_file(filename, tf.io.encode_png(image_tensor))
 

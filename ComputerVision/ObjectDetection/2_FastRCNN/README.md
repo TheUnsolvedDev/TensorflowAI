@@ -1,23 +1,53 @@
 # Fast R-CNN
 
-The default detector contract is 256x256 with conservative global batch size 8. Set `DETECTOR_BATCH_SIZE=N` only after measuring a real training step; it must divide evenly across visible replicas. COCO 2017, Pascal VOC 2012, and ImageNet CLS-LOC run as separate detectors with their own background-inclusive class heads (81, 21, and 1001 classes), caches, checkpoints, logs, and inference outputs. VOC uses only its labelled `train.txt` and `val.txt` splits; its unlabeled test split is never fitted. Flickr30k is not a detection option here because the local checkout provides captions rather than boxes.
+This implementation trains its backbone from scratch. Detector images are resized to 512x512 and the stride-16 backbone produces a 32x32 feature map. The default global batch is 4; set `DETECTOR_BATCH_SIZE=N` only after measuring a real training step, and keep it divisible by the number of visible replicas.
 
-Detector training defaults to 100 epochs (`--epochs N` overrides it); the optional classifier keeps its 20-epoch default. `train.sh` runs `coco`, then `voc`, then `imagenet` sequentially. Set `DETECTORS="voc"` or run `python train.py --detector voc` for a targeted run. GPU memory growth is configured before automatic NCCL `MirroredStrategy` selection for two or more GPUs, with one-GPU/CPU fallback and replica batch reporting. Default training loads a compatible dataset/task checkpoint but starts the requested epoch budget at epoch 0; with no checkpoint, it starts from fresh weights. Pass `--continue` to require both the matching checkpoint and its `training_state.json`, then continue toward `--epochs`. `--resume` is retained as an alias for `--continue`. Pass `--reset` to remove the selected dataset/task log artifacts and train from newly initialized weights; it cannot be combined with `--continue`. Startup always reports the selected mode plus exact checkpoint/state paths. Every detector epoch writes `logs/<dataset>/FastRCNN/inspection/epoch_###.png`: a fixed 4x4 grid with red `GT <class>` boxes and green `<class>: <probability>` predictions. Classifier-only runs do not create these grids. `--full-reports` enables TensorBoard, model diagrams, and fixed-subset COCO metrics for COCO only.
+COCO 2017, Pascal VOC 2012, and ImageNet CLS-LOC have separate class heads, proposal caches, checkpoints, logs, and inference outputs. VOC uses its labelled `train.txt` and `val.txt` splits.
 
-# Persistent full proposal cache
+## Required selective search
 
-By default detector training builds or reuses complete, split-isolated proposal arrays under `cache/FastRCNN/<dataset>/<split>/<fingerprint>/` for the best steady-state throughput. The cache holds proposals only—not decoded JPEGs—and its full arrays are pinned to host memory so GPU 0 does not retain the complete proposal split; `tf.data` streams image decode/resize/augmentation and sends only per-replica batches to the GPUs.
-
-Use the normal workflow:
+Fast R-CNN requires the OpenCV contrib build. The program stops if selective search is missing instead of silently training with low-recall grid proposals.
 
 ```bash
-python train.py --detector coco --prepare-cache
-python train.py --detector coco --epochs 100
-python train.py --detector coco --continue --epochs 100
-python train.py --detector coco --reset --epochs 100
-DETECTORS="voc" ./train.sh
+/home/shuvrajeet/miniconda3/envs/research/bin/python -m pip uninstall opencv-python
+/home/shuvrajeet/miniconda3/envs/research/bin/python -m pip install opencv-contrib-python==4.13.0.92
 ```
 
-`config.py` is the default source for `CACHE_ENABLED`, `CACHE_REBUILD`, and `CACHE_MAX_SAMPLES`; `train.py` passes those values explicitly to each dataset/cache instance. The startup `[cache config]` line reports the effective values. `--rebuild-cache`, `--no-cache`, `--cache-max-samples N`, and `--cache-workers N` override them only for that invocation. The displayed `records=` value is the number of annotated images in the split, not `CACHE_MAX_SAMPLES`. `--cache-max-samples N` must cover the complete selected split; `0` selects the same lazy fallback.
+Measure proposal recall before building a complete cache. On the local validation check, fast mode reached 0.77 COCO recall@0.5 and finished the complete cache at 3.2 images/second; quality mode reached 0.83 but was much slower. Fast mode and 4,000 proposal slots are therefore the practical defaults. Set `FAST_RCNN_PROPOSAL_MODE=quality` only when the added recall is worth rebuilding the cache.
 
-Cold preparation uses a bounded process pool with four workers by default. It keeps at most two tasks per worker in flight; workers only decode images and generate proposals, while the parent alone updates the cache arrays, manifest, and atomic promotion. Set `--cache-workers 1` for serial preparation. Startup reports worker count, images per second, ETA, and any failing sample; epoch progress reports steps per second. Worker count does not affect cache fingerprints, so a partially built cache resumes with any worker count.
+```bash
+cd /home/shuvrajeet/Documents/TensorflowAI/ComputerVision/ObjectDetection/2_FastRCNN
+PYTHON=/home/shuvrajeet/miniconda3/envs/research/bin/python
+$PYTHON train.py --detector coco --proposal-report
+$PYTHON train.py --detector voc --proposal-report
+FAST_RCNN_PROPOSAL_MODE=quality $PYTHON train.py --detector coco --proposal-report
+```
+
+The proposal mode, OpenCV version, input size, and sampling settings are part of the cache fingerprint. Old caches remain untouched and are not reused after these changes.
+
+## Training and evaluation
+
+Training uses 64 ROIs per image, at most 25% foreground, hard background proposals from the 0.1-0.5 IoU interval, and exact ground-truth boxes only in the training sampler. Validation and inference use genuine selective-search proposals. Horizontal flips transform the image, ROIs, and regression targets together.
+
+Run independent COCO and VOC training jobs sequentially with one command:
+
+```bash
+sh run.sh --reset --epochs 100
+```
+
+Arguments are forwarded to both runs. If the COCO run fails, the VOC run is not started.
+
+```bash
+$PYTHON train.py --detector coco --prepare-cache
+$PYTHON train.py --detector coco --reset --epochs 100
+$PYTHON train.py --detector coco --continue --epochs 100
+$PYTHON train.py --detector coco --evaluate
+
+$PYTHON train.py --detector voc --prepare-cache
+$PYTHON train.py --detector voc --reset --epochs 100
+$PYTHON train.py --detector voc --evaluate
+```
+
+Use `--reset` for the first run with the 512x512 stride-16 architecture. Detector training evaluates a fixed 200-image validation subset every epoch and keeps one best checkpoint: COCO uses subset mAP and VOC/ImageNet use AP50. Inference scores each foreground class independently, applies class-wise NMS, and returns at most 100 detections per image.
+
+Persistent proposal caches live under `cache/FastRCNN/<dataset>/<split>/<fingerprint>/`. Use `--rebuild-cache` only to replace the currently selected generation, `--no-cache` for lazy proposal generation, and `--cache-workers 1` for serial preparation. `--full-reports` adds TensorBoard and model diagrams; validation metrics and 4x4 inspection grids are always produced for detectors.

@@ -1,9 +1,12 @@
+import os
 import sys
 
 import numpy as np
 import tensorflow as tf
 
 from config import *
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from training_utils import GeneratorEMA
 
 
 class GAN(tf.keras.Model):
@@ -13,8 +16,12 @@ class GAN(tf.keras.Model):
         self.input_shape = input_shape
         self.latent_dim = latent_dim
         self.batch_size = batch_size
-        self.loss_fn = tf.keras.losses.BinaryCrossentropy(from_logits=True)
-        self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
+        if batch_size % self.strategy.num_replicas_in_sync:
+            raise ValueError("Global batch size must be divisible by the replica count")
+        self.local_batch_size = batch_size // self.strategy.num_replicas_in_sync
+        self.loss_fn = tf.keras.losses.BinaryCrossentropy(
+            from_logits=True, reduction=tf.keras.losses.Reduction.NONE
+        )
 
         with self.strategy.scope():
             self.generator = self.build_generator()
@@ -26,6 +33,9 @@ class GAN(tf.keras.Model):
             self.discriminator_optimizer = tf.keras.optimizers.Adam(
                 DISCRIMINATOR_LEARNING_RATE, beta_1=0.5, beta_2=0.999
             )
+            self.generator_optimizer.build(self.generator.trainable_variables)
+            self.discriminator_optimizer.build(self.discriminator.trainable_variables)
+            self.ema = GeneratorEMA([self.generator], EMA_DECAY)
 
         self.generator.build(input_shape=(None, latent_dim[0]))
         self.discriminator.build(input_shape=(None, *input_shape))
@@ -83,12 +93,18 @@ class GAN(tf.keras.Model):
         outputs = tf.keras.layers.Dense(1)(x)
         return tf.keras.Model(inputs, outputs, name="discriminator")
 
+    def _average_loss(self, labels, predictions):
+        return tf.nn.compute_average_loss(
+            self.loss_fn(labels, predictions), global_batch_size=self.batch_size
+        )
+
     @tf.function
-    def train_generator_step(self, noise):
+    def train_generator_step(self):
+        noise = tf.random.normal([self.local_batch_size, self.latent_dim[0]])
         with tf.GradientTape() as gen_tape:
             generated_images = self.generator(noise, training=True)
             fake_output = self.discriminator(generated_images, training=True)
-            gen_loss = self.loss_fn(tf.ones_like(fake_output), fake_output)
+            gen_loss = self._average_loss(tf.ones_like(fake_output), fake_output)
 
         gradients_of_generator = gen_tape.gradient(
             gen_loss, self.generator.trainable_variables
@@ -99,7 +115,8 @@ class GAN(tf.keras.Model):
         return gen_loss
 
     @tf.function
-    def train_discriminator_step(self, noise, real_images):
+    def train_discriminator_step(self, real_images):
+        noise = tf.random.normal([tf.shape(real_images)[0], self.latent_dim[0]])
         with tf.GradientTape() as disc_tape:
             generated_images = self.generator(noise, training=True)
             real_images += tf.random.normal(tf.shape(real_images), stddev=0.05)
@@ -107,8 +124,8 @@ class GAN(tf.keras.Model):
             real_output = self.discriminator(real_images, training=True)
             fake_output = self.discriminator(generated_images, training=True)
             disc_loss = (
-                self.loss_fn(tf.ones_like(real_output) * 0.9, real_output)
-                + self.loss_fn(tf.zeros_like(fake_output), fake_output)
+                self._average_loss(tf.ones_like(real_output) * 0.9, real_output)
+                + self._average_loss(tf.zeros_like(fake_output), fake_output)
             )
 
         gradients_of_discriminator = disc_tape.gradient(
@@ -120,53 +137,64 @@ class GAN(tf.keras.Model):
         return disc_loss
 
     @tf.function
-    def dist_generator_step(self, noise):
-        per_replica_gen_loss = self.strategy.run(self.train_generator_step, args=(noise,))
+    def dist_generator_step(self):
+        per_replica_gen_loss = self.strategy.run(self.train_generator_step)
         gen_loss = self.strategy.reduce(
-            tf.distribute.ReduceOp.MEAN, per_replica_gen_loss, axis=None
+            tf.distribute.ReduceOp.SUM, per_replica_gen_loss, axis=None
         )
         return gen_loss
 
     @tf.function
-    def dist_discriminator_step(self, noise, real_images):
+    def dist_discriminator_step(self, real_images):
         per_replica_disc_loss = self.strategy.run(
-            self.train_discriminator_step, args=(noise, real_images)
+            self.train_discriminator_step, args=(real_images,)
         )
         disc_loss = self.strategy.reduce(
-            tf.distribute.ReduceOp.MEAN, per_replica_disc_loss, axis=None
+            tf.distribute.ReduceOp.SUM, per_replica_disc_loss, axis=None
         )
         return disc_loss
 
     def fit(self, dataset, epochs, initial_epoch=0, path="folder", callbacks=None):
         if callbacks is None:
             callbacks = []
+        steps_per_epoch = int(dataset.cardinality)
         for callback in callbacks:
             callback.set_model(self)
+            callback.set_params({"epochs": epochs, "steps": steps_per_epoch})
             callback.on_train_begin()
 
         for epoch in range(initial_epoch, epochs):
+            print(f"Epoch {epoch + 1}/{epochs}")
+            progress_bar = tf.keras.utils.Progbar(steps_per_epoch)
+            gen_loss_metric = tf.keras.metrics.Mean()
+            disc_loss_metric = tf.keras.metrics.Mean()
             for callback in callbacks:
                 callback.on_epoch_begin(epoch)
 
             for step, image_batch in enumerate(dataset):
-                noise = np.random.normal(0, 1, (self.batch_size, self.latent_dim[0]))
                 for _ in range(N_DISC_STEP):
-                    disc_loss = self.dist_discriminator_step(noise, image_batch)
+                    disc_loss = self.dist_discriminator_step(image_batch)
 
                 for _ in range(N_GEN_STEP):
-                    gen_loss = self.dist_generator_step(noise)
-                print(
-                    f"\rEpoch [{step}/{epoch + 1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}",
-                    end="",
+                    gen_loss = self.dist_generator_step()
+                self.ema.update()
+                gen_loss_metric.update_state(gen_loss)
+                disc_loss_metric.update_state(disc_loss)
+                progress_bar.update(
+                    step + 1,
+                    values=[
+                        ("gen_loss", float(gen_loss)),
+                        ("disc_loss", float(disc_loss)),
+                    ],
                 )
-                sys.stdout.flush()
                 logs = {"gen_loss": gen_loss, "disc_loss": disc_loss}
                 for callback in callbacks:
                     callback.on_train_batch_end(step, logs)
 
-            print()
-
-            logs = {"gen_loss": gen_loss.numpy(), "disc_loss": disc_loss.numpy()}
+            logs = {
+                "gen_loss": gen_loss_metric.result().numpy(),
+                "disc_loss": disc_loss_metric.result().numpy(),
+            }
             for callback in callbacks:
                 callback.on_epoch_end(epoch, logs)
 

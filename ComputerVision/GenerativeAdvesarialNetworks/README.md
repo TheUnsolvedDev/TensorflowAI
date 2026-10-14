@@ -1,6 +1,8 @@
 # Generative Adversarial Networks
 
-This directory contains a progression of GAN implementations in TensorFlow, starting from a simple fully connected GAN and moving toward more stable and expressive variants such as DCGAN, LSGAN, WGAN, WGAN-GP, and a conditional GAN.
+This directory contains a progression of 11 GAN implementations in TensorFlow,
+starting from a simple fully connected GAN and moving toward image synthesis,
+translation, super-resolution, and progressive variants.
 
 The folders are ordered as a learning path:
 
@@ -10,6 +12,11 @@ The folders are ordered as a learning path:
 4. `4_WassersteinGAN`
 5. `5_WassersteinGANGP`
 6. `6_ConditionalGAN`
+7. `7_CycleGAN`
+8. `8_StarGAN`
+9. `9_StyleGAN`
+10. `10_SRGAN`
+11. `11_ProgressiveGAN`
 
 ## Common structure
 
@@ -202,10 +209,32 @@ python train_and_test.py --gpu 0 --type cifar10
 python train_and_test.py --gpu 0 --type celeba
 ```
 
-Resume flags are not fully uniform:
+Every `run.sh` passes `--continue`, so an interrupted run resumes from its
+saved epoch and restores the full TensorFlow checkpoint, including optimizer
+state. Running `train_and_test.py` without `--continue` still loads compatible
+saved weights when present, but starts the epoch counter from zero. `--resume`
+is retained as an alias for `--continue`.
 
-- most unconditional folders use `--continue`
-- `6_ConditionalGAN` uses `--resume`
+Across all models, `BATCH_SIZE` is the global batch size and must be divisible
+by the number of replicas. Training uses replica-local batches, globally scaled
+losses, epoch-averaged loss reporting, TensorFlow/Keras progress bars, fixed
+preview inputs, and exponential-moving-average generator weights for saved
+samples. Dataset pipelines stream from their source and do not use a generated
+cache.
+
+## Convergence status notation
+
+Use these plain markers when recording real training results:
+
+- `Y`: the dataset completed training and generated outputs passed visual and
+  model-appropriate quality checks.
+- `N`: the completed run demonstrably collapsed or failed its quality checks.
+- `?`: incomplete, missing comparable metrics, or not yet verified.
+
+A successful compile, one-batch smoke test, finite loss, or completed epoch is
+not by itself convergence evidence. Keep a dataset at `?` until its fixed sample
+sequence and an appropriate metric (for example FID/KID, or PSNR/SSIM for
+SRGAN) have been reviewed.
 
 ## Outputs produced during training
 

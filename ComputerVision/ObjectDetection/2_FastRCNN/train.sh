@@ -2,7 +2,8 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PYTHON_BIN="${PYTHON_BIN:-python3}"
+DEFAULT_PYTHON="/home/shuvrajeet/miniconda3/envs/research/bin/python"
+PYTHON_BIN="${PYTHON_BIN:-$DEFAULT_PYTHON}"
 GPU="${GPU:--1}"
 CLASSIFIERS="${CLASSIFIERS:-}"
 DETECTORS="${DETECTORS:-coco voc imagenet}"

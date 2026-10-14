@@ -14,7 +14,7 @@ from rich.panel import Panel
 from rich.text import Text
 
 from config import *
-from dataset import Flickr30kDataset
+from dataset import CocoCaptionDataset
 from model import build_cnn, build_model, verify_captioner
 
 AUTOTUNE = tf.data.AUTOTUNE
@@ -63,6 +63,45 @@ def caption_image(model, image_path, vocabulary):
     return beam_search(next_logits, vocabulary, word_to_id)
 
 
+def save_attention_map(model, image_path, caption, vocabulary, output_path):
+    word_to_id = {word: index for index, word in enumerate(vocabulary)}
+    token_ids = [word_to_id["start"]] + [word_to_id.get(word, 1) for word in caption.split()]
+    model({
+        "image": load_image(image_path),
+        "tokens": tf.constant([token_ids]),
+    }, training=False)
+    layer_scores = [
+        model.get_layer(f"transformer_decoder_{number}").last_attention_scores
+        for number in range(1, TRANSFORMER_LAYERS + 1)
+    ]
+    scores = tf.reduce_mean(tf.stack(layer_scores), axis=(0, 2))[0]
+    plot_attention_map(image_path, caption.split() + ["end"], scores, output_path)
+
+
+def plot_attention_map(image_path, words, scores, output_path):
+    import matplotlib.pyplot as plt
+
+    image = tf.io.decode_image(
+        tf.io.read_file(image_path), channels=IMAGE_CHANNELS, expand_animations=False)
+    columns = min(4, len(words))
+    rows = math.ceil(len(words) / columns)
+    figure, axes = plt.subplots(rows, columns, figsize=(4 * columns, 4 * rows), squeeze=False)
+    for axis, word, score in zip(axes.flat, words, scores):
+        heat = tf.image.resize(
+            tf.reshape(score, (*IMAGE_GRID_SIZE, 1)), tf.shape(image)[:2]).numpy()[..., 0]
+        axis.imshow(image.numpy())
+        axis.imshow(heat, cmap="jet", alpha=0.45)
+        axis.set_title(word)
+        axis.axis("off")
+    for axis in axes.flat[len(words):]:
+        axis.axis("off")
+    figure.suptitle(" ".join(words[:-1]))
+    figure.tight_layout()
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    figure.savefig(output_path, dpi=150)
+    plt.close(figure)
+
+
 def beam_search(next_logits, vocabulary, word_to_id):
     start_id, end_id = word_to_id["start"], word_to_id["end"]
     beams = [([start_id], 0.0, False)]
@@ -98,7 +137,7 @@ def load_captioner(decoder, weights=None):
     with open(VOCABULARY_PATH, encoding="utf-8") as handle:
         vocabulary = json.load(handle)
     weights = weights or os.path.join(
-        CHECKPOINT_DIR, decoder, "best_resnet18_scratch.weights.h5")
+        CHECKPOINT_DIR, decoder, f"best_resnet18_scratch_v{VOCAB_SIZE}.weights.h5")
     if not os.path.isfile(weights):
         raise FileNotFoundError(f"No trained weights found at {weights}")
     model = build_model(len(vocabulary), decoder)
@@ -240,7 +279,10 @@ def run_pretraining(args, strategy):
                      os.path.join(LOG_DIR, args.decoder, "grids")):
             if os.path.isdir(path):
                 tf.io.gfile.rmtree(path)
-        for name in ("best_resnet18_scratch.weights.h5", "last_resnet18_scratch.weights.h5"):
+        for name in (
+                "best_resnet18_scratch.weights.h5", "last_resnet18_scratch.weights.h5",
+                f"best_resnet18_scratch_v{VOCAB_SIZE}.weights.h5",
+                f"last_resnet18_scratch_v{VOCAB_SIZE}.weights.h5"):
             path = os.path.join(CHECKPOINT_DIR, args.decoder, name)
             if os.path.isfile(path):
                 os.remove(path)
@@ -483,6 +525,8 @@ def main():
                         help="replace old runs and contrastively pretrain a new encoder")
     parser.add_argument("--test-only", action="store_true")
     parser.add_argument("--image", help="generate a caption instead of training")
+    parser.add_argument("--attention-map", action="store_true",
+                        help="save a word-by-word cross-attention overlay with --image")
     parser.add_argument("--weights", help="caption weights used with --image")
     start = parser.add_mutually_exclusive_group()
     start.add_argument("--scratch", action="store_true", help="ignore checkpoints and train from random weights")
@@ -501,7 +545,14 @@ def main():
             parser.error(f"Image not found: {args.image}")
         stage("Inference", f"Loading {args.decoder.upper()} caption model")
         model, vocabulary = load_captioner(args.decoder, args.weights)
-        print(caption_image(model, args.image, vocabulary))
+        caption = caption_image(model, args.image, vocabulary)
+        print(caption)
+        if args.attention_map:
+            output = os.path.join(
+                LOG_DIR, args.decoder,
+                f"attention_{os.path.splitext(os.path.basename(args.image))[0]}.png")
+            save_attention_map(model, args.image, caption, vocabulary, output)
+            print(f"Attention map: {output}")
         stage("Inference complete")
         return
 
@@ -550,14 +601,14 @@ def main():
     if BATCH_SIZE % strategy.num_replicas_in_sync:
         raise ValueError("BATCH_SIZE must be divisible by the number of replicas")
 
-    stage("Stage 2 - Vocabulary", "Loading or calculating Flickr30k vocabulary")
-    data = Flickr30kDataset()
+    stage("Stage 2 - Vocabulary", "Loading or calculating COCO 2017 vocabulary")
+    data = CocoCaptionDataset()
     data.prepare_vocabulary()
     stage("Stage 2 complete", f"Vocabulary size: {len(data.vocabulary)}")
     checkpoint = os.path.join(
-        CHECKPOINT_DIR, args.decoder, "best_resnet18_scratch.weights.h5")
+        CHECKPOINT_DIR, args.decoder, f"best_resnet18_scratch_v{VOCAB_SIZE}.weights.h5")
     last_checkpoint = os.path.join(
-        CHECKPOINT_DIR, args.decoder, "last_resnet18_scratch.weights.h5")
+        CHECKPOINT_DIR, args.decoder, f"last_resnet18_scratch_v{VOCAB_SIZE}.weights.h5")
     os.makedirs(os.path.dirname(checkpoint), exist_ok=True)
     os.makedirs(os.path.join(LOG_DIR, args.decoder), exist_ok=True)
 
@@ -618,7 +669,7 @@ def main():
 
     stage("Stage 5 - Data pipeline", "Building train and validation batches")
     train_data, validation_data = data.build(True), data.build(False)
-    stage("Stage 5 complete", "Flickr30k pipelines ready")
+    stage("Stage 5 complete", "COCO 2017 pipelines ready")
 
     history_path = os.path.join(LOG_DIR, args.decoder, "history.csv")
     initial_epoch = 0

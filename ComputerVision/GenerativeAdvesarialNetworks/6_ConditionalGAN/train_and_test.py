@@ -11,6 +11,8 @@ import sys
 from model import *
 from dataset import *
 from config import *
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from training_utils import FullCheckpointCallback, build_full_checkpoint
 
 
 # =========================
@@ -27,7 +29,14 @@ def setup_gpu(gpu_id):
         tf.config.set_visible_devices(gpus[gpu_id], 'GPU')
         print(f"Using GPU {gpu_id}")
     else:
-        print("Invalid GPU ID, using CPU")
+        tf.config.set_visible_devices([], "GPU")
+        print("Using CPU")
+
+
+def build_strategy():
+    if len(tf.config.get_visible_devices("GPU")) > 1:
+        return tf.distribute.MirroredStrategy(cross_device_ops=tf.distribute.NcclAllReduce())
+    return tf.distribute.MirroredStrategy()
 
 
 # =========================
@@ -57,13 +66,16 @@ def load_training_state(log_dir):
     return 0
 
 
-def load_weights_if_needed(model, log_dir, resume):
+def load_weights_if_needed(model, log_dir):
     gen_path, disc_path = get_weight_paths(log_dir)
 
-    if resume and os.path.exists(gen_path):
+    if os.path.exists(gen_path) and os.path.exists(disc_path):
         model.generator.load_weights(gen_path)
         model.discriminator.load_weights(disc_path)
         print("Loaded saved weights")
+        return True
+    print("No saved weights found, starting fresh")
+    return False
 
 
 def setup_interrupt_handler(model, log_dir):
@@ -134,7 +146,7 @@ class WeightSaveCallback(tf.keras.callbacks.Callback):
 class SampleImageCallback(tf.keras.callbacks.Callback):
     def __init__(self, model, log_dir, latent_dim, condition_spec):
         self.model_ref = model
-        self.fixed_noise = np.random.normal(0, 1, (8, latent_dim))
+        self.fixed_noise = np.random.default_rng(42).normal(0, 1, (16, latent_dim))
         self.latent_dim = latent_dim
         self.condition_spec = condition_spec
         self.sample_labels = self.condition_spec.make_sample_labels(16)
@@ -147,12 +159,12 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         if not should_run_periodic_callback(self, epoch, SAMPLE_EVERY_N_EPOCHS):
             return
 
-        random_noise = np.random.normal(0, 1, (8, self.latent_dim))
         self.noise = tf.convert_to_tensor(
-            np.concatenate([self.fixed_noise, random_noise], axis=0),
+            self.fixed_noise,
             dtype=tf.float32
         )
-        gen = self.model_ref.generator((self.noise, self.labels), training=False)
+        with self.model_ref.ema.average_weights():
+            gen = self.model_ref.generator((self.noise, self.labels), training=False)
         gen = ((gen + 1.0) / 2.0).numpy()
 
         fig, ax = plt.subplots(4, 4, figsize=(6, 6))
@@ -243,7 +255,8 @@ def save_final_grid(model, log_dir, latent_dim, condition_spec):
     sample_labels = condition_spec.make_sample_labels(16)
     labels = tf.convert_to_tensor(sample_labels, dtype=tf.float32)
 
-    gen = model.generator((noise, labels), training=False)
+    with model.ema.average_weights():
+        gen = model.generator((noise, labels), training=False)
     gen = ((gen + 1.0) / 2.0).numpy()
 
     fig, ax = plt.subplots(4, 4, figsize=(6, 6))
@@ -277,8 +290,7 @@ def main():
     dataset = Dataset()
     train_ds, ch, condition_spec = dataset.load_data(args.type)
 
-    strategy = tf.distribute.MirroredStrategy(
-        cross_device_ops=tf.distribute.NcclAllReduce())
+    strategy = build_strategy()
     # train_ds = train_ds
     train_ds = strategy.experimental_distribute_dataset(train_ds)
 
@@ -306,11 +318,20 @@ def main():
         )
         latent_dim = LATENT_DIM
 
+    checkpoint, manager = build_full_checkpoint(model, log_dir)
+
     start_epoch = 0
-    if args.resume:
-        load_weights_if_needed(model, log_dir, True)
+    if args.resume and manager.latest_checkpoint:
+        checkpoint.restore(manager.latest_checkpoint)
+        print(f"Restored full checkpoint: {manager.latest_checkpoint}")
+        weights_loaded = True
+    else:
+        weights_loaded = load_weights_if_needed(model, log_dir)
+    if args.resume and weights_loaded:
         start_epoch = load_training_state(log_dir)
         print(f"Resuming from epoch {start_epoch}")
+    elif weights_loaded:
+        print("Starting from epoch 0 with loaded weights")
 
     setup_interrupt_handler(model, log_dir)
 
@@ -323,20 +344,18 @@ def main():
             model.generator_optimizer,
             model.discriminator_optimizer
         ),
-        ModeCollapseCallback(latent_dim, condition_spec)
+        ModeCollapseCallback(latent_dim, condition_spec),
+        FullCheckpointCallback(manager, SAVE_EVERY_N_EPOCHS),
     ]
 
-    try:
-        model.fit(
-            train_ds,
-            epochs=EPOCHS,
-            initial_epoch=start_epoch,
-            path=f"{args.type}/CondGAN",
-            callbacks=callbacks
-        )
-        save_final_grid(model, log_dir, latent_dim, condition_spec)
-    finally:
-        dataset.cleanup_cache()
+    model.fit(
+        train_ds,
+        epochs=EPOCHS,
+        initial_epoch=start_epoch,
+        path=f"{args.type}/CondGAN",
+        callbacks=callbacks
+    )
+    save_final_grid(model, log_dir, latent_dim, condition_spec)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,9 @@
 import tensorflow as tf
+import os
 import sys
-import numpy as np
 from config import *
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from training_utils import GeneratorEMA
 
 class MinibatchDiscrimination(tf.keras.layers.Layer):
     def __init__(self, num_kernels=100, kernel_dim=5):
@@ -33,7 +35,9 @@ class WGAN(tf.keras.Model):
         self.latent_dim = latent_dim
         self.batch_size = batch_size
         # self.loss_fn = tf.keras.losses.MeanSquaredError()
-        self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
+        if batch_size % self.strategy.num_replicas_in_sync:
+            raise ValueError("Global batch size must be divisible by the replica count")
+        self.local_batch_size = batch_size // self.strategy.num_replicas_in_sync
         self.factor = 2 if self.input_shape[0] >= 64 else 1
         with self.strategy.scope():
             self.generator = self.build_generator()
@@ -43,6 +47,9 @@ class WGAN(tf.keras.Model):
                 GENERATOR_LEARNING_RATE)
             self.discriminator_optimizer = tf.keras.optimizers.RMSprop(
                 DISCRIMINATOR_LEARNING_RATE)
+            self.generator_optimizer.build(self.generator.trainable_variables)
+            self.discriminator_optimizer.build(self.discriminator.trainable_variables)
+            self.ema = GeneratorEMA([self.generator], EMA_DECAY)
 
         self.generator.build(input_shape=(None, latent_dim[0]))
         self.discriminator.build(input_shape=(None, *input_shape))
@@ -88,28 +95,25 @@ class WGAN(tf.keras.Model):
         if self.input_shape[0] >= 64:
             x = self.res_block_up(x, 64 * self.factor)
 
-        out = tf.keras.layers.Conv2DTranspose(
-            channels, 4, strides=2, padding='same',
-            use_bias=False, activation='tanh')(x)
+        x = tf.keras.layers.UpSampling2D(interpolation="nearest")(x)
+        out = tf.keras.layers.Conv2D(
+            channels, 3, padding="same", use_bias=False, activation="tanh"
+        )(x)
 
         return tf.keras.Model(z, out, name="generator")
     
-    def res_block_down(self, x, filters):
-        shortcut = self.sn_conv(filters, 1, strides=2)(x)
+    def critic_block(self, x, filters):
         out = self.sn_conv(filters, 4, strides=2)(x)
         out = tf.keras.layers.LeakyReLU(0.2)(out)
-        out = self.sn_conv(filters, 3)(out)
-        out = tf.keras.layers.LeakyReLU(0.2)(out)
-        out = tf.keras.layers.Add()([shortcut, out])
         return out
 
     def build_discriminator(self):
         inp = tf.keras.layers.Input(shape=self.input_shape)
 
-        x = self.res_block_down(inp, 32 * self.factor)
-        x = self.res_block_down(x, 64 * self.factor)
-        x = self.res_block_down(x, 64 * self.factor)
-        x = self.res_block_down(x, 128 * self.factor)
+        x = self.critic_block(inp, 32 * self.factor)
+        x = self.critic_block(x, 64 * self.factor)
+        x = self.critic_block(x, 64 * self.factor)
+        x = self.critic_block(x, 128 * self.factor)
 
         x = tf.keras.layers.GlobalAveragePooling2D()(x)
         # x = MinibatchDiscrimination(num_kernels=32, kernel_dim=4)(x)
@@ -119,71 +123,90 @@ class WGAN(tf.keras.Model):
     
     
     @tf.function
-    def train_generator_step(self, noise):
+    def train_generator_step(self):
+        noise = tf.random.normal([self.local_batch_size, self.latent_dim[0]])
         with tf.GradientTape() as tape:
             fake_images = self.generator(noise, training=True)
             fake_out = self.discriminator(fake_images, training=True)
-            loss = -tf.reduce_mean(fake_out)
+            loss = -tf.reduce_mean(fake_out) / self.strategy.num_replicas_in_sync
         grads = tape.gradient(loss, self.generator.trainable_variables)
         self.generator_optimizer.apply_gradients(zip(grads, self.generator.trainable_variables))
         return loss
     
     @tf.function
-    def train_discriminator_step(self, noise, real_images):
+    def train_discriminator_step(self, real_images):
+        noise = tf.random.normal([tf.shape(real_images)[0], self.latent_dim[0]])
         # real_images+= tf.random.normal(tf.shape(real_images), stddev=0.05)
 
         with tf.GradientTape() as tape:
-            fake_images = self.generator(noise, training=True)
+            # Critic-only updates must not alter the generator BatchNorm state.
+            fake_images = tf.stop_gradient(
+                self.generator(noise, training=False)
+            )
             # fake_images += tf.random.normal(tf.shape(fake_images), stddev=0.05)
             real_out = self.discriminator(real_images, training=True)
             fake_out = self.discriminator(fake_images, training=True)
 
-            loss = tf.reduce_mean(fake_out) - tf.reduce_mean(real_out)
+            loss = (
+                tf.reduce_mean(fake_out) - tf.reduce_mean(real_out)
+            ) / self.strategy.num_replicas_in_sync
         grads = tape.gradient(loss, self.discriminator.trainable_variables)
         self.discriminator_optimizer.apply_gradients(zip(grads, self.discriminator.trainable_variables))
         for var in self.discriminator.trainable_variables:
-            var.assign(tf.clip_by_value(var, -0.005, 0.005))
+            var.assign(tf.clip_by_value(
+                var, -WEIGHT_CLIP_VALUE, WEIGHT_CLIP_VALUE
+            ))
         return loss
     
     @tf.function
-    def dist_generator_step(self, noise):
-        per_replica_gen_loss = self.strategy.run(
-            self.train_generator_step, args=(noise,))
+    def dist_generator_step(self):
+        per_replica_gen_loss = self.strategy.run(self.train_generator_step)
         gen_loss = self.strategy.reduce(
-            tf.distribute.ReduceOp.MEAN, per_replica_gen_loss, axis=None)
+            tf.distribute.ReduceOp.SUM, per_replica_gen_loss, axis=None)
         return gen_loss
 
     @tf.function
-    def dist_discriminator_step(self, noise, real_images):
+    def dist_discriminator_step(self, real_images):
         per_replica_disc_loss = self.strategy.run(
-            self.train_discriminator_step, args=(noise, real_images))
+            self.train_discriminator_step, args=(real_images,))
         disc_loss = self.strategy.reduce(
-            tf.distribute.ReduceOp.MEAN, per_replica_disc_loss, axis=None)
+            tf.distribute.ReduceOp.SUM, per_replica_disc_loss, axis=None)
         return disc_loss
     
 
     def fit(self, dataset, epochs, initial_epoch=0, path='folder', callbacks=None):
         if callbacks is None:
             callbacks = []
+        steps_per_epoch = int(dataset.cardinality)
         for callback in callbacks:
             callback.set_model(self)
+            callback.set_params({"epochs": epochs, "steps": steps_per_epoch})
             callback.on_train_begin()
 
         for epoch in range(initial_epoch, epochs):
+            print(f"Epoch {epoch + 1}/{epochs}")
+            progress_bar = tf.keras.utils.Progbar(steps_per_epoch)
+            gen_loss_metric = tf.keras.metrics.Mean()
+            disc_loss_metric = tf.keras.metrics.Mean()
             for callback in callbacks:
                 callback.on_epoch_begin(epoch)
 
             for step, image_batch in enumerate(dataset):
                 for _ in range(N_DISC_STEP):
-                    noise = np.random.normal(0, 1, (self.batch_size, self.latent_dim[0]))
-                    disc_loss = self.dist_discriminator_step(noise, image_batch)
+                    disc_loss = self.dist_discriminator_step(image_batch)
 
                 for _ in range(N_GEN_STEP):
-                    noise = np.random.normal(0, 1, (self.batch_size, self.latent_dim[0]))
-                    gen_loss = self.dist_generator_step(noise)
-                print(
-                    f'\rEpoch [{step}/{epoch+1}], Generator Loss: {gen_loss:.4f}, Discriminator Loss: {disc_loss:.4f}', end='')
-                sys.stdout.flush()
+                    gen_loss = self.dist_generator_step()
+                self.ema.update()
+                gen_loss_metric.update_state(gen_loss)
+                disc_loss_metric.update_state(disc_loss)
+                progress_bar.update(
+                    step + 1,
+                    values=[
+                        ("gen_loss", float(gen_loss)),
+                        ("disc_loss", float(disc_loss)),
+                    ],
+                )
                 logs = {
                     "gen_loss": gen_loss,
                     "disc_loss": disc_loss
@@ -191,8 +214,10 @@ class WGAN(tf.keras.Model):
                 for callback in callbacks:
                     callback.on_train_batch_end(step, logs)
 
-            print()
-            logs = {"gen_loss": gen_loss.numpy(), "disc_loss": disc_loss.numpy()}
+            logs = {
+                "gen_loss": gen_loss_metric.result().numpy(),
+                "disc_loss": disc_loss_metric.result().numpy(),
+            }
             for callback in callbacks:
                 callback.on_epoch_end(epoch, logs)
 

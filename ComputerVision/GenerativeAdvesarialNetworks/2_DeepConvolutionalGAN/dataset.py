@@ -1,6 +1,4 @@
 import os
-import shutil
-import tempfile
 
 import numpy as np
 import silence_tensorflow.auto
@@ -26,11 +24,6 @@ class Dataset:
 
         self.batch_size = BATCH_SIZE
         self.img_shape = IMAGE_SIZE
-        self.cache_root = os.path.join(
-            tempfile.gettempdir(),
-            "tensorflowai_gan_cache",
-            os.path.basename(os.path.dirname(__file__)),
-        )
         self.train_options = tf.data.Options()
         self.train_options.experimental_deterministic = not ENABLE_DATASET_NONDETERMINISM
         self._builtin_datasets = {}
@@ -72,15 +65,6 @@ class Dataset:
         image = tf.cast(image, tf.float32)
         return (image - 127.5) / 127.5
 
-    def _cache_path(self, dataset_type):
-        target_h, target_w = self._target_shape(dataset_type)
-        cache_dir = os.path.join(self.cache_root, dataset_type)
-        os.makedirs(cache_dir, exist_ok=True)
-        return os.path.join(cache_dir, f"images_{target_h}x{target_w}")
-
-    def cleanup_cache(self):
-        shutil.rmtree(self.cache_root, ignore_errors=True)
-
     def build_dataset(self, images, decode=False, dataset_type="cifar10", shuffle=True):
         ds = tf.data.Dataset.from_tensor_slices(images)
         ds = ds.map(
@@ -92,12 +76,6 @@ class Dataset:
             num_parallel_calls=AUTOTUNE,
         )
 
-        cache_mode = DECODE_CACHE_MODE if decode else ARRAY_CACHE_MODE
-        if cache_mode == "disk":
-            ds = ds.cache(self._cache_path(dataset_type))
-        elif cache_mode == "memory":
-            ds = ds.cache()
-
         if shuffle:
             ds = ds.shuffle(
                 SHUFFLE_BUFFER_SIZE,
@@ -105,7 +83,7 @@ class Dataset:
             )
             ds = ds.with_options(self.train_options)
 
-        ds = ds.batch(self.batch_size)
+        ds = ds.batch(self.batch_size, drop_remainder=shuffle)
         return ds.prefetch(AUTOTUNE)
 
     def _prepare_builtin_images(self, dataset_type):

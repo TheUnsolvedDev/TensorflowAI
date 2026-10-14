@@ -1,7 +1,7 @@
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATASET_DIR = "/home/shuvrajeet/Documents/Dataset/flickr30k"
+DATASET_DIR = "/home/shuvrajeet/Documents/Dataset/coco"
 COCO_DIR = "/home/shuvrajeet/Documents/Dataset/coco"
 
 # Data
@@ -9,7 +9,8 @@ IMAGE_SIZE = (224, 224)
 IMAGE_CHANNELS = 3
 PIXEL_MAX_VALUE = 255.0
 BATCH_SIZE = 64
-VOCAB_SIZE = 10000
+VOCAB_SIZE = 10305
+MIN_TOKEN_FREQUENCY = 5
 MAX_LENGTH = 40
 VALIDATION_SPLIT = 0.1
 SEED = 42
@@ -84,6 +85,8 @@ MIN_GPUS = 2
 CHECKPOINT_DIR = os.path.join(BASE_DIR, "checkpoints")
 LOG_DIR = os.path.join(BASE_DIR, "logs")
 VOCABULARY_PATH = os.path.join(BASE_DIR, "vocabulary.json")
+VOCABULARY_STATS_PATH = os.path.join(LOG_DIR, "vocabulary_statistics.json")
+VOCABULARY_HISTOGRAM_PATH = os.path.join(LOG_DIR, "vocabulary_histogram.png")
 PRETRAINED_CNN_PATH = os.path.join(CHECKPOINT_DIR, "pretrain", "resnet18_encoder.weights.h5")
 PRETRAIN_COMPLETE_PATH = os.path.join(CHECKPOINT_DIR, "pretrain", ".complete")
 CONTRASTIVE_VOCABULARY_PATH = os.path.join(

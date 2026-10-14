@@ -9,32 +9,40 @@ import sys
 import json
 import signal
 import argparse
-import datetime
-
-import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
 
-AUTOTUNE = tf.data.AUTOTUNE
-
-
-def setup_gpu(gpu_id):
+def setup_strategy(gpu_id):
     gpus = tf.config.list_physical_devices("GPU")
-    if 0 <= gpu_id < len(gpus):
-        tf.config.set_visible_devices(gpus[gpu_id], "GPU")
-        gpus = [gpus[gpu_id]]
-    for gpu in gpus:
+    if gpu_id < -1:
+        raise ValueError("--gpu must be -1 for all GPUs or a non-negative GPU index")
+    if gpu_id >= 0:
+        if gpu_id >= len(gpus):
+            raise ValueError(
+                f"GPU {gpu_id} is unavailable; found {len(gpus)} physical GPUs")
+        selected_gpus = [gpus[gpu_id]]
+        tf.config.set_visible_devices(selected_gpus, "GPU")
+    else:
+        selected_gpus = gpus
+
+    for gpu in selected_gpus:
         try: tf.config.experimental.set_memory_growth(gpu, True)
         except RuntimeError: pass
-    if gpu_id == -1:
-        print("Using All GPUs")
-    elif 0 <= gpu_id < len(gpus):
-        print(f"Using GPU {gpu_id}")
-    else:
+    if not selected_gpus:
         print("Using CPU")
+        return tf.distribute.OneDeviceStrategy("/CPU:0")
+
+    logical_gpus = tf.config.list_logical_devices("GPU")
+    devices = [gpu.name for gpu in logical_gpus]
+    if len(devices) == 1:
+        print(f"Using One GPU: {devices[0]}")
+        return tf.distribute.OneDeviceStrategy(devices[0])
+
+    print(f"Using {len(devices)} GPUs with NCCL: {', '.join(devices)}")
+    return tf.distribute.MirroredStrategy(
+        devices=devices, cross_device_ops=tf.distribute.NcclAllReduce())
 
 
 def get_log_dir(dataset_name):
@@ -81,9 +89,13 @@ def load_training_state(log_dir):
 
 def load_weights_if_needed(model, log_dir, resume):
     weight_path = get_weight_path(log_dir)
-    if resume and os.path.exists(weight_path):
-        model.load_weights(weight_path)
-        print("Loaded Existing Weights")
+    if not resume:
+        return
+    if not os.path.exists(weight_path):
+        raise FileNotFoundError(
+            f"Cannot resume because {weight_path} does not exist")
+    model.load_weights(weight_path)
+    print("Loaded Existing Weights")
 
 
 def setup_interrupt_handler(model, log_dir):
@@ -119,10 +131,15 @@ class SaveCallback(tf.keras.callbacks.Callback):
 
 
 class HistoryCallback(tf.keras.callbacks.Callback):
-    def __init__(self, log_dir):
+    def __init__(self, log_dir, resume=False):
         super().__init__()
         self.log_dir = log_dir
-        self.history = {}
+        path = get_history_path(log_dir)
+        if resume and os.path.exists(path):
+            with open(path) as f:
+                self.history = json.load(f)
+        else:
+            self.history = {}
 
     def on_epoch_end(self, epoch, logs=None):
         for key, value in logs.items():
@@ -149,47 +166,32 @@ class EpochLoggerCallback(tf.keras.callbacks.Callback):
 
 class PredictionLogger(tf.keras.callbacks.Callback):
 
-    def __init__(self, val_ds, dataset, log_dir, max_length=TARGET_MAX_LENGTH, num_samples=10, temperature=0.8, top_k=5):
+    def __init__(self, val_ds, dataset, log_dir, max_length=TARGET_MAX_LENGTH,
+                 num_samples=4, every_n_epochs=5):
         super().__init__()
         self.val_ds = val_ds
         self.dataset = dataset
         self.log_dir = log_dir
         self.num_samples = num_samples
-        self.temperature = temperature
-        self.top_k = top_k
+        self.every_n_epochs = every_n_epochs
         self.max_length = max_length
-
-    def sample_next_token(self, logits, used_tokens):
-        logits = logits/self.temperature
-        values, indices = tf.math.top_k(logits, k=self.top_k)
-        probs = tf.nn.softmax(values).numpy().flatten()
-        candidate_tokens = indices.numpy().flatten()
-        filtered = [(t, p) for t, p in zip(
-            candidate_tokens, probs) if t not in used_tokens]
-        if len(filtered) == 0:
-            return candidate_tokens[0]
-        filtered_tokens, filtered_probs = zip(*filtered)
-        filtered_probs = np.array(filtered_probs)/np.sum(filtered_probs)
-        return np.random.choice(filtered_tokens, p=filtered_probs)
 
     def decode(self, encoder_input, max_length):
         target_vectorizer = self.dataset.dataset.target_vectorizer
         start_token = target_vectorizer(["[start]"]).numpy()[0][0]
         end_token = target_vectorizer(["[end]"]).numpy()[0][0]
         decoder_input = [start_token]
-        used_tokens = set()
 
         for _ in range(max_length-1):
             padded_decoder_input = decoder_input + \
                 [0]*((self.max_length-1)-len(decoder_input))
             padded_decoder_input = tf.constant(
                 [padded_decoder_input], dtype=tf.int32)
-            predictions, _ = self.model(
+            predictions = self.model(
                 [encoder_input, padded_decoder_input], training=False)
             next_token_logits = predictions[:, len(decoder_input)-1, :]
-            next_token = self.sample_next_token(next_token_logits, used_tokens)
+            next_token = int(tf.argmax(next_token_logits[0]).numpy())
             decoder_input.append(next_token)
-            used_tokens.add(next_token)
             if next_token == end_token:
                 break
 
@@ -199,9 +201,13 @@ class PredictionLogger(tf.keras.callbacks.Callback):
         return decoded_text.replace("[end]", "").strip()
 
     def on_epoch_end(self, epoch, logs=None):
-        beam_dir = os.path.join(self.log_dir, "beam")
-        os.makedirs(beam_dir, exist_ok=True)
-        path = os.path.join(beam_dir, f"epoch_beam_{epoch+1}_predictions.txt")
+        final_epoch = epoch + 1 == self.params.get("epochs")
+        if (epoch + 1) % self.every_n_epochs and not final_epoch:
+            return
+        prediction_dir = os.path.join(self.log_dir, "predictions")
+        os.makedirs(prediction_dir, exist_ok=True)
+        path = os.path.join(
+            prediction_dir, f"epoch_{epoch+1}_predictions.txt")
         with open(path, "w", encoding="utf-8") as f:
             count = 0
             for (encoder_input, decoder_input), decoder_target in self.val_ds.shuffle(1000).take(20):
@@ -223,154 +229,7 @@ class PredictionLogger(tf.keras.callbacks.Callback):
                         return
 
 
-class PredictionLoggerGreedy(tf.keras.callbacks.Callback):
-    def __init__(self, val_ds, dataset, log_dir, max_length=TARGET_MAX_LENGTH, num_samples=10):
-        super().__init__()
-        self.val_ds = val_ds
-        self.dataset = dataset
-        self.log_dir = log_dir
-        self.num_samples = num_samples
-        self.max_length = max_length
-
-    def sample_next_token(self, logits):
-        logits = logits.numpy()[0]
-        next_token = np.argmax(logits)
-        return int(next_token)
-
-    def decode(self, encoder_input, max_length):
-        target_vectorizer = self.dataset.dataset.target_vectorizer
-        start_token = target_vectorizer(["[start]"]).numpy()[0][0]
-        end_token = target_vectorizer(["[end]"]).numpy()[0][0]
-        decoder_input = [start_token]
-        for _ in range(max_length - 1):
-            padded_decoder_input = decoder_input + \
-                [0] * ((self.max_length - 1) - len(decoder_input))
-            padded_decoder_input = tf.constant(
-                [padded_decoder_input], dtype=tf.int32)
-            predictions, _ = self.model(
-                [encoder_input, padded_decoder_input], training=False)
-            next_token_logits = predictions[:, len(decoder_input) - 1, :]
-            next_token = self.sample_next_token(next_token_logits)
-            decoder_input.append(next_token)
-            if next_token == end_token:
-                break
-
-        vocab = target_vectorizer.get_vocabulary()
-        decoded_text = " ".join(
-            [
-                vocab[token]
-                for token in decoder_input[1:]
-                if token not in [0, 1]
-            ]
-        )
-        decoded_text = decoded_text.replace("[end]", "").strip()
-        return decoded_text
-
-    def on_epoch_end(self, epoch, logs=None):
-        greed_dir = os.path.join(self.log_dir, "greed")
-        os.makedirs(greed_dir, exist_ok=True)
-        path = os.path.join(greed_dir, f"epoch_{epoch+1}_predictions.txt")
-        with open(path, "w", encoding="utf-8") as f:
-            count = 0
-            for (encoder_input, decoder_input), decoder_target in self.val_ds.shuffle(1000).take(20):
-                for i in range(encoder_input.shape[0]):
-                    source_text = self.dataset.decode_source(
-                        encoder_input[i].numpy()
-                    )
-                    target_text = self.dataset.decode_target(
-                        decoder_target[i].numpy()
-                    )
-                    predicted_text = self.decode(
-                        tf.expand_dims(encoder_input[i], axis=0),
-                        self.max_length
-                    )
-                    f.write("\n" + "=" * 140 + "\n")
-                    f.write("SOURCE:\n")
-                    f.write(source_text + "\n\n")
-                    f.write("TARGET:\n")
-                    f.write(target_text + "\n\n")
-                    f.write("PREDICTION:\n")
-                    f.write(predicted_text + "\n")
-                    count += 1
-                    if count >= self.num_samples:
-                        return
-
-
-class AttentionLogger(tf.keras.callbacks.Callback):
-
-    def __init__(self, val_ds, dataset, log_dir, max_length=TARGET_MAX_LENGTH):
-        super().__init__()
-        self.val_ds = val_ds
-        self.dataset = dataset
-        self.log_dir = log_dir
-        self.max_length = max_length
-
-    def greedy_decode_with_attention(self, encoder_input):
-        target_vectorizer = self.dataset.dataset.target_vectorizer
-        start_token = target_vectorizer(["[start]"]).numpy()[0][0]
-        end_token = target_vectorizer(["[end]"]).numpy()[0][0]
-        decoder_input = [start_token]
-        collected_attention = []
-        for _ in range(self.max_length - 1):
-            padded_decoder_input = decoder_input + \
-                [0] * ((self.max_length - 1) - len(decoder_input))
-            padded_decoder_input = tf.constant(
-                [padded_decoder_input], dtype=tf.int32)
-            predictions, attention_scores = self.model(
-                [encoder_input, padded_decoder_input], training=False)
-            next_token_logits = predictions[:, len(decoder_input) - 1, :]
-            next_token = int(tf.argmax(next_token_logits[0]).numpy())
-            attention_step = attention_step = tf.reduce_mean(
-                attention_scores[0, :, len(decoder_input)-1, :],
-                axis=0).numpy()
-            collected_attention.append(attention_step)
-            decoder_input.append(next_token)
-            if next_token == end_token:
-                break
-        return decoder_input, np.array(collected_attention)
-
-    def on_epoch_end(self, epoch, logs=None):
-        attention_dir = os.path.join(self.log_dir, "attention")
-        os.makedirs(attention_dir, exist_ok=True)
-        vocab_source = self.dataset.dataset.source_vectorizer.get_vocabulary()
-        vocab_target = self.dataset.dataset.target_vectorizer.get_vocabulary()
-        fig, axes = plt.subplots(2, 2, figsize=(24, 18))
-        axes = axes.flatten()
-        count = 0
-        for (encoder_input, decoder_input), decoder_target in self.val_ds.take(1):
-            for i in range(encoder_input.shape[0]):
-                sample_encoder_input = tf.expand_dims(encoder_input[i], axis=0)
-                predicted_tokens, attention_matrix = self.greedy_decode_with_attention(
-                    sample_encoder_input)
-                source_ids = encoder_input[i].numpy()
-                source_tokens = [vocab_source[token]
-                                 for token in source_ids if token > 1]
-                target_tokens = [vocab_target[token]
-                                 for token in predicted_tokens[1:] if token > 1]
-                attention_matrix = attention_matrix[:len(
-                    target_tokens), :len(source_tokens)]
-                ax = axes[count]
-                im = ax.imshow(attention_matrix, aspect="auto")
-                ax.set_xticks(np.arange(len(source_tokens)))
-                ax.set_xticklabels(source_tokens, rotation=45,
-                                   ha="right", fontsize=8)
-                ax.set_yticks(np.arange(len(target_tokens)))
-                ax.set_yticklabels(target_tokens, fontsize=8)
-                ax.set_xlabel("Source Tokens")
-                ax.set_ylabel("Target Tokens")
-                ax.set_title(f"Sample {count+1}")
-                fig.colorbar(im, ax=ax)
-                count += 1
-                if count >= 4:
-                    save_path = os.path.join(
-                        attention_dir, f"epoch_{epoch+1}.png")
-                    plt.tight_layout()
-                    plt.savefig(save_path)
-                    plt.close()
-                    return
-
-
-def evaluate_model(model, val_ds, dataset, log_dir):
+def evaluate_model(model, val_ds, log_dir):
     results = model.evaluate(val_ds, return_dict=True)
     with open(get_evaluation_path(log_dir), "w") as f:
         f.write("\n" + "=" * 140 + "\n")
@@ -385,15 +244,33 @@ def evaluate_model(model, val_ds, dataset, log_dir):
         print(f"{key:<30}: {value:.6f}")
 
 
+class TransformerLearningRate(tf.keras.optimizers.schedules.LearningRateSchedule):
+    def __init__(self, d_model, warmup_steps=4000):
+        super().__init__()
+        self.d_model = float(d_model)
+        self.warmup_steps = int(warmup_steps)
+
+    def __call__(self, step):
+        step = tf.cast(tf.maximum(step, 1), tf.float32)
+        scale = tf.math.rsqrt(tf.cast(self.d_model, tf.float32))
+        return scale * tf.minimum(
+            tf.math.rsqrt(step),
+            step * tf.cast(self.warmup_steps, tf.float32) ** -1.5)
+
+    def get_config(self):
+        return {"d_model": self.d_model, "warmup_steps": self.warmup_steps}
+
+
 loss_object = tf.keras.losses.SparseCategoricalCrossentropy(
-    from_logits=False, reduction="none")
+    from_logits=True, reduction="none")
 
 
 def masked_loss(y_true, y_pred):
     loss = loss_object(y_true, y_pred)
     mask = tf.cast(tf.not_equal(y_true, 0), tf.float32)
     loss *= mask
-    return tf.reduce_sum(loss) / tf.reduce_sum(mask)
+    return tf.reduce_sum(loss, axis=-1) / tf.maximum(
+        tf.reduce_sum(mask, axis=-1), 1.0)
 
 
 def masked_accuracy(y_true, y_pred):
@@ -402,7 +279,8 @@ def masked_accuracy(y_true, y_pred):
     matches = tf.cast(tf.equal(y_true, y_pred), tf.float32)
     mask = tf.cast(tf.not_equal(y_true, 0), tf.float32)
     matches *= mask
-    return tf.reduce_sum(matches) / tf.reduce_sum(mask)
+    return tf.reduce_sum(matches, axis=-1) / tf.maximum(
+        tf.reduce_sum(mask, axis=-1), 1.0)
 
 
 def main():
@@ -412,19 +290,15 @@ def main():
     parser.add_argument("--dataset", type=str, default="english_french")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--log_dir", type=str, default=None)
-    parser.add_argument("--epochs", type=int, default=EPOCHS)
+    parser.add_argument("--epochs", type=int, default=None)
     parser.add_argument("--steps-per-epoch", type=int, default=None)
     parser.add_argument("--validation-steps", type=int, default=None)
     parser.add_argument("--smoke", action="store_true")
     args = parser.parse_args()
 
-    setup_gpu(args.gpu)
     if MIXED_PRECISION:
         tf.keras.mixed_precision.set_global_policy("mixed_float16")
-    try:
-        strategy = tf.distribute.MirroredStrategy(cross_device_ops=tf.distribute.NcclAllReduce())
-    except (RuntimeError, ValueError):
-        strategy = tf.distribute.MirroredStrategy()
+    strategy = setup_strategy(args.gpu)
     print(f"Number Of Devices : {strategy.num_replicas_in_sync}")
 
     dataset_paths = {
@@ -438,6 +312,17 @@ def main():
 
     train_config = DATASET_CONFIGS[args.dataset]
     dataset_path = dataset_paths[args.dataset]
+    training_epochs = args.epochs if args.epochs is not None else train_config.get("epochs", EPOCHS)
+    if training_epochs < 1:
+        raise ValueError("--epochs must be at least 1")
+    replicas = strategy.num_replicas_in_sync
+    if train_config["batch_size"] % replicas:
+        raise ValueError(
+            f"Global batch size {train_config['batch_size']} must be divisible "
+            f"by {replicas} replicas")
+    print(f"Global Batch Size : {train_config['batch_size']}")
+    print(f"Per-Replica Batch Size : {train_config['batch_size'] // replicas}")
+    print(f"Training Epochs : {training_epochs}")
 
     dataset = Dataset(
         dataset_name=args.dataset,
@@ -458,8 +343,8 @@ def main():
     with strategy.scope():
 
         model = build_transformer_seq2seq_model(
-            source_vocab_size=train_config["vocab_size"],
-            target_vocab_size=train_config["vocab_size"],
+            source_vocab_size=dataset.get_source_vocab_size(),
+            target_vocab_size=dataset.get_target_vocab_size(),
             source_max_length=train_config["source_max_length"],
             target_max_length=train_config["target_max_length"],
             d_model=train_config["d_model"],
@@ -471,7 +356,9 @@ def main():
         )
 
         model.compile(
-            optimizer=tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE, beta_1=0.9, beta_2=0.98, epsilon=1e-9),
+            optimizer=tf.keras.optimizers.Adam(
+                learning_rate=TransformerLearningRate(train_config["d_model"]),
+                beta_1=0.9, beta_2=0.98, epsilon=1e-9, clipnorm=1.0),
             loss=masked_loss,
             metrics=[masked_accuracy],
         )
@@ -501,20 +388,19 @@ def main():
     callbacks = [
         EpochTracker(model),
         SaveCallback(model, log_dir),
-        HistoryCallback(log_dir),
+        HistoryCallback(log_dir, resume=args.resume),
         EpochLoggerCallback(log_dir),
         PredictionLogger(val_ds, dataset, log_dir,
                          max_length=train_config["target_max_length"]),
-        PredictionLoggerGreedy(val_ds, dataset, log_dir,
-                               max_length=train_config["target_max_length"]),
         tf.keras.callbacks.ModelCheckpoint(filepath=get_best_weight_path(
             log_dir), monitor="val_loss", save_best_only=True, save_weights_only=True, verbose=1),
+        tf.keras.callbacks.EarlyStopping(
+            monitor="val_loss", patience=5, restore_best_weights=True,
+            verbose=1),
         tf.keras.callbacks.TensorBoard(log_dir=os.path.join(
             log_dir, "tensorboard"), histogram_freq=1, write_graph=True, update_freq="epoch"),
-        tf.keras.callbacks.ReduceLROnPlateau(
-            monitor="val_loss", factor=0.9, patience=5, verbose=1),
         tf.keras.callbacks.CSVLogger(filename=os.path.join(
-            log_dir, "training_log.csv"), append=True)
+            log_dir, "training_log.csv"), append=args.resume)
     ]
 
     train_steps = 20 if args.smoke else args.steps_per_epoch or default_train_steps
@@ -528,12 +414,15 @@ def main():
     model.fit(
         fit_train_ds,
         validation_data=fit_val_ds,
-        epochs=1 if args.smoke else args.epochs, initial_epoch=start_epoch, callbacks=callbacks,
+        epochs=1 if args.smoke else training_epochs, initial_epoch=start_epoch, callbacks=callbacks,
         steps_per_epoch=train_steps,
         validation_steps=validation_steps)
-    model.save_weights(get_weight_path(log_dir))
     print("\nTraining Complete")
-    evaluate_model(model, val_ds, dataset, log_dir)
+    best_weight_path = get_best_weight_path(log_dir)
+    if os.path.exists(best_weight_path):
+        model.load_weights(best_weight_path)
+        print("Loaded Best Validation Weights For Evaluation")
+    evaluate_model(model, val_ds, log_dir)
 
 
 if __name__ == "__main__":

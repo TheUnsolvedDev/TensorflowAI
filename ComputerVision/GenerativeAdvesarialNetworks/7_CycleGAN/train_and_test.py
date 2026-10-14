@@ -12,6 +12,8 @@ import tensorflow as tf
 from config import *
 from dataset import *
 from model import *
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from training_utils import FullCheckpointCallback, build_full_checkpoint
 
 MODEL_NAME = "CycleGAN"
 LARGE_IMAGE_DATASETS = {"monet2photo", "cezanne2photo", "ukiyoe2photo", "vangogh2photo"}
@@ -32,9 +34,9 @@ def setup_gpu(gpu_id):
 
 
 def build_strategy():
-    return tf.distribute.MirroredStrategy(
-        cross_device_ops=tf.distribute.NcclAllReduce()
-    )
+    if len(tf.config.get_visible_devices("GPU")) > 1:
+        return tf.distribute.MirroredStrategy(cross_device_ops=tf.distribute.NcclAllReduce())
+    return tf.distribute.MirroredStrategy()
 
 
 def get_weight_paths(log_dir):
@@ -63,16 +65,17 @@ def load_training_state(log_dir):
     return 0
 
 
-def load_weights_if_needed(model, log_dir, resume):
+def load_weights_if_needed(model, log_dir):
     weight_paths = get_weight_paths(log_dir)
-    if resume and all(os.path.exists(path) for path in weight_paths.values()):
+    if all(os.path.exists(path) for path in weight_paths.values()):
         model.generator_a2b.load_weights(weight_paths["generator_a2b"])
         model.generator_b2a.load_weights(weight_paths["generator_b2a"])
         model.discriminator_a.load_weights(weight_paths["discriminator_a"])
         model.discriminator_b.load_weights(weight_paths["discriminator_b"])
         print("Loaded existing weights")
-    elif resume:
-        print("No saved weights found, starting fresh")
+        return True
+    print("No saved weights found, starting fresh")
+    return False
 
 
 def save_weights(model, log_dir):
@@ -154,8 +157,9 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         real_a = self.fixed_a
         real_b = self.fixed_b
 
-        fake_b = self.model_ref.generator_a2b(real_a, training=False).numpy()
-        fake_a = self.model_ref.generator_b2a(real_b, training=False).numpy()
+        with self.model_ref.ema.average_weights():
+            fake_b = self.model_ref.generator_a2b(real_a, training=False).numpy()
+            fake_a = self.model_ref.generator_b2a(real_b, training=False).numpy()
 
         real_a = ((real_a + 1.0) / 2.0).numpy()
         real_b = ((real_b + 1.0) / 2.0).numpy()
@@ -219,12 +223,20 @@ def main():
 
     log_dir = f"logs/{args.type}/{MODEL_NAME}"
     os.makedirs(log_dir, exist_ok=True)
+    checkpoint, manager = build_full_checkpoint(model, log_dir)
 
     start_epoch = 0
-    if args.resume:
-        load_weights_if_needed(model, log_dir, True)
+    if args.resume and manager.latest_checkpoint:
+        checkpoint.restore(manager.latest_checkpoint)
+        print(f"Restored full checkpoint: {manager.latest_checkpoint}")
+        weights_loaded = True
+    else:
+        weights_loaded = load_weights_if_needed(model, log_dir)
+    if args.resume and weights_loaded:
         start_epoch = load_training_state(log_dir)
         print(f"Resuming from epoch {start_epoch}")
+    elif weights_loaded:
+        print("Starting from epoch 0 with loaded weights")
 
     setup_interrupt_handler(model, log_dir)
 
@@ -233,17 +245,15 @@ def main():
         GANLogger(log_dir),
         WeightSaveCallback(model, log_dir),
         SampleImageCallback(model, log_dir, cycle_spec),
+        FullCheckpointCallback(manager, SAVE_EVERY_N_EPOCHS),
     ]
 
-    try:
-        model.fit(
-            train_ds,
-            epochs=EPOCHS,
-            initial_epoch=start_epoch,
-            callbacks=callbacks,
-        )
-    finally:
-        dataset.cleanup_cache()
+    model.fit(
+        train_ds,
+        epochs=EPOCHS,
+        initial_epoch=start_epoch,
+        callbacks=callbacks,
+    )
 
 
 if __name__ == "__main__":

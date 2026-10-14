@@ -1,46 +1,15 @@
-# 2. DDPM
+# DDPM
 
-> **Current status:** architecture/configuration scaffold. The dataset and
-> training entrypoints contain explicit placeholders; no completed run is
-> claimed by this documentation.
+An unconditional image DDPM with epsilon prediction, a 1,000-step linear noise schedule, and ancestral sampling.
 
-Noise-prediction UNet diffusion baseline with ancestral sampling.
+Supported datasets: `mnist`, `fashion_mnist`, `cifar10`, `cifar100`, and `celeba`.
 
-## What This Folder Implements
-
-Implements a recognizable DDPM training loop and sampler at practical local resolutions.
-
-## Files
-
-- `config.py` for dataset roots, diffusion settings, cache behavior, and conservative multi-GPU defaults
-- `dataset.py` for folder-local dataset loading and preprocessing
-- `model.py` for the standalone architecture and training logic for this algorithm only
-- `train_and_test.py` for CLI, MirroredStrategy setup, resume logic, checkpoints, and sample generation
-- `run.sh` for repeated local runs
-
-## Supported Datasets
-
-- `mnist`
-- `fashion_mnist`
-- `cifar10`
-- `cifar100`
-- `celeba`
-
-## Run
+Run one dataset using all visible GPUs:
 
 ```bash
-python train_and_test.py --gpu -1 --type cifar10 --mode diffusion
+python train_and_test.py --type cifar10 --gpu -1 --epochs 200
 ```
 
-Resume training with either of the repo-style flags:
+`--gpu N` selects one GPU; `--gpu -1` uses all visible GPUs. Resume the current run with `--resume`; use `--reset` to remove its checkpoint and state. New weights are stored under `logs/<dataset>/DDPM_v2/diffusion/` so they do not conflict with earlier runs.
 
-```bash
-python train_and_test.py --gpu 0 --type cifar10 --mode diffusion --continue
-python train_and_test.py --gpu 0 --type cifar10 --mode diffusion --resume
-```
-
-## Practical Notes
-
-- This folder is standalone and does not import runtime helpers from sibling folders.
-- Multi-GPU setup follows the same practical `MirroredStrategy(...NcclAllReduce())` pattern used in neighboring repo families.
-- The implementation is scoped for local training and architecture recognizability rather than full paper-scale reproduction.
+The `run.sh` script trains the datasets listed by `DATASETS` (default: `mnist fashion_mnist cifar10 cifar100 celeba`). Set `EPOCHS`, `GPU`, and `PYTHON_BIN` to override its defaults. The script starts a fresh v2 run; add `--resume` after its options to continue an interrupted run.
