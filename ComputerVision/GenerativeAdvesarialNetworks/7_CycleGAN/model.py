@@ -156,8 +156,8 @@ class CycleGAN(tf.keras.Model):
         return tf.reduce_mean(self.cycle_loss_fn(real, reconstructed))
 
     @tf.function
-    def train_generator_step(self, real_a, real_b):
-        with tf.GradientTape() as tape:
+    def train_step(self, real_a, real_b):
+        with tf.GradientTape(persistent=True) as tape:
             fake_b = self.generator_a2b(real_a, training=True)
             cycled_a = self.generator_b2a(fake_b, training=True)
 
@@ -169,49 +169,58 @@ class CycleGAN(tf.keras.Model):
 
             disc_fake_a = self.discriminator_a(fake_a, training=True)
             disc_fake_b = self.discriminator_b(fake_b, training=True)
+            disc_real_a = self.discriminator_a(real_a, training=True)
+            disc_real_b = self.discriminator_b(real_b, training=True)
 
             adv_loss = self.adversarial_loss(disc_fake_a, True) + self.adversarial_loss(disc_fake_b, True)
             cycle_loss = self.reconstruction_loss(real_a, cycled_a) + self.reconstruction_loss(real_b, cycled_b)
             identity_loss = self.reconstruction_loss(real_a, same_a) + self.reconstruction_loss(real_b, same_b)
 
-            total_loss = (
+            generator_loss = (
                 adv_loss + self.lambda_cycle * cycle_loss + self.lambda_identity * identity_loss
             ) / self.strategy.num_replicas_in_sync
 
-        variables = self.generator_a2b.trainable_variables + self.generator_b2a.trainable_variables
-        grads = tape.gradient(total_loss, variables)
-        self.generator_optimizer.apply_gradients(zip(grads, variables))
-        return total_loss
-
-    @tf.function
-    def train_discriminator_step(self, real_a, real_b):
-        fake_b = self.generator_a2b(real_a, training=True)
-        fake_a = self.generator_b2a(real_b, training=True)
-
-        with tf.GradientTape() as tape:
-            disc_real_a = self.discriminator_a(real_a, training=True)
-            disc_real_b = self.discriminator_b(real_b, training=True)
-            disc_fake_a = self.discriminator_a(tf.stop_gradient(fake_a), training=True)
-            disc_fake_b = self.discriminator_b(tf.stop_gradient(fake_b), training=True)
-
             loss_a = self.adversarial_loss(disc_real_a, True) + self.adversarial_loss(disc_fake_a, False)
             loss_b = self.adversarial_loss(disc_real_b, True) + self.adversarial_loss(disc_fake_b, False)
-            total_loss = 0.5 * (loss_a + loss_b) / self.strategy.num_replicas_in_sync
+            discriminator_loss = (
+                0.5 * (loss_a + loss_b)
+                / self.strategy.num_replicas_in_sync
+            )
 
-        variables = self.discriminator_a.trainable_variables + self.discriminator_b.trainable_variables
-        grads = tape.gradient(total_loss, variables)
-        self.discriminator_optimizer.apply_gradients(zip(grads, variables))
-        return total_loss
+        generator_variables = (
+            self.generator_a2b.trainable_variables
+            + self.generator_b2a.trainable_variables
+        )
+        discriminator_variables = (
+            self.discriminator_a.trainable_variables
+            + self.discriminator_b.trainable_variables
+        )
+        generator_grads = tape.gradient(generator_loss, generator_variables)
+        discriminator_grads = tape.gradient(
+            discriminator_loss, discriminator_variables
+        )
+        del tape
+        self.generator_optimizer.apply_gradients(
+            zip(generator_grads, generator_variables)
+        )
+        self.discriminator_optimizer.apply_gradients(
+            zip(discriminator_grads, discriminator_variables)
+        )
+        return generator_loss, discriminator_loss
 
     @tf.function
-    def dist_generator_step(self, real_a, real_b):
-        per_replica_loss = self.strategy.run(self.train_generator_step, args=(real_a, real_b))
-        return self.strategy.reduce(tf.distribute.ReduceOp.SUM, per_replica_loss, axis=None)
-
-    @tf.function
-    def dist_discriminator_step(self, real_a, real_b):
-        per_replica_loss = self.strategy.run(self.train_discriminator_step, args=(real_a, real_b))
-        return self.strategy.reduce(tf.distribute.ReduceOp.SUM, per_replica_loss, axis=None)
+    def dist_train_step(self, real_a, real_b):
+        generator_losses, discriminator_losses = self.strategy.run(
+            self.train_step, args=(real_a, real_b)
+        )
+        generator_loss = self.strategy.reduce(
+            tf.distribute.ReduceOp.SUM, generator_losses, axis=None
+        )
+        discriminator_loss = self.strategy.reduce(
+            tf.distribute.ReduceOp.SUM, discriminator_losses, axis=None
+        )
+        self.ema.update()
+        return generator_loss, discriminator_loss
 
     def fit(self, dataset, epochs, initial_epoch=0, callbacks=None):
         if callbacks is None:
@@ -225,26 +234,32 @@ class CycleGAN(tf.keras.Model):
 
         for epoch in range(initial_epoch, epochs):
             print(f"Epoch {epoch + 1}/{epochs}")
-            progress_bar = tf.keras.utils.Progbar(steps_per_epoch)
+            progress_bar = tf.keras.utils.Progbar(
+                steps_per_epoch,
+                stateful_metrics=["gen_loss", "disc_loss"],
+            )
             gen_loss_metric = tf.keras.metrics.Mean()
             disc_loss_metric = tf.keras.metrics.Mean()
             for callback in callbacks:
                 callback.on_epoch_begin(epoch)
 
             for step, (real_a, real_b) in enumerate(dataset):
-                disc_loss = self.dist_discriminator_step(real_a, real_b)
-                gen_loss = self.dist_generator_step(real_a, real_b)
-                self.ema.update()
+                gen_loss, disc_loss = self.dist_train_step(real_a, real_b)
                 gen_loss_metric.update_state(gen_loss)
                 disc_loss_metric.update_state(disc_loss)
 
-                progress_bar.update(
-                    step + 1,
-                    values=[
-                        ("gen_loss", float(gen_loss)),
-                        ("disc_loss", float(disc_loss)),
-                    ],
-                )
+                current_step = step + 1
+                if (
+                    current_step % PROGRESS_UPDATE_FREQUENCY == 0
+                    or current_step == steps_per_epoch
+                ):
+                    progress_bar.update(
+                        current_step,
+                        values=[
+                            ("gen_loss", gen_loss_metric.result()),
+                            ("disc_loss", disc_loss_metric.result()),
+                        ],
+                    )
 
                 logs = {"gen_loss": gen_loss, "disc_loss": disc_loss}
                 for callback in callbacks:

@@ -62,7 +62,7 @@ class Dataset:
 
     def _decode_image(self, image_path):
         image = tf.io.read_file(image_path)
-        image = tf.io.decode_image(image, channels=3, expand_animations=False)
+        image = tf.io.decode_jpeg(image, channels=3)
         image.set_shape([None, None, 3])
         return image
 
@@ -92,6 +92,7 @@ class Dataset:
                 dataset_type=dataset_type,
             ),
             num_parallel_calls=AUTOTUNE,
+            deterministic=False,
         )
         ds = self._apply_training_options(ds, shuffle)
         ds = ds.batch(self.batch_size, drop_remainder=shuffle)
