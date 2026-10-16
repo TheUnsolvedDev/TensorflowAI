@@ -1,12 +1,13 @@
 # Rainbow DQN
 
-An educational combination of Double DQN, dueling networks, and prioritized replay. C51, noisy layers, and n-step returns are not included.
+A textbook Rainbow DQN combining Double DQN, dueling value and advantage streams, prioritized replay, three-step returns, C51 distributional learning, and noisy linear layers.
 
 ## Files
 
 ```text
 10_RainbowDQN/
 ├── agent.py
+├── config.py
 ├── model.py
 ├── train_and_test.py
 ├── inference.py
@@ -16,7 +17,20 @@ An educational combination of Double DQN, dueling networks, and prioritized repl
     └── settings.py
 ```
 
-The networks in `model.py` use the TensorFlow Keras Functional API. This folder is self-contained and does not import implementation code from sibling folders or the repository root.
+This folder is self-contained. Its Q-network uses the TensorFlow Keras Functional API, and action-value inference plus Bellman gradient updates are compiled with `tf.function`. GPU memory growth is enabled before model construction when GPUs are available.
+
+Training uses preallocated NumPy replay arrays and sum/min segment trees for stratified prioritized sampling. The network predicts a 51-atom return distribution and selects Double-DQN actions from its expected values. Three-step returns propagate rewards faster, while factorized noisy layers replace epsilon-greedy exploration. Importance-weighted cross-entropy trains the C51 projection, and per-sample distribution losses update replay priorities. Truncation ends an episode but preserves the Bellman bootstrap.
+
+## Environments
+
+The launcher trains these discrete-action, vector-observation environments:
+
+- `CartPole-v1`
+- `Acrobot-v1`
+- `MountainCar-v0`
+- `LunarLander-v3`
+
+`ENVIRONMENT_CONFIGS` in `config.py` provides environment-specific episode budgets, discount factors, replay warmup, target update intervals, and C51 value-support bounds. LunarLander requires Gymnasium's Box2D dependencies.
 
 ## Requirements
 
@@ -24,60 +38,68 @@ The networks in `model.py` use the TensorFlow Keras Functional API. This folder 
 - TensorFlow
 - Gymnasium
 - NumPy
+- Matplotlib
+- ImageIO
 
-The default environment is `CartPole-v1`. Use only environments with a compatible observation and action space. `LunarLander-v3` requires Gymnasium's optional Box2D dependencies.
+## Training
 
-## Training and testing
-
-Run from this folder:
+Train every configured environment sequentially:
 
 ```bash
 sh run.sh train
 ```
 
-Choose the number of training and test episodes:
+Override run-level values for every environment:
 
 ```bash
-sh run.sh train --episodes 300 --test-episodes 10
+sh run.sh train --episodes 500 --test-episodes 20 --log-every 25
 ```
 
-Use another compatible Gymnasium environment:
+Train one environment directly:
 
 ```bash
-sh run.sh train --env CartPole-v1 --episodes 300
+python train_and_test.py --env CartPole-v1 --episodes 1500
 ```
 
-The best episode checkpoint is saved as `best.weights.h5` by default. Supply `--checkpoint` to use another path.
+Each environment receives its own checkpoint under `checkpoints/`. Checkpoints are selected by the best recent average reward rather than one lucky episode.
+
+## Results
+
+Metrics remain in memory during training and are written afterward:
+
+```text
+results/<environment>/
+├── training_metrics.csv
+├── evaluation_metrics.csv
+├── results.png
+└── test.gif
+```
+
+The figure reports reward, moving reward average, distributional loss, episode length, exploration epsilon (zero because noisy layers provide exploration), replay size, and test rewards. The GIF records the best deterministic test episode.
 
 ## Inference
 
-Evaluate a saved checkpoint:
+Human-rendered inference loads the selected environment checkpoint:
 
 ```bash
-sh run.sh inference --checkpoint best.weights.h5 --episodes 10
+sh run.sh inference --env CartPole-v1 --episodes 10
 ```
 
-Render evaluation episodes:
+The launcher defaults to `/home/shuvrajeet/miniconda3/envs/research/bin/python`. Override it with `PYTHON=python3` when needed.
+
+## GPU selection
+
+Use one physical GPU for training or inference:
 
 ```bash
-sh run.sh inference --checkpoint best.weights.h5 --render
+sh run.sh train --gpu 0
+sh run.sh train --gpu 1
+sh run.sh inference --env CartPole-v1 --gpu 0
 ```
 
-## Interpreter
-
-The launcher defaults to:
-
-```text
-/home/shuvrajeet/miniconda3/envs/research/bin/python
-```
-
-Override it when necessary:
-
-```bash
-PYTHON=python3 sh run.sh train
-```
+Use `--gpu -1` to force CPU execution. GPU 0 is the default, and an unavailable index fails before model construction.
 
 ## Validation scope
 
-Compilation and short CPU smoke runs only establish that construction, updates, checkpoint loading, and entry points execute. They do not prove convergence, benchmark performance, or GPU correctness.
+Compilation and short runtime checks establish construction, replay sampling, compiled updates, checkpoint loading, metrics, plots, and GIF generation. They do not prove convergence or GPU performance.
 

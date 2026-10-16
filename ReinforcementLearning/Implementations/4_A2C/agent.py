@@ -79,12 +79,16 @@ class A2CAgent:
         self.optimizer.apply_gradients(zip(gradients, self.model.trainable_variables))
         return loss
 
-    def learn(self, states, actions, rewards, dones, next_states):
-        output = self.model(tf.convert_to_tensor(next_states[-1], tf.float32), training=False)
-        running = output[-1].numpy()[:, 0]
+    def learn(self, states, actions, rewards, terminated, truncated, next_states):
+        flat_next_states = next_states.reshape((-1,) + next_states.shape[2:])
+        output = self.model(tf.convert_to_tensor(flat_next_states, tf.float32), training=False)
+        next_values = output[-1].numpy()[:, 0].reshape(rewards.shape)
+        running = next_values[-1]
         returns = np.zeros_like(rewards, dtype=np.float32)
         for step in range(len(rewards) - 1, -1, -1):
-            running = rewards[step] + self.gamma * running * (1.0 - dones[step])
+            running = np.where(terminated[step] > 0, 0.0, running)
+            running = np.where(truncated[step] > 0, next_values[step], running)
+            running = rewards[step] + self.gamma * running
             returns[step] = running
         flat_states = tf.convert_to_tensor(states.reshape((-1,) + states.shape[2:]), tf.float32)
         if self.continuous:

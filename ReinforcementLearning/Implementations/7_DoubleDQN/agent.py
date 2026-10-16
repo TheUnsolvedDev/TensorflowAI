@@ -1,74 +1,92 @@
 import numpy as np
 import tensorflow as tf
 
+import config
 import model
 
 
 class DQNAgent:
-    def __init__(self, observation_shape, action_count, variant="dqn", gamma=0.99):
-        self.variant = variant
-        self.gamma = gamma
+    def __init__(self, observation_shape, action_count, seed):
         self.action_count = action_count
-        self.epsilon = 1.0
-        self.epsilon_min = 0.05
-        self.epsilon_decay = 0.995
-        dueling = variant in {"dueling", "rainbow"}
-        self.model = model.q_model(observation_shape, action_count, dueling)
-        self.target = model.q_model(observation_shape, action_count, dueling)
-        self.target.set_weights(self.model.get_weights())
-        self.optimizer = tf.keras.optimizers.Adam(1e-3)
-        self.buffer = model.PrioritizedReplayBuffer() if variant in {"per", "rainbow"} else model.ReplayBuffer()
-        self.steps = 0
+        self.rng = np.random.default_rng(seed)
+        self.online = model.build_q_network(observation_shape, action_count)
+        self.target = model.build_q_network(observation_shape, action_count)
+        self.target.set_weights(self.online.get_weights())
+        self.optimizer = tf.keras.optimizers.Adam(config.LEARNING_RATE)
+        self.replay = model.ReplayBuffer(observation_shape, seed + 1)
+        self.environment_steps = 0
+        self.training_steps = 0
+
+    @property
+    def epsilon(self):
+        progress = min(self.environment_steps / config.EPSILON_DECAY_STEPS, 1.0)
+        return config.EPSILON_START + progress * (config.EPSILON_END - config.EPSILON_START)
+
+    @tf.function(reduce_retracing=True)
+    def _q_values(self, state):
+        state = tf.expand_dims(tf.cast(state, tf.float32), axis=0)
+        return self.online(state, training=False)[0]
 
     def act(self, state, training=True):
-        if training and np.random.random() < self.epsilon:
-            return np.random.randint(self.action_count)
-        values = self.model(np.asarray(state, np.float32)[None], training=False)
-        return int(tf.argmax(values[0]))
+        if training and self.rng.random() < self.epsilon:
+            return int(self.rng.integers(self.action_count))
+        return int(tf.argmax(self._q_values(state)).numpy())
 
-    def remember(self, state, action, reward, next_state, done):
-        self.buffer.add(state, action, reward, next_state, done)
+    def remember(self, state, action, reward, next_state, terminal):
+        self.replay.add(state, action, reward, next_state, terminal)
+        self.environment_steps += 1
 
-    def learn(self, batch_size=64):
-        if len(self.buffer) < batch_size:
-            return 0.0
-        prioritized = self.variant in {"per", "rainbow"}
-        if prioritized:
-            batch, indices, weights = self.buffer.sample(batch_size)
+    @tf.function(
+        input_signature=[
+            tf.TensorSpec((None, None), tf.float32),
+            tf.TensorSpec((None,), tf.int32),
+            tf.TensorSpec((None,), tf.float32),
+            tf.TensorSpec((None, None), tf.float32),
+            tf.TensorSpec((None,), tf.float32),
+        ]
+    )
+    def _train_step(self, states, actions, rewards, next_states, terminals):
+        next_target_values = self.target(next_states, training=False)
+        if config.USE_DOUBLE_DQN:
+            next_online_values = self.online(next_states, training=False)
+            next_actions = tf.argmax(next_online_values, axis=1, output_type=tf.int32)
+            next_values = tf.gather(next_target_values, next_actions, batch_dims=1)
         else:
-            batch = self.buffer.sample(batch_size)
-            weights = np.ones(batch_size, np.float32)
-        states, actions, rewards, next_states, dones = batch
-        next_online = self.model(next_states, training=False)
-        next_target = self.target(next_states, training=False)
-        if self.variant in {"double", "rainbow"}:
-            next_actions = tf.argmax(next_online, axis=1)
-            next_values = tf.gather(next_target, next_actions, batch_dims=1)
-        else:
-            next_values = tf.reduce_max(next_target, axis=1)
-        targets = rewards + self.gamma * (1.0 - dones.astype(np.float32)) * next_values.numpy()
+            next_values = tf.reduce_max(next_target_values, axis=1)
+        targets = tf.stop_gradient(rewards + config.GAMMA * (1.0 - terminals) * next_values)
         with tf.GradientTape() as tape:
-            values = self.model(states, training=True)
-            chosen = tf.gather(values, actions.astype(np.int32), batch_dims=1)
-            errors = targets - chosen
-            losses = tf.keras.losses.huber(targets, chosen)
-            loss = tf.reduce_mean(losses * weights)
-        gradients = tape.gradient(loss, self.model.trainable_variables)
-        gradients, _ = tf.clip_by_global_norm(gradients, 10.0)
-        self.optimizer.apply_gradients(zip(gradients, self.model.trainable_variables))
-        if prioritized:
-            self.buffer.update(indices, errors.numpy())
-        self.steps += 1
-        if self.steps % 100 == 0:
-            self.target.set_weights(self.model.get_weights())
-        self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
-        return float(loss)
+            q_values = self.online(states, training=True)
+            selected_values = tf.gather(q_values, actions, batch_dims=1)
+            errors = targets - selected_values
+            absolute_errors = tf.abs(errors)
+            quadratic = tf.minimum(absolute_errors, config.HUBER_DELTA)
+            losses = 0.5 * tf.square(quadratic) + config.HUBER_DELTA * (absolute_errors - quadratic)
+            loss = tf.reduce_mean(losses)
+        gradients = tape.gradient(loss, self.online.trainable_variables)
+        gradients, _ = tf.clip_by_global_norm(gradients, config.GRADIENT_CLIP_NORM)
+        self.optimizer.apply_gradients(zip(gradients, self.online.trainable_variables))
+        return loss
+
+    def learn(self):
+        if len(self.replay) < max(config.BATCH_SIZE, config.LEARNING_STARTS):
+            return None
+        states, actions, rewards, next_states, terminals = self.replay.sample(config.BATCH_SIZE)
+        loss = self._train_step(
+            tf.convert_to_tensor(states, tf.float32),
+            tf.convert_to_tensor(actions, tf.int32),
+            tf.convert_to_tensor(rewards, tf.float32),
+            tf.convert_to_tensor(next_states, tf.float32),
+            tf.convert_to_tensor(terminals, tf.float32),
+        )
+        self.training_steps += 1
+        if self.training_steps % config.TARGET_UPDATE_FREQUENCY == 0:
+            self.target.set_weights(self.online.get_weights())
+        return float(loss.numpy())
 
     def save(self, path):
-        self.model.save_weights(path)
+        self.online.save_weights(path)
 
     def load(self, path):
-        self.model.load_weights(path)
-        self.target.set_weights(self.model.get_weights())
-
+        self.online.load_weights(path)
+        self.target.set_weights(self.online.get_weights())
 

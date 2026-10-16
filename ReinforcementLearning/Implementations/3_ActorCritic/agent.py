@@ -23,7 +23,6 @@ class ActorCriticAgent:
         self.critic = model.build_critic(observation_shape)
         self.actor_optimizer = tf.keras.optimizers.Adam(config.ACTOR_LEARNING_RATE)
         self.critic_optimizer = tf.keras.optimizers.Adam(config.CRITIC_LEARNING_RATE)
-        self.states, self.actions, self.rewards = [], [], []
 
     @tf.function(reduce_retracing=True)
     def _act(self, state):
@@ -61,18 +60,23 @@ class ActorCriticAgent:
         return log_probability, entropy
 
     @tf.function(reduce_retracing=True)
-    def train_step(self, states, actions, returns):
+    def train_step(self, state, action, reward, next_state, terminated):
+        state = tf.expand_dims(tf.cast(state, tf.float32), 0)
+        next_state = tf.expand_dims(tf.cast(next_state, tf.float32), 0)
+        action = tf.expand_dims(action, 0)
+        next_value = tf.squeeze(self.critic(next_state, training=False), axis=1)
+        td_target = reward + self.gamma * (1.0 - terminated) * next_value
         with tf.GradientTape() as actor_tape:
-            output = self.actor(states, training=True)
-            values = tf.squeeze(self.critic(states, training=False), axis=1)
-            advantage = tf.clip_by_value(
-                tf.stop_gradient(returns - values), -config.ADVANTAGE_CLIP, config.ADVANTAGE_CLIP
+            output = self.actor(state, training=True)
+            value = tf.squeeze(self.critic(state, training=False), axis=1)
+            td_error = tf.clip_by_value(
+                tf.stop_gradient(td_target - value), -config.ADVANTAGE_CLIP, config.ADVANTAGE_CLIP
             )
-            log_probability, entropy = self.policy_terms(output, actions)
-            actor_loss = -tf.reduce_mean(log_probability * advantage) - config.ENTROPY_COEFFICIENT * entropy
+            log_probability, entropy = self.policy_terms(output, action)
+            actor_loss = -tf.reduce_mean(log_probability * td_error) - config.ENTROPY_COEFFICIENT * entropy
         with tf.GradientTape() as critic_tape:
-            values = tf.squeeze(self.critic(states, training=True), axis=1)
-            critic_loss = tf.keras.losses.huber(returns, values, delta=config.HUBER_DELTA)
+            value = tf.squeeze(self.critic(state, training=True), axis=1)
+            critic_loss = tf.keras.losses.huber(tf.stop_gradient(td_target), value, delta=config.HUBER_DELTA)
         actor_gradients = actor_tape.gradient(actor_loss, self.actor.trainable_variables)
         actor_gradients, _ = tf.clip_by_global_norm(actor_gradients, config.GRADIENT_CLIP_NORM)
         self.actor_optimizer.apply_gradients(zip(actor_gradients, self.actor.trainable_variables))
@@ -81,21 +85,15 @@ class ActorCriticAgent:
         self.critic_optimizer.apply_gradients(zip(critic_gradients, self.critic.trainable_variables))
         return actor_loss + config.VALUE_LOSS_COEFFICIENT * critic_loss
 
-    def remember(self, state, action, reward):
-        self.states.append(state)
-        self.actions.append(action)
-        self.rewards.append(reward)
-
-    def learn(self):
+    def learn(self, state, action, reward, next_state, terminated):
         action_dtype = tf.float32 if self.continuous else tf.int32
         loss = self.train_step(
-            tf.convert_to_tensor(self.states, tf.float32),
-            tf.convert_to_tensor(self.actions, action_dtype),
-            tf.convert_to_tensor(model.discounted_returns(self.rewards, self.gamma), tf.float32),
+            tf.convert_to_tensor(state, tf.float32),
+            tf.convert_to_tensor(action, action_dtype),
+            tf.convert_to_tensor(reward, tf.float32),
+            tf.convert_to_tensor(next_state, tf.float32),
+            tf.convert_to_tensor(float(terminated), tf.float32),
         )
-        self.states.clear()
-        self.actions.clear()
-        self.rewards.clear()
         return float(loss.numpy())
 
     def critic_path(self, path):

@@ -12,14 +12,19 @@ import agent
 import config
 
 
-def configure_tensorflow():
-    if not config.ENABLE_GPU_MEMORY_GROWTH:
+def configure_tensorflow(gpu_index):
+    gpus = tf.config.list_physical_devices("GPU")
+    if gpu_index < 0:
+        tf.config.set_visible_devices([], "GPU")
+        print("device=CPU")
         return
-    for gpu in tf.config.list_physical_devices("GPU"):
-        try:
-            tf.config.experimental.set_memory_growth(gpu, True)
-        except RuntimeError:
-            pass
+    if gpu_index >= len(gpus):
+        raise ValueError(f"GPU {gpu_index} is unavailable; detected {len(gpus)} GPU(s)")
+    selected_gpu = gpus[gpu_index]
+    tf.config.set_visible_devices(selected_gpu, "GPU")
+    if config.ENABLE_GPU_MEMORY_GROWTH:
+        tf.config.experimental.set_memory_growth(selected_gpu, True)
+    print(f"device=GPU:{gpu_index} name={selected_gpu.name}")
 
 
 def make_agent(environment):
@@ -99,7 +104,7 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_workers, rollout_st
                         np.asarray(states, dtype=np.float32),
                         np.asarray(actions, dtype=np.float32 if local.continuous else np.int32),
                         np.asarray(rewards, dtype=np.float32),
-                        done,
+                        terminated,
                         observation,
                         policy,
                     )
@@ -108,7 +113,7 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_workers, rollout_st
             with history_lock:
                 episode = len(history) + 1
                 history.append((episode, total_reward, episode_length, loss))
-                average_reward = np.mean([row[1] for row in history[-20:]])
+                average_reward = np.mean([row[1] for row in history[-config.MOVING_AVERAGE_WINDOW:]])
                 if len(history) < config.MOVING_AVERAGE_WINDOW or average_reward > state["best_average"]:
                     state["best_average"] = average_reward
                     policy.save(checkpoint)
@@ -260,6 +265,7 @@ def main():
     parser.add_argument("--episodes", type=int)
     parser.add_argument("--test-episodes", type=int)
     parser.add_argument("--seed", type=int, default=config.SEED)
+    parser.add_argument("--gpu", type=int, default=config.DEFAULT_GPU)
     parser.add_argument("--checkpoint")
     parser.add_argument("--log-every", type=int, default=config.LOG_EVERY)
     parser.add_argument("--output-dir", default=config.OUTPUT_DIR)
@@ -272,7 +278,7 @@ def main():
     args.rollout_steps = args.rollout_steps or config.ROLLOUT_STEPS
     if min(args.episodes, args.test_episodes, args.log_every, args.num_workers, args.rollout_steps) < 1:
         parser.error("episode counts, logging, workers, and rollout steps must be positive")
-    configure_tensorflow()
+    configure_tensorflow(args.gpu)
     checkpoint = args.checkpoint or checkpoint_path(args.env)
     history = train(
         args.env,

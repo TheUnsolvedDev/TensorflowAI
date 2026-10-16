@@ -92,7 +92,7 @@ results/<environment>/
 └── test.gif
 ```
 
-The default final figure contains training reward, a 20-episode moving reward average, policy loss, episode length, and evaluation rewards. Checkpoints are selected by recent average reward instead of one lucky episode. After evaluation, `test.gif` records the highest-reward deterministic episode from `GIF_TEST_EPISODES` candidate seeds. GIF settings are available in `config.py`. Select another results root with `--output-dir`:
+The default final figure contains training reward, the configured moving reward average, policy loss, episode length, and evaluation rewards. Checkpoints are selected by recent average reward instead of one lucky episode. After evaluation, `test.gif` records the highest-reward deterministic episode from `GIF_TEST_EPISODES` candidate seeds. GIF settings are available in `config.py`. Select another results root with `--output-dir`:
 
 ```bash
 sh run.sh train --output-dir experiment_results
@@ -121,6 +121,18 @@ Override it when necessary:
 ```bash
 PYTHON=python3 sh run.sh train
 ```
+
+## GPU selection
+
+Use one physical GPU for training or inference:
+
+```bash
+sh run.sh train --gpu 0
+sh run.sh train --gpu 1
+sh run.sh inference --env CartPole-v1 --gpu 0
+```
+
+Use `--gpu -1` to force CPU execution. GPU 0 is the default, and an unavailable index fails before model construction.
 
 ## Validation scope
 

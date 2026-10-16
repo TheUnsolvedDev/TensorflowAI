@@ -17,7 +17,7 @@ An episodic actor-critic implementation with independent policy and value networ
     └── settings.py
 ```
 
-The independent actor and critic networks in `model.py` use the TensorFlow Keras Functional API. Both the action-probability forward pass and gradient update are compiled with `tf.function`. The critic learns discounted episode returns, while the actor uses the learned value baseline through return-minus-value advantages. Huber critic loss, clipped detached advantages, entropy regularization, separate optimizers, and global gradient clipping keep updates stable. GPU memory growth is enabled before model construction when GPUs are available. This folder is self-contained and does not import implementation code from sibling folders or the repository root.
+The independent actor and critic networks in `model.py` use the TensorFlow Keras Functional API. Both the action-probability forward pass and gradient update are compiled with `tf.function`. Every transition forms the textbook one-step TD error `reward + gamma * V(next_state) - V(state)`. That TD error updates the actor and supplies the critic target. Huber critic loss, clipped detached TD errors, entropy regularization, separate optimizers, and global gradient clipping keep updates stable. GPU memory growth is enabled before model construction when GPUs are available. This folder is self-contained and does not import implementation code from sibling folders or the repository root.
 
 Default environment, model, optimizer, training, checkpoint, logging, plotting, and TensorFlow settings are centralized in `config.py`. Command-line arguments can override the run-specific defaults without editing the file.
 
@@ -86,7 +86,7 @@ results/<environment>/
 └── test.gif
 ```
 
-The default final figure contains training reward, a 20-episode moving reward average, policy loss, episode length, and evaluation rewards. Checkpoints are selected by recent average reward instead of one lucky episode. After evaluation, `test.gif` records the highest-reward deterministic episode from `GIF_TEST_EPISODES` candidate seeds. GIF settings are available in `config.py`. Select another results root with `--output-dir`:
+The default final figure contains training reward, the configured moving reward average, policy loss, episode length, and evaluation rewards. Checkpoints are selected by recent average reward instead of one lucky episode. After evaluation, `test.gif` records the highest-reward deterministic episode from `GIF_TEST_EPISODES` candidate seeds. GIF settings are available in `config.py`. Select another results root with `--output-dir`:
 
 ```bash
 sh run.sh train --output-dir experiment_results
@@ -115,6 +115,18 @@ Override it when necessary:
 ```bash
 PYTHON=python3 sh run.sh train
 ```
+
+## GPU selection
+
+Use one physical GPU for training or inference:
+
+```bash
+sh run.sh train --gpu 0
+sh run.sh train --gpu 1
+sh run.sh inference --env CartPole-v1 --gpu 0
+```
+
+Use `--gpu -1` to force CPU execution. GPU 0 is the default, and an unavailable index fails before model construction.
 
 ## Validation scope
 

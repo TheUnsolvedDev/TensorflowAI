@@ -10,14 +10,19 @@ import agent
 import config
 
 
-def configure_tensorflow():
-    if not config.ENABLE_GPU_MEMORY_GROWTH:
+def configure_tensorflow(gpu_index):
+    gpus = tf.config.list_physical_devices("GPU")
+    if gpu_index < 0:
+        tf.config.set_visible_devices([], "GPU")
+        print("device=CPU")
         return
-    for gpu in tf.config.list_physical_devices("GPU"):
-        try:
-            tf.config.experimental.set_memory_growth(gpu, True)
-        except RuntimeError:
-            pass
+    if gpu_index >= len(gpus):
+        raise ValueError(f"GPU {gpu_index} is unavailable; detected {len(gpus)} GPU(s)")
+    selected_gpu = gpus[gpu_index]
+    tf.config.set_visible_devices(selected_gpu, "GPU")
+    if config.ENABLE_GPU_MEMORY_GROWTH:
+        tf.config.experimental.set_memory_growth(selected_gpu, True)
+    print(f"device=GPU:{gpu_index} name={selected_gpu.name}")
 
 
 def make_agent(environment):
@@ -56,18 +61,24 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_envs, rollout_steps
         rollout_states = []
         rollout_actions = []
         rollout_rewards = []
-        rollout_dones = []
+        rollout_terminated = []
+        rollout_truncated = []
         rollout_next_states = []
         completed = []
         for _ in range(rollout_steps):
             actions = policy.act(states)
-            next_states, rewards, terminated, truncated, _ = environment.step(actions)
+            next_states, rewards, terminated, truncated, infos = environment.step(actions)
             dones = np.logical_or(terminated, truncated)
+            learning_next_states = next_states.copy()
+            if "final_obs" in infos:
+                for index in np.flatnonzero(infos["_final_obs"]):
+                    learning_next_states[index] = infos["final_obs"][index]
             rollout_states.append(states)
             rollout_actions.append(actions)
             rollout_rewards.append(rewards)
-            rollout_dones.append(dones)
-            rollout_next_states.append(next_states)
+            rollout_terminated.append(terminated)
+            rollout_truncated.append(truncated)
+            rollout_next_states.append(learning_next_states)
             episode_rewards += rewards
             episode_lengths += 1
             for index in np.flatnonzero(dones):
@@ -80,7 +91,8 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_envs, rollout_steps
             np.asarray(rollout_states, dtype=np.float32),
             np.asarray(rollout_actions, dtype=np.float32 if policy.continuous else np.int32),
             np.asarray(rollout_rewards, dtype=np.float32),
-            np.asarray(rollout_dones, dtype=np.float32),
+            np.asarray(rollout_terminated, dtype=np.float32),
+            np.asarray(rollout_truncated, dtype=np.float32),
             np.asarray(rollout_next_states, dtype=np.float32),
         )
         for total_reward, episode_length in completed:
@@ -88,7 +100,7 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_envs, rollout_steps
                 break
             episode = len(history) + 1
             history.append((episode, total_reward, episode_length, loss))
-            average_reward = np.mean([row[1] for row in history[-20:]])
+            average_reward = np.mean([row[1] for row in history[-config.MOVING_AVERAGE_WINDOW:]])
             if len(history) < config.MOVING_AVERAGE_WINDOW or average_reward > best_average:
                 best_average = average_reward
                 policy.save(checkpoint)
@@ -237,6 +249,7 @@ def main():
     parser.add_argument("--episodes", type=int)
     parser.add_argument("--test-episodes", type=int)
     parser.add_argument("--seed", type=int, default=config.SEED)
+    parser.add_argument("--gpu", type=int, default=config.DEFAULT_GPU)
     parser.add_argument("--checkpoint")
     parser.add_argument("--log-every", type=int, default=config.LOG_EVERY)
     parser.add_argument("--output-dir", default=config.OUTPUT_DIR)
@@ -249,7 +262,7 @@ def main():
     args.rollout_steps = args.rollout_steps or config.ROLLOUT_STEPS
     if min(args.episodes, args.test_episodes, args.log_every, args.num_envs, args.rollout_steps) < 1:
         parser.error("episode counts, logging, environments, and rollout steps must be positive")
-    configure_tensorflow()
+    configure_tensorflow(args.gpu)
     checkpoint = args.checkpoint or checkpoint_path(args.env)
     history = train(
         args.env,

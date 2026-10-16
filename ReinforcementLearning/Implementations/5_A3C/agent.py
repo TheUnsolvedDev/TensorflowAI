@@ -1,5 +1,3 @@
-import threading
-
 import numpy as np
 import tensorflow as tf
 
@@ -27,7 +25,7 @@ class GlobalAgent:
         self.optimizer = tf.keras.optimizers.RMSprop(
             learning_rate=config.LEARNING_RATE, rho=config.RMSPROP_RHO, epsilon=config.RMSPROP_EPSILON
         )
-        self.update_lock = threading.Lock()
+        self.optimizer.build(self.model.trainable_variables)
 
     @tf.function(reduce_retracing=True)
     def _act(self, state):
@@ -44,13 +42,11 @@ class GlobalAgent:
         return (np.tanh(raw) * self.action_scale.numpy() + self.action_bias.numpy()).astype(np.float32)
 
     def apply_gradients(self, gradients):
-        with self.update_lock:
-            self.optimizer.apply_gradients(zip(gradients, self.model.trainable_variables))
-            return self.model.get_weights()
+        self.optimizer.apply_gradients(zip(gradients, self.model.trainable_variables))
+        return self.model.get_weights()
 
     def save(self, path):
-        with self.update_lock:
-            self.model.save_weights(path)
+        self.model.save_weights(path)
 
     def load(self, path):
         self.model.load_weights(path)
@@ -115,8 +111,8 @@ class WorkerAgent:
         gradients, _ = tf.clip_by_global_norm(gradients, config.GRADIENT_CLIP_NORM)
         return gradients, loss
 
-    def learn(self, states, actions, rewards, done, next_state, global_agent):
-        if done:
+    def learn(self, states, actions, rewards, terminated, next_state, global_agent):
+        if terminated:
             running = 0.0
         else:
             output = self.model(tf.expand_dims(tf.convert_to_tensor(next_state, tf.float32), 0), training=False)
