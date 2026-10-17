@@ -25,6 +25,8 @@ Training uses one agent run. A generator initialized by `--seed` produces a fres
 
 `ENVIRONMENT_CONFIGS` supplies environment-specific episode, discount, and entropy settings without changing the Actor-Critic update.
 
+Acrobot and both MountainCar variants use potential-based rewards only for learning. Logged and evaluated rewards remain the original Gymnasium rewards.
+
 ## Requirements
 
 - Python 3.10 or newer

@@ -30,7 +30,7 @@ class A2CAgent:
             if training:
                 return tf.squeeze(tf.random.categorical(tf.math.log(probabilities + 1e-8), 1), axis=1)
             return tf.argmax(probabilities, axis=1, output_type=tf.int64)
-        mean, log_std = output[0], tf.clip_by_value(output[1], -5.0, 2.0)
+        mean, log_std = output[0], tf.clip_by_value(output[1], config.LOG_STD_MIN, config.LOG_STD_MAX)
         raw = mean + tf.random.normal(tf.shape(mean)) * tf.exp(log_std) if training else mean
         return tf.tanh(raw) * self.action_scale + self.action_bias
 
@@ -50,7 +50,7 @@ class A2CAgent:
             selected = tf.gather(probabilities, tf.cast(actions, tf.int32), batch_dims=1)
             entropy = -tf.reduce_mean(tf.reduce_sum(probabilities * tf.math.log(probabilities), axis=1))
             return tf.math.log(selected), entropy
-        mean, log_std = output[0], tf.clip_by_value(output[1], -5.0, 2.0)
+        mean, log_std = output[0], tf.clip_by_value(output[1], config.LOG_STD_MIN, config.LOG_STD_MAX)
         squashed = tf.clip_by_value((actions - self.action_bias) / self.action_scale, -0.999999, 0.999999)
         raw = tf.atanh(squashed)
         normal_log_probability = -0.5 * (

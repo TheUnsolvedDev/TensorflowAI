@@ -6,8 +6,8 @@ import model
 
 
 class PolicyAgent:
-    def __init__(self, observation_shape, action_space, gamma=config.GAMMA):
-        self.gamma = gamma
+    def __init__(self, observation_shape, action_space, gamma=None):
+        self.gamma = config.GAMMA if gamma is None else gamma
         self.continuous = hasattr(action_space, "low")
         self.action_size = int(np.prod(action_space.shape)) if self.continuous else action_space.n
         if self.continuous:
@@ -34,7 +34,7 @@ class PolicyAgent:
         mean, log_std = output
         raw = mean.numpy()[0]
         if training:
-            raw += np.random.normal(size=self.action_size) * np.exp(np.clip(log_std.numpy()[0], -5.0, 2.0))
+            raw += np.random.normal(size=self.action_size) * np.exp(np.clip(log_std.numpy()[0], config.LOG_STD_MIN, config.LOG_STD_MAX))
         return (np.tanh(raw) * self.action_scale.numpy() + self.action_bias.numpy()).astype(np.float32)
 
     def remember(self, state, action, reward):
@@ -43,7 +43,7 @@ class PolicyAgent:
         self.rewards.append(reward)
 
     def continuous_log_probability(self, mean, log_std, actions):
-        log_std = tf.clip_by_value(log_std, -5.0, 2.0)
+        log_std = tf.clip_by_value(log_std, config.LOG_STD_MIN, config.LOG_STD_MAX)
         squashed = tf.clip_by_value((actions - self.action_bias) / self.action_scale, -0.999999, 0.999999)
         raw = tf.atanh(squashed)
         log_probability = -0.5 * (

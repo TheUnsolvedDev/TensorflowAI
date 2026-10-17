@@ -10,6 +10,7 @@ import tensorflow as tf
 
 import agent
 import config
+from env import make_training_env
 
 
 def configure_tensorflow(gpu_index):
@@ -67,7 +68,7 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_workers, rollout_st
             return state["started"]
 
     def worker(worker_id):
-        environment = gym.make(env_id)
+        environment = make_training_env(env_id, config.GAMMA)
         worker_seed = int(worker_seeds[worker_id])
         environment_seed_generator = np.random.default_rng(worker_seed)
         local = agent.WorkerAgent(
@@ -89,13 +90,13 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_workers, rollout_st
                 rewards = []
                 for _ in range(rollout_steps):
                     action = local.act(observation)
-                    next_observation, reward, terminated, truncated, _ = environment.step(action)
+                    next_observation, reward, terminated, truncated, info = environment.step(action)
                     done = terminated or truncated
                     states.append(observation)
                     actions.append(action)
                     rewards.append(reward)
                     observation = next_observation
-                    total_reward += reward
+                    total_reward += info.get("raw_reward", reward)
                     episode_length += 1
                     if done:
                         break
@@ -114,13 +115,15 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_workers, rollout_st
                 episode = len(history) + 1
                 history.append((episode, total_reward, episode_length, loss))
                 average_reward = np.mean([row[1] for row in history[-config.MOVING_AVERAGE_WINDOW:]])
-                if len(history) < config.MOVING_AVERAGE_WINDOW or average_reward > state["best_average"]:
+                if episode == 1:
+                    policy.save(checkpoint)
+                if len(history) >= config.MOVING_AVERAGE_WINDOW and average_reward > state["best_average"]:
                     state["best_average"] = average_reward
                     policy.save(checkpoint)
                 if episode == 1 or episode % log_every == 0 or episode == episodes:
                     print(
                         f"{episode:8d} {total_reward:10.2f} {average_reward:10.2f} "
-                        f"{episode_length:8d} {loss:10.4f} {state['best_average']:10.2f}"
+                        f"{episode_length:8d} {loss:10.4f} {max(state['best_average'], average_reward):10.2f}"
                     )
         environment.close()
 

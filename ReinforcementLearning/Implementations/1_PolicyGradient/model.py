@@ -24,7 +24,7 @@ def continuous_policy_model(observation_shape, action_size):
     log_std = tf.keras.layers.Dense(
         action_size,
         kernel_initializer="zeros",
-        bias_initializer=tf.keras.initializers.Constant(-0.5),
+        bias_initializer=tf.keras.initializers.Constant(-0.2),
         name="log_std",
     )(features)
     return tf.keras.Model(inputs, [mean, log_std])

@@ -17,13 +17,15 @@ A synchronous advantage actor-critic implementation using parallel environments 
     └── settings.py
 ```
 
-The shared actor-value network in `model.py` uses the TensorFlow Keras Functional API. Eight synchronous environments collect 64-step rollouts by default. Bootstrapped n-step returns train the value head, while the policy head uses standardized return-minus-value advantages across each rollout batch. Action selection and batched RMSprop updates are compiled with `tf.function`; Huber value loss, clipped detached advantages, entropy regularization, and global gradient clipping keep updates stable. GPU memory growth is enabled before model construction when GPUs are available. This folder is self-contained and does not import implementation code from sibling folders or the repository root.
+The shared actor-value network in `model.py` uses the TensorFlow Keras Functional API. Eight synchronous environments collect short environment-specific rollouts. Bootstrapped n-step returns train the value head, while the policy head uses standardized return-minus-value advantages across each rollout batch. Action selection and batched RMSprop updates are compiled with `tf.function`; Huber value loss, clipped detached advantages, entropy regularization, and global gradient clipping keep updates stable. GPU memory growth is enabled before model construction when GPUs are available. This folder is self-contained and does not import implementation code from sibling folders or the repository root.
 
 Default environment, model, optimizer, training, checkpoint, logging, plotting, and TensorFlow settings are centralized in `config.py`. Command-line arguments can override the run-specific defaults without editing the file.
 
 Training uses one agent run. A generator initialized by `--seed` produces a fresh random environment seed for every explicit episode reset. Vector environments and A3C workers receive independent random streams. This exposes the agent to varied initial states while keeping the full run reproducible. Evaluation and GIF seeds remain separate from training.
 
 `ENVIRONMENT_CONFIGS` supplies environment-specific episode, discount, entropy, and rollout settings without changing the A2C update.
+
+Acrobot and both MountainCar variants use potential-based rewards only for learning. Logged and evaluated rewards remain the original Gymnasium rewards.
 
 ## Requirements
 

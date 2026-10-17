@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 GPU="${GPU:--1}"
-DATASETS="${DATASETS:-mnist fashion_mnist cifar10}"
+DATASETS="${DATASETS:-mnist fashion_mnist cifar10 celeba bedroom}"
 RESUME="${RESUME:-0}"
 
 extra_args=()

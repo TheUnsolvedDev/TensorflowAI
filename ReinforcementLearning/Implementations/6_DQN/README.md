@@ -32,6 +32,8 @@ The launcher trains these discrete-action, vector-observation environments:
 
 `ENVIRONMENT_CONFIGS` in `config.py` provides environment-specific episode budgets, discount factors, replay warmup, epsilon decay, and target update intervals. LunarLander requires Gymnasium's Box2D dependencies.
 
+Acrobot and MountainCar use potential-based rewards only for replay learning. Logged and evaluated returns remain original Gymnasium scores. Batch size, replay warmup, exploration decay, target updates, and learning rate are tuned independently per environment.
+
 ## Requirements
 
 - Python 3.10 or newer

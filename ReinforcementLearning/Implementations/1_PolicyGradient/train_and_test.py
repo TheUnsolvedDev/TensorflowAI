@@ -8,6 +8,7 @@ import tensorflow as tf
 
 import agent
 import config
+from env import make_training_env
 
 
 def configure_tensorflow(gpu_index):
@@ -43,7 +44,8 @@ def train(env_id, episodes, seed, checkpoint, log_every):
     np.random.seed(seed)
     tf.random.set_seed(seed)
     seed_generator = np.random.default_rng(seed)
-    environment = gym.make(env_id)
+    config.apply_environment(env_id)
+    environment = make_training_env(env_id, config.GAMMA)
     policy = make_agent(environment)
     Path(checkpoint).parent.mkdir(parents=True, exist_ok=True)
     best_average = -np.inf
@@ -57,22 +59,24 @@ def train(env_id, episodes, seed, checkpoint, log_every):
         done = False
         while not done:
             action = policy.act(state)
-            next_state, reward, terminated, truncated, _ = environment.step(action)
+            next_state, reward, terminated, truncated, info = environment.step(action)
             policy.remember(state, action, reward)
             state = next_state
-            total_reward += reward
+            total_reward += info.get("raw_reward", reward)
             episode_length += 1
             done = terminated or truncated
         loss = policy.learn()
         history.append((episode, total_reward, episode_length, loss))
         average_reward = np.mean([row[1] for row in history[-config.MOVING_AVERAGE_WINDOW:]])
-        if len(history) < config.MOVING_AVERAGE_WINDOW or average_reward > best_average:
+        if episode == 1:
+            policy.save(checkpoint)
+        if len(history) >= config.MOVING_AVERAGE_WINDOW and average_reward > best_average:
             best_average = average_reward
             policy.save(checkpoint)
         if episode == 1 or episode % log_every == 0 or episode == episodes:
             print(
                 f"{episode:8d} {total_reward:10.2f} {average_reward:10.2f} "
-                f"{history[-1][2]:8d} {loss:10.4f} {best_average:10.2f}"
+                f"{history[-1][2]:8d} {loss:10.4f} {max(best_average, average_reward):10.2f}"
             )
     environment.close()
     return history

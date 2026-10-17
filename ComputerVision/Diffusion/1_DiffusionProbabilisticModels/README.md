@@ -1,9 +1,5 @@
 # 1. DiffusionProbabilisticModels
 
-> **Current status:** architecture/configuration scaffold. `dataset.py` and
-> `train_and_test.py` contain explicit placeholder paths, so this is not a
-> verified end-to-end training workflow in the tracked checkout.
-
 Minimal trainable DDPM forward/reverse diffusion baseline with a compact convolutional denoiser.
 
 ## What This Folder Implements
@@ -12,7 +8,7 @@ Implements the original diffusion idea in repo-scale form rather than a large mo
 
 ## Files
 
-- `config.py` for dataset roots, diffusion settings, cache behavior, and conservative multi-GPU defaults
+- `config.py` for dataset roots, diffusion settings, and conservative multi-GPU defaults
 - `dataset.py` for folder-local dataset loading and preprocessing
 - `model.py` for the standalone architecture and training logic for this algorithm only
 - `train_and_test.py` for CLI, MirroredStrategy setup, resume logic, checkpoints, and sample generation
@@ -23,6 +19,12 @@ Implements the original diffusion idea in repo-scale form rather than a large mo
 - `mnist`
 - `fashion_mnist`
 - `cifar10`
+- `celeba`
+- `bedroom`
+
+MNIST, Fashion-MNIST, and CIFAR-10 default to 32px with batch size 32. CelebA
+and bedroom default to 128px with batch size 8. Each resolution has a separate
+checkpoint directory.
 
 ## Run
 
@@ -45,6 +47,7 @@ For the shell launcher, fresh training is the default; resume explicitly with `R
 
 ```bash
 DATASETS=mnist bash run.sh --reset
+DATASETS="celeba bedroom" bash run.sh --reset
 RESUME=1 DATASETS=mnist bash run.sh
 ```
 
@@ -57,6 +60,7 @@ python train_and_test.py --gpu -1 --type mnist --verify-sampler
 ## Practical Notes
 
 - This folder is standalone and does not import runtime helpers from sibling folders.
+- Images are streamed and prefetched; no dataset cache is written to disk.
 - Sampling uses the exact DDPM reverse chain over every configured diffusion timestep, with posterior variance and a deterministic final (`t=0`) step.
 - Multi-GPU setup follows the same practical `MirroredStrategy(...NcclAllReduce())` pattern used in neighboring repo families.
 - The implementation is scoped for local training and architecture recognizability rather than full paper-scale reproduction.

@@ -46,6 +46,10 @@ def residual_block(x, time_embedding, channels, name, dropout_rate=0.0):
 def attention_block(x, channels, name):
     residual = x
     x = tf.keras.layers.LayerNormalization(epsilon=1e-5, name=f"{name}_ln")(x)
+    original_size = (residual.shape[1], residual.shape[2])
+    reduction = max(original_size[0] // 16, 1)
+    if reduction > 1:
+        x = tf.keras.layers.AveragePooling2D(reduction, name=f"{name}_pool")(x)
     x = tf.keras.layers.Reshape((-1, channels), name=f"{name}_flatten")(x)
     x = tf.keras.layers.MultiHeadAttention(
         num_heads=4,
@@ -53,9 +57,10 @@ def attention_block(x, channels, name):
         output_shape=channels,
         name=f"{name}_mha",
     )(x, x)
-    spatial = residual.shape[1] * residual.shape[2]
-    x = tf.keras.layers.Reshape((residual.shape[1], residual.shape[2], channels), name=f"{name}_unflatten")(x)
-    del spatial
+    attention_size = (original_size[0] // reduction, original_size[1] // reduction)
+    x = tf.keras.layers.Reshape((*attention_size, channels), name=f"{name}_unflatten")(x)
+    if reduction > 1:
+        x = tf.keras.layers.Resizing(*original_size, interpolation="bilinear", name=f"{name}_resize")(x)
     return tf.keras.layers.Add(name=f"{name}_out")([x, residual])
 
 

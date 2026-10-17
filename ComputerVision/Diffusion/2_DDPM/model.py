@@ -1,8 +1,20 @@
+import math
 import sys
 
 import tensorflow as tf
 
 from config import *
+
+
+def make_beta_schedule():
+    if NOISE_SCHEDULE == "linear":
+        return tf.cast(tf.linspace(BETA_START, BETA_END, DIFFUSION_STEPS), tf.float32)
+    if NOISE_SCHEDULE != "cosine":
+        raise ValueError(f"Unknown noise schedule: {NOISE_SCHEDULE}")
+    steps = tf.linspace(0.0, 1.0, DIFFUSION_STEPS + 1)
+    alpha_bars = tf.cos((steps + 0.008) / 1.008 * math.pi / 2.0) ** 2
+    alpha_bars /= alpha_bars[0]
+    return tf.clip_by_value(1.0 - alpha_bars[1:] / alpha_bars[:-1], 1e-5, 0.999)
 
 
 class TimeEmbedding(tf.keras.layers.Layer):
@@ -18,6 +30,46 @@ class TimeEmbedding(tf.keras.layers.Layer):
         angles = tf.cast(timesteps[:, None], tf.float32) * freqs[None, :]
         embedding = tf.concat([tf.sin(angles), tf.cos(angles)], axis=-1)
         return self.proj2(self.proj1(embedding))
+
+
+class ResidualBlock(tf.keras.layers.Layer):
+    def __init__(self, channels):
+        super().__init__()
+        self.channels = channels
+        self.norm1 = tf.keras.layers.LayerNormalization(axis=-1)
+        self.conv1 = tf.keras.layers.Conv2D(channels, 3, padding="same")
+        self.time_projection = tf.keras.layers.Dense(channels)
+        self.norm2 = tf.keras.layers.LayerNormalization(axis=-1)
+        self.conv2 = tf.keras.layers.Conv2D(channels, 3, padding="same", kernel_initializer="zeros")
+        self.skip = None
+
+    def build(self, input_shape):
+        if input_shape[-1] != self.channels:
+            self.skip = tf.keras.layers.Conv2D(self.channels, 1, padding="same")
+        super().build(input_shape)
+
+    def call(self, inputs, time_embedding, training=False):
+        residual = self.skip(inputs) if self.skip is not None else inputs
+        x = self.conv1(tf.nn.swish(self.norm1(inputs)))
+        x += self.time_projection(tf.nn.swish(time_embedding))[:, None, None, :]
+        x = self.conv2(tf.nn.swish(self.norm2(x)))
+        return x + residual
+
+
+class SpatialAttention(tf.keras.layers.Layer):
+    def __init__(self, channels):
+        super().__init__()
+        self.norm = tf.keras.layers.LayerNormalization(axis=-1)
+        self.attention = tf.keras.layers.MultiHeadAttention(
+            num_heads=4, key_dim=max(channels // 4, 1)
+        )
+
+    def call(self, inputs, training=False):
+        shape = tf.shape(inputs)
+        x = self.norm(inputs)
+        x = tf.reshape(x, (shape[0], shape[1] * shape[2], shape[3]))
+        x = self.attention(x, x, training=training)
+        return inputs + tf.reshape(x, shape)
 
 
 class TextEncoder(tf.keras.Model):
@@ -87,25 +139,35 @@ class CLIPLikeEncoder(tf.keras.Model):
 
 
 class DiffusionBackbone(tf.keras.Model):
-    def __init__(self, channels, output_channels, conditioning_dim=0, use_control=False):
+    def __init__(self, channels, output_channels, image_size, conditioning_dim=0, use_control=False):
         super().__init__()
         self.channels = channels
-        self.time_embedding = TimeEmbedding(TIME_EMBED_DIM)
-        self.time_projection = tf.keras.layers.Dense(channels)
+        levels = max(2, min(5, int(math.log2(image_size)) - 3))
+        self.level_channels = [channels * min(2 ** level, 4) for level in range(levels)]
+        self.time_embedding = TimeEmbedding(channels * 4)
         self.condition_projection = tf.keras.layers.Dense(channels) if conditioning_dim else None
         self.control_projection = tf.keras.layers.Conv2D(channels, 1, padding="same") if use_control else None
         self.input_projection = tf.keras.layers.Conv2D(channels, 3, padding="same")
-        self.down1 = tf.keras.layers.Conv2D(channels, 3, padding="same", activation="swish")
-        self.down2 = tf.keras.layers.Conv2D(channels * 2, 3, strides=2, padding="same", activation="swish")
-        self.mid = tf.keras.layers.Conv2D(channels * 2, 3, padding="same", activation="swish")
-        self.attn = tf.keras.layers.MultiHeadAttention(num_heads=4, key_dim=max(channels // 2, 1))
-        self.up = tf.keras.layers.Conv2DTranspose(channels, 4, strides=2, padding="same", activation="swish")
-        self.skip_projection = tf.keras.layers.Conv2D(channels, 1, padding="same", activation="swish")
-        self.out = tf.keras.layers.Conv2D(output_channels, 3, padding="same")
+        self.down_blocks = [ResidualBlock(width) for width in self.level_channels]
+        self.downsamples = [
+            tf.keras.layers.Conv2D(self.level_channels[index + 1], 3, strides=2, padding="same")
+            for index in range(levels - 1)
+        ]
+        self.mid1 = ResidualBlock(self.level_channels[-1])
+        self.mid_attention = SpatialAttention(self.level_channels[-1])
+        self.mid2 = ResidualBlock(self.level_channels[-1])
+        self.upsamples = [
+            tf.keras.layers.Conv2DTranspose(self.level_channels[index], 4, strides=2, padding="same")
+            for index in range(levels - 2, -1, -1)
+        ]
+        self.up_blocks = [
+            ResidualBlock(self.level_channels[index]) for index in range(levels - 2, -1, -1)
+        ]
+        self.out_norm = tf.keras.layers.LayerNormalization(axis=-1)
+        self.out = tf.keras.layers.Conv2D(output_channels, 3, padding="same", kernel_initializer="zeros")
 
     def call(self, noisy_inputs, timesteps, cond_vector=None, control=None, training=False):
-        time_emb = self.time_projection(self.time_embedding(timesteps))
-        time_map = tf.reshape(time_emb, (-1, 1, 1, self.channels))
+        time_emb = self.time_embedding(timesteps)
         x = self.input_projection(noisy_inputs)
         if self.condition_projection is not None and cond_vector is not None:
             cond_map = tf.reshape(self.condition_projection(cond_vector), (-1, 1, 1, self.channels))
@@ -113,17 +175,19 @@ class DiffusionBackbone(tf.keras.Model):
         if self.control_projection is not None and control is not None:
             control_resized = tf.image.resize(control, tf.shape(noisy_inputs)[1:3])
             x = x + self.control_projection(control_resized)
-        x = x + tf.image.resize(time_map, tf.shape(x)[1:3])
-        skip = self.down1(x)
-        x = self.down2(skip)
-        x = self.mid(x)
-        shape = tf.shape(x)
-        flat = tf.reshape(x, (shape[0], shape[1] * shape[2], shape[3]))
-        flat = self.attn(flat, flat, training=training)
-        x = tf.reshape(flat, shape)
-        x = self.up(x)
-        x = self.skip_projection(tf.concat([x, skip], axis=-1))
-        return self.out(x)
+        skips = []
+        for index, block in enumerate(self.down_blocks):
+            x = block(x, time_emb, training=training)
+            skips.append(x)
+            if index < len(self.downsamples):
+                x = self.downsamples[index](x)
+        x = self.mid1(x, time_emb, training=training)
+        x = self.mid_attention(x, training=training)
+        x = self.mid2(x, time_emb, training=training)
+        for upsample, block, skip in zip(self.upsamples, self.up_blocks, reversed(skips[:-1])):
+            x = upsample(x)
+            x = block(tf.concat([x, skip], axis=-1), time_emb, training=training)
+        return self.out(tf.nn.swish(self.out_norm(x)))
 
 
 class BaseDiffusionModel(tf.keras.Model):
@@ -139,7 +203,7 @@ class BaseDiffusionModel(tf.keras.Model):
         self.use_consistency = use_consistency
         self.model_label = model_label
         self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
-        self.betas = tf.cast(tf.linspace(BETA_START, BETA_END, DIFFUSION_STEPS), tf.float32)
+        self.betas = make_beta_schedule()
         self.alphas = 1.0 - self.betas
         self.alpha_bars = tf.math.cumprod(self.alphas)
         self.alpha_bars_prev = tf.concat([tf.ones((1,), dtype=tf.float32), self.alpha_bars[:-1]], axis=0)
@@ -165,9 +229,9 @@ class BaseDiffusionModel(tf.keras.Model):
                 self.prior_optimizer = tf.keras.optimizers.Adam(PRIOR_LEARNING_RATE)
             output_channels = input_shape[-1] * (2 if USE_LEARNED_VARIANCE else 1)
             conditioning_dim = EMBED_DIM if (self.use_text or self.use_clip) else 0
-            self.denoiser = DiffusionBackbone(BASE_CHANNELS, output_channels, conditioning_dim=conditioning_dim, use_control=self.use_control)
-            self.denoiser_optimizer = tf.keras.optimizers.Adam(DENOISER_LEARNING_RATE)
-            self.consistency_model = DiffusionBackbone(BASE_CHANNELS, input_shape[-1]) if self.use_consistency else None
+            self.denoiser = DiffusionBackbone(BASE_CHANNELS, output_channels, input_shape[0], conditioning_dim=conditioning_dim, use_control=self.use_control)
+            self.denoiser_optimizer = tf.keras.optimizers.Adam(DENOISER_LEARNING_RATE, clipnorm=1.0)
+            self.consistency_model = DiffusionBackbone(BASE_CHANNELS, input_shape[-1], input_shape[0]) if self.use_consistency else None
             self.consistency_optimizer = tf.keras.optimizers.Adam(CONSISTENCY_LEARNING_RATE) if self.use_consistency else None
             self.mse = tf.keras.losses.MeanSquaredError()
             self.mae = tf.keras.losses.MeanAbsoluteError()

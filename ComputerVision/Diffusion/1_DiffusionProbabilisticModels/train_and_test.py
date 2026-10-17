@@ -13,13 +13,16 @@ import tensorflow as tf
 
 from config import (
     BATCH_SIZE,
+    DEFAULT_BATCH_SIZES,
     DEFAULT_DATASET,
+    DEFAULT_IMAGE_SIZES,
     DIFFUSION_STEPS,
     EPOCHS,
     IMAGE_SIZE,
     SAMPLE_EVERY_N_EPOCHS,
     SAVE_EVERY_N_EPOCHS,
     SUPPORTED_DATASETS,
+    SUPPORTED_IMAGE_SIZES,
 )
 from dataset import Dataset
 from model import BaseDiffusionModel
@@ -57,8 +60,8 @@ def get_state_path(log_dir):
     return os.path.join(log_dir, "training_state.json")
 
 
-def get_log_dir(dataset_type):
-    return os.path.join("logs", dataset_type, MODEL_NAME, "diffusion")
+def get_log_dir(dataset_type, image_size):
+    return os.path.join("logs", dataset_type, f"{MODEL_NAME}_{image_size}px", "diffusion")
 
 
 def reset_run(log_dir):
@@ -91,9 +94,10 @@ def verify_ddpm_sampler(model):
     print("DDPM sampler verification passed.")
 
 
-def save_training_state(log_dir, epoch):
+def save_training_state(log_dir, epoch, image_size):
     with open(get_state_path(log_dir), "w") as handle:
-        json.dump({"epoch": epoch, "schedule": "cosine", "diffusion_steps": DIFFUSION_STEPS}, handle)
+        json.dump({"epoch": epoch, "schedule": "cosine", "diffusion_steps": DIFFUSION_STEPS,
+                   "image_size": image_size}, handle)
 
 
 def load_training_state(log_dir):
@@ -116,7 +120,9 @@ def load_weights_if_needed(model, log_dir, resume):
     if os.path.exists(state_path):
         with open(state_path, "r") as handle:
             state = json.load(handle)
-        if state.get("schedule") != "cosine" or state.get("diffusion_steps") != DIFFUSION_STEPS:
+        if (state.get("schedule") != "cosine" or
+                state.get("diffusion_steps") != DIFFUSION_STEPS or
+                state.get("image_size") != model.input_shape_value[0]):
             print("Saved weights use an incompatible diffusion schedule. Starting fresh.")
             return False
     weight_path = get_weight_path(log_dir)
@@ -204,7 +210,7 @@ class WeightSaveCallback(tf.keras.callbacks.Callback):
         if not should_run_periodic_callback(self, epoch, SAVE_EVERY_N_EPOCHS):
             return
         save_weights(self.model_ref, self.log_dir)
-        save_training_state(self.log_dir, epoch + 1)
+        save_training_state(self.log_dir, epoch + 1, self.model_ref.input_shape_value[0])
         print(f"Saved weights and state at epoch {epoch + 1}")
 
 
@@ -227,8 +233,8 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
         )
 
 
-def build_model(strategy, channels):
-    return BaseDiffusionModel(strategy, (IMAGE_SIZE[0], IMAGE_SIZE[1], channels), BATCH_SIZE, model_label=MODEL_NAME)
+def build_model(strategy, channels, image_size, batch_size):
+    return BaseDiffusionModel(strategy, (image_size, image_size, channels), batch_size, model_label=MODEL_NAME)
 
 
 def main():
@@ -240,20 +246,27 @@ def main():
     run_mode.add_argument("--reset", action="store_true", help="Delete this dataset run before training.")
     parser.add_argument("--verify-sampler", action="store_true", help="Run DDPM reverse-process regression checks and exit.")
     parser.add_argument("--sample-count", type=int, default=4)
+    parser.add_argument("--image-size", type=int, choices=SUPPORTED_IMAGE_SIZES)
+    parser.add_argument("--batch-size", type=int)
     args = parser.parse_args()
 
+    image_size = args.image_size or DEFAULT_IMAGE_SIZES[args.type]
+    batch_size = args.batch_size or DEFAULT_BATCH_SIZES[args.type]
+
     setup_gpu(args.gpu)
-    dataset = Dataset()
+    dataset = Dataset((image_size, image_size), batch_size)
     strategy = build_strategy()
     channels = 1 if args.type in {"mnist", "fashion_mnist"} else 3
-    model = build_model(strategy, channels)
+    if batch_size % strategy.num_replicas_in_sync:
+        parser.error(f"--batch-size must be divisible by the {strategy.num_replicas_in_sync} active replicas")
+    model = build_model(strategy, channels, image_size, batch_size)
     if args.verify_sampler:
         verify_ddpm_sampler(model)
         return
 
     train_ds, channels = dataset.load_data(args.type)
     distributed_ds = strategy.experimental_distribute_dataset(train_ds)
-    log_dir = get_log_dir(args.type)
+    log_dir = get_log_dir(args.type, image_size)
     if args.reset or not args.resume:
         reset_run(log_dir)
     os.makedirs(log_dir, exist_ok=True)
@@ -277,17 +290,14 @@ def main():
             steps_per_epoch=len(train_ds),
         )
         save_weights(model, log_dir)
-        save_training_state(log_dir, EPOCHS)
+        save_training_state(log_dir, EPOCHS, image_size)
     except KeyboardInterrupt:
         current_epoch = getattr(model, "_current_epoch", start_epoch)
         print(f"\nSaving interrupt checkpoint at epoch {current_epoch}...")
         save_weights(model, log_dir)
-        save_training_state(log_dir, current_epoch)
+        save_training_state(log_dir, current_epoch, image_size)
         print("Interrupt checkpoint saved.")
         raise
-
-    dataset.cleanup_cache()
-
 
 if __name__ == "__main__":
     main()

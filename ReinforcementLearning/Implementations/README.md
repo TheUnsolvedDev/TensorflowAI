@@ -46,6 +46,8 @@ They provide TensorFlow Functional models, compiled `tf.function` hot paths, GPU
 
 The DQN family uses preallocated NumPy replay storage. DQN, Double DQN, and Dueling DQN use direct uniform sampling. PER DQN and Rainbow use sum/min segment trees, stratified priority sampling, and importance weights.
 
+For folders 6–10, Acrobot and MountainCar use potential-based rewards during training. Original Gymnasium rewards remain the source of checkpoint selection, CSV metrics, plots, GIF scores, and evaluation results.
+
 ## Supported environments
 
 Folders 1–5 support both discrete and continuous vector environments:
@@ -64,6 +66,18 @@ Folders 1–5 support both discrete and continuous vector environments:
 Folders 6–10 support the discrete environments `CartPole-v1`, `Acrobot-v1`, `MountainCar-v0`, and `LunarLander-v3`.
 
 Box2D environments require the corresponding optional Gymnasium dependencies.
+
+For implementations 1–5, Acrobot and both MountainCar variants use potential-based rewards during training to expose progress before terminal success. Checkpoints, CSV metrics, plots, GIFs, and evaluation always use the original Gymnasium reward.
+
+| Environment | Supported by 1–5 | Expected baseline fit |
+|---|---:|---|
+| CartPole, Acrobot | Yes | Good |
+| MountainCar | Yes | Difficult; shaped training reward |
+| Pendulum | Yes | Moderate |
+| MountainCarContinuous | Yes | Difficult; shaped training reward |
+| LunarLander | Yes | Moderate |
+| LunarLanderContinuous | Actor-Critic, A2C, A3C | Difficult |
+| BipedalWalker | Actor-Critic, A2C, A3C | Difficult; PPO, TD3, or SAC preferred |
 
 ## Requirements
 

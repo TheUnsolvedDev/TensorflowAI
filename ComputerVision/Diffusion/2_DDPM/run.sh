@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 GPU="${GPU:--1}"
-DATASETS="${DATASETS:-mnist fashion_mnist cifar10 cifar100 celeba}"
+DATASETS="${DATASETS:-mnist fashion_mnist cifar10 cifar100 celeba bedroom}"
 EPOCHS="${EPOCHS:-200}"
 IFS=' ' read -r -a dataset_choices <<< "$DATASETS"
 for dataset in "${dataset_choices[@]}"; do

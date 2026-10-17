@@ -8,12 +8,29 @@ DATASET_PATH = next((path for path in DATASET_PATHS if os.path.isdir(path)), Non
 print(f"Using dataset path: {DATASET_PATH}")
 
 MODEL_NAME = "DDPM"
-SUPPORTED_DATASETS = ['mnist', 'fashion_mnist', 'cifar10', 'cifar100', 'celeba']
+SUPPORTED_DATASETS = ['mnist', 'fashion_mnist', 'cifar10', 'cifar100', 'celeba', 'bedroom']
 DEFAULT_DATASET = "cifar10"
 IMAGE_SIZE = (32, 32)
 SUPER_RES_IMAGE_SIZE = (64, 64)
 LATENT_IMAGE_SIZE = (8, 8)
 BATCH_SIZE = 32
+SUPPORTED_IMAGE_SIZES = (32, 64, 128, 256)
+DEFAULT_IMAGE_SIZES = {
+    "mnist": 32,
+    "fashion_mnist": 32,
+    "cifar10": 32,
+    "cifar100": 32,
+    "celeba": 128,
+    "bedroom": 128,
+}
+DEFAULT_BATCH_SIZES = {
+    "mnist": 32,
+    "fashion_mnist": 32,
+    "cifar10": 32,
+    "cifar100": 32,
+    "celeba": 8,
+    "bedroom": 8,
+}
 EPOCHS = 200
 TEXT_VOCAB_SIZE = 8000
 TEXT_SEQUENCE_LENGTH = 32
@@ -23,6 +40,7 @@ BASE_CHANNELS = 64
 NUM_RES_BLOCKS = 2
 LATENT_DIM = 128
 DIFFUSION_STEPS = 1000
+NOISE_SCHEDULE = "cosine"
 BETA_START = 1e-4
 BETA_END = 0.02
 GUIDANCE_DROPOUT = 0.1
@@ -36,9 +54,6 @@ DENOISER_LEARNING_RATE = 2e-4
 TEXT_ENCODER_LEARNING_RATE = 2e-4
 PRIOR_LEARNING_RATE = 2e-4
 CONSISTENCY_LEARNING_RATE = 2e-4
-ARRAY_CACHE_MODE = "memory"
-DECODE_CACHE_MODE = "disk"
-CACHE_DIR = "cache"
 SHUFFLE_BUFFER_SIZE = 10000
 ENABLE_DATASET_NONDETERMINISM = True
 SAVE_EVERY_N_EPOCHS = 5

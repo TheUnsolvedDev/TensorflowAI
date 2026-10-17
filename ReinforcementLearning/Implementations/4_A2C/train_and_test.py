@@ -8,6 +8,7 @@ import tensorflow as tf
 
 import agent
 import config
+from env import make_training_env
 
 
 def configure_tensorflow(gpu_index):
@@ -45,7 +46,7 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_envs, rollout_steps
     tf.random.set_seed(seed)
     seed_generator = np.random.default_rng(seed)
     environment = gym.vector.SyncVectorEnv(
-        [lambda: gym.make(env_id) for _ in range(num_envs)],
+        [lambda: make_training_env(env_id, config.GAMMA) for _ in range(num_envs)],
         autoreset_mode=gym.vector.AutoresetMode.SAME_STEP,
     )
     policy = agent.A2CAgent(environment.single_observation_space.shape, environment.single_action_space)
@@ -69,6 +70,14 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_envs, rollout_steps
             actions = policy.act(states)
             next_states, rewards, terminated, truncated, infos = environment.step(actions)
             dones = np.logical_or(terminated, truncated)
+            raw_rewards = rewards.copy()
+            if "raw_reward" in infos:
+                mask = infos.get("_raw_reward", np.ones(num_envs, dtype=bool))
+                raw_rewards[mask] = infos["raw_reward"][mask]
+            final_info = infos.get("final_info", {})
+            if "raw_reward" in final_info:
+                mask = final_info.get("_raw_reward", dones)
+                raw_rewards[mask] = final_info["raw_reward"][mask]
             learning_next_states = next_states.copy()
             if "final_obs" in infos:
                 for index in np.flatnonzero(infos["_final_obs"]):
@@ -79,7 +88,7 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_envs, rollout_steps
             rollout_terminated.append(terminated)
             rollout_truncated.append(truncated)
             rollout_next_states.append(learning_next_states)
-            episode_rewards += rewards
+            episode_rewards += raw_rewards
             episode_lengths += 1
             for index in np.flatnonzero(dones):
                 completed.append((float(episode_rewards[index]), int(episode_lengths[index])))
@@ -101,13 +110,15 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_envs, rollout_steps
             episode = len(history) + 1
             history.append((episode, total_reward, episode_length, loss))
             average_reward = np.mean([row[1] for row in history[-config.MOVING_AVERAGE_WINDOW:]])
-            if len(history) < config.MOVING_AVERAGE_WINDOW or average_reward > best_average:
+            if episode == 1:
+                policy.save(checkpoint)
+            if len(history) >= config.MOVING_AVERAGE_WINDOW and average_reward > best_average:
                 best_average = average_reward
                 policy.save(checkpoint)
             if episode == 1 or episode % log_every == 0 or episode == episodes:
                 print(
                     f"{episode:8d} {total_reward:10.2f} {average_reward:10.2f} "
-                    f"{episode_length:8d} {loss:10.4f} {best_average:10.2f}"
+                    f"{episode_length:8d} {loss:10.4f} {max(best_average, average_reward):10.2f}"
                 )
     environment.close()
     return history

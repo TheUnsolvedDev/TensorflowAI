@@ -19,7 +19,7 @@ A textbook Rainbow DQN combining Double DQN, dueling value and advantage streams
 
 This folder is self-contained. Its Q-network uses the TensorFlow Keras Functional API, and action-value inference plus Bellman gradient updates are compiled with `tf.function`. GPU memory growth is enabled before model construction when GPUs are available.
 
-Training uses preallocated NumPy replay arrays and sum/min segment trees for stratified prioritized sampling. The network predicts a 51-atom return distribution and selects Double-DQN actions from its expected values. Three-step returns propagate rewards faster, while factorized noisy layers replace epsilon-greedy exploration. Importance-weighted cross-entropy trains the C51 projection, and per-sample distribution losses update replay priorities. Truncation ends an episode but preserves the Bellman bootstrap.
+Training uses preallocated NumPy replay arrays and sum/min segment trees for stratified prioritized sampling. The network predicts a 51-atom return distribution and selects Double-DQN actions from its expected values. Environment-specific multi-step returns propagate rewards faster, while factorized noisy layers replace epsilon-greedy exploration. Importance-weighted cross-entropy trains the C51 projection, and per-sample distribution losses update replay priorities. Truncation ends an episode but preserves the Bellman bootstrap.
 
 ## Environments
 
@@ -31,6 +31,8 @@ The launcher trains these discrete-action, vector-observation environments:
 - `LunarLander-v3`
 
 `ENVIRONMENT_CONFIGS` in `config.py` provides environment-specific episode budgets, discount factors, replay warmup, target update intervals, and C51 value-support bounds. LunarLander requires Gymnasium's Box2D dependencies.
+
+Acrobot and MountainCar use potential-based rewards only for replay learning. Logged and evaluated returns remain original Gymnasium scores. Batch size, n-step horizon, priority settings, and value-support bounds are tuned independently per environment.
 
 ## Requirements
 

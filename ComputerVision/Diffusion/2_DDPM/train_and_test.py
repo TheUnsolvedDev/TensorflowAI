@@ -6,9 +6,10 @@ import signal
 import numpy as np
 import tensorflow as tf
 
-from config import (BATCH_SIZE, DEFAULT_DATASET, DIFFUSION_STEPS, EPOCHS,
-                    IMAGE_SIZE, SAMPLE_EVERY_N_EPOCHS, SAVE_EVERY_N_EPOCHS,
-                    SUPPORTED_DATASETS)
+from config import (BATCH_SIZE, DEFAULT_BATCH_SIZES, DEFAULT_DATASET,
+                    DEFAULT_IMAGE_SIZES, DIFFUSION_STEPS, EPOCHS, IMAGE_SIZE,
+                    NOISE_SCHEDULE, SAMPLE_EVERY_N_EPOCHS, SAVE_EVERY_N_EPOCHS,
+                    SUPPORTED_DATASETS, SUPPORTED_IMAGE_SIZES)
 from dataset import Dataset
 from model import BaseDiffusionModel
 
@@ -32,15 +33,16 @@ def build_strategy():
     return strategy
 
 
-def paths(dataset_type):
-    directory = os.path.join("logs", dataset_type, f"{MODEL_NAME}_v2", "diffusion")
+def paths(dataset_type, image_size):
+    directory = os.path.join("logs", dataset_type, f"{MODEL_NAME}_{image_size}px", "diffusion")
     return directory, os.path.join(directory, "denoiser.weights.h5"), os.path.join(directory, "training_state.json")
 
 
 def save_checkpoint(model, directory, weight_file, state_file, epoch):
     model.denoiser.save_weights(weight_file)
     with open(state_file, "w") as handle:
-        json.dump({"epoch": epoch, "diffusion_steps": DIFFUSION_STEPS}, handle)
+        json.dump({"epoch": epoch, "diffusion_steps": DIFFUSION_STEPS,
+                   "image_size": model.input_shape_value[0], "schedule": NOISE_SCHEDULE}, handle)
 
 
 def load_epoch(model, weight_file, state_file):
@@ -50,7 +52,10 @@ def load_epoch(model, weight_file, state_file):
     try:
         with open(state_file) as handle:
             state = json.load(handle)
-        return state.get("epoch", 0) if state.get("diffusion_steps") == DIFFUSION_STEPS else 0
+        compatible = (state.get("diffusion_steps") == DIFFUSION_STEPS and
+                      state.get("image_size") == model.input_shape_value[0] and
+                      state.get("schedule") == NOISE_SCHEDULE)
+        return state.get("epoch", 0) if compatible else 0
     except (FileNotFoundError, json.JSONDecodeError):
         return 0
 
@@ -120,20 +125,27 @@ def main():
     parser.add_argument("--resume", "--continue", dest="resume", action="store_true")
     parser.add_argument("--reset", action="store_true")
     parser.add_argument("--epochs", type=int, default=EPOCHS)
+    parser.add_argument("--image-size", type=int, choices=SUPPORTED_IMAGE_SIZES)
+    parser.add_argument("--batch-size", type=int)
     parser.add_argument("--verify-sampler", action="store_true")
     parser.add_argument("--sample-count", type=int, default=4)
     args = parser.parse_args()
+    image_size = args.image_size or DEFAULT_IMAGE_SIZES[args.type]
     setup_gpu(args.gpu)
     strategy = build_strategy()
-    dataset = Dataset()
+    replicas = strategy.num_replicas_in_sync
+    batch_size = args.batch_size or max(DEFAULT_BATCH_SIZES[args.type], replicas)
+    if batch_size % replicas:
+        parser.error(f"--batch-size must be divisible by the {replicas} active replicas")
+    dataset = Dataset((image_size, image_size), batch_size)
     channels = 1 if args.type in {"mnist", "fashion_mnist"} else 3
-    model = BaseDiffusionModel(strategy, (IMAGE_SIZE[0], IMAGE_SIZE[1], channels), BATCH_SIZE, model_label=MODEL_NAME)
+    model = BaseDiffusionModel(strategy, (image_size, image_size, channels), batch_size, model_label=MODEL_NAME)
     if args.verify_sampler:
         verify_sampler(model)
         print("DDPM sampler verification passed.")
         return
     train_ds, channels = dataset.load_data(args.type)
-    directory, weight_file, state_file = paths(args.type)
+    directory, weight_file, state_file = paths(args.type, image_size)
     os.makedirs(directory, exist_ok=True)
     if args.reset:
         for filename in (weight_file, state_file):
@@ -153,8 +165,5 @@ def main():
                          Samples(model, preview, directory, min(args.sample_count, 4))],
               steps_per_epoch=len(train_ds))
     save_checkpoint(model, directory, weight_file, state_file, args.epochs)
-    dataset.cleanup_cache()
-
-
 if __name__ == "__main__":
     main()

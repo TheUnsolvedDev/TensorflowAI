@@ -37,7 +37,7 @@ class ActorCriticAgent:
         mean, log_std = output
         raw = mean.numpy()[0]
         if training:
-            raw += np.random.normal(size=self.action_size) * np.exp(np.clip(log_std.numpy()[0], -5.0, 2.0))
+            raw += np.random.normal(size=self.action_size) * np.exp(np.clip(log_std.numpy()[0], config.LOG_STD_MIN, config.LOG_STD_MAX))
         return (np.tanh(raw) * self.action_scale.numpy() + self.action_bias.numpy()).astype(np.float32)
 
     def policy_terms(self, output, actions):
@@ -47,7 +47,7 @@ class ActorCriticAgent:
             entropy = -tf.reduce_mean(tf.reduce_sum(probabilities * tf.math.log(probabilities), axis=1))
             return tf.math.log(selected + 1e-8), entropy
         mean, log_std = output
-        log_std = tf.clip_by_value(log_std, -5.0, 2.0)
+        log_std = tf.clip_by_value(log_std, config.LOG_STD_MIN, config.LOG_STD_MAX)
         squashed = tf.clip_by_value((actions - self.action_bias) / self.action_scale, -0.999999, 0.999999)
         raw = tf.atanh(squashed)
         normal_log_probability = -0.5 * (
