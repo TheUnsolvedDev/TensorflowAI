@@ -50,6 +50,7 @@ videos/
 # Public README showcase assets
 !showcase/
 !showcase/brag.jpg
+!showcase/brag.gif
 
 # RedditStory generated data, training runs, and samples
 NaturalLanguageProcessing/Project/RedditStory/artifacts/

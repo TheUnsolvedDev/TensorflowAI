@@ -12,9 +12,9 @@ task-specific high-level API.
 
 ## Project showcase
 
-[![Watch the Algorithms from Scratch in TensorFlow showcase](showcase/brag.jpg)](showcase/brag.mp4)
+[![Algorithms from Scratch in TensorFlow animated showcase](showcase/brag.gif)](showcase/brag.mp4)
 
-[Watch the 20-second showcase](showcase/brag.mp4) · [View the storyboard](showcase/brag-plan.md) · [Reuse the share copy](showcase/share-copy.txt)
+[Watch with sound](showcase/brag.mp4) · [View the poster](showcase/brag.jpg) · [View the storyboard](showcase/brag-plan.md) · [Reuse the share copy](showcase/share-copy.txt)
 
 ## Why this repository exists
 
