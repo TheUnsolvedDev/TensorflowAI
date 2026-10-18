@@ -90,7 +90,13 @@ class Dataset:
     def get_preview_batch(self, name, count=4):
         if name in BUILTIN_DATASETS:
             images, channels = self._builtin_images(name)
-            return self._prepare(tf.convert_to_tensor(images[:count])), channels
+            images = tf.convert_to_tensor(images[:count])
+            images = tf.map_fn(
+                self._prepare,
+                images,
+                fn_output_signature=tf.TensorSpec((*self.image_size, channels), tf.float32),
+            )
+            return images, channels
         paths = self._image_paths(self._folder(name), recursive=name == "bedroom")[:count]
         return tf.stack([self._prepare(self._decode(path)) for path in paths]), 3
 

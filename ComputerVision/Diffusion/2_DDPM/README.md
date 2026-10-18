@@ -1,6 +1,6 @@
 # DDPM
 
-An unconditional image DDPM with epsilon prediction, a multiscale UNet, a 1,000-step cosine noise schedule, and ancestral sampling.
+An unconditional image DDPM with epsilon prediction, a multiscale residual convolutional UNet, a 1,000-step cosine noise schedule, and ancestral sampling. It uses no attention layers.
 
 Supported datasets: `mnist`, `fashion_mnist`, `cifar10`, `cifar100`, `celeba`, and `bedroom`.
 
@@ -27,7 +27,7 @@ DATASETS=bedroom sh run.sh --reset
 DATASETS="celeba bedroom" sh run.sh --reset
 ```
 
-`--gpu N` selects one GPU; `--gpu -1` uses all visible GPUs. Resume the current run with `--resume`; use `--reset` to remove its checkpoint and state. Weights are resolution-specific under `logs/<dataset>/DDPM_<size>px/diffusion/`, because weights trained at one resolution must not silently resume at another.
+`--gpu N` selects one GPU; `--gpu -1` uses all visible GPUs. Resume the current run with `--resume`; use `--reset` to remove its checkpoint and state. Weights are stored under `logs/<dataset>/DDPM/diffusion/`. The saved state still prevents incompatible image sizes or schedules from being resumed.
 
 Images are streamed and prefetched; no dataset cache is written to disk.
 

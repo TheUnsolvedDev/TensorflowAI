@@ -10,6 +10,7 @@ venv/
 .vscode/
 
 # Generated experiment output
+brag-output/
 **/logs/
 **/results/
 **/outputs/
@@ -45,6 +46,10 @@ videos/
 *.pkl
 *.npz
 *.npy
+
+# Public README showcase assets
+!showcase/
+!showcase/brag.jpg
 
 # RedditStory generated data, training runs, and samples
 NaturalLanguageProcessing/Project/RedditStory/artifacts/

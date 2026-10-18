@@ -12,6 +12,7 @@ except ImportError:
 import tensorflow as tf
 
 from config import (
+    ARCHITECTURE_VERSION,
     BATCH_SIZE,
     DEFAULT_BATCH_SIZES,
     DEFAULT_DATASET,
@@ -60,8 +61,8 @@ def get_state_path(log_dir):
     return os.path.join(log_dir, "training_state.json")
 
 
-def get_log_dir(dataset_type, image_size):
-    return os.path.join("logs", dataset_type, f"{MODEL_NAME}_{image_size}px", "diffusion")
+def get_log_dir(dataset_type):
+    return os.path.join("logs", dataset_type, MODEL_NAME, "diffusion")
 
 
 def reset_run(log_dir):
@@ -96,7 +97,8 @@ def verify_ddpm_sampler(model):
 
 def save_training_state(log_dir, epoch, image_size):
     with open(get_state_path(log_dir), "w") as handle:
-        json.dump({"epoch": epoch, "schedule": "cosine", "diffusion_steps": DIFFUSION_STEPS,
+        json.dump({"epoch": epoch, "architecture": ARCHITECTURE_VERSION,
+                   "schedule": "cosine", "diffusion_steps": DIFFUSION_STEPS,
                    "image_size": image_size}, handle)
 
 
@@ -120,7 +122,8 @@ def load_weights_if_needed(model, log_dir, resume):
     if os.path.exists(state_path):
         with open(state_path, "r") as handle:
             state = json.load(handle)
-        if (state.get("schedule") != "cosine" or
+        if (state.get("architecture") != ARCHITECTURE_VERSION or
+                state.get("schedule") != "cosine" or
                 state.get("diffusion_steps") != DIFFUSION_STEPS or
                 state.get("image_size") != model.input_shape_value[0]):
             print("Saved weights use an incompatible diffusion schedule. Starting fresh.")
@@ -144,6 +147,7 @@ def setup_interrupt_handler(model):
         print("\nInterrupt received. Stopping after current step...")
         model._interrupt_requested = True
     signal.signal(signal.SIGINT, handler)
+    signal.signal(signal.SIGTERM, handler)
 
 
 def save_rows_grid(rows, filename):
@@ -226,6 +230,7 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs=None):
         if not should_run_periodic_callback(self, epoch, SAMPLE_EVERY_N_EPOCHS):
             return
+        print(f"Generating {self.sample_count} samples ({DIFFUSION_STEPS} denoising steps)...")
         generated = self.model_ref.generate_samples(sample_count=self.sample_count).numpy()
         save_rows_grid(
             [self.preview_images.numpy(), generated],
@@ -266,11 +271,14 @@ def main():
 
     train_ds, channels = dataset.load_data(args.type)
     distributed_ds = strategy.experimental_distribute_dataset(train_ds)
-    log_dir = get_log_dir(args.type, image_size)
+    log_dir = get_log_dir(args.type)
     if args.reset or not args.resume:
         reset_run(log_dir)
     os.makedirs(log_dir, exist_ok=True)
     resumed = load_weights_if_needed(model, log_dir, args.resume)
+    if args.resume and not resumed:
+        reset_run(log_dir)
+        os.makedirs(log_dir, exist_ok=True)
     start_epoch = load_training_state(log_dir) if resumed else 0
     setup_interrupt_handler(model)
     preview_images = dataset.get_preview_batch(args.type, count=min(args.sample_count, 4))[0]

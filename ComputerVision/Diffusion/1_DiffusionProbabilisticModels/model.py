@@ -27,40 +27,22 @@ def add_time_bias(x, time_embedding, channels, name):
     return tf.keras.layers.Add(name=f"{name}_time_add")([x, time_bias])
 
 
-def residual_block(x, time_embedding, channels, name, dropout_rate=0.0):
+def residual_block(x, time_embedding, channels, name, dropout_rate=0.0, dilation_rate=1):
     residual = x
-    x = tf.keras.layers.LayerNormalization(epsilon=1e-5, name=f"{name}_ln1")(x)
+    x = tf.keras.layers.GroupNormalization(groups=min(8, channels), epsilon=1e-5, name=f"{name}_gn1")(x)
     x = tf.keras.layers.Activation("swish", name=f"{name}_act1")(x)
-    x = tf.keras.layers.Conv2D(channels, 3, padding="same", name=f"{name}_conv1")(x)
+    x = tf.keras.layers.Conv2D(channels, 3, padding="same", dilation_rate=dilation_rate, name=f"{name}_conv1")(x)
     x = add_time_bias(x, time_embedding, channels, name)
-    x = tf.keras.layers.LayerNormalization(epsilon=1e-5, name=f"{name}_ln2")(x)
+    x = tf.keras.layers.GroupNormalization(groups=min(8, channels), epsilon=1e-5, name=f"{name}_gn2")(x)
     x = tf.keras.layers.Activation("swish", name=f"{name}_act2")(x)
     if dropout_rate > 0.0:
         x = tf.keras.layers.Dropout(dropout_rate, name=f"{name}_dropout")(x)
-    x = tf.keras.layers.Conv2D(channels, 3, padding="same", name=f"{name}_conv2")(x)
+    x = tf.keras.layers.Conv2D(
+        channels, 3, padding="same", dilation_rate=dilation_rate,
+        kernel_initializer="zeros", name=f"{name}_conv2"
+    )(x)
     if residual.shape[-1] != channels:
         residual = tf.keras.layers.Conv2D(channels, 1, padding="same", name=f"{name}_skip")(residual)
-    return tf.keras.layers.Add(name=f"{name}_out")([x, residual])
-
-
-def attention_block(x, channels, name):
-    residual = x
-    x = tf.keras.layers.LayerNormalization(epsilon=1e-5, name=f"{name}_ln")(x)
-    original_size = (residual.shape[1], residual.shape[2])
-    reduction = max(original_size[0] // 16, 1)
-    if reduction > 1:
-        x = tf.keras.layers.AveragePooling2D(reduction, name=f"{name}_pool")(x)
-    x = tf.keras.layers.Reshape((-1, channels), name=f"{name}_flatten")(x)
-    x = tf.keras.layers.MultiHeadAttention(
-        num_heads=4,
-        key_dim=max(channels // 4, 1),
-        output_shape=channels,
-        name=f"{name}_mha",
-    )(x, x)
-    attention_size = (original_size[0] // reduction, original_size[1] // reduction)
-    x = tf.keras.layers.Reshape((*attention_size, channels), name=f"{name}_unflatten")(x)
-    if reduction > 1:
-        x = tf.keras.layers.Resizing(*original_size, interpolation="bilinear", name=f"{name}_resize")(x)
     return tf.keras.layers.Add(name=f"{name}_out")([x, residual])
 
 
@@ -139,25 +121,30 @@ def build_denoiser(input_shape, channels, output_channels):
 
     x = tf.keras.layers.Conv2D(channels, 3, padding="same", name="input_conv")(noisy_inputs)
 
-    skip1 = residual_block(x, time_emb, channels, "down_block1", dropout_rate=0.0)
-    x = tf.keras.layers.Conv2D(channels * 2, 3, strides=2, padding="same", name="downsample1")(skip1)
-    skip2 = residual_block(x, time_emb, channels * 2, "down_block2", dropout_rate=0.0)
-    x = tf.keras.layers.Conv2D(channels * 4, 3, strides=2, padding="same", name="downsample2")(skip2)
+    levels = max(3, min(5, int(math.log2(input_shape[0])) - 2))
+    widths = [channels * multiplier for multiplier in (1, 2, 4, 4, 6)[:levels]]
+    skips = []
+    for level, width in enumerate(widths):
+        x = residual_block(x, time_emb, width, f"down_block{level + 1}_1", DROPOUT_RATE)
+        x = residual_block(x, time_emb, width, f"down_block{level + 1}_2", DROPOUT_RATE)
+        skips.append(x)
+        if level < levels - 1:
+            x = tf.keras.layers.Conv2D(widths[level + 1], 3, strides=2, padding="same", name=f"downsample{level + 1}")(x)
+    for index, dilation in enumerate((1, 2, 4, 1), start=1):
+        x = residual_block(
+            x, time_emb, widths[-1], f"mid_block{index}", DROPOUT_RATE,
+            dilation_rate=dilation,
+        )
+    for level in range(levels - 2, -1, -1):
+        x = tf.keras.layers.UpSampling2D(interpolation="bilinear", name=f"upsample{level + 1}")(x)
+        x = tf.keras.layers.Conv2D(widths[level], 3, padding="same", name=f"upsample_conv{level + 1}")(x)
+        x = tf.keras.layers.Concatenate(name=f"skip_concat{level + 1}")([x, skips[level]])
+        x = residual_block(x, time_emb, widths[level], f"up_block{level + 1}_1", DROPOUT_RATE)
+        x = residual_block(x, time_emb, widths[level], f"up_block{level + 1}_2", DROPOUT_RATE)
 
-    x = residual_block(x, time_emb, channels * 4, "mid_block1", dropout_rate=0.05)
-    x = attention_block(x, channels * 4, "mid_attention")
-    x = residual_block(x, time_emb, channels * 4, "mid_block2", dropout_rate=0.05)
-
-    x = tf.keras.layers.Conv2DTranspose(channels * 2, 4, strides=2, padding="same", name="upsample1")(x)
-    x = tf.keras.layers.Concatenate(name="skip_concat1")([x, skip2])
-    x = residual_block(x, time_emb, channels * 2, "up_block1", dropout_rate=0.0)
-    x = tf.keras.layers.Conv2DTranspose(channels, 4, strides=2, padding="same", name="upsample2")(x)
-    x = tf.keras.layers.Concatenate(name="skip_concat2")([x, skip1])
-    x = residual_block(x, time_emb, channels, "up_block2", dropout_rate=0.0)
-
-    x = tf.keras.layers.LayerNormalization(epsilon=1e-5, name="output_ln")(x)
+    x = tf.keras.layers.GroupNormalization(groups=8, epsilon=1e-5, name="output_gn")(x)
     x = tf.keras.layers.Activation("swish", name="output_act")(x)
-    outputs = tf.keras.layers.Conv2D(output_channels, 3, padding="same", name="output_conv")(x)
+    outputs = tf.keras.layers.Conv2D(output_channels, 3, padding="same", kernel_initializer="zeros", name="output_conv")(x)
 
     return tf.keras.Model(
         inputs=[noisy_inputs, timestep_inputs],
@@ -210,7 +197,11 @@ class BaseDiffusionModel(tf.keras.Model):
             conditioning_dim = EMBED_DIM if (self.use_text or self.use_clip) else 0
             del conditioning_dim
             self.denoiser = build_denoiser(input_shape, BASE_CHANNELS, output_channels)
-            self.denoiser_optimizer = tf.keras.optimizers.Adam(DENOISER_LEARNING_RATE)
+            self.denoiser_optimizer = tf.keras.optimizers.AdamW(
+                DENOISER_LEARNING_RATE,
+                weight_decay=WEIGHT_DECAY,
+                clipnorm=1.0,
+            )
             self.consistency_model = build_denoiser(input_shape, BASE_CHANNELS, input_shape[-1]) if self.use_consistency else None
             self.consistency_optimizer = tf.keras.optimizers.Adam(CONSISTENCY_LEARNING_RATE) if self.use_consistency else None
             self.mse = tf.keras.losses.MeanSquaredError()
@@ -366,10 +357,6 @@ class BaseDiffusionModel(tf.keras.Model):
             else:
                 loss = self.mse(noise, pred)
         denoiser_grads = tape.gradient(loss, self.denoiser.trainable_variables)
-        denoiser_grads = [
-            tf.clip_by_norm(grad, 1.0) if grad is not None else None
-            for grad in denoiser_grads
-        ]
         self.denoiser_optimizer.apply_gradients(zip(denoiser_grads, self.denoiser.trainable_variables))
         return loss
 

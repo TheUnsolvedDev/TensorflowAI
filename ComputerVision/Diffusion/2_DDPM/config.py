@@ -8,6 +8,7 @@ DATASET_PATH = next((path for path in DATASET_PATHS if os.path.isdir(path)), Non
 print(f"Using dataset path: {DATASET_PATH}")
 
 MODEL_NAME = "DDPM"
+ARCHITECTURE_VERSION = "conv_unet_v1"
 SUPPORTED_DATASETS = ['mnist', 'fashion_mnist', 'cifar10', 'cifar100', 'celeba', 'bedroom']
 DEFAULT_DATASET = "cifar10"
 IMAGE_SIZE = (32, 32)
@@ -51,6 +52,8 @@ USE_CLASSIFIER_FREE_GUIDANCE = False
 USE_DDIM_SAMPLER = False
 AUTOENCODER_LEARNING_RATE = 2e-4
 DENOISER_LEARNING_RATE = 2e-4
+WEIGHT_DECAY = 1e-4
+DROPOUT_RATE = 0.1
 TEXT_ENCODER_LEARNING_RATE = 2e-4
 PRIOR_LEARNING_RATE = 2e-4
 CONSISTENCY_LEARNING_RATE = 2e-4

@@ -6,7 +6,7 @@ import signal
 import numpy as np
 import tensorflow as tf
 
-from config import (BATCH_SIZE, DEFAULT_BATCH_SIZES, DEFAULT_DATASET,
+from config import (ARCHITECTURE_VERSION, BATCH_SIZE, DEFAULT_BATCH_SIZES, DEFAULT_DATASET,
                     DEFAULT_IMAGE_SIZES, DIFFUSION_STEPS, EPOCHS, IMAGE_SIZE,
                     NOISE_SCHEDULE, SAMPLE_EVERY_N_EPOCHS, SAVE_EVERY_N_EPOCHS,
                     SUPPORTED_DATASETS, SUPPORTED_IMAGE_SIZES)
@@ -33,30 +33,36 @@ def build_strategy():
     return strategy
 
 
-def paths(dataset_type, image_size):
-    directory = os.path.join("logs", dataset_type, f"{MODEL_NAME}_{image_size}px", "diffusion")
+def paths(dataset_type):
+    directory = os.path.join("logs", dataset_type, MODEL_NAME, "diffusion")
     return directory, os.path.join(directory, "denoiser.weights.h5"), os.path.join(directory, "training_state.json")
 
 
 def save_checkpoint(model, directory, weight_file, state_file, epoch):
     model.denoiser.save_weights(weight_file)
     with open(state_file, "w") as handle:
-        json.dump({"epoch": epoch, "diffusion_steps": DIFFUSION_STEPS,
+        json.dump({"epoch": epoch, "architecture": ARCHITECTURE_VERSION,
+                   "diffusion_steps": DIFFUSION_STEPS,
                    "image_size": model.input_shape_value[0], "schedule": NOISE_SCHEDULE}, handle)
 
 
 def load_epoch(model, weight_file, state_file):
-    if not os.path.exists(weight_file):
+    if not os.path.exists(weight_file) or not os.path.exists(state_file):
         return 0
-    model.denoiser.load_weights(weight_file)
     try:
         with open(state_file) as handle:
             state = json.load(handle)
-        compatible = (state.get("diffusion_steps") == DIFFUSION_STEPS and
+        compatible = (state.get("architecture") == ARCHITECTURE_VERSION and
+                      state.get("diffusion_steps") == DIFFUSION_STEPS and
                       state.get("image_size") == model.input_shape_value[0] and
                       state.get("schedule") == NOISE_SCHEDULE)
-        return state.get("epoch", 0) if compatible else 0
-    except (FileNotFoundError, json.JSONDecodeError):
+        if not compatible:
+            print("Saved weights use incompatible settings. Starting fresh.")
+            return 0
+        model.denoiser.load_weights(weight_file)
+        return state.get("epoch", 0)
+    except (OSError, ValueError, json.JSONDecodeError) as exc:
+        print(f"Could not resume saved weights. Starting fresh: {exc}")
         return 0
 
 
@@ -145,7 +151,7 @@ def main():
         print("DDPM sampler verification passed.")
         return
     train_ds, channels = dataset.load_data(args.type)
-    directory, weight_file, state_file = paths(args.type, image_size)
+    directory, weight_file, state_file = paths(args.type)
     os.makedirs(directory, exist_ok=True)
     if args.reset:
         for filename in (weight_file, state_file):

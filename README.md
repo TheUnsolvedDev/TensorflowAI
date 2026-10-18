@@ -1,4 +1,4 @@
-# 🧠 Algorithms from Scratch in TensorFlow
+# Algorithms from Scratch in TensorFlow
 
 **Algorithms from Scratch in TensorFlow** is a learning-oriented collection of
 computer-vision, natural-language-processing, and reinforcement-learning
@@ -10,7 +10,13 @@ task-specific high-level API.
 > The repository is source-first. Datasets, checkpoints, TensorBoard events,
 > generated figures, caches, and model exports are intentionally local-only.
 
-## ✨ Why this repository exists
+## Project showcase
+
+[![Watch the Algorithms from Scratch in TensorFlow showcase](showcase/brag.jpg)](showcase/brag.mp4)
+
+[Watch the 20-second showcase](showcase/brag.mp4) · [View the storyboard](showcase/brag-plan.md) · [Reuse the share copy](showcase/share-copy.txt)
+
+## Why this repository exists
 
 TensorFlow is used here as a numerical and automatic-differentiation runtime:
 `tf.Tensor` for vectorized computation, `tf.data` for input pipelines,
@@ -19,7 +25,7 @@ training family supports multiple devices. The implementations make it possible
 to trace mathematical ideas into executable tensor programs and inspect their
 practical trade-offs: batching, broadcasting, memory, stability, and compute.
 
-## 🗺️ Map of the repository
+## Map of the repository
 
 ```mermaid
 flowchart TD
@@ -39,7 +45,7 @@ flowchart TD
     RL --> RLG[Game agents]
 ```
 
-## 🚀 Implemented families
+## Implemented families
 
 | Area | Algorithms and architectures | TensorFlow techniques visible in source | Documentation |
 | --- | --- | --- | --- |
@@ -55,7 +61,7 @@ Some directories are intentionally documented as **scaffolds** when their
 tracked source is empty or contains explicit `NotImplementedError`/`pass`
 placeholders. They are not presented as complete experiments.
 
-## 📂 Structure
+## Structure
 
 ```text
 .
@@ -76,7 +82,7 @@ placeholders. They are not presented as complete experiments.
 └── LICENSE
 ```
 
-## ⚙️ TensorFlow techniques represented
+## TensorFlow techniques represented
 
 | Technique | Used for |
 | --- | --- |
@@ -92,7 +98,7 @@ matrix operations, and vectorized environment updates. The code also contains
 CPU fallbacks in many entry points; device availability and local datasets
 remain runtime prerequisites.
 
-## 🧮 Mathematical themes
+## Mathematical themes
 
 The source implements adversarial minimax objectives, score/noise-prediction
 losses, cross-entropy classification, sequence likelihood, attention,
@@ -102,7 +108,7 @@ quadratic in sequence length, dense convolutional models scale with spatial
 activation volume, and replay-based RL scales with batch sampling and network
 updates. Technical pages state only the complexity justified by their code.
 
-## 🧪 Validation and results
+## Validation and results
 
 The repository includes executable training/evaluation scripts, some detector
 tests, and configuration-driven runs. It does **not** ship a consistent set of
@@ -110,7 +116,7 @@ tracked benchmark reports or generated figures, so this README intentionally
 does not claim numerical accuracy, FID, mAP, reward, or runtime results. Run
 artifacts are local and ignored by Git.
 
-## 🛠️ Installation
+## Installation
 
 No `requirements.txt`, Conda environment, or pinned package manifest is
 tracked. Install the dependencies required by the implementation you want to
@@ -128,7 +134,7 @@ Then consult the README in the target family before installing its optional
 dataset or runtime dependencies. Dataset roots are commonly configured in the
 folder-local `config.py` files.
 
-## ▶️ Running an implementation
+## Running an implementation
 
 Most runnable folders follow a local pattern such as:
 
@@ -147,7 +153,7 @@ cd NaturalLanguageProcessing/Project/RedditStory
 Do not assume every numbered directory is complete: read its local status and
 configuration before launching it.
 
-## 📚 Documentation
+## Documentation
 
 - [Computer Vision](ComputerVision/README.md)
   - [Diffusion](ComputerVision/Diffusion/README.md)
@@ -161,19 +167,19 @@ configuration before launching it.
   - [RedditStory](NaturalLanguageProcessing/Project/RedditStory/README.md)
 - [Reinforcement Learning](ReinforcementLearning/README.md)
 
-## 🧭 Suggested learning path
+## Suggested learning path
 
 Start with word embeddings, LeNet-style image classification, and REINFORCE;
 then move to recurrent/seq2seq models, DQN, residual/convolutional families,
 and GANs; finally explore detection, diffusion, Transformers, and the
 end-to-end RedditStory pipeline.
 
-## 🤝 Contributing
+## Contributing
 
 Keep additions self-contained, document the mathematical objective and runtime
 assumptions, avoid committing generated artifacts, and include a reproducible
 entry point or validation check where possible.
 
-## 📜 License
+## License
 
 This project is available under the [MIT License](LICENSE).

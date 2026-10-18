@@ -40,6 +40,7 @@ class ResidualBlock(tf.keras.layers.Layer):
         self.conv1 = tf.keras.layers.Conv2D(channels, 3, padding="same")
         self.time_projection = tf.keras.layers.Dense(channels)
         self.norm2 = tf.keras.layers.LayerNormalization(axis=-1)
+        self.dropout = tf.keras.layers.Dropout(DROPOUT_RATE)
         self.conv2 = tf.keras.layers.Conv2D(channels, 3, padding="same", kernel_initializer="zeros")
         self.skip = None
 
@@ -52,24 +53,9 @@ class ResidualBlock(tf.keras.layers.Layer):
         residual = self.skip(inputs) if self.skip is not None else inputs
         x = self.conv1(tf.nn.swish(self.norm1(inputs)))
         x += self.time_projection(tf.nn.swish(time_embedding))[:, None, None, :]
-        x = self.conv2(tf.nn.swish(self.norm2(x)))
+        x = self.dropout(tf.nn.swish(self.norm2(x)), training=training)
+        x = self.conv2(x)
         return x + residual
-
-
-class SpatialAttention(tf.keras.layers.Layer):
-    def __init__(self, channels):
-        super().__init__()
-        self.norm = tf.keras.layers.LayerNormalization(axis=-1)
-        self.attention = tf.keras.layers.MultiHeadAttention(
-            num_heads=4, key_dim=max(channels // 4, 1)
-        )
-
-    def call(self, inputs, training=False):
-        shape = tf.shape(inputs)
-        x = self.norm(inputs)
-        x = tf.reshape(x, (shape[0], shape[1] * shape[2], shape[3]))
-        x = self.attention(x, x, training=training)
-        return inputs + tf.reshape(x, shape)
 
 
 class TextEncoder(tf.keras.Model):
@@ -154,7 +140,6 @@ class DiffusionBackbone(tf.keras.Model):
             for index in range(levels - 1)
         ]
         self.mid1 = ResidualBlock(self.level_channels[-1])
-        self.mid_attention = SpatialAttention(self.level_channels[-1])
         self.mid2 = ResidualBlock(self.level_channels[-1])
         self.upsamples = [
             tf.keras.layers.Conv2DTranspose(self.level_channels[index], 4, strides=2, padding="same")
@@ -182,7 +167,6 @@ class DiffusionBackbone(tf.keras.Model):
             if index < len(self.downsamples):
                 x = self.downsamples[index](x)
         x = self.mid1(x, time_emb, training=training)
-        x = self.mid_attention(x, training=training)
         x = self.mid2(x, time_emb, training=training)
         for upsample, block, skip in zip(self.upsamples, self.up_blocks, reversed(skips[:-1])):
             x = upsample(x)
@@ -230,7 +214,9 @@ class BaseDiffusionModel(tf.keras.Model):
             output_channels = input_shape[-1] * (2 if USE_LEARNED_VARIANCE else 1)
             conditioning_dim = EMBED_DIM if (self.use_text or self.use_clip) else 0
             self.denoiser = DiffusionBackbone(BASE_CHANNELS, output_channels, input_shape[0], conditioning_dim=conditioning_dim, use_control=self.use_control)
-            self.denoiser_optimizer = tf.keras.optimizers.Adam(DENOISER_LEARNING_RATE, clipnorm=1.0)
+            self.denoiser_optimizer = tf.keras.optimizers.AdamW(
+                DENOISER_LEARNING_RATE, weight_decay=WEIGHT_DECAY, clipnorm=1.0
+            )
             self.consistency_model = DiffusionBackbone(BASE_CHANNELS, input_shape[-1], input_shape[0]) if self.use_consistency else None
             self.consistency_optimizer = tf.keras.optimizers.Adam(CONSISTENCY_LEARNING_RATE) if self.use_consistency else None
             self.mse = tf.keras.losses.MeanSquaredError()
