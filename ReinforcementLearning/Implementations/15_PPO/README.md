@@ -49,20 +49,20 @@ Use another compatible Gymnasium environment:
 sh run.sh train --env CartPole-v1 --episodes 300
 ```
 
-The best episode checkpoint is saved as `best.weights.h5` by default. Supply `--checkpoint` to use another path.
+The best completed moving-average checkpoint is saved as `checkpoints/<environment>.weights.h5`. Supply `--checkpoint` to override it.
 
 ## Inference
 
 Evaluate a saved checkpoint:
 
 ```bash
-sh run.sh inference --checkpoint best.weights.h5 --episodes 10
+sh run.sh inference --env CartPole-v1 --episodes 10
 ```
 
 Inference renders by default. Disable rendering for headless evaluation:
 
 ```bash
-sh run.sh inference --checkpoint best.weights.h5 --no-render
+sh run.sh inference --env CartPole-v1 --no-render
 ```
 
 ## Interpreter
@@ -82,4 +82,17 @@ PYTHON=python3 sh run.sh train
 ## Validation scope
 
 Compilation and short CPU smoke runs only establish that construction, updates, checkpoint loading, and entry points execute. They do not prove convergence, benchmark performance, or GPU correctness.
+
+
+## Outputs
+
+Each environment writes the same review artifacts:
+
+```text
+checkpoints/<environment>.weights.h5
+results/<environment>/training_metrics.csv
+results/<environment>/evaluation_metrics.csv
+results/<environment>/results.png
+results/<environment>/test.gif
+```
 

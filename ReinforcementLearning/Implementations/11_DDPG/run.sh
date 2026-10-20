@@ -13,17 +13,17 @@ case "$mode" in
     train)
         mkdir -p checkpoints
         echo "Training Pendulum-v1"
-        "$python_bin" train_and_test.py --env Pendulum-v1 --checkpoint "checkpoints/Pendulum-v1.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env Pendulum-v1 "$@"
         echo "Training MountainCarContinuous-v0"
-        "$python_bin" train_and_test.py --env MountainCarContinuous-v0 --checkpoint "checkpoints/MountainCarContinuous-v0.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env MountainCarContinuous-v0 "$@"
         echo "Training LunarLanderContinuous-v3"
-        "$python_bin" train_and_test.py --env LunarLanderContinuous-v3 --checkpoint "checkpoints/LunarLanderContinuous-v3.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env LunarLanderContinuous-v3 "$@"
         echo "Training BipedalWalker-v3"
-        "$python_bin" train_and_test.py --env BipedalWalker-v3 --checkpoint "checkpoints/BipedalWalker-v3.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env BipedalWalker-v3 "$@"
         echo "Training HalfCheetah-v5"
-        "$python_bin" train_and_test.py --env HalfCheetah-v5 --checkpoint "checkpoints/HalfCheetah-v5.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env HalfCheetah-v5 "$@"
         echo "Training Reacher-v5"
-        "$python_bin" train_and_test.py --env Reacher-v5 --checkpoint "checkpoints/Reacher-v5.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env Reacher-v5 "$@"
         ;;
     inference)
         exec "$python_bin" inference.py "$@"
@@ -33,4 +33,3 @@ case "$mode" in
         exit 1
         ;;
 esac
-

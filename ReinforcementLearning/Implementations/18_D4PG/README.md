@@ -39,3 +39,15 @@ The MuJoCo environments require `gymnasium[mujoco]`.
 
 Short smoke tests do not establish convergence or paper-level benchmark performance.
 
+## Outputs
+
+Each environment writes the same review artifacts:
+
+```text
+checkpoints/<environment>.weights.h5
+results/<environment>/training_metrics.csv
+results/<environment>/evaluation_metrics.csv
+results/<environment>/results.png
+results/<environment>/test.gif
+```
+

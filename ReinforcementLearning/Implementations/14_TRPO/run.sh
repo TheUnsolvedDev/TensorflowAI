@@ -13,13 +13,13 @@ case "$mode" in
     train)
         mkdir -p checkpoints
         echo "Training CartPole-v1"
-        "$python_bin" train_and_test.py --env CartPole-v1 --checkpoint "checkpoints/CartPole-v1.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env CartPole-v1 "$@"
         echo "Training Acrobot-v1"
-        "$python_bin" train_and_test.py --env Acrobot-v1 --checkpoint "checkpoints/Acrobot-v1.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env Acrobot-v1 "$@"
         echo "Training MountainCar-v0"
-        "$python_bin" train_and_test.py --env MountainCar-v0 --checkpoint "checkpoints/MountainCar-v0.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env MountainCar-v0 "$@"
         echo "Training LunarLander-v3"
-        "$python_bin" train_and_test.py --env LunarLander-v3 --checkpoint "checkpoints/LunarLander-v3.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env LunarLander-v3 "$@"
         ;;
     inference)
         exec "$python_bin" inference.py "$@"
@@ -29,4 +29,3 @@ case "$mode" in
         exit 1
         ;;
 esac
-

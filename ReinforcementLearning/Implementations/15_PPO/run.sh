@@ -13,16 +13,16 @@ case "$mode" in
     train)
         mkdir -p checkpoints
         echo "Training CartPole-v1"
-        "$python_bin" train_and_test.py --env CartPole-v1 --checkpoint "checkpoints/CartPole-v1.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env CartPole-v1 "$@"
         echo "Training Acrobot-v1"
-        "$python_bin" train_and_test.py --env Acrobot-v1 --checkpoint "checkpoints/Acrobot-v1.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env Acrobot-v1 "$@"
         echo "Training MountainCar-v0"
-        "$python_bin" train_and_test.py --env MountainCar-v0 --checkpoint "checkpoints/MountainCar-v0.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env MountainCar-v0 "$@"
         echo "Training LunarLander-v3"
-        "$python_bin" train_and_test.py --env LunarLander-v3 --checkpoint "checkpoints/LunarLander-v3.weights.h5" "$@"
+        "$python_bin" train_and_test.py --env LunarLander-v3 "$@"
         for env_id in Pendulum-v1 LunarLanderContinuous-v3 BipedalWalker-v3 HalfCheetah-v5 Hopper-v5 Walker2d-v5 Ant-v5; do
             echo "Training $env_id"
-            "$python_bin" train_and_test.py --env "$env_id" --checkpoint "checkpoints/$env_id.weights.h5" "$@"
+            "$python_bin" train_and_test.py --env "$env_id" "$@"
         done
         ;;
     inference)
@@ -33,4 +33,3 @@ case "$mode" in
         exit 1
         ;;
 esac
-
