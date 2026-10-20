@@ -5,15 +5,14 @@ This directory contains standalone diffusion-family implementations in the same 
 ## Folder Order
 
 1. `1_DiffusionProbabilisticModels`
-2. `2_DDPM`
-3. `3_ImprovedDDPM`
-4. `4_DDIM`
-5. `5_GLIDE`
-6. `6_Imagen`
-7. `7_DALLE2`
-8. `8_StableDiffusion`
-9. `9_ControlNet`
-10. `10_ConsistencyModels`
+2. `2_ImprovedDDPM`
+3. `3_DDIM`
+4. `4_GLIDE`
+5. `5_Imagen`
+6. `6_DALLE2`
+7. `7_StableDiffusion`
+8. `8_ControlNet`
+9. `9_ConsistencyModels`
 
 ## Common Structure
 

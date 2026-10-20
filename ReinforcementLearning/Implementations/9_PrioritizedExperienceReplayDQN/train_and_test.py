@@ -18,7 +18,8 @@ def configure_tensorflow(gpu_index):
         print("device=CPU")
         return
     if gpu_index >= len(gpus):
-        raise ValueError(f"GPU {gpu_index} is unavailable; detected {len(gpus)} GPU(s)")
+        raise ValueError(
+            f"GPU {gpu_index} is unavailable; detected {len(gpus)} GPU(s)")
     selected_gpu = gpus[gpu_index]
     tf.config.set_visible_devices(selected_gpu, "GPU")
     if config.ENABLE_GPU_MEMORY_GROWTH:
@@ -28,7 +29,10 @@ def configure_tensorflow(gpu_index):
 
 def make_agent(environment, seed=config.SEED):
     config.apply_environment(environment.spec.id)
-    if not isinstance(environment.observation_space, gym.spaces.Box) or len(environment.observation_space.shape) != 1:
+    if not isinstance(
+            environment.observation_space,
+            gym.spaces.Box) or len(
+            environment.observation_space.shape) != 1:
         raise ValueError("Only vector Box observation spaces are supported")
     if not isinstance(environment.action_space, gym.spaces.Discrete):
         raise ValueError("DQN requires a Discrete action space")
@@ -63,7 +67,8 @@ def train(env_id, episodes, seed, checkpoint, log_every):
         done = False
         while not done:
             action = policy.act(state)
-            next_state, reward, terminated, truncated, info = environment.step(action)
+            next_state, reward, terminated, truncated, info = environment.step(
+                action)
             done = terminated or truncated
             policy.remember(state, action, reward, next_state, terminated)
             if policy.environment_steps % config.TRAIN_FREQUENCY == 0:
@@ -85,7 +90,8 @@ def train(env_id, episodes, seed, checkpoint, log_every):
                 len(policy.replay),
             )
         )
-        average_reward = np.mean([row[1] for row in history[-config.MOVING_AVERAGE_WINDOW :]])
+        average_reward = np.mean(
+            [row[1] for row in history[-config.MOVING_AVERAGE_WINDOW:]])
         if episode == 1:
             policy.save(checkpoint)
         if len(history) >= config.MOVING_AVERAGE_WINDOW and average_reward > best_average:
@@ -137,7 +143,8 @@ def save_test_gif(env_id, seed, checkpoint, output_dir):
         done = False
         while not done:
             action = policy.act(state, training=False)
-            state, reward, terminated, truncated, _ = test_environment.step(action)
+            state, reward, terminated, truncated, _ = test_environment.step(
+                action)
             total_reward += reward
             done = terminated or truncated
         if total_reward > best_reward:
@@ -175,7 +182,8 @@ def save_results(env_id, history, evaluation_rewards, output_dir):
 
     with (run_dir / "training_metrics.csv").open("w", newline="") as file:
         writer = csv.writer(file)
-        writer.writerow(["episode", "reward", "length", "loss", "epsilon", "replay_size"])
+        writer.writerow(["episode", "reward", "length",
+                        "loss", "epsilon", "replay_size"])
         writer.writerows(history)
 
     with (run_dir / "evaluation_metrics.csv").open("w", newline="") as file:
@@ -188,16 +196,20 @@ def save_results(env_id, history, evaluation_rewards, output_dir):
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 
-    training = np.atleast_1d(np.genfromtxt(run_dir / "training_metrics.csv", delimiter=",", names=True))
-    evaluation = np.atleast_1d(np.genfromtxt(run_dir / "evaluation_metrics.csv", delimiter=",", names=True))
+    training = np.atleast_1d(np.genfromtxt(
+        run_dir / "training_metrics.csv", delimiter=",", names=True))
+    evaluation = np.atleast_1d(np.genfromtxt(
+        run_dir / "evaluation_metrics.csv", delimiter=",", names=True))
     episodes = training["episode"]
     rewards = training["reward"]
     window = min(config.MOVING_AVERAGE_WINDOW, len(rewards))
-    moving_average = np.convolve(rewards, np.ones(window) / window, mode="valid")
+    moving_average = np.convolve(
+        rewards, np.ones(window) / window, mode="valid")
 
     figure, axes = plt.subplots(2, 3, figsize=(15, 8))
     axes[0, 0].plot(episodes, rewards, alpha=0.4, label="Episode reward")
-    axes[0, 0].plot(episodes[window - 1 :], moving_average, label=f"{window}-episode average")
+    axes[0, 0].plot(episodes[window - 1:], moving_average,
+                    label=f"{window}-episode average")
     axes[0, 0].set_title("Training reward")
     axes[0, 0].legend()
     axes[0, 1].plot(episodes, training["loss"], color="tab:red")
@@ -208,8 +220,10 @@ def save_results(env_id, history, evaluation_rewards, output_dir):
     axes[1, 0].set_title("Exploration epsilon")
     axes[1, 1].plot(episodes, training["replay_size"], color="tab:brown")
     axes[1, 1].set_title("Replay size")
-    axes[1, 2].bar(evaluation["episode"], evaluation["reward"], color="tab:purple")
-    axes[1, 2].axhline(np.mean(evaluation["reward"]), color="black", linestyle="--", label="Mean")
+    axes[1, 2].bar(evaluation["episode"],
+                   evaluation["reward"], color="tab:purple")
+    axes[1, 2].axhline(np.mean(evaluation["reward"]),
+                       color="black", linestyle="--", label="Mean")
     axes[1, 2].set_title("Evaluation rewards")
     axes[1, 2].legend()
     for axis in axes.flat:
@@ -240,8 +254,10 @@ def main():
         parser.error("episode counts and --log-every must be positive")
     configure_tensorflow(args.gpu)
     checkpoint = args.checkpoint or checkpoint_path(args.env)
-    history = train(args.env, args.episodes, args.seed, checkpoint, args.log_every)
-    rewards = evaluate(args.env, args.test_episodes, args.seed + 10000, checkpoint)
+    history = train(args.env, args.episodes, args.seed,
+                    checkpoint, args.log_every)
+    rewards = evaluate(args.env, args.test_episodes,
+                       args.seed + 10000, checkpoint)
     save_results(args.env, history, rewards, args.output_dir)
     if config.SAVE_TEST_GIF:
         save_test_gif(args.env, args.seed + 20000, checkpoint, args.output_dir)

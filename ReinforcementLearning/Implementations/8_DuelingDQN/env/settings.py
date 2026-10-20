@@ -11,5 +11,6 @@ ENVIRONMENTS = {
 def get_env_settings(name=DEFAULT_ENV):
     if name not in ENVIRONMENTS:
         choices = ", ".join(ENVIRONMENTS)
-        raise ValueError(f"Unknown environment '{name}'. Choose from: {choices}")
+        raise ValueError(
+            f"Unknown environment '{name}'. Choose from: {choices}")
     return ENVIRONMENTS[name].copy()

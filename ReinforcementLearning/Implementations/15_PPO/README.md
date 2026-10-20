@@ -1,6 +1,8 @@
 # Proximal Policy Optimization (PPO)
 
-A clipped-surrogate policy optimization implementation with a learned value baseline.
+A clipped-surrogate policy optimization implementation with GAE and a learned value baseline. Discrete tasks use a categorical policy; continuous tasks use a bounded squashed-Gaussian policy.
+
+MuJoCo training supports `HalfCheetah-v5`, `Hopper-v5`, `Walker2d-v5`, and `Ant-v5`. These environments require `gymnasium[mujoco]`.
 
 ## Files
 
@@ -57,10 +59,10 @@ Evaluate a saved checkpoint:
 sh run.sh inference --checkpoint best.weights.h5 --episodes 10
 ```
 
-Render evaluation episodes:
+Inference renders by default. Disable rendering for headless evaluation:
 
 ```bash
-sh run.sh inference --checkpoint best.weights.h5 --render
+sh run.sh inference --checkpoint best.weights.h5 --no-render
 ```
 
 ## Interpreter

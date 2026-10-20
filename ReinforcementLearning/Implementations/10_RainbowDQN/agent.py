@@ -16,7 +16,8 @@ class DQNAgent:
         self.optimizer = tf.keras.optimizers.Adam(config.LEARNING_RATE)
         self.replay = model.ReplayBuffer(observation_shape, seed + 1)
         self.n_step_buffer = deque()
-        self.support = tf.linspace(config.V_MIN, config.V_MAX, config.ATOM_COUNT)
+        self.support = tf.linspace(
+            config.V_MIN, config.V_MAX, config.ATOM_COUNT)
         self.environment_steps = 0
         self.training_steps = 0
 
@@ -26,14 +27,16 @@ class DQNAgent:
 
     @tf.function(reduce_retracing=True)
     def _q_values(self, state, training):
-        distribution = self.online(tf.expand_dims(tf.cast(state, tf.float32), 0), training=training)[0]
+        distribution = self.online(tf.expand_dims(
+            tf.cast(state, tf.float32), 0), training=training)[0]
         return tf.reduce_sum(distribution * self.support, axis=1)
 
     def act(self, state, training=True):
         return int(tf.argmax(self._q_values(state, training)).numpy())
 
     def remember(self, state, action, reward, next_state, terminal, episode_end=False):
-        self.n_step_buffer.append((state, action, reward, next_state, terminal))
+        self.n_step_buffer.append(
+            (state, action, reward, next_state, terminal))
         if len(self.n_step_buffer) >= config.N_STEP:
             self._store_n_step()
         if episode_end:
@@ -54,7 +57,8 @@ class DQNAgent:
             if terminal or steps == config.N_STEP:
                 break
         state, action = self.n_step_buffer[0][:2]
-        self.replay.add(state, action, total_reward, final_next_state, final_terminal, config.GAMMA ** steps)
+        self.replay.add(state, action, total_reward,
+                        final_next_state, final_terminal, config.GAMMA ** steps)
         self.n_step_buffer.popleft()
 
     @tf.function(
@@ -74,8 +78,10 @@ class DQNAgent:
         next_actions = tf.argmax(next_values, axis=1, output_type=tf.int32)
         next_target = self.target(next_states, training=True)
         next_probabilities = tf.gather(next_target, next_actions, batch_dims=1)
-        target_support = rewards[:, None] + discounts[:, None] * (1.0 - terminals[:, None]) * self.support
-        target_support = tf.clip_by_value(target_support, config.V_MIN, config.V_MAX)
+        target_support = rewards[:, None] + discounts[:, None] * \
+            (1.0 - terminals[:, None]) * self.support
+        target_support = tf.clip_by_value(
+            target_support, config.V_MIN, config.V_MAX)
         positions = (target_support - config.V_MIN) / config.ATOM_DELTA
         lower = tf.cast(tf.floor(positions), tf.int32)
         upper = tf.cast(tf.math.ceil(positions), tf.int32)
@@ -94,18 +100,22 @@ class DQNAgent:
         with tf.GradientTape() as tape:
             distribution = self.online(states, training=True)
             selected = tf.gather(distribution, actions, batch_dims=1)
-            sample_losses = -tf.reduce_sum(projected * tf.math.log(selected + 1e-8), axis=1)
+            sample_losses = - \
+                tf.reduce_sum(projected * tf.math.log(selected + 1e-8), axis=1)
             loss = tf.reduce_mean(weights * sample_losses)
         gradients = tape.gradient(loss, self.online.trainable_variables)
-        gradients, _ = tf.clip_by_global_norm(gradients, config.GRADIENT_CLIP_NORM)
-        self.optimizer.apply_gradients(zip(gradients, self.online.trainable_variables))
+        gradients, _ = tf.clip_by_global_norm(
+            gradients, config.GRADIENT_CLIP_NORM)
+        self.optimizer.apply_gradients(
+            zip(gradients, self.online.trainable_variables))
         return loss, sample_losses
 
     def learn(self):
         if len(self.replay) < max(config.BATCH_SIZE, config.LEARNING_STARTS):
             return None
         progress = min(self.training_steps / config.PRIORITY_BETA_STEPS, 1.0)
-        beta = config.PRIORITY_BETA_START + progress * (1.0 - config.PRIORITY_BETA_START)
+        beta = config.PRIORITY_BETA_START + progress * \
+            (1.0 - config.PRIORITY_BETA_START)
         batch, indices, weights = self.replay.sample(config.BATCH_SIZE, beta)
         states, actions, rewards, next_states, terminals, discounts = batch
         loss, priorities = self._train_step(

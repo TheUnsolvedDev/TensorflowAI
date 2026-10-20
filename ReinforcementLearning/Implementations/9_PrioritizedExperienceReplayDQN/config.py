@@ -1,8 +1,4 @@
 ALGORITHM_NAME = "Prioritized Experience Replay DQN"
-USE_DOUBLE_DQN = False
-USE_DUELING_NETWORK = False
-USE_PRIORITIZED_REPLAY = True
-
 ENV_ID = "CartPole-v1"
 EPISODES = 2000
 TEST_EPISODES = 100
@@ -115,4 +111,3 @@ def apply_environment(env_id):
     settings = DEFAULT_ENVIRONMENT_CONFIG | ENVIRONMENT_CONFIGS.get(env_id, {})
     for name, value in settings.items():
         globals()[name] = value
-

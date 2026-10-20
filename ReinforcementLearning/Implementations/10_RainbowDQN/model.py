@@ -13,10 +13,22 @@ class NoisyDense(tf.keras.layers.Layer):
     def build(self, input_shape):
         input_size = int(input_shape[-1])
         limit = 1.0 / np.sqrt(input_size)
-        self.weight_mean = self.add_weight(shape=(input_size, self.units), initializer=tf.keras.initializers.RandomUniform(-limit, limit))
-        self.weight_sigma = self.add_weight(shape=(input_size, self.units), initializer=tf.keras.initializers.Constant(self.initial_sigma / np.sqrt(input_size)))
-        self.bias_mean = self.add_weight(shape=(self.units,), initializer=tf.keras.initializers.RandomUniform(-limit, limit))
-        self.bias_sigma = self.add_weight(shape=(self.units,), initializer=tf.keras.initializers.Constant(self.initial_sigma / np.sqrt(self.units)))
+        self.weight_mean = self.add_weight(shape=(
+            input_size, self.units), initializer=tf.keras.initializers.RandomUniform(-limit, limit))
+        self.weight_sigma = self.add_weight(
+            shape=(
+                input_size, self.units), initializer=tf.keras.initializers.Constant(
+                self.initial_sigma / np.sqrt(input_size)))
+        self.bias_mean = self.add_weight(shape=(
+            self.units,), initializer=tf.keras.initializers.RandomUniform(-limit, limit))
+        self.bias_sigma = self.add_weight(
+            shape=(
+                self.units,
+            ),
+            initializer=tf.keras.initializers.Constant(
+                self.initial_sigma /
+                np.sqrt(
+                    self.units)))
 
     @staticmethod
     def scaled_noise(size):
@@ -27,7 +39,8 @@ class NoisyDense(tf.keras.layers.Layer):
         if training:
             input_noise = self.scaled_noise(tf.shape(inputs)[-1])
             output_noise = self.scaled_noise(self.units)
-            weight = self.weight_mean + self.weight_sigma * tf.tensordot(input_noise, output_noise, axes=0)
+            weight = self.weight_mean + self.weight_sigma * \
+                tf.tensordot(input_noise, output_noise, axes=0)
             bias = self.bias_mean + self.bias_sigma * output_noise
         else:
             weight, bias = self.weight_mean, self.bias_mean
@@ -37,7 +50,8 @@ class NoisyDense(tf.keras.layers.Layer):
 class CategoricalDuelingCombine(tf.keras.layers.Layer):
     def call(self, inputs):
         value, advantage = inputs
-        logits = value + advantage - tf.reduce_mean(advantage, axis=1, keepdims=True)
+        logits = value + advantage - \
+            tf.reduce_mean(advantage, axis=1, keepdims=True)
         return tf.nn.softmax(logits, axis=-1)
 
 
@@ -46,13 +60,17 @@ def build_q_network(observation_shape, action_count):
     features = inputs
     for units in config.HIDDEN_UNITS[:-1]:
         features = tf.keras.layers.Dense(units, activation="relu")(features)
-    features = NoisyDense(config.HIDDEN_UNITS[-1], name="noisy_features")(features)
+    features = NoisyDense(
+        config.HIDDEN_UNITS[-1], name="noisy_features")(features)
     features = tf.keras.layers.Activation("relu")(features)
     value = NoisyDense(config.ATOM_COUNT, name="value")(features)
-    advantage = NoisyDense(action_count * config.ATOM_COUNT, name="advantage")(features)
+    advantage = NoisyDense(
+        action_count * config.ATOM_COUNT, name="advantage")(features)
     value = tf.keras.layers.Reshape((1, config.ATOM_COUNT))(value)
-    advantage = tf.keras.layers.Reshape((action_count, config.ATOM_COUNT))(advantage)
-    outputs = CategoricalDuelingCombine(name="return_distribution")([value, advantage])
+    advantage = tf.keras.layers.Reshape(
+        (action_count, config.ATOM_COUNT))(advantage)
+    outputs = CategoricalDuelingCombine(
+        name="return_distribution")([value, advantage])
     return tf.keras.Model(inputs, outputs)
 
 
@@ -82,7 +100,8 @@ class ReplayBuffer:
         while node:
             left = node * 2
             self.sum_tree[node] = self.sum_tree[left] + self.sum_tree[left + 1]
-            self.min_tree[node] = min(self.min_tree[left], self.min_tree[left + 1])
+            self.min_tree[node] = min(
+                self.min_tree[left], self.min_tree[left + 1])
             node //= 2
 
     def _set_priorities(self, indices, priorities):
@@ -92,8 +111,10 @@ class ReplayBuffer:
         parents = np.unique(leaves // 2)
         while parents.size:
             left = parents * 2
-            self.sum_tree[parents] = self.sum_tree[left] + self.sum_tree[left + 1]
-            self.min_tree[parents] = np.minimum(self.min_tree[left], self.min_tree[left + 1])
+            self.sum_tree[parents] = self.sum_tree[left] + \
+                self.sum_tree[left + 1]
+            self.min_tree[parents] = np.minimum(
+                self.min_tree[left], self.min_tree[left + 1])
             if parents[0] == 1:
                 break
             parents = np.unique(parents // 2)
@@ -114,7 +135,8 @@ class ReplayBuffer:
     def sample(self, batch_size, beta):
         total_priority = self.sum_tree[1]
         segment = total_priority / batch_size
-        masses = (np.arange(batch_size) + self.rng.random(batch_size)) * segment
+        masses = (np.arange(batch_size) +
+                  self.rng.random(batch_size)) * segment
         masses = np.minimum(masses, np.nextafter(total_priority, 0.0))
         nodes = np.ones(batch_size, dtype=np.int64)
         while nodes[0] < self.tree_capacity:
@@ -123,10 +145,12 @@ class ReplayBuffer:
             go_right = masses >= left_priorities
             masses -= left_priorities * go_right
             nodes = left + go_right
-            masses = np.minimum(masses, np.nextafter(self.sum_tree[nodes], 0.0))
+            masses = np.minimum(masses, np.nextafter(
+                self.sum_tree[nodes], 0.0))
         indices = nodes - self.tree_capacity
         smallest = np.finfo(np.float64).tiny
-        probabilities = np.maximum(self.sum_tree[nodes] / total_priority, smallest)
+        probabilities = np.maximum(
+            self.sum_tree[nodes] / total_priority, smallest)
         minimum_probability = max(self.min_tree[1] / total_priority, smallest)
         maximum_weight = (self.size * minimum_probability) ** -beta
         weights = np.power(self.size * probabilities, -beta) / maximum_weight
@@ -143,12 +167,13 @@ class ReplayBuffer:
     def update_priorities(self, indices, errors):
         priorities = np.abs(np.asarray(errors)) + config.PRIORITY_EPSILON
         self.max_priority = max(self.max_priority, float(np.max(priorities)))
-        scaled_priorities = np.power(priorities, config.PRIORITY_ALPHA).astype(np.float64)
+        scaled_priorities = np.power(
+            priorities, config.PRIORITY_ALPHA).astype(np.float64)
         unique_indices, reverse = np.unique(indices, return_inverse=True)
-        unique_priorities = np.full(unique_indices.size, -np.inf, dtype=np.float64)
+        unique_priorities = np.full(
+            unique_indices.size, -np.inf, dtype=np.float64)
         np.maximum.at(unique_priorities, reverse, scaled_priorities)
         self._set_priorities(unique_indices, unique_priorities)
 
     def __len__(self):
         return self.size
-

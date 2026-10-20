@@ -1,6 +1,6 @@
 # Trust Region Policy Optimization (TRPO)
 
-An educational first-order KL-constrained policy update rather than the full conjugate-gradient TRPO solver.
+A discrete-action implementation of textbook TRPO with GAE, a KL Hessian-vector product, conjugate gradient, trust-region step scaling, and backtracking line search. The value function is fitted separately with Adam.
 
 ## Files
 
@@ -57,10 +57,10 @@ Evaluate a saved checkpoint:
 sh run.sh inference --checkpoint best.weights.h5 --episodes 10
 ```
 
-Render evaluation episodes:
+Inference renders by default. Disable rendering for headless evaluation:
 
 ```bash
-sh run.sh inference --checkpoint best.weights.h5 --render
+sh run.sh inference --checkpoint best.weights.h5 --no-render
 ```
 
 ## Interpreter

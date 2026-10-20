@@ -15,6 +15,8 @@ a text-conditioned or pretrained diffusion pipeline.
 
 The `conv_unet_v2` denoiser is fully convolutional:
 
+- a Keras Functional model with image and timestep inputs
+
 - two residual blocks at every encoder and decoder resolution
 - Group Normalization, SiLU/Swish activation, and dropout in each residual block
 - sinusoidal timestep embeddings injected into every residual block
@@ -67,19 +69,32 @@ normally trained weights.
 - `mnist`
 - `fashion_mnist`
 - `cifar10`
+- `cifar100`
 - `celeba`
 - `bedroom`
 
-MNIST, Fashion-MNIST, and CIFAR-10 default to 32px with batch size 32. CelebA
-and bedroom default to 128px with batch size 8.
+MNIST, Fashion-MNIST, CIFAR-10, and CIFAR-100 default to 32px with batch size
+32. CelebA and bedroom default to 96px RGB images with batch size 32.
 
 | Dataset | Resolution | Global batch size |
 |---|---:|---:|
 | MNIST | 32x32 | 32 |
 | Fashion-MNIST | 32x32 | 32 |
 | CIFAR-10 | 32x32 | 32 |
-| CelebA | 128x128 | 8 |
-| Bedroom | 128x128 | 8 |
+| CIFAR-100 | 32x32 | 32 |
+| CelebA | 96x96x3 | 32 |
+| Bedroom | 96x96x3 | 32 |
+
+For faster experiments, CelebA and bedroom can be overridden to 64px:
+
+```bash
+python train_and_test.py --gpu -1 --type celeba --image-size 64 --batch-size 32 --reset
+```
+
+The 64px setting is approximately four times cheaper per image than 128px.
+The default 96px setting uses about 56% of the 128px pixel workload while
+retaining more facial or room detail than 64px. Runs at different resolutions
+are incompatible and must start with `--reset`.
 
 ## Run
 
@@ -89,7 +104,7 @@ python train_and_test.py --gpu -1 --type mnist --reset
 
 `--gpu -1` requires both GPUs and uses NCCL mirrored training.
 
-`--reset` deletes only the selected run directory before training, so MNIST begins with fresh weights, history, and samples. Generated samples are saved every five epochs under `logs/mnist/DiffusionProbabilisticModels/diffusion/samples/`; each grid shows reference images above generated images.
+`--reset` deletes only the selected run directory before training, so MNIST begins with fresh weights, history, and samples. Every five epochs, a 4x4 grid of sixteen images generated from noise is saved under `logs/mnist/DiffusionProbabilisticModels/diffusion/samples/`.
 
 Architecture v2 is incompatible with older weights. Start its first run with
 `--reset`; later runs can use `--resume` normally.
@@ -118,6 +133,8 @@ python train_and_test.py --gpu -1 --type mnist --verify-sampler
 ## Practical Notes
 
 - This folder is standalone and does not import runtime helpers from sibling folders.
+- The denoiser is Functional; the small `DDPMTrainer` class only owns the noise
+  schedule, distributed optimizer step, sampler, and training loop.
 - Images are streamed and prefetched; no dataset cache is written to disk.
 - Folder images are center-cropped to a square, resized with antialiasing, and
   randomly flipped horizontally during training.

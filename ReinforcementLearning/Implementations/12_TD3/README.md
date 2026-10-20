@@ -25,7 +25,9 @@ The networks in `model.py` use the TensorFlow Keras Functional API. This folder 
 - Gymnasium
 - NumPy
 
-The default environment is `Pendulum-v1`. Use only environments with a compatible observation and action space. `LunarLander-v3` requires Gymnasium's optional Box2D dependencies.
+The default environment is `Pendulum-v1`. Use only environments with a compatible observation and action space. `LunarLanderContinuous-v3` and `BipedalWalker-v3` require Gymnasium's optional Box2D dependencies.
+
+The launcher also includes `HalfCheetah-v5`, `Hopper-v5`, `Walker2d-v5`, and `Ant-v5`. They require `gymnasium[mujoco]`.
 
 ## Training and testing
 
@@ -57,10 +59,10 @@ Evaluate a saved checkpoint:
 sh run.sh inference --checkpoint best.weights.h5 --episodes 10
 ```
 
-Render evaluation episodes:
+Inference renders by default. Disable rendering for headless evaluation:
 
 ```bash
-sh run.sh inference --checkpoint best.weights.h5 --render
+sh run.sh inference --checkpoint best.weights.h5 --no-render
 ```
 
 ## Interpreter

@@ -7,7 +7,16 @@ except ImportError:
     pass
 import tensorflow as tf
 
-from config import *
+from config import (
+    BATCH_SIZE,
+    DATASET_PATH,
+    DEFAULT_DATASET,
+    ENABLE_DATASET_NONDETERMINISM,
+    IMAGE_SIZE,
+    MAX_DATASET_ITEMS,
+    SHUFFLE_BUFFER_SIZE,
+    SUPPORTED_DATASETS,
+)
 
 AUTOTUNE = tf.data.AUTOTUNE
 VALID_SUFFIXES = (".jpg", ".jpeg", ".png", ".bmp", ".webp")
@@ -86,19 +95,6 @@ class Dataset:
         dataset = dataset.shuffle(SHUFFLE_BUFFER_SIZE, reshuffle_each_iteration=True)
         dataset = dataset.with_options(self.options)
         return dataset.batch(self.batch_size).prefetch(AUTOTUNE)
-
-    def get_preview_batch(self, name, count=4):
-        if name in BUILTIN_DATASETS:
-            images, channels = self._builtin_images(name)
-            images = tf.convert_to_tensor(images[:count])
-            images = tf.map_fn(
-                self._prepare,
-                images,
-                fn_output_signature=tf.TensorSpec((*self.image_size, channels), tf.float32),
-            )
-            return images, channels
-        paths = self._image_paths(self._folder(name), recursive=name == "bedroom")[:count]
-        return tf.stack([self._prepare(self._decode(path)) for path in paths]), 3
 
     def load_data(self, name=DEFAULT_DATASET):
         if name in BUILTIN_DATASETS:

@@ -20,7 +20,8 @@ def configure_tensorflow(gpu_index):
         print("device=CPU")
         return
     if gpu_index >= len(gpus):
-        raise ValueError(f"GPU {gpu_index} is unavailable; detected {len(gpus)} GPU(s)")
+        raise ValueError(
+            f"GPU {gpu_index} is unavailable; detected {len(gpus)} GPU(s)")
     selected_gpu = gpus[gpu_index]
     tf.config.set_visible_devices(selected_gpu, "GPU")
     if config.ENABLE_GPU_MEMORY_GROWTH:
@@ -57,8 +58,16 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_workers, rollout_st
     state = {"started": 0, "best_average": -np.inf}
     episode_lock = threading.Lock()
     history_lock = threading.Lock()
-    worker_seeds = seed_generator.integers(0, np.iinfo(np.int32).max, size=num_workers)
-    print(f"{'Episode':>8} {'Reward':>10} {'Average':>10} {'Length':>8} {'Loss':>10} {'Best Avg':>10}")
+    worker_seeds = seed_generator.integers(
+        0, np.iinfo(np.int32).max, size=num_workers)
+    print(
+        f"{
+            'Episode':>8} {
+            'Reward':>10} {
+                'Average':>10} {
+                    'Length':>8} {
+                        'Loss':>10} {
+                            'Best Avg':>10}")
 
     def reserve_episode():
         with episode_lock:
@@ -78,7 +87,8 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_workers, rollout_st
             reserved_episode = reserve_episode()
             if reserved_episode is None:
                 break
-            episode_seed = int(environment_seed_generator.integers(0, np.iinfo(np.int32).max))
+            episode_seed = int(environment_seed_generator.integers(
+                0, np.iinfo(np.int32).max))
             observation, _ = environment.reset(seed=episode_seed)
             total_reward = 0.0
             episode_length = 0
@@ -90,7 +100,8 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_workers, rollout_st
                 rewards = []
                 for _ in range(rollout_steps):
                     action = local.act(observation)
-                    next_observation, reward, terminated, truncated, info = environment.step(action)
+                    next_observation, reward, terminated, truncated, info = environment.step(
+                        action)
                     done = terminated or truncated
                     states.append(observation)
                     actions.append(action)
@@ -103,7 +114,8 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_workers, rollout_st
                 losses.append(
                     local.learn(
                         np.asarray(states, dtype=np.float32),
-                        np.asarray(actions, dtype=np.float32 if local.continuous else np.int32),
+                        np.asarray(
+                            actions, dtype=np.float32 if local.continuous else np.int32),
                         np.asarray(rewards, dtype=np.float32),
                         terminated,
                         observation,
@@ -114,16 +126,19 @@ def train(env_id, episodes, seed, checkpoint, log_every, num_workers, rollout_st
             with history_lock:
                 episode = len(history) + 1
                 history.append((episode, total_reward, episode_length, loss))
-                average_reward = np.mean([row[1] for row in history[-config.MOVING_AVERAGE_WINDOW:]])
+                average_reward = np.mean(
+                    [row[1] for row in history[-config.MOVING_AVERAGE_WINDOW:]])
                 if episode == 1:
                     policy.save(checkpoint)
-                if len(history) >= config.MOVING_AVERAGE_WINDOW and average_reward > state["best_average"]:
+                enough_history = len(history) >= config.MOVING_AVERAGE_WINDOW
+                if enough_history and average_reward > state["best_average"]:
                     state["best_average"] = average_reward
                     policy.save(checkpoint)
                 if episode == 1 or episode % log_every == 0 or episode == episodes:
                     print(
                         f"{episode:8d} {total_reward:10.2f} {average_reward:10.2f} "
-                        f"{episode_length:8d} {loss:10.4f} {max(state['best_average'], average_reward):10.2f}"
+                        f"{episode_length:8d} {loss:10.4f} "
+                        f"{max(state['best_average'], average_reward):10.2f}"
                     )
         environment.close()
 
@@ -168,7 +183,8 @@ def save_test_gif(env_id, seed, checkpoint, output_dir):
         done = False
         while not done:
             action = policy.act(state, training=False)
-            state, reward, terminated, truncated, _ = test_environment.step(action)
+            state, reward, terminated, truncated, _ = test_environment.step(
+                action)
             total_reward += reward
             done = terminated or truncated
         if total_reward > best_reward:
@@ -225,10 +241,12 @@ def save_results(env_id, history, evaluation_rewards, output_dir):
     import matplotlib.pyplot as plt
 
     training_metrics = np.atleast_1d(
-        np.genfromtxt(run_dir / "training_metrics.csv", delimiter=",", names=True)
+        np.genfromtxt(run_dir / "training_metrics.csv",
+                      delimiter=",", names=True)
     )
     evaluation_metrics = np.atleast_1d(
-        np.genfromtxt(run_dir / "evaluation_metrics.csv", delimiter=",", names=True)
+        np.genfromtxt(run_dir / "evaluation_metrics.csv",
+                      delimiter=",", names=True)
     )
     episodes = training_metrics["episode"]
     rewards = training_metrics["reward"]
@@ -237,11 +255,14 @@ def save_results(env_id, history, evaluation_rewards, output_dir):
     evaluation_episodes = evaluation_metrics["episode"]
     evaluation_rewards = evaluation_metrics["reward"]
     window = min(config.MOVING_AVERAGE_WINDOW, len(rewards))
-    moving_average = np.convolve(rewards, np.ones(window) / window, mode="valid")
+    moving_average = np.convolve(
+        rewards, np.ones(window) / window, mode="valid")
 
     figure, axes = plt.subplots(2, 2, figsize=(12, 8))
-    axes[0, 0].plot(episodes, rewards, color="tab:blue", alpha=0.45, label="Episode reward")
-    axes[0, 0].plot(episodes[window - 1 :], moving_average, color="tab:blue", label=f"{window}-episode average")
+    axes[0, 0].plot(episodes, rewards, color="tab:blue",
+                    alpha=0.45, label="Episode reward")
+    axes[0, 0].plot(episodes[window - 1:], moving_average,
+                    color="tab:blue", label=f"{window}-episode average")
     axes[0, 0].set_title("Training reward")
     axes[0, 0].legend()
     axes[0, 1].plot(episodes, losses, color="tab:red")
@@ -249,7 +270,8 @@ def save_results(env_id, history, evaluation_rewards, output_dir):
     axes[1, 0].plot(episodes, lengths, color="tab:green")
     axes[1, 0].set_title("Episode length")
     axes[1, 1].bar(evaluation_episodes, evaluation_rewards, color="tab:purple")
-    axes[1, 1].axhline(np.mean(evaluation_rewards), color="black", linestyle="--", label="Mean")
+    axes[1, 1].axhline(np.mean(evaluation_rewards),
+                       color="black", linestyle="--", label="Mean")
     axes[1, 1].set_title("Evaluation rewards")
     axes[1, 1].legend()
     for axis in axes.flat:
@@ -279,8 +301,14 @@ def main():
     args.episodes = args.episodes or config.EPISODES
     args.test_episodes = args.test_episodes or config.TEST_EPISODES
     args.rollout_steps = args.rollout_steps or config.ROLLOUT_STEPS
-    if min(args.episodes, args.test_episodes, args.log_every, args.num_workers, args.rollout_steps) < 1:
-        parser.error("episode counts, logging, workers, and rollout steps must be positive")
+    if min(
+            args.episodes,
+            args.test_episodes,
+            args.log_every,
+            args.num_workers,
+            args.rollout_steps) < 1:
+        parser.error(
+            "episode counts, logging, workers, and rollout steps must be positive")
     configure_tensorflow(args.gpu)
     checkpoint = args.checkpoint or checkpoint_path(args.env)
     history = train(
@@ -292,7 +320,8 @@ def main():
         args.num_workers,
         args.rollout_steps,
     )
-    rewards = evaluate(args.env, args.test_episodes, args.seed + 10000, checkpoint)
+    rewards = evaluate(args.env, args.test_episodes,
+                       args.seed + 10000, checkpoint)
     save_results(args.env, history, rewards, args.output_dir)
     if config.SAVE_TEST_GIF:
         save_test_gif(args.env, args.seed + 20000, checkpoint, args.output_dir)

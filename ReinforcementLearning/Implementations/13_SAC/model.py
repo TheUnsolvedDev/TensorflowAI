@@ -1,68 +1,79 @@
-from collections import deque
-
 import numpy as np
 import tensorflow as tf
 
-
-def mlp(inputs, hidden=(128, 128)):
-    x = inputs
-    for units in hidden:
-        x = tf.keras.layers.Dense(units, activation="relu")(x)
-    return x
+import config
 
 
-def actor_model(observation_shape, action_shape, action_limit):
+def hidden_layers(inputs):
+    features = inputs
+    for units in config.HIDDEN_UNITS:
+        features = tf.keras.layers.Dense(units, activation="relu")(features)
+    return features
+
+
+def actor_model(observation_shape, action_size):
     inputs = tf.keras.Input(shape=observation_shape)
-    actions = tf.keras.layers.Dense(action_shape, activation="tanh")(mlp(inputs))
-    outputs = tf.keras.layers.Rescaling(action_limit)(actions)
+    outputs = tf.keras.layers.Dense(
+        action_size, activation="tanh")(hidden_layers(inputs))
     return tf.keras.Model(inputs, outputs)
 
 
-def gaussian_actor_model(observation_shape, action_shape):
+def gaussian_actor_model(observation_shape, action_size):
     inputs = tf.keras.Input(shape=observation_shape)
-    features = mlp(inputs)
-    mean = tf.keras.layers.Dense(action_shape, name="mean")(features)
+    features = hidden_layers(inputs)
+    mean = tf.keras.layers.Dense(action_size)(features)
     log_std = tf.keras.layers.Dense(
-        action_shape,
-        bias_initializer=tf.keras.initializers.Constant(-0.5),
-        name="log_std",
-    )(features)
+        action_size, bias_initializer=tf.keras.initializers.Constant(-0.5))(features)
     return tf.keras.Model(inputs, [mean, log_std])
 
 
-def critic_model(observation_shape, action_shape):
+def critic_model(observation_shape, action_size):
     states = tf.keras.Input(shape=observation_shape)
-    actions = tf.keras.Input(shape=(action_shape,))
-    features = tf.keras.layers.Concatenate()([states, actions])
-    outputs = tf.keras.layers.Dense(1)(mlp(features))
+    actions = tf.keras.Input(shape=(action_size,))
+    outputs = tf.keras.layers.Dense(1)(hidden_layers(
+        tf.keras.layers.Concatenate()([states, actions])))
     return tf.keras.Model([states, actions], outputs)
 
 
 class ReplayBuffer:
-    def __init__(self, capacity=100000):
-        self.data = deque(maxlen=capacity)
+    def __init__(self, observation_shape, action_size, seed):
+        self.states = np.empty((config.REPLAY_CAPACITY,) +
+                               tuple(observation_shape), np.float32)
+        self.actions = np.empty(
+            (config.REPLAY_CAPACITY, action_size), np.float32)
+        self.rewards = np.empty(config.REPLAY_CAPACITY, np.float32)
+        self.next_states = np.empty(
+            (config.REPLAY_CAPACITY,) + tuple(observation_shape), np.float32)
+        self.terminals = np.empty(config.REPLAY_CAPACITY, np.float32)
+        self.position = 0
+        self.size = 0
+        self.rng = np.random.default_rng(seed)
 
-    def add(self, state, action, reward, next_state, done):
-        self.data.append((state, action, reward, next_state, done))
+    def add(self, state, action, reward, next_state, terminal):
+        index = self.position
+        self.states[index] = state
+        self.actions[index] = action
+        self.rewards[index] = reward
+        self.next_states[index] = next_state
+        self.terminals[index] = terminal
+        self.position = (self.position + 1) % config.REPLAY_CAPACITY
+        self.size = min(self.size + 1, config.REPLAY_CAPACITY)
 
-    def sample(self, batch_size):
-        indices = np.random.choice(len(self.data), batch_size, replace=False)
-        batch = [self.data[index] for index in indices]
-        return tuple(np.asarray(values) for values in zip(*batch))
+    def sample(self):
+        indices = self.rng.integers(self.size, size=config.BATCH_SIZE)
+        return (
+            self.states[indices],
+            self.actions[indices],
+            self.rewards[indices],
+            self.next_states[indices],
+            self.terminals[indices],
+        )
 
     def __len__(self):
-        return len(self.data)
+        return self.size
 
 
-def soft_update(target, source, tau):
+def soft_update(target, source):
     for target_weight, source_weight in zip(target.weights, source.weights):
-        target_weight.assign((1.0 - tau) * target_weight + tau * source_weight)
-
-
-def gaussian_log_probability(actions, mean, log_std):
-    log_std = tf.clip_by_value(log_std, -20.0, 2.0)
-    variance = tf.exp(2.0 * log_std)
-    return tf.reduce_sum(
-        -0.5 * (((actions - mean) ** 2) / variance + 2.0 * log_std + np.log(2.0 * np.pi)),
-        axis=1,
-    )
+        target_weight.assign((1.0 - config.TAU) *
+                             target_weight + config.TAU * source_weight)

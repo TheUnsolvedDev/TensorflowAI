@@ -16,13 +16,19 @@ A collection of self-contained reinforcement-learning algorithms implemented wit
 | `8_DuelingDQN` | Dueling DQN | Discrete | Standardized |
 | `9_PrioritizedExperienceReplayDQN` | Prioritized Replay DQN | Discrete | Standardized |
 | `10_RainbowDQN` | Rainbow DQN | Discrete | Standardized |
-| `11_DDPG` | Deep Deterministic Policy Gradient | Continuous | Starter implementation |
-| `12_TD3` | Twin Delayed DDPG | Continuous | Starter implementation |
-| `13_SAC` | Soft Actor-Critic | Continuous | Starter implementation |
-| `14_TRPO` | Trust Region Policy Optimization | Policy optimization | Starter implementation |
-| `15_PPO` | Proximal Policy Optimization | Policy optimization | Starter implementation |
+| `11_DDPG` | Deep Deterministic Policy Gradient | Continuous | Textbook core complete |
+| `12_TD3` | Twin Delayed DDPG | Continuous | Textbook core complete |
+| `13_SAC` | Soft Actor-Critic | Continuous | Textbook core complete |
+| `14_TRPO` | Trust Region Policy Optimization | Discrete | Textbook core complete |
+| `15_PPO` | Proximal Policy Optimization | Discrete and continuous | Textbook core complete |
+| `16_QRDQN` | Quantile Regression DQN | Discrete | Textbook core complete |
+| `17_IQN` | Implicit Quantile Network | Discrete | Textbook core complete |
+| `18_D4PG` | Distributional DDPG | Continuous | Compact single-process core |
+| `19_IMPALA` | IMPALA with V-trace | Discrete | Compact single-machine core |
+| `20_Dreamer` | Dreamer-style latent control | Discrete | Compact vector-state core |
+| `21_MuZero` | MuZero | Discrete | Compact vector-state core |
 
-The standardized implementations are folders 1–10. Policy Gradient and REINFORCE intentionally demonstrate the same Monte Carlo estimator as baseline and named textbook presentations. Rainbow combines Double DQN, Dueling DQN, prioritized replay, three-step returns, C51 distributional learning, and noisy linear layers.
+Policy Gradient and REINFORCE intentionally demonstrate the same Monte Carlo estimator as baseline and named textbook presentations. Rainbow combines Double DQN, Dueling DQN, prioritized replay, three-step returns, C51 distributional learning, and noisy linear layers. DDPG, TD3, and SAC implement their original off-policy continuous-control update families. TRPO uses a conjugate-gradient natural-gradient step with a KL line search, while PPO uses GAE and the clipped surrogate objective. QR-DQN and IQN provide standalone distributional value-learning examples. Folders 18–21 retain their defining learning equations but intentionally use compact single-process vector-state training rather than paper-scale distributed infrastructure.
 
 ## Shared structure
 
@@ -66,6 +72,18 @@ Folders 1–5 support both discrete and continuous vector environments:
 Folders 6–10 support the discrete environments `CartPole-v1`, `Acrobot-v1`, `MountainCar-v0`, and `LunarLander-v3`.
 
 Box2D environments require the corresponding optional Gymnasium dependencies.
+
+MuJoCo v5 locomotion environments are assigned only to the continuous off-policy implementations where they are a reasonable baseline fit:
+
+| Implementation | MuJoCo environments |
+|---|---|
+| DDPG | HalfCheetah, Reacher |
+| TD3 | HalfCheetah, Hopper, Walker2d, Ant |
+| SAC | HalfCheetah, Hopper, Walker2d, Ant |
+| D4PG | HalfCheetah, Hopper, Walker2d, Ant |
+| PPO | HalfCheetah, Hopper, Walker2d, Ant |
+
+Install the optional dependency with `pip install "gymnasium[mujoco]"`. Discrete-only implementations are intentionally not routed to MuJoCo locomotion tasks.
 
 For implementations 1–5, Acrobot and both MountainCar variants use potential-based rewards during training to expose progress before terminal success. Checkpoints, CSV metrics, plots, GIFs, and evaluation always use the original Gymnasium reward.
 
@@ -123,7 +141,7 @@ sh run.sh train --episodes 500 --test-episodes 20 --log-every 25
 
 ## GPU selection
 
-Folders 1–10 select one physical GPU before model construction. GPU 0 is the default:
+Folders 1–21 select one physical GPU before model construction. GPU 0 is the default:
 
 ```bash
 sh run.sh train --gpu 0

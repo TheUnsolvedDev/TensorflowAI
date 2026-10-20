@@ -119,4 +119,3 @@ def apply_environment(env_id):
     for name, value in settings.items():
         globals()[name] = value
     globals()["ATOM_DELTA"] = (V_MAX - V_MIN) / (ATOM_COUNT - 1)
-

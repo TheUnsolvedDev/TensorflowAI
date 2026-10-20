@@ -14,7 +14,8 @@ def main():
     args = parser.parse_args()
     train_and_test.configure_tensorflow(args.gpu)
     checkpoint = args.checkpoint or train_and_test.checkpoint_path(args.env)
-    train_and_test.evaluate(args.env, args.episodes, args.seed, checkpoint, render=True)
+    train_and_test.evaluate(args.env, args.episodes,
+                            args.seed, checkpoint, render=True)
 
 
 if __name__ == "__main__":

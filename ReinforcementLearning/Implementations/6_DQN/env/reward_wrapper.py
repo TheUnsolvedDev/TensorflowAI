@@ -25,7 +25,8 @@ class LearningRewardWrapper(gym.Wrapper):
         return 0.0
 
     def step(self, action):
-        observation, reward, terminated, truncated, info = self.env.step(action)
+        observation, reward, terminated, truncated, info = self.env.step(
+            action)
         previous_potential = self.potential(self.previous_observation)
         next_potential = 0.0 if terminated else self.potential(observation)
         learning_reward = reward + self.gamma * next_potential - previous_potential
@@ -39,4 +40,3 @@ def make_training_env(env_id, gamma):
     if env_id in {"Acrobot-v1", "MountainCar-v0"}:
         return LearningRewardWrapper(environment, gamma)
     return environment
-

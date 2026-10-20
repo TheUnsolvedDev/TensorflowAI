@@ -13,20 +13,18 @@ import tensorflow as tf
 
 from config import (
     ARCHITECTURE_VERSION,
-    BATCH_SIZE,
     DEFAULT_BATCH_SIZES,
     DEFAULT_DATASET,
     DEFAULT_IMAGE_SIZES,
     DIFFUSION_STEPS,
     EPOCHS,
-    IMAGE_SIZE,
     SAMPLE_EVERY_N_EPOCHS,
     SAVE_EVERY_N_EPOCHS,
     SUPPORTED_DATASETS,
     SUPPORTED_IMAGE_SIZES,
 )
 from dataset import Dataset
-from model import BaseDiffusionModel
+from model import DDPMTrainer
 
 MODEL_NAME = "DiffusionProbabilisticModels"
 
@@ -150,13 +148,11 @@ def setup_interrupt_handler(model):
     signal.signal(signal.SIGTERM, handler)
 
 
-def save_rows_grid(rows, filename):
-    rendered_images = []
-    for row in rows:
-        images = np.clip((row + 1.0) / 2.0, 0.0, 1.0)
-        if images.shape[-1] == 1:
-            images = np.repeat(images, 3, axis=-1)
-        rendered_images.extend(images)
+def save_grid(images, filename):
+    rendered_images = np.clip((images + 1.0) / 2.0, 0.0, 1.0)
+    if rendered_images.shape[-1] == 1:
+        rendered_images = np.repeat(rendered_images, 3, axis=-1)
+    rendered_images = list(rendered_images)
     columns = 4
     grid_rows = [rendered_images[start:start + columns] for start in range(0, len(rendered_images), columns)]
     width = max(len(row) for row in grid_rows)
@@ -219,10 +215,9 @@ class WeightSaveCallback(tf.keras.callbacks.Callback):
 
 
 class SampleImageCallback(tf.keras.callbacks.Callback):
-    def __init__(self, model, log_dir, preview_images, sample_count=4):
+    def __init__(self, model, log_dir, sample_count=16):
         super().__init__()
         self.model_ref = model
-        self.preview_images = preview_images
         self.sample_count = sample_count
         self.img_dir = os.path.join(log_dir, "samples")
         os.makedirs(self.img_dir, exist_ok=True)
@@ -232,14 +227,11 @@ class SampleImageCallback(tf.keras.callbacks.Callback):
             return
         print(f"Generating {self.sample_count} samples ({DIFFUSION_STEPS} denoising steps)...")
         generated = self.model_ref.generate_samples(sample_count=self.sample_count).numpy()
-        save_rows_grid(
-            [self.preview_images.numpy(), generated],
-            os.path.join(self.img_dir, f"epoch_{epoch + 1}.png"),
-        )
+        save_grid(generated, os.path.join(self.img_dir, f"epoch_{epoch + 1}.png"))
 
 
-def build_model(strategy, channels, image_size, batch_size):
-    return BaseDiffusionModel(strategy, (image_size, image_size, channels), batch_size, model_label=MODEL_NAME)
+def build_model(strategy, channels, image_size):
+    return DDPMTrainer(strategy, (image_size, image_size, channels))
 
 
 def main():
@@ -250,13 +242,15 @@ def main():
     run_mode.add_argument("--resume", "--continue", dest="resume", action="store_true")
     run_mode.add_argument("--reset", action="store_true", help="Delete this dataset run before training.")
     parser.add_argument("--verify-sampler", action="store_true", help="Run DDPM reverse-process regression checks and exit.")
-    parser.add_argument("--sample-count", type=int, default=4)
+    parser.add_argument("--sample-count", type=int, default=16)
     parser.add_argument("--image-size", type=int, choices=SUPPORTED_IMAGE_SIZES)
     parser.add_argument("--batch-size", type=int)
     args = parser.parse_args()
 
     image_size = args.image_size or DEFAULT_IMAGE_SIZES[args.type]
     batch_size = args.batch_size or DEFAULT_BATCH_SIZES[args.type]
+    if args.sample_count < 1:
+        parser.error("--sample-count must be at least 1")
 
     setup_gpu(args.gpu)
     dataset = Dataset((image_size, image_size), batch_size)
@@ -264,7 +258,7 @@ def main():
     channels = 1 if args.type in {"mnist", "fashion_mnist"} else 3
     if batch_size % strategy.num_replicas_in_sync:
         parser.error(f"--batch-size must be divisible by the {strategy.num_replicas_in_sync} active replicas")
-    model = build_model(strategy, channels, image_size, batch_size)
+    model = build_model(strategy, channels, image_size)
     if args.verify_sampler:
         verify_ddpm_sampler(model)
         return
@@ -281,12 +275,11 @@ def main():
         os.makedirs(log_dir, exist_ok=True)
     start_epoch = load_training_state(log_dir) if resumed else 0
     setup_interrupt_handler(model)
-    preview_images = dataset.get_preview_batch(args.type, count=min(args.sample_count, 4))[0]
     callbacks = [
         EpochTracker(model),
         LossLogger(log_dir),
         WeightSaveCallback(model, log_dir),
-        SampleImageCallback(model, log_dir, preview_images, min(args.sample_count, 4)),
+        SampleImageCallback(model, log_dir, args.sample_count),
     ]
 
     try:

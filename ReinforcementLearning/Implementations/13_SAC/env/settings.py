@@ -1,39 +1,40 @@
-"""Gymnasium environment presets used by training and inference."""
-
-DEFAULT_ENV = "cartpole"
+DEFAULT_ENV = "pendulum"
 
 ENVIRONMENTS = {
-    "cartpole": {
-        "id": "CartPole-v1",
-        "action_space": "discrete",
-        "max_episode_steps": 500,
-    },
-    "acrobot": {
-        "id": "Acrobot-v1",
-        "action_space": "discrete",
-        "max_episode_steps": 500,
-    },
-    "lunar_lander": {
-        "id": "LunarLander-v3",
-        "action_space": "discrete",
-        "max_episode_steps": 1000,
-    },
     "pendulum": {
         "id": "Pendulum-v1",
         "action_space": "continuous",
-        "max_episode_steps": 200,
-    },
+        "max_episode_steps": 200},
     "mountain_car_continuous": {
         "id": "MountainCarContinuous-v0",
         "action_space": "continuous",
-        "max_episode_steps": 999,
-    },
+        "max_episode_steps": 999},
+    "lunar_lander_continuous": {
+        "id": "LunarLanderContinuous-v3",
+        "action_space": "continuous",
+        "max_episode_steps": 1000},
+    "bipedal_walker": {
+        "id": "BipedalWalker-v3",
+        "action_space": "continuous",
+        "max_episode_steps": 1600},
+    "halfcheetah_v5": {
+        "id": "HalfCheetah-v5",
+        "action_space": "continuous"},
+    "hopper_v5": {
+        "id": "Hopper-v5",
+        "action_space": "continuous"},
+    "walker2d_v5": {
+        "id": "Walker2d-v5",
+        "action_space": "continuous"},
+    "ant_v5": {
+        "id": "Ant-v5",
+        "action_space": "continuous"},
 }
 
 
 def get_env_settings(name=DEFAULT_ENV):
-    """Return a copy of one environment preset."""
     if name not in ENVIRONMENTS:
         choices = ", ".join(ENVIRONMENTS)
-        raise ValueError(f"Unknown environment '{name}'. Choose from: {choices}")
+        raise ValueError(
+            f"Unknown environment '{name}'. Choose from: {choices}")
     return ENVIRONMENTS[name].copy()

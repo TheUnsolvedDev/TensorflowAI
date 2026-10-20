@@ -13,7 +13,8 @@ def mlp(inputs, hidden=config.HIDDEN_UNITS):
 
 def policy_model(observation_shape, action_count):
     inputs = tf.keras.Input(shape=observation_shape)
-    outputs = tf.keras.layers.Dense(action_count, activation="softmax")(mlp(inputs))
+    outputs = tf.keras.layers.Dense(
+        action_count, activation="softmax")(mlp(inputs))
     return tf.keras.Model(inputs, outputs)
 
 
@@ -37,5 +38,3 @@ def discounted_returns(rewards, gamma):
         running = rewards[index] + gamma * running
         returns[index] = running
     return returns
-
-

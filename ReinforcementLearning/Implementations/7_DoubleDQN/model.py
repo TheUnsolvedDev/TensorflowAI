@@ -4,23 +4,12 @@ import tensorflow as tf
 import config
 
 
-class DuelingCombine(tf.keras.layers.Layer):
-    def call(self, inputs):
-        value, advantage = inputs
-        return value + advantage - tf.reduce_mean(advantage, axis=1, keepdims=True)
-
-
 def build_q_network(observation_shape, action_count):
     inputs = tf.keras.Input(shape=observation_shape)
     features = inputs
     for units in config.HIDDEN_UNITS:
         features = tf.keras.layers.Dense(units, activation="relu")(features)
-    if config.USE_DUELING_NETWORK:
-        value = tf.keras.layers.Dense(1, name="value")(features)
-        advantage = tf.keras.layers.Dense(action_count, name="advantage")(features)
-        outputs = DuelingCombine(name="q_values")([value, advantage])
-    else:
-        outputs = tf.keras.layers.Dense(action_count, name="q_values")(features)
+    outputs = tf.keras.layers.Dense(action_count, name="q_values")(features)
     return tf.keras.Model(inputs, outputs)
 
 
@@ -58,4 +47,3 @@ class ReplayBuffer:
 
     def __len__(self):
         return self.size
-

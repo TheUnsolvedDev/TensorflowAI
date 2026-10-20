@@ -1,9 +1,15 @@
 import math
-import sys
 
 import tensorflow as tf
 
-from config import *
+from config import (
+    BASE_CHANNELS,
+    DENOISER_LEARNING_RATE,
+    DIFFUSION_STEPS,
+    DROPOUT_RATE,
+    TIME_EMBED_DIM,
+    WEIGHT_DECAY,
+)
 
 
 class TimeEmbedding(tf.keras.layers.Layer):
@@ -44,72 +50,6 @@ def residual_block(x, time_embedding, channels, name, dropout_rate=0.0, dilation
     if residual.shape[-1] != channels:
         residual = tf.keras.layers.Conv2D(channels, 1, padding="same", name=f"{name}_skip")(residual)
     return tf.keras.layers.Add(name=f"{name}_out")([x, residual])
-
-
-class TextEncoder(tf.keras.Model):
-    def __init__(self, vocab_size=TEXT_VOCAB_SIZE, seq_len=TEXT_SEQUENCE_LENGTH, embed_dim=EMBED_DIM):
-        super().__init__()
-        self.token_embedding = tf.keras.layers.Embedding(vocab_size, embed_dim)
-        self.position_embedding = tf.keras.layers.Embedding(seq_len, embed_dim)
-        self.attn = tf.keras.layers.MultiHeadAttention(num_heads=4, key_dim=max(embed_dim // 4, 1))
-        self.ffn = tf.keras.Sequential([
-            tf.keras.layers.Dense(embed_dim * 2, activation="gelu"),
-            tf.keras.layers.Dense(embed_dim),
-        ])
-        self.norm1 = tf.keras.layers.LayerNormalization()
-        self.norm2 = tf.keras.layers.LayerNormalization()
-        self.pool = tf.keras.layers.GlobalAveragePooling1D()
-
-    def call(self, tokens, training=False):
-        positions = tf.range(tf.shape(tokens)[1])
-        x = self.token_embedding(tokens) + self.position_embedding(positions)
-        attn_out = self.attn(x, x, training=training)
-        x = self.norm1(x + attn_out)
-        x = self.norm2(x + self.ffn(x, training=training))
-        return self.pool(x)
-
-
-class SimpleAutoencoder(tf.keras.Model):
-    def __init__(self, latent_channels=4):
-        super().__init__()
-        self.encoder = tf.keras.Sequential([
-            tf.keras.layers.InputLayer((IMAGE_SIZE[0], IMAGE_SIZE[1], 3)),
-            tf.keras.layers.Conv2D(64, 3, strides=2, padding="same", activation="swish"),
-            tf.keras.layers.Conv2D(128, 3, strides=2, padding="same", activation="swish"),
-            tf.keras.layers.Conv2D(latent_channels, 3, padding="same"),
-        ])
-        self.decoder = tf.keras.Sequential([
-            tf.keras.layers.InputLayer((LATENT_IMAGE_SIZE[0], LATENT_IMAGE_SIZE[1], latent_channels)),
-            tf.keras.layers.Conv2DTranspose(128, 4, strides=2, padding="same", activation="swish"),
-            tf.keras.layers.Conv2DTranspose(64, 4, strides=2, padding="same", activation="swish"),
-            tf.keras.layers.Conv2D(3, 3, padding="same", activation="tanh"),
-        ])
-
-    def call(self, images, training=False):
-        latents = self.encoder(images, training=training)
-        recon = self.decoder(latents, training=training)
-        return latents, recon
-
-
-class CLIPLikeEncoder(tf.keras.Model):
-    def __init__(self, embedding_dim=EMBED_DIM):
-        super().__init__()
-        self.image_proj = tf.keras.Sequential([
-            tf.keras.layers.InputLayer((IMAGE_SIZE[0], IMAGE_SIZE[1], 3)),
-            tf.keras.layers.Conv2D(64, 3, strides=2, padding="same", activation="swish"),
-            tf.keras.layers.Conv2D(128, 3, strides=2, padding="same", activation="swish"),
-            tf.keras.layers.GlobalAveragePooling2D(),
-            tf.keras.layers.Dense(embedding_dim),
-        ])
-        self.text_proj = TextEncoder(embed_dim=embedding_dim)
-        self.image_head = tf.keras.layers.Dense(embedding_dim)
-        self.text_head = tf.keras.layers.Dense(embedding_dim)
-
-    def encode_image(self, images, training=False):
-        return tf.math.l2_normalize(self.image_head(self.image_proj(images, training=training)), axis=-1)
-
-    def encode_text(self, tokens, training=False):
-        return tf.math.l2_normalize(self.text_head(self.text_proj(tokens, training=training)), axis=-1)
 
 
 def build_denoiser(input_shape, channels, output_channels):
@@ -153,19 +93,10 @@ def build_denoiser(input_shape, channels, output_channels):
     )
 
 
-class BaseDiffusionModel(tf.keras.Model):
-    def __init__(self, strategy, input_shape, batch_size, use_text=False, use_latent=False, use_control=False, use_clip=False, use_consistency=False, model_label=MODEL_NAME):
-        super().__init__()
+class DDPMTrainer:
+    def __init__(self, strategy, input_shape):
         self.strategy = strategy
         self.input_shape_value = input_shape
-        self.batch_size = batch_size
-        self.use_text = use_text
-        self.use_latent = use_latent
-        self.use_control = use_control
-        self.use_clip = use_clip
-        self.use_consistency = use_consistency
-        self.model_label = model_label
-        self.global_batch_size = batch_size * self.strategy.num_replicas_in_sync
         self._interrupt_requested = False
         # A linear 50-step schedule leaves x_T about 60% signal, while sampling
         # starts from pure noise.  The cosine schedule reaches noise at x_T and
@@ -178,91 +109,15 @@ class BaseDiffusionModel(tf.keras.Model):
         self.alpha_bars = tf.math.cumprod(self.alphas)
 
         with self.strategy.scope():
-            self.text_encoder = TextEncoder() if self.use_text else None
-            self.text_optimizer = tf.keras.optimizers.Adam(TEXT_ENCODER_LEARNING_RATE) if self.use_text else None
-            self.autoencoder = SimpleAutoencoder() if (self.use_latent or self.model_label in {"StableDiffusion", "ControlNet"}) else None
-            self.autoencoder_optimizer = tf.keras.optimizers.Adam(AUTOENCODER_LEARNING_RATE) if self.autoencoder is not None else None
-            self.clip_encoder = CLIPLikeEncoder() if self.use_clip else None
-            self.clip_optimizer = tf.keras.optimizers.Adam(TEXT_ENCODER_LEARNING_RATE) if self.use_clip else None
-            self.prior_projection = None
-            self.prior_optimizer = None
-            if self.use_clip:
-                self.prior_projection = tf.keras.Sequential([
-                    tf.keras.layers.InputLayer((EMBED_DIM,)),
-                    tf.keras.layers.Dense(EMBED_DIM, activation="swish"),
-                    tf.keras.layers.Dense(EMBED_DIM),
-                ])
-                self.prior_optimizer = tf.keras.optimizers.Adam(PRIOR_LEARNING_RATE)
-            output_channels = input_shape[-1] * (2 if USE_LEARNED_VARIANCE else 1)
-            conditioning_dim = EMBED_DIM if (self.use_text or self.use_clip) else 0
-            del conditioning_dim
-            self.denoiser = build_denoiser(input_shape, BASE_CHANNELS, output_channels)
+            self.denoiser = build_denoiser(input_shape, BASE_CHANNELS, input_shape[-1])
             self.denoiser_optimizer = tf.keras.optimizers.AdamW(
                 DENOISER_LEARNING_RATE,
                 weight_decay=WEIGHT_DECAY,
                 clipnorm=1.0,
             )
-            self.consistency_model = build_denoiser(input_shape, BASE_CHANNELS, input_shape[-1]) if self.use_consistency else None
-            self.consistency_optimizer = tf.keras.optimizers.Adam(CONSISTENCY_LEARNING_RATE) if self.use_consistency else None
             self.mse = tf.keras.losses.MeanSquaredError()
-            self.huber = tf.keras.losses.Huber(delta=0.5)
-            self.mae = tf.keras.losses.MeanAbsoluteError()
-            self._initialize_components()
-            self._print_model_summaries()
-
-    def _initialize_components(self):
-        image_batch = tf.zeros((1, IMAGE_SIZE[0], IMAGE_SIZE[1], 3), dtype=tf.float32)
-        base_batch = tf.zeros((1, *self.input_shape_value), dtype=tf.float32)
-        timesteps = tf.zeros((1,), dtype=tf.int32)
-        if self.text_encoder is not None:
-            token_batch = tf.zeros((1, TEXT_SEQUENCE_LENGTH), dtype=tf.int32)
-            self.text_encoder(token_batch, training=False)
-            self.text_optimizer.build(self.text_encoder.trainable_variables)
-
-        if self.autoencoder is not None:
-            latent_batch, _ = self.autoencoder(image_batch, training=False)
-            self.autoencoder_optimizer.build(self.autoencoder.trainable_variables)
-        else:
-            latent_batch = None
-
-        if self.clip_encoder is not None:
-            token_batch = tf.zeros((1, TEXT_SEQUENCE_LENGTH), dtype=tf.int32)
-            self.clip_encoder.encode_image(image_batch, training=False)
-            self.clip_encoder.encode_text(token_batch, training=False)
-            self.clip_optimizer.build(self.clip_encoder.trainable_variables)
-            self.prior_projection(tf.zeros((1, EMBED_DIM), dtype=tf.float32), training=False)
-            self.prior_optimizer.build(self.prior_projection.trainable_variables)
-
-        denoiser_inputs = latent_batch if latent_batch is not None else base_batch
-        self.denoiser([denoiser_inputs, timesteps], training=False)
-        self.denoiser_optimizer.build(self.denoiser.trainable_variables)
-
-        if self.consistency_model is not None:
-            self.consistency_model([base_batch, timesteps], training=False)
-            self.consistency_optimizer.build(self.consistency_model.trainable_variables)
-
-    def _print_model_summaries(self):
-        if self.text_encoder is not None:
-            self.text_encoder.summary(expand_nested=True, show_trainable=True)
-        if self.autoencoder is not None:
-            self.autoencoder.summary(expand_nested=True, show_trainable=True)
-        if self.clip_encoder is not None:
-            self.clip_encoder.summary(expand_nested=True, show_trainable=True)
-        if self.prior_projection is not None:
-            self.prior_projection.summary(expand_nested=True, show_trainable=True)
+            self.denoiser_optimizer.build(self.denoiser.trainable_variables)
         self.denoiser.summary(expand_nested=True, show_trainable=True)
-        try:
-            tf.keras.utils.plot_model(
-                self.denoiser,
-                to_file="denoiser.png",
-                show_shapes=True,
-                expand_nested=True,
-                show_layer_names=True,
-            )
-        except Exception as exc:
-            print(f"Skipping denoiser plot export: {exc}")
-        if self.consistency_model is not None:
-            self.consistency_model.summary(expand_nested=True, show_trainable=True)
 
     def sample_timesteps(self, batch_size):
         return tf.random.uniform((batch_size,), minval=0, maxval=DIFFUSION_STEPS, dtype=tf.int32)
@@ -273,137 +128,27 @@ class BaseDiffusionModel(tf.keras.Model):
             alpha_bar = alpha_bar[..., None]
         return tf.sqrt(alpha_bar) * x_start + tf.sqrt(1.0 - alpha_bar) * noise
 
-    def prepare_condition(self, batch, training=False):
-        cond_vector = None
-        control = batch.get("control") if isinstance(batch, dict) else None
-        if self.use_text and isinstance(batch, dict):
-            cond_vector = self.text_encoder(batch["tokens"], training=training)
-            if USE_CLASSIFIER_FREE_GUIDANCE and training:
-                mask = tf.cast(tf.random.uniform((tf.shape(cond_vector)[0], 1)) > GUIDANCE_DROPOUT, tf.float32)
-                cond_vector = cond_vector * mask
-        if self.use_clip and isinstance(batch, dict):
-            cond_vector = self.clip_encoder.encode_text(batch["tokens"], training=training)
-        return cond_vector, control
-
-    def get_training_images(self, batch, training=False):
-        if isinstance(batch, dict):
-            images = batch.get("image")
-        else:
-            images = batch
-        recon = None
-        if self.autoencoder is not None and images is not None and training:
-            latents, recon = self.autoencoder(images, training=True)
-            return latents, recon
-        if self.autoencoder is not None and images is not None and not training:
-            latents, recon = self.autoencoder(images, training=False)
-            return latents, recon
-        return images, recon
-
     @tf.function
-    def train_autoencoder_step(self, images):
-        with tf.GradientTape() as tape:
-            latents, recon = self.autoencoder(images, training=True)
-            loss = self.mse(images, recon) + 1e-3 * tf.reduce_mean(tf.square(latents))
-        grads = tape.gradient(loss, self.autoencoder.trainable_variables)
-        self.autoencoder_optimizer.apply_gradients(zip(grads, self.autoencoder.trainable_variables))
-        return loss
-
-    @tf.function
-    def train_alignment_step(self, batch):
-        images = batch["image"]
-        tokens = batch["tokens"]
-        with tf.GradientTape() as tape:
-            image_embed = self.clip_encoder.encode_image(images, training=True)
-            text_embed = self.clip_encoder.encode_text(tokens, training=True)
-            logits = tf.matmul(image_embed, text_embed, transpose_b=True)
-            labels = tf.range(tf.shape(logits)[0])
-            loss_i = tf.reduce_mean(tf.keras.losses.sparse_categorical_crossentropy(labels, logits, from_logits=True))
-            loss_t = tf.reduce_mean(tf.keras.losses.sparse_categorical_crossentropy(labels, tf.transpose(logits), from_logits=True))
-            loss = 0.5 * (loss_i + loss_t)
-        grads = tape.gradient(loss, self.clip_encoder.trainable_variables)
-        self.clip_optimizer.apply_gradients(zip(grads, self.clip_encoder.trainable_variables))
-        return loss
-
-    @tf.function
-    def train_prior_step(self, batch):
-        images = batch["image"]
-        tokens = batch["tokens"]
-        with tf.GradientTape() as tape:
-            image_embed = tf.stop_gradient(self.clip_encoder.encode_image(images, training=False))
-            text_embed = self.clip_encoder.encode_text(tokens, training=False)
-            pred_embed = self.prior_projection(text_embed, training=True)
-            loss = self.mse(image_embed, pred_embed)
-        grads = tape.gradient(loss, self.prior_projection.trainable_variables)
-        self.prior_optimizer.apply_gradients(zip(grads, self.prior_projection.trainable_variables))
-        return loss
-
-    @tf.function
-    def train_diffusion_step(self, batch, stage="diffusion"):
-        if stage == "sr":
-            target_images = batch["high_res"]
-        elif self.autoencoder is not None and stage in {"diffusion", "control"}:
-            target_images, _ = self.get_training_images(batch, training=True)
-        else:
-            target_images = batch["image"] if isinstance(batch, dict) else batch
-        batch_size = tf.shape(target_images)[0]
-        noise = tf.random.normal(tf.shape(target_images))
+    def train_diffusion_step(self, images):
+        batch_size = tf.shape(images)[0]
+        noise = tf.random.normal(tf.shape(images))
         timesteps = self.sample_timesteps(batch_size)
-        noisy_inputs = self.q_sample(target_images, timesteps, noise)
+        noisy_inputs = self.q_sample(images, timesteps, noise)
         with tf.GradientTape() as tape:
             pred = self.denoiser([noisy_inputs, timesteps], training=True)
-            if USE_LEARNED_VARIANCE:
-                pred_noise, pred_var = tf.split(pred, 2, axis=-1)
-                loss = self.mse(noise, pred_noise) + 1e-3 * tf.reduce_mean(tf.square(pred_var))
-            else:
-                loss = self.mse(noise, pred)
+            loss = self.mse(noise, pred)
         denoiser_grads = tape.gradient(loss, self.denoiser.trainable_variables)
         self.denoiser_optimizer.apply_gradients(zip(denoiser_grads, self.denoiser.trainable_variables))
         return loss
 
     @tf.function
-    def train_consistency_step(self, images):
-        batch_size = tf.shape(images)[0]
-        noise = tf.random.normal(tf.shape(images))
-        timesteps = self.sample_timesteps(batch_size)
-        noisy_inputs = self.q_sample(images, timesteps, noise)
-        teacher_pred = tf.stop_gradient(self.denoiser([noisy_inputs, timesteps], training=False))
-        with tf.GradientTape() as tape:
-            student_pred = self.consistency_model([noisy_inputs, timesteps], training=True)
-            loss = self.mae(teacher_pred, student_pred)
-        grads = tape.gradient(loss, self.consistency_model.trainable_variables)
-        self.consistency_optimizer.apply_gradients(zip(grads, self.consistency_model.trainable_variables))
-        return loss
-
-    @tf.function
-    def distributed_step(self, batch, stage="diffusion"):
-        per_replica = self.strategy.run(self.train_diffusion_step, args=(batch, stage))
-        return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica, axis=None)
-
-    @tf.function
-    def distributed_autoencoder_step(self, images):
-        per_replica = self.strategy.run(self.train_autoencoder_step, args=(images,))
-        return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica, axis=None)
-
-    @tf.function
-    def distributed_alignment_step(self, batch):
-        per_replica = self.strategy.run(self.train_alignment_step, args=(batch,))
-        return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica, axis=None)
-
-    @tf.function
-    def distributed_prior_step(self, batch):
-        per_replica = self.strategy.run(self.train_prior_step, args=(batch,))
-        return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica, axis=None)
-
-    @tf.function
-    def distributed_consistency_step(self, images):
-        per_replica = self.strategy.run(self.train_consistency_step, args=(images,))
+    def distributed_step(self, images):
+        per_replica = self.strategy.run(self.train_diffusion_step, args=(images,))
         return self.strategy.reduce(tf.distribute.ReduceOp.MEAN, per_replica, axis=None)
 
     def p_sample(self, sample, timesteps):
         """Draw one exact DDPM reverse transition, x_t -> x_(t-1)."""
         pred = self.denoiser([sample, timesteps], training=False)
-        if USE_LEARNED_VARIANCE:
-            pred, _ = tf.split(pred, 2, axis=-1)
         alpha = tf.gather(self.alphas, timesteps)
         alpha_bar = tf.gather(self.alpha_bars, timesteps)
         beta = tf.gather(self.betas, timesteps)
@@ -437,21 +182,24 @@ class BaseDiffusionModel(tf.keras.Model):
     def reverse_timesteps(self):
         return range(DIFFUSION_STEPS - 1, -1, -1)
 
-    def generate_samples(self, sample_count=4, cond_tokens=None, control=None, stage="diffusion"):
-        if stage == "sample_consistency" and self.consistency_model is not None:
-            sample = tf.random.normal((sample_count, *self.input_shape_value))
-            timesteps = tf.fill((sample_count,), DIFFUSION_STEPS - 1)
-            outputs = self.consistency_model(sample, timesteps, training=False)
-            return tf.clip_by_value(outputs, -1.0, 1.0)
-        sample = tf.random.normal((sample_count, *self.input_shape_value))
-        for step in self.reverse_timesteps():
-            timesteps = tf.fill((sample_count,), step)
-            sample = self.p_sample(sample, timesteps)
-        if self.autoencoder is not None and stage in {"diffusion", "control"}:
-            sample = self.autoencoder.decoder(sample, training=False)
+    def generate_samples(self, sample_count=4):
+        def generate_replica_samples():
+            sample = tf.random.normal((samples_per_replica, *self.input_shape_value))
+            for step in self.reverse_timesteps():
+                timesteps = tf.fill((samples_per_replica,), step)
+                sample = self.p_sample(sample, timesteps)
+            return sample
+
+        replica_count = self.strategy.num_replicas_in_sync
+        samples_per_replica = math.ceil(sample_count / replica_count)
+        if replica_count > 1:
+            replica_samples = self.strategy.run(generate_replica_samples)
+            sample = tf.concat(self.strategy.experimental_local_results(replica_samples), axis=0)[:sample_count]
+        else:
+            sample = generate_replica_samples()[:sample_count]
         return tf.clip_by_value(sample, -1.0, 1.0)
 
-    def fit(self, dataset, epochs, initial_epoch=0, callbacks=None, stage="diffusion", steps_per_epoch=None):
+    def fit(self, dataset, epochs, initial_epoch=0, callbacks=None, steps_per_epoch=None):
         callbacks = callbacks or []
         self._interrupt_requested = False
         progress = tf.keras.callbacks.ProgbarLogger()
@@ -468,26 +216,15 @@ class BaseDiffusionModel(tf.keras.Model):
             for callback in callbacks:
                 callback.on_epoch_begin(epoch)
             for step, batch in enumerate(dataset):
-                if stage == "vae":
-                    source = batch["image"] if isinstance(batch, dict) else batch
-                    loss = self.distributed_autoencoder_step(source)
-                elif stage == "align":
-                    loss = self.distributed_alignment_step(batch)
-                elif stage == "prior":
-                    loss = self.distributed_prior_step(batch)
-                elif stage == "consistency":
-                    source = batch["image"] if isinstance(batch, dict) else batch
-                    loss = self.distributed_consistency_step(source)
-                else:
-                    loss = self.distributed_step(batch, stage=stage)
+                loss = self.distributed_step(batch)
                 epoch_loss.update_state(loss)
-                logs = {"loss": float(loss.numpy()), "stage": stage}
+                logs = {"loss": float(loss.numpy())}
                 progress.on_train_batch_end(step, {"loss": logs["loss"]})
                 for callback in callbacks:
                     callback.on_train_batch_end(step, logs)
                 if self._interrupt_requested:
                     raise KeyboardInterrupt
-            epoch_logs = {"loss": float(epoch_loss.result().numpy()), "stage": stage}
+            epoch_logs = {"loss": float(epoch_loss.result().numpy())}
             progress.on_epoch_end(epoch, {"loss": epoch_logs["loss"]})
             for callback in callbacks:
                 callback.on_epoch_end(epoch, epoch_logs)

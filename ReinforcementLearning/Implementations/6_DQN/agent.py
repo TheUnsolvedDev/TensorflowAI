@@ -19,7 +19,8 @@ class DQNAgent:
 
     @property
     def epsilon(self):
-        progress = min(self.environment_steps / config.EPSILON_DECAY_STEPS, 1.0)
+        progress = min(self.environment_steps /
+                       config.EPSILON_DECAY_STEPS, 1.0)
         return config.EPSILON_START + progress * (config.EPSILON_END - config.EPSILON_START)
 
     @tf.function(reduce_retracing=True)
@@ -47,30 +48,31 @@ class DQNAgent:
     )
     def _train_step(self, states, actions, rewards, next_states, terminals):
         next_target_values = self.target(next_states, training=False)
-        if config.USE_DOUBLE_DQN:
-            next_online_values = self.online(next_states, training=False)
-            next_actions = tf.argmax(next_online_values, axis=1, output_type=tf.int32)
-            next_values = tf.gather(next_target_values, next_actions, batch_dims=1)
-        else:
-            next_values = tf.reduce_max(next_target_values, axis=1)
-        targets = tf.stop_gradient(rewards + config.GAMMA * (1.0 - terminals) * next_values)
+        next_values = tf.reduce_max(next_target_values, axis=1)
+        targets = tf.stop_gradient(
+            rewards + config.GAMMA * (1.0 - terminals) * next_values)
         with tf.GradientTape() as tape:
             q_values = self.online(states, training=True)
             selected_values = tf.gather(q_values, actions, batch_dims=1)
             errors = targets - selected_values
             absolute_errors = tf.abs(errors)
             quadratic = tf.minimum(absolute_errors, config.HUBER_DELTA)
-            losses = 0.5 * tf.square(quadratic) + config.HUBER_DELTA * (absolute_errors - quadratic)
+            losses = 0.5 * \
+                tf.square(quadratic) + config.HUBER_DELTA * \
+                (absolute_errors - quadratic)
             loss = tf.reduce_mean(losses)
         gradients = tape.gradient(loss, self.online.trainable_variables)
-        gradients, _ = tf.clip_by_global_norm(gradients, config.GRADIENT_CLIP_NORM)
-        self.optimizer.apply_gradients(zip(gradients, self.online.trainable_variables))
+        gradients, _ = tf.clip_by_global_norm(
+            gradients, config.GRADIENT_CLIP_NORM)
+        self.optimizer.apply_gradients(
+            zip(gradients, self.online.trainable_variables))
         return loss
 
     def learn(self):
         if len(self.replay) < max(config.BATCH_SIZE, config.LEARNING_STARTS):
             return None
-        states, actions, rewards, next_states, terminals = self.replay.sample(config.BATCH_SIZE)
+        states, actions, rewards, next_states, terminals = self.replay.sample(
+            config.BATCH_SIZE)
         loss = self._train_step(
             tf.convert_to_tensor(states, tf.float32),
             tf.convert_to_tensor(actions, tf.int32),
@@ -89,4 +91,3 @@ class DQNAgent:
     def load(self, path):
         self.online.load_weights(path)
         self.target.set_weights(self.online.get_weights())
-
